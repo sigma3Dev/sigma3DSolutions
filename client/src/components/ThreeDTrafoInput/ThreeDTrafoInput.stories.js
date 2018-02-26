@@ -13,5 +13,5 @@ stories.addDecorator((story, context) => withInfo('common info')(story)(context)
 stories.addDecorator(withKnobs);
 
 stories
-  .add('Page for inputting data', () => (
+  .add('Page for inputting data for 3D-Transformations', () => (
     <ThreeDTrafoInput />))

@@ -3,7 +3,7 @@ import PointsInput from '../PointsInput/PointsInput';
 import Sidebar from '../Sidebar/Sidebar';
 import './ThreeDTrafoInput.css';
 
-// page for data inputs
+// page for 3D-Transformation data inputs
 const ThreeDTrafoInput = (props) => {
   return (
     <div>

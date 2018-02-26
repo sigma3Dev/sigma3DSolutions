@@ -6,3 +6,7 @@
   align-items: center;
   margin-left: 200px;
 }
+
+.start-screen * {
+  text-decoration: none;
+}
