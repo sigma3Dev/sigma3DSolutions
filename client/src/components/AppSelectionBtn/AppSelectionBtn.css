@@ -1,0 +1,46 @@
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  width: 200px;
+  padding: 15px;
+  margin: 20px;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  background: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.btn-caption {
+  padding: 8px;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: condensed;
+  line-height: 0.83;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.btn-description {
+  padding: 8px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-stretch: condensed;
+  line-height: 0.83;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}

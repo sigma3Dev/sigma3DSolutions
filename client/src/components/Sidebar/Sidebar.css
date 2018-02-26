@@ -1,0 +1,35 @@
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2C3826;
+  overflow-x: hidden;
+}
+
+.Sidebar a {
+  font-family: Roboto;
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  opacity: 0.8;
+}
+
+.Sidebar a:hover, .Sidebar .active {
+  opacity: 1;
+}
+
+.logo {
+  background-image: url('./s3dlogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  top: 0;
+  width: 200px;
+  height: 100px;
+}

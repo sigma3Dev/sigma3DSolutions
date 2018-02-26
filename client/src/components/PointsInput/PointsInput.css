@@ -1,0 +1,12 @@
+.points-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.points-input .dropzone {
+  width: 100%;
+  height: 240px;
+  border: 3px dashed gray;
+  border-radius: 5px;
+}

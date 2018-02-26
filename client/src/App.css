@@ -1,0 +1,9 @@
+.App * {
+  font-family: "Roboto";
+  text-align: center;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f2f2f5;
+}
