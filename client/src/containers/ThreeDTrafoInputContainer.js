@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { parseCoordinates } from '../actions/parseCoordinates/parseCoordinatesActions';
 import ThreeDTrafoInput from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
+
+const mapDispatchToProps = dispatch => ({
+  onParseCoordinates: (file) => dispatch(parseCoordinates(file))
+});
+
+const mapStateToProps = (state, props) => ({});
 
 class ThreeDTrafoInputContainer extends Component {
 
-  constructor(props) {
-    super(props);
-    this.parseCoordinates = this.parseCoordinates.bind(this);
-  }
-  
-  parseCoordinates = file => {
-    console.log(file);
-  }
-
   render() { 
-
     return (
       <ThreeDTrafoInput 
-        onFileDrop={ this.parseCoordinates } 
+        onFileDrop={ this.props.onParseCoordinates } 
       />
     )
   }
 }
 
-export default ThreeDTrafoInputContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(ThreeDTrafoInputContainer);

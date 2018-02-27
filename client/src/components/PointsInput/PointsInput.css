@@ -13,3 +13,7 @@
   border: 3px dashed gray;
   border-radius: 5px;
 }
+
+.points-input .dropzone:hover {
+  cursor: pointer;
+}
