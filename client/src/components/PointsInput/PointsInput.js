@@ -12,8 +12,7 @@ const PointsInput = ({
     <div className="points-input">
       <Dropzone 
         className="dropzone" 
-        onDrop={ onDrop } 
-        accept=".txt" 
+        onDrop={ onDrop }
         activeStyle={ activeStyle }
       >
         <p>Drop .txt file in here</p>

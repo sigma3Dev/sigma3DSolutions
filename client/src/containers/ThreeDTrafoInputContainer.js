@@ -1,20 +1,47 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { parseCoordinates } from '../actions/parseCoordinates/parseCoordinatesActions';
+import { pushStartSystemCoordinates, pushTargetSystemCoordinates } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import { getStartSystemPoints, getTargetSystemPoints } from '../selectors/TrafoSelectors/getTrafoInputDataSelector'
 import ThreeDTrafoInput from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
 
+var cdi = require('coordinatedataimporter');
+
 const mapDispatchToProps = dispatch => ({
-  onParseCoordinates: (file) => dispatch(parseCoordinates(file))
+  onPushStartSystemCoordinates: (file) => dispatch(pushStartSystemCoordinates(file)),
+  onPushTargetSystemCoordinates: (file) => dispatch(pushTargetSystemCoordinates(file)),
 });
 
-const mapStateToProps = (state, props) => ({});
+const mapStateToProps = (state, props) => ({
+  startSystemPoints: getStartSystemPoints(state),
+  targetSystemPoints: getTargetSystemPoints(state),
+});
 
 class ThreeDTrafoInputContainer extends Component {
+  constructor() {
+    super();
+    this.parseStartCoords = this.parseStartCoords.bind(this);
+    this.parseTargetCoords = this.parseTargetCoords.bind(this);
+  }
+
+  parseStartCoords = (file) => {
+    const coordData = cdi(file, coords => {
+      this.props.onPushStartSystemCoordinates(coords);
+    }); 
+  }
+
+  parseTargetCoords = (file) => {
+    const coordData = cdi(file, coords => {
+      this.props.onPushTargetSystemCoordinates(coords);
+    }); 
+  }
 
   render() { 
     return (
       <ThreeDTrafoInput 
-        onFileDrop={ this.props.onParseCoordinates } 
+        onStartFileDrop={ this.parseStartCoords } 
+        onTargetFileDrop={ this.parseTargetCoords } 
+        startSystemPoints={ this.props.startSystemPoints }
+        targetSystemPoints={ this.props.targetSystemPoints }
       />
     )
   }

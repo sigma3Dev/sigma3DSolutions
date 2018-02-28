@@ -9,7 +9,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #2C3826;
+  background-color: #2E8B57;
   overflow-x: hidden;
 }
 
@@ -29,7 +29,7 @@
   background-image: url('./s3dlogo.png');
   background-size: contain;
   background-repeat: no-repeat;
-  top: 0;
-  width: 200px;
+  width: 100px;
   height: 100px;
+  margin: 20px 20px 10px;
 }

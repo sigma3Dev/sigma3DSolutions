@@ -1,0 +1,15 @@
+.points-table * {
+  font-size: 1.05em;
+}
+
+.points-table {
+  padding-top: 20px;
+}
+
+.points-table th {
+  padding: 5px 10px;
+}
+
+.points-table .margin-right {
+  padding-right: 30px;
+}

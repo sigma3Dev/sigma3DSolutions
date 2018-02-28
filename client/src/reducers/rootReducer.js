@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import transformationDataInputReducer from './transformationDataInputReducer/transformationDataInputReducer';
+import trafoDataInputReducer from './trafoDataInputReducer/trafoDataInputReducer';
 
 export default combineReducers({
-  transformationDataInputReducer
+  trafoDataInput: trafoDataInputReducer,
 });
