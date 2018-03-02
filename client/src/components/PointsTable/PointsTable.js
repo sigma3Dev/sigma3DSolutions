@@ -3,38 +3,48 @@ import './PointsTable.css';
 
 const PointsTable = ({
   systemPoints,
-  useWeight
+  useWeight,
+  checkboxesDisplay
 }) => {
-
-  if (useWeight) {
-    let onlyTarget = {
-      display: 'none'
-    };
-  }
 
   const tableRows = systemPoints.map((line, i) => {
     return (
       <tr key={ i }>
         <th className="margin-right">{ i + 1 }</th>
-        <th>{line.x.toString()}</th>
-        <th>{line.y.toString()}</th>
-        <th className="margin-right">{line.z.toString()}</th>
-        <th style="onlyTarget">
-          <input type="checkbox" name={'x' + i} className="only-target" />
-          <label htmlFor={'x' + i} className="only-target">
-            {'x' + i}
+        <th>{ line.x.toString() }</th>
+        <th>{ line.y.toString() }</th>
+        <th className="margin-right">{ line.z.toString() }</th>
+        <th style={checkboxesDisplay}>
+          <label>
+            { 'x' + i }
+            <input 
+              type="checkbox" 
+              name={ 'x' + i } 
+              id={ 'x' + i }
+              defaultChecked={true}
+            />
           </label>
         </th>
-        <th className="only-target">
-          <input type="checkbox" name={'y' + i} className="only-target" />
-          <label htmlFor={'y' + i} className="only-target">
-            {'y' + i}
+        <th style={checkboxesDisplay}>
+          <label>
+            { 'y' + i }
+            <input
+              type="checkbox"
+              name={ 'y' + i }
+              id={ 'y' + i }
+              defaultChecked={true}
+            />
           </label>
         </th>
-        <th className="only-target">
-          <input type="checkbox" name={'z' + i} className="only-target" />
-          <label htmlFor={'z' + i} className="only-target">
-            {'z' + i}
+        <th style={checkboxesDisplay}>
+          <label>
+            { 'z' + i }
+            <input
+              type="checkbox"
+              name={ 'z' + i }
+              id={ 'z' + i }
+              defaultChecked={true}
+            />
           </label>
         </th>
       </tr>
@@ -50,9 +60,9 @@ const PointsTable = ({
             <th>x</th>
             <th>y</th>
             <th className="margin-right">z</th>
-            <th className="only-target">use x</th>
-            <th className="only-target">use y</th>
-            <th className="only-target">use z</th>
+            <th style={checkboxesDisplay}>use x</th>
+            <th style={checkboxesDisplay}>use y</th>
+            <th style={checkboxesDisplay}>use z</th>
           </tr>
         </thead>
         <tbody>

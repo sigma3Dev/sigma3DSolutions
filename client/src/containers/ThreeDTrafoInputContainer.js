@@ -24,13 +24,13 @@ class ThreeDTrafoInputContainer extends Component {
   }
 
   parseStartCoords = (file) => {
-    const coordData = cdi(file, coords => {
+    cdi(file, coords => {
       this.props.onPushStartSystemCoordinates(coords);
     }); 
   }
 
   parseTargetCoords = (file) => {
-    const coordData = cdi(file, coords => {
+    cdi(file, coords => {
       this.props.onPushTargetSystemCoordinates(coords);
     }); 
   }
