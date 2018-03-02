@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import AppSelectionBtn from '../AppSelectionBtn/AppSelectionBtn';
 import Sidebar from '../Sidebar/Sidebar';
 import './StartScreen.css';
-import {
-  THREE_D_TRANSFORMATION_SEVEN_PARAM,
-} from '../../config/AppTypes';
+// import {
+//   THREE_D_TRANSFORMATION_SEVEN_PARAM,
+// } from '../../config/AppTypes';
 
 // this page shows the overview of all available Sigma3D apps to solve mathematical problems
 const StartScreen = (props) => {

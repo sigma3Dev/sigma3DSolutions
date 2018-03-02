@@ -1,8 +1,49 @@
 .three-d-trafo-input {
+  width: 75%;
+  margin-left: 260px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
   margin-top: 12px;
-  margin-left: 200px;
-  text-align: center;
   font-family: Roboto;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.start-input {
+  width: 35%;
+}
+
+.target-input {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.points-table {
+  align-self: flex-end;
+}
+
+.three-d-trafo-input .submit-btn {
+  padding: 35px 0;
+  font-family: Roboto;
+  font-size: 1.3em;
+  margin: 50px 0 15px 0;
+  width: 25%;
+  align-self: flex-end;
+  color: white;
+  background: forestgreen;
+  border-radius: 5px;
+  border: 3px solid darkgreen;
+}
+
+.three-d-trafo-input .submit-btn:hover {
+  cursor: pointer;
+  background: green;
+  border: 3px solid #005400;
 }

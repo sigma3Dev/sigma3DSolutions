@@ -9,7 +9,9 @@ const ThreeDTrafoInput = ({
   onStartFileDrop,
   onTargetFileDrop,
   startSystemPoints,
-  targetSystemPoints
+  targetSystemPoints,
+  checkboxUpdate,
+  handleClick
 }) => {
 
   const startStyle = { display: 'none' };
@@ -19,22 +21,26 @@ const ThreeDTrafoInput = ({
     <div>
       <Sidebar />
       <div className="three-d-trafo-input">
-        <div className="start-input">
-          <h1>Start System Points:</h1>
-          <PointsInput onDrop={onStartFileDrop} />
-          <PointsTable 
-            systemPoints={startSystemPoints} 
-            checkboxesDisplay={startStyle} 
-          />
+        <div className="inputs">
+          <div className="start-input">
+            <h1>Start System Points:</h1>
+            <PointsInput onDrop={onStartFileDrop} />
+            <PointsTable 
+              systemPoints={startSystemPoints} 
+              checkboxesDisplay={startStyle} 
+            />
+          </div>
+          <div className="target-input">
+            <h1>Target System Points:</h1>
+            <PointsInput onDrop={onTargetFileDrop} />
+            <PointsTable 
+              systemPoints={targetSystemPoints} 
+              checkboxesDisplay={targetStyle}
+              handleChange={checkboxUpdate}
+            />
+          </div>
         </div>
-        <div className="target-input">
-          <h1>Target System Points:</h1>
-          <PointsInput onDrop={onTargetFileDrop} />
-          <PointsTable 
-            systemPoints={targetSystemPoints} 
-            checkboxesDisplay={targetStyle}
-          />
-        </div>
+        <button className="submit-btn" onClick={handleClick}>Submit 🡆</button>
       </div>
     </div>
   );

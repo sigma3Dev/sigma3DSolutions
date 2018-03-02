@@ -4,7 +4,8 @@ import './PointsTable.css';
 const PointsTable = ({
   systemPoints,
   useWeight,
-  checkboxesDisplay
+  checkboxesDisplay,
+  handleChange
 }) => {
 
   const tableRows = systemPoints.map((line, i) => {
@@ -21,6 +22,7 @@ const PointsTable = ({
               type="checkbox" 
               name={ 'x' + i } 
               id={ 'x' + i }
+              onChange={handleChange}
               defaultChecked={true}
             />
           </label>
@@ -32,6 +34,7 @@ const PointsTable = ({
               type="checkbox"
               name={ 'y' + i }
               id={ 'y' + i }
+              onChange={handleChange}
               defaultChecked={true}
             />
           </label>
@@ -43,6 +46,7 @@ const PointsTable = ({
               type="checkbox"
               name={ 'z' + i }
               id={ 'z' + i }
+              onChange={handleChange}
               defaultChecked={true}
             />
           </label>

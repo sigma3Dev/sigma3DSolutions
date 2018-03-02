@@ -6,6 +6,15 @@
   padding-top: 20px;
 }
 
+
+.points-table table {
+  width: 100%;
+} 
+
+.points-table th {
+  width: 10%;
+}
+
 .points-table th {
   padding: 5px 10px;
 }

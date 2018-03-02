@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001",
   "dependencies": {
     "axios": "^0.18.0",
     "history": "^4.7.2",
@@ -33,6 +34,5 @@
     "@storybook/addons": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "babel-core": "^6.26.0"
-  },
-  "proxy": "http://localhost:5000/"
+  }
 }
