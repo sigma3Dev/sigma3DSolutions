@@ -1,49 +1,43 @@
 .three-d-trafo-input {
-  width: 75%;
-  margin-left: 260px;
+  width: 83%;
+  margin-left: 240px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: space-between;
+  justify-content: space-around;
+  align-items: flex-start;
   margin-top: 12px;
   font-family: Roboto;
 }
 
-.inputs {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+.three-d-trafo-input h1 {
+  border-bottom: 3px solid darkgreen;
+  padding-bottom: 5px;
+  margin: 20px 45px;
 }
 
 .start-input {
   width: 35%;
+  margin-right: 50px;
 }
 
 .target-input {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-}
-
-.points-table {
-  align-self: flex-end;
+  width: 50%;
+  margin-right: 50px;
 }
 
 .three-d-trafo-input .submit-btn {
   padding: 35px 0;
   font-family: Roboto;
   font-size: 1.3em;
-  margin: 50px 0 15px 0;
-  width: 25%;
-  align-self: flex-end;
+  margin: 85px 0;
+  width: 20%;
   color: white;
-  background: forestgreen;
+  background: #006633;
   border-radius: 5px;
-  border: 3px solid darkgreen;
+  border: 3px solid #005522;
 }
 
 .three-d-trafo-input .submit-btn:hover {
   cursor: pointer;
-  background: green;
-  border: 3px solid #005400;
+  background: #005533;
+  border: 3px solid #004422;
 }

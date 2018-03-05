@@ -46,6 +46,7 @@ class ThreeDTrafoInputContainer extends Component {
 
   submitCoords = () => {
     this.props.onSubmitCoords();
+    this.props.history.push('/three-d-transformation/result');
   }
 
   render() { 

@@ -1,0 +1,68 @@
+.three-d-trafo-result {
+  width: 83%;
+  height: 500px;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 12px;
+  font-family: Roboto;
+}
+
+.three-d-trafo-result h1 {
+  font-size: 3.0em;
+  border-bottom: 3px solid darkgreen;
+}
+
+.three-d-trafo-result .result-table {
+  padding-top: 50px;
+  width: 80%;
+  border-collapse: collapse;
+}
+
+.three-d-trafo-result .result-table * {
+  font-size: 1.10em;
+}
+
+.three-d-trafo-result .result-table th {
+  padding: 20px 0;
+}
+
+.three-d-trafo-result .result-table .caption {
+  background-color: #d5d5d5;
+}
+
+.three-d-trafo-result .home-btn {
+  padding: 40px 80px;
+  border: none;
+  font-size: 1.3em;
+}
+
+.three-d-trafo-result .home-btn:hover {
+  cursor: pointer;
+  background: #d5d5d5;
+}
+
+.three-d-trafo-result .fa-spinner {
+  font-size: 5em;
+  animation: spin 2000ms infinite linear;
+}
+
+.three-d-trafo-result .copy {
+  font-size: 0.8em;
+  padding: 10px;
+}
+
+.three-d-trafo-result .copy:hover {
+  cursor: pointer;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}

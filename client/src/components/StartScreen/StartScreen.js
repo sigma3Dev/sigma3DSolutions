@@ -15,7 +15,7 @@ const StartScreen = (props) => {
       <Link to="/three-d-transformation/data-input">
         <AppSelectionBtn 
           caption={ "3D-Transformation" }
-          description={ "7 Parameters" }
+          description={ "6 Parameters, weighted" }
         />
       </Link>
     </div>

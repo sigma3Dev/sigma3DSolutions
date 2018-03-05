@@ -35,13 +35,13 @@ export const submitCoordsRequest = () => ({
 });
 
 export const submitCoordsSuccess = (response) => ({
-  type: SUBMIT_COORDS_REQUEST,
+  type: SUBMIT_COORDS_SUCCESS,
   response,
   receivedAt: Date.now(),
 });
 
 export const SubmitCoordsFailure = (error) => ({
-  type: SUBMIT_COORDS_REQUEST,
+  type: SUBMIT_COORDS_FAILURE,
   error,
   receivedAt: Date.now(),
 })
@@ -52,6 +52,6 @@ export const submitCoords = () => (dispatch, getState) => {
   return axios.post('/calculate-trafo', {
     coords
   })
-  .then(response => dispatch(submitCoordsSuccess))
-  .catch(error => dispatch(SubmitCoordsFailure));
+  .then(response => dispatch(submitCoordsSuccess(response)))
+  .catch(error => dispatch(SubmitCoordsFailure(error)));
 };

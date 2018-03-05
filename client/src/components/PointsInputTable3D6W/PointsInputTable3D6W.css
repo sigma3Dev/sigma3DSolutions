@@ -1,5 +1,5 @@
 .points-table * {
-  font-size: 1.05em;
+  font-size: 1.03em;
 }
 
 .points-table {
@@ -9,6 +9,7 @@
 
 .points-table table {
   width: 100%;
+  border-collapse: collapse;
 } 
 
 .points-table th {
@@ -16,9 +17,9 @@
 }
 
 .points-table th {
-  padding: 5px 10px;
+  padding: 8px;
 }
 
-.points-table .margin-right {
-  padding-right: 40px;
+.points-table .grey {
+  background-color: #d5d5d5;
 }

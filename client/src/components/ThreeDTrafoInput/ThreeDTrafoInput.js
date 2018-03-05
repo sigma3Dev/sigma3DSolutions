@@ -1,6 +1,6 @@
 import React from 'react';
 import PointsInput from '../PointsInput/PointsInput';
-import PointsTable from '../PointsTable/PointsTable';
+import PointsInputTable3D6W from '../PointsInputTable3D6W/PointsInputTable3D6W';
 import Sidebar from '../Sidebar/Sidebar';
 import './ThreeDTrafoInput.css';
 
@@ -21,24 +21,22 @@ const ThreeDTrafoInput = ({
     <div>
       <Sidebar />
       <div className="three-d-trafo-input">
-        <div className="inputs">
-          <div className="start-input">
-            <h1>Start System Points:</h1>
-            <PointsInput onDrop={onStartFileDrop} />
-            <PointsTable 
-              systemPoints={startSystemPoints} 
-              checkboxesDisplay={startStyle} 
-            />
-          </div>
-          <div className="target-input">
-            <h1>Target System Points:</h1>
-            <PointsInput onDrop={onTargetFileDrop} />
-            <PointsTable 
-              systemPoints={targetSystemPoints} 
-              checkboxesDisplay={targetStyle}
-              handleChange={checkboxUpdate}
-            />
-          </div>
+        <div className="start-input">
+          <h1>Start System Points:</h1>
+          <PointsInput onDrop={onStartFileDrop} />
+          <PointsInputTable3D6W 
+            systemPoints={startSystemPoints} 
+            checkboxesDisplay={startStyle} 
+          />
+        </div>
+        <div className="target-input">
+          <h1>Target System Points:</h1>
+          <PointsInput onDrop={onTargetFileDrop} />
+          <PointsInputTable3D6W
+            systemPoints={targetSystemPoints} 
+            checkboxesDisplay={targetStyle}
+            handleChange={checkboxUpdate}
+          />
         </div>
         <button className="submit-btn" onClick={handleClick}>Submit 🡆</button>
       </div>

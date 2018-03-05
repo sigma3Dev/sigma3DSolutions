@@ -3,6 +3,7 @@ const express     = require('express'),
       WebSocket   = require('ws'),
       path        = require('path'),
       util        = require('util'),
+      io          = require('socket.io')(),
       app         = express();
 
 const socket = new WebSocket('ws://localhost:8091');
@@ -58,10 +59,9 @@ app.post('/calculate-trafo', function(req, res) {
 
   socket.onmessage = e => {
     const response = e.data;
-    console.log(response);
+    res.send(response);
   }
 
-  console.log(util.inspect(obj, false, null));
   socket.send(JSON.stringify(obj));
 });
 

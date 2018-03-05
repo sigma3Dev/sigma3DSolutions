@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
   height: 100%;
   width: 200px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #2E8B57;
+  background-color: #006633;
   overflow-x: hidden;
 }
 
@@ -17,7 +17,7 @@
   font-family: Roboto;
   color: white;
   text-decoration: none;
-  margin: 20px;
+  margin: 20px 0;
   opacity: 0.8;
 }
 
@@ -31,5 +31,5 @@
   background-repeat: no-repeat;
   width: 100px;
   height: 100px;
-  margin: 20px 30px 10px;
+  margin: 25px 0 15px;
 }
