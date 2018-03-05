@@ -44,15 +44,6 @@ const ThreeDTrafoResult = ({
           <tbody>
             <tr>
               <th>
-                { response[4] }
-              </th>
-              <th>
-                { response[5] }
-              </th>
-              <th>
-                { response[6] }
-              </th>
-              <th>
                 { response[0] }
               </th>
               <th>
@@ -63,6 +54,15 @@ const ThreeDTrafoResult = ({
               </th>
               <th>
                 { response[3] }
+              </th>
+              <th>
+                { response[4] }
+              </th>
+              <th>
+                { response[5] }
+              </th>
+              <th>
+                { response[6] }
               </th>
               <th>
                 <CopyToClipboard text={ copyText }>

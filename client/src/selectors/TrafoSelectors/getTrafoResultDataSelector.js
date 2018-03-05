@@ -5,14 +5,14 @@ const getErrorSelector = state => state.trafoDataInput.error;
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
 
 export const getTrafoParams = createSelector(
-  getTrafoParamsSelector, response => ([
-    Math.round(response.q0 * 10000) / 10000,
-    Math.round(response.q1 * 10000) / 10000,
-    Math.round(response.q2 * 10000) / 10000,
-    Math.round(response.q3 * 10000) / 10000,
-    Math.round(response.tx * 100) / 100,
-    Math.round(response.ty * 100) / 100,
-    Math.round(response.tz * 100) / 100,
+  getTrafoParamsSelector, response => ([  
+    response.tx.toFixed(2),
+    response.ty.toFixed(2),
+    response.tz.toFixed(2),
+    response.q0.toFixed(4),
+    response.q1.toFixed(4),
+    response.q2.toFixed(4),
+    response.q3.toFixed(4),
   ])
 )
 
