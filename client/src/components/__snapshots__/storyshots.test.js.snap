@@ -1097,7 +1097,7 @@ exports[`Storyshots Start.Sidebar Sidebar for selecting App category 1`] = `
       />
       <a
         className="active"
-        href="/three-d-transformation/data-input"
+        href="/"
       >
         Transformations
       </a>
@@ -1351,7 +1351,7 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
         />
         <a
           className="active"
-          href="/three-d-transformation/data-input"
+          href="/"
         >
           Transformations
         </a>
@@ -1962,7 +1962,7 @@ exports[`Storyshots Start.ThreeDTrafoResult Table to display start and target sy
         />
         <a
           className="active"
-          href="/three-d-transformation/data-input"
+          href="/"
         >
           Transformations
         </a>
