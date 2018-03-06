@@ -53,15 +53,15 @@ const PointsInputTable3D6W = ({
     <div className="points-table">
       <table>
         <thead>
-          <tr className="grey">
-            <th className="th-trash">
-              <button 
-                className="trash-icon grey" 
-                title="Clear input"
-                onClick={ handleDeleteDataInput }
-              >
-                { trashIcon }
-              </button>
+            <tr className="grey"> 
+            <th className="th-trash"> 
+              <button  
+                className="trash-icon grey"  
+                title="Clear input" 
+                onClick={ handleDeleteDataInput } 
+              > 
+                { trashIcon } 
+              </button> 
             </th>
             <th>x</th>
             <th>y</th>
