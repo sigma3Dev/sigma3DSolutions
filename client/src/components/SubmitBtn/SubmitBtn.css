@@ -1,9 +1,11 @@
 .submit-btn {
-  padding: 35px 0;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 45px 0;
   font-family: Roboto;
   font-size: 1.3em;
-  margin: 85px 0;
-  width: 20%;
+  width: 17%;
   color: white;
   background: #006633;
   border-radius: 5px;
