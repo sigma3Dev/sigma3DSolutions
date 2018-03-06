@@ -8,6 +8,10 @@
   font-family: Roboto;
 }
 
+.three-d-trafo-input * {
+  text-align: center;
+}
+
 .three-d-trafo-input h1 {
   border-bottom: 3px solid darkgreen;
   padding-bottom: 5px;
@@ -22,22 +26,4 @@
 .target-input {
   width: 50%;
   margin-right: 50px;
-}
-
-.three-d-trafo-input .submit-btn {
-  padding: 35px 0;
-  font-family: Roboto;
-  font-size: 1.3em;
-  margin: 85px 0;
-  width: 20%;
-  color: white;
-  background: #006633;
-  border-radius: 5px;
-  border: 3px solid #005522;
-}
-
-.three-d-trafo-input .submit-btn:hover {
-  cursor: pointer;
-  background: #005533;
-  border: 3px solid #004422;
 }

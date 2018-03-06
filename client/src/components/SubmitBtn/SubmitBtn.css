@@ -1,0 +1,17 @@
+.submit-btn {
+  padding: 35px 0;
+  font-family: Roboto;
+  font-size: 1.3em;
+  margin: 85px 0;
+  width: 20%;
+  color: white;
+  background: #006633;
+  border-radius: 5px;
+  border: 3px solid #005522;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  background: #005533;
+  border: 3px solid #004422;
+}

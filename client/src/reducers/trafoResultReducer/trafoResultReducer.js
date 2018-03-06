@@ -28,6 +28,7 @@ function trafoResult(state = initialResultData, action) {
       };
     case SUBMIT_COORDS_FAILURE:
       return {
+        ...state,
         error: action.error
       };
     default:
