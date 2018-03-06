@@ -8,9 +8,12 @@ import { withInfo } from '@storybook/addon-info';
 
 import ThreeDTrafoInput from './ThreeDTrafoInput';
 
+const StoryRouter = require('storybook-router');
+
 const stories = storiesOf('Start.ThreeDTrafoInput', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));
 stories.addDecorator(withKnobs);
+stories.addDecorator(StoryRouter.default());
 
 const startSystemPoints = [
   {x: -5051.23, y: -9416.32, z: -1474.56, x0: true, y0: true, z0: true},

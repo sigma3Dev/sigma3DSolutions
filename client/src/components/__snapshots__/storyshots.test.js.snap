@@ -327,10 +327,10 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
             className="grey"
           >
             <th
-              className="trash-th"
+              className="th-trash"
             >
               <button
-                className="trash-icon"
+                className="trash-icon grey"
                 onClick={undefined}
                 title="Clear input"
               >
@@ -1118,12 +1118,18 @@ exports[`Storyshots Start.Sidebar Sidebar for selecting App category 1`] = `
     <div
       className="Sidebar"
     >
-      <div
-        className="logo"
-      />
       <a
-        className="active"
         href="/"
+        onClick={[Function]}
+      >
+        <div
+          className="logo"
+        />
+      </a>
+      <a
+        className="link-active"
+        href="/"
+        onClick={[Function]}
       >
         Transformations
       </a>
@@ -1372,12 +1378,18 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
       <div
         className="Sidebar"
       >
-        <div
-          className="logo"
-        />
         <a
-          className="active"
           href="/"
+          onClick={[Function]}
+        >
+          <div
+            className="logo"
+          />
+        </a>
+        <a
+          className="link-active"
+          href="/"
+          onClick={[Function]}
         >
           Transformations
         </a>
@@ -1983,12 +1995,18 @@ exports[`Storyshots Start.ThreeDTrafoResult Table to display start and target sy
       <div
         className="Sidebar"
       >
-        <div
-          className="logo"
-        />
         <a
-          className="active"
           href="/"
+          onClick={[Function]}
+        >
+          <div
+            className="logo"
+          />
+        </a>
+        <a
+          className="link-active"
+          href="/"
+          onClick={[Function]}
         >
           Transformations
         </a>
