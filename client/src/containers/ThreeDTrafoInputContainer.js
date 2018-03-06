@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { pushStartSystemCoordinates, pushTargetSystemCoordinates, checkboxUpdate, submitCoords } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
-import { getStartSystemPoints, getTargetSystemPoints } from '../selectors/TrafoSelectors/getTrafoInputDataSelector'
+import { 
+  pushStartSystemCoordinates,
+  pushTargetSystemCoordinates,
+  checkboxUpdate,
+  submitCoords,
+  clearStartInput,
+  clearTargetInput 
+} from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import { 
+  getStartSystemPoints,
+  getTargetSystemPoints 
+} from '../selectors/TrafoSelectors/getTrafoInputDataSelector';
 import ThreeDTrafoInput from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
 
 var cdi = require('coordinatedataimporter');
@@ -11,6 +21,8 @@ const mapDispatchToProps = dispatch => ({
   onPushTargetSystemCoordinates: (file) => dispatch(pushTargetSystemCoordinates(file)),
   onCheckboxUpdate: (id) => dispatch(checkboxUpdate(id)),
   onSubmitCoords: () => dispatch(submitCoords()),
+  onClearStartInput: () => dispatch(clearStartInput()),
+  onClearTargetInput: () => dispatch(clearTargetInput()),
 });
 
 const mapStateToProps = (state, props) => ({
@@ -25,6 +37,8 @@ class ThreeDTrafoInputContainer extends Component {
     this.parseTargetCoords = this.parseTargetCoords.bind(this);
     this.checkboxUpdate = this.checkboxUpdate.bind(this);
     this.submitCoords = this.submitCoords.bind(this);
+    this.clearStartInput = this.clearStartInput.bind(this);
+    this.clearTargetInput = this.clearTargetInput.bind(this);
   }
 
   parseStartCoords = (file) => {
@@ -49,6 +63,14 @@ class ThreeDTrafoInputContainer extends Component {
     this.props.history.push('/three-d-transformation/result');
   }
 
+  clearStartInput = () => {
+    this.props.onClearStartInput();
+  }
+
+  clearTargetInput = () => {
+    this.props.onClearTargetInput();
+  }
+
   render() { 
     return (
       <ThreeDTrafoInput 
@@ -57,7 +79,9 @@ class ThreeDTrafoInputContainer extends Component {
         startSystemPoints={ this.props.startSystemPoints }
         targetSystemPoints={ this.props.targetSystemPoints }
         checkboxUpdate={ this.checkboxUpdate }
-        handleClick={ this.submitCoords }
+        handleSubmitClick={ this.submitCoords }
+        handleStartDeleteClick= { this.clearStartInput }
+        handleTargetDeleteClick= { this.clearTargetInput }
       />
     )
   }

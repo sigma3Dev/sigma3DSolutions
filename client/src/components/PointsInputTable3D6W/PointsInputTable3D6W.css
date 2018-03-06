@@ -7,6 +7,20 @@
   padding-top: 20px;
 }
 
+.points-table .trash-icon {
+  color: darkred;
+  border: none;
+}
+
+.points-table .trash-icon:hover {
+  cursor: pointer;
+  color: rgb(180,0,0);
+}
+
+.points-table .trash-icon:focus {
+  outline: 0;
+}
+
 
 .points-table table {
   width: 100%;
@@ -14,11 +28,12 @@
 } 
 
 .points-table th {
-  width: 10%;
+  padding: 8px;
 }
 
-.points-table th {
-  padding: 8px;
+.points-table th:first-child {
+  width: 40px;
+  padding: 0;
 }
 
 .points-table .grey {
