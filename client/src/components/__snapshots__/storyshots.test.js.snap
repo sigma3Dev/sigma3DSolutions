@@ -326,9 +326,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
           <tr
             className="grey"
           >
-            <th
-              className="th-trash"
-            >
+            <th>
               <button
                 className="trash-icon grey"
                 onClick={undefined}

@@ -54,7 +54,7 @@ const PointsInputTable3D6W = ({
       <table>
         <thead>
             <tr className="grey"> 
-            <th className="th-trash"> 
+            <th> 
               <button  
                 className="trash-icon grey"  
                 title="Clear input" 
