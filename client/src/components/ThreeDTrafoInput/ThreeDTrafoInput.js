@@ -30,7 +30,7 @@ const ThreeDTrafoInput = ({
           <PointsInputTable3D6W 
             systemPoints={startSystemPoints} 
             checkboxesDisplay={startStyle}
-            handleClick={handleStartDeleteClick}
+            handleDeleteDataInput={handleStartDeleteClick}
           />
         </div>
         <div className="target-input">
@@ -40,7 +40,7 @@ const ThreeDTrafoInput = ({
             systemPoints={targetSystemPoints} 
             checkboxesDisplay={targetStyle}
             handleChange={checkboxUpdate}
-            handleClick={handleTargetDeleteClick}
+            handleDeleteDataInput={handleTargetDeleteClick}
           />
         </div>
       </div>  

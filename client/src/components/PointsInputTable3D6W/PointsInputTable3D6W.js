@@ -6,7 +6,7 @@ const PointsInputTable3D6W = ({
   useWeight,
   checkboxesDisplay,
   handleChange,
-  handleClick,
+  handleDeleteDataInput,
 }) => {
   const FaTrash = require('react-icons/lib/fa/trash-o');
   const trashIcon = React.createElement(FaTrash, null);
@@ -58,7 +58,7 @@ const PointsInputTable3D6W = ({
               <button 
                 className="trash-icon grey" 
                 title="Clear input"
-                onClick={ handleClick }
+                onClick={ handleDeleteDataInput }
               >
                 { trashIcon }
               </button>

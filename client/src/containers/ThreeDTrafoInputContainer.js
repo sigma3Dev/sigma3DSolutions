@@ -1,7 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { pushStartSystemCoordinates, pushTargetSystemCoordinates, checkboxUpdate, submitCoords, clearStartInput, clearTargetInput } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
-import { getStartSystemPoints, getTargetSystemPoints } from '../selectors/TrafoSelectors/getTrafoInputDataSelector'
+import { 
+  pushStartSystemCoordinates,
+  pushTargetSystemCoordinates,
+  checkboxUpdate,
+  submitCoords,
+  clearStartInput,
+  clearTargetInput 
+} from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import { 
+  getStartSystemPoints,
+  getTargetSystemPoints 
+} from '../selectors/TrafoSelectors/getTrafoInputDataSelector';
 import ThreeDTrafoInput from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
 
 var cdi = require('coordinatedataimporter');
