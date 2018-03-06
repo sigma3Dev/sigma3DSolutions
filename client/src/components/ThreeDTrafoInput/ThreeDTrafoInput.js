@@ -1,6 +1,7 @@
 import React from 'react';
 import PointsInput from '../PointsInput/PointsInput';
 import PointsInputTable3D6W from '../PointsInputTable3D6W/PointsInputTable3D6W';
+import SubmitBtn from '../SubmitBtn/SubmitBtn';
 import Sidebar from '../Sidebar/Sidebar';
 import './ThreeDTrafoInput.css';
 
@@ -38,7 +39,7 @@ const ThreeDTrafoInput = ({
             handleChange={checkboxUpdate}
           />
         </div>
-        <button className="submit-btn" onClick={handleClick}>Submit 🡆</button>
+        <SubmitBtn handleClick={handleClick} />
       </div>
     </div>
   );
