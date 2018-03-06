@@ -5,8 +5,11 @@ const PointsInputTable3D6W = ({
   systemPoints,
   useWeight,
   checkboxesDisplay,
-  handleChange
+  handleChange,
+  handleClick,
 }) => {
+  const FaTrash = require('react-icons/lib/fa/trash-o');
+  const trashIcon = React.createElement(FaTrash, null);
 
   const tableRows = systemPoints.map((line, i) => {
     return (
@@ -50,8 +53,16 @@ const PointsInputTable3D6W = ({
     <div className="points-table">
       <table>
         <thead>
-          <tr className={'grey'}>
-            <th>ID</th>
+          <tr className="grey">
+            <th className="th-trash">
+              <button 
+                className="trash-icon grey" 
+                title="Clear input"
+                onClick={ handleClick }
+              >
+                { trashIcon }
+              </button>
+            </th>
             <th>x</th>
             <th>y</th>
             <th>z</th>

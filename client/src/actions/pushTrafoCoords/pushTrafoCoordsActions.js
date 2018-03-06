@@ -5,6 +5,8 @@ export const SUBMIT_COORDS = 'SUBMIT_COORDS';
 export const SUBMIT_COORDS_REQUEST = 'SUBMIT_COORDS_REQUEST';
 export const SUBMIT_COORDS_SUCCESS = 'SUBMIT_COORDS_SUCCESS';
 export const SUBMIT_COORDS_FAILURE = 'SUBMIT_COORDS_FAILURE';
+export const CLEAR_START_INPUT = 'CLEAR_START_INPUT';
+export const CLEAR_TARGET_INPUT = 'CLEAR_TARGET_INPUT';
 
 const axios = require('axios');
 
@@ -44,7 +46,7 @@ export const SubmitCoordsFailure = (error) => ({
   type: SUBMIT_COORDS_FAILURE,
   error,
   receivedAt: Date.now(),
-})
+});
 
 export const submitCoords = () => (dispatch, getState) => {
   dispatch(submitCoordsRequest());
@@ -55,3 +57,13 @@ export const submitCoords = () => (dispatch, getState) => {
   .then(response => dispatch(submitCoordsSuccess(response)))
   .catch(error => dispatch(SubmitCoordsFailure(error)));
 };
+
+export const clearStartInput = () => ({
+  type: CLEAR_START_INPUT,
+  receivedAt: Date.now(),
+});
+
+export const clearTargetInput = () => ({
+  type: CLEAR_TARGET_INPUT,
+  receivedAt: Date.now(),
+});

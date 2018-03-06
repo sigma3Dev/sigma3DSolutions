@@ -2,6 +2,8 @@ import {
   PUSH_START_SYSTEM_COORDINATES, 
   PUSH_TARGET_SYSTEM_COORDINATES, 
   CHECKBOX_UPDATE,
+  CLEAR_START_INPUT,
+  CLEAR_TARGET_INPUT
 } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
 
 /* Holds the initial transformation data input. */
@@ -31,6 +33,16 @@ function transformationDataInput(state = initialTrafoData, action) {
       });
       return {
         ...state
+      }
+    case CLEAR_START_INPUT:
+      return {
+        ...state,
+        startSystemPoints: [],
+      }
+    case CLEAR_TARGET_INPUT:
+      return {
+        ...state,
+        targetSystemPoints: [],
       }
     default:
       return state;
