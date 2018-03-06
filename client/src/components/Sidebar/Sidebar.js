@@ -6,7 +6,7 @@ const Sidebar = (props) => {
   return (
     <div className="Sidebar">
       <div className="logo" />
-      <a href='/three-d-transformation/data-input' className="active">Transformations</a>
+      <a href='/' className="active">Transformations</a>
     </div>
   );
 }
