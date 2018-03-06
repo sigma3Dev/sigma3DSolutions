@@ -39,8 +39,8 @@ const ThreeDTrafoInput = ({
             handleChange={checkboxUpdate}
           />
         </div>
-        <SubmitBtn handleClick={handleClick} />
-      </div>
+      </div>  
+      <SubmitBtn handleClick={handleClick} />
     </div>
   );
 }
