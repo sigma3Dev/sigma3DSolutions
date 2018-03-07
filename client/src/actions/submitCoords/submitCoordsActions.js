@@ -42,16 +42,6 @@ export const SubmitCoordsFailure = (error) => ({
   receivedAt: Date.now(),
 });
 
-/** 
- * Callback for dispatching action
- * @callback dispatchCallback
- */
-
-/** 
- * Callback for getting current state 
- * @callback getStateCallback
- */
-
 /**
  * sends an axios request to the backend
  * @param {dispatchCallback} dispatch - callback that handles dispatching of the action
