@@ -2,6 +2,8 @@ import React from 'react';
 import {FormattedMessage} from 'react-intl';
 import './PointsInputTable3D6W.css';
 
+/* table to display the input values from PointsInput, 
+with checkboxes to select which points to use */
 const PointsInputTable3D6W = ({
   systemPoints,
   useWeight,

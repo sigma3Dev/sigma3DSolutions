@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { 
   pushStartSystemCoordinates,
-  pushTargetSystemCoordinates,
-  checkboxUpdate,
-  submitCoords,
-  clearStartInput,
-  clearTargetInput 
+  pushTargetSystemCoordinates
 } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import  {
+  checkboxUpdate,
+  submitCoords
+} from '../actions/submitCoords/submitCoordsActions';
+import {
+  clearStartInput,
+  clearTargetInput
+} from '../actions/clearInput/clearInputActions';
 import { 
   getStartSystemPoints,
   getTargetSystemPoints 

@@ -1,7 +1,7 @@
 import {
   SUBMIT_COORDS_SUCCESS,
   SUBMIT_COORDS_FAILURE,
-} from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
+} from '../../actions/submitCoords/submitCoordsActions';
 
 const initialResultData = {
   tx: 0,
@@ -13,6 +13,7 @@ const initialResultData = {
   q3: 0,
 }
 
+/* handles responses from the backend */
 function trafoResult(state = initialResultData, action) {
   switch(action.type) {
     case SUBMIT_COORDS_SUCCESS:

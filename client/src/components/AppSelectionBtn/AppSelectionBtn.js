@@ -1,7 +1,7 @@
 import React from 'react';
 import './AppSelectionBtn.css';
 
-// button for selecting fitting method
+/* button for selecting fitting method */
 const AppSelectionBtn = ({
   caption,
   description

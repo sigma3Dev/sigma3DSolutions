@@ -3,7 +3,7 @@ import {FormattedMessage} from 'react-intl';
 import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
-// sidebar for selecting app category
+/* sidebar for selecting app category */
 const Sidebar = (props) => {
   return (
     <div className="Sidebar">

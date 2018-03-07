@@ -10,7 +10,7 @@ const spinnerIcon = React.createElement(FaSpinner, null);
 const GoClippy = require('react-icons/lib/go/clippy');
 const ClipboardIcon = React.createElement(GoClippy, null);
 
-// page to show the results of 3D Transformation
+/* page to show the results of 3D Transformation */
 const ThreeDTrafoResult = ({
   response,
   error,

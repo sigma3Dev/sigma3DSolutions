@@ -6,7 +6,7 @@ import SubmitBtn from '../SubmitBtn/SubmitBtn';
 import Sidebar from '../Sidebar/Sidebar';
 import './ThreeDTrafoInput.css';
 
-// page for 3D-Transformation data inputs
+/* page for 3D-Transformation data inputs */
 const ThreeDTrafoInput = ({
   onStartFileDrop,
   onTargetFileDrop,

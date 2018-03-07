@@ -3,6 +3,7 @@ import {FormattedMessage} from 'react-intl';
 import Dropzone from 'react-dropzone';
 import './PointsInput.css';
 
+/* component that holds react-dropzone to drop .txt files and handle them */
 const PointsInput = ({
   onDrop
 }) => {
