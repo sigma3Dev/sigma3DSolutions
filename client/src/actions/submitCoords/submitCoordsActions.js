@@ -48,7 +48,7 @@ export const SubmitCoordsFailure = (error) => ({
  * @param {getStateCallback} getState - callback that gets current state
  * @returns {Object} response from backend or error message
  */
-const submitCoords = () => (dispatch, getState) => {
+export const submitCoords = () => (dispatch, getState) => {
   dispatch(submitCoordsRequest());
   const coords = getState();
   return axios.post('/calculate-trafo', {
