@@ -22,7 +22,6 @@ const initialResultData = {
 function trafoResult(state = initialResultData, action) {
   switch(action.type) {
     case SUBMIT_COORDS_SUCCESS:
-    console.log(action.response);
       return {
         ...state,
         tx: action.response.data.result.tx,
