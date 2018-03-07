@@ -6,7 +6,18 @@ import SubmitBtn from '../SubmitBtn/SubmitBtn';
 import Sidebar from '../Sidebar/Sidebar';
 import './ThreeDTrafoInput.css';
 
-// page for 3D-Transformation data inputs
+/**
+ * page for 3D-Transformation data inputs
+ * @param {function} onStartFileDrop - handles functionality of file drop for start system input
+ * @param {function} onTargetFileDrop - handles functionality of file drop for target system input
+ * @param {function} checkboxUpdate - handles checkbox clicks
+ * @param {function} handleSubmitClick - handles submit button clicks
+ * @param {function} handleStartDeleteClick - handles start system delete button clicks
+ * @param {function} handleTargetDeleteClick - handles target system delete button clicks 
+ * @param {Array} startSystemPoints - array of points from the start system
+ * @param {Array} targetSystemPoints - array of points from the target system
+ * @returns {*} ThreeDTrafoInput - .jsx Element
+ */
 const ThreeDTrafoInput = ({
   onStartFileDrop,
   onTargetFileDrop,

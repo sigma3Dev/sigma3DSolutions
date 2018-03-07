@@ -1,10 +1,16 @@
 import {
+  CHECKBOX_UPDATE
+} from '../../actions/submitCoords/submitCoordsActions';
+
+import {
   PUSH_START_SYSTEM_COORDINATES, 
-  PUSH_TARGET_SYSTEM_COORDINATES, 
-  CHECKBOX_UPDATE,
+  PUSH_TARGET_SYSTEM_COORDINATES
+} from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
+
+import {
   CLEAR_START_INPUT,
   CLEAR_TARGET_INPUT
-} from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
+} from '../../actions/clearInput/clearInputActions';
 
 /* Holds the initial transformation data input. */
 const initialTrafoData = {
@@ -12,6 +18,12 @@ const initialTrafoData = {
   targetSystemPoints: [],
 };
 
+/**
+ * Handles all kinds of data input
+ * @param {Object} state - current transformation data state
+ * @param {Object} action - action to be executed
+ * @returns {Object} state - updated State
+ */
 function transformationDataInput(state = initialTrafoData, action) {
   switch (action.type) {
     case PUSH_START_SYSTEM_COORDINATES:

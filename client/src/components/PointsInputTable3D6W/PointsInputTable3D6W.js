@@ -2,9 +2,17 @@ import React from 'react';
 import {FormattedMessage} from 'react-intl';
 import './PointsInputTable3D6W.css';
 
+/**
+ * Table to display the input values from PointsInput, 
+ * with checkboxes to select which points to use
+ * @param {Array} systemPoints - array of points
+ * @param {Object} checkboxesDisplay - style for checkboxes, if start-input: "display: none"
+ * @param {function} handleChange - handles checkbox clicks
+ * @param {function} handleDeleteDataInput - handles deletion of points input
+ * @returns {*} PointsInputTable3D6W - .jsx Element
+ */
 const PointsInputTable3D6W = ({
   systemPoints,
-  useWeight,
   checkboxesDisplay,
   handleChange,
   handleDeleteDataInput,

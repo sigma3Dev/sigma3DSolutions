@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { 
   pushStartSystemCoordinates,
-  pushTargetSystemCoordinates,
-  checkboxUpdate,
-  submitCoords,
-  clearStartInput,
-  clearTargetInput 
+  pushTargetSystemCoordinates
 } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import  {
+  checkboxUpdate,
+  submitCoords
+} from '../actions/submitCoords/submitCoordsActions';
+import {
+  clearStartInput,
+  clearTargetInput
+} from '../actions/clearInput/clearInputActions';
 import { 
   getStartSystemPoints,
   getTargetSystemPoints 
@@ -30,7 +34,17 @@ const mapStateToProps = (state, props) => ({
   targetSystemPoints: getTargetSystemPoints(state),
 });
 
+/**
+ * Page where file input functionality is displayed
+ * @class ThreeDTrafoInputContainer
+ * @extends {Component}
+ */
 class ThreeDTrafoInputContainer extends Component {
+
+  /**
+   * Creates an instance of ThreeDTrafoInputContainer.
+   * @memberof ThreeDTrafoInputContainer
+   */
   constructor() {
     super();
     this.parseStartCoords = this.parseStartCoords.bind(this);
@@ -41,32 +55,59 @@ class ThreeDTrafoInputContainer extends Component {
     this.clearTargetInput = this.clearTargetInput.bind(this);
   }
 
+  /**
+   * Uses cdi module to transform .txt file into an array of start points
+   * @param {*} file - .txt file with point coordinates
+   * @memberof ThreeDTrafoInputContainer
+   */
   parseStartCoords = (file) => {
     cdi.startCoordinateDataImport(file, coords => {
       this.props.onPushStartSystemCoordinates(coords);
     }); 
   }
 
+  /**
+   * Uses cdi module to transform .txt file into an array of target points
+   * @param {*} file - .txt file with point coordinates
+   * @memberof ThreeDTrafoInputContainer
+   */
   parseTargetCoords = (file) => {
     cdi.targetCoordinateDataImport(file, coords => {
       this.props.onPushTargetSystemCoordinates(coords);
     }); 
   }
 
+  /**
+   * Handles checkbox update
+   * @param {Object} e - Click event
+   * @memberof ThreeDTrafoInputContainer
+   */
   checkboxUpdate = (e) => {
     const id = e.target.name;
     this.props.onCheckboxUpdate(id);
   }
 
+  /**
+   * Handles coords submit, navigates to "result" page
+   * @memberof ThreeDTrafoInputContainer
+   */
   submitCoords = () => {
     this.props.onSubmitCoords();
     this.props.history.push('/three-d-transformation/result');
   }
 
+  /**
+   * deletes all start system points, updates input display
+   * @memberof ThreeDTrafoInputContainer
+   */
   clearStartInput = () => {
     this.props.onClearStartInput();
   }
 
+  /**
+   * deletes all target system points, updates input display
+   * @memberof ThreeDTrafoInputContainer
+   */
   clearTargetInput = () => {
     this.props.onClearTargetInput();
   }
