@@ -1,4 +1,5 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 import './PointsInputTable3D6W.css';
 
 const PointsInputTable3D6W = ({
@@ -66,9 +67,24 @@ const PointsInputTable3D6W = ({
             <th>x</th>
             <th>y</th>
             <th>z</th>
-            <th style={checkboxesDisplay}>use x</th>
-            <th style={checkboxesDisplay}>use y</th>
-            <th style={checkboxesDisplay}>use z</th>
+            <th style={checkboxesDisplay}>
+              <FormattedMessage
+                id="PointsInputTable.label.useX"
+                defaultMessage="use x"
+              />
+            </th>
+            <th style={checkboxesDisplay}>
+              <FormattedMessage
+                id="PointsInputTable.label.useY"
+                defaultMessage="use y"
+              />
+            </th>
+            <th style={checkboxesDisplay}>
+              <FormattedMessage
+                id="PointsInputTable.label.useZ"
+                defaultMessage="use z"
+              />
+            </th>
           </tr>
         </thead>
         <tbody>

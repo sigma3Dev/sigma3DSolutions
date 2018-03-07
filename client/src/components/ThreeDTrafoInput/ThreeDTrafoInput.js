@@ -1,4 +1,5 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 import PointsInput from '../PointsInput/PointsInput';
 import PointsInputTable3D6W from '../PointsInputTable3D6W/PointsInputTable3D6W';
 import SubmitBtn from '../SubmitBtn/SubmitBtn';
@@ -25,7 +26,12 @@ const ThreeDTrafoInput = ({
       <Sidebar />
       <div className="three-d-trafo-input">
         <div className="start-input">
-          <h1>Start System Points:</h1>
+          <h1>
+            <FormattedMessage
+              id="ThreeDTrafoInput.label.startSystemPointsCaption"
+              defaultMessage="Start System Points:"
+            />
+          </h1>
           <PointsInput onDrop={onStartFileDrop} />
           <PointsInputTable3D6W 
             systemPoints={startSystemPoints} 
@@ -34,7 +40,12 @@ const ThreeDTrafoInput = ({
           />
         </div>
         <div className="target-input">
-          <h1>Target System Points:</h1>
+          <h1>
+            <FormattedMessage
+                id="ThreeDTrafoInput.label.targetSystemPointsCaption"
+                defaultMessage="Target System Points:"
+            />
+          </h1>
           <PointsInput onDrop={onTargetFileDrop} />
           <PointsInputTable3D6W
             systemPoints={targetSystemPoints} 

@@ -19,15 +19,15 @@ const germanMessages = require('./translations/de.json');
 const englishMessages = require('./translations/en.json');
 
 ReactDOM.render((
-  <BrowserRouter>
-    <Provider store={store}>
-      <IntlProvider
-        locale={navigator.language}
-        messages={navigator.language === 'de' ? germanMessages : englishMessages}
-      >
-        <App />
-      </IntlProvider>
-    </Provider>
-  </BrowserRouter>
+  <Provider store={store}>
+    <IntlProvider
+      locale={navigator.language}
+      messages={navigator.language === 'de' ? germanMessages : englishMessages}
+    >
+      <BrowserRouter>
+        <App />  
+      </BrowserRouter>
+    </IntlProvider>
+  </Provider>
 ), document.getElementById('root'));
 registerServiceWorker();

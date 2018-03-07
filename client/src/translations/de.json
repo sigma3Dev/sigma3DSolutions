@@ -1,3 +1,15 @@
 {
-    "Sidebar.lable.transformation": "Transformationen"
+    "AppSelectionBtn.caption.3Dtransformation": "3D-Transformation",
+    "AppSelectionBtn.description.3Dtransformation": "6 Parameter, gewichtet",
+    "PointsInput.label.inputTxtFile": ".txt Datei hier ablegen",
+    "PointsInputTable.label.useX": "nutze x",
+    "PointsInputTable.label.useY": "nutze y",
+    "PointsInputTable.label.useZ": "nutze z",
+    "Sidebar.label.transformation": "Transformationen",
+    "SubmitBtn.label.caption": "Absenden 🡆",
+    "ThreeDTrafoInput.label.startSystemPointsCaption": "Startsystempunkte:",
+    "ThreeDTrafoInput.label.targetSystemPointsCaption": "Zielsystempunkte:",
+    "ThreeDTrafoResult.label.calculating": "Rechne...",
+    "ThreeDTrafoResult.label.caption": "Transformationsparameter",
+    "ThreeDTrafoResult.label.homepageBtn": "Zurück zur Startseite"
 }

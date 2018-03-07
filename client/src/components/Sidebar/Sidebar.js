@@ -12,7 +12,7 @@ const Sidebar = (props) => {
       </Link>
       <Link to='/' className="link-active">
       <FormattedMessage
-          id="Sidebar.lable.transformation"
+          id="Sidebar.label.transformation"
           defaultMessage="Transformations"
       />
       </Link>
