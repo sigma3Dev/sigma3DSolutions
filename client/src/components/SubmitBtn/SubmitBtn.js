@@ -2,7 +2,11 @@ import React from 'react';
 import {FormattedMessage} from 'react-intl';
 import './SubmitBtn.css';
 
-/* this button submits the input values and triggers submitCoords action */
+/**
+ * Submits the input values and triggers submitCoords action
+ * @param {function} handleClick - handles SubmitBtn click
+ * @returns {*} SubmitBtn - .jsx Element
+ */
 const SubmitBtn = ({
   handleClick
 }) => (

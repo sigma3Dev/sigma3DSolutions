@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/PointsInputTable3D6W/PointsInputTable3D6W.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/PointsInputTable3D6W/PointsInputTable3D6W.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react';
+import {FormattedMessage} from 'react-intl';
+import './PointsInputTable3D6W.css';
+
+/**
+ * table to display the input values from PointsInput, 
+ * with checkboxes to select which points to use
+ * @param {Array} systemPoints - array of points
+ * @param {Object} checkboxesDisplay - style for checkboxes, if start-input: "display: none"
+ * @param {function} handleChange - handles checkbox clicks
+ * @param {function} handleDeleteDataInput - handles deletion of points input
+ */
+const PointsInputTable3D6W = ({
+  systemPoints,
+  checkboxesDisplay,
+  handleChange,
+  handleDeleteDataInput,
+}) => {
+  const FaTrash = require('react-icons/lib/fa/trash-o');
+  const trashIcon = React.createElement(FaTrash, null);
+
+  const tableRows = systemPoints.map((line, i) => {
+    return (
+      &lt;tr key={ i }>
+        &lt;th className={'grey'}>{ i + 1 }&lt;/th>
+        &lt;th>{ line.x.toString() }&lt;/th>
+        &lt;th>{ line.y.toString() }&lt;/th>
+        &lt;th>{ line.z.toString() }&lt;/th>
+        &lt;th style={checkboxesDisplay}>
+          &lt;input 
+            type="checkbox" 
+            name={ 'x' + i } 
+            id={ 'x' + i }
+            onChange={handleChange}
+            defaultChecked={true}
+          />
+        &lt;/th>
+        &lt;th style={checkboxesDisplay}>
+          &lt;input
+            type="checkbox"
+            name={ 'y' + i }
+            id={ 'y' + i }
+            onChange={handleChange}
+            defaultChecked={true}
+          />
+        &lt;/th>
+        &lt;th style={checkboxesDisplay}>
+          &lt;input
+            type="checkbox"
+            name={ 'z' + i }
+            id={ 'z' + i }
+            onChange={handleChange}
+            defaultChecked={true}
+          />
+        &lt;/th>
+      &lt;/tr>
+    )
+  });
+
+  return(
+    &lt;div className="points-table">
+      &lt;table>
+        &lt;thead>
+            &lt;tr className="grey"> 
+            &lt;th> 
+              &lt;button  
+                className="trash-icon grey"  
+                title="Clear input" 
+                onClick={ handleDeleteDataInput } 
+              > 
+                { trashIcon } 
+              &lt;/button> 
+            &lt;/th>
+            &lt;th>x&lt;/th>
+            &lt;th>y&lt;/th>
+            &lt;th>z&lt;/th>
+            &lt;th style={checkboxesDisplay}>
+              &lt;FormattedMessage
+                id="PointsInputTable.label.useX"
+                defaultMessage="use x"
+              />
+            &lt;/th>
+            &lt;th style={checkboxesDisplay}>
+              &lt;FormattedMessage
+                id="PointsInputTable.label.useY"
+                defaultMessage="use y"
+              />
+            &lt;/th>
+            &lt;th style={checkboxesDisplay}>
+              &lt;FormattedMessage
+                id="PointsInputTable.label.useZ"
+                defaultMessage="use z"
+              />
+            &lt;/th>
+          &lt;/tr>
+        &lt;/thead>
+        &lt;tbody>
+          { tableRows }
+        &lt;/tbody>
+      &lt;/table>
+    &lt;/div>
+  )
+}
+
+export default PointsInputTable3D6W;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AppSelectionBtn">AppSelectionBtn</a></li><li><a href="global.html#checkboxUpdate">checkboxUpdate</a></li><li><a href="global.html#clearStartInput">clearStartInput</a></li><li><a href="global.html#clearTargetInput">clearTargetInput</a></li><li><a href="global.html#PointsInput">PointsInput</a></li><li><a href="global.html#PointsInputTable3D6W">PointsInputTable3D6W</a></li><li><a href="global.html#pushStartSystemCoordinates">pushStartSystemCoordinates</a></li><li><a href="global.html#pushTargetSystemCoordinates">pushTargetSystemCoordinates</a></li><li><a href="global.html#submitCoords">submitCoords</a></li><li><a href="global.html#SubmitCoordsFailure">SubmitCoordsFailure</a></li><li><a href="global.html#submitCoordsRequest">submitCoordsRequest</a></li><li><a href="global.html#submitCoordsSuccess">submitCoordsSuccess</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Wed Mar 07 2018 16:29:39 GMT+0100 (Mitteleuropäische Zeit)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -13,10 +13,16 @@ const initialResultData = {
   q3: 0,
 }
 
-/* handles responses from the backend */
+/**
+ * Handles responses from the backend
+ * @param {Object} state - current result data state
+ * @param {Object} action - action to be executed
+ * @returns {Object} state - updated State
+ */
 function trafoResult(state = initialResultData, action) {
   switch(action.type) {
     case SUBMIT_COORDS_SUCCESS:
+    console.log(action.response);
       return {
         ...state,
         tx: action.response.data.result.tx,

@@ -5,7 +5,11 @@ import AppSelectionBtn from '../AppSelectionBtn/AppSelectionBtn';
 import Sidebar from '../Sidebar/Sidebar';
 import './StartScreen.css';
 
-/* this page shows the overview of all available Sigma3D apps to solve mathematical problems */
+/**
+ * Shows the overview of all available Sigma3D apps to solve mathematical problems
+ * @param {Object} props - properties passed down from parent element
+ * @returns {*} StartScreen - .jsx Element
+ */
 const StartScreen = (props) => {
   return (
     <div className="start-screen">

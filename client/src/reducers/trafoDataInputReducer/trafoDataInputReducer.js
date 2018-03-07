@@ -18,7 +18,12 @@ const initialTrafoData = {
   targetSystemPoints: [],
 };
 
-/* handles all kinds of data input */
+/**
+ * Handles all kinds of data input
+ * @param {Object} state - current transformation data state
+ * @param {Object} action - action to be executed
+ * @returns {Object} state - updated State
+ */
 function transformationDataInput(state = initialTrafoData, action) {
   switch (action.type) {
     case PUSH_START_SYSTEM_COORDINATES:

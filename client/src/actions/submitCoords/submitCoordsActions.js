@@ -6,40 +6,64 @@ export const SUBMIT_COORDS_FAILURE = 'SUBMIT_COORDS_FAILURE';
 
 const axios = require('axios');
 
-/* handle checkbox changes */
+/**
+ * handle checkbox changes
+ * @param {string} id - The id of the checkbox
+ */
 export const checkboxUpdate = (id) => ({
   type: CHECKBOX_UPDATE,
   id,
   receivedAt: Date.now(),
 });
 
-/* doesn't do anything, fires whenever submitCoords is requested */
+/** doesn't do anything, fires whenever submitCoords is requested */
 export const submitCoordsRequest = () => ({
   type: SUBMIT_COORDS_REQUEST,
   receivedAt: Date.now(),
 });
 
-/* fired when a response comes back from the backend */
+/** 
+ * fired when a response is returned from the backend
+ * @param {Object} response - Response that is returned from the node server
+ */
 export const submitCoordsSuccess = (response) => ({
   type: SUBMIT_COORDS_SUCCESS,
   response,
   receivedAt: Date.now(),
 });
 
-/* fired when an error comes back from the backend */
+/** 
+ * fired when an error is returned from the backend
+ * @param {Object} error - Error that is returned from the node server
+ */
 export const SubmitCoordsFailure = (error) => ({
   type: SUBMIT_COORDS_FAILURE,
   error,
   receivedAt: Date.now(),
 });
 
-/* sends an axios request with the coordinates to the backend */
-export const submitCoords = () => (dispatch, getState) => {
+/** 
+ * Callback for dispatching action
+ * @callback dispatchCallback
+ */
+
+/** 
+ * Callback for getting current state 
+ * @callback getStateCallback
+ */
+
+/**
+ * sends an axios request to the backend
+ * @param {dispatchCallback} dispatch - callback that handles dispatching of the action
+ * @param {getStateCallback} getState - callback that gets current state
+ * @returns {Object} response from backend or error message
+ */
+const submitCoords = () => (dispatch, getState) => {
   dispatch(submitCoordsRequest());
   const coords = getState();
   return axios.post('/calculate-trafo', {
-    coords
-  })
-  .then(response => dispatch(submitCoordsSuccess(response)))
-  .catch(error => dispatch(SubmitCoordsFailure(error)));
+      coords
+    })
+    .then(response => dispatch(submitCoordsSuccess(response)))
+    .catch(error => dispatch(SubmitCoordsFailure(error)));
 };

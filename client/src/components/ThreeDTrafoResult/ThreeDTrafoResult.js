@@ -10,7 +10,14 @@ const spinnerIcon = React.createElement(FaSpinner, null);
 const GoClippy = require('react-icons/lib/go/clippy');
 const ClipboardIcon = React.createElement(GoClippy, null);
 
-/* page to show the results of 3D Transformation */
+/**
+ * page to show the results of 3D Transformation
+ * @param {boolean} isCalculating - true if response is currently being calculated
+ * @param {Object} response - response that is returned from backend after successful calculation
+ * @param {Object} error - error that is returned from backend after unsuccessful calculation
+ * @param {function} handleClick - functionality to navigate back to start screen
+ * @returns {*} ThreeDTrafoResult - .jsx Element
+ */
 const ThreeDTrafoResult = ({
   response,
   error,

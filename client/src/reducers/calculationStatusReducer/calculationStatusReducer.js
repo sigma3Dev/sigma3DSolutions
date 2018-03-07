@@ -9,7 +9,12 @@ const initialCalculationStateData = {
   isCalculating: false,
 }
 
-/* checks whether the a submitCoords request is currently being processed */
+/**
+ * Checks whether the a submitCoords request is currently being processed
+ * @param {Object} state - current calculation state
+ * @param {Object} action - action to be executed
+ * @returns {Object} state - updated State
+ */
 function calculationStatus(state = initialCalculationStateData, action) {
   switch(action.type) {
     case SUBMIT_COORDS_REQUEST:

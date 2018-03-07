@@ -5,6 +5,11 @@ import ThreeDTrafoInputContainer from './containers/ThreeDTrafoInputContainer';
 import ThreeDTrafoResultContainer from './containers/ThreeDTrafoResultContainer';
 import './App.css';
 
+/**
+ * main App, contains different Routes
+ * @class App
+ * @extends {Component}
+ */
 class App extends Component {
   render() {
     return (
