@@ -25,9 +25,15 @@ function transformationDataInput(state = initialTrafoData, action) {
         targetSystemPoints: action.coords,
       }
     case CHECKBOX_UPDATE:
-      state.targetSystemPoints.map(targetSystemPoint => {
-        if (targetSystemPoint.hasOwnProperty(action.id)) {
-          targetSystemPoint[action.id] = !targetSystemPoint[action.id];
+      state.targetSystemPoints.map((targetSystemPoint, index) => {
+        if (targetSystemPoint === state.targetSystemPoints[action.id[1]]) {
+          if (action.id[0] === 'x') {
+            targetSystemPoint.useX = !targetSystemPoint.useX;
+          } else if (action.id[0] === 'y') {
+            targetSystemPoint.useY = !targetSystemPoint.useY;
+          } else {
+            targetSystemPoint.useZ = !targetSystemPoint.useZ;
+          }
         };
         return targetSystemPoint;
       });
