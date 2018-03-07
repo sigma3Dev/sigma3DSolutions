@@ -47,9 +47,9 @@ app.post('/calculate-trafo', function(req, res) {
       "x": point.x,
       "y": point.y,
       "z": point.z,
-      "useX": point['x' + i],
-      "useY": point['y' + i],
-      "useZ": point['z' + i],
+      "useX": point.useX,
+      "useY": point.useY,
+      "useZ": point.useZ,
     })
   });
 
