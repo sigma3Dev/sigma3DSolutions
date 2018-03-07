@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
+  "secure": false,
   "dependencies": {
     "axios": "^0.18.0",
     "history": "^4.7.2",
@@ -12,6 +13,7 @@
     "react-dom": "^16.2.0",
     "react-dropzone": "^4.2.8",
     "react-icons": "^2.2.7",
+    "react-intl": "^2.4.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
@@ -36,7 +38,12 @@
     "@storybook/addon-storyshots": "^3.3.14",
     "@storybook/addons": "^3.3.14",
     "@storybook/react": "^3.3.14",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
-    "react-test-renderer": "^16.2.0"
+    "babel-plugin-react-intl": "^2.4.0",
+    "babel-preset-react-app": "^3.1.1",
+    "react-intl-translations-manager": "^5.0.1",
+    "react-test-renderer": "^16.2.0",
+    "storybook-addon-intl": "^2.3.0"
   }
 }

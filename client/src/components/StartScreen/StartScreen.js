@@ -1,4 +1,5 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 import { Link } from 'react-router-dom';
 import AppSelectionBtn from '../AppSelectionBtn/AppSelectionBtn';
 import Sidebar from '../Sidebar/Sidebar';
@@ -11,8 +12,18 @@ const StartScreen = (props) => {
       <Sidebar />
       <Link to="/three-d-transformation/data-input">
         <AppSelectionBtn 
-          caption={ "3D-Transformation" }
-          description={ "6 Parameters, weighted" }
+          caption={
+            <FormattedMessage
+              id="AppSelectionBtn.caption.3Dtransformation"
+              defaultMessage="3D-Transformation"
+            />
+          }
+          description={
+            <FormattedMessage
+              id="AppSelectionBtn.description.3Dtransformation"
+              defaultMessage="6 Parameters, weighted"
+            />
+          }
         />
       </Link>
     </div>

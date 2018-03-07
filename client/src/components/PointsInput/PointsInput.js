@@ -1,4 +1,5 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 import Dropzone from 'react-dropzone';
 import './PointsInput.css';
 
@@ -15,7 +16,12 @@ const PointsInput = ({
         onDrop={ onDrop }
         activeStyle={ activeStyle }
       >
-        <p>Drop .txt file in here</p>
+        <p>
+          <FormattedMessage
+            id="PointsInput.label.inputTxtFile"
+            defaultMessage="Drop .txt file in here"
+          />
+        </p>
       </Dropzone>
     </div>
   );

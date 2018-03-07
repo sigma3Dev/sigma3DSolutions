@@ -1,4 +1,5 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Sidebar from '../Sidebar/Sidebar';
 import './ThreeDTrafoResult.css';
@@ -19,7 +20,12 @@ const ThreeDTrafoResult = ({
   if (isCalculating) {
     return (
       <div className="three-d-trafo-result">
-        <h1>Calculating...</h1>
+        <h1>
+          <FormattedMessage
+            id="ThreeDTrafoResult.label.calculating"
+            defaultMessage="Calculating..."
+          />
+        </h1>
         <div className="fa-spinner">{ spinnerIcon }</div>
       </div>
     )
@@ -27,7 +33,12 @@ const ThreeDTrafoResult = ({
     const copyText = response.join(" ");
     return (
       <div className="three-d-trafo-result">
-        <h1>Transformation Parameters</h1>
+        <h1>
+          <FormattedMessage
+            id="ThreeDTrafoResult.label.caption"
+            defaultMessage="Transformation Parameters"
+          />
+        </h1>
         <table className="result-table">
           <thead>
             <tr className="caption">
@@ -74,7 +85,12 @@ const ThreeDTrafoResult = ({
             </tr>
           </tbody>
         </table>
-        <button className="home-btn" onClick={ handleClick }>Go back to homepage</button>
+        <button className="home-btn" onClick={ handleClick }>
+          <FormattedMessage
+            id="ThreeDTrafoResult.label.homepageBtn"
+            defaultMessage="Go back to homepage"
+          />
+        </button>
         <Sidebar />
       </div>
     )
@@ -82,7 +98,12 @@ const ThreeDTrafoResult = ({
     return (
       <div className="three-d-trafo-result">
         <h1>Error!</h1>
-        <button className="home-btn" onClick={ handleClick }>Go back to homepage</button>
+        <button className="home-btn" onClick={ handleClick }>
+          <FormattedMessage
+            id="ThreeDTrafoResult.label.homepageBtn"
+            defaultMessage="Go back to homepage"
+          />
+        </button>
       </div>
     )
   }
