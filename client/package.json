@@ -42,6 +42,7 @@
     "babel-core": "^6.26.0",
     "babel-plugin-react-intl": "^2.4.0",
     "babel-preset-react-app": "^3.1.1",
+    "bootstrap": "^4.0.0",
     "react-intl-translations-manager": "^5.0.1",
     "react-test-renderer": "^16.2.0",
     "storybook-addon-intl": "^2.3.0"

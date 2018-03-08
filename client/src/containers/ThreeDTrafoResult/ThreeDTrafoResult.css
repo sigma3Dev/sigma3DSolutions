@@ -35,6 +35,7 @@
 
 .three-d-trafo-result .fa-spinner {
   font-size: 5em;
+  color: #292929;
   animation: spin 2000ms infinite linear;
 }
 

@@ -1,6 +1,5 @@
 import {
   SUBMIT_COORDS_SUCCESS,
-  SUBMIT_COORDS_FAILURE,
   REMOVE_ERROR,
 } from '../../actions/submitCoords/submitCoordsActions';
 
@@ -13,8 +12,7 @@ const initialResultData = {
     q1: 0,
     q2: 0,
     q3: 0
-  },
-  error: null,
+  }
 }
 
 /**
@@ -38,17 +36,6 @@ function trafoResult(state = initialResultData, action) {
           q3: action.response.data.result.q3
         }
       };
-    case SUBMIT_COORDS_FAILURE:
-      return {
-        ...state,
-        error: action.error
-      };
-    case REMOVE_ERROR: {
-      return {
-        ...state,
-        error: null,
-      }
-    }
     default:
       return state;
   }

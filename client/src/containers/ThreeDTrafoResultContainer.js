@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getTrafoParams, getError, getIsCalculating } from '../selectors/TrafoSelectors/getTrafoResultDataSelector';
-import { removeError } from '../actions/submitCoords/submitCoordsActions';
+import { getTrafoParams, getIsCalculating } from '../selectors/TrafoSelectors/getTrafoResultDataSelector';
+import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
+import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import ThreeDTrafoResult from '../components/ThreeDTrafoResult/ThreeDTrafoResult';
 
 const mapDispatchToProps = dispatch => ({
@@ -41,13 +42,17 @@ class ThreeDTrafoResultContainer extends Component {
   }
 
   render() {
+    const errorMsg = !this.props.error ? null : (<div>test</div>) 
     return(
-      <ThreeDTrafoResult
-        response={ this.props.response }
-        error={ this.props.error }
-        isCalculating = { this.props.isCalculating }
-        handleClick = { this.goBack }
-      />
+      <div>
+        {errorMsg}
+        <ThreeDTrafoResult
+          response={ this.props.response }
+          error={ this.props.error }
+          isCalculating = { this.props.isCalculating }
+          handleClick = { this.goBack }
+        />
+      </div>
     )
   }
   

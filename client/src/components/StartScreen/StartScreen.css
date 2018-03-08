@@ -1,6 +1,6 @@
 .start-screen {
   height: 100%;
-  width: 100%;
+  width: 72%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -8,5 +8,9 @@
 }
 
 .start-screen * {
+  text-decoration: none;
+}
+
+.start-screen a:hover {
   text-decoration: none;
 }

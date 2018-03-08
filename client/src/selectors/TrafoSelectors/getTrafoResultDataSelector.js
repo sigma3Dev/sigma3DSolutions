@@ -1,7 +1,6 @@
 import { createSelector } from 'reselect';
 
 const getTrafoParamsSelector = state => state.trafoResult.response;
-const getErrorSelector = state => state.trafoResult.error;
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
 
 export const getTrafoParams = createSelector(
@@ -14,10 +13,6 @@ export const getTrafoParams = createSelector(
     params.q2.toFixed(4),
     params.q3.toFixed(4),
   ])
-)
-
-export const getError = createSelector(
-  getErrorSelector, error => error 
 )
 
 export const getIsCalculating = createSelector(
