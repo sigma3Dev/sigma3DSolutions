@@ -33,17 +33,6 @@
   background-color: #d5d5d5;
 }
 
-.three-d-trafo-result .home-btn {
-  padding: 40px 80px;
-  border: none;
-  font-size: 1.3em;
-}
-
-.three-d-trafo-result .home-btn:hover {
-  cursor: pointer;
-  background: #d5d5d5;
-}
-
 .three-d-trafo-result .fa-spinner {
   font-size: 5em;
   animation: spin 2000ms infinite linear;

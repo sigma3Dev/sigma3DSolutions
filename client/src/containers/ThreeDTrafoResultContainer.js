@@ -23,15 +23,15 @@ class ThreeDTrafoResultContainer extends Component {
    */
   constructor(props) {
     super(props);
-    this.goHome = this.goHome.bind(this);
+    this.goBack = this.goBack.bind(this);
   }
 
   /**
-   * Navigates back to homepage of the app
+   * Navigates back to input page of the current transformation
    * @memberof ThreeDTrafoResultContainer
    */
-  goHome = () => {
-    this.props.history.push('/');
+  goBack = () => {
+    this.props.history.push('/three-d-transformation/data-input');
   }
 
   render() {
@@ -40,7 +40,7 @@ class ThreeDTrafoResultContainer extends Component {
         response={ this.props.response }
         error={ this.props.error }
         isCalculating = { this.props.isCalculating }
-        handleClick = { this.goHome }
+        handleClick = { this.goBack }
       />
     )
   }
