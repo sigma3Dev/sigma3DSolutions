@@ -20,7 +20,17 @@ const PointsInputTable3D6W = ({
   const FaTrash = require('react-icons/lib/fa/trash-o');
   const trashIcon = React.createElement(FaTrash, null);
 
+  /** 
+   * if there isn't any "useX", "useY" or "useZ", the checkboxes CSS is set to "display: none"
+  */
   const showUseFields = () => !listOfUsedCoords || listOfUsedCoords.length === 0 ? {display: 'none'} : {};
+
+  /** 
+   * is the checkbox checked? returns true by default if start system, 
+   * if target system returns the value for the coordinate 
+   * @param {number} index - which point?
+   * @param {number} coord - which coordinate of the point (x, y, or z)?
+  */
   const isCheckBoxSet = (index, coord) => !listOfUsedCoords || listOfUsedCoords.length === 0 ? true : listOfUsedCoords[index][coord];
 
   const tableRows = systemPoints.map((line, i) => {
