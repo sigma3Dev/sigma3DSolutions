@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getTrafoParams, getError, getIsCalculating } from '../selectors/TrafoSelectors/getTrafoResultDataSelector';
+import { removeError } from '../actions/submitCoords/submitCoordsActions';
 import ThreeDTrafoResult from '../components/ThreeDTrafoResult/ThreeDTrafoResult';
+
+const mapDispatchToProps = dispatch => ({
+  onRemoveError: () => dispatch(removeError()),
+});
 
 const mapStateToProps = (state, props) => ({
   response: getTrafoParams(state),
@@ -25,12 +30,13 @@ class ThreeDTrafoResultContainer extends Component {
     super(props);
     this.goBack = this.goBack.bind(this);
   }
-
+  
   /**
    * Navigates back to input page of the current transformation
    * @memberof ThreeDTrafoResultContainer
    */
   goBack = () => {
+    this.props.onRemoveError();
     this.props.history.push('/three-d-transformation/data-input');
   }
 
@@ -47,4 +53,4 @@ class ThreeDTrafoResultContainer extends Component {
   
 }
 
-export default connect(mapStateToProps)(ThreeDTrafoResultContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ThreeDTrafoResultContainer);

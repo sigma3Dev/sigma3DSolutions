@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
-const getTrafoParamsSelector = state => state.trafoResult;
-const getErrorSelector = state => state.trafoDataInput.error;
+const getTrafoParamsSelector = state => state.trafoResult.response;
+const getErrorSelector = state => state.trafoResult.error;
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
 
 export const getTrafoParams = createSelector(

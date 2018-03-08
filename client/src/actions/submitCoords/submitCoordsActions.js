@@ -3,8 +3,15 @@ export const SUBMIT_COORDS = 'SUBMIT_COORDS';
 export const SUBMIT_COORDS_REQUEST = 'SUBMIT_COORDS_REQUEST';
 export const SUBMIT_COORDS_SUCCESS = 'SUBMIT_COORDS_SUCCESS';
 export const SUBMIT_COORDS_FAILURE = 'SUBMIT_COORDS_FAILURE';
+export const REMOVE_ERROR = 'REMOVE_ERROR';
 
 const axios = require('axios');
+
+/** set error back to 'null' */
+export const removeError = () => ({
+  type: REMOVE_ERROR,
+  receivedAt: Date.now(),
+});
 
 /**
  * handle checkbox changes
@@ -55,5 +62,5 @@ export const submitCoords = () => (dispatch, getState) => {
       coords
     })
     .then(response => dispatch(submitCoordsSuccess(response)))
-    .catch(error => dispatch(SubmitCoordsFailure(error)));
+    .catch(error => dispatch(SubmitCoordsFailure(error.message)))
 };

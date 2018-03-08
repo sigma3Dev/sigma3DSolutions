@@ -55,6 +55,7 @@ app.post('/calculate-trafo', function(req, res) {
 
   socket.onerror = error => {
     console.log("WebSocket Error: " + error);
+    res.send(error);
   }
 
   socket.onmessage = e => {

@@ -1,0 +1,26 @@
+.error-screen {
+  width: 83%;
+  height: 500px;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 12px;
+  font-family: Roboto;
+}
+
+.error-screen .error-header {
+  font-size: 5.0em;
+  border-bottom: none;
+}
+
+.error-screen .error-span {
+  color: darkred;
+  font-size: 1.0em;
+  border-bottom: 0;
+}
+
+.error-screen .error-message {
+  font-size: 1.3em;
+}

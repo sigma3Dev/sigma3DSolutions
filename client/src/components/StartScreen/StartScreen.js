@@ -1,5 +1,5 @@
 import React from 'react';
-import {FormattedMessage} from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
 import AppSelectionBtn from '../AppSelectionBtn/AppSelectionBtn';
 import Sidebar from '../Sidebar/Sidebar';
@@ -10,7 +10,7 @@ import './StartScreen.css';
  * @param {Object} props - properties passed down from parent element
  * @returns {*} StartScreen - .jsx Element
  */
-const StartScreen = (props) => {
+const StartScreen = () => {
   return (
     <div className="start-screen">
       <Sidebar />
