@@ -10,3 +10,7 @@ export const getStartSystemPoints = createSelector(
 export const getTargetSystemPoints = createSelector(
   getTargetSystemPointsSelector, points => points 
 )
+
+export const getListOfUsedCoords = createSelector(
+  getTargetSystemPointsSelector, points => points.map(p => ([p.useX, p.useY, p.useZ]))
+)

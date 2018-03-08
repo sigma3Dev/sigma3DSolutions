@@ -27,10 +27,8 @@ const ThreeDTrafoInput = ({
   handleSubmitClick,
   handleStartDeleteClick,
   handleTargetDeleteClick,
+  listOfUsedCoords
 }) => {
-
-  const startStyle = { display: 'none' };
-  const targetStyle = {};
 
   return (
     <div>
@@ -46,7 +44,6 @@ const ThreeDTrafoInput = ({
           <PointsInput onDrop={onStartFileDrop} />
           <PointsInputTable3D6W 
             systemPoints={startSystemPoints} 
-            checkboxesDisplay={startStyle}
             handleDeleteDataInput={handleStartDeleteClick}
           />
         </div>
@@ -60,9 +57,9 @@ const ThreeDTrafoInput = ({
           <PointsInput onDrop={onTargetFileDrop} />
           <PointsInputTable3D6W
             systemPoints={targetSystemPoints} 
-            checkboxesDisplay={targetStyle}
             handleChange={checkboxUpdate}
             handleDeleteDataInput={handleTargetDeleteClick}
+            listOfUsedCoords={listOfUsedCoords}
           />
         </div>
       </div>  

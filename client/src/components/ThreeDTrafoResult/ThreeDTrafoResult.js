@@ -1,7 +1,8 @@
 import React from 'react';
-import {FormattedMessage} from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Sidebar from '../Sidebar/Sidebar';
+import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import './ThreeDTrafoResult.css';
 
 const FaSpinner = require('react-icons/lib/fa/spinner');
@@ -92,12 +93,7 @@ const ThreeDTrafoResult = ({
             </tr>
           </tbody>
         </table>
-        <button className="home-btn" onClick={ handleClick }>
-          <FormattedMessage
-            id="ThreeDTrafoResult.label.homepageBtn"
-            defaultMessage="Go back to homepage"
-          />
-        </button>
+        <BackToInputBtn handleClick={ handleClick } />
         <Sidebar />
       </div>
     )
@@ -105,12 +101,7 @@ const ThreeDTrafoResult = ({
     return (
       <div className="three-d-trafo-result">
         <h1>Error!</h1>
-        <button className="home-btn" onClick={ handleClick }>
-          <FormattedMessage
-            id="ThreeDTrafoResult.label.homepageBtn"
-            defaultMessage="Go back to homepage"
-          />
-        </button>
+        <BackToInputBtn handleClick={ handleClick } />
       </div>
     )
   }

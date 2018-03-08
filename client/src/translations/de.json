@@ -10,6 +10,5 @@
     "ThreeDTrafoInput.label.startSystemPointsCaption": "Startsystempunkte:",
     "ThreeDTrafoInput.label.targetSystemPointsCaption": "Zielsystempunkte:",
     "ThreeDTrafoResult.label.calculating": "Rechne...",
-    "ThreeDTrafoResult.label.caption": "Transformationsparameter",
-    "ThreeDTrafoResult.label.homepageBtn": "Zurück zur Startseite"
+    "ThreeDTrafoResult.label.caption": "Transformationsparameter"
 }

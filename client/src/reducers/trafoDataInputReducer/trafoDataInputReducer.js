@@ -31,26 +31,29 @@ function transformationDataInput(state = initialTrafoData, action) {
       ...state,
       startSystemPoints: action.coords,
     }
-    case PUSH_TARGET_SYSTEM_COORDINATES: 
+    case PUSH_TARGET_SYSTEM_COORDINATES:
       return {
         ...state,
         targetSystemPoints: action.coords,
       }
     case CHECKBOX_UPDATE:
-      state.targetSystemPoints.map((targetSystemPoint, index) => {
+      const points = state.targetSystemPoints.map((targetSystemPoint, index) => {
+        const point = {...targetSystemPoint}
         if (targetSystemPoint === state.targetSystemPoints[action.id[1]]) {
           if (action.id[0] === 'x') {
-            targetSystemPoint.useX = !targetSystemPoint.useX;
+            point.useX = !targetSystemPoint.useX;
           } else if (action.id[0] === 'y') {
-            targetSystemPoint.useY = !targetSystemPoint.useY;
+            point.useY = !targetSystemPoint.useY;
           } else {
-            targetSystemPoint.useZ = !targetSystemPoint.useZ;
+            point.useZ = !targetSystemPoint.useZ;
           }
         };
-        return targetSystemPoint;
+
+        return point;
       });
       return {
-        ...state
+        ...state,
+        targetSystemPoints: points,
       }
     case CLEAR_START_INPUT:
       return {

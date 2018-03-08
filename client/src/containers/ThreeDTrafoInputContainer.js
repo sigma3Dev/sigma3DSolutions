@@ -14,7 +14,8 @@ import {
 } from '../actions/clearInput/clearInputActions';
 import { 
   getStartSystemPoints,
-  getTargetSystemPoints 
+  getTargetSystemPoints,
+  getListOfUsedCoords
 } from '../selectors/TrafoSelectors/getTrafoInputDataSelector';
 import ThreeDTrafoInput from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
 
@@ -32,6 +33,7 @@ const mapDispatchToProps = dispatch => ({
 const mapStateToProps = (state, props) => ({
   startSystemPoints: getStartSystemPoints(state),
   targetSystemPoints: getTargetSystemPoints(state),
+  listOfUsedCoords: getListOfUsedCoords(state)
 });
 
 /**
@@ -112,7 +114,7 @@ class ThreeDTrafoInputContainer extends Component {
     this.props.onClearTargetInput();
   }
 
-  render() { 
+  render() {
     return (
       <ThreeDTrafoInput 
         onStartFileDrop={ this.parseStartCoords } 
@@ -123,6 +125,7 @@ class ThreeDTrafoInputContainer extends Component {
         handleSubmitClick={ this.submitCoords }
         handleStartDeleteClick= { this.clearStartInput }
         handleTargetDeleteClick= { this.clearTargetInput }
+        listOfUsedCoords={ this.props.listOfUsedCoords }
       />
     )
   }
