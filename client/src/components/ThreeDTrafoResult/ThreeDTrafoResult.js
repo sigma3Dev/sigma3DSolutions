@@ -65,7 +65,10 @@ const ThreeDTrafoResult = ({
               <th>Q3</th>
               <th>
                 <button className="euler-btn" onClick={ switchAngleType }>
-                  Switch to Euler
+                  <FormattedMessage
+                    id="ThreeDTrafoResult.label.switchToEuler"
+                    defaultMessage="Switch to Euler"
+                  />
                 </button>
               </th>
             </tr>
@@ -128,7 +131,10 @@ const ThreeDTrafoResult = ({
                 <th>Rz</th>
                 <th>
                   <button className="euler-btn" onClick={ switchAngleType }>
-                    Switch to Quaternions
+                    <FormattedMessage
+                      id="ThreeDTrafoResult.label.switchToQuaternion"
+                      defaultMessage="Switch to Quaternion"
+                    />
                   </button>
                 </th>
               </tr>

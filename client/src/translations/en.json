@@ -11,5 +11,7 @@
     "ThreeDTrafoInput.label.startSystemPointsCaption": "Start System Points:",
     "ThreeDTrafoInput.label.targetSystemPointsCaption": "Target System Points:",
     "ThreeDTrafoResult.label.calculating": "Calculating...",
-    "ThreeDTrafoResult.label.caption": "Transformation Parameters"
+    "ThreeDTrafoResult.label.caption": "Transformation Parameters",
+    "ThreeDTrafoResult.label.switchToEuler": "Switch to Euler",
+    "ThreeDTrafoResult.label.switchToQuaternion": "Switch to Quaternions"
 }
