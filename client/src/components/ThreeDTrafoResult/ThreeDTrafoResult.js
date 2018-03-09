@@ -120,6 +120,9 @@ const ThreeDTrafoResult = ({
           <table className="result-table">
             <thead>
               <tr className="caption">
+                <th>Tx</th>
+                <th>Ty</th>
+                <th>Tz</th>
                 <th>Rx</th>
                 <th>Ry</th>
                 <th>Rz</th>
