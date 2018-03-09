@@ -2,10 +2,14 @@ import React                  from 'react';
 import { Provider }           from 'react-redux';
 import ReactDOM               from 'react-dom';
 import { BrowserRouter }      from 'react-router-dom';
-import { IntlProvider, addLocaleData  } from 'react-intl';
+import { 
+  IntlProvider, 
+  addLocaleData 
+}                             from 'react-intl';
 import registerServiceWorker  from './registerServiceWorker';
 import configureStore         from './store/configureStore';
 import App                    from './App';
+import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 
 import en from 'react-intl/locale-data/en';

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { FormattedMessage } from 'react-intl';
 import { 
   pushStartSystemCoordinates,
   pushTargetSystemCoordinates
@@ -17,7 +18,9 @@ import {
   getTargetSystemPoints,
   getListOfUsedCoords
 } from '../selectors/TrafoSelectors/getTrafoInputDataSelector';
+import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import ThreeDTrafoInput from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
+import InfoModal from '../components/InfoModal/InfoModal';
 
 var cdi = require('coordinatedataimporter');
 
@@ -33,7 +36,8 @@ const mapDispatchToProps = dispatch => ({
 const mapStateToProps = (state, props) => ({
   startSystemPoints: getStartSystemPoints(state),
   targetSystemPoints: getTargetSystemPoints(state),
-  listOfUsedCoords: getListOfUsedCoords(state)
+  listOfUsedCoords: getListOfUsedCoords(state),
+  error: getError(state)
 });
 
 /**
@@ -49,12 +53,16 @@ class ThreeDTrafoInputContainer extends Component {
    */
   constructor() {
     super();
+    this.state = {
+      notification: null
+    }
     this.parseStartCoords = this.parseStartCoords.bind(this);
     this.parseTargetCoords = this.parseTargetCoords.bind(this);
     this.checkboxUpdate = this.checkboxUpdate.bind(this);
     this.submitCoords = this.submitCoords.bind(this);
     this.clearStartInput = this.clearStartInput.bind(this);
     this.clearTargetInput = this.clearTargetInput.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   /**
@@ -89,13 +97,47 @@ class ThreeDTrafoInputContainer extends Component {
     this.props.onCheckboxUpdate(id);
   }
 
+  closeModal = () => {
+    this.setState({notification: null});
+  }
+
   /**
    * Handles coords submit, navigates to "result" page
    * @memberof ThreeDTrafoInputContainer
    */
   submitCoords = () => {
-    this.props.onSubmitCoords();
-    this.props.history.push('/three-d-transformation/result');
+    if (!this.props.startSystemPoints || this.props.startSystemPoints.length === 0 ) {
+      this.setState({
+        notification: (<InfoModal 
+          header={(     
+            <FormattedMessage
+              id="InfoModal.caption.wrongInput"
+              defaultMessage="Wrong Input"
+            /> )}
+          body={ 'Please import start system points!' }
+          handleClick={this.closeModal}
+        />)
+      })
+    } else if (!this.props.targetSystemPoints || this.props.targetSystemPoints.length === 0 ) {
+      this.setState({
+        notification: (<InfoModal 
+          header={ 'Wrong Input' }
+          body={ 'Please import target system points!' }
+          handleClick={this.closeModal}
+        />)
+      })
+    } else if (this.props.targetSystemPoints.length !== this.props.startSystemPoints.length ) {
+      this.setState({
+        notification: (<InfoModal 
+          header={ 'Wrong Input' }
+          body={ "Length of start and target system doesn't match" }
+          handleClick={this.closeModal}
+        />)
+      })
+    } else {
+      this.props.onSubmitCoords();
+      this.props.history.push('/three-d-transformation/result');
+    }
   }
 
   /**
@@ -116,17 +158,20 @@ class ThreeDTrafoInputContainer extends Component {
 
   render() {
     return (
-      <ThreeDTrafoInput 
-        onStartFileDrop={ this.parseStartCoords } 
-        onTargetFileDrop={ this.parseTargetCoords } 
-        startSystemPoints={ this.props.startSystemPoints }
-        targetSystemPoints={ this.props.targetSystemPoints }
-        checkboxUpdate={ this.checkboxUpdate }
-        handleSubmitClick={ this.submitCoords }
-        handleStartDeleteClick= { this.clearStartInput }
-        handleTargetDeleteClick= { this.clearTargetInput }
-        listOfUsedCoords={ this.props.listOfUsedCoords }
-      />
+      <div>
+        {this.state.notification}
+        <ThreeDTrafoInput 
+          onStartFileDrop={ this.parseStartCoords } 
+          onTargetFileDrop={ this.parseTargetCoords } 
+          startSystemPoints={ this.props.startSystemPoints }
+          targetSystemPoints={ this.props.targetSystemPoints }
+          checkboxUpdate={ this.checkboxUpdate }
+          handleSubmitClick={ this.submitCoords }
+          handleStartDeleteClick= { this.clearStartInput }
+          handleTargetDeleteClick= { this.clearTargetInput }
+          listOfUsedCoords={ this.props.listOfUsedCoords }
+        />
+      </div>
     )
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Sidebar from '../Sidebar/Sidebar';
+import ErrorScreen from '../ErrorScreen/ErrorScreen';
 import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import './ThreeDTrafoResult.css';
 
@@ -36,6 +37,10 @@ const ThreeDTrafoResult = ({
         </h1>
         <div className="fa-spinner">{ spinnerIcon }</div>
       </div>
+    )
+  } else if (error) {
+    return (
+      <ErrorScreen error={error} handleClick={handleClick} />
     )
   } else if (response) { 
     const copyText = response.join(" ");
@@ -95,13 +100,6 @@ const ThreeDTrafoResult = ({
         </table>
         <BackToInputBtn handleClick={ handleClick } />
         <Sidebar />
-      </div>
-    )
-  } else {
-    return (
-      <div className="three-d-trafo-result">
-        <h1>Error!</h1>
-        <BackToInputBtn handleClick={ handleClick } />
       </div>
     )
   }

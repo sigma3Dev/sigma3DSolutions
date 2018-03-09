@@ -12,9 +12,9 @@ const AppSelectionBtn = ({
   caption,
   description
 }) => (
-  <div className="btn">
-    <div className="btn-caption">{ caption }</div>
-    <div className="btn-description">{ description }</div>
+  <div className="app-selection-btn">
+    <div className="app-selection-btn-caption">{ caption }</div>
+    <div className="app-selection-btn-description">{ description }</div>
   </div>
 );
 

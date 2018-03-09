@@ -54,6 +54,12 @@ export const submitCoords = () => (dispatch, getState) => {
   return axios.post('/calculate-trafo', {
       coords
     })
-    .then(response => dispatch(submitCoordsSuccess(response)))
-    .catch(error => dispatch(SubmitCoordsFailure(error)));
+    .then(response => { 
+      if (response.data.hasOwnProperty('result')) {
+        dispatch(submitCoordsSuccess(response))
+      } else {
+        dispatch(SubmitCoordsFailure(response.data.error.message))
+      }
+    })
+    .catch(error => dispatch(SubmitCoordsFailure(error.message)))
 };

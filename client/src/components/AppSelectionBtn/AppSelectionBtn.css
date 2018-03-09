@@ -1,4 +1,4 @@
-.btn {
+.app-selection-btn {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,15 +12,15 @@
   background: white;
 }
 
-.btn:hover {
+.app-selection-btn {
   cursor: pointer;
 }
 
-.btn:active {
+.app-selection-btn:active {
   transform: translateY(2px);
 }
 
-.btn-caption {
+.app-selection-btn-caption {
   padding: 8px;
   font-family: Roboto;
   font-size: 18px;
@@ -33,7 +33,11 @@
   color: #000000;
 }
 
-.btn-description {
+.app-selection-btn-caption:hover {
+  text-decoration: none;
+}
+
+.app-selection-btn-description {
   padding: 8px;
   font-family: Roboto;
   font-size: 14px;

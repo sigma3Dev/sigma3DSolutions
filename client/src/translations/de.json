@@ -1,6 +1,7 @@
 {
     "AppSelectionBtn.caption.3Dtransformation": "3D-Transformation",
     "AppSelectionBtn.description.3Dtransformation": "6 Parameter, gewichtet",
+    "ErrorScreen.label.error": "Fehler!",
     "PointsInput.label.inputTxtFile": ".txt Datei hier ablegen",
     "PointsInputTable.label.useX": "nutze x",
     "PointsInputTable.label.useY": "nutze y",

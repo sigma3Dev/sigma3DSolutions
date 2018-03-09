@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getTrafoParams, getError, getIsCalculating } from '../selectors/TrafoSelectors/getTrafoResultDataSelector';
+import { getTrafoParams, getIsCalculating } from '../selectors/TrafoSelectors/getTrafoResultDataSelector';
+import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
+import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import ThreeDTrafoResult from '../components/ThreeDTrafoResult/ThreeDTrafoResult';
+
+const mapDispatchToProps = dispatch => ({
+  onRemoveError: () => dispatch(removeError()),
+});
 
 const mapStateToProps = (state, props) => ({
   response: getTrafoParams(state),
@@ -25,26 +31,29 @@ class ThreeDTrafoResultContainer extends Component {
     super(props);
     this.goBack = this.goBack.bind(this);
   }
-
+  
   /**
    * Navigates back to input page of the current transformation
    * @memberof ThreeDTrafoResultContainer
    */
   goBack = () => {
+    this.props.onRemoveError();
     this.props.history.push('/three-d-transformation/data-input');
   }
 
   render() {
     return(
-      <ThreeDTrafoResult
-        response={ this.props.response }
-        error={ this.props.error }
-        isCalculating = { this.props.isCalculating }
-        handleClick = { this.goBack }
-      />
+      <div>
+        <ThreeDTrafoResult
+          response={ this.props.response }
+          error={ this.props.error }
+          isCalculating = { this.props.isCalculating }
+          handleClick = { this.goBack }
+        />
+      </div>
     )
   }
   
 }
 
-export default connect(mapStateToProps)(ThreeDTrafoResultContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ThreeDTrafoResultContainer);
