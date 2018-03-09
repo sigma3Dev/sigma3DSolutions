@@ -3,12 +3,12 @@ import { connect }          from 'react-redux';
 import { getError }         from '../selectors/ErrorSelectors/getErrorSelector';
 import { 
   getTrafoParams,
+  getTrafoParamsEuler,
   getIsCalculating,
   getIsEuler }              from '../selectors/TrafoSelectors/getTrafoResultDataSelector/getTrafoResultDataSelector';
 import { removeError }      from '../actions/errorHandling/errorHandlingActions';
 import { switchAngleType }  from '../actions/switchAngleType/switchAngleTypeActions';
 import ThreeDTrafoResult    from '../components/ThreeDTrafoResult/ThreeDTrafoResult';
-import qte                  from 'quaternion-to-euler';
 
 const mapDispatchToProps = dispatch => ({
   onRemoveError: () => dispatch(removeError()),
@@ -17,6 +17,7 @@ const mapDispatchToProps = dispatch => ({
 
 const mapStateToProps = (state, props) => ({
   response: getTrafoParams(state),
+  responseEuler: getTrafoParamsEuler(state),
   error: getError(state),
   isCalculating: getIsCalculating(state),
   isEuler: getIsEuler(state),
@@ -55,11 +56,11 @@ class ThreeDTrafoResultContainer extends Component {
 
   render() {
     let response = this.props.response;
-    const quat = [response[3], response[4], response[5], response[6]];    
-    const euler = qte(quat);
     if (this.props.isEuler) {
-      response = euler;
-    }
+      response = this.props.responseEuler;
+    } else {
+      response = this.props.response;
+    };
     return(
       <div>
         <ThreeDTrafoResult

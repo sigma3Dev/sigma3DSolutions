@@ -107,8 +107,8 @@ const ThreeDTrafoResult = ({
         <Sidebar />
       </div>
     )
-  } else if (response.length === 3) {
-    const copyText = response.map(r => (r.toFixed(6))).join(" ");
+  } else if (response.length === 6) {
+    const copyText = response.join(" ");
     return (
       <div className="three-d-trafo-result">
           <h1>
@@ -136,13 +136,22 @@ const ThreeDTrafoResult = ({
             <tbody>
               <tr>
                 <th>
-                  { response[0].toFixed(6) }
+                  { response[0] }
                 </th>
                 <th>
-                  { response[1].toFixed(6) }
+                  { response[1] }
                 </th>
                 <th>
-                  { response[2].toFixed(6) }
+                  { response[2] }
+                </th>
+                <th>
+                  { response[3] }
+                </th>
+                <th>
+                  { response[4] }
+                </th>
+                <th>
+                  { response[5] }
                 </th>
                 <th>
                   <CopyToClipboard text={ copyText }>
