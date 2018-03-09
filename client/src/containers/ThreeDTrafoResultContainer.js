@@ -42,10 +42,8 @@ class ThreeDTrafoResultContainer extends Component {
   }
 
   render() {
-    const errorMsg = !this.props.error ? null : (<div>test</div>) 
     return(
       <div>
-        {errorMsg}
         <ThreeDTrafoResult
           response={ this.props.response }
           error={ this.props.error }
