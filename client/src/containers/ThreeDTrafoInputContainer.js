@@ -17,7 +17,7 @@ import {
   getStartSystemPoints,
   getTargetSystemPoints,
   getListOfUsedCoords
-} from '../selectors/TrafoSelectors/getTrafoInputDataSelector';
+} from '../selectors/TrafoSelectors/getTrafoInputDataSelector/getTrafoInputDataSelector';
 import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import ThreeDTrafoInput from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
 import InfoModal from '../components/InfoModal/InfoModal';

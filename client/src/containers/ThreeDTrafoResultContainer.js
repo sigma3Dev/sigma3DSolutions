@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getTrafoParams, getIsCalculating } from '../selectors/TrafoSelectors/getTrafoResultDataSelector';
+import { getTrafoParams, getIsCalculating } from '../selectors/TrafoSelectors/getTrafoResultDataSelector/getTrafoResultDataSelector';
 import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import ThreeDTrafoResult from '../components/ThreeDTrafoResult/ThreeDTrafoResult';

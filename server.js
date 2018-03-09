@@ -60,7 +60,7 @@ app.post('/calculate-trafo', function(req, res) {
 
   socket.onmessage = e => {
     const response = e.data;
-    res.send(response);
+    res.status(200).send(response);
   }
 
   socket.send(JSON.stringify(obj));

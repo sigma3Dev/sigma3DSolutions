@@ -36,7 +36,7 @@ export const submitCoordsSuccess = (response) => ({
  * fired when an error is returned from the backend
  * @param {Object} error - Error that is returned from the node server
  */
-export const SubmitCoordsFailure = (error) => ({
+export const submitCoordsFailure = (error) => ({
   type: SUBMIT_COORDS_FAILURE,
   error,
   receivedAt: Date.now(),
@@ -54,12 +54,14 @@ export const submitCoords = () => (dispatch, getState) => {
   return axios.post('/calculate-trafo', {
       coords
     })
-    .then(response => { 
+    .then(response => {
       if (response.data.hasOwnProperty('result')) {
-        dispatch(submitCoordsSuccess(response))
+        dispatch(submitCoordsSuccess(response));
       } else {
-        dispatch(SubmitCoordsFailure(response.data.error.message))
+        dispatch(submitCoordsFailure(response.data.error.message))
       }
     })
-    .catch(error => dispatch(SubmitCoordsFailure(error.message)))
+    .catch(error => {
+      dispatch(submitCoordsFailure(error.message));
+    })
 };

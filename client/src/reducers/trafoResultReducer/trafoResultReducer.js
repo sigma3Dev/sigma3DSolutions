@@ -1,18 +1,15 @@
 import {
   SUBMIT_COORDS_SUCCESS,
-  REMOVE_ERROR,
 } from '../../actions/submitCoords/submitCoordsActions';
 
 const initialResultData = {
-  response: {
-    tx: 0,
-    ty: 0,
-    tz: 0,
-    q0: 0,
-    q1: 0,
-    q2: 0,
-    q3: 0
-  }
+  tx: 0,
+  ty: 0,
+  tz: 0,
+  q0: 0,
+  q1: 0,
+  q2: 0,
+  q3: 0
 }
 
 /**
@@ -26,15 +23,13 @@ function trafoResult(state = initialResultData, action) {
     case SUBMIT_COORDS_SUCCESS:
       return {
         ...state,
-        response: {
-          tx: action.response.data.result.tx,
-          ty: action.response.data.result.ty,
-          tz: action.response.data.result.tz,
-          q0: action.response.data.result.q0,
-          q1: action.response.data.result.q1,
-          q2: action.response.data.result.q2,
-          q3: action.response.data.result.q3
-        }
+        tx: action.response.data.result.tx,
+        ty: action.response.data.result.ty,
+        tz: action.response.data.result.tz,
+        q0: action.response.data.result.q0,
+        q1: action.response.data.result.q1,
+        q2: action.response.data.result.q2,
+        q3: action.response.data.result.q3
       };
     default:
       return state;

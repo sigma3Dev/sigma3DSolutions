@@ -7,6 +7,12 @@ import {
 
 const initialErrorState = { error: null };
 
+/**
+ * Handles errors
+ * @param {Object} state - current error state
+ * @param {Object} action - action to be executed
+ * @returns {Object} state - updated state
+ */
 function errorHandling(state = initialErrorState, action) {
   switch (action.type) {
     case REMOVE_ERROR:
