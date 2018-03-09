@@ -1,6 +1,7 @@
 import {
   getTrafoParams,
-  getIsCalculating
+  getIsCalculating,
+  getIsEuler
 } from './getTrafoResultDataSelector';
 
 describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => {
@@ -38,4 +39,14 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
     const result = getIsCalculating(state);
     expect(result).toEqual(expected);
   });
+  it('getIsEuler', () => {
+    const state = {
+      isEuler: {
+        isEuler: false
+      }
+    }
+    const expected = false;
+    const result = getIsEuler(state);
+    expect(result).toEqual(expected);
+  })
 });

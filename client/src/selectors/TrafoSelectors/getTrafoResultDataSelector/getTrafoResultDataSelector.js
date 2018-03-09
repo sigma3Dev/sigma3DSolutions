@@ -2,6 +2,7 @@ import { createSelector } from 'reselect';
 
 const getTrafoParamsSelector = state => state.trafoResult;
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
+const getIsEulerSelector = state => state.isEuler.isEuler;
 
 export const getTrafoParams = createSelector(
   getTrafoParamsSelector, params => ([  
@@ -13,6 +14,11 @@ export const getTrafoParams = createSelector(
     params.q2.toFixed(4),
     params.q3.toFixed(4),
   ])
+)
+
+// TODO: write unit test
+export const getIsEuler = createSelector(
+  getIsEulerSelector, isEuler => isEuler
 )
 
 export const getIsCalculating = createSelector(

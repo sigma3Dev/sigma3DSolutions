@@ -24,7 +24,8 @@ const ThreeDTrafoResult = ({
   response,
   error,
   isCalculating,
-  handleClick
+  handleClick,
+  switchAngleType,
 }) => {
   if (isCalculating) {
     return (
@@ -42,7 +43,7 @@ const ThreeDTrafoResult = ({
     return (
       <ErrorScreen error={error} handleClick={handleClick} />
     )
-  } else if (response) { 
+  } else if (response.length === 7) {
     const copyText = response.join(" ");
     return (
       <div className="three-d-trafo-result">
@@ -62,7 +63,11 @@ const ThreeDTrafoResult = ({
               <th>Q1</th>
               <th>Q2</th>
               <th>Q3</th>
-              <th></th>
+              <th>
+                <button className="euler-btn" onClick={ switchAngleType }>
+                  Switch to Euler
+                </button>
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -102,6 +107,54 @@ const ThreeDTrafoResult = ({
         <Sidebar />
       </div>
     )
+  } else if (response.length === 3) {
+    const copyText = response.map(r => (r.toFixed(6))).join(" ");
+    return (
+      <div className="three-d-trafo-result">
+          <h1>
+            <FormattedMessage
+              id="ThreeDTrafoResult.label.caption"
+              defaultMessage="Transformation Parameters"
+            />
+          </h1>
+          <table className="result-table">
+            <thead>
+              <tr className="caption">
+                <th>Rx</th>
+                <th>Ry</th>
+                <th>Rz</th>
+                <th>
+                  <button className="euler-btn" onClick={ switchAngleType }>
+                    Switch to Quaternions
+                  </button>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  { response[0].toFixed(6) }
+                </th>
+                <th>
+                  { response[1].toFixed(6) }
+                </th>
+                <th>
+                  { response[2].toFixed(6) }
+                </th>
+                <th>
+                  <CopyToClipboard text={ copyText }>
+                    <button className="copy" title="Copy to clipboard">
+                      { ClipboardIcon }
+                    </button>
+                  </CopyToClipboard>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+          <BackToInputBtn handleClick={ handleClick } />
+          <Sidebar />
+        </div>
+    );
   }
 }
 
