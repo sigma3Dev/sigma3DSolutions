@@ -11,15 +11,15 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
     }
   >
     <div
-      className="btn"
+      className="app-selection-btn"
     >
       <div
-        className="btn-caption"
+        className="app-selection-btn-caption"
       >
         3D-Transformation
       </div>
       <div
-        className="btn-description"
+        className="app-selection-btn-description"
       >
         7 Parameters
       </div>
@@ -1995,17 +1995,17 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
         onClick={[Function]}
       >
         <div
-          className="btn"
+          className="app-selection-btn"
         >
           <div
-            className="btn-caption"
+            className="app-selection-btn-caption"
           >
             <span>
               3D-Transformation
             </span>
           </div>
           <div
-            className="btn-description"
+            className="app-selection-btn-description"
           >
             <span>
               6 Parameter, gewichtet
