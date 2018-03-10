@@ -4,6 +4,8 @@ node_js:
 cache:
   directories:
   - node_modules
+before_script:
+  - cd client && npm install
 script:
   - cd client && npm test
   - cd client && npm run build
