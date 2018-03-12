@@ -114,23 +114,38 @@ class ThreeDTrafoInputContainer extends Component {
               id="InfoModal.caption.wrongInput"
               defaultMessage="Wrong Input"
             /> )}
-          body={ 'Please import start system points!' }
+          body={(<FormattedMessage
+            id="InfoModal.label.noStartSystemPoints"
+            defaultMessage="Please import start system points!"
+          /> )}
           handleClick={this.closeModal}
         />)
       })
     } else if (!this.props.targetSystemPoints || this.props.targetSystemPoints.length === 0 ) {
       this.setState({
         notification: (<InfoModal 
-          header={ 'Wrong Input' }
-          body={ 'Please import target system points!' }
+          header={(<FormattedMessage
+            id="InfoModal.caption.wrongInput"
+            defaultMessage="Wrong Input"
+          /> )}
+          body={(<FormattedMessage
+            id="InfoModal.label.noTargetSystemPoints"
+            defaultMessage="Please import target system points!"
+          /> )}
           handleClick={this.closeModal}
         />)
       })
     } else if (this.props.targetSystemPoints.length !== this.props.startSystemPoints.length ) {
       this.setState({
         notification: (<InfoModal 
-          header={ 'Wrong Input' }
-          body={ "Length of start and target system doesn't match" }
+          header={(<FormattedMessage
+            id="InfoModal.caption.wrongInput"
+            defaultMessage="Wrong Input"
+          /> )}
+          body={(<FormattedMessage
+            id="InfoModal.label.startAndTargetDifferentLengths"
+            defaultMessage="Length of start and target system don't match!"
+          /> )}
           handleClick={this.closeModal}
         />)
       })
