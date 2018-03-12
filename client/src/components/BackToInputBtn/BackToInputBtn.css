@@ -10,3 +10,8 @@
   cursor: pointer;
   background: #d5d5d5;
 }
+
+.back-to-input-btn .arrow-left {
+  display: inline-block;
+  font-size: 1.3em;
+}

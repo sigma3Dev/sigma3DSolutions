@@ -17,3 +17,8 @@
   background: #005533;
   border: 3px solid #004422;
 }
+
+.submit-btn .arrow-right {
+  display: inline-block;
+  font-size: 1.3em;
+}

@@ -7,7 +7,7 @@
     "PointsInputTable.label.useY": "use y",
     "PointsInputTable.label.useZ": "use z",    
     "Sidebar.label.transformation": "Transformations",
-    "SubmitBtn.label.caption": "Submit 🡆",
+    "SubmitBtn.label.caption": "Submit ",
     "ThreeDTrafoInput.label.startSystemPointsCaption": "Start System Points:",
     "ThreeDTrafoInput.label.targetSystemPointsCaption": "Target System Points:",
     "ThreeDTrafoResult.label.calculating": "Calculating...",
