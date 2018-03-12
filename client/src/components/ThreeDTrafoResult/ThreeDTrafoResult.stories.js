@@ -9,7 +9,7 @@ import { withInfo } from '@storybook/addon-info';
 
 const StoryRouter = require('storybook-router');
 
-const response = [1380.49, 9336.54, -3796.40, -0.9951, -0.0048, -0.0006, 0.0990];
+const trafoParams = [1380.49, 9336.54, -3796.40, -0.9951, -0.0048, -0.0006, 0.0990];
 
 const stories = storiesOf('Start.ThreeDTrafoResult', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));
@@ -18,4 +18,4 @@ stories.addDecorator(StoryRouter.default());
 
 stories
   .add('Table to display the result of the calculated transformation', () => (
-    <ThreeDTrafoResult isCalculating={boolean('isCalculating', false)} response={response} />))
+    <ThreeDTrafoResult isCalculating={boolean('isCalculating', false)} trafoParams={trafoParams} />))

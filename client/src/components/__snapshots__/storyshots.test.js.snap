@@ -2840,7 +2840,7 @@ exports[`Storyshots Start.ThreeDTrafoResult Table to display the result of the c
                   <span
                     style={Object {}}
                   >
-                    response
+                    trafoParams
                   </span>
                   <span>
                     =

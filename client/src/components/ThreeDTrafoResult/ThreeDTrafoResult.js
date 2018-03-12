@@ -15,13 +15,13 @@ const ClipboardIcon = React.createElement(GoClippy, null);
 /**
  * page to show the results of 3D Transformation
  * @param {boolean} isCalculating - true if response is currently being calculated
- * @param {Object} response - response that is returned from backend after successful calculation
+ * @param {Object} trafoParams - response that is returned from backend after successful calculation
  * @param {Object} error - error that is returned from backend after unsuccessful calculation
  * @param {function} handleClick - functionality to navigate back to start screen
  * @returns {*} ThreeDTrafoResult - .jsx Element
  */
 const ThreeDTrafoResult = ({
-  response,
+  trafoParams,
   error,
   isCalculating,
   handleClick,
@@ -45,7 +45,7 @@ const ThreeDTrafoResult = ({
       <ErrorScreen error={error} handleClick={handleClick} />
     )
   } else if ( !isEuler ) {
-    const copyText = response.join(" ");
+    const copyText = trafoParams.join(" ");
     return (
       <div className="three-d-trafo-result">
         <h1>
@@ -77,25 +77,25 @@ const ThreeDTrafoResult = ({
           <tbody>
             <tr>
               <th>
-                { response[0] }
+                { trafoParams[0] }
               </th>
               <th>
-                { response[1] }
+                { trafoParams[1] }
               </th>
               <th>
-                { response[2] }
+                { trafoParams[2] }
               </th>
               <th>
-                { response[3] }
+                { trafoParams[3] }
               </th>
               <th>
-                { response[4] }
+                { trafoParams[4] }
               </th>
               <th>
-                { response[5] }
+                { trafoParams[5] }
               </th>
               <th>
-                { response[6] }
+                { trafoParams[6] }
               </th>
               <th>
                 <CopyToClipboard text={ copyText }>
@@ -112,7 +112,7 @@ const ThreeDTrafoResult = ({
       </div>
     )
   } else if ( isEuler ) {
-    const copyText = response.join(" ");
+    const copyText = trafoParams.join(" ");
     return (
       <div className="three-d-trafo-result">
           <h1>
@@ -143,22 +143,22 @@ const ThreeDTrafoResult = ({
             <tbody>
               <tr>
                 <th>
-                  { response[0] }
+                  { trafoParams[0] }
                 </th>
                 <th>
-                  { response[1] }
+                  { trafoParams[1] }
                 </th>
                 <th>
-                  { response[2] }
+                  { trafoParams[2] }
                 </th>
                 <th>
-                  { response[3] }
+                  { trafoParams[3] }
                 </th>
                 <th>
-                  { response[4] }
+                  { trafoParams[4] }
                 </th>
                 <th>
-                  { response[5] }
+                  { trafoParams[5] }
                 </th>
                 <th>
                   <CopyToClipboard text={ copyText }>

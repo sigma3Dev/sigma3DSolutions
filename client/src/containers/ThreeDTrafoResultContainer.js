@@ -16,8 +16,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = (state, props) => ({
-  response: getTrafoParams(state),
-  responseEuler: getTrafoParamsEuler(state),
+  trafoParams: getTrafoParams(state),
+  trafoParamsEuler: getTrafoParamsEuler(state),
   error: getError(state),
   isCalculating: getIsCalculating(state),
   isEuler: getIsEuler(state),
@@ -55,16 +55,10 @@ class ThreeDTrafoResultContainer extends Component {
   }
 
   render() {
-    let response = this.props.response;
-    if (this.props.isEuler) {
-      response = this.props.responseEuler;
-    } else {
-      response = this.props.response;
-    };
     return(
       <div>
         <ThreeDTrafoResult
-          response={ response }
+          trafoParams={ this.props.isEuler ? this.props.trafoParamsEuler :  this.props.trafoParams }
           error={ this.props.error }
           isCalculating = { this.props.isCalculating }
           handleClick = { this.goBack }
