@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { getTrafoParams, getIsCalculating } from '../selectors/TrafoSelectors/getTrafoResultDataSelector/getTrafoResultDataSelector';
-import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
-import { removeError } from '../actions/errorHandling/errorHandlingActions';
-import ThreeDTrafoResult from '../components/ThreeDTrafoResult/ThreeDTrafoResult';
+import { connect }          from 'react-redux';
+import { getError }         from '../selectors/ErrorSelectors/getErrorSelector';
+import { 
+  getTrafoParams,
+  getTrafoParamsEuler,
+  getIsCalculating,
+  getIsEuler }              from '../selectors/TrafoSelectors/getTrafoResultDataSelector/getTrafoResultDataSelector';
+import { removeError }      from '../actions/errorHandling/errorHandlingActions';
+import { switchAngleType }  from '../actions/switchAngleType/switchAngleTypeActions';
+import ThreeDTrafoResult    from '../components/ThreeDTrafoResult/ThreeDTrafoResult';
 
 const mapDispatchToProps = dispatch => ({
   onRemoveError: () => dispatch(removeError()),
+  onSwitchAngleType: () => dispatch(switchAngleType()),
 });
 
 const mapStateToProps = (state, props) => ({
-  response: getTrafoParams(state),
+  trafoParams: getTrafoParams(state),
+  trafoParamsEuler: getTrafoParamsEuler(state),
   error: getError(state),
   isCalculating: getIsCalculating(state),
+  isEuler: getIsEuler(state),
 });
 
 /**
@@ -30,6 +38,7 @@ class ThreeDTrafoResultContainer extends Component {
   constructor(props) {
     super(props);
     this.goBack = this.goBack.bind(this);
+    this.switchAngleType = this.switchAngleType.bind(this);
   }
   
   /**
@@ -41,14 +50,20 @@ class ThreeDTrafoResultContainer extends Component {
     this.props.history.push('/three-d-transformation/data-input');
   }
 
+  switchAngleType = () => {
+    this.props.onSwitchAngleType();
+  }
+
   render() {
     return(
       <div>
         <ThreeDTrafoResult
-          response={ this.props.response }
+          trafoParams={ this.props.isEuler ? this.props.trafoParamsEuler :  this.props.trafoParams }
           error={ this.props.error }
           isCalculating = { this.props.isCalculating }
           handleClick = { this.goBack }
+          switchAngleType = { this.switchAngleType }
+          isEuler = { this.props.isEuler }
         />
       </div>
     )

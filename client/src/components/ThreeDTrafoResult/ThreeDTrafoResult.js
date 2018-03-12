@@ -15,16 +15,18 @@ const ClipboardIcon = React.createElement(GoClippy, null);
 /**
  * page to show the results of 3D Transformation
  * @param {boolean} isCalculating - true if response is currently being calculated
- * @param {Object} response - response that is returned from backend after successful calculation
+ * @param {Object} trafoParams - response that is returned from backend after successful calculation
  * @param {Object} error - error that is returned from backend after unsuccessful calculation
  * @param {function} handleClick - functionality to navigate back to start screen
  * @returns {*} ThreeDTrafoResult - .jsx Element
  */
 const ThreeDTrafoResult = ({
-  response,
+  trafoParams,
   error,
   isCalculating,
-  handleClick
+  handleClick,
+  switchAngleType,
+  isEuler,
 }) => {
   if (isCalculating) {
     return (
@@ -42,8 +44,8 @@ const ThreeDTrafoResult = ({
     return (
       <ErrorScreen error={error} handleClick={handleClick} />
     )
-  } else if (response) { 
-    const copyText = response.join(" ");
+  } else if ( !isEuler ) {
+    const copyText = trafoParams.join(" ");
     return (
       <div className="three-d-trafo-result">
         <h1>
@@ -62,31 +64,38 @@ const ThreeDTrafoResult = ({
               <th>Q1</th>
               <th>Q2</th>
               <th>Q3</th>
-              <th></th>
+              <th>
+                <button className="euler-btn" onClick={ switchAngleType }>
+                  <FormattedMessage
+                    id="ThreeDTrafoResult.label.switchToEuler"
+                    defaultMessage="Switch to Euler"
+                  />
+                </button>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th>
-                { response[0] }
+                { trafoParams[0] }
               </th>
               <th>
-                { response[1] }
+                { trafoParams[1] }
               </th>
               <th>
-                { response[2] }
+                { trafoParams[2] }
               </th>
               <th>
-                { response[3] }
+                { trafoParams[3] }
               </th>
               <th>
-                { response[4] }
+                { trafoParams[4] }
               </th>
               <th>
-                { response[5] }
+                { trafoParams[5] }
               </th>
               <th>
-                { response[6] }
+                { trafoParams[6] }
               </th>
               <th>
                 <CopyToClipboard text={ copyText }>
@@ -102,6 +111,69 @@ const ThreeDTrafoResult = ({
         <Sidebar />
       </div>
     )
+  } else if ( isEuler ) {
+    const copyText = trafoParams.join(" ");
+    return (
+      <div className="three-d-trafo-result">
+          <h1>
+            <FormattedMessage
+              id="ThreeDTrafoResult.label.caption"
+              defaultMessage="Transformation Parameters"
+            />
+          </h1>
+          <table className="result-table">
+            <thead>
+              <tr className="caption">
+                <th>Tx</th>
+                <th>Ty</th>
+                <th>Tz</th>
+                <th>Rx</th>
+                <th>Ry</th>
+                <th>Rz</th>
+                <th>
+                  <button className="euler-btn" onClick={ switchAngleType }>
+                    <FormattedMessage
+                      id="ThreeDTrafoResult.label.switchToQuaternion"
+                      defaultMessage="Switch to Quaternion"
+                    />
+                  </button>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>
+                  { trafoParams[0] }
+                </th>
+                <th>
+                  { trafoParams[1] }
+                </th>
+                <th>
+                  { trafoParams[2] }
+                </th>
+                <th>
+                  { trafoParams[3] }
+                </th>
+                <th>
+                  { trafoParams[4] }
+                </th>
+                <th>
+                  { trafoParams[5] }
+                </th>
+                <th>
+                  <CopyToClipboard text={ copyText }>
+                    <button className="copy" title="Copy to clipboard">
+                      { ClipboardIcon }
+                    </button>
+                  </CopyToClipboard>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+          <BackToInputBtn handleClick={ handleClick } />
+          <Sidebar />
+        </div>
+    );
   }
 }
 
