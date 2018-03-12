@@ -127,9 +127,9 @@ const ThreeDTrafoResult = ({
                 <th>Tx</th>
                 <th>Ty</th>
                 <th>Tz</th>
-                <th>Rx</th>
-                <th>Ry</th>
-                <th>Rz</th>
+                <th>Rx[°]</th>
+                <th>Ry[°]</th>
+                <th>Rz[°]</th>
                 <th>
                   <button className="euler-btn" onClick={ switchAngleType }>
                     <FormattedMessage

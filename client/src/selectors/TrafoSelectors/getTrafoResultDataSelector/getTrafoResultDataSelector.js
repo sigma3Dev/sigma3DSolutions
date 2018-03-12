@@ -23,7 +23,7 @@ export const getTrafoParamsEuler = createSelector(
     params.tx.toFixed(2),
     params.ty.toFixed(2),
     params.tz.toFixed(2),
-    ...qte([params.q0, params.q1, params.q2, params.q3]).map(p => p.toFixed(6))
+    ...qte([params.q0, params.q1, params.q2, params.q3]).map(p => (p * 180 / Math.PI).toFixed(4))
   ])
 )
 
