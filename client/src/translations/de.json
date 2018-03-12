@@ -1,6 +1,8 @@
 {
     "AppSelectionBtn.caption.3Dtransformation": "3D-Transformation",
+    "AppSelectionBtn.caption.chebyshev": "Tschebyscheff-Kreis",
     "AppSelectionBtn.description.3Dtransformation": "6 Parameter, gewichtet",
+    "AppSelectionBtn.description.chebyshev": "Mittelpunkt, Radius und Tschebyscheff-Distanz",
     "ErrorScreen.label.error": "Fehler!",
     "InfoModal.label.noStartSystemPoints": "Bitte Startsystempunkte importieren!",
     "InfoModal.label.noTargetSystemPoints": "Bitte Zielsystempunkte importieren!",
@@ -10,6 +12,7 @@
     "PointsInputTable.label.useX": "nutze x",
     "PointsInputTable.label.useY": "nutze y",
     "PointsInputTable.label.useZ": "nutze z",
+    "Sidebar.label.geometry": "Geometrien",
     "Sidebar.label.transformation": "Transformationen",
     "SubmitBtn.label.caption": "Absenden ",
     "ThreeDTrafoInput.label.startSystemPointsCaption": "Startsystempunkte:",

@@ -20,6 +20,12 @@ const Sidebar = (props) => {
           defaultMessage="Transformations"
       />
       </Link>
+      <Link to='/geometry' className="link-active">
+      <FormattedMessage
+          id="Sidebar.label.geometry"
+          defaultMessage="Geometrien"
+      />
+      </Link>
     </div>
   );
 }
