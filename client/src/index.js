@@ -26,7 +26,7 @@ ReactDOM.render((
   <Provider store={store}>
     <IntlProvider
       locale={navigator.language}
-      messages={navigator.language === 'de' ? germanMessages : englishMessages}
+      messages={navigator.language === 'de' || navigator.language === 'de-DE' ? germanMessages : englishMessages}
     >
       <BrowserRouter>
         <App />  
