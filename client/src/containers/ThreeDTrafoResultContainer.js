@@ -69,6 +69,7 @@ class ThreeDTrafoResultContainer extends Component {
           isCalculating = { this.props.isCalculating }
           handleClick = { this.goBack }
           switchAngleType = { this.switchAngleType }
+          isEuler = { this.props.isEuler }
         />
       </div>
     )

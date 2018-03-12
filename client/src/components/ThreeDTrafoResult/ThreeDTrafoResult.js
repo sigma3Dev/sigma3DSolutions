@@ -26,6 +26,7 @@ const ThreeDTrafoResult = ({
   isCalculating,
   handleClick,
   switchAngleType,
+  isEuler,
 }) => {
   if (isCalculating) {
     return (
@@ -43,7 +44,7 @@ const ThreeDTrafoResult = ({
     return (
       <ErrorScreen error={error} handleClick={handleClick} />
     )
-  } else if (response.length === 7) {
+  } else if ( !isEuler ) {
     const copyText = response.join(" ");
     return (
       <div className="three-d-trafo-result">
@@ -110,7 +111,7 @@ const ThreeDTrafoResult = ({
         <Sidebar />
       </div>
     )
-  } else if (response.length === 6) {
+  } else if ( isEuler ) {
     const copyText = response.join(" ");
     return (
       <div className="three-d-trafo-result">

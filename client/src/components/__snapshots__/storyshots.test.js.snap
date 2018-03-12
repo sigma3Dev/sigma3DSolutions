@@ -2534,7 +2534,16 @@ exports[`Storyshots Start.ThreeDTrafoResult Table to display the result of the c
             <th>
               Q3
             </th>
-            <th />
+            <th>
+              <button
+                className="euler-btn"
+                onClick={undefined}
+              >
+                <span>
+                  Eulersche Winkel
+                </span>
+              </button>
+            </th>
           </tr>
         </thead>
         <tbody>

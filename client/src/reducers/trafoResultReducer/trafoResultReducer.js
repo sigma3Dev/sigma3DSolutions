@@ -2,6 +2,10 @@ import {
   SUBMIT_COORDS_SUCCESS,
 } from '../../actions/submitCoords/submitCoordsActions';
 
+import {
+  SWITCH_ANGLE_TYPE
+} from '../../actions/switchAngleType/switchAngleTypeActions';
+
 const initialResultData = {
   tx: 0,
   ty: 0,
@@ -9,7 +13,8 @@ const initialResultData = {
   q0: 0,
   q1: 0,
   q2: 0,
-  q3: 0
+  q3: 0,
+  isEuler: false
 }
 
 /**
@@ -31,6 +36,11 @@ function trafoResult(state = initialResultData, action) {
         q2: action.response.data.result.q2,
         q3: action.response.data.result.q3
       };
+    case SWITCH_ANGLE_TYPE:
+      return {
+        ...state,
+        isEuler: !state.isEuler
+      }
     default:
       return state;
   }

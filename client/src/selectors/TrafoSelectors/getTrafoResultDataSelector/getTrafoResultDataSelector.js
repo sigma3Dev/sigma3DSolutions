@@ -4,7 +4,7 @@ import qte from 'quaternion-to-euler';
 const getTrafoParamsSelector = state => state.trafoResult;
 const getTrafoParamsEulerSelector = state => state.trafoResult;
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
-const getIsEulerSelector = state => state.isEuler.isEuler;
+const getIsEulerSelector = state => state.trafoResult.isEuler;
 
 export const getTrafoParams = createSelector(
   getTrafoParamsSelector, params => ([  

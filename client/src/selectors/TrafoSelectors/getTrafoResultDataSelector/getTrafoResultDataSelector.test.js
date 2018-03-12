@@ -15,7 +15,8 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
         q0: -0.9950785875879063,
         q1: -0.004830151859800749,
         q2: -0.0006079507786298357,
-        q3: 0.09896921012577276
+        q3: 0.09896921012577276,
+        isEuler: false
       }
     };
     const expected = [
@@ -39,7 +40,8 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
         q0: -0.9950785875879063,
         q1: -0.004830151859800749,
         q2: -0.0006079507786298357,
-        q3: 0.09896921012577276
+        q3: 0.09896921012577276,
+        isEuler: false
       }
     };
     const expected = [
@@ -65,7 +67,7 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
   });
   it('getIsEuler', () => {
     const state = {
-      isEuler: {
+      trafoResult: {
         isEuler: false
       }
     }
