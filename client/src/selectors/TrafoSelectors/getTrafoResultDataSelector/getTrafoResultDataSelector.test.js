@@ -48,9 +48,9 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
       "1380.49",
       "9336.54",
       "-3796.40",
-      "0.009493",
-      "0.002166",
-      "-0.198255"
+      "0.5439",
+      "0.1241",
+      "-11.3592"
     ];
     const result = getTrafoParamsEuler(state);
     expect(result).toEqual(expected);
