@@ -6,7 +6,7 @@ import Sidebar from '../Sidebar/Sidebar';
 import './GeometryScreen.css';
 
 /**
- * Shows the overview of all available Sigma3D apps to solve mathematical problems
+ * Shows the overview of all available apps to fit geometries
  * @param {Object} props - properties passed down from parent element
  * @returns {*} GeometryScreen - .jsx Element
  */

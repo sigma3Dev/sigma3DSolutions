@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import GeometryScreen from '../components/GeometryScreen/GeometryScreen';
-// import {THREE_D_TRANSFORMATION_SEVEN_PARAM} from '../config/AppTypes';
+
 /**
- * start screen of the app
- * @class StartScreenContainer
+ * shows all the geometry fitting apps
+ * @class GeometryScreenContainer
  * @extends {Component}
  */
 class GeometryScreenContainer extends Component {
