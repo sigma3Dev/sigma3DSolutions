@@ -1,5 +1,4 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
 
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
@@ -7,14 +6,17 @@ import { linkTo } from '@storybook/addon-links';
 import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
-import AppSelectionBtn from './AppSelectionBtn';
+import SelectAppsScreen from './SelectAppsScreen';
 
-const stories = storiesOf('Start.AppSelectionBtn', module);
-stories.addDecorator((story, context) => withInfo('common info')(story)(context));
-stories.addDecorator(withKnobs);
+const StoryRouter = require('storybook-router');
+
 const buttons = [ "chebyshev" ];
 
+const stories = storiesOf('Start.SelectAppsScreen', module);
+stories.addDecorator((story, context) => withInfo('common info')(story)(context));
+stories.addDecorator(withKnobs);
+stories.addDecorator(StoryRouter.default());
+
 stories
-  .add('Button for choosing an App', () => (
-    <AppSelectionBtn 
-  />))
+  .add('Homepage of the App', () => (
+    <SelectAppsScreen buttons={buttons}/>))

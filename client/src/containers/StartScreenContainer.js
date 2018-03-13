@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
-import StartScreen from '../components/StartScreen/StartScreen';
+import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
 /**
  * start screen of the app
  * @class StartScreenContainer
  * @extends {Component}
  */
 class StartScreenContainer extends Component {
-
   render() { 
+    const buttons = ["3Dtransformation",  "eulerQuat" ];
     return (
-      <StartScreen /> 
+      <SelectAppsScreen buttons={ buttons } /> 
     )
   }
 }
