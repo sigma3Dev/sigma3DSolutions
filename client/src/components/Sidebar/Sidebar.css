@@ -24,7 +24,7 @@
   font-family: Roboto;
   opacity: 1;
   text-decoration: none;
-  margin: 20px 0;
+  margin: 10px 0;
   color: white;
   opacity: 1;
 }
@@ -35,5 +35,5 @@
   background-repeat: no-repeat;
   width: 100px;
   height: 100px;
-  margin: 25px 0 15px;
+  margin: 25px 0 20px;
 }
