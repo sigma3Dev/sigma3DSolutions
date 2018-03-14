@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import StartScreenContainer from './containers/StartScreenContainer';
+import TransformationsScreenContainer from './containers/TransformationsScreenContainer';
 import ThreeDTrafoInputContainer from './containers/ThreeDTrafoInputContainer';
 import ThreeDTrafoResultContainer from './containers/ThreeDTrafoResultContainer';
 import GeometryScreenContainer from './containers/GeometryScreenContainer';
@@ -16,12 +17,12 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route exact path='/transformations' component={StartScreenContainer} />
+          <Route exact path='/' component={StartScreenContainer} />
+          <Route path='/transformations' component={TransformationsScreenContainer} />
           <Route path='/transformations/three-d-transformation/data-input' component={ThreeDTrafoInputContainer} />
           <Route path='/transformations/three-d-transformation/result' component={ThreeDTrafoResultContainer} />
           <Route path='/geometry' component={GeometryScreenContainer} />
-          {/* TODO: change homepage to '/' */}
-          <Redirect from='*' to='/transformations' />
+          <Redirect from='*' to='/' />
         </Switch>
       </div>
     );
