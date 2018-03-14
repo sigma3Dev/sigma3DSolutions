@@ -4,6 +4,8 @@ import PointsInput from '../PointsInput/PointsInput';
 import PointsInputTable3D6W from '../PointsInputTable3D6W/PointsInputTable3D6W';
 import SubmitBtn from '../SubmitBtn/SubmitBtn';
 import Sidebar from '../Sidebar/Sidebar';
+import InfoBtn from '../InfoBtn/InfoBtn';
+import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
 import './ThreeDTrafoInput.css';
 
 /**
@@ -11,11 +13,13 @@ import './ThreeDTrafoInput.css';
  * @param {function} onStartFileDrop - handles functionality of file drop for start system input
  * @param {function} onTargetFileDrop - handles functionality of file drop for target system input
  * @param {function} checkboxUpdate - handles checkbox clicks
+ * @param {function} handleInfoClick - handles info button clicks
  * @param {function} handleSubmitClick - handles submit button clicks
  * @param {function} handleStartDeleteClick - handles start system delete button clicks
  * @param {function} handleTargetDeleteClick - handles target system delete button clicks 
  * @param {Array} startSystemPoints - array of points from the start system
  * @param {Array} targetSystemPoints - array of points from the target system
+ * @param {Array} isInfoOpen - is info panel open?
  * @returns {*} ThreeDTrafoInput - .jsx Element
  */
 const ThreeDTrafoInput = ({
@@ -24,12 +28,15 @@ const ThreeDTrafoInput = ({
   startSystemPoints,
   targetSystemPoints,
   checkboxUpdate,
+  handleInfoClick,
   handleSubmitClick,
   handleStartDeleteClick,
   handleTargetDeleteClick,
-  listOfUsedCoords
+  listOfUsedCoords,
+  isInfoOpen,
+  infoPanelText
 }) => {
-
+  
   return (
     <div>
       <Sidebar />
@@ -53,6 +60,13 @@ const ThreeDTrafoInput = ({
                 id="ThreeDTrafoInput.label.targetSystemPointsCaption"
                 defaultMessage="Target System Points:"
             />
+            <div className="info-section">
+              <InfoBtn className="info-btn" handleClick={ handleInfoClick } />
+              <InputInfoPanel 
+                isDisplayed={ isInfoOpen }
+                body={ infoPanelText }
+              />
+            </div>
           </h1>
           <PointsInput onDrop={onTargetFileDrop} />
           <PointsInputTable3D6W
@@ -62,8 +76,8 @@ const ThreeDTrafoInput = ({
             listOfUsedCoords={listOfUsedCoords}
           />
         </div>
-      </div>  
-      <SubmitBtn handleClick={handleSubmitClick} />
+        <SubmitBtn handleClick={handleSubmitClick} />
+      </div>
     </div>
   );
 }

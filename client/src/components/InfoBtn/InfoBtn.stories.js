@@ -1,3 +1,4 @@
+import InfoBtn from './InfoBtn';
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
@@ -6,15 +7,10 @@ import { linkTo } from '@storybook/addon-links';
 import { withKnobs, text } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
-import GeometryScreen from './GeometryScreen';
-
-const StoryRouter = require('storybook-router');
-
-const stories = storiesOf('Start.GeometryScreen', module);
+const stories = storiesOf('Start.InfoBtn', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));
 stories.addDecorator(withKnobs);
-stories.addDecorator(StoryRouter.default());
 
 stories
-  .add('Page to select different geometry fitting operations', () => (
-    <GeometryScreen />))
+  .add('Button to open data input information', () => (
+    <InfoBtn />))

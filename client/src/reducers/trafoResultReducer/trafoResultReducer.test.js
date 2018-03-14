@@ -1,5 +1,4 @@
 import { SUBMIT_COORDS_SUCCESS } from '../../actions/submitCoords/submitCoordsActions';
-import { SWITCH_ANGLE_TYPE } from '../../actions/switchAngleType/switchAngleTypeActions';
 import trafoResultReducer from './trafoResultReducer';
 
 describe('trafoResultReducer', () => {
@@ -37,19 +36,6 @@ describe('trafoResultReducer', () => {
       q1:-0.004830151859800749,
       q2:-0.0006079507786298357,
       q3:0.09896921012577276
-    };
-    const result = trafoResultReducer(state, action);
-    expect(result).toEqual(expectedState);
-  });
-  it('should handle SWITCH_ANGLE_TYPE', () => {
-    const state = {
-      isEuler: false
-    };
-    const action = {
-      type: SWITCH_ANGLE_TYPE
-    };
-    const expectedState = {
-      isEuler: true
     };
     const result = trafoResultReducer(state, action);
     expect(result).toEqual(expectedState);

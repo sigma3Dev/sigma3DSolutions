@@ -17,8 +17,7 @@
     "SubmitBtn.label.caption": "Submit ",
     "ThreeDTrafoInput.label.startSystemPointsCaption": "Start System Points:",
     "ThreeDTrafoInput.label.targetSystemPointsCaption": "Target System Points:",
+    "ThreeDTrafoInputContainer.panel.infoPanelText": "The input should be a simple .txt file.\n\nThe file should consist of one or more points, each on its own line. Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
     "ThreeDTrafoResult.label.calculating": "Calculating...",
-    "ThreeDTrafoResult.label.caption": "Transformation Parameters",
-    "ThreeDTrafoResult.label.switchToEuler": "Switch to Euler",
-    "ThreeDTrafoResult.label.switchToQuaternion": "Switch to Quaternions"
+    "ThreeDTrafoResult.label.caption": "Transformation Parameters"
 }
