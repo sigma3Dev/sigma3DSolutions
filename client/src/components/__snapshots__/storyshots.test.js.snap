@@ -10,20 +10,30 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
       }
     }
   >
-    <div
-      className="app-selection-btn"
+    <a
+      class="btn-link"
+      href="/geometries/chebyshev_circle_fit"
+      onClick={[Function]}
     >
       <div
-        className="app-selection-btn-caption"
+        className="app-selection-btn"
       >
-        3D-Transformation
+        <div
+          className="app-selection-btn-caption"
+        >
+          <span>
+            caption
+          </span>
+        </div>
+        <div
+          className="app-selection-btn-description"
+        >
+          <span>
+            description
+          </span>
+        </div>
       </div>
-      <div
-        className="app-selection-btn-description"
-      >
-        7 Parameters
-      </div>
-    </div>
+    </a>
   </div>
   <button
     onClick={[Function]}
@@ -209,7 +219,7 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
                   <span
                     style={Object {}}
                   >
-                    caption
+                    label
                   </span>
                   <span>
                     =
@@ -225,7 +235,7 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
                         }
                       >
                         "
-                        3D-Transformation
+                        Tschebyscheff-Kreis
                         "
                       </span>
                     </span>
@@ -236,7 +246,7 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
                   <span
                     style={Object {}}
                   >
-                    description
+                    link
                   </span>
                   <span>
                     =
@@ -252,7 +262,7 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
                         }
                       >
                         "
-                        7 Parameters
+                        /geometries/chebyshev_circle_fit
                         "
                       </span>
                     </span>
@@ -876,301 +886,6 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
             >
               "
               ErrorScreen
-              " Component
-            </h2>
-            <small>
-              No propTypes defined!
-            </small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Start.GeometryScreen Homepage of the App 1`] = `
-<div>
-  <div
-    style={
-      Object {
-        "position": "relative",
-        "zIndex": 0,
-      }
-    }
-  >
-    <div
-      className="geometry-screen"
-    >
-      <div
-        className="Sidebar"
-      >
-        <a
-          href="/"
-          onClick={[Function]}
-        >
-          <div
-            className="logo"
-          />
-        </a>
-        <a
-          className="link-active"
-          href="/"
-          onClick={[Function]}
-        >
-          <span>
-            Transformationen
-          </span>
-        </a>
-        <a
-          className="link-active"
-          href="/geometry"
-          onClick={[Function]}
-        >
-          <span>
-            Geometrien
-          </span>
-        </a>
-      </div>
-      <a
-        href="/geometry/chebyshev-circle/data-input"
-        onClick={[Function]}
-      >
-        <div
-          className="app-selection-btn"
-        >
-          <div
-            className="app-selection-btn-caption"
-          >
-            <span>
-              Tschebyscheff-Kreis
-            </span>
-          </div>
-          <div
-            className="app-selection-btn-description"
-          >
-            <span>
-              Mittelpunkt, Radius und Tschebyscheff-Distanz
-            </span>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-  <button
-    onClick={[Function]}
-    style={
-      Object {
-        "background": "#28c",
-        "border": "none",
-        "borderRadius": "0 0 0 5px",
-        "color": "#fff",
-        "cursor": "pointer",
-        "display": "block",
-        "fontFamily": "sans-serif",
-        "fontSize": "12px",
-        "padding": "5px 15px",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="button"
-  >
-    Show Info
-  </button>
-  <div
-    style={
-      Object {
-        "background": "white",
-        "bottom": 0,
-        "display": "none",
-        "left": 0,
-        "overflow": "auto",
-        "padding": "0 40px",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-        "zIndex": 99999,
-      }
-    }
-  >
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#28c",
-          "border": "none",
-          "borderRadius": "0 0 0 5px",
-          "color": "#fff",
-          "cursor": "pointer",
-          "display": "block",
-          "fontFamily": "sans-serif",
-          "fontSize": "12px",
-          "padding": "5px 15px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-        }
-      }
-      type="button"
-    >
-      ×
-    </button>
-    <div
-      style={undefined}
-    >
-      <div
-        style={
-          Object {
-            "WebkitFontSmoothing": "antialiased",
-            "backgroundColor": "#fff",
-            "border": "1px solid #eee",
-            "borderRadius": "2px",
-            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-            "color": "#444",
-            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-            "fontSize": "15px",
-            "fontWeight": 300,
-            "lineHeight": 1.45,
-            "marginBottom": "20px",
-            "marginTop": "20px",
-            "padding": "20px 40px 40px",
-          }
-        }
-      >
-        <div
-          style={
-            Object {
-              "borderBottom": "1px solid #eee",
-              "marginBottom": 10,
-              "paddingTop": 10,
-            }
-          }
-        >
-          <h1
-            style={
-              Object {
-                "fontSize": "35px",
-                "margin": 0,
-                "padding": 0,
-              }
-            }
-          >
-            Start.GeometryScreen
-          </h1>
-          <h2
-            style={
-              Object {
-                "fontSize": "22px",
-                "fontWeight": 400,
-                "margin": "0 0 10px 0",
-                "padding": 0,
-              }
-            }
-          >
-            Homepage of the App
-          </h2>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": 0,
-            }
-          }
-        >
-          <div
-            style={
-              Object {
-                "WebkitFontSmoothing": "antialiased",
-                "color": "#444",
-                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-                "fontSize": "15px",
-              }
-            }
-          >
-            common info
-          </div>
-        </div>
-        <div>
-          <h1
-            style={
-              Object {
-                "borderBottom": "1px solid #EEE",
-                "fontSize": "25px",
-                "margin": "20px 0 0 0",
-                "padding": "0 0 5px 0",
-              }
-            }
-          >
-            Story Source
-          </h1>
-          <pre
-            style={
-              Object {
-                "backgroundColor": "#fafafa",
-                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
-                "fontSize": ".88em",
-                "lineHeight": 1.5,
-                "overflowX": "scroll",
-                "padding": ".5rem",
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "paddingLeft": 18,
-                  "paddingRight": 3,
-                }
-              }
-            >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;
-                GeometryScreen
-              </span>
-              <span />
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                /&gt;
-              </span>
-            </div>
-          </pre>
-        </div>
-        <div>
-          <h1
-            style={
-              Object {
-                "borderBottom": "1px solid #EEE",
-                "fontSize": "25px",
-                "margin": "20px 0 0 0",
-                "padding": "0 0 5px 0",
-              }
-            }
-          >
-            Prop Types
-          </h1>
-          <div>
-            <h2
-              style={
-                Object {
-                  "margin": "20px 0 0 0",
-                }
-              }
-            >
-              "
-              GeometryScreen
               " Component
             </h2>
             <small>
@@ -2045,6 +1760,476 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
 </div>
 `;
 
+exports[`Storyshots Start.SelectAppsScreen Homepage of the App 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="select-apps-screen"
+    >
+      <div
+        className="Sidebar"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+        >
+          <div
+            className="logo"
+          />
+        </a>
+        <a
+          className="link-active"
+          href="/"
+          onClick={[Function]}
+        >
+          <span>
+            Transformationen
+          </span>
+        </a>
+        <a
+          className="link-active"
+          href="/geometry"
+          onClick={[Function]}
+        >
+          <span>
+            Geometrien
+          </span>
+        </a>
+      </div>
+      <a
+        class="btn-link"
+        href="/transformations/three-d-transformation/data-input"
+        onClick={[Function]}
+      >
+        <div
+          className="app-selection-btn"
+        >
+          <div
+            className="app-selection-btn-caption"
+          >
+            <span>
+              3D-Transformation
+            </span>
+          </div>
+          <div
+            className="app-selection-btn-description"
+          >
+            <span>
+              6 Parameter, gewichtet
+            </span>
+          </div>
+        </div>
+      </a>
+      <a
+        class="btn-link"
+        href="/transformations/three-d-transformation/data-input"
+        onClick={[Function]}
+      >
+        <div
+          className="app-selection-btn"
+        >
+          <div
+            className="app-selection-btn-caption"
+          >
+            <span>
+              Euler &lt;-&gt; Quaternionen
+            </span>
+          </div>
+          <div
+            className="app-selection-btn-description"
+          >
+            <span>
+              Euler zu Quaternionen oder umgekehrt
+            </span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#28c",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    style={
+      Object {
+        "background": "white",
+        "bottom": 0,
+        "display": "none",
+        "left": 0,
+        "overflow": "auto",
+        "padding": "0 40px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+        "zIndex": 99999,
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      ×
+    </button>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginBottom": "20px",
+            "marginTop": "20px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            Start.SelectAppsScreen
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            Homepage of the App
+          </h2>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+                "fontSize": "15px",
+              }
+            }
+          >
+            common info
+          </div>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                SelectAppsScreen
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    buttons
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          [
+                          <span>
+                            {
+                            <span
+                              style={
+                                Object {
+                                  "color": "#666",
+                                }
+                              }
+                            >
+                              {
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#666",
+                                  }
+                                }
+                              >
+                                type
+                              </span>
+                              : 
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#22a",
+                                    "wordBreak": "break-word",
+                                  }
+                                }
+                              >
+                                "
+                                3Dtransformation
+                                "
+                              </span>
+                              , 
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#666",
+                                  }
+                                }
+                              >
+                                link
+                              </span>
+                              : 
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#22a",
+                                    "wordBreak": "break-word",
+                                  }
+                                }
+                              >
+                                "
+                                /transformations/three-d-transformation/data-input
+                                "
+                              </span>
+                              }
+                            </span>
+                            }
+                          </span>
+                          , 
+                          <span>
+                            {
+                            <span
+                              style={
+                                Object {
+                                  "color": "#666",
+                                }
+                              }
+                            >
+                              {
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#666",
+                                  }
+                                }
+                              >
+                                type
+                              </span>
+                              : 
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#22a",
+                                    "wordBreak": "break-word",
+                                  }
+                                }
+                              >
+                                "
+                                eulerQuat
+                                "
+                              </span>
+                              , 
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#666",
+                                  }
+                                }
+                              >
+                                link
+                              </span>
+                              : 
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#22a",
+                                    "wordBreak": "break-word",
+                                  }
+                                }
+                              >
+                                "
+                                /transformations/three-d-transformation/data-input
+                                "
+                              </span>
+                              }
+                            </span>
+                            }
+                          </span>
+                          ]
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              SelectAppsScreen
+              " Component
+            </h2>
+            <small>
+              No propTypes defined!
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Start.Sidebar Sidebar for selecting App category 1`] = `
 <div>
   <div
@@ -2300,301 +2485,6 @@ exports[`Storyshots Start.Sidebar Sidebar for selecting App category 1`] = `
             >
               "
               Sidebar
-              " Component
-            </h2>
-            <small>
-              No propTypes defined!
-            </small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
-<div>
-  <div
-    style={
-      Object {
-        "position": "relative",
-        "zIndex": 0,
-      }
-    }
-  >
-    <div
-      className="start-screen"
-    >
-      <div
-        className="Sidebar"
-      >
-        <a
-          href="/"
-          onClick={[Function]}
-        >
-          <div
-            className="logo"
-          />
-        </a>
-        <a
-          className="link-active"
-          href="/"
-          onClick={[Function]}
-        >
-          <span>
-            Transformationen
-          </span>
-        </a>
-        <a
-          className="link-active"
-          href="/geometry"
-          onClick={[Function]}
-        >
-          <span>
-            Geometrien
-          </span>
-        </a>
-      </div>
-      <a
-        href="/three-d-transformation/data-input"
-        onClick={[Function]}
-      >
-        <div
-          className="app-selection-btn"
-        >
-          <div
-            className="app-selection-btn-caption"
-          >
-            <span>
-              3D-Transformation
-            </span>
-          </div>
-          <div
-            className="app-selection-btn-description"
-          >
-            <span>
-              6 Parameter, gewichtet
-            </span>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-  <button
-    onClick={[Function]}
-    style={
-      Object {
-        "background": "#28c",
-        "border": "none",
-        "borderRadius": "0 0 0 5px",
-        "color": "#fff",
-        "cursor": "pointer",
-        "display": "block",
-        "fontFamily": "sans-serif",
-        "fontSize": "12px",
-        "padding": "5px 15px",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="button"
-  >
-    Show Info
-  </button>
-  <div
-    style={
-      Object {
-        "background": "white",
-        "bottom": 0,
-        "display": "none",
-        "left": 0,
-        "overflow": "auto",
-        "padding": "0 40px",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-        "zIndex": 99999,
-      }
-    }
-  >
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#28c",
-          "border": "none",
-          "borderRadius": "0 0 0 5px",
-          "color": "#fff",
-          "cursor": "pointer",
-          "display": "block",
-          "fontFamily": "sans-serif",
-          "fontSize": "12px",
-          "padding": "5px 15px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-        }
-      }
-      type="button"
-    >
-      ×
-    </button>
-    <div
-      style={undefined}
-    >
-      <div
-        style={
-          Object {
-            "WebkitFontSmoothing": "antialiased",
-            "backgroundColor": "#fff",
-            "border": "1px solid #eee",
-            "borderRadius": "2px",
-            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-            "color": "#444",
-            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-            "fontSize": "15px",
-            "fontWeight": 300,
-            "lineHeight": 1.45,
-            "marginBottom": "20px",
-            "marginTop": "20px",
-            "padding": "20px 40px 40px",
-          }
-        }
-      >
-        <div
-          style={
-            Object {
-              "borderBottom": "1px solid #eee",
-              "marginBottom": 10,
-              "paddingTop": 10,
-            }
-          }
-        >
-          <h1
-            style={
-              Object {
-                "fontSize": "35px",
-                "margin": 0,
-                "padding": 0,
-              }
-            }
-          >
-            Start.StartScreen
-          </h1>
-          <h2
-            style={
-              Object {
-                "fontSize": "22px",
-                "fontWeight": 400,
-                "margin": "0 0 10px 0",
-                "padding": 0,
-              }
-            }
-          >
-            Homepage of the App
-          </h2>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": 0,
-            }
-          }
-        >
-          <div
-            style={
-              Object {
-                "WebkitFontSmoothing": "antialiased",
-                "color": "#444",
-                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-                "fontSize": "15px",
-              }
-            }
-          >
-            common info
-          </div>
-        </div>
-        <div>
-          <h1
-            style={
-              Object {
-                "borderBottom": "1px solid #EEE",
-                "fontSize": "25px",
-                "margin": "20px 0 0 0",
-                "padding": "0 0 5px 0",
-              }
-            }
-          >
-            Story Source
-          </h1>
-          <pre
-            style={
-              Object {
-                "backgroundColor": "#fafafa",
-                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
-                "fontSize": ".88em",
-                "lineHeight": 1.5,
-                "overflowX": "scroll",
-                "padding": ".5rem",
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "paddingLeft": 18,
-                  "paddingRight": 3,
-                }
-              }
-            >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;
-                StartScreen
-              </span>
-              <span />
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                /&gt;
-              </span>
-            </div>
-          </pre>
-        </div>
-        <div>
-          <h1
-            style={
-              Object {
-                "borderBottom": "1px solid #EEE",
-                "fontSize": "25px",
-                "margin": "20px 0 0 0",
-                "padding": "0 0 5px 0",
-              }
-            }
-          >
-            Prop Types
-          </h1>
-          <div>
-            <h2
-              style={
-                Object {
-                  "margin": "20px 0 0 0",
-                }
-              }
-            >
-              "
-              StartScreen
               " Component
             </h2>
             <small>

@@ -12,7 +12,11 @@
   background: white;
 }
 
-.app-selection-btn {
+.btn-link {
+  text-decoration: none;
+}
+
+.app-selection-btn:hover {
   cursor: pointer;
 }
 
@@ -32,6 +36,7 @@
   text-align: center;
   color: #000000;
   line-height: 120%;
+  text-decoration: none;
 }
 
 .app-selection-btn-caption:hover {
@@ -49,4 +54,5 @@
   text-align: center;
   color: #000000;
   line-height: 140%;
+  text-decoration: none;
 }
