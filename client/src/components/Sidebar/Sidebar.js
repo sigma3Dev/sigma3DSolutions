@@ -14,7 +14,7 @@ const Sidebar = (props) => {
       <Link to='/'>
         <div className="logo" />
       </Link>
-      <Link to='/' className="link-active">
+      <Link to='/transformations' className="link-active">
       <FormattedMessage
           id="Sidebar.label.transformation"
           defaultMessage="Transformations"
@@ -23,7 +23,7 @@ const Sidebar = (props) => {
       <Link to='/geometry' className="link-active">
       <FormattedMessage
           id="Sidebar.label.geometry"
-          defaultMessage="Geometrien"
+          defaultMessage="Geometry"
       />
       </Link>
     </div>
