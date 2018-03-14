@@ -1,8 +1,10 @@
 {
     "AppSelectionBtn.caption.3Dtransformation": "3D-Transformation",
-    "AppSelectionBtn.caption.chebyshev": "Chebyshev-Circle",
+    "AppSelectionBtn.caption.chebyshev_circle_fit": "Chebyshev-Circle",
+    "AppSelectionBtn.caption.eulerQuat": "Euler <-> Quaternions",
     "AppSelectionBtn.description.3Dtransformation": "6 Parameters, weighted",
-    "AppSelectionBtn.description.chebyshev": "Central Point, Radius and Chebyshev-Distance",
+    "AppSelectionBtn.description.chebyshev_circle_fit": "Central Point, Radius and Chebyshev-Distance",
+    "AppSelectionBtn.description.eulerQuat": "Euler to quaternions or vice versa",
     "ErrorScreen.label.error": "Error!",
     "InfoModal.label.noStartSystemPoints": "Please import start system points!",
     "InfoModal.label.noTargetSystemPoints": "Please import target system points!",

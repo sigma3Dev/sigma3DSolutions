@@ -157,7 +157,7 @@ class ThreeDTrafoInputContainer extends Component {
       })
     } else {
       this.props.onSubmitCoords();
-      this.props.history.push('/three-d-transformation/result');
+      this.props.history.push('/transformations/three-d-transformation/result');
     }
   }
 
