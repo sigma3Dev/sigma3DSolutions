@@ -10,7 +10,16 @@ import SelectAppsScreen from './SelectAppsScreen';
 
 const StoryRouter = require('storybook-router');
 
-const buttons = [ "chebyshev" ];
+const buttons = [ 
+  {
+    type: "3Dtransformation",
+    link: '/transformations/three-d-transformation/data-input'
+  },
+  {
+    type: "eulerQuat",
+    link: '/transformations/three-d-transformation/data-input'
+  } 
+];
 
 const stories = storiesOf('Start.SelectAppsScreen', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));

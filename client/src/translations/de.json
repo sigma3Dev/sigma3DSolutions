@@ -1,9 +1,9 @@
 {
     "AppSelectionBtn.caption.3Dtransformation": "3D-Transformation",
-    "AppSelectionBtn.caption.chebyshev": "Tschebyscheff-Kreis",
+    "AppSelectionBtn.caption.chebyshev_circle_fit": "Tschebyscheff-Kreis",
     "AppSelectionBtn.caption.eulerQuat": "Euler <-> Quaternionen",
     "AppSelectionBtn.description.3Dtransformation": "6 Parameter, gewichtet",
-    "AppSelectionBtn.description.chebyshev": "Mittelpunkt, Radius und Tschebyscheff-Distanz",
+    "AppSelectionBtn.description.chebyshev_circle_fit": "Mittelpunkt, Radius und Tschebyscheff-Distanz",
     "AppSelectionBtn.description.eulerQuat": "Euler zu Quaternionen oder umgekehrt",
     "ErrorScreen.label.error": "Fehler!",
     "InfoModal.label.noStartSystemPoints": "Bitte Startsystempunkte importieren!",

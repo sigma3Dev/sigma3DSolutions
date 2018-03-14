@@ -7,7 +7,16 @@ import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
  */
 class StartScreenContainer extends Component {
   render() { 
-    const buttons = ["3Dtransformation",  "eulerQuat" ];
+    const buttons = [ 
+      {
+        type: "3Dtransformation",
+        link: '/transformations/three-d-transformation/data-input'
+      },
+      {
+        type: "eulerQuat",
+        link: '/transformations/three-d-transformation/data-input'
+      } 
+    ];
     return (
       <SelectAppsScreen buttons={ buttons } /> 
     )

@@ -16,11 +16,12 @@ class App extends Component {
     return (
       <div className="App">
         <Switch>
-          <Route exact path='/' component={StartScreenContainer} />
-          <Route path='/three-d-transformation/data-input' component={ThreeDTrafoInputContainer} />
-          <Route path='/three-d-transformation/result' component={ThreeDTrafoResultContainer} />
+          <Route exact path='/transformations' component={StartScreenContainer} />
+          <Route path='/transformations/three-d-transformation/data-input' component={ThreeDTrafoInputContainer} />
+          <Route path='/transformations/three-d-transformation/result' component={ThreeDTrafoResultContainer} />
           <Route path='/geometry' component={GeometryScreenContainer} />
-          <Redirect from='*' to='/' />
+          {/* TODO: change homepage to '/' */}
+          <Redirect from='*' to='/transformations' />
         </Switch>
       </div>
     );
