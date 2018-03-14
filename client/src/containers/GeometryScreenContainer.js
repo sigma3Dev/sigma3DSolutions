@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
+
 /**
  * shows all the geometry fitting apps
  * @class GeometryScreenContainer

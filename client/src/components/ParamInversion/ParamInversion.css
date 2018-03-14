@@ -1,0 +1,21 @@
+.param-inversion {
+  width: 83%;
+  height: 500px;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 12px;
+  font-family: Roboto;
+}
+
+.param-inversion * {
+  text-align: center;
+}
+
+.param-inversion h1 {
+  font-size: 3.0em;
+  border-bottom: 3px solid darkgreen;
+  padding-bottom: 5px;
+}

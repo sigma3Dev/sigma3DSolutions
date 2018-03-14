@@ -14,7 +14,7 @@ const AppSelectionBtn = ({
   label,
   link
 }) => (
-  <Link to={link} class="btn-link">
+  <Link to={link} className="btn-link">
     <div className="app-selection-btn">
       <div className="app-selection-btn-caption">
         <FormattedMessage

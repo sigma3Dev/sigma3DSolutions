@@ -41,7 +41,7 @@ const mapStateToProps = (state, props) => ({
 });
 
 /**
- * Page where file input functionality is displayed
+ * Page where 3D transformation file input functionality is displayed
  * @class ThreeDTrafoInputContainer
  * @extends {Component}
  */
@@ -178,17 +178,6 @@ class ThreeDTrafoInputContainer extends Component {
   }
 
   render() {
-    // const infoPanelText = `
-    //   The input should be a simple .txt file.\n
-    
-    //   The file should consist of one or more points, each on its own line. 
-    //   Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n
-    
-    //   Example:\n
-    //   41.3 11.2 17.1\n
-    //   24.2 33.1 19.8\n
-    //   9.1 5.4 12.9
-    // `;
     const infoPanelText=(
       <FormattedMessage
         id="ThreeDTrafoInputContainer.panel.infoPanelText"

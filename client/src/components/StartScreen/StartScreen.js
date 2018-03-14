@@ -11,26 +11,26 @@ const StartScreen = () => {
   return (
     <div className="start-screen">
       <Sidebar />    
-      <h1 class="header">
+      <h1 className="header">
         <FormattedMessage
           id="StartScreen.header.welcome"
           defaultMessage="Welcome to sigma3DSolutions"
         />
       </h1>
-      <h2 class="subheader">
+      <h2 className="subheader">
         <FormattedMessage
           id="StartScreen.subheader.welcome"
           defaultMessage="This website will help you to solve your mathematical problems."
         />
       </h2>
-      <p class="generalText">
+      <p className="generalText">
       <FormattedMessage
           id="StartScreen.paragraph.explanation"
           defaultMessage="In the sidebar, you can see the different topics. When you click on them, you can find several apps to choose."
       />
       </p>
-      <div class="lists">
-        <div class="element"> 
+      <div className="lists">
+        <div className="element"> 
           <p className="element-header" >
             <FormattedMessage
                 id="StartScreen.elementheader.transformations"
@@ -46,7 +46,7 @@ const StartScreen = () => {
             </li>
           </ul>
         </div>
-        <div class="element"> 
+        <div className="element"> 
           <p className="element-header">
             <FormattedMessage
             id="StartScreen.elementheader.geometry"        
