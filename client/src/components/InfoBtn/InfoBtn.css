@@ -1,0 +1,8 @@
+.info-btn:hover {
+  cursor: pointer;
+}
+
+.info-btn .info-sign {
+  color: rgb(20, 20, 150);
+  font-size: 1.5em;
+}

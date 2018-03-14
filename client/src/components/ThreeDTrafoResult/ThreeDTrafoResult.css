@@ -48,12 +48,6 @@
   cursor: pointer;
 }
 
-.three-d-trafo-result .euler-btn {
-  font-size: 0.8em;
-  padding: 2px 10px;
-  margin-right: -20px;
-}
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);

@@ -25,8 +25,6 @@ const ThreeDTrafoResult = ({
   error,
   isCalculating,
   handleClick,
-  switchAngleType,
-  isEuler,
 }) => {
   if (isCalculating) {
     return (
@@ -44,7 +42,7 @@ const ThreeDTrafoResult = ({
     return (
       <ErrorScreen error={error} handleClick={handleClick} />
     )
-  } else if ( !isEuler ) {
+  } else  {
     const copyText = trafoParams.join(" ");
     return (
       <div className="three-d-trafo-result">
@@ -64,14 +62,7 @@ const ThreeDTrafoResult = ({
               <th>Q1</th>
               <th>Q2</th>
               <th>Q3</th>
-              <th>
-                <button className="euler-btn" onClick={ switchAngleType }>
-                  <FormattedMessage
-                    id="ThreeDTrafoResult.label.switchToEuler"
-                    defaultMessage="Switch to Euler"
-                  />
-                </button>
-              </th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -111,69 +102,6 @@ const ThreeDTrafoResult = ({
         <Sidebar />
       </div>
     )
-  } else if ( isEuler ) {
-    const copyText = trafoParams.join(" ");
-    return (
-      <div className="three-d-trafo-result">
-          <h1>
-            <FormattedMessage
-              id="ThreeDTrafoResult.label.caption"
-              defaultMessage="Transformation Parameters"
-            />
-          </h1>
-          <table className="result-table">
-            <thead>
-              <tr className="caption">
-                <th>Tx</th>
-                <th>Ty</th>
-                <th>Tz</th>
-                <th>Rx[°]</th>
-                <th>Ry[°]</th>
-                <th>Rz[°]</th>
-                <th>
-                  <button className="euler-btn" onClick={ switchAngleType }>
-                    <FormattedMessage
-                      id="ThreeDTrafoResult.label.switchToQuaternion"
-                      defaultMessage="Switch to Quaternion"
-                    />
-                  </button>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  { trafoParams[0] }
-                </th>
-                <th>
-                  { trafoParams[1] }
-                </th>
-                <th>
-                  { trafoParams[2] }
-                </th>
-                <th>
-                  { trafoParams[3] }
-                </th>
-                <th>
-                  { trafoParams[4] }
-                </th>
-                <th>
-                  { trafoParams[5] }
-                </th>
-                <th>
-                  <CopyToClipboard text={ copyText }>
-                    <button className="copy" title="Copy to clipboard">
-                      { ClipboardIcon }
-                    </button>
-                  </CopyToClipboard>
-                </th>
-              </tr>
-            </tbody>
-          </table>
-          <BackToInputBtn handleClick={ handleClick } />
-          <Sidebar />
-        </div>
-    );
   }
 }
 

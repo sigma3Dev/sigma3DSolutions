@@ -1,5 +1,5 @@
 .three-d-trafo-input {
-  width: 72%;
+  width: 70%;
   margin-left: 220px;
   display: flex;
   justify-content: flex-start;
@@ -13,9 +13,15 @@
 }
 
 .three-d-trafo-input h1 {
+  display: flex;
+  justify-content: space-around;
   border-bottom: 3px solid darkgreen;
   padding-bottom: 5px;
   margin: 20px 45px;
+}
+
+.three-d-trafo-input h1 .info-btn {
+  font-size: 0.6em;
 }
 
 .start-input {
