@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="107.37mm" height="93.517mm" version="1.1" viewBox="0 0 107.37 93.517" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <radialGradient id="radialGradient900" cx="43.704" cy="40.738" r="25" gradientTransform="matrix(1.4266 -.0050436 .0050142 1.4183 -33.333 -34.002)" gradientUnits="userSpaceOnUse">
+   <stop style="stop-color:#0f0" offset="0"/>
+   <stop style="stop-color:#000400" offset="1"/>
+  </radialGradient>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(23.694 23.766)">
+  <path d="m8.9311-15.31v57.563l67.113 3e-6" style="fill:none;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8975;stroke:#020202"/>
+  <circle cx="29.219" cy="23.557" r="24.421" style="fill-rule:evenodd;fill:url(#radialGradient900);paint-order:stroke markers fill"/>
+  <path d="m8.9311 42.252-21.776 18.49" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.8975;stroke:#020202"/>
+  <path d="m-23.576 69.633 9.2704-11.858 4.0803 4.4263z" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:.23736;stroke:#020202"/>
+  <path d="m9.1857-23.641 2.9999 11.165-6.3768-0.03211z" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:.24923;stroke:#020202"/>
+  <path d="m83.559 42.413-10.352 2.3184-0.0019-4.6473z" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:.22791;stroke:#020202"/>
+ </g>
+</svg>
