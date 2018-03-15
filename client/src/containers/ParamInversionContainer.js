@@ -17,19 +17,48 @@ const mapStateToProps = (state, props) => ({
  */
 class ParamInversionContainer extends Component {
 
-  // /**
-  //  * Creates an instance of ParamInversion.
-  //  * @param {Object} props 
-  //  * @memberof ParamInversionContainer
-  //  */
-  // constructor(props) {
-  //   super(props);
-  // }
+  /**
+   * Creates an instance of ParamInversion.
+   * @param {Object} props 
+   * @memberof ParamInversionContainer
+   */
+  constructor(props) {
+    super(props);
+    this.state = {
+      Tx: null,
+      Ty: null,
+      Tz: null,
+      Q0: null,
+      Q1: null,
+      Q2: null,
+      Q3: null,
+      M: null,
+    };
+    this.parseInput = this.parseInput.bind(this);
+    this.submitCoords = this.submitCoords.bind(this);
+  }
+
+  submitCoords = () => {
+    console.log("It worked");
+  }
+
+  parseInput = (e) => {
+    this.setState({
+      ...this.state,
+      [e.target.name]: e.target.value
+    });
+  }
 
   render() {
+    const textAreaDisplay = ;
     return(
       <div>
-        <ParamInversion />
+        <ParamInversion 
+          handleSubmit={ this.submitCoords }
+          handleChange={ this.parseInput }
+          values={ this.state }
+          textAreaDisplay={ textAreaDisplay }
+        />
       </div>
     )
   }

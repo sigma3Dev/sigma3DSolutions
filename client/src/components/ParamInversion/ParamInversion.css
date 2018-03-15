@@ -4,7 +4,7 @@
   margin-left: 240px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-top: 12px;
   font-family: Roboto;
@@ -18,4 +18,27 @@
   font-size: 3.0em;
   border-bottom: 3px solid darkgreen;
   padding-bottom: 5px;
+  margin-bottom: 60px;
+}
+
+.param-inversion .input-display {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3em;
+}
+
+.param-inversion input {
+  margin-left: 10px;
+}
+
+.param-inversion form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.param-inversion textarea {
+  width: 40%;
+  font-size: 1.4em;
 }
