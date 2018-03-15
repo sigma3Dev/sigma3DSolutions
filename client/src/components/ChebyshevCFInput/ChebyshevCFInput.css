@@ -1,0 +1,30 @@
+.chebyshev-circle-fit-input {
+  width: 70%;
+  margin-left: 220px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 12px;
+  font-family: Roboto;
+}
+
+.chebyshev-circle-fit * {
+  text-align: center;
+}
+
+.chebyshev-circle-fit h1 {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 3px solid darkgreen;
+  padding-bottom: 5px;
+  margin: 20px 45px;
+}
+
+.chebyshev-circle-fit h1 .info-btn {
+  font-size: 0.6em;
+}
+
+.start-input {
+  width: 38%;
+  margin-right: 20px;
+}

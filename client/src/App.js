@@ -5,6 +5,7 @@ import TransformationsScreenContainer from './containers/TransformationsScreenCo
 import ThreeDTrafoInputContainer from './containers/ThreeDTrafoInputContainer';
 import ThreeDTrafoResultContainer from './containers/ThreeDTrafoResultContainer';
 import GeometryScreenContainer from './containers/GeometryScreenContainer';
+import ChebyshevCFInputContainer from './containers/ChebyshevCFInputContainer';
 import './App.css';
 
 /**
@@ -21,7 +22,8 @@ class App extends Component {
           <Route path='/transformations' component={TransformationsScreenContainer} />
           <Route path='/transformations/three-d-transformation/data-input' component={ThreeDTrafoInputContainer} />
           <Route path='/transformations/three-d-transformation/result' component={ThreeDTrafoResultContainer} />
-          <Route path='/geometry' component={GeometryScreenContainer} />
+          <Route exact path='/geometry' component={GeometryScreenContainer} />
+          <Route path='/geometry/chebyshev-circle-fit/data-input' component={ChebyshevCFInputContainer} />
           <Redirect from='*' to='/' />
         </Switch>
       </div>

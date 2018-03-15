@@ -10,7 +10,7 @@ class GeometryScreenContainer extends Component {
     const buttons = [ 
       {
         type: "chebyshev_circle_fit",
-        link: '/geometry/chebyshev-circle/data-input'
+        link: '/geometry/chebyshev-circle-fit/data-input'
       } 
     ];
     return (
