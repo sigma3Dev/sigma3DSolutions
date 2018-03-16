@@ -2,7 +2,9 @@ import {
   CLEAR_START_INPUT,
   clearStartInput,
   CLEAR_TARGET_INPUT,
-  clearTargetInput
+  clearTargetInput,
+  CLEAR_INPUT,
+  clearInput
 } from './clearInputActions';
 
 describe('clearInputActions', () => {
@@ -19,6 +21,14 @@ describe('clearInputActions', () => {
       type: CLEAR_TARGET_INPUT
     };
     const result = clearTargetInput();
+    expect(result.type).toEqual(expected.type);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a CLEAR_INPUT action', () => {
+    const expected = {
+      type: CLEAR_INPUT
+    };
+    const result = clearInput();
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });

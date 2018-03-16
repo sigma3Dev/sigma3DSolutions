@@ -2,27 +2,25 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import { FormattedMessage } from 'react-intl';
-//componente importieren
 import ChebyshevCFInput from '../components/ChebyshevCFInput/ChebyshevCFInput';
-import { pushStartSystemCoordinates} from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
-import { getStartSystemPoints} from '../selectors/TrafoSelectors/getTrafoInputDataSelector/getTrafoInputDataSelector';
-import { submitCoords} from '../actions/submitCoords/submitCoordsActions';
-import { clearStartInput} from '../actions/clearInput/clearInputActions';
+import { pushChebyshevCircleFitCoords } from '../actions/pushChebyshevCircleFitCoords/pushChebyshevCircleFitCoordsActions';
+import { getCirclePoints} from '../selectors/ChebyshevCircleFitSelector/getChebyshevCircleFitInputDataSelector/getChebyshevCircleFitInputDataSelector';
+import { submitChebyshevCircleFitCoords} from '../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
+import { clearInput} from '../actions/clearInput/clearInputActions';
+import InfoModal from '../components/InfoModal/InfoModal';
 
 var cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  // you can add methods here later
-  onPushStartSystemCoordinates: (file) => dispatch(pushStartSystemCoordinates(file)),
-  onSubmitCoords: () => dispatch(submitCoords()),
-  onClearStartInput: () => dispatch(clearStartInput()),
+  OnPushChebyshevCircleFitCoords: (file) => dispatch(pushChebyshevCircleFitCoords(file)),
+  onSubmitChebyshevCircleFitCoords: () => dispatch(submitChebyshevCircleFitCoords()),
+  onClearInput: () => dispatch(clearInput()),
 });
 
 const mapStateToProps = (state, props) => ({
   //selectors, only here
   error: getError(state),
-  // you can add more state elements here later
-  startSystemPoints: getStartSystemPoints(state),
+  circlePoints: getCirclePoints(state),
 });
 
 /**
@@ -37,17 +35,15 @@ class ChebyshevCFInputContainer extends Component {
    * @param {Object} props 
    * @memberof ChebyshevCFInputContainer
    */
-  constructor(props) {
-    //**********************************************************************************************
-    // was soll ich hier tun???
+  // kontruktor erklären!!!!!!!!!!!!!!!!!!!!!!!!!
+  constructor() {
     super();
     this.state = {
       notification: null,
     }
     this.parseStartCoords = this.parseStartCoords.bind(this);
-    //this.submitCoords = this.submitCoords.bind(this);
-    this.clearStartInput = this.clearStartInput.bind(this);
-
+    this.submitChebyshevCircleFitCoords = this.submitChebyshevCircleFitCoords.bind(this);
+    this.clearInput = this.clearInput.bind(this);
   }
 
   /**
@@ -55,9 +51,9 @@ class ChebyshevCFInputContainer extends Component {
    * @param {*} file - .txt file with point coordinates
    * @memberof ChebyshevCFInputContainer
    */
-  parseStartCoords = (file) => {
+  parseCoords = (file) => {
     cdi.startCoordinateDataImport(file, coords => {
-      this.props.onPushStartSystemCoordinates(coords);
+      this.props.OnPushChebyshevCircleFitCoords(coords);
     }); 
   }
 
@@ -69,28 +65,44 @@ class ChebyshevCFInputContainer extends Component {
    // hier den submit kram einfügen
 
      /**
-   * deletes all start system points, updates input display
+   * deletes all points, updates input display
    * @memberof ChebyshevCFInputContainer
    */
-  clearStartInput = () => {
-    this.props.onClearStartInput();
+  clearInput = () => {
+    this.props.onClearInput();
   }
-
+// worauf bezeiht sich hier das this?????????????
   render() {
-      return (
-        <div>
-          {this.state.notification}
-          <ChebyshevCFInput 
-            onStartFileDrop={ this.parseStartCoords } 
-            startSystemPoints={ this.props.startSystemPoints }
-            //handleInfoClick={ this.displayInfoPanel }
-            handleSubmitClick={ this.submitCoords }
-            handleStartDeleteClick= { this.clearStartInput }
-            //isInfoOpen={ this.state.isInfoOpen }
-            //infoPanelText={ infoPanelText }
-          />
-        </div>
-      )
+    const infoPanelText=(
+      <FormattedMessage
+        id="ChebyshevCFInputContainer.panel.infoPanelText"
+        defaultMessage={`
+          The input should be a simple .txt file.\n
+        
+          The file should consist of one or more points, each on its own line. 
+          Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n
+        
+          Example:\n
+          41.3 11.2 17.1\n
+          24.2 33.1 19.8\n
+          9.1 5.4 12.9
+        `}
+      />
+    )
+    return (
+      <div>
+        {this.state.notification}
+        <ChebyshevCFInput 
+          onFileDrop={ this.parseCoords } 
+          circlePoints={ this.props.circlePoints }
+          handleInfoClick={ this.displayInfoPanel }
+          handleSubmitClick={ this.submitChebyshevCircleFitCoords }
+          handleDeleteClick= { this.clearInput }
+          isInfoOpen={ this.state.isInfoOpen }
+          infoPanelText={ infoPanelText }
+        />
+      </div>
+    )
   }
   
 }

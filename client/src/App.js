@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route exact path='/' component={StartScreenContainer} />
-          <Route path='/transformations' component={TransformationsScreenContainer} />
+          <Route exact path='/transformations' component={TransformationsScreenContainer} />
           <Route path='/transformations/three-d-transformation/data-input' component={ThreeDTrafoInputContainer} />
           <Route path='/transformations/three-d-transformation/result' component={ThreeDTrafoResultContainer} />
           <Route exact path='/geometry' component={GeometryScreenContainer} />

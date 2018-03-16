@@ -19,7 +19,7 @@ const initialTrafoData = {
 };
 
 /**
- * Handles all kinds of data input
+ * Handles all kinds of 3D trafo data input
  * @param {Object} state - current transformation data state
  * @param {Object} action - action to be executed
  * @returns {Object} state - updated State
