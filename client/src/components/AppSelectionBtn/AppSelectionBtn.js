@@ -22,6 +22,7 @@ const AppSelectionBtn = ({
           defaultMessage={"caption"}
         />
       </div>
+      <div className="s3d-icon" data-category={ label } />
       <div className="app-selection-btn-description">
         <FormattedMessage
           id={ "AppSelectionBtn.description." + label }

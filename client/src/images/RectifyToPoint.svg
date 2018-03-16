@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="95.653mm" height="24.04mm" version="1.1" viewBox="0 0 95.653 24.04" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <marker id="marker4700" style="overflow:visible" orient="auto">
+   <path transform="scale(1.1) rotate(180) translate(1)" d="m8.7186 4.0337-10.926-4.0177 10.926-4.0177c-1.7455 2.3721-1.7354 5.6175-6e-7 8.0354z" style="fill-rule:evenodd;stroke-linejoin:round;stroke-width:.625;stroke:#000"/>
+  </marker>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-33.317 -17.768)">
+  <path d="m34.579 29.832h67.452" style="fill-rule:evenodd;marker-end:url(#marker4700);paint-order:stroke markers fill;stroke-linecap:round;stroke-width:2.4892;stroke:#000"/>
+  <path d="m106.95 19.788 20 20" style="fill-rule:evenodd;fill:#007e00;paint-order:stroke markers fill;stroke-linecap:round;stroke-width:4;stroke:#007e00"/>
+  <path d="m126.95 19.788-20 20" style="fill-rule:evenodd;fill:#007e00;paint-order:stroke markers fill;stroke-linecap:round;stroke-width:4;stroke:#007e00"/>
+ </g>
+</svg>

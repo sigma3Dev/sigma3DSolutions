@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
 import { connect }          from 'react-redux';
 import { getError }         from '../selectors/ErrorSelectors/getErrorSelector';
+import {getParamInversion}  from '../selectors/ParamInversionSelectors/getParamInversionSelector';
+import { clearInput }       from '../actions/clearInput/clearInputActions';
+import {
+  submitParamInversionCoords,
+  pushParamInversionCoords,
+}                           from '../actions/paramInversionCoords/paramInversionCoordsActions';
 import ParamInversion       from '../components/ParamInversion/ParamInversion';
 
 const mapDispatchToProps = dispatch => ({
+  onSubmitParamInversionCoords: (coords) => dispatch(submitParamInversionCoords(coords)), 
+  onClearInput: () => dispatch(clearInput()),
+  onPushParamInversionCoords: (coords) => dispatch(pushParamInversionCoords(coords)),
 });
 
 const mapStateToProps = (state, props) => ({
+  paramInversion: getParamInversion(state),
   error: getError(state),
 });
 
@@ -25,36 +35,48 @@ class ParamInversionContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      Tx: null,
-      Ty: null,
-      Tz: null,
-      Q0: null,
-      Q1: null,
-      Q2: null,
-      Q3: null,
-      M: null,
+      tx: 0,
+      ty: 0,
+      tz: 0,
+      q0: 0,
+      q1: 0,
+      q2: 0,
+      q3: 0,
+      m: 1,
     };
     this.parseInput = this.parseInput.bind(this);
-    this.submitCoords = this.submitCoords.bind(this);
+    this.submitParamInversionCoords = this.submitParamInversionCoords.bind(this);
   }
 
-  submitCoords = () => {
-    console.log("It worked");
+  /**
+   * Handles coords submit
+   * @memberof ParamInversionContainer
+   */
+  submitParamInversionCoords = () => {
+    const coords = {...this.state};
+    this.props.onSubmitParamInversionCoords(coords);
   }
 
+  /**
+   * sets local state to current input value
+   * params {Object} e - event object
+   * @memberof ParamInversionContainer
+   */
   parseInput = (e) => {
     this.setState({
       ...this.state,
-      [e.target.name]: e.target.value
+      [e.target.name]: Number(e.target.value)
     });
+    const coords = {...this.state};
+    this.props.onPushParamInversionCoords(coords);
   }
 
   render() {
-    const textAreaDisplay = ;
+    const textAreaDisplay = JSON.stringify(this.props.paramInversion).split(',').join(' \n').slice(1,-1).replace(/"/g, '');
     return(
       <div>
         <ParamInversion 
-          handleSubmit={ this.submitCoords }
+          handleSubmit={ this.submitParamInversionCoords }
           handleChange={ this.parseInput }
           values={ this.state }
           textAreaDisplay={ textAreaDisplay }

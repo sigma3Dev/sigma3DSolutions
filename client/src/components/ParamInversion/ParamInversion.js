@@ -27,38 +27,38 @@ const ParamInversion = ({
       <form>
         <label>
           Tx:
-          <input type="text" value={values.Tx} onChange={handleChange} name="Tx" />
+          <input type="text" value={values.tx} onChange={handleChange} name="tx" />
         </label>
         <label>
           Ty:
-          <input type="text" value={values.Ty} onChange={handleChange} name="Ty" />
+          <input type="text" value={values.ty} onChange={handleChange} name="ty" />
         </label>
         <label>
           Tz:
-          <input type="text" value={values.Tz} onChange={handleChange} name="Tz" />
+          <input type="text" value={values.tz} onChange={handleChange} name="tz" />
         </label>
         <label>
           Q0:
-          <input type="text" value={values.Q0} onChange={handleChange} name="Q0" />
+          <input type="text" value={values.q0} onChange={handleChange} name="q0" />
         </label>
         <label>
           Q1:
-          <input type="text" value={values.Q1} onChange={handleChange} name="Q1" />
+          <input type="text" value={values.q1} onChange={handleChange} name="q1" />
         </label>
         <label>
           Q2:
-          <input type="text" value={values.Q2} onChange={handleChange} name="Q2" />
+          <input type="text" value={values.q2} onChange={handleChange} name="q2" />
         </label>
         <label>
           Q3:
-          <input type="text" value={values.Q3} onChange={handleChange} name="Q3" />
+          <input type="text" value={values.q3} onChange={handleChange} name="q3" />
         </label>
         <label>
           M:
-          <input type="text" value={values.M} onChange={handleChange} name="M" />
+          <input type="text" value={values.m} onChange={handleChange} name="m" />
         </label>
       </form>
-      <textarea spellcheck="false" value={textAreaDisplay} />
+      <textarea spellCheck="false" value={textAreaDisplay} />
     </div>
     <SubmitBtn handleClick={handleSubmit} />
   </div>
