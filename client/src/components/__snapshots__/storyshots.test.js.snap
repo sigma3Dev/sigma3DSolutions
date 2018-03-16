@@ -11,7 +11,7 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
     }
   >
     <a
-      class="btn-link"
+      className="btn-link"
       href="/geometries/chebyshev_circle_fit"
       onClick={[Function]}
     >
@@ -25,6 +25,10 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
             caption
           </span>
         </div>
+        <div
+          className="s3d-icon"
+          data-category="Tschebyscheff-Kreis"
+        />
         <div
           className="app-selection-btn-description"
         >
@@ -2070,7 +2074,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
         </a>
       </div>
       <a
-        class="btn-link"
+        className="btn-link"
         href="/transformations/three-d-transformation/data-input"
         onClick={[Function]}
       >
@@ -2085,6 +2089,10 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
             </span>
           </div>
           <div
+            className="s3d-icon"
+            data-category="3Dtransformation"
+          />
+          <div
             className="app-selection-btn-description"
           >
             <span>
@@ -2094,7 +2102,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
         </div>
       </a>
       <a
-        class="btn-link"
+        className="btn-link"
         href="/transformations/three-d-transformation/data-input"
         onClick={[Function]}
       >
@@ -2108,6 +2116,10 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
               Euler &lt;-&gt; Quaternionen
             </span>
           </div>
+          <div
+            className="s3d-icon"
+            data-category="eulerQuat"
+          />
           <div
             className="app-selection-btn-description"
           >
@@ -2808,31 +2820,31 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
         </a>
       </div>
       <h1
-        class="header"
+        className="header"
       >
         <span>
           Willkommen zu sigma3DSolutions
         </span>
       </h1>
       <h2
-        class="subheader"
+        className="subheader"
       >
         <span>
           Diese Website wird Ihnen beim Lösen mathematischer Probleme helfen.
         </span>
       </h2>
       <p
-        class="generalText"
+        className="generalText"
       >
         <span>
           In der Sidebar sehen Sie verschiedene Themen. Beim Klicken darauf, können Sie aus unterschiedlichen Apps wählen.
         </span>
       </p>
       <div
-        class="lists"
+        className="lists"
       >
         <div
-          class="element"
+          className="element"
         >
           <p
             className="element-header"
@@ -2850,7 +2862,7 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
           </ul>
         </div>
         <div
-          class="element"
+          className="element"
         >
           <p
             className="element-header"

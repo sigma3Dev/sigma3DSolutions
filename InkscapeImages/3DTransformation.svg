@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="61.992mm" height="53.995mm" version="1.1" viewBox="0 0 61.992 53.995" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-29.114 -15.493)" style="stroke-width:.1">
+  <path d="m47.952 20.375v33.236l38.75 2e-6" style="fill:none;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.0956;stroke:#020202"/>
+  <path d="m47.952 53.611-12.573 10.676" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.0956;stroke:#020202"/>
+  <path d="m29.183 69.42 5.3526-6.8467 2.3559 2.5557z" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:.13705;stroke:#020202"/>
+  <path d="m48.099 15.565 1.7321 6.4467-3.6819-0.01854z" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:.1439;stroke:#020202"/>
+  <path d="m91.041 53.704-5.977 1.3386-9.63e-4 -2.6833z" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:.13159;stroke:#020202"/>
+  <g transform="matrix(.18289 .23881 -.23881 .18289 57.411 -9.9092)" style="stroke-width:3.2023">
+   <path d="m142.82 21.664v44.855h52.297" style="fill:none;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:3.2023;stroke:#208c2d"/>
+   <path d="m142.82 66.52-26.458 23.564" style="fill:none;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:3.2023;stroke:#208c2d"/>
+   <path d="m116.44 90.008 7.3054-12.443 5.2426 5.1338z" style="fill-rule:evenodd;fill:#208c2d;paint-order:stroke markers fill;stroke-linecap:round;stroke-width:3.2023;stroke:#208c2d"/>
+   <path d="m142.69 19.716 3.4571 12.339-6.7685-0.10262z" style="fill-rule:evenodd;fill:#208c2d;paint-order:stroke markers fill;stroke-linecap:round;stroke-width:4.2422;stroke:#208c2d"/>
+   <path d="m195.12 66.52-13.356 4.1047 1.0224-9.7567z" style="fill-rule:evenodd;fill:#208c2d;paint-order:stroke markers fill;stroke-linecap:round;stroke-width:3.2023;stroke:#208c2d"/>
+  </g>
+  <path d="m47.952 53.611 19.694-17.247-3.6782 1.89 1.4159 1.4867 2.2623-3.3767" style="fill-rule:evenodd;fill:#ff0004;paint-order:stroke markers fill;stroke-linecap:round;stroke-width:.66687;stroke:#ff0015"/>
+  <path d="m67.796 36.25v27.544l-19.843-10.183" style="fill:none;paint-order:stroke markers fill;stroke-dasharray:0.74097153, 2.22291457;stroke-linecap:round;stroke-linejoin:round;stroke-width:.74097;stroke:#ff0015"/>
+ </g>
+</svg>

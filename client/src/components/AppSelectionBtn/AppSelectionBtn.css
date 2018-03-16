@@ -56,3 +56,19 @@
   line-height: 140%;
   text-decoration: none;
 }
+
+.app-selection-btn .s3d-icon {
+  height: 70px;
+  width: 70px;
+  margin: 0 auto;
+}
+
+.app-selection-btn .s3d-icon[data-category="3Dtransformation"] {
+  background-image: url('../../images/3DTransformation.svg');
+  width: 80px;
+}
+
+.app-selection-btn .s3d-icon[data-category="chebyshev_circle_fit"] {
+  background-image: url('../../images/chebyshev-circle.svg');
+  background-size: 100% 100%;
+}
