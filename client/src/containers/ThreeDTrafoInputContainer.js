@@ -99,10 +99,18 @@ class ThreeDTrafoInputContainer extends Component {
     this.props.onCheckboxUpdate(id);
   }
 
+  /**
+   * Closes the Modal-window
+   * @memberof ChebyshevCFInputContainer
+   */
   closeModal = () => {
     this.setState({...this.state, notification: null});
   }
 
+  /**
+   * Decides wheter InfoPanel is displayed or not
+   * @memberof ChebyshevCFInputContainer
+   */
   displayInfoPanel = () => {
     this.setState({...this.state, isInfoOpen: !this.state.isInfoOpen});
   }

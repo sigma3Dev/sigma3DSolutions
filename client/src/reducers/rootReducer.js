@@ -1,13 +1,17 @@
 import { combineReducers } from 'redux';
+import calculationStatusReducer from './calculationStatusReducer/calculationStatusReducer';
+import chebyshevCircleFitDataInputReducer from './chebyshevCircleFitDataInputReducer/chebyshevCircleFitDataInputReducer';
+import chebyshevCircleFitResultReducer from './chebyshevCircleFitResultReducer/chebyshevCircleFitResultReducer';
+import errorReducer from './errorReducer/errorReducer';
 import trafoDataInputReducer from './trafoDataInputReducer/trafoDataInputReducer';
 import trafoResultReducer from './trafoResultReducer/trafoResultReducer';
-import calculationStatusReducer from './calculationStatusReducer/calculationStatusReducer';
-import errorReducer from './errorReducer/errorReducer';
 
 /* root reducer */
 export default combineReducers({
-  trafoDataInput: trafoDataInputReducer,
   calculationStatus: calculationStatusReducer,
-  trafoResult: trafoResultReducer,
+  chebyshevCircleFitDataInput: chebyshevCircleFitDataInputReducer,
+  chebyshevCircleFitResult: chebyshevCircleFitResultReducer,
   error: errorReducer,
+  trafoDataInput: trafoDataInputReducer,
+  trafoResult: trafoResultReducer,
 });

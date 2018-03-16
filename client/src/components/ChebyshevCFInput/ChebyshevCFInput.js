@@ -11,20 +11,20 @@ import './ChebyshevCFInput.css';
 
 /**
  * page for chebyshev-circle-fit data inputs
- * @param {function} onStartFileDrop - handles functionality of file drop for start system input
+ * @param {function} onFileDrop - handles functionality of file drop for points input
  * @param {function} handleInfoClick - handles info button clicks
  * @param {function} handleSubmitClick - handles submit button clicks
- * @param {function} handleStartDeleteClick - handles start system delete button clicks
- * @param {Array} startSystemPoints - array of points from the start system
+ * @param {function} handleDeleteClick - handles delete button clicks
+ * @param {Array} circlePoints - array of points from the circle
  * @param {Array} isInfoOpen - is info panel open?
  * @returns {*} chebyshev-circle-fit - .jsx Element
  */
 const ChebyshevCFInput = ({
-  onStartFileDrop,
-  startSystemPoints,
+  onFileDrop,
+  circlePoints,
   handleInfoClick,
   handleSubmitClick,
-  handleStartDeleteClick,
+  handleDeleteClick,
   isInfoOpen,
   infoPanelText
 }) => {
@@ -33,17 +33,24 @@ const ChebyshevCFInput = ({
     <div>
       <Sidebar />
       <div className="chebyshev-circle-fit-input">
-        <div className="start-input">
+        <div className="circle-input">
           <h1>
             <FormattedMessage
-              id="ThreeDTrafoInput.label.startSystemPointsCaption"
-              defaultMessage="Start System Points:"
+              id="ChebyshevCFInput.label.circlePointsCaption"
+              defaultMessage="Circle Points:"
             />
+            <div className="info-section">
+              <InfoBtn className="info-btn" handleClick={ handleInfoClick } />
+              <InputInfoPanel 
+                isDisplayed={ isInfoOpen }
+                body={ infoPanelText }
+              />
+            </div>
           </h1>
-          <PointsInput onDrop={onStartFileDrop} />
+          <PointsInput onDrop={onFileDrop} />
           <PointsInputTable3D6W 
-            systemPoints={startSystemPoints} 
-            handleDeleteDataInput={handleStartDeleteClick}
+            systemPoints={circlePoints} 
+            handleDeleteDataInput={handleDeleteClick}
           />
         </div>
         <SubmitBtn handleClick={handleSubmitClick} />

@@ -1,13 +1,13 @@
-export const SUBMIT_CHEBYSHEY_CIRCLE_FIT_COORDS = 'SUBMIT_CHEBYSHEY_CIRCLE_FIT_COORDS';
-export const SUBMIT_CHEBYSHEY_CIRCLE_FIT_COORDS_REQUEST = 'SUBMIT_CHEBYSHEY_CIRCLE_FIT_COORDS_REQUEST';
-export const SUBMIT_CHEBYSHEY_CIRCLE_FIT_COORDS_SUCCESS = 'SUBMIT_CHEBYSHEY_CIRCLE_FIT_COORDS_SUCCESS';
-export const SUBMIT_CHEBYSHEY_CIRCLE_FIT_COORDS_FAILURE = 'SUBMIT_CHEBYSHEY_CIRCLE_FIT_COORDS_FAILURE';
+export const SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS = 'SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS';
+export const SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST = 'SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST';
+export const SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS = 'SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS';
+export const SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE = 'SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE';
 
 const axios = require('axios');
 
 /** doesn't do anything, fires whenever submitChebyshevCircleFitCoords is requested */
 export const submitChebyshevCircleFitCoordsRequest = () => ({
-  type: SUBMIT_CHEBYSHEY_CIRCLE_FIT_COORDS_REQUEST,
+  type: SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST,
   receivedAt: Date.now(),
 });
 
@@ -16,7 +16,7 @@ export const submitChebyshevCircleFitCoordsRequest = () => ({
  * @param {Object} response - Response that is returned from the node server
  */
 export const submitChebyshevCircleFitCoordsSuccess = (response) => ({
-  type: SUBMIT_CHEBYSHEY_CIRCLE_FIT_COORDS_SUCCESS,
+  type: SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS,
   response,
   receivedAt: Date.now(),
 });
@@ -26,7 +26,7 @@ export const submitChebyshevCircleFitCoordsSuccess = (response) => ({
  * @param {Object} error - Error that is returned from the node server
  */
 export const submitChebyshevCircleFitCoordsFailure = (error) => ({
-  type: SUBMIT_CHEBYSHEY_CIRCLE_FIT_COORDS_FAILURE,
+  type: SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE,
   error,
   receivedAt: Date.now(),
 });

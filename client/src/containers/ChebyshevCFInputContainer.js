@@ -31,7 +31,7 @@ const mapStateToProps = (state, props) => ({
 class ChebyshevCFInputContainer extends Component {
 
   /**
-   * Creates an instance of $YOUR_CONTAINER.
+   * Creates an instance of ChebyshevCFInputContainer.
    * @param {Object} props 
    * @memberof ChebyshevCFInputContainer
    */
@@ -40,8 +40,9 @@ class ChebyshevCFInputContainer extends Component {
     super();
     this.state = {
       notification: null,
+      isInfoOpen: false,
     }
-    this.parseStartCoords = this.parseStartCoords.bind(this);
+    this.parseCoords = this.parseCoords.bind(this);
     this.submitChebyshevCircleFitCoords = this.submitChebyshevCircleFitCoords.bind(this);
     this.clearInput = this.clearInput.bind(this);
   }
@@ -57,12 +58,47 @@ class ChebyshevCFInputContainer extends Component {
     }); 
   }
 
+  /**
+   * Closes the Modal-window
+   * @memberof ChebyshevCFInputContainer
+   */
+  closeModal = () => {
+    this.setState({...this.state, notification: null});
+  }
+
+  /**
+   * Decides wheter InfoPanel is displayed or not
+   * @memberof ChebyshevCFInputContainer
+   */
+  displayInfoPanel = () => {
+    this.setState({...this.state, isInfoOpen: !this.state.isInfoOpen});
+  }
+
     /**
    * Handles coords submit, navigates to "result" page
    * @memberof ChebyshevCFInputContainer
    */
-
-   // hier den submit kram einfügen
+  submitChebyshevCircleFitCoords = () => {
+    if (!this.props.circlePoints || this.props.circlePoints.length === 0 ) {
+      this.setState({
+        notification: (<InfoModal 
+          header={(     
+            <FormattedMessage
+              id="InfoModal.caption.wrongInput"
+              defaultMessage="Wrong Input"
+            /> )}
+          body={(<FormattedMessage
+            id="InfoModal.label.noCirclePoints"
+            defaultMessage="Please import circle points!"
+          /> )}
+          handleClick={this.closeModal}
+        />)
+      })
+    } else {
+      this.props.onSubmitChebyshevCircleFitCoords();
+      this.props.history.push('/geometry/chebyshev-circle-fit/result');
+    }
+  }
 
      /**
    * deletes all points, updates input display

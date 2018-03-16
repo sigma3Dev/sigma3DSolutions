@@ -1,30 +1,31 @@
 .chebyshev-circle-fit-input {
-  width: 70%;
+  width: 74%;
   margin-left: 220px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-top: 12px;
+  margin-top: 35px;
   font-family: Roboto;
 }
 
-.chebyshev-circle-fit * {
+.chebyshev-circle-fit-input * {
   text-align: center;
 }
 
-.chebyshev-circle-fit h1 {
+.chebyshev-circle-fit-input .circle-input h1 {
   display: flex;
   justify-content: space-around;
   border-bottom: 3px solid darkgreen;
-  padding-bottom: 5px;
-  margin: 20px 45px;
+  padding: 0 50px 5px;
+  margin: 20px 300px;
 }
 
-.chebyshev-circle-fit h1 .info-btn {
+.chebyshev-circle-fit-input .info-section {
+  display: inline-block;
+}
+
+.chebyshev-circle-fit-input .info-section .info-btn {
   font-size: 0.6em;
 }
 
-.start-input {
-  width: 38%;
+.circle-input {
+  width: 85%;
   margin-right: 20px;
 }
