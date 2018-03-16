@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="61.992mm" height="53.995mm" version="1.1" viewBox="0 0 61.992 53.995" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-13.626 -13.668)">
+  <g transform="translate(-15.489 -1.825)" style="stroke-width:.1">
+   <path d="m47.952 20.375v33.236l38.75 2e-6" style="fill:none;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.0956;stroke:#020202"/>
+   <path d="m47.952 53.611-12.573 10.676" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.0956;stroke:#020202"/>
+   <path d="m29.183 69.42 5.3526-6.8467 2.3559 2.5557z" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:.13705;stroke:#020202"/>
+   <path d="m48.099 15.565 1.7321 6.4467-3.6819-0.01854z" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:.1439;stroke:#020202"/>
+   <path d="m91.041 53.704-5.977 1.3386-9.63e-4 -2.6833z" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:.13159;stroke:#020202"/>
+  </g>
+  <path d="m32.463 51.786 19.694-17.247-3.6782 1.89 1.4159 1.4867 2.2623-3.3767" style="fill-rule:evenodd;fill:#ff9600;paint-order:stroke markers fill;stroke-linecap:round;stroke-width:.66687;stroke:#ff9600"/>
+  <path d="m52.307 34.425v27.544l-19.843-10.183" style="fill:none;paint-order:stroke markers fill;stroke-dasharray:0.74097154, 2.22291459;stroke-linecap:round;stroke-linejoin:round;stroke-width:.74097;stroke:#ff9600"/>
+  <path d="m52.316 31.751 0.57204 4.8013" style="fill:none;paint-order:stroke markers fill;stroke:#037000"/>
+  <path d="m54.95 33.811-4.6825 0.66373" style="fill:none;paint-order:stroke markers fill;stroke:#037000"/>
+ </g>
+</svg>
