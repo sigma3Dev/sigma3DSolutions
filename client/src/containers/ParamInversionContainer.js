@@ -72,7 +72,16 @@ class ParamInversionContainer extends Component {
   }
 
   render() {
-    const textAreaDisplay = JSON.stringify(this.props.paramInversion).split(',').join(' \n').slice(1,-1).replace(/"/g, '');
+    const textAreaDisplay = JSON.stringify({
+      Tx: " " + this.props.paramInversion[0],
+      Ty: " " + this.props.paramInversion[1],
+      Tz: " " + this.props.paramInversion[2],
+      Q0: " " + this.props.paramInversion[3],
+      Q1: " " + this.props.paramInversion[4],
+      Q2: " " + this.props.paramInversion[5],
+      Q3: " " + this.props.paramInversion[6],
+      M: " " + this.props.paramInversion[7],
+    }).split(',').join(' \n').slice(1,-1).replace(/"/g, '');
     return(
       <div>
         <ParamInversion 
