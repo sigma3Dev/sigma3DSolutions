@@ -3,7 +3,7 @@ import {
 } from '../../actions/clearInput/clearInputActions';
 
 import {
-  SUBMIT_PARAM_INVERSION_COORDS_SUCCESS, PUSH_PARAM_INVERSION_COORDS,
+  SUBMIT_PARAM_INVERSION_COORDS_SUCCESS,
 } from '../../actions/paramInversionCoords/paramInversionCoordsActions';
 
 /* Holds the initial transformation data input. */
@@ -26,18 +26,6 @@ const initialParamInversionData = {
  */
 function paramInversion(state = initialParamInversionData, action) {
   switch (action.type) {
-    case PUSH_PARAM_INVERSION_COORDS:
-      return {
-        ...state,
-        tx: action.coords.tx,
-        ty: action.coords.ty,
-        tz: action.coords.tz,
-        q0: action.coords.q0,
-        q1: action.coords.q1,
-        q2: action.coords.q2,
-        q3: action.coords.q3,
-        m: action.coords.m,
-      }
     case SUBMIT_PARAM_INVERSION_COORDS_SUCCESS:
       return {
         ...state,

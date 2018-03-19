@@ -1,6 +1,5 @@
 import {
   SUBMIT_PARAM_INVERSION_COORDS_SUCCESS,
-  PUSH_PARAM_INVERSION_COORDS,
 } from '../../actions/paramInversionCoords/paramInversionCoordsActions';
 
 import {
@@ -74,43 +73,6 @@ describe('paramInversionReducer', () => {
       q2: 0,
       q3: 0,
       m: 0
-    };
-    const result = paramInversionReducer(state, action);
-    expect(result).toEqual(expectedState);
-  });
-  it('should handle CLEAR_INPUT', () => {
-    const state = {
-      tx: 0,
-      ty: 0,
-      tz: 0,
-      q0: 0,
-      q1: 0,
-      q2: 0,
-      q3: 0,
-      m: 0
-    };
-    const action = {
-      type: PUSH_PARAM_INVERSION_COORDS,
-      coords: {
-        tx: 10,
-        ty: 10,
-        tz: 10,
-        q0: 1,
-        q1: 0,
-        q2: 0,
-        q3: 0,
-        m: 1
-      }
-    };
-    const expectedState = {
-      tx: 10,
-      ty: 10,
-      tz: 10,
-      q0: 1,
-      q1: 0,
-      q2: 0,
-      q3: 0,
-      m: 1
     };
     const result = paramInversionReducer(state, action);
     expect(result).toEqual(expectedState);

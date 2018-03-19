@@ -42,3 +42,17 @@
   width: 40%;
   font-size: 1.4em;
 }
+
+.param-inversion .param-submit-btn {
+  width: 70%;
+  margin-top: 20px;
+  padding: 10px 0;
+  border: 3px #252 solid;
+  border-radius: 3px;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+.param-inversion .param-submit-btn:focus {
+  outline: 0;
+}

@@ -67,8 +67,7 @@ app.post('/calculate-trafo', function(req, res) {
 });
 
 app.post('/param-inversion', function(req, res) {
-  const paramInversionPoints = req.body.coords.paramInversion;
-  console.log(paramInversionPoints);
+  const paramInversionPoints = req.body.coords;
   let obj = {
     "jsonrpc": "2.0",
     "method": "invertTransformationParameters",

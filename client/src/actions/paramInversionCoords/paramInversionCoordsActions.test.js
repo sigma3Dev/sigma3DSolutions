@@ -76,24 +76,4 @@ describe('submitParamInversionCoordsActions', () => {
       );
     });
   });
-  it('should create a PUSH_START_SYSTEM_COORDINATES action', () => {
-    const paramInversionPoints = {
-      tx: 10,
-      ty: 10,
-      tz: 10,
-      q0: 1,
-      q1: 0,
-      q2: 0,
-      q3: 0,
-      m: 1,
-    }
-    const expected = {
-      type: PUSH_PARAM_INVERSION_COORDS,
-      coords: paramInversionPoints
-    };
-    const result = pushParamInversionCoords(paramInversionPoints);
-    expect(result.type).toEqual(expected.type);
-    expect(result.coords).toEqual(expected.coords);
-    expect(result.receivedAt).toBeDefined();
-  });
 });
