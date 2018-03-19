@@ -46,11 +46,29 @@ class ParamInversionContainer extends Component {
         m: 1,
       },
       notification: null,
+      pastedValue: "",
       submitted: false,
     };
     this.parseInput = this.parseInput.bind(this);
     this.submitParamInversionCoords = this.submitParamInversionCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.handlePaste = this.handlePaste.bind(this);
+  }
+
+  /**
+   * Handles input to the paste bar
+   * @params {Object} e - Event Object
+   * @memberof ParamInversionContainer
+   */
+  handlePaste = e => {
+    let pastedText = e.target.value;
+    let pastedTextArr = pastedText.split(" ");
+    this.setState({pastedValue: pastedText});
+    const points = {...this.state.points};
+    Object.keys(points).forEach((key, i) => (
+      points[key] = pastedTextArr[i]
+    ));
+    this.setState({points: points});
   }
 
   /**
@@ -85,10 +103,10 @@ class ParamInversionContainer extends Component {
 
   /**
    * sets local state to current input value
-   * params {Object} e - event object
+   * @params {Object} e - event object
    * @memberof ParamInversionContainer
    */
-  parseInput = (e) => {
+  parseInput = e => {
     e.persist();
     this.setState(prevState => ({
       points: {
@@ -122,6 +140,7 @@ class ParamInversionContainer extends Component {
     } else { 
       textAreaDisplay = "";
     }
+
     return(
       <div>
         {this.state.notification}
@@ -130,6 +149,8 @@ class ParamInversionContainer extends Component {
           handleChange={ this.parseInput }
           values={ this.state.points }
           textAreaDisplay={ textAreaDisplay }
+          pastedValue={ this.state.pastedValue }
+          handlePaste={ this.handlePaste }
         />
       </div>
     )
