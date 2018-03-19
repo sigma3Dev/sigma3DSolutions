@@ -11,10 +11,8 @@ import './ParamInversion.css';
 const ParamInversion = ({
   handleSubmit,
   handleChange,
-  handlePaste,
   values,
   textAreaDisplay,
-  pastedValue,
 }) => (
   <div className="param-inversion">
     <Sidebar />
@@ -24,12 +22,6 @@ const ParamInversion = ({
         defaultMessage="Parameter Inversion"
       />
     </h1>
-    <div className="paste-box">
-      <label>
-        Paste here:
-        <input type="text" value={pastedValue} onChange={handlePaste} name="paste" autoComplete="off" />
-      </label>
-    </div>
     <div className="input-display">
       <form>
         <label>
