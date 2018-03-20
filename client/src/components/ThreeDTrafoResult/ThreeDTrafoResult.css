@@ -1,6 +1,6 @@
 .three-d-trafo-result {
-  width: 83%;
-  height: 500px;
+  width: 82%;
+  height: 610px;
   margin-left: 240px;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@
 .three-d-trafo-result h1 {
   font-size: 3.0em;
   border-bottom: 3px solid darkgreen;
+  margin-bottom: 20px;
 }
 
 .three-d-trafo-result .result-table {
@@ -46,6 +47,11 @@
 
 .three-d-trafo-result .copy:hover {
   cursor: pointer;
+}
+
+.three-d-trafo-result .bar-graph {
+  width: 600px;
+  height: 260px;
 }
 
 @keyframes spin {

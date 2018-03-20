@@ -3,16 +3,31 @@ import { connect }          from 'react-redux';
 import { getError }         from '../selectors/ErrorSelectors/getErrorSelector';
 import { 
   getTrafoParams,
-  getIsCalculating, }              from '../selectors/TrafoSelectors/getTrafoResultDataSelector/getTrafoResultDataSelector';
+  getTrafoDifference,
+  getIsCalculating, 
+}                           from '../selectors/TrafoSelectors/getTrafoResultDataSelector/getTrafoResultDataSelector';
+import { 
+  getStartSystemPoints,
+  getTargetSystemPoints,
+  getListOfUsedCoords
+}                           from '../selectors/TrafoSelectors/getTrafoInputDataSelector/getTrafoInputDataSelector';
+import {
+  calculateDifference
+}                           from '../actions/submitCoords/submitCoordsActions';
 import { removeError }      from '../actions/errorHandling/errorHandlingActions';
 import ThreeDTrafoResult    from '../components/ThreeDTrafoResult/ThreeDTrafoResult';
 
 const mapDispatchToProps = dispatch => ({
   onRemoveError: () => dispatch(removeError()),
+  onCalculateDifference: (startPoints, targetPoints, trafoParams) => dispatch(calculateDifference(startPoints, targetPoints, trafoParams)),
 });
 
 const mapStateToProps = (state, props) => ({
+  startSystemPoints: getStartSystemPoints(state),
+  targetSystemPoints: getTargetSystemPoints(state),
+  listOfUsedCoords: getListOfUsedCoords(state),
   trafoParams: getTrafoParams(state),
+  trafoDifference: getTrafoDifference(state),
   error: getError(state),
   isCalculating: getIsCalculating(state),
 });
@@ -35,6 +50,21 @@ class ThreeDTrafoResultContainer extends Component {
   }
   
   /**
+   * runs calculateDifference when the page is first loaded
+   * @memberof ThreeDTrafoResultContainer
+   */
+  componentDidUpdate = (prevProps, prevState) => {
+    if (prevProps.trafoDifference.length === 0) {
+      const startPoints = this.props.startSystemPoints;
+      const targetPoints = this.props.targetSystemPoints;
+      let trafoParams = this.props.trafoParams;
+      if (!this.props.isCalculating) {
+        this.props.onCalculateDifference(startPoints, targetPoints, trafoParams);
+      }
+    }
+  }
+
+  /**
    * Navigates back to input page of the current transformation
    * @memberof ThreeDTrafoResultContainer
    */
@@ -48,6 +78,7 @@ class ThreeDTrafoResultContainer extends Component {
       <div>
         <ThreeDTrafoResult
           trafoParams={ this.props.trafoParams }
+          trafoDifference={ this.props.trafoDifference }
           error={ this.props.error }
           isCalculating = { this.props.isCalculating }
           handleClick = { this.goBack }

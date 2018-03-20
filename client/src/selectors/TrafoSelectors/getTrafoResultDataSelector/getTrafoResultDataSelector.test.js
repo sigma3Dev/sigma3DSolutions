@@ -1,6 +1,7 @@
 import {
   getTrafoParams,
   getIsCalculating,
+  getTrafoDifference,
 } from './getTrafoResultDataSelector';
 
 describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => {
@@ -26,6 +27,30 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
       "0.0990"
     ]
     const result = getTrafoParams(state);
+    expect(result).toEqual(expected);
+  });
+  it('getTrafoDifference', () => {
+    const state = {
+      trafoResultDifference: {
+        difference: [
+          {
+            vx: 0.15,
+            vy: 0.21,
+            vz: 0.11,
+            v: 0.16
+          }
+        ]
+      }
+    };
+    const expected = [
+      {
+        vx: 0.15,
+        vy: 0.21,
+        vz: 0.11,
+        v: 0.16
+      }
+    ];
+    const result = getTrafoDifference(state);
     expect(result).toEqual(expected);
   });
   it('getIsCalculating', () => {

@@ -2,6 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Sidebar from '../Sidebar/Sidebar';
+import BarGraph from '../BarGraph/BarGraph';
 import ErrorScreen from '../ErrorScreen/ErrorScreen';
 import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import './ThreeDTrafoResult.css';
@@ -22,6 +23,7 @@ const ClipboardIcon = React.createElement(GoClippy, null);
  */
 const ThreeDTrafoResult = ({
   trafoParams,
+  trafoDifference,
   error,
   isCalculating,
   handleClick,
@@ -98,6 +100,7 @@ const ThreeDTrafoResult = ({
             </tr>
           </tbody>
         </table>
+        <BarGraph values={trafoDifference} className="bar-graph" />
         <BackToInputBtn handleClick={ handleClick } />
         <Sidebar />
       </div>

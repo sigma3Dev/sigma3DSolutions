@@ -90,6 +90,59 @@ app.post('/param-inversion', function(req, res) {
   socket.send(JSON.stringify(obj));
 });
 
+
+app.post('/calculate-trafo-difference', function(req, res) {
+  const startPoints = req.body.startPoints;
+  const targetPoints = req.body.targetPoints;
+  const trafoParams = req.body.trafoParams;
+
+  let calculatedTarget = [];
+  let differences = [];
+  let objDifference = {  
+    "jsonrpc": "2.0",
+    "method": "applyTransformation",
+    "params": {
+      "point": {},
+      "transformation": {
+        tx: Number(trafoParams[0]),
+        ty: Number(trafoParams[1]),
+        tz: Number(trafoParams[2]),
+        q0: Number(trafoParams[3]),
+        q1: Number(trafoParams[4]),
+        q2: Number(trafoParams[5]),
+        q3: Number(trafoParams[6]),
+        m: 1.0
+      }
+    },
+    "id": 1
+  }
+
+  startPoints.map((point, i) => {
+    objDifference.params.point = point;
+    socket.send(JSON.stringify(objDifference));
+
+    socket.onmessage = e => {
+      const response = JSON.parse(e.data).result;
+      calculatedTarget.push(response);
+      if (calculatedTarget.length === startPoints.length) {
+        calculatedTarget.map((target, i) => {
+          differences.push({});
+          differences[i].vx = targetPoints[i].x - target.x;
+          differences[i].vy = targetPoints[i].y - target.y;
+          differences[i].vz = targetPoints[i].z - target.z;
+          differences[i].v = Math.sqrt(Math.pow(differences[i].vx, 2) + Math.pow(differences[i].vy, 2) + Math.pow(differences[i].vz, 2));
+        });
+        res.status(200).send(differences);
+      }
+    }
+
+    socket.onerror = error => {
+      console.log("WebSocket Error: " + error);
+      res.send(error);
+    }
+  });
+});
+
 app.listen(app.get("port"), () => {
   console.log("Server is running...");
 });
