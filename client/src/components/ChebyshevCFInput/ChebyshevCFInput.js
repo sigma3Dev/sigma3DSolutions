@@ -28,10 +28,7 @@ const ChebyshevCFInput = ({
   isInfoOpen,
   infoPanelText
 }) => {
-<<<<<<< HEAD
-=======
   
->>>>>>> master
   return (
     <div>
       <Sidebar />

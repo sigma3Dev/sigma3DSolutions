@@ -5,14 +5,11 @@ import ParamInversionContainer from './containers/ParamInversionContainer';
 import StartScreenContainer from './containers/StartScreenContainer';
 import ThreeDTrafoInputContainer from './containers/ThreeDTrafoInputContainer';
 import ThreeDTrafoResultContainer from './containers/ThreeDTrafoResultContainer';
-<<<<<<< HEAD
 import GeometryScreenContainer from './containers/GeometryScreenContainer';
 import ChebyshevCFInputContainer from './containers/ChebyshevCFInputContainer';
 import ChebyshevCFResultContainer from './containers/ChebyshevCFResultContainer';
-=======
 import ChebyshevCFInputContainer from './containers/ChebyshevCFInputContainer';
 import TransformationsScreenContainer from './containers/TransformationsScreenContainer';
->>>>>>> master
 import './App.css';
 
 /**

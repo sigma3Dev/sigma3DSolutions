@@ -35,7 +35,6 @@ class ChebyshevCFInputContainer extends Component {
    * @param {Object} props 
    * @memberof ChebyshevCFInputContainer
    */
-  // kontruktor erklären!!!!!!!!!!!!!!!!!!!!!!!!!
   constructor() {
     super();
     this.state = {
@@ -47,18 +46,6 @@ class ChebyshevCFInputContainer extends Component {
     this.clearInput = this.clearInput.bind(this);
   }
 
-  /**
-<<<<<<< HEAD
-  * Uses cdi module to transform .txt file into an array of start points
-  * @param {*} file - .txt file with point coordinates
-  * @memberof ChebyshevCFInputContainer
-  */
-=======
-   * Uses cdi module to transform .txt file into an array of start points
-   * @param {*} file - .txt file with point coordinates
-   * @memberof ChebyshevCFInputContainer
-   */
->>>>>>> master
   parseCoords = (file) => {
     cdi.startCoordinateDataImport(file, coords => {
       this.props.OnPushChebyshevCircleFitCoords(coords);
@@ -66,44 +53,25 @@ class ChebyshevCFInputContainer extends Component {
   }
 
   /**
-<<<<<<< HEAD
   * Closes the Modal-window
   * @memberof ChebyshevCFInputContainer
   */
-=======
-   * Closes the Modal-window
-   * @memberof ChebyshevCFInputContainer
    */
->>>>>>> master
   closeModal = () => {
     this.setState({...this.state, notification: null});
   }
 
   /**
-<<<<<<< HEAD
-  * Decides wheter InfoPanel is displayed or not
-  * @memberof ChebyshevCFInputContainer
-  */
-=======
    * Decides wheter InfoPanel is displayed or not
    * @memberof ChebyshevCFInputContainer
    */
->>>>>>> master
   displayInfoPanel = () => {
     this.setState({...this.state, isInfoOpen: !this.state.isInfoOpen});
   }
 
-<<<<<<< HEAD
-  /**
-  * Handles coords submit, navigates to "result" page
-  * @memberof ChebyshevCFInputContainer
-  */
-=======
-    /**
    * Handles coords submit, navigates to "result" page
    * @memberof ChebyshevCFInputContainer
    */
->>>>>>> master
   submitChebyshevCircleFitCoords = () => {
     if (!this.props.circlePoints || this.props.circlePoints.length === 0 ) {
       this.setState({
@@ -133,7 +101,6 @@ class ChebyshevCFInputContainer extends Component {
   clearInput = () => {
     this.props.onClearInput();
   }
-// worauf bezeiht sich hier das this?????????????
   render() {
     const infoPanelText=(
       <FormattedMessage
@@ -170,3 +137,23 @@ class ChebyshevCFInputContainer extends Component {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChebyshevCFInputContainer);
+
+    /**
+  /**
+  */
+  * @memberof ChebyshevCFInputContainer
+  * @param {*} file - .txt file with point coordinates
+  * Uses cdi module to transform .txt file into an array of start points
+<<<<<<< HEAD
+=======
+   * Uses cdi module to transform .txt file into an array of start points
+   * @param {*} file - .txt file with point coordinates
+   * @memberof ChebyshevCFInputContainer
+   */
+>>>>>>> master
+  /**
+  * Handles coords submit, navigates to "result" page
+  * @memberof ChebyshevCFInputContainer
+  */
+>>>>>>> master
+=======
