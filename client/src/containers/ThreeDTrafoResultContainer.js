@@ -40,7 +40,7 @@ class ThreeDTrafoResultContainer extends Component {
    */
   goBack = () => {
     this.props.onRemoveError();
-    this.props.history.push('/three-d-transformation/data-input');
+    this.props.history.push('/transformations/three-d-transformation/data-input');
   }
 
   render() {
