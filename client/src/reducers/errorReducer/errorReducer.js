@@ -4,6 +4,9 @@ import {
 import {
   SUBMIT_COORDS_FAILURE,
 } from '../../actions/submitCoords/submitCoordsActions';
+import {
+  SUBMIT_PARAM_INVERSION_COORDS_FAILURE,
+} from '../../actions/paramInversionCoords/paramInversionCoordsActions';
 
 const initialErrorState = { error: null };
 
@@ -21,6 +24,11 @@ function errorHandling(state = initialErrorState, action) {
         error: null
       }
     case SUBMIT_COORDS_FAILURE:
+      return {
+        ...state,
+        error: action.error
+      };
+    case SUBMIT_PARAM_INVERSION_COORDS_FAILURE:
       return {
         ...state,
         error: action.error

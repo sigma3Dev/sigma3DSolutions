@@ -2620,7 +2620,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
             className="app-selection-btn-caption"
           >
             <span>
-              Euler &lt;-&gt; Quaternionen
+              caption
             </span>
           </div>
           <div
@@ -2631,7 +2631,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
             className="app-selection-btn-description"
           >
             <span>
-              Euler zu Quaternionen oder umgekehrt
+              description
             </span>
           </div>
         </div>
@@ -3364,6 +3364,11 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
             <li>
               <span>
                 3D-Transformation
+              </span>
+            </li>
+            <li>
+              <span>
+                Parameterinversion
               </span>
             </li>
           </ul>

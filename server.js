@@ -66,6 +66,30 @@ app.post('/calculate-trafo', function(req, res) {
   socket.send(JSON.stringify(obj));
 });
 
+app.post('/param-inversion', function(req, res) {
+  const paramInversionPoints = req.body.coords;
+  let obj = {
+    "jsonrpc": "2.0",
+    "method": "invertTransformationParameters",
+    "params": {
+      "transformation": paramInversionPoints,
+    },
+    "id": 1
+  };
+
+  socket.onerror = error => {
+    console.log("WebSocket Error: " + error);
+    res.send(error);
+  }
+
+  socket.onmessage = e => {
+    const response = e.data;
+    res.status(200).send(response);
+  }
+
+  socket.send(JSON.stringify(obj));
+});
+
 app.listen(app.get("port"), () => {
   console.log("Server is running...");
 });
