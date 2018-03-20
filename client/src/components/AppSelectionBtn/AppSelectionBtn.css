@@ -72,3 +72,8 @@
   background-image: url('../../images/chebyshev-circle.svg');
   background-size: 100% 100%;
 }
+
+.app-selection-btn .s3d-icon[data-category="paramInversion"] {
+  background-image: url('../../images/InvertTransformationParameters.svg');
+  background-size: 100% 100%;
+}
