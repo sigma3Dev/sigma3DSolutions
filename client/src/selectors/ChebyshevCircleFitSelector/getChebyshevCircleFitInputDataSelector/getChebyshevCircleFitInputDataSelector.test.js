@@ -3,7 +3,7 @@ import { getCirclePoints,} from './getChebyshevCircleFitInputDataSelector';
 describe('getChebyshevCircleFitInputDataSelector Used By ChebyshevCFInputContainer', () => {
   it('getCirclePoints', () => {
     const state = {
-      ChebyshevCircleFitDataInput: {
+      chebyshevCircleFitDataInput: {
         circlePoints: [
           {
             x: 1.0,

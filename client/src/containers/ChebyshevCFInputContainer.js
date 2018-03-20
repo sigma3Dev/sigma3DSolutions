@@ -48,10 +48,10 @@ class ChebyshevCFInputContainer extends Component {
   }
 
   /**
-   * Uses cdi module to transform .txt file into an array of start points
-   * @param {*} file - .txt file with point coordinates
-   * @memberof ChebyshevCFInputContainer
-   */
+  * Uses cdi module to transform .txt file into an array of start points
+  * @param {*} file - .txt file with point coordinates
+  * @memberof ChebyshevCFInputContainer
+  */
   parseCoords = (file) => {
     cdi.startCoordinateDataImport(file, coords => {
       this.props.OnPushChebyshevCircleFitCoords(coords);
@@ -59,25 +59,25 @@ class ChebyshevCFInputContainer extends Component {
   }
 
   /**
-   * Closes the Modal-window
-   * @memberof ChebyshevCFInputContainer
-   */
+  * Closes the Modal-window
+  * @memberof ChebyshevCFInputContainer
+  */
   closeModal = () => {
     this.setState({...this.state, notification: null});
   }
 
   /**
-   * Decides wheter InfoPanel is displayed or not
-   * @memberof ChebyshevCFInputContainer
-   */
+  * Decides wheter InfoPanel is displayed or not
+  * @memberof ChebyshevCFInputContainer
+  */
   displayInfoPanel = () => {
     this.setState({...this.state, isInfoOpen: !this.state.isInfoOpen});
   }
 
-    /**
-   * Handles coords submit, navigates to "result" page
-   * @memberof ChebyshevCFInputContainer
-   */
+  /**
+  * Handles coords submit, navigates to "result" page
+  * @memberof ChebyshevCFInputContainer
+  */
   submitChebyshevCircleFitCoords = () => {
     if (!this.props.circlePoints || this.props.circlePoints.length === 0 ) {
       this.setState({

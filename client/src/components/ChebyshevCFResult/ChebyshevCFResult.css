@@ -1,4 +1,4 @@
-.three-d-trafo-result {
+.chebyshev-circle-fit-result {
   width: 83%;
   height: 500px;
   margin-left: 240px;
@@ -10,42 +10,42 @@
   font-family: Roboto;
 }
 
-.three-d-trafo-result h1 {
+.chebyshev-circle-fit-result h1 {
   font-size: 3.0em;
   border-bottom: 3px solid darkgreen;
 }
 
-.three-d-trafo-result .result-table {
+.chebyshev-circle-fit-result .result-table {
   padding-top: 50px;
-  width: 80%;
+  width: 90%;
   border-collapse: collapse;
 }
 
-.three-d-trafo-result .result-table * {
+.chebyshev-circle-fit-result .result-table * {
   font-size: 1.10em;
   text-align: center;
 }
 
-.three-d-trafo-result .result-table th {
+.chebyshev-circle-fit-result .result-table th {
   padding: 20px 0;
 }
 
-.three-d-trafo-result .result-table .caption {
+.chebyshev-circle-fit-result .result-table .caption {
   background-color: #d5d5d5;
 }
 
-.three-d-trafo-result .fa-spinner {
+.chebyshev-circle-fit-result .fa-spinner {
   font-size: 5em;
   color: #292929;
   animation: spin 2000ms infinite linear;
 }
 
-.three-d-trafo-result .copy {
+.chebyshev-circle-fit-result .copy {
   font-size: 0.8em;
   padding: 10px;
 }
 
-.three-d-trafo-result .copy:hover {
+.chebyshev-circle-fit-result .copy:hover {
   cursor: pointer;
 }
 
