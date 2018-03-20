@@ -1,6 +1,6 @@
 export const CLEAR_START_INPUT = 'CLEAR_START_INPUT';
 export const CLEAR_TARGET_INPUT = 'CLEAR_TARGET_INPUT';
-export const CLEAR_INPUT = 'CLEAR_INPUT';
+export const CLEAR_CHEBYSHEV_INPUT = 'CLEAR_CHEBYSHEV_INPUT';
 
 /** clears the start input */
 export const clearStartInput = () => ({
@@ -15,7 +15,7 @@ export const clearTargetInput = () => ({
 });
 
 /** clears any input */
-export const clearInput = () => ({
-  type: CLEAR_INPUT,
+export const clearChebyshevInput = () => ({
+  type: CLEAR_CHEBYSHEV_INPUT,
   receivedAt: Date.now(),
 });

@@ -3,7 +3,6 @@ import { connect }          from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { getError }         from '../selectors/ErrorSelectors/getErrorSelector';
 import {getParamInversion}  from '../selectors/ParamInversionSelectors/getParamInversionSelector';
-import { clearInput }       from '../actions/clearInput/clearInputActions';
 import {
   submitParamInversionCoords,
 }                           from '../actions/paramInversionCoords/paramInversionCoordsActions';
@@ -12,7 +11,6 @@ import InfoModal from '../components/InfoModal/InfoModal';
 
 const mapDispatchToProps = dispatch => ({
   onSubmitParamInversionCoords: (coords) => dispatch(submitParamInversionCoords(coords)), 
-  onClearInput: () => dispatch(clearInput()),
 });
 
 const mapStateToProps = (state, props) => ({

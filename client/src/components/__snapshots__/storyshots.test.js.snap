@@ -3344,7 +3344,7 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
         className="generalText"
       >
         <span>
-          In der Sidebar sehen Sie verschiedene Themen. Beim Klicken darauf, können Sie aus unterschiedlichen Apps wählen.
+          In der Sidebar sehen Sie verschiedene Themen. Beim Klicken darauf können Sie aus unterschiedlichen Apps wählen.
         </span>
       </p>
       <div
