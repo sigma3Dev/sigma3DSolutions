@@ -41,7 +41,7 @@ const mapStateToProps = (state, props) => ({
 });
 
 /**
- * Page where file input functionality is displayed
+ * Page where 3D transformation file input functionality is displayed
  * @class ThreeDTrafoInputContainer
  * @extends {Component}
  */

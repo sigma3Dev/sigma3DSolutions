@@ -28,6 +28,7 @@ const ChebyshevCFInput = ({
   isInfoOpen,
   infoPanelText
 }) => {
+  
   return (
     <div>
       <Sidebar />

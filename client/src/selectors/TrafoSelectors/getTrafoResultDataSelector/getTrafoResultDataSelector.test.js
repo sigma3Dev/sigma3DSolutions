@@ -1,6 +1,8 @@
 import {
   getTrafoParams,
   getIsCalculating,
+  getTrafoDifference,
+  getTransformedStartPoints,
 } from './getTrafoResultDataSelector';
 
 describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => {
@@ -28,6 +30,30 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
     const result = getTrafoParams(state);
     expect(result).toEqual(expected);
   });
+  it('getTrafoDifference', () => {
+    const state = {
+      trafoResultDifference: {
+        difference: [
+          {
+            vx: 0.15,
+            vy: 0.21,
+            vz: 0.11,
+            v: 0.16
+          }
+        ]
+      }
+    };
+    const expected = [
+      {
+        vx: 0.15,
+        vy: 0.21,
+        vz: 0.11,
+        v: 0.16
+      }
+    ];
+    const result = getTrafoDifference(state);
+    expect(result).toEqual(expected);
+  });
   it('getIsCalculating', () => {
     const state = {
       calculationStatus: {
@@ -36,6 +62,88 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
     }
     const expected = false;
     const result = getIsCalculating(state);
+    expect(result).toEqual(expected);
+  });
+  it('getTransformedStartPoints', () => {
+    const state = {
+      trafoResultDifference: {
+        difference: [
+          {
+            vx: 0.15,
+            vy: 0.21,
+            vz: 0.11,
+            v: 0.16
+          }, {
+            vx: 0.15,
+            vy: 0.21,
+            vz: 0.11,
+            v: 0.16
+          }
+        ]
+      },
+      trafoDataInput: {
+        targetSystemPoints: [
+          {
+            x: 1.0,
+            y: 2.0,
+            z: 3.0,
+            useX: true,
+            useY: true,
+            useZ: true,
+          },
+          {
+            x: 6.0,
+            y: 8.0,
+            z: 5.0,
+            useX: true,
+            useY: true,
+            useZ: true,
+          }
+        ]
+      }
+    };
+    const expected = [
+      {
+        x: 1.15,
+        y: 2.21,
+        z: 3.11,
+      }, {
+        x: 6.15,
+        y: 8.21,
+        z: 5.11,
+      }, 
+    ];
+    const result = getTransformedStartPoints(state);
+    expect(result).toEqual(expected);
+  });
+  it('getTransformedStartPoints', () => {
+    const state = {
+      trafoResultDifference: {
+        difference: []
+      },
+      trafoDataInput: {
+        targetSystemPoints: [
+          {
+            x: 1.0,
+            y: 2.0,
+            z: 3.0,
+            useX: true,
+            useY: true,
+            useZ: true,
+          },
+          {
+            x: 6.0,
+            y: 8.0,
+            z: 5.0,
+            useX: true,
+            useY: true,
+            useZ: true,
+          }
+        ]
+      }
+    };
+    const expected = [];
+    const result = getTransformedStartPoints(state);
     expect(result).toEqual(expected);
   });
 });

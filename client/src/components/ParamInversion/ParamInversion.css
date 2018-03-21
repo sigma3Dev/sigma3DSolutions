@@ -1,0 +1,72 @@
+.param-inversion {
+  width: 72%;
+  height: 100%;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 12px;
+  font-family: Roboto;
+}
+
+.param-inversion * {
+  text-align: center;
+}
+
+.param-inversion h1 {
+  font-size: 3.0em;
+  border-bottom: 3px solid darkgreen;
+  padding-bottom: 5px;
+  margin: 30px 0 60px;
+}
+
+.param-inversion .paste-box {
+  font-size: 1.3em;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.param-inversion .paste-box label {
+  width: 80%;
+}
+
+.param-inversion .paste-box input {
+  width: 75%;
+}
+
+.param-inversion .input-display {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3em;
+}
+
+.param-inversion input {
+  margin-left: 10px;
+}
+
+.param-inversion form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.param-inversion textarea {
+  width: 40%;
+  font-size: 1.4em;
+}
+
+.param-inversion .param-submit-btn {
+  width: 70%;
+  margin-top: 20px;
+  padding: 10px 0;
+  border: 3px #252 solid;
+  border-radius: 3px;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+.param-inversion .param-submit-btn:focus {
+  outline: 0;
+}

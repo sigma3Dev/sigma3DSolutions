@@ -3,8 +3,10 @@ import calculationStatusReducer from './calculationStatusReducer/calculationStat
 import chebyshevCircleFitDataInputReducer from './chebyshevCircleFitDataInputReducer/chebyshevCircleFitDataInputReducer';
 import chebyshevCircleFitResultReducer from './chebyshevCircleFitResultReducer/chebyshevCircleFitResultReducer';
 import errorReducer from './errorReducer/errorReducer';
+import paramInversionReducer from './paramInversionReducer/paramInversionReducer';
 import trafoDataInputReducer from './trafoDataInputReducer/trafoDataInputReducer';
 import trafoResultReducer from './trafoResultReducer/trafoResultReducer';
+import trafoResultDifferenceReducer from './trafoResultDifferenceReducer/trafoResultDifferenceReducer';
 
 /* root reducer */
 export default combineReducers({
@@ -12,6 +14,8 @@ export default combineReducers({
   chebyshevCircleFitDataInput: chebyshevCircleFitDataInputReducer,
   chebyshevCircleFitResult: chebyshevCircleFitResultReducer,
   error: errorReducer,
+  paramInversion: paramInversionReducer,
   trafoDataInput: trafoDataInputReducer,
   trafoResult: trafoResultReducer,
+  trafoResultDifference: trafoResultDifferenceReducer,
 });
