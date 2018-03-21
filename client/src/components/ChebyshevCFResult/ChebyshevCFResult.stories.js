@@ -9,7 +9,7 @@ import { withInfo } from '@storybook/addon-info';
 
 const StoryRouter = require('storybook-router');
 
-const chebyshevParams = [0.00, 0.00, 0.00, 0.00000, 0.0000, 1.0000, 1.0, 0.0, 0.0];
+const chebyshevParams = [0.00.toFixed(2), 0.00.toFixed(2), 0.00.toFixed(2), 0.00000.toFixed(6), 0.0000.toFixed(6), 1.0000.toFixed(6), 1.0.toFixed(2), 0.0.toFixed(2), 0.0.toFixed(2)];
 
 
 const stories = storiesOf('Start.ChebyshevCFResult', module);

@@ -10,6 +10,27 @@
   font-family: Roboto;
 }
 
+.cheby-cf-result-presentation {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+
+.cheby-cf-back-button {
+  position: fixed;
+  bottom: 24px;
+  left: 250px;
+}
+
+.cheby-cf-radius-text {
+  color: #18748E;
+  color: #0D731D;
+}
+
+.cheby-cf-chebyDist-text {
+  color: #03C4F9;
+}
+
 .chebyshev-circle-fit-result h1 {
   font-size: 3.0em;
   border-bottom: 3px solid darkgreen;
@@ -27,7 +48,8 @@
 }
 
 .chebyshev-circle-fit-result .result-table th {
-  padding: 20px 0;
+  padding: 12px 15px;
+  padding-right: 50px;
 }
 
 .chebyshev-circle-fit-result .result-table .caption {

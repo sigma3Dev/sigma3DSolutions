@@ -26,8 +26,8 @@ class App extends Component {
           <Route path='/transformations/three-d-transformation/data-input' component={ThreeDTrafoInputContainer} />
           <Route path='/transformations/three-d-transformation/result' component={ThreeDTrafoResultContainer} />
           <Route exact path='/geometry' component={GeometryScreenContainer} />
-          <Route path='/geometry/chebyshev-circle-fit/data-input' component={ChebyshevCFInputContainer} />
-          <Route path='/geometry/chebyshev-circle-fit/result' component={ChebyshevCFResultContainer} />
+          <Route exact path='/geometry/chebyshev-circle-fit/data-input' component={ChebyshevCFInputContainer} />
+          <Route exact path='/geometry/chebyshev-circle-fit/result' component={ChebyshevCFResultContainer} />
           <Redirect from='*' to='/' />
         </Switch>
       </div>

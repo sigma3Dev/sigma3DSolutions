@@ -40,7 +40,7 @@ class ChebyshevCFResultContainer extends Component {
    */
   goBack = () => {
     this.props.onRemoveError();
-    this.props.history.push('/chebyshev-circle-fit/data-input');
+    this.props.history.push('/geometry/chebyshev-circle-fit/data-input');
   }
 
   render() {

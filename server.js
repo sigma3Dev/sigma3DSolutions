@@ -90,6 +90,30 @@ app.post('/param-inversion', function(req, res) {
   socket.send(JSON.stringify(obj));
 });
 
+app.post('/calculate-chebyshev-circle-fit', function(req, res) {
+  const chebyshevCircleFitPoints = req.body.coords.chebyshevCircleFitDataInput.circlePoints;
+  let obj = {
+    "jsonrpc": "2.0",
+    "method": "fitCircle3DTscheby",
+    "params": {
+      "observations": chebyshevCircleFitPoints,
+    },
+    "id": 1
+  };
+
+  socket.onerror = error => {
+    console.log("WebSocket Error: " + error);
+    res.send(error);
+  }
+
+  socket.onmessage = e => {
+    const response = e.data;
+    res.status(200).send(response);
+  }
+
+  socket.send(JSON.stringify(obj));
+});
+
 app.listen(app.get("port"), () => {
   console.log("Server is running...");
 });
