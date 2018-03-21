@@ -19,6 +19,7 @@ import { removeError }      from '../actions/errorHandling/errorHandlingActions'
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
 import ThreeDTrafoResult    from '../components/ThreeDTrafoResult/ThreeDTrafoResult';
+import fileSaver from 'file-saver';
 
 const mapDispatchToProps = dispatch => ({
   onRemoveError: () => dispatch(removeError()),
@@ -51,6 +52,7 @@ class ThreeDTrafoResultContainer extends Component {
   constructor(props) {
     super(props);
     this.goBack = this.goBack.bind(this);
+    this.downloadFile = this.downloadFile.bind(this);
   }
   
   /**
@@ -79,6 +81,31 @@ class ThreeDTrafoResultContainer extends Component {
     this.props.history.push('/transformations/three-d-transformation/data-input');
   }
 
+  downloadFile = () => {
+    const fileName = prompt("Please enter a file name: ");
+    const coords = this.props.transformedStartPoints;
+    let coordsAsText = "";
+    // build string out of transformedStartPoints array
+    coords.map(function(coord, i) {
+      if (i < coords.length - 1) {
+        coordsAsText += 
+          coord[0].toFixed(2) + " " +  
+          coord[1].toFixed(2) + " " +  
+          coord[2].toFixed(2) + `\r\n`;
+      } else if (i === coords.length - 1) {
+        coordsAsText += 
+          coord[0].toFixed(2) + " " +  
+          coord[1].toFixed(2) + " " +  
+          coord[2].toFixed(2);
+      }
+      return false;
+    });
+    // turns string into blob and then into .txt
+    const blobVar = new Blob([coordsAsText], {type: "text/plain;charset=utf-8"});
+    console.log(fileSaver);
+    fileSaver(blobVar, fileName + ".txt");
+  }
+
   render() {
     if (this.props.isCalculating) {
       return (
@@ -95,6 +122,7 @@ class ThreeDTrafoResultContainer extends Component {
             trafoParams={ this.props.trafoParams }
             trafoDifference={ this.props.trafoDifference }
             handleClick={this.goBack}
+            handleDownloadClick={this.downloadFile}
           />
         </div>
       );

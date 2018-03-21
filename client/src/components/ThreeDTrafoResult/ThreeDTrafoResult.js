@@ -21,6 +21,7 @@ const ThreeDTrafoResult = ({
   trafoParams,
   trafoDifference,
   handleClick,
+  handleDownloadClick,
 }) => {
   const copyText = trafoParams.join(" ");
   return (
@@ -77,6 +78,7 @@ const ThreeDTrafoResult = ({
           </tr>
         </tbody>
       </table>
+      <div className="download-link" onClick={handleDownloadClick}>Download transformed start points as .txt file</div>
       <div className="bar-graph">
         <CoordinateDifferenceBarGraph values={trafoDifference} />
       </div>
