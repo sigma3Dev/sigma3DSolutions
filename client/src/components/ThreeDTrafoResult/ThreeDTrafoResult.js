@@ -20,8 +20,6 @@ const ClipboardIcon = React.createElement(GoClippy, null);
 const ThreeDTrafoResult = ({
   trafoParams,
   trafoDifference,
-  error,
-  isCalculating,
   handleClick,
 }) => {
   const copyText = trafoParams.join(" ");

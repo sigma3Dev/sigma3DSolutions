@@ -1,4 +1,5 @@
 import { createSelector } from 'reselect';
+import { getTargetSystemPoints } from '../getTrafoInputDataSelector/getTrafoInputDataSelector';
 
 const getTrafoParamsSelector = state => state.trafoResult;
 const getTrafoDifferenceSelector = state => state.trafoResultDifference.difference;
@@ -18,8 +19,21 @@ export const getTrafoParams = createSelector(
 
 export const getTrafoDifference = createSelector(
   getTrafoDifferenceSelector, difference => difference
-)
+);
 
 export const getIsCalculating = createSelector(
   getIsCalculatingSelector, isCalculating => isCalculating
+);
+
+export const getTransformedStartPoints = createSelector(
+  getTrafoDifference, getTargetSystemPoints, (difference, targetPoints) => {
+    if (difference.length === 0) return [];
+    return (
+      targetPoints.map((point, i) => ({
+        x: point.x + difference[i].vx,
+        y: point.y + difference[i].vy,
+        z: point.z + difference[i].vz,
+      }))
+    )
+  }
 );

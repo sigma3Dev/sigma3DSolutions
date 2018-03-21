@@ -1,6 +1,6 @@
 .three-d-trafo-result {
   width: 82%;
-  height: 80vh;
+  height: 90vh;
   margin-left: 240px;
   display: flex;
   flex-direction: column;
@@ -45,6 +45,6 @@
 }
 
 .three-d-trafo-result .bar-graph {
-  width: 800px;
-  height: 260px;
+  width: 80%;
+  height: 50vh;
 }

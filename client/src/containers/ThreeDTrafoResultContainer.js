@@ -5,6 +5,7 @@ import {
   getTrafoParams,
   getTrafoDifference,
   getIsCalculating, 
+  getTransformedStartPoints,
 }                           from '../selectors/TrafoSelectors/getTrafoResultDataSelector/getTrafoResultDataSelector';
 import { 
   getStartSystemPoints,
@@ -25,6 +26,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = (state, props) => ({
+  transformedStartPoints: getTransformedStartPoints(state),
   startSystemPoints: getStartSystemPoints(state),
   targetSystemPoints: getTargetSystemPoints(state),
   listOfUsedCoords: getListOfUsedCoords(state),
