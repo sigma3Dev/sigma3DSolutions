@@ -6,6 +6,7 @@ import errorReducer from './errorReducer/errorReducer';
 import paramInversionReducer from './paramInversionReducer/paramInversionReducer';
 import trafoDataInputReducer from './trafoDataInputReducer/trafoDataInputReducer';
 import trafoResultReducer from './trafoResultReducer/trafoResultReducer';
+import trafoResultDifferenceReducer from './trafoResultDifferenceReducer/trafoResultDifferenceReducer';
 
 /* root reducer */
 export default combineReducers({
@@ -16,4 +17,5 @@ export default combineReducers({
   paramInversion: paramInversionReducer,
   trafoDataInput: trafoDataInputReducer,
   trafoResult: trafoResultReducer,
+  trafoResultDifference: trafoResultDifferenceReducer,
 });

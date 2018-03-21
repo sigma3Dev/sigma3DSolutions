@@ -22,12 +22,19 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={StartScreenContainer} />
           <Route exact path='/transformations' component={TransformationsScreenContainer} />
+<<<<<<< Temporary merge branch 1
+          <Route path='/transformations/three-d-transformation/data-input' component={ThreeDTrafoInputContainer} />
+          <Route path='/transformations/three-d-transformation/result' component={ThreeDTrafoResultContainer} />
+          <Route exact path='/geometry' component={GeometryScreenContainer} />
+          <Route path='/geometry/chebyshev-circle-fit/data-input' component={ChebyshevCFInputContainer} />
+          <Route path='/geometry/chebyshev-circle-fit/result' component={ChebyshevCFResultContainer} />
+=======
           <Route exact path='/transformations/parameter-inversion' component={ParamInversionContainer} />
           <Route path='/transformations/three-d-transformation/data-input' component={ThreeDTrafoInputContainer} />
           <Route path='/transformations/three-d-transformation/result' component={ThreeDTrafoResultContainer} />
           <Route exact path='/geometry' component={GeometryScreenContainer} />
           <Route exact path='/geometry/chebyshev-circle-fit/data-input' component={ChebyshevCFInputContainer} />
-          <Route exact path='/geometry/chebyshev-circle-fit/result' component={ChebyshevCFResultContainer} />
+>>>>>>> Temporary merge branch 2
           <Redirect from='*' to='/' />
         </Switch>
       </div>
