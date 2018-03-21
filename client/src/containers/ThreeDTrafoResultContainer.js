@@ -50,11 +50,13 @@ class ThreeDTrafoResultContainer extends Component {
   }
   
   /**
-   * runs calculateDifference when the page is first loaded
+   * runs calculateDifference when the page is first loaded and when trafoParams are updated
+   * @param {Object} prevProps - previous Props
+   * @param {Object} prevState - previous State
    * @memberof ThreeDTrafoResultContainer
    */
   componentDidUpdate = (prevProps, prevState) => {
-    if (prevProps.trafoDifference.length === 0) {
+    if (prevProps.trafoDifference.length === 0 || prevProps.trafoParams !== this.props.trafoParams) {
       const startPoints = this.props.startSystemPoints;
       const targetPoints = this.props.targetSystemPoints;
       let trafoParams = this.props.trafoParams;

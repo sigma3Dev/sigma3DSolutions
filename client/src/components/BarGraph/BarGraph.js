@@ -30,7 +30,7 @@ const BarGraph = ({
           maintainAspectRatio: false,
           title: {
             display: true,
-            text: "Deviations: ",
+            text: 'Deviation: ',
             fontSize: 17,
             fontFamily: 'Arial',
             lineHeight: 1.4,

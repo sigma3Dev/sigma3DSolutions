@@ -100,7 +100,7 @@ const ThreeDTrafoResult = ({
             </tr>
           </tbody>
         </table>
-        <BarGraph values={trafoDifference} className="bar-graph" />
+        <BarGraph values={trafoDifference} width={1000}className="bar-graph" />
         <BackToInputBtn handleClick={ handleClick } />
         <Sidebar />
       </div>
