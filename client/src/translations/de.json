@@ -14,6 +14,7 @@
     "InfoModal.label.noStartSystemPoints": "Bitte Startsystempunkte importieren!",
     "InfoModal.label.noTargetSystemPoints": "Bitte Zielsystempunkte importieren!",
     "InfoModal.label.startAndTargetDifferentLengths": "Start- und Zielsystem haben unterschiedliche Länge!",
+    "LoadingScreen.label.calculating": "Rechne...",
     "ParamInversion.caption.paramInversionHeader": "Parameterinversion",
     "PointsInput.label.inputTxtFile": ".txt Datei hier ablegen",
     "PointsInputTable.label.useX": "nutze x",
@@ -32,6 +33,5 @@
     "ThreeDTrafoInput.label.startSystemPointsCaption": "Startsystempunkte:",
     "ThreeDTrafoInput.label.targetSystemPointsCaption": "Zielsystempunkte:",
     "ThreeDTrafoInputContainer.panel.infoPanelText": "Das Input sollte eine einfache .txt Datei sein.\n\nDie Datei sollte aus einem oder mehreren Punkten bestehen, jeder davon in einer Zeile. Jeder dieser Punkte sollte aus drei Koordinaten bestehen: x, y und z. Diese sollten einfache Zahlen sein.\n\nBeispiel:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
-    "ThreeDTrafoResult.label.calculating": "Rechne...",
     "ThreeDTrafoResult.label.caption": "Transformationsparameter"
 }

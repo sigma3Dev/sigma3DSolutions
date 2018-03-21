@@ -11,7 +11,7 @@ stories.addDecorator((story, context) => withInfo('common info')(story)(context)
 stories.addDecorator(withKnobs);
 
 stories
-  .add('Bar graph to display difference between calculated and measured points, 2 points', () => {
+  .add('Bar graph to display difference between calculated and measured points, 2 points - DontTest', () => {
     const values = [
       {
         "vx": number('vx', 1.0204),
@@ -33,7 +33,7 @@ stories
   })
 
 stories
-  .add('Bar graph wrapped in div (400px x 400px)', () => {
+  .add('Bar graph wrapped in div (400px x 400px) - DontTest', () => {
     const values2 = [
       {
         "vx": number('vx', 1.0204),
@@ -56,7 +56,7 @@ stories
   })
 
 stories
-  .add('Bar graph to display difference between calculated and measured points, 100 points', () => {
+  .add('Bar graph to display difference between calculated and measured points, 100 points - DontTest', () => {
     const values100 = [
       {
         "vx": 1.0204,

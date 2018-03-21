@@ -2,9 +2,6 @@ import ThreeDTrafoResult from './ThreeDTrafoResult';
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 const StoryRouter = require('storybook-router');
@@ -30,7 +27,7 @@ stories.addDecorator((story, context) => withInfo('common info')(story)(context)
 stories.addDecorator(StoryRouter.default());
 
 stories
-  .add('Table to display the result of the calculated transformation', () => (
+  .add('Table to display the result of the calculated transformation - DontTest', () => (
     <ThreeDTrafoResult
       trafoParams={trafoParams}
       trafoDifference={trafoDifference}

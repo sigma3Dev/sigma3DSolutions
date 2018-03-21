@@ -13,7 +13,7 @@ const LoadingScreen = () => {
       <div className="loading-screen-display">
         <h1>
           <FormattedMessage
-            id="ThreeDTrafoResult.label.calculating"
+            id="LoadingScreen.label.calculating"
             defaultMessage="Calculating..."
           />
         </h1>

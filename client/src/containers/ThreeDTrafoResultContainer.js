@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { FormattedMessage } from 'react-intl';
 import { connect }          from 'react-redux';
 import { getError }         from '../selectors/ErrorSelectors/getErrorSelector';
 import { 
@@ -93,6 +92,7 @@ class ThreeDTrafoResultContainer extends Component {
           <ThreeDTrafoResult
             trafoParams={ this.props.trafoParams }
             trafoDifference={ this.props.trafoDifference }
+            handleClick={this.goBack}
           />
         </div>
       );
