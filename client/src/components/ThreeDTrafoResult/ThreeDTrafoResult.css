@@ -1,6 +1,6 @@
 .three-d-trafo-result {
-  width: 83%;
-  height: 500px;
+  width: 82%;
+  height: 90vh;
   margin-left: 240px;
   display: flex;
   flex-direction: column;
@@ -13,6 +13,7 @@
 .three-d-trafo-result h1 {
   font-size: 3.0em;
   border-bottom: 3px solid darkgreen;
+  margin-bottom: 20px;
 }
 
 .three-d-trafo-result .result-table {
@@ -23,6 +24,7 @@
 
 .three-d-trafo-result .result-table * {
   font-size: 1.10em;
+  text-align: center;
 }
 
 .three-d-trafo-result .result-table th {
@@ -31,12 +33,6 @@
 
 .three-d-trafo-result .result-table .caption {
   background-color: #d5d5d5;
-}
-
-.three-d-trafo-result .fa-spinner {
-  font-size: 5em;
-  color: #292929;
-  animation: spin 2000ms infinite linear;
 }
 
 .three-d-trafo-result .copy {
@@ -48,11 +44,7 @@
   cursor: pointer;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
+.three-d-trafo-result .bar-graph {
+  width: 80%;
+  height: 50vh;
 }

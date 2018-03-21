@@ -16,8 +16,8 @@ const buttons = [
     link: '/transformations/three-d-transformation/data-input'
   },
   {
-    type: "eulerQuat",
-    link: '/transformations/three-d-transformation/data-input'
+    type: "paramInversion",
+    link: '/transformations/parameter-inversion'
   } 
 ];
 

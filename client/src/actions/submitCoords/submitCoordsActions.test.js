@@ -12,7 +12,14 @@ import {
   SUBMIT_COORDS_SUCCESS,
   submitCoordsSuccess,
   SUBMIT_COORDS_FAILURE,
-  submitCoordsFailure
+  submitCoordsFailure,
+  calculateTrafoDifference,
+  CALCULATE_TRAFO_DIFFERENCE_REQUEST,
+  calculateTrafoDifferenceRequest,
+  CALCULATE_TRAFO_DIFFERENCE_SUCCESS,
+  calculateTrafoDifferenceSuccess,
+  CALCULATE_TRAFO_DIFFERENCE_FAILURE,
+  calculateTrafoDifferenceFailure,
 } from './submitCoordsActions';
 
 const middlewares = [thunk];
@@ -117,6 +124,95 @@ describe('submitCoordsActions', () => {
       );
       expect(store.getActions()[1].type).toEqual(
         SUBMIT_COORDS_FAILURE
+      );
+    });
+  });
+  it('should create a CALCULATE_TRAFO_DIFFERENCE_REQUEST action', () => {
+    const expected = {
+      type: CALCULATE_TRAFO_DIFFERENCE_REQUEST
+    };
+    const result = calculateTrafoDifferenceRequest();
+    expect(result.type).toEqual(expected.type);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a CALCULATE_TRAFO_DIFFERENCE_SUCCESS action', () => {
+    const response = {
+      data: [
+        {
+          vx: 0.14,
+          vy: 0.77,
+          vz: 0.2,
+          v: 1.09,
+        }
+      ]
+    };
+    const expected = {
+      type: CALCULATE_TRAFO_DIFFERENCE_SUCCESS,
+      response: response
+    };
+    const result = calculateTrafoDifferenceSuccess(response);
+    expect(result.type).toEqual(expected.type);
+    expect(result.response).toEqual(expected.response);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a CALCULATE_TRAFO_DIFFERENCE_FAILURE action', () => {
+    const error = "Error while trying to fit.";
+    const expected = {
+      type: CALCULATE_TRAFO_DIFFERENCE_FAILURE,
+      error: error
+    };
+    const result = calculateTrafoDifferenceFailure(error);
+    expect(result.type).toEqual(expected.type);
+    expect(result.error).toEqual(expected.error);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should dispatch a CALCULATE_TRAFO_DIFFERENCE_REQUEST and a CALCULATE_TRAFO_DIFFERENCE_SUCCESS action', () => {
+    const store = mockStore({});
+    const expResponse = [
+      {
+        vx: 0.06,
+        vy: 0.13,
+        vz: 0.44,
+        v: 0.35
+      }, {
+        vx: 0.81,
+        vy: 0.26,
+        vz: 0.11,
+        v: 0.59
+      }
+    ]; 
+    const mock = new MockAdapter(axios);
+    mock.onPost('/calculate-trafo-difference').reply(200, expResponse);
+    return store.dispatch(calculateTrafoDifference()).then(() => {
+      // return of async actions
+      expect(store.getActions().length).toEqual(2);
+      expect(store.getActions()[0].type).toEqual(
+        CALCULATE_TRAFO_DIFFERENCE_REQUEST
+      );
+      expect(store.getActions()[1].type).toEqual(
+        CALCULATE_TRAFO_DIFFERENCE_SUCCESS
+      );
+    });
+  });
+  it('should dispatch a CALCULATE_TRAFO_DIFFERENCE_REQUEST and a CALCULATE_TRAFO_DIFFERENCE_FAILURE action', () => {
+    const store = mockStore({});
+    const error = {
+      data: {
+        error: {
+          message: "Error while trying to fit."
+        }
+      }
+    }
+    const mock = new MockAdapter(axios);
+    mock.onPost('/calculate-trafo-difference').reply(500, error );
+    return store.dispatch(calculateTrafoDifference()).then(() => {
+      // return of async actions
+      expect(store.getActions().length).toEqual(2);
+      expect(store.getActions()[0].type).toEqual(
+        CALCULATE_TRAFO_DIFFERENCE_REQUEST
+      );
+      expect(store.getActions()[1].type).toEqual(
+        CALCULATE_TRAFO_DIFFERENCE_FAILURE
       );
     });
   });
