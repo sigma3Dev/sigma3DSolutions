@@ -74,6 +74,13 @@ const ChebyshevCFResult = ({
                       defaultMessage="Value"
                     />
                   </th>
+                  <th className="copy-to-clippi">
+                    <CopyToClipboard text={ copyText }>
+                      <button className="copy" title="Copy to clipboard">
+                        { ClipboardIcon }
+                      </button>
+                    </CopyToClipboard>
+                  </th>  
                 </tr>
               </thead>
               <tbody>
@@ -144,16 +151,6 @@ const ChebyshevCFResult = ({
                   </th>
                   <th>
                     { chebyshevParams[8] }
-                  </th>
-                </tr>
-                <tr>
-                  <th></th>  
-                  <th>
-                    <CopyToClipboard text={ copyText }>
-                      <button className="copy" title="Copy to clipboard">
-                        { ClipboardIcon }
-                      </button>
-                    </CopyToClipboard>
                   </th>
                 </tr>
               </tbody>

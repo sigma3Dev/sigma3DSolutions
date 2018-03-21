@@ -19,7 +19,7 @@
     "ChebyshevCFResult.label.caption": "Tschebyscheff Kreisausgleichungsparameter",
     "ChebyshevCFResult.table.chebyshevDist": "Tschebyscheff Distanz:",
     "ChebyshevCFResult.table.parameter": "Parameter",
-    "ChebyshevCFResult.table.radius": "Radius",
+    "ChebyshevCFResult.table.radius": "Radius:",
     "ChebyshevCFResult.table.Stdev": "Fehlerwert:",
     "ChebyshevCFResult.table.value": "Wert",
     "ParamInversion.caption.paramInversionHeader": "Parameterinversion",

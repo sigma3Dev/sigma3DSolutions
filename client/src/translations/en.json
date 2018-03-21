@@ -11,7 +11,7 @@
   "ChebyshevCFResult.label.caption": "Chebyshev Circle Fit Parameters",
   "ChebyshevCFResult.table.chebyshevDist": "Chebyshev Distance:",
   "ChebyshevCFResult.table.parameter": "Parameter",
-  "ChebyshevCFResult.table.radius": "Radius",
+  "ChebyshevCFResult.table.radius": "Radius:",
   "ChebyshevCFResult.table.Stdev": "Error value:",
   "ChebyshevCFResult.table.value": "Value",
   "ErrorScreen.label.error": "Error!",
