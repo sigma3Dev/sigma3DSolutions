@@ -1,11 +1,11 @@
-import { CALCULATE_DIFFERENCE_SUCCESS } from '../../actions/submitCoords/submitCoordsActions';
+import { CALCULATE_TRAFO_DIFFERENCE_SUCCESS } from '../../actions/submitCoords/submitCoordsActions';
 import trafoResultDifferenceReducer from './trafoResultDifferenceReducer';
 
 describe('trafoResultDifferenceReducer', () => {
-  it('should handle CALCULATE_DIFFERENCE_SUCCESS', () => {
+  it('should handle CALCULATE_TRAFO_DIFFERENCE_SUCCESS', () => {
     const state = [];
     const action = {
-      type: CALCULATE_DIFFERENCE_SUCCESS,
+      type: CALCULATE_TRAFO_DIFFERENCE_SUCCESS,
       response: {
         data: [
           {

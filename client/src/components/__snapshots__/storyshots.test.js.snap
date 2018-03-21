@@ -2103,7 +2103,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
       </a>
       <a
         className="btn-link"
-        href="/transformations/three-d-transformation/data-input"
+        href="/transformations/parameter-inversion"
         onClick={[Function]}
       >
         <div
@@ -2113,18 +2113,18 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
             className="app-selection-btn-caption"
           >
             <span>
-              caption
+              Parameterinversion
             </span>
           </div>
           <div
             className="s3d-icon"
-            data-category="eulerQuat"
+            data-category="paramInversion"
           />
           <div
             className="app-selection-btn-description"
           >
             <span>
-              description
+              7 Parameter
             </span>
           </div>
         </div>
@@ -2421,7 +2421,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
                                 }
                               >
                                 "
-                                eulerQuat
+                                paramInversion
                                 "
                               </span>
                               , 
@@ -2444,7 +2444,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
                                 }
                               >
                                 "
-                                /transformations/three-d-transformation/data-input
+                                /transformations/parameter-inversion
                                 "
                               </span>
                               }

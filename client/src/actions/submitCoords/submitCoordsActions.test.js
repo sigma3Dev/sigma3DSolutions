@@ -13,13 +13,13 @@ import {
   submitCoordsSuccess,
   SUBMIT_COORDS_FAILURE,
   submitCoordsFailure,
-  calculateDifference,
-  CALCULATE_DIFFERENCE_REQUEST,
-  calculateDifferenceRequest,
-  CALCULATE_DIFFERENCE_SUCCESS,
-  calculateDifferenceSuccess,
-  CALCULATE_DIFFERENCE_FAILURE,
-  calculateDifferenceFailure,
+  calculateTrafoDifference,
+  CALCULATE_TRAFO_DIFFERENCE_REQUEST,
+  calculateTrafoDifferenceRequest,
+  CALCULATE_TRAFO_DIFFERENCE_SUCCESS,
+  calculateTrafoDifferenceSuccess,
+  CALCULATE_TRAFO_DIFFERENCE_FAILURE,
+  calculateTrafoDifferenceFailure,
 } from './submitCoordsActions';
 
 const middlewares = [thunk];
@@ -127,15 +127,15 @@ describe('submitCoordsActions', () => {
       );
     });
   });
-  it('should create a CALCULATE_DIFFERENCE_REQUEST action', () => {
+  it('should create a CALCULATE_TRAFO_DIFFERENCE_REQUEST action', () => {
     const expected = {
-      type: CALCULATE_DIFFERENCE_REQUEST
+      type: CALCULATE_TRAFO_DIFFERENCE_REQUEST
     };
-    const result = calculateDifferenceRequest();
+    const result = calculateTrafoDifferenceRequest();
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should create a CALCULATE_DIFFERENCE_SUCCESS action', () => {
+  it('should create a CALCULATE_TRAFO_DIFFERENCE_SUCCESS action', () => {
     const response = {
       data: [
         {
@@ -147,26 +147,26 @@ describe('submitCoordsActions', () => {
       ]
     };
     const expected = {
-      type: CALCULATE_DIFFERENCE_SUCCESS,
+      type: CALCULATE_TRAFO_DIFFERENCE_SUCCESS,
       response: response
     };
-    const result = calculateDifferenceSuccess(response);
+    const result = calculateTrafoDifferenceSuccess(response);
     expect(result.type).toEqual(expected.type);
     expect(result.response).toEqual(expected.response);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should create a CALCULATE_DIFFERENCE_FAILURE action', () => {
+  it('should create a CALCULATE_TRAFO_DIFFERENCE_FAILURE action', () => {
     const error = "Error while trying to fit.";
     const expected = {
-      type: CALCULATE_DIFFERENCE_FAILURE,
+      type: CALCULATE_TRAFO_DIFFERENCE_FAILURE,
       error: error
     };
-    const result = calculateDifferenceFailure(error);
+    const result = calculateTrafoDifferenceFailure(error);
     expect(result.type).toEqual(expected.type);
     expect(result.error).toEqual(expected.error);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should dispatch a CALCULATE_DIFFERENCE_REQUEST and a CALCULATE_DIFFERENCE_SUCCESS action', () => {
+  it('should dispatch a CALCULATE_TRAFO_DIFFERENCE_REQUEST and a CALCULATE_TRAFO_DIFFERENCE_SUCCESS action', () => {
     const store = mockStore({});
     const expResponse = [
       {
@@ -183,18 +183,18 @@ describe('submitCoordsActions', () => {
     ]; 
     const mock = new MockAdapter(axios);
     mock.onPost('/calculate-trafo-difference').reply(200, expResponse);
-    return store.dispatch(calculateDifference()).then(() => {
+    return store.dispatch(calculateTrafoDifference()).then(() => {
       // return of async actions
       expect(store.getActions().length).toEqual(2);
       expect(store.getActions()[0].type).toEqual(
-        CALCULATE_DIFFERENCE_REQUEST
+        CALCULATE_TRAFO_DIFFERENCE_REQUEST
       );
       expect(store.getActions()[1].type).toEqual(
-        CALCULATE_DIFFERENCE_SUCCESS
+        CALCULATE_TRAFO_DIFFERENCE_SUCCESS
       );
     });
   });
-  it('should dispatch a CALCULATE_DIFFERENCE_REQUEST and a CALCULATE_DIFFERENCE_FAILURE action', () => {
+  it('should dispatch a CALCULATE_TRAFO_DIFFERENCE_REQUEST and a CALCULATE_TRAFO_DIFFERENCE_FAILURE action', () => {
     const store = mockStore({});
     const error = {
       data: {
@@ -205,14 +205,14 @@ describe('submitCoordsActions', () => {
     }
     const mock = new MockAdapter(axios);
     mock.onPost('/calculate-trafo-difference').reply(500, error );
-    return store.dispatch(calculateDifference()).then(() => {
+    return store.dispatch(calculateTrafoDifference()).then(() => {
       // return of async actions
       expect(store.getActions().length).toEqual(2);
       expect(store.getActions()[0].type).toEqual(
-        CALCULATE_DIFFERENCE_REQUEST
+        CALCULATE_TRAFO_DIFFERENCE_REQUEST
       );
       expect(store.getActions()[1].type).toEqual(
-        CALCULATE_DIFFERENCE_FAILURE
+        CALCULATE_TRAFO_DIFFERENCE_FAILURE
       );
     });
   });

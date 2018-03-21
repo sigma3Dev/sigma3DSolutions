@@ -24,6 +24,7 @@
 
 .three-d-trafo-result .result-table * {
   font-size: 1.10em;
+  text-align: center;
 }
 
 .three-d-trafo-result .result-table th {
@@ -32,12 +33,6 @@
 
 .three-d-trafo-result .result-table .caption {
   background-color: #d5d5d5;
-}
-
-.three-d-trafo-result .fa-spinner {
-  font-size: 5em;
-  color: #292929;
-  animation: spin 2000ms infinite linear;
 }
 
 .three-d-trafo-result .copy {
@@ -52,13 +47,4 @@
 .three-d-trafo-result .bar-graph {
   width: 800px;
   height: 260px;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(359deg);
-  }
 }

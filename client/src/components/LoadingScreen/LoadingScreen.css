@@ -1,0 +1,26 @@
+.loading-screen-display {
+  width: 82%;
+  height: 610px;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 12px;
+  font-family: Roboto;
+}
+
+.loading-screen .fa-spinner {
+  font-size: 8em;
+  color: #515151;
+  animation: spin 2000ms infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
