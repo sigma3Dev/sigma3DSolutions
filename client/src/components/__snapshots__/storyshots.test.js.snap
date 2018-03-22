@@ -416,7 +416,7 @@ exports[`Storyshots Start.BackToInputBtn Button to navigate back to previous dat
   >
     <button
       className="back-to-input-btn"
-      onClick={undefined}
+      onClick={[Function]}
     >
       <div
         className="arrow-left"
@@ -621,7 +621,37 @@ exports[`Storyshots Start.BackToInputBtn Button to navigate back to previous dat
                 &lt;
                 BackToInputBtn
               </span>
-              <span />
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    handleClick
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          handleClick()
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
               <span
                 style={
                   Object {
@@ -706,7 +736,7 @@ exports[`Storyshots Start.BackToInputBtn Button to navigate back to previous dat
                   <td
                     className="css-d52hbj"
                   >
-                    -
+                    yes
                   </td>
                   <td
                     className="css-d52hbj"
@@ -754,10 +784,12 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
       </h1>
       <p
         className="error-message"
-      />
+      >
+        
+      </p>
       <button
         className="back-to-input-btn"
-        onClick={undefined}
+        onClick={[Function]}
       >
         <div
           className="arrow-left"
@@ -993,7 +1025,64 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
                 &lt;
                 ErrorScreen
               </span>
-              <span />
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    error
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#22a",
+                            "wordBreak": "break-word",
+                          }
+                        }
+                      >
+                        "
+                        
+                        "
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    handleClick
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          handleClick()
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
               <span
                 style={
                   Object {
@@ -1078,7 +1167,7 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
                   <td
                     className="css-d52hbj"
                   >
-                    -
+                    yes
                   </td>
                   <td
                     className="css-d52hbj"
@@ -1103,7 +1192,7 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
                   <td
                     className="css-d52hbj"
                   >
-                    -
+                    yes
                   </td>
                   <td
                     className="css-d52hbj"
@@ -1136,7 +1225,7 @@ exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
   >
     <div
       className="info-btn"
-      onClick={undefined}
+      onClick={[Function]}
     >
       <div
         className="info-sign"
@@ -1341,7 +1430,37 @@ exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
                 &lt;
                 InfoBtn
               </span>
-              <span />
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    handleClick
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          handleClick()
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
               <span
                 style={
                   Object {
@@ -1426,7 +1545,7 @@ exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
                   <td
                     className="css-d52hbj"
                   >
-                    -
+                    yes
                   </td>
                   <td
                     className="css-d52hbj"
@@ -1772,7 +1891,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
             <th>
               <button
                 className="trash-icon grey"
-                onClick={undefined}
+                onClick={[Function]}
                 title="Clear input"
               >
                 <svg
@@ -1867,7 +1986,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="x0"
                 name="x0"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -1882,7 +2001,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="y0"
                 name="y0"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -1897,7 +2016,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="z0"
                 name="z0"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -1928,7 +2047,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="x1"
                 name="x1"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -1943,7 +2062,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="y1"
                 name="y1"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -1958,7 +2077,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="z1"
                 name="z1"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -1989,7 +2108,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="x2"
                 name="x2"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -2004,7 +2123,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="y2"
                 name="y2"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -2019,7 +2138,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="z2"
                 name="z2"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -2050,7 +2169,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="x3"
                 name="x3"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -2065,7 +2184,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="y3"
                 name="y3"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -2080,7 +2199,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 defaultChecked={true}
                 id="z3"
                 name="z3"
-                onChange={undefined}
+                onChange={[Function]}
                 type="checkbox"
               />
             </th>
@@ -2269,7 +2388,10 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
               </span>
               <span>
                 <span>
-                   
+                  <span>
+                    <br />
+                      
+                  </span>
                   <span
                     style={Object {}}
                   >
@@ -2561,7 +2683,101 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                       </span>
                     </span>
                   </span>
-                   
+                </span>
+                <span>
+                  <span>
+                    <br />
+                      
+                  </span>
+                  <span
+                    style={Object {}}
+                  >
+                    handleChange
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          handleChange()
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                  <span>
+                    <br />
+                      
+                  </span>
+                  <span
+                    style={Object {}}
+                  >
+                    handleDeleteDataInput
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          handleDeleteDataInput()
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                  <span>
+                    <br />
+                      
+                  </span>
+                  <span
+                    style={Object {}}
+                  >
+                    listOfUsedCoords
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          [
+                          ]
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                  <br />
                 </span>
               </span>
               <span
@@ -2698,7 +2914,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                   <td
                     className="css-d52hbj"
                   >
-                    -
+                    yes
                   </td>
                   <td
                     className="css-d52hbj"
@@ -3897,7 +4113,7 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
   >
     <button
       className="submit-btn"
-      onClick={undefined}
+      onClick={[Function]}
     >
       <span>
         Absenden 
@@ -4105,7 +4321,37 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
                 &lt;
                 SubmitBtn
               </span>
-              <span />
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    handleClick
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          handleClick()
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
               <span
                 style={
                   Object {
@@ -4190,7 +4436,7 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
                   <td
                     className="css-d52hbj"
                   >
-                    -
+                    yes
                   </td>
                   <td
                     className="css-d52hbj"

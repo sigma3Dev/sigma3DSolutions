@@ -13,4 +13,4 @@ stories.addDecorator(withKnobs);
 
 stories
   .add('Button to navigate back to previous data input page', () => (
-    <BackToInputBtn />))
+    <BackToInputBtn handleClick={() => {}} />))

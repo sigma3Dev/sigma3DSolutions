@@ -18,7 +18,7 @@ const BackToInputBtn = ({
 );
 
 BackToInputBtn.propTypes = {
-  handleClick: PropTypes.func,
+  handleClick: PropTypes.func.isRequired,
 }
 
 export default BackToInputBtn;

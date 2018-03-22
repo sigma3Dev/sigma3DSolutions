@@ -13,4 +13,4 @@ stories.addDecorator(withKnobs);
 
 stories
   .add('Button to open data input information', () => (
-    <InfoBtn />))
+    <InfoBtn handleClick={() => {}} />))
