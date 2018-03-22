@@ -7,15 +7,15 @@
   font-size: 1.3em;
   width: 17%;
   color: white;
-  background: #006633;
+  background: #0375ba;
   border-radius: 5px;
-  border: 3px solid #005522;
+  border: 3px solid #058;
 }
 
 .submit-btn:hover {
   cursor: pointer;
-  background: #005533;
-  border: 3px solid #004422;
+  background: #0381bc;
+  border: 3px solid #068;
 }
 
 .submit-btn .arrow-right {
