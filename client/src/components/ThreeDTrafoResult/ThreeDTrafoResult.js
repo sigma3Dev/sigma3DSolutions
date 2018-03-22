@@ -1,9 +1,11 @@
-import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import Sidebar from '../Sidebar/Sidebar';
+import React                        from 'react';
+import { 
+  FormattedMessage,
+}                                   from 'react-intl';
+import { CopyToClipboard }          from 'react-copy-to-clipboard';
+import Sidebar                      from '../Sidebar/Sidebar';
 import CoordinateDifferenceBarGraph from '../CoordinateDifferenceBarGraph/CoordinateDifferenceBarGraph';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import BackToInputBtn               from '../BackToInputBtn/BackToInputBtn';
 import './ThreeDTrafoResult.css';
 
 const GoClippy = require('react-icons/lib/go/clippy');
