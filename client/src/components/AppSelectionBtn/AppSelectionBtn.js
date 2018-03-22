@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import './AppSelectionBtn.css';
 import { Link } from 'react-router-dom';
+import './AppSelectionBtn.css';
 
 /**
  * Button for selecting fitting method
@@ -32,5 +33,10 @@ const AppSelectionBtn = ({
     </div>
   </Link>
 );
+
+AppSelectionBtn.propTypes = {
+  label: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired
+}
 
 export default AppSelectionBtn;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import Sidebar from '../Sidebar/Sidebar';
@@ -28,6 +29,11 @@ const ErrorScreen = ({
       <Sidebar />
     </div>
   );
+}
+
+ErrorScreen.propTypes = {
+  error: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
 }
 
 export default ErrorScreen;

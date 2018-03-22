@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AppSelectionBtn from '../AppSelectionBtn/AppSelectionBtn';
 import Sidebar from '../Sidebar/Sidebar';
 import './SelectAppsScreen.css';
@@ -25,6 +26,10 @@ const SelectAppsScreen = ({
         } 
     </div>
   );
+}
+
+SelectAppsScreen.propTypes = {
+  buttons: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
 }
 
 export default SelectAppsScreen;

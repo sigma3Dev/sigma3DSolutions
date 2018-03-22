@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Modal, Button } from 'react-bootstrap';
 import './InfoModal.css';
 
@@ -22,6 +23,12 @@ const InfoModal = ({
       </Modal.Dialog>
     </div>
   )
+}
+
+InfoModal.propTypes = {
+  header: PropTypes.object.isRequired,
+  body: PropTypes.object.isRequired,
+  handleClick: PropTypes.func.isRequired,
 }
 
 export default InfoModal;

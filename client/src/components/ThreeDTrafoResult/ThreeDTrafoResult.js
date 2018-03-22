@@ -1,4 +1,5 @@
 import React                        from 'react';
+import PropTypes from 'prop-types';
 import { 
   FormattedMessage,
 }                                   from 'react-intl';
@@ -93,6 +94,13 @@ const ThreeDTrafoResult = ({
       <Sidebar />
     </div>
   )
+}
+
+ThreeDTrafoResult.propTypes = {
+  trafoParams: PropTypes.arrayOf(PropTypes.string).isRequired,
+  trafoDifference: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleClick: PropTypes.func.isRequired,
+  handleDownloadClick: PropTypes.func.isRequired,
 }
 
 export default ThreeDTrafoResult;

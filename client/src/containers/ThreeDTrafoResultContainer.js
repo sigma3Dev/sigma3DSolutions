@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes            from 'prop-types';
 import { connect }          from 'react-redux';
 import {
   injectIntl,
@@ -132,6 +133,19 @@ class ThreeDTrafoResultContainer extends Component {
       );
     }  
   }
+}
+
+ThreeDTrafoResultContainer.propTypes = {
+  onRemoveError: PropTypes.func.isRequired,
+  oncalculateTrafoDifference: PropTypes.func.isRequired,
+  transformedStartPoints: PropTypes.array.isRequired,
+  startSystemPoints: PropTypes.array.isRequired,
+  targetSystemPoints: PropTypes.array.isRequired,
+  listOfUsedCoords: PropTypes.array.isRequired,
+  trafoParams: PropTypes.array.isRequired,
+  trafoDifference: PropTypes.array.isRequired,
+  error: PropTypes.string,
+  isCalculating: PropTypes.bool.isRequired,
 }
 
 export default injectIntl(connect(mapStateToProps, mapDispatchToProps)(ThreeDTrafoResultContainer));
