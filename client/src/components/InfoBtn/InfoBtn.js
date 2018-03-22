@@ -19,7 +19,7 @@ const InfoBtn = ({
 );
 
 InfoBtn.propTypes = {
-  handleClick: PropTypes.func.isRequired,
+  handleClick: PropTypes.func,
 }
 
 export default InfoBtn;

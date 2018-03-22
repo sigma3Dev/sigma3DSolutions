@@ -24,7 +24,7 @@ const SubmitBtn = ({
 );
 
 SubmitBtn.propTypes = {
-  handleClick: PropTypes.func.isRequired,
+  handleClick: PropTypes.func,
 }
 
 export default SubmitBtn;

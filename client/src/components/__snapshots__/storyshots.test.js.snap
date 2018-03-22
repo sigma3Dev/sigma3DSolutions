@@ -706,7 +706,7 @@ exports[`Storyshots Start.BackToInputBtn Button to navigate back to previous dat
                   <td
                     className="css-d52hbj"
                   >
-                    yes
+                    -
                   </td>
                   <td
                     className="css-d52hbj"
@@ -1103,7 +1103,7 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
                   <td
                     className="css-d52hbj"
                   >
-                    yes
+                    -
                   </td>
                   <td
                     className="css-d52hbj"
@@ -1426,7 +1426,7 @@ exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
                   <td
                     className="css-d52hbj"
                   >
-                    yes
+                    -
                   </td>
                   <td
                     className="css-d52hbj"
@@ -2698,7 +2698,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                   <td
                     className="css-d52hbj"
                   >
-                    yes
+                    -
                   </td>
                   <td
                     className="css-d52hbj"
@@ -4190,7 +4190,7 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
                   <td
                     className="css-d52hbj"
                   >
-                    yes
+                    -
                   </td>
                   <td
                     className="css-d52hbj"

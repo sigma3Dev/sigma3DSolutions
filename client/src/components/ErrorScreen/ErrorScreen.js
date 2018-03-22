@@ -33,7 +33,7 @@ const ErrorScreen = ({
 
 ErrorScreen.propTypes = {
   error: PropTypes.string,
-  handleClick: PropTypes.func.isRequired,
+  handleClick: PropTypes.func,
 }
 
 export default ErrorScreen;
