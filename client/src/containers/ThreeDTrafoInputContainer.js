@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import PropTypes            from 'prop-types';
+import { connect }          from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { 
   pushStartSystemCoordinates,
   pushTargetSystemCoordinates
-} from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
+}                           from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
 import  {
   checkboxUpdate,
   submitCoords
-} from '../actions/submitCoords/submitCoordsActions';
+}                           from '../actions/submitCoords/submitCoordsActions';
 import {
   clearStartInput,
   clearTargetInput
-} from '../actions/clearInput/clearInputActions';
+}                           from '../actions/clearInput/clearInputActions';
 import { 
   getStartSystemPoints,
   getTargetSystemPoints,
   getListOfUsedCoords
-} from '../selectors/TrafoSelectors/getTrafoInputDataSelector/getTrafoInputDataSelector';
-import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
-import ThreeDTrafoInput from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
-import InfoModal from '../components/InfoModal/InfoModal';
+}                           from '../selectors/TrafoSelectors/getTrafoInputDataSelector/getTrafoInputDataSelector';
+import { getError }         from '../selectors/ErrorSelectors/getErrorSelector';
+import ThreeDTrafoInput     from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
+import InfoModal            from '../components/InfoModal/InfoModal';
 
 const cdi = require('coordinatedataimporter');
 
@@ -222,6 +223,19 @@ class ThreeDTrafoInputContainer extends Component {
       </div>
     )
   }
+}
+
+ThreeDTrafoInputContainer.propTypes = {
+  onPushStartSystemCoordinates: PropTypes.func.isRequired,
+  onPushTargetSystemCoordinates: PropTypes.func.isRequired,
+  onCheckboxUpdate: PropTypes.func.isRequired,
+  onSubmitCoords: PropTypes.func.isRequired,
+  onClearStartInput: PropTypes.func.isRequired,
+  onClearTargetInput: PropTypes.func.isRequired,
+  startSystemPoints: PropTypes.array.isRequired,
+  targetSystemPoints: PropTypes.array.isRequired,
+  listOfUsedCoords: PropTypes.array.isRequired,
+  error: PropTypes.string
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ThreeDTrafoInputContainer);

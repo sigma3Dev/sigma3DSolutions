@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import './AppSelectionBtn.css';
 import { Link } from 'react-router-dom';
+import './AppSelectionBtn.css';
 
 /**
  * Button for selecting fitting method
