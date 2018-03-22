@@ -5,10 +5,9 @@ import './Sidebar.css';
 
 /**
  * sidebar for selecting app category
- * @param {Object} props - Properties passed down from parent element
  * @returns {*} Sidebar - .jsx Element
  */
-const Sidebar = (props) => {
+const Sidebar = () => {
   return (
     <div className="Sidebar">
       <Link to='/'>

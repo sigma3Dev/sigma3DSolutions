@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {FormattedMessage} from 'react-intl';
 import Dropzone from 'react-dropzone';
 import './PointsInput.css';
@@ -31,6 +32,10 @@ const PointsInput = ({
     </div>
   );
 
+}
+
+PointsInput.propTypes = {
+  onDrop: PropTypes.func.isRequired,
 }
 
 export default PointsInput;

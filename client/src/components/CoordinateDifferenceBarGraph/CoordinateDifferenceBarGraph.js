@@ -1,4 +1,5 @@
 import React              from 'react';
+import PropTypes          from 'prop-types';
 import {Bar}              from 'react-chartjs-2';
 import {
   injectIntl,
@@ -85,6 +86,11 @@ const CoordinateDifferenceBarGraph = ({
       }}
     />
   )
+}
+
+CoordinateDifferenceBarGraph.propTypes = {
+  values: PropTypes.arrayOf(PropTypes.object).isRequired,
+  intl: PropTypes.object.isRequired,
 }
 
 export default injectIntl(CoordinateDifferenceBarGraph);

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {FormattedMessage} from 'react-intl';
 import PointsInput from '../PointsInput/PointsInput';
 import PointsInputTable3D6W from '../PointsInputTable3D6W/PointsInputTable3D6W';
@@ -80,6 +81,21 @@ const ThreeDTrafoInput = ({
       </div>
     </div>
   );
+}
+
+ThreeDTrafoInput.propTypes = {
+  onStartFileDrop: PropTypes.func.isRequired,
+  onTargetFileDrop: PropTypes.func.isRequired,
+  startSystemPoints: PropTypes.arrayOf(PropTypes.object).isRequired,
+  targetSystemPoints: PropTypes.arrayOf(PropTypes.object).isRequired,
+  checkboxUpdate: PropTypes.func.isRequired,
+  handleInfoClick: PropTypes.func.isRequired,
+  handleSubmitClick: PropTypes.func.isRequired,
+  handleStartDeleteClick: PropTypes.func.isRequired,
+  handleTargetDeleteClick: PropTypes.func.isRequired,
+  listOfUsedCoords: PropTypes.arrayOf(PropTypes.array).isRequired,
+  isInfoOpen: PropTypes.bool.isRequired,
+  infoPanelText: PropTypes.object.isRequired,
 }
 
 export default ThreeDTrafoInput;

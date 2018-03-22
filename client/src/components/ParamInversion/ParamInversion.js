@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {FormattedMessage} from 'react-intl';
 import Sidebar from '../Sidebar/Sidebar';
 import './ParamInversion.css';
@@ -64,5 +65,12 @@ const ParamInversion = ({
     </button>
   </div>
 )
+
+ParamInversion.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  values: PropTypes.objectOf(PropTypes.number).isRequired,
+  textAreaDisplay: PropTypes.string.isRequired,
+}
 
 export default ParamInversion;

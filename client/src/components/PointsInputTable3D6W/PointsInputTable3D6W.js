@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {FormattedMessage} from 'react-intl';
 import './PointsInputTable3D6W.css';
 
@@ -114,6 +115,13 @@ const PointsInputTable3D6W = ({
       </table>
     </div>
   )
+}
+
+PointsInputTable3D6W.propTypes = {
+  systemPoints: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleChange: PropTypes.func,
+  handleDeleteDataInput: PropTypes.func.isRequired,
+  listOfUsedCoords: PropTypes.arrayOf(PropTypes.array),
 }
 
 export default PointsInputTable3D6W;
