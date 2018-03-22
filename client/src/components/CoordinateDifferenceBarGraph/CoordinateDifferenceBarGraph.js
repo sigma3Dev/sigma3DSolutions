@@ -27,7 +27,7 @@ const CoordinateDifferenceBarGraph = ({
         data: values.map(val => {
           return val.v;
         }),
-        backgroundColor: 'rgb(105, 177, 6)'
+        backgroundColor: '#0375ba'
       }
     ],
   };
