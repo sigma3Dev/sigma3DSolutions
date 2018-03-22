@@ -22,7 +22,7 @@ import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import ThreeDTrafoInput from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
 import InfoModal from '../components/InfoModal/InfoModal';
 
-var cdi = require('coordinatedataimporter');
+const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
   onPushStartSystemCoordinates: (file) => dispatch(pushStartSystemCoordinates(file)),

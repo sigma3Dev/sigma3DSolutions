@@ -7,6 +7,7 @@
     "AppSelectionBtn.description.paramInversion": "7 Parameter",
     "ChebyshevCFInput.label.circlePointsCaption": "Kreispunkte: ",
     "ChebyshevCFInputContainer.panel.infoPanelText": "Das Input sollte eine einfache .txt Datei sein.\n\nDie Datei sollte aus einem oder mehreren Punkten bestehen, jeder davon in einer Zeile. Jeder dieser Punkte sollte aus drei Koordinaten bestehen: x, y und z. Diese sollten einfache Zahlen sein.\n\nBeispiel:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
+    "CoordinateDifferenceBarGraph.caption.deviation": "Abweichung: ",
     "ErrorScreen.label.error": "Fehler!",
     "InfoModal.caption.wrongInput": "Fehlerhaftes Input",
     "InfoModal.label.mCantBeZero": "M darf nicht null sein!",
@@ -33,5 +34,7 @@
     "ThreeDTrafoInput.label.startSystemPointsCaption": "Startsystempunkte:",
     "ThreeDTrafoInput.label.targetSystemPointsCaption": "Zielsystempunkte:",
     "ThreeDTrafoInputContainer.panel.infoPanelText": "Das Input sollte eine einfache .txt Datei sein.\n\nDie Datei sollte aus einem oder mehreren Punkten bestehen, jeder davon in einer Zeile. Jeder dieser Punkte sollte aus drei Koordinaten bestehen: x, y und z. Diese sollten einfache Zahlen sein.\n\nBeispiel:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
-    "ThreeDTrafoResult.label.caption": "Transformationsparameter"
+    "ThreeDTrafoResult.label.caption": "Transformationsparameter",
+    "ThreeDTrafoResult.link.downloadFile": "Transformierte Startpunkte als .txt-Datei herunterladen",
+    "ThreeDTrafoResultContainer.prompt.filename": "Bitte geben Sie einen Dateinamen an: "
 }

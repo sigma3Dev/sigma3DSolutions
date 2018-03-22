@@ -7,6 +7,7 @@
   "AppSelectionBtn.description.paramInversion": "7 Parameters",
   "ChebyshevCFInput.label.circlePointsCaption": "Circle Points: ",
   "ChebyshevCFInputContainer.panel.infoPanelText": "The input should be a simple .txt file.\n\nThe file should consist of one or more points, each on its own line. Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
+  "CoordinateDifferenceBarGraph.caption.deviation": "Deviation: ",
   "ErrorScreen.label.error": "Error!",
   "InfoModal.caption.wrongInput": "Wrong Input",
   "InfoModal.label.mCantBeZero": "M cannot be zero!",
@@ -33,5 +34,7 @@
   "ThreeDTrafoInput.label.startSystemPointsCaption": "Start System Points:",
   "ThreeDTrafoInput.label.targetSystemPointsCaption": "Target System Points:",
   "ThreeDTrafoInputContainer.panel.infoPanelText": "The input should be a simple .txt file.\n\nThe file should consist of one or more points, each on its own line. Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
-  "ThreeDTrafoResult.label.caption": "Transformation Parameters"
+  "ThreeDTrafoResult.label.caption": "Transformation Parameters",
+  "ThreeDTrafoResult.link.downloadFile": "Download transformed start points as .txt file",
+  "ThreeDTrafoResultContainer.prompt.filename": "Please enter a file name: "
 }
