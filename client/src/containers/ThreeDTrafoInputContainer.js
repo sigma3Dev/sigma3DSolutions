@@ -29,7 +29,7 @@ const mapDispatchToProps = dispatch => ({
   onPushStartSystemCoordinates: (file) => dispatch(pushStartSystemCoordinates(file)),
   onPushTargetSystemCoordinates: (file) => dispatch(pushTargetSystemCoordinates(file)),
   onCheckboxUpdate: (id) => dispatch(checkboxUpdate(id)),
-  onSubmitCoords: () => dispatch(submitCoords()),
+  onSubmitCoords: (coords) => dispatch(submitCoords(coords)),
   onClearStartInput: () => dispatch(clearStartInput()),
   onClearTargetInput: () => dispatch(clearTargetInput()),
 });
@@ -165,7 +165,11 @@ class ThreeDTrafoInputContainer extends Component {
         />)
       })
     } else {
-      this.props.onSubmitCoords();
+      const coords = {
+        startSystemPoints: this.props.startSystemPoints,
+        targetSystemPoints: this.props.targetSystemPoints,
+      }
+      this.props.onSubmitCoords(coords);
       this.props.history.push('/transformations/three-d-transformation/result');
     }
   }
