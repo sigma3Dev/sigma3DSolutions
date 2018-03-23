@@ -30,5 +30,7 @@ stories
   .add('Table to display the result of the calculated transformation - DontTest', () => (
     <ThreeDTrafoResult
       trafoParams={trafoParams}
-      trafoDifference={trafoDifference}
+      trafoDifference={trafoDifference} 
+      translationDecimalPlaces={2}
+      rotationDecimalPlaces={4}
     />))
