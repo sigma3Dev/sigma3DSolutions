@@ -89,7 +89,7 @@ const CoordinateDifferenceBarGraph = ({
 }
 
 CoordinateDifferenceBarGraph.propTypes = {
-  values: PropTypes.arrayOf(PropTypes.object).isRequired,
+  values: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
   intl: PropTypes.object.isRequired,
 }
 

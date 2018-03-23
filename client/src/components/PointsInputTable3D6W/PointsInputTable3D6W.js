@@ -118,7 +118,10 @@ const PointsInputTable3D6W = ({
 }
 
 PointsInputTable3D6W.propTypes = {
-  systemPoints: PropTypes.arrayOf(PropTypes.object).isRequired,
+  systemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.bool
+  ]))).isRequired,
   handleChange: PropTypes.func,
   handleDeleteDataInput: PropTypes.func.isRequired,
   listOfUsedCoords: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.bool)),

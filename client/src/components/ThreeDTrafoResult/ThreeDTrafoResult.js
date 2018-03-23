@@ -100,7 +100,7 @@ const ThreeDTrafoResult = ({
 
 ThreeDTrafoResult.propTypes = {
   trafoParams: PropTypes.arrayOf(PropTypes.number).isRequired,
-  trafoDifference: PropTypes.arrayOf(PropTypes.object).isRequired,
+  trafoDifference: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
   handleClick: PropTypes.func.isRequired,
   handleDownloadClick: PropTypes.func.isRequired,
   translationDecimalPlaces: PropTypes.number.isRequired,

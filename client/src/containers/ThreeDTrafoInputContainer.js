@@ -236,9 +236,12 @@ ThreeDTrafoInputContainer.propTypes = {
   onSubmitCoords: PropTypes.func.isRequired,
   onClearStartInput: PropTypes.func.isRequired,
   onClearTargetInput: PropTypes.func.isRequired,
-  startSystemPoints: PropTypes.array.isRequired,
-  targetSystemPoints: PropTypes.array.isRequired,
-  listOfUsedCoords: PropTypes.array.isRequired,
+  startSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
+  targetSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.bool
+  ]))).isRequired,
+  listOfUsedCoords: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.bool)).isRequired,
   error: PropTypes.string
 }
 

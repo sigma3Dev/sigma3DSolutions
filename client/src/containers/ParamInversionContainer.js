@@ -142,7 +142,7 @@ class ParamInversionContainer extends Component {
 ParamInversionContainer.propTypes = {
   onSubmitParamInversionCoords: PropTypes.func.isRequired,
   onClearInput: PropTypes.func.isRequired,
-  paramInversion: PropTypes.array.isRequired,
+  paramInversion: PropTypes.arrayOf(PropTypes.string).isRequired,
   error: PropTypes.string,
 }
 
