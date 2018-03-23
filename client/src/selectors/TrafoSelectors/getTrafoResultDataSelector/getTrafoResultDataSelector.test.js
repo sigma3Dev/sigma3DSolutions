@@ -19,14 +19,14 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
       }
     };
     const expected = [
-      "1380.49",
-      "9336.54",
-      "-3796.40",
-      "-0.9951",
-      "-0.0048",
-      "-0.0006",
-      "0.0990"
-    ]
+      1380.4859742435729,
+      9336.536415479428,
+      -3796.3960642844177,
+      -0.9950785875879063,
+      -0.004830151859800749,
+      -0.0006079507786298357,
+      0.09896921012577276,
+    ];
     const result = getTrafoParams(state);
     expect(result).toEqual(expected);
   });

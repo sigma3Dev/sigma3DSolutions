@@ -92,9 +92,33 @@ describe('submitCoordsActions', () => {
         tz: -3796.3960642844177
       }
     };
+    const coords = {
+      startSystemPoints: [
+        {
+          x: 1.0,
+          y: 2.0,
+          z: 3.0
+        }, {
+          x: 4.0,
+          y: 5.0,
+          z: 6.0
+        }
+      ],
+      targetSystemPoints: [
+        {
+          x: 1.5,
+          y: 2.5,
+          z: 3.5
+        }, {
+          x: 4.5,
+          y: 5.5,
+          z: 6.5
+        }
+      ]
+    };
     const mock = new MockAdapter(axios);
     mock.onPost('/calculate-trafo').reply(200, expResponse );
-    return store.dispatch(submitCoords()).then(() => {
+    return store.dispatch(submitCoords(coords)).then(() => {
       // return of async actions
       expect(store.getActions().length).toEqual(2);
       expect(store.getActions()[0].type).toEqual(
@@ -113,10 +137,34 @@ describe('submitCoordsActions', () => {
           message: "Error while trying to fit."
         }
       }
-    }
+    };
+    const coords = {
+      startSystemPoints: [
+        {
+          x: 1.0,
+          y: 2.0,
+          z: 3.0
+        }, {
+          x: 4.0,
+          y: 5.0,
+          z: 6.0
+        }
+      ],
+      targetSystemPoints: [
+        {
+          x: 1.5,
+          y: 2.5,
+          z: 3.5
+        }, {
+          x: 4.5,
+          y: 5.5,
+          z: 6.5
+        }
+      ]
+    };
     const mock = new MockAdapter(axios);
     mock.onPost('/calculate-trafo').reply(500, error );
-    return store.dispatch(submitCoords()).then(() => {
+    return store.dispatch(submitCoords(coords)).then(() => {
       // return of async actions
       expect(store.getActions().length).toEqual(2);
       expect(store.getActions()[0].type).toEqual(

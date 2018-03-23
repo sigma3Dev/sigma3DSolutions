@@ -17,7 +17,7 @@
   "InfoModal.label.startAndTargetDifferentLengths": "Length of start and target system don't match!",
   "LoadingScreen.label.calculating": "Calculating...",
   "ParamInversion.caption.paramInversionHeader": "Parameter Inversion",
-  "PointsInput.label.inputTxtFile": "Drop .txt file in here",
+  "PointsInput.label.inputTxtFile": "Drop .txt file in here or open file dialog by clicking",
   "PointsInputTable.label.useX": "use x",
   "PointsInputTable.label.useY": "use y",
   "PointsInputTable.label.useZ": "use z",

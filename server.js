@@ -21,8 +21,8 @@ app.get('/', function(req, res) {
 });
 
 app.post('/calculate-trafo', function(req, res) {
-  const startPoints = req.body.coords.trafoDataInput.startSystemPoints;
-  const targetPoints = req.body.coords.trafoDataInput.targetSystemPoints;
+  const startPoints = req.body.coords.startSystemPoints;
+  const targetPoints = req.body.coords.targetSystemPoints;
 
   let obj = {
     "jsonrpc": "2.0",
@@ -115,7 +115,7 @@ app.post('/calculate-trafo-difference', function(req, res) {
       }
     },
     "id": 1
-  }
+  };
 
   startPoints.map((point, i) => {
     objDifference.params.point = point;

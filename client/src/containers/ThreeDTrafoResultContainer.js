@@ -127,6 +127,8 @@ class ThreeDTrafoResultContainer extends Component {
             trafoParams={ this.props.trafoParams }
             trafoDifference={ this.props.trafoDifference }
             handleClick={this.goBack}
+            translationDecimalPlaces={2}
+            rotationDecimalPlaces={4}
             handleDownloadClick={this.downloadFile}
           />
         </div>
@@ -138,12 +140,15 @@ class ThreeDTrafoResultContainer extends Component {
 ThreeDTrafoResultContainer.propTypes = {
   onRemoveError: PropTypes.func.isRequired,
   oncalculateTrafoDifference: PropTypes.func.isRequired,
-  transformedStartPoints: PropTypes.array.isRequired,
-  startSystemPoints: PropTypes.array.isRequired,
-  targetSystemPoints: PropTypes.array.isRequired,
-  listOfUsedCoords: PropTypes.array.isRequired,
-  trafoParams: PropTypes.array.isRequired,
-  trafoDifference: PropTypes.array.isRequired,
+  transformedStartPoints: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
+  startSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
+  targetSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.bool
+  ]))).isRequired,
+  listOfUsedCoords: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.bool)).isRequired,
+  trafoParams: PropTypes.arrayOf(PropTypes.number).isRequired,
+  trafoDifference: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
   error: PropTypes.string,
   isCalculating: PropTypes.bool.isRequired,
 }

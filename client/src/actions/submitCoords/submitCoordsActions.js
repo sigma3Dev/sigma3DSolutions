@@ -52,9 +52,11 @@ export const submitCoordsFailure = (error) => ({
  * @param {getStateCallback} getState - callback that gets current state
  * @returns {Object} response from backend or error message
  */
-export const submitCoords = () => (dispatch, getState) => {
+export const submitCoords = (coords) => (dispatch) => {
   dispatch(submitCoordsRequest());
-  const coords = getState();
+  if (!coords || coords.length === 0) {
+    return dispatch(submitCoordsFailure("Object of input coordinates is not valid!"));
+  }
   return axios.post('/calculate-trafo', {
       coords
     })

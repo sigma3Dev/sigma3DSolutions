@@ -25,6 +25,8 @@ const ThreeDTrafoResult = ({
   trafoDifference,
   handleClick,
   handleDownloadClick,
+  translationDecimalPlaces,
+  rotationDecimalPlaces,
 }) => {
   const copyText = trafoParams.join(" ");
   return (
@@ -51,25 +53,25 @@ const ThreeDTrafoResult = ({
         <tbody>
           <tr>
             <th>
-              { trafoParams[0] }
+              { trafoParams[0].toFixed(translationDecimalPlaces) }
             </th>
             <th>
-              { trafoParams[1] }
+              { trafoParams[1].toFixed(translationDecimalPlaces) }
             </th>
             <th>
-              { trafoParams[2] }
+              { trafoParams[2].toFixed(translationDecimalPlaces) }
             </th>
             <th>
-              { trafoParams[3] }
+              { trafoParams[3].toFixed(rotationDecimalPlaces) }
             </th>
             <th>
-              { trafoParams[4] }
+              { trafoParams[4].toFixed(rotationDecimalPlaces) }
             </th>
             <th>
-              { trafoParams[5] }
+              { trafoParams[5].toFixed(rotationDecimalPlaces) }
             </th>
             <th>
-              { trafoParams[6] }
+              { trafoParams[6].toFixed(rotationDecimalPlaces) }
             </th>
             <th>
               <CopyToClipboard text={ copyText }>
@@ -97,10 +99,12 @@ const ThreeDTrafoResult = ({
 }
 
 ThreeDTrafoResult.propTypes = {
-  trafoParams: PropTypes.arrayOf(PropTypes.string).isRequired,
-  trafoDifference: PropTypes.arrayOf(PropTypes.object).isRequired,
+  trafoParams: PropTypes.arrayOf(PropTypes.number).isRequired,
+  trafoDifference: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
   handleClick: PropTypes.func.isRequired,
   handleDownloadClick: PropTypes.func.isRequired,
+  translationDecimalPlaces: PropTypes.number.isRequired,
+  rotationDecimalPlaces: PropTypes.number.isRequired,
 }
 
 export default ThreeDTrafoResult;
