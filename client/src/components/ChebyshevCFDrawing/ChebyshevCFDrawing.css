@@ -20,9 +20,22 @@
   fill: white;
 }
 
-.cheby-middle {
+.chebychev-circle {
+  stroke-width: 3;
+  stroke-dasharray: 5,20; 
+  stroke-linecap: round;
+  fill: none;
+}
+
+.cheby-points {
   stroke: black;
-  stroke-width: 2; 
+  stroke-width: 1; 
+}
+
+.cheby-circle-points {
+  fill:none;
+  stroke: red;
+  stroke-width: 1; 
 }
 
 .cheby-result-presentation-drawing text.cheby-line-text-radius {
