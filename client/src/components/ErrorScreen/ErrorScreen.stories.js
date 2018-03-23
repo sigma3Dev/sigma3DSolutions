@@ -15,4 +15,4 @@ stories.addDecorator(StoryRouter.default());
 
 stories
   .add('Screen to display if there is an error in the calculation', () => (
-    <ErrorScreen />))
+    <ErrorScreen error="" handleClick={() => {}} />))

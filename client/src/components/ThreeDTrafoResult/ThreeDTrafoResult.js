@@ -1,9 +1,12 @@
-import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import Sidebar from '../Sidebar/Sidebar';
+import React                        from 'react';
+import PropTypes from 'prop-types';
+import { 
+  FormattedMessage,
+}                                   from 'react-intl';
+import { CopyToClipboard }          from 'react-copy-to-clipboard';
+import Sidebar                      from '../Sidebar/Sidebar';
 import CoordinateDifferenceBarGraph from '../CoordinateDifferenceBarGraph/CoordinateDifferenceBarGraph';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import BackToInputBtn               from '../BackToInputBtn/BackToInputBtn';
 import './ThreeDTrafoResult.css';
 
 const GoClippy = require('react-icons/lib/go/clippy');
@@ -21,6 +24,7 @@ const ThreeDTrafoResult = ({
   trafoParams,
   trafoDifference,
   handleClick,
+  handleDownloadClick,
 }) => {
   const copyText = trafoParams.join(" ");
   return (
@@ -77,6 +81,12 @@ const ThreeDTrafoResult = ({
           </tr>
         </tbody>
       </table>
+      <div className="download-link" onClick={handleDownloadClick}>
+        <FormattedMessage
+          id="ThreeDTrafoResult.link.downloadFile"
+          defaultMessage="Download transformed start points as .txt file"
+        />
+      </div>
       <div className="bar-graph">
         <CoordinateDifferenceBarGraph values={trafoDifference} />
       </div>
@@ -84,6 +94,13 @@ const ThreeDTrafoResult = ({
       <Sidebar />
     </div>
   )
+}
+
+ThreeDTrafoResult.propTypes = {
+  trafoParams: PropTypes.arrayOf(PropTypes.string).isRequired,
+  trafoDifference: PropTypes.arrayOf(PropTypes.object).isRequired,
+  handleClick: PropTypes.func.isRequired,
+  handleDownloadClick: PropTypes.func.isRequired,
 }
 
 export default ThreeDTrafoResult;

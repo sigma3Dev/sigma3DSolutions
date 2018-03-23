@@ -1,9 +1,22 @@
 import React              from 'react';
+import PropTypes          from 'prop-types';
 import {Bar}              from 'react-chartjs-2';
+import {
+  injectIntl,
+  defineMessages
+}                         from 'react-intl';
 import './CoordinateDifferenceBarGraph.css';
+
+const messages = defineMessages({
+  graphCaption: {
+    id: "CoordinateDifferenceBarGraph.caption.deviation",
+    defaultMessage: "Deviation: "
+  }
+});
 
 const CoordinateDifferenceBarGraph = ({
   values,
+  intl,
 }) => {
   const chartData = {
     labels: values.map((val, i) => {
@@ -15,7 +28,7 @@ const CoordinateDifferenceBarGraph = ({
         data: values.map(val => {
           return val.v;
         }),
-        backgroundColor: 'rgb(105, 177, 6)'
+        backgroundColor: '#0375ba'
       }
     ],
   };
@@ -28,7 +41,7 @@ const CoordinateDifferenceBarGraph = ({
         maintainAspectRatio: false,
         title: {
           display: true,
-          text: 'Deviation: ',
+          text: intl.formatMessage(messages.graphCaption),
           fontSize: 17,
           fontFamily: 'Arial',
           lineHeight: 1.4,
@@ -75,4 +88,9 @@ const CoordinateDifferenceBarGraph = ({
   )
 }
 
-export default CoordinateDifferenceBarGraph;
+CoordinateDifferenceBarGraph.propTypes = {
+  values: PropTypes.arrayOf(PropTypes.object).isRequired,
+  intl: PropTypes.object.isRequired,
+}
+
+export default injectIntl(CoordinateDifferenceBarGraph);

@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
+import PropTypes            from 'prop-types';
 import { connect }          from 'react-redux';
+import {
+  injectIntl,
+  defineMessages,
+}                           from 'react-intl';
 import { getError }         from '../selectors/ErrorSelectors/getErrorSelector';
 import { 
   getTrafoParams,
@@ -19,6 +24,14 @@ import { removeError }      from '../actions/errorHandling/errorHandlingActions'
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
 import ThreeDTrafoResult    from '../components/ThreeDTrafoResult/ThreeDTrafoResult';
+import fileSaver from 'file-saver';
+
+const messages = defineMessages({
+  filename: {
+    id: "ThreeDTrafoResultContainer.prompt.filename",
+    defaultMessage: "Please enter a file name: ",
+  },
+});
 
 const mapDispatchToProps = dispatch => ({
   onRemoveError: () => dispatch(removeError()),
@@ -51,6 +64,7 @@ class ThreeDTrafoResultContainer extends Component {
   constructor(props) {
     super(props);
     this.goBack = this.goBack.bind(this);
+    this.downloadFile = this.downloadFile.bind(this);
   }
   
   /**
@@ -79,6 +93,24 @@ class ThreeDTrafoResultContainer extends Component {
     this.props.history.push('/transformations/three-d-transformation/data-input');
   }
 
+  downloadFile = () => {
+    const askFilename = this.props.intl.formatMessage(messages.filename);
+    const fileName = prompt(askFilename);
+    const coords = this.props.transformedStartPoints;
+
+    const coordsAsText = coords.reduce((acc, val, i) => {
+      if (i < coords.length - 1) {
+        return acc + val[0].toFixed(2) + " " + val[1].toFixed(2) + " " + val[2].toFixed(2) + "\r\n";
+      } else {
+        return acc + val[0].toFixed(2) + " " + val[1].toFixed(2) + " " + val[2].toFixed(2);
+      }
+    }, "")
+
+    // turns string into blob and then into .txt
+    const blobVar = new Blob([coordsAsText], {type: "text/plain;charset=utf-8"});
+    fileSaver(blobVar, fileName + ".txt");
+  }
+
   render() {
     if (this.props.isCalculating) {
       return (
@@ -95,6 +127,7 @@ class ThreeDTrafoResultContainer extends Component {
             trafoParams={ this.props.trafoParams }
             trafoDifference={ this.props.trafoDifference }
             handleClick={this.goBack}
+            handleDownloadClick={this.downloadFile}
           />
         </div>
       );
@@ -102,4 +135,17 @@ class ThreeDTrafoResultContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ThreeDTrafoResultContainer);
+ThreeDTrafoResultContainer.propTypes = {
+  onRemoveError: PropTypes.func.isRequired,
+  oncalculateTrafoDifference: PropTypes.func.isRequired,
+  transformedStartPoints: PropTypes.array.isRequired,
+  startSystemPoints: PropTypes.array.isRequired,
+  targetSystemPoints: PropTypes.array.isRequired,
+  listOfUsedCoords: PropTypes.array.isRequired,
+  trafoParams: PropTypes.array.isRequired,
+  trafoDifference: PropTypes.array.isRequired,
+  error: PropTypes.string,
+  isCalculating: PropTypes.bool.isRequired,
+}
+
+export default injectIntl(connect(mapStateToProps, mapDispatchToProps)(ThreeDTrafoResultContainer));

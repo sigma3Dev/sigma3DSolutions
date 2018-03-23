@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './BackToInputBtn.css';
 
 const FaArrowLeft = require('react-icons/lib/fa/arrow-left');
@@ -15,5 +16,9 @@ const BackToInputBtn = ({
     <div className="arrow-left">{ arrowLeft }</div>
   </button>
 );
+
+BackToInputBtn.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+}
 
 export default BackToInputBtn;

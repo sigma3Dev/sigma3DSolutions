@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {FormattedMessage} from 'react-intl';
 import './SubmitBtn.css';
 
@@ -21,5 +22,9 @@ const SubmitBtn = ({
     <div className="arrow-right">{ arrowRight }</div>
   </button>
 );
+
+SubmitBtn.propTypes = {
+  handleClick: PropTypes.func.isRequired,
+}
 
 export default SubmitBtn;

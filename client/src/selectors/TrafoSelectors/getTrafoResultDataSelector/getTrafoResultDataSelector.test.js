@@ -103,15 +103,15 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
       }
     };
     const expected = [
-      {
-        x: 1.15,
-        y: 2.21,
-        z: 3.11,
-      }, {
-        x: 6.15,
-        y: 8.21,
-        z: 5.11,
-      }, 
+      [
+        1.15,
+        2.21,
+        3.11,
+      ], [
+        6.15,
+        8.21,
+        5.11,
+      ], 
     ];
     const result = getTransformedStartPoints(state);
     expect(result).toEqual(expected);

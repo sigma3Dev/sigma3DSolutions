@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes            from 'prop-types';
 import { connect }          from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { getError }         from '../selectors/ErrorSelectors/getErrorSelector';
@@ -134,7 +135,13 @@ class ParamInversionContainer extends Component {
       </div>
     )
   }
-  
+}
+
+ParamInversionContainer.propTypes = {
+  onSubmitParamInversionCoords: PropTypes.func.isRequired,
+  onClearInput: PropTypes.func.isRequired,
+  paramInversion: PropTypes.array.isRequired,
+  error: PropTypes.string,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ParamInversionContainer);

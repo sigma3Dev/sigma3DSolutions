@@ -2,9 +2,7 @@ import PointsInputTable3D6W from './PointsInputTable3D6W';
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
-import { withKnobs, text } from '@storybook/addon-knobs/react';
+import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 const systemPoints = [
@@ -20,4 +18,9 @@ stories.addDecorator(withKnobs);
 
 stories
   .add('Table to display start and target system points input', () => (
-    <PointsInputTable3D6W systemPoints={systemPoints} />))
+    <PointsInputTable3D6W 
+      systemPoints={systemPoints}
+      handleChange={() => {}}
+      handleDeleteDataInput={() => {}}
+      listOfUsedCoords={[]}
+    />))

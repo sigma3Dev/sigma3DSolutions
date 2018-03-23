@@ -15,7 +15,7 @@
 .three-d-trafo-input h1 {
   display: flex;
   justify-content: space-around;
-  border-bottom: 3px solid darkgreen;
+  border-bottom: 3px solid #0270a5;
   padding-bottom: 5px;
   margin: 20px 45px;
 }

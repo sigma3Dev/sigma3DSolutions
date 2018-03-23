@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Popover } from 'react-bootstrap';
 import './InputInfoPanel.css';
 
@@ -26,6 +27,11 @@ const InputInfoPanel = ({
       { body }
     </Popover>
   )
+}
+
+InputInfoPanel.propTypes = {
+  body: PropTypes.object.isRequired,
+  isDisplayed: PropTypes.bool.isRequired,
 }
 
 export default InputInfoPanel;
