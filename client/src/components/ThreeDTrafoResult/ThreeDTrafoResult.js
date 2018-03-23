@@ -103,6 +103,8 @@ ThreeDTrafoResult.propTypes = {
   trafoDifference: PropTypes.arrayOf(PropTypes.object).isRequired,
   handleClick: PropTypes.func.isRequired,
   handleDownloadClick: PropTypes.func.isRequired,
+  translationDecimalPlaces: PropTypes.number.isRequired,
+  rotationDecimalPlaces: PropTypes.number.isRequired,
 }
 
 export default ThreeDTrafoResult;

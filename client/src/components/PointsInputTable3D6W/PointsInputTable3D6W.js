@@ -38,9 +38,9 @@ const PointsInputTable3D6W = ({
     return (
       <tr key={ i }>
         <th className={'grey'}>{ i + 1 }</th>
-        <th>{ line.x.toString() }</th>
-        <th>{ line.y.toString() }</th>
-        <th>{ line.z.toString() }</th>
+        <th>{ line.x.toFixed(2) }</th>
+        <th>{ line.y.toFixed(2) }</th>
+        <th>{ line.z.toFixed(2) }</th>
         <th style={showUseFields()}>
           <input 
             type="checkbox" 
