@@ -54,6 +54,9 @@ export const submitCoordsFailure = (error) => ({
  */
 export const submitCoords = (coords) => (dispatch) => {
   dispatch(submitCoordsRequest());
+  if (!coords || coords.length === 0) {
+    return dispatch(submitCoordsFailure("Object of input coordinates is not valid!"));
+  }
   return axios.post('/calculate-trafo', {
       coords
     })
