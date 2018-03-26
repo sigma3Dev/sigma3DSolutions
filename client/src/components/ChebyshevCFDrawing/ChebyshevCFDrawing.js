@@ -4,7 +4,9 @@ import './ChebyshevCFDrawing.css';
 
 /**
  * shows two circles, radius and chebyshev-distance in a svg
- * hier noch ganz viel schreiben was gemacht wird!!!!!!!!!!!!!!!!!
+ * This component contains a illustration of points which represents a circle in a three-dimensional space. The 3D-ccordinates are converted in plane 2D-ccordinates, 
+ * because this is necessary for a simple illustraion on your screen. Therefor one of the axes must serve as normal vector of the circle. 
+ * In the next step the coordinates are transformed in the system of SVG (translation and scale) and the distance to the calculated Chebyshev-Circle is illustrated inflated.
  * @param {Object} chebyDist - response of chebyshev distance that is returned from backend after successful calculation
  * @param {Object} radius - response of radius that is returned from backend after successful calculation
  * @param {Object} points - responses an array of points that is returned from backend after successful calculation
@@ -19,87 +21,61 @@ const ChebyshevCFDrawing = ({
   let shiftedPoints = null;
   let circlePoints = null;
   let maßstabKreis=0;
+  console.clear();
   if (points !== undefined && points.length > 0) {
-    //maßstabKreis berechnen, 200 ist der Radius bis zum Chebyshev-Kreis
+    //Calculation of scale, 200 is the radius of the measured Chebyshev-Circle
     maßstabKreis=200/radius;
-    console.clear();
-    // darstellung der punkte
-    // runde schleife wenn direkt alles returned wird, bei geschweifter extra return statement
     shiftedPoints = points.map((point, index) => {
-      // console.log("iti:", index+1);
-      // console.log("xAlt:", point.x);
-      // console.log("yAlt:", point.y);
+      //transformed points with translation in the middle of the svg-area (250 / 250)
       let xNew=point.x*maßstabKreis+250;
-      if (point.y<0){
-        //point.y=(point.y+2*radius)*(-1);
-        //console.log("-y, umgewandelt", point.y);
-      }else if (point.y>0){
-        //point.y=(point.y-2*radius)*(-1);
-        //console.log("+y, umgewandelt", point.x);
-      }
       let yNew=point.y*maßstabKreis+250;
-        if(index===0){
-          return {x: xNew, y:yNew}//<circle cx={xNew} cy={yNew} r="10" className="cheby-circle-points" />
-        }else{
-          return {x: xNew, y:yNew}//<circle cx={xNew} cy={yNew} r="5" className="cheby-circle-points" />
-        }
+          return {x: xNew, y:yNew}
     })
     circlePoints= shiftedPoints.map((shiftedPoint, index) =>{
-      console.log("iteration:", index+1);
       let xNew=shiftedPoint.x;
       let yNew=shiftedPoint.y;
-      console.log("x,verschoben",xNew);
-      console.log("y,verschoben",yNew);
-      let abstandZuMP = Math.sqrt((xNew-250)*(xNew-250)+(yNew-250)*(yNew-250));
-      console.log("strecke",abstandZuMP);
-      let alphaWinkel=Math.acos((250-yNew)/abstandZuMP);
-      console.log("winkel",alphaWinkel);
-      if (isNaN(alphaWinkel)){
-        alphaWinkel=0;
-        console.log("winkel_new",alphaWinkel);
+      // vector algebra
+      // vector from central point to point of index
+      let xVektor=xNew-250;
+      let yVektor=yNew-250;
+      let abstandZuMP = Math.sqrt(xVektor*xVektor+yVektor*yVektor);
+      let diffZuChebyCircle =abstandZuMP-200; // 200 = radius defined by svg-circle
+      if ((diffZuChebyCircle/maßstabKreis)>3 || (diffZuChebyCircle)<(-3)){
+        console.log(index+1);
       }
-      let diffZuChebyCircle =abstandZuMP-200;
-      console.log("abstandKreis",diffZuChebyCircle);
       let maßstabChebyDist=(80/chebyDist)/maßstabKreis;
-      console.log("ms",maßstabChebyDist); 
-      if (diffZuChebyCircle>0){
-        if (xNew>250 && yNew>=250 && yNew<=500){
-          xNew=xNew-(Math.sin(alphaWinkel)*diffZuChebyCircle)+maßstabChebyDist*(Math.sin(alphaWinkel)*diffZuChebyCircle);
-          yNew=yNew-(Math.cos(alphaWinkel)*diffZuChebyCircle)+maßstabChebyDist*(Math.cos(alphaWinkel)*diffZuChebyCircle);
-        } else {
-          xNew=xNew-(Math.sin(alphaWinkel)*diffZuChebyCircle)-maßstabChebyDist*(Math.sin(alphaWinkel)*diffZuChebyCircle);
-          yNew=yNew-(Math.cos(alphaWinkel)*diffZuChebyCircle)-maßstabChebyDist*(Math.cos(alphaWinkel)*diffZuChebyCircle); 
-        } 
-      }else if (diffZuChebyCircle<0){
-        xNew=xNew-(Math.sin(alphaWinkel)*diffZuChebyCircle)+maßstabChebyDist*(Math.sin(alphaWinkel)*diffZuChebyCircle);
-        yNew=yNew-(Math.cos(alphaWinkel)*diffZuChebyCircle)+maßstabChebyDist*(Math.cos(alphaWinkel)*diffZuChebyCircle);      
+      // normalized vector with length of 1
+      let xNorm=xVektor/abstandZuMP;
+      let yNorm=yVektor/abstandZuMP;
+      // xKreis and yKreis are the coordinates which are located on the Chebysehv-circle
+      let xKreis=0; 
+      let yKreis=0;
+      if (diffZuChebyCircle>0.001){
+        xKreis=xNew-diffZuChebyCircle*xNorm;
+        yKreis=yNew-diffZuChebyCircle*yNorm;
+        xNew=xKreis+diffZuChebyCircle*maßstabChebyDist*xNorm;
+        yNew=yKreis+diffZuChebyCircle*maßstabChebyDist*yNorm; 
+      } else if (diffZuChebyCircle<-0.001){
+        xKreis=xNew-diffZuChebyCircle*xNorm;
+        yKreis=yNew-diffZuChebyCircle*yNorm;
+        xNew=xKreis+diffZuChebyCircle*maßstabChebyDist*xNorm;
+        yNew=yKreis+diffZuChebyCircle*maßstabChebyDist*yNorm;
       }
-      // xNew=xNew-(Math.sin(alphaWinkel)*diffZuChebyCircle)+maßstabChebyDist*(Math.sin(alphaWinkel)*diffZuChebyCircle);
-      // yNew=yNew-(Math.cos(alphaWinkel)*diffZuChebyCircle)+maßstabChebyDist*(Math.cos(alphaWinkel)*diffZuChebyCircle);      
-        
+
       if(index===0){
-          console.log("neuer X-Wert",(xNew));
-          console.log("neuer Y-Wert",(yNew));
-          //return <circle cx={xNew} cy={yNew} r="5" fill="blue" />
-          return <text x={xNew} y={yNew} fill="black" stroke="none"> {index+1} </text>
+          return <circle cx={xNew} cy={yNew} r="3" fill="red" text={index+1}/>
         }else{
-          console.log("neuer X-Wert",(xNew));
-          console.log("neuer Y-Wert",(yNew));
-          //return <circle cx={xNew} cy={yNew} r="5" className="cheby-circle-points" />
-          return <text x={xNew} y={yNew} fill="black" stroke="none"> {index+1} </text>
-        }
-        
+          return <circle cx={xNew} cy={yNew} r="3" className="cheby-circle-points" text={index+1}/>
+        }        
     })
   }
   return(
-    //hier das ist jsx
     <div className="cheby-result-presentation-drawing"> 
       <svg width={500} height={500}>
         <line  x1="10"  y1="10" x2="50" y2="10" fill="black"/>
         <text x="52" y="10" stroke="none">+X</text>
         <line  x1="10"  y1="8.5" x2="10" y2="50" fill="black"/>
         <text x="12" y="50" stroke="none"s>+Y</text>
-        {/* <image x="10" y="10" width="50px" height="50px" xlink="/images/3DLine.svg"></image> */}
         <circle cx="250" cy="250" r="240" className="cheby-exterior-circle"/>
         <circle cx="250" cy="250" r="160" className="cheby-interior-circle"/>
         <circle cx="250" cy="250" r="200" className="chebychev-circle"/>
