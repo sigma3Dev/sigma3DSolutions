@@ -67,7 +67,7 @@ app.post('/calculate-trafo-difference', function(req, res) {
   let differences = [];
 
   startPoints.map((point, i) => {
-    let objDifference = comm.applyTransformation(point, trafoParams, 1);
+    const objDifference = comm.applyTransformation(point, trafoParams, 1);
     socket.send(objDifference);
 
     socket.onmessage = e => {
