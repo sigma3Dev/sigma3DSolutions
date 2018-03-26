@@ -24,7 +24,7 @@
     "InfoModal.label.startAndTargetDifferentLengths": "Start- und Zielsystem haben unterschiedliche Länge!",
     "LoadingScreen.label.calculating": "Rechne...",
     "ParamInversion.caption.paramInversionHeader": "Parameterinversion",
-    "PointsInput.label.inputTxtFile": ".txt Datei hier ablegen",
+    "PointsInput.label.inputTxtFile": ".txt Datei hier ablegen oder durch Klick Filedialog öffnen",
     "PointsInputTable.label.useX": "nutze x",
     "PointsInputTable.label.useY": "nutze y",
     "PointsInputTable.label.useZ": "nutze z",

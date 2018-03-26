@@ -86,14 +86,17 @@ const ThreeDTrafoInput = ({
 ThreeDTrafoInput.propTypes = {
   onStartFileDrop: PropTypes.func.isRequired,
   onTargetFileDrop: PropTypes.func.isRequired,
-  startSystemPoints: PropTypes.arrayOf(PropTypes.object).isRequired,
-  targetSystemPoints: PropTypes.arrayOf(PropTypes.object).isRequired,
+  startSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
+  targetSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([
+    PropTypes.number,
+    PropTypes.bool
+  ]))).isRequired,
   checkboxUpdate: PropTypes.func.isRequired,
   handleInfoClick: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
   handleStartDeleteClick: PropTypes.func.isRequired,
   handleTargetDeleteClick: PropTypes.func.isRequired,
-  listOfUsedCoords: PropTypes.arrayOf(PropTypes.array).isRequired,
+  listOfUsedCoords: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.bool)).isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
 }
