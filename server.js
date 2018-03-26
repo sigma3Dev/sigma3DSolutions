@@ -25,7 +25,7 @@ app.post('/calculate-trafo', function(req, res) {
   const startPoints = req.body.coords.startSystemPoints;
   const targetPoints = req.body.coords.targetSystemPoints;
 
-  let obj = comm.transformation3D6W(startPoints, targetPoints, 1);
+  const obj = comm.transformation3D6W(startPoints, targetPoints, 1);
 
   socket.onerror = error => {
     console.log("WebSocket Error: " + error);
@@ -42,7 +42,7 @@ app.post('/calculate-trafo', function(req, res) {
 
 app.post('/param-inversion', function(req, res) {
   const transformation = req.body.coords;
-  let obj = comm.invertTransformationParameters(transformation, 1);
+  const obj = comm.invertTransformationParameters(transformation, 1);
 
   socket.onerror = error => {
     console.log("WebSocket Error: " + error);
