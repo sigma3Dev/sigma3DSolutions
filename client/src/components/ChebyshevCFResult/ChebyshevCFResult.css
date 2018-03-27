@@ -1,0 +1,87 @@
+.chebyshev-circle-fit-result {
+  width: 83%;
+  height: 500px;
+  margin-left: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 12px;
+  font-family: Roboto;
+}
+
+.cheby-cf-result-presentation {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+}
+
+.cheby-cf-back-button {
+  position: fixed;
+  bottom: 24px;
+  left: 250px;
+}
+
+.cheby-cf-radius-text {
+  color: #18748E;
+  color: #0D731D;
+}
+
+.cheby-cf-chebyDist-text {
+  color: #03C4F9;
+}
+
+.chebyshev-circle-fit-result h1 {
+  font-size: 3.0em;
+  border-bottom: 3px solid #0270a5;
+}
+
+.chebyshev-circle-fit-result .result-table {
+  padding-top: 50px;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.chebyshev-circle-fit-result .result-table * {
+  font-size: 1.10em;
+  text-align: center;
+}
+
+.chebyshev-circle-fit-result .result-table th {
+  padding: 12px 15px;
+  padding-right: 10px;
+  padding-left: 0px;
+
+}
+
+.chebyshev-circle-fit-result .result-table .caption {
+  background-color: #d5d5d5;
+}
+
+.chebyshev-circle-fit-result .fa-spinner {
+  font-size: 5em;
+  color: #292929;
+  animation: spin 2000ms infinite linear;
+}
+
+.chebyshev-circle-fit-result .copy {
+  font-size: 0.8em;
+  padding: 10px;
+}
+
+.copy-to-clippi {
+  padding-left: 0px;
+}
+
+.chebyshev-circle-fit-result .copy:hover {
+  cursor: pointer;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
