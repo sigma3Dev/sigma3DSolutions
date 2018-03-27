@@ -4,6 +4,7 @@ const express     = require('express'),
       path        = require('path'),
       util        = require('util'),
       io          = require('socket.io')(),
+      comm        = require('s3d-fitting-commands'),
       app         = express();
 
 const socket = new WebSocket('ws://localhost:8091');
@@ -24,34 +25,7 @@ app.post('/calculate-trafo', function(req, res) {
   const startPoints = req.body.coords.startSystemPoints;
   const targetPoints = req.body.coords.targetSystemPoints;
 
-  let obj = {
-    "jsonrpc": "2.0",
-    "method": "transformation3D6W",
-    "params": {
-      "startPoints": [],
-      "targetPoints": []
-    },
-    "id": 1
-  };
-  
-  startPoints.map(point => {
-    obj.params.startPoints.push({
-      "x": point.x,
-      "y": point.y,
-      "z": point.z
-    })
-  });
-
-  targetPoints.map((point, i) => {
-    obj.params.targetPoints.push({
-      "x": point.x,
-      "y": point.y,
-      "z": point.z,
-      "useX": point.useX,
-      "useY": point.useY,
-      "useZ": point.useZ,
-    })
-  });
+  let obj = comm.transformation3D6W(startPoints, targetPoints, 1);
 
   socket.onerror = error => {
     console.log("WebSocket Error: " + error);
@@ -63,19 +37,12 @@ app.post('/calculate-trafo', function(req, res) {
     res.status(200).send(response);
   }
 
-  socket.send(JSON.stringify(obj));
+  socket.send(obj);
 });
 
 app.post('/param-inversion', function(req, res) {
-  const paramInversionPoints = req.body.coords;
-  let obj = {
-    "jsonrpc": "2.0",
-    "method": "invertTransformationParameters",
-    "params": {
-      "transformation": paramInversionPoints,
-    },
-    "id": 1
-  };
+  const transformation = req.body.coords;
+  let obj = comm.invertTransformationParameters(transformation, 1);
 
   socket.onerror = error => {
     console.log("WebSocket Error: " + error);
@@ -87,7 +54,7 @@ app.post('/param-inversion', function(req, res) {
     res.status(200).send(response);
   }
 
-  socket.send(JSON.stringify(obj));
+  socket.send(obj);
 });
 
 app.post('/calculate-chebyshev-circle-fit', function(req, res) {
@@ -122,28 +89,10 @@ app.post('/calculate-trafo-difference', function(req, res) {
 
   let calculatedTarget = [];
   let differences = [];
-  let objDifference = {  
-    "jsonrpc": "2.0",
-    "method": "applyTransformation",
-    "params": {
-      "point": {},
-      "transformation": {
-        tx: Number(trafoParams[0]),
-        ty: Number(trafoParams[1]),
-        tz: Number(trafoParams[2]),
-        q0: Number(trafoParams[3]),
-        q1: Number(trafoParams[4]),
-        q2: Number(trafoParams[5]),
-        q3: Number(trafoParams[6]),
-        m: 1.0
-      }
-    },
-    "id": 1
-  };
 
   startPoints.map((point, i) => {
-    objDifference.params.point = point;
-    socket.send(JSON.stringify(objDifference));
+    const objDifference = comm.applyTransformation(point, trafoParams, 1);
+    socket.send(objDifference);
 
     socket.onmessage = e => {
       const response = JSON.parse(e.data).result;
