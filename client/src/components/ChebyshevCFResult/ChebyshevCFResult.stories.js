@@ -19,4 +19,8 @@ stories.addDecorator(StoryRouter.default());
 
 stories
   .add('Table to display the result of the calculated chebyshev circle fit adjustment', () => (
-    <ChebyshevCFResult isCalculating={boolean('isCalculating', false)} chebyshevParams={chebyshevParams} />))
+    <ChebyshevCFResult 
+      isCalculating={boolean('isCalculating', false)} 
+      chebyshevParams={chebyshevParams} 
+      handleClick={ action('handleClick', () => {}) }  
+    />))
