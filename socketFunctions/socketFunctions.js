@@ -1,68 +1,107 @@
-const WebSocket   = require('ws'),
-      comm        = require('s3d-fitting-commands');
+const comm        = require('s3d-fitting-commands');
 
-const socket      = new WebSocket('ws://localhost:8091');
+const WebSocket = require('ws');
 
-const threeDTrafoSendToSocket = (obj, res) => {
-  socket.send(obj);
+let socket = null;
 
-  socket.onerror = error => {
-    console.log("WebSocket Error: " + JSON.stringify(error.error));
-    res.status(500).send(error);
+let getWebSocket = () => (new Promise((resolve, reject) => {
+  if(socket === null || socket.readyState !== 1) {
+    socket = new WebSocket('ws://localhost:8091');
+    socket.onopen = function() {
+      resolve(socket);
+    };
+    socket.onerror = function(err) {
+      reject(err);
+    };
+    socket.onclose = function(err) {
+      console.log("WEBSOCKET ZUUUUUUU")
+    };
+  } else {
+    resolve(socket);
   }
+}));
 
-  socket.onmessage = e => {
-    const response = e.data;
-    res.status(200).send(response);
-  }
+const threeDTrafoSendToSocket = (coords, callback) => {
+  const startPoints = coords.startSystemPoints;
+  const targetPoints = coords.targetSystemPoints;
+  const threeDTrafoRequest = comm.transformation3D6W(startPoints, targetPoints, 1);
+
+  let socket = getWebSocket().then(function(socket) {
+    socket.onerror = error => {
+      callback(error, false)
+    }
+  
+    socket.onmessage = e => {
+      const response = e.data;
+      callback(response, true)
+    }
+
+    socket.send(threeDTrafoRequest);
+  }).catch(function(err) {
+    callback(err, false)
+  });
 }
 
-const paramInversionSendToSocket = (obj, res) => {
-  socket.send(obj);
+const paramInversionSendToSocket = (coords, callback) => {
+  const inversionRequest = comm.invertTransformationParameters(coords, 1);
 
-  socket.onerror = error => {
-    console.log("WebSocket Error: " + JSON.stringify(error.error));
-    res.status(500).send(error);
-  }
+  let socket = getWebSocket().then(function(socket) {
+    socket.onerror = error => {
+      callback(error.error, false)
+    }
+  
+    socket.onmessage = e => {
+      const response = e.data;
+      callback(response, true)
+    }
 
-  socket.onmessage = e => {
-    const response = e.data;
-    res.status(200).send(response);
-  }
+    socket.send(inversionRequest);
+  }).catch(function(err) {
+    callback(err, false)
+  });
+
 }
 
-const threeDTrafoDifferenceSendToSocket = (res, startPoints, targetPoints, trafoParams) => {
+const threeDTrafoDifferenceSendToSocket = (params, callback) => {
+  const startPoints = params.startPoints;
+  const targetPoints = params.targetPoints;
+  const trafoParams = params.trafoParams;
+
   let calculatedTarget = [];
   let differences = [];
 
-  startPoints.map((point, i) => {
-    const objDifference = comm.applyTransformation(point, trafoParams, 1);
-    socket.send(objDifference);
+  let socket = getWebSocket().then(function(socket) {
+    startPoints.map((point, i) => {
+      const objDifference = comm.applyTransformation(point, trafoParams, 1);
+      socket.send(objDifference);
 
-    socket.onmessage = e => {
-      const response = JSON.parse(e.data).result;
-      calculatedTarget.push(response);
-      if (calculatedTarget.length === startPoints.length) {
-        calculatedTarget.map((target, i) => {
-          differences.push({});
-          differences[i].vx = targetPoints[i].x - target.x;
-          differences[i].vy = targetPoints[i].y - target.y;
-          differences[i].vz = targetPoints[i].z - target.z;
-          differences[i].v = Math.sqrt(Math.pow(differences[i].vx, 2) + Math.pow(differences[i].vy, 2) + Math.pow(differences[i].vz, 2));
-        });
-        res.status(200).send(differences);
+      socket.onmessage = e => {
+        const response = JSON.parse(e.data).result;
+        calculatedTarget.push(response);
+        if (calculatedTarget.length === startPoints.length) {
+          calculatedTarget.map((target, i) => {
+            differences.push({});
+            differences[i].vx = targetPoints[i].x - target.x;
+            differences[i].vy = targetPoints[i].y - target.y;
+            differences[i].vz = targetPoints[i].z - target.z;
+            differences[i].v = Math.sqrt(Math.pow(differences[i].vx, 2) + Math.pow(differences[i].vy, 2) + Math.pow(differences[i].vz, 2));
+          });
+          callback(differences, true);
+        }
       }
-    }
 
-    socket.onerror = error => {
-      console.log("WebSocket Error: " + JSON.stringify(error.error));
-      res.send(error);
-    }
+      socket.onerror = error => {
+        callback(error, false)
+      }
+    });
+  }).catch(function(err) {
+    callback(err, false)
   });
 }
 
 module.exports = {
   threeDTrafoSendToSocket,
   paramInversionSendToSocket,
-  threeDTrafoDifferenceSendToSocket
+  threeDTrafoDifferenceSendToSocket,
+  getWebSocket,
 };

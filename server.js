@@ -5,8 +5,8 @@ const express     = require('express'),
       comm        = require('s3d-fitting-commands'),
       sf          = require('./socketFunctions/socketFunctions'),
       app         = express();
-
-const socket = new WebSocket('ws://localhost:8091');
+      
+//const socket = new WebSocket('ws://localhost:8091');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -16,11 +16,11 @@ app.set("port", process.env.PORT || 3001);
 // Serve static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
   res.send('Success!');
 });
 
-app.post('/calculate-trafo', function(req, res) {
+app.post('/calculate-trafo', (req, res) => {
   if (
     !req.body.hasOwnProperty("coords") ||
     !req.body.coords.hasOwnProperty("startSystemPoints") ||
@@ -33,27 +33,34 @@ app.post('/calculate-trafo', function(req, res) {
     return;
   }
 
-  const startPoints = req.body.coords.startSystemPoints;
-  const targetPoints = req.body.coords.targetSystemPoints;
-
-  const obj = comm.transformation3D6W(startPoints, targetPoints, 1);
-
-  sf.threeDTrafoSendToSocket(obj, res);
+  sf.threeDTrafoSendToSocket(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      console.log(response);
+      res.status(500).send(response);
+    } 
+  });
 });
 
-app.post('/param-inversion', function(req, res) {
+app.post('/param-inversion', (req, res) => {
   if (!req.body.hasOwnProperty("coords")) {
     res.status(400).send("Invalid input coordinates");
     return;
   }
-  const transformation = req.body.coords;
-  const obj = comm.invertTransformationParameters(transformation, 1);
 
-  sf.paramInversionsSendToSocket(obj, res);
+  sf.paramInversionSendToSocket(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      console.log(response);
+      res.status(500).send(response);
+    } 
+  });
 });
 
 
-app.post('/calculate-trafo-difference', function(req, res) {
+app.post('/calculate-trafo-difference', (req, res) => {
   if (
     !req.body.hasOwnProperty("startPoints") ||
     !req.body.hasOwnProperty("targetPoints") ||
@@ -63,11 +70,14 @@ app.post('/calculate-trafo-difference', function(req, res) {
     return;
   }
 
-  const startPoints = req.body.startPoints;
-  const targetPoints = req.body.targetPoints;
-  const trafoParams = req.body.trafoParams;
-
-  sf.threeDTrafoDifferenceSendToSocket(res, startPoints, targetPoints, trafoParams);
+  sf.threeDTrafoDifferenceSendToSocket(req.body, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      console.log(response);
+      res.status(500).send(response);
+    } 
+  });
 });
 
 app.listen(app.get("port"), () => {
