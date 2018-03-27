@@ -8,12 +8,12 @@ export const getChebyshevCircleFitInput = createSelector(
     params.x.toFixed(2),
     params.y.toFixed(2),
     params.z.toFixed(2),
-    params.i.toFixed(5),
-    params.j.toFixed(5),
-    params.k.toFixed(5),
-    params.radius.toFixed(1),
-    params.tschebyDistance.toFixed(1),
-    params.stdev.toFixed(1),
+    params.i.toFixed(6),
+    params.j.toFixed(6),
+    params.k.toFixed(6),
+    params.radius.toFixed(2),
+    params.tschebyDistance.toFixed(2),
+    params.stdev.toFixed(2),
   ])
 )
 

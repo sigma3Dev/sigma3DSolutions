@@ -2,7 +2,7 @@ import {
   PUSH_CHEBYSHEV_CIRCLE_FIT_COORDINATES
 } from '../../actions/pushChebyshevCircleFitCoords/pushChebyshevCircleFitCoordsActions';
 import {
-  CLEAR_INPUT
+  CLEAR_CHEBYSHEV_INPUT
 } from '../../actions/clearInput/clearInputActions';
 import chebyshevCircleFitDataInputReducer from './chebyshevCircleFitDataInputReducer';
 
@@ -41,7 +41,7 @@ describe('chebyshevCircleFitDataInputReducer', () => {
     const result = chebyshevCircleFitDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle CLEAR_INPUT', () => {
+  it('should handle CLEAR_CHEBYSHEV_INPUT', () => {
     const state = {
       circlePoints: [
         {
@@ -56,7 +56,7 @@ describe('chebyshevCircleFitDataInputReducer', () => {
       ]
     };
     const action = {
-      type: CLEAR_INPUT,
+      type: CLEAR_CHEBYSHEV_INPUT,
     };
     const expectedState = {
       circlePoints: []

@@ -3,8 +3,8 @@ import {
   clearStartInput,
   CLEAR_TARGET_INPUT,
   clearTargetInput,
-  CLEAR_INPUT,
-  clearInput
+  CLEAR_CHEBYSHEV_INPUT,
+  clearChebyshevInput
 } from './clearInputActions';
 
 describe('clearInputActions', () => {
@@ -24,11 +24,11 @@ describe('clearInputActions', () => {
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should create a CLEAR_INPUT action', () => {
+  it('should create a CLEAR_CHEBYSHEV_INPUT action', () => {
     const expected = {
-      type: CLEAR_INPUT
+      type: CLEAR_CHEBYSHEV_INPUT
     };
-    const result = clearInput();
+    const result = clearChebyshevInput();
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });
