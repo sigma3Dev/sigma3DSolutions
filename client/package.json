@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "homepage": "https://sigma3Dev.github.io/sigma3DSolutions",
   "private": true,
   "proxy": "http://localhost:3001",
   "secure": false,
@@ -34,7 +35,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.14",
@@ -49,6 +51,7 @@
     "babel-plugin-react-intl": "^2.4.0",
     "babel-preset-react-app": "^3.1.1",
     "bootstrap": "^4.0.0",
+    "gh-pages": "^1.1.0",
     "react-intl-translations-manager": "^5.0.1",
     "react-test-renderer": "^16.2.0",
     "storybook-addon-intl": "^2.3.0"
