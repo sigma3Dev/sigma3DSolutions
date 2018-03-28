@@ -8,7 +8,7 @@ import {
 describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => {
   it('getTrafoParams', () => {
     const state = {
-      trafoResult: {
+      threeDTrafoResult: {
         tx: 1380.4859742435729,
         ty: 9336.536415479428,
         tz: -3796.3960642844177,
@@ -32,7 +32,7 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
   });
   it('getTrafoDifference', () => {
     const state = {
-      trafoResultDifference: {
+      threeDTrafoResultDifference: {
         difference: [
           {
             vx: 0.15,
@@ -66,7 +66,7 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
   });
   it('getTransformedStartPoints', () => {
     const state = {
-      trafoResultDifference: {
+      threeDTrafoResultDifference: {
         difference: [
           {
             vx: 0.15,
@@ -81,7 +81,7 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
           }
         ]
       },
-      trafoDataInput: {
+      threeDTrafoDataInput: {
         targetSystemPoints: [
           {
             x: 1.0,
@@ -118,10 +118,10 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
   });
   it('getTransformedStartPoints', () => {
     const state = {
-      trafoResultDifference: {
+      threeDTrafoResultDifference: {
         difference: []
       },
-      trafoDataInput: {
+      threeDTrafoDataInput: {
         targetSystemPoints: [
           {
             x: 1.0,

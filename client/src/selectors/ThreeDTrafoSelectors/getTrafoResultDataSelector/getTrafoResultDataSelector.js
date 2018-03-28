@@ -1,8 +1,8 @@
 import { createSelector } from 'reselect';
 import { getTargetSystemPoints } from '../getTrafoInputDataSelector/getTrafoInputDataSelector';
 
-const getTrafoParamsSelector = state => state.trafoResult;
-const getTrafoDifferenceSelector = state => state.trafoResultDifference.difference;
+const getTrafoParamsSelector = state => state.threeDTrafoResult;
+const getTrafoDifferenceSelector = state => state.threeDTrafoResultDifference.difference;
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
 
 export const getTrafoParams = createSelector(

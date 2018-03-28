@@ -102,7 +102,7 @@ class ThreeDTrafoInputContainer extends Component {
 
   /**
    * Closes the Modal-window
-   * @memberof ChebyshevCFInputContainer
+   * @memberof ThreeDTrafoInputContainer
    */
   closeModal = () => {
     this.setState({...this.state, notification: null});
@@ -110,7 +110,7 @@ class ThreeDTrafoInputContainer extends Component {
 
   /**
    * Decides wheter InfoPanel is displayed or not
-   * @memberof ChebyshevCFInputContainer
+   * @memberof ThreeDTrafoInputContainer
    */
   displayInfoPanel = () => {
     this.setState({...this.state, isInfoOpen: !this.state.isInfoOpen});

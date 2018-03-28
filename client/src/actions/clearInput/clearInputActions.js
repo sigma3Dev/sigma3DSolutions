@@ -15,14 +15,13 @@ export const clearTargetInput = () => ({
   receivedAt: Date.now(),
 });
 
-/** clears any input */
+/** clears any cheby input */
 export const clearChebyshevInput = () => ({
   type: CLEAR_CHEBYSHEV_INPUT,
   receivedAt: Date.now(),
 });
 
-//TODO: write test
-/** clears any input */
+/** clears any apply trafo input */
 export const clearApplyTrafoInput = () => ({
   type: CLEAR_APPLY_TRAFO_INPUT,
   receivedAt: Date.now(),

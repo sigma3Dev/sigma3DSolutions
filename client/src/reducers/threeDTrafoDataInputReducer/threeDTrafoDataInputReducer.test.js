@@ -11,7 +11,6 @@ import {
 } from '../../actions/clearInput/clearInputActions';
 import threeDTrafoDataInputReducer from './threeDTrafoDataInputReducer';
 
-//TODO: write rest of the tests
 describe('threeDTrafoDataInputReducer', () => {
   it('should handle CHECKBOX_UPDATE', () => {
     const state = {
@@ -58,6 +57,96 @@ describe('threeDTrafoDataInputReducer', () => {
     };
     const result = threeDTrafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
+  });
+  it('should handle PUSH_START_SYSTEM_COORDINATES', () => {
+    const state = {
+      startSystemPoints: []
+    };
+    const action = {
+      type: PUSH_START_SYSTEM_COORDINATES,
+      coords: [
+        {
+          x: 1,
+          y: 2,
+          z: 3
+        }
+      ]
+    };
+    const expectedState = {
+      startSystemPoints: [
+        {
+          x: 1,
+          y: 2,
+          z: 3
+        }
+      ]
+    };
+    const result = threeDTrafoDataInputReducer(state, action);
+    expect(result).toEqual(expectedState);
+  });
+  it('should handle PUSH_TARGET_SYSTEM_COORDINATES', () => {
+    const state = {
+      targetSystemPoints: []
+    };
+    const action = {
+      type: PUSH_TARGET_SYSTEM_COORDINATES,
+      coords: [
+        {
+          x: 1,
+          y: 2,
+          z: 3
+        }
+      ]
+    };
+    const expectedState = {
+      targetSystemPoints: [
+        {
+          x: 1,
+          y: 2,
+          z: 3
+        }
+      ]
+    };
+    const result = threeDTrafoDataInputReducer(state, action);
+    expect(result).toEqual(expectedState);
+  });
+  it('should handle CLEAR_START_INPUT', () => {
+    const state = {
+      startSystemPoints: [
+        {
+          x: 1,
+          y: 2,
+          z: 3
+        }
+      ]
+    };
+    const action = {
+      type: CLEAR_START_INPUT
+    };
+    const expectedState = {
+      startSystemPoints: []
+    };
+    const result = threeDTrafoDataInputReducer(state, action);
+    expect(result).toEqual(expectedState); 
+  });
+  it('should handle CLEAR_TARGET_INPUT', () => {
+    const state = {
+      targetSystemPoints: [
+        {
+          x: 1,
+          y: 2,
+          z: 3
+        }
+      ]
+    };
+    const action = {
+      type: CLEAR_TARGET_INPUT
+    };
+    const expectedState = {
+      targetSystemPoints: []
+    };
+    const result = threeDTrafoDataInputReducer(state, action);
+    expect(result).toEqual(expectedState); 
   });
 });
 

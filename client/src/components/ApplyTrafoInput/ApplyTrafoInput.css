@@ -15,10 +15,16 @@
 }
 
 .apply-trafo h1 {
-  font-size: 3.0em;
-  border-bottom: 3px solid #0375ba;
+  width: 30vw;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 3px solid #0270a5;
   padding-bottom: 5px;
-  margin: 30px 0 60px;
+  margin: 20px 45px;
+}
+
+.apply-trafo h1 .info-btn {
+  font-size: 0.6em;
 }
 
 .apply-trafo .input-area {

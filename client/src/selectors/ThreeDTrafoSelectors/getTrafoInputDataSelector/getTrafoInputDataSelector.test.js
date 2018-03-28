@@ -7,7 +7,7 @@ import {
 describe('getTrafoInputDataSelector Used By ThreeDTrafoInputContainer', () => {
   it('getStartSystemPoints', () => {
     const state = {
-      trafoDataInput: {
+      threeDTrafoDataInput: {
         startSystemPoints: [
           {
             x: 1.0,
@@ -39,7 +39,7 @@ describe('getTrafoInputDataSelector Used By ThreeDTrafoInputContainer', () => {
   });
   it('getTargetSystemPoints', () => {
     const state = {
-      trafoDataInput: {
+      threeDTrafoDataInput: {
         targetSystemPoints: [
           {
             x: 1.0,
@@ -83,7 +83,7 @@ describe('getTrafoInputDataSelector Used By ThreeDTrafoInputContainer', () => {
   });
   it('getListOfUsedCoords', () => {
     const state = {
-      trafoDataInput: {
+      threeDTrafoDataInput: {
         targetSystemPoints: [
           {
             x: 1.0,

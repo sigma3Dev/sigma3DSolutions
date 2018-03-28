@@ -6,13 +6,20 @@ import {
   CLEAR_APPLY_TRAFO_INPUT,
 } from '../../actions/clearInput/clearInputActions';
 
+import {
+  SUBMIT_COORDS_SUCCESS,
+} from '../../actions/submitCoords/submitCoordsActions';
+
+import {
+  CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD
+} from '../../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
+
 /** holds the initial transform data input */
 const initialTrafoData = {
   params: {},
   points: [],
 }
 
-//TODO: write tests
 /**
  * Handles all kinds of apply trafo actions
  * @param {Object} state - current transformation data state
@@ -30,6 +37,19 @@ function applyTrafo(state = initialTrafoData, action) {
       return {
         ...state,
         points: []
+      }
+    case SUBMIT_COORDS_SUCCESS:
+      return {
+        ...state,
+        params: action.response.data.result
+      }
+    case CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD:
+      return {
+        ...state,
+        params: {
+          ...state.params,
+          [action.name]: action.val
+        }
       }
     default:
       return state;
