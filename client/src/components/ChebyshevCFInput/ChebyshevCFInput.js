@@ -1,7 +1,6 @@
 import React from 'react';
 import {FormattedMessage} from 'react-intl';
 import PointsInput from '../PointsInput/PointsInput';
-// hier die richtige component noch einsetzen und unten einfügen??
 import PointsInputTable3D6W from '../PointsInputTable3D6W/PointsInputTable3D6W';
 import SubmitBtn from '../SubmitBtn/SubmitBtn';
 import Sidebar from '../Sidebar/Sidebar';

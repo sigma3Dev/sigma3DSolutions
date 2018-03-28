@@ -1,6 +1,6 @@
 import { PUSH_CHEBYSHEV_CIRCLE_FIT_COORDINATES } from '../../actions/pushChebyshevCircleFitCoords/pushChebyshevCircleFitCoordsActions';
 
-import { CLEAR_INPUT } from '../../actions/clearInput/clearInputActions';
+import { CLEAR_CHEBYSHEV_INPUT } from '../../actions/clearInput/clearInputActions';
 
 /* Holds the initial ChebyshevCircleFit data input. */
 const initialChebyshevCircleFitData = {
@@ -20,7 +20,7 @@ function chebyshevCircleFitDataInput(state = initialChebyshevCircleFitData, acti
       ...state,
       circlePoints: action.coords,
     }
-    case CLEAR_INPUT:
+    case CLEAR_CHEBYSHEV_INPUT:
       return {
         ...state,
         circlePoints: [],

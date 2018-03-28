@@ -1,6 +1,7 @@
 .points-table * {
   font-size: 1.02em;
   font-family: Roboto;
+  text-align: center;
 }
 
 .points-table {

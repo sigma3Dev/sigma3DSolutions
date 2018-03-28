@@ -1,0 +1,55 @@
+.cheby-result-presentation-drawing {
+  stroke: black;
+  stroke-width: 3; 
+  padding: 20px;
+  height: 60%;
+}
+
+.cheby-result-presentation-drawing .line-cheby-cf {
+  stroke-width: 3;
+  stroke-dasharray: 3,10; 
+  stroke-linecap:square;
+}
+
+.cheby-exterior-circle {
+  fill: #E5E36E;
+  fill: #F0F0CA;
+}
+
+.cheby-interior-circle {
+  fill: white;
+}
+
+.chebychev-circle {
+  stroke-width: 3;
+  stroke-dasharray: 5,20; 
+  stroke-linecap: round;
+  fill: none;
+}
+
+.cheby-points {
+  stroke: black;
+  stroke-width: 1; 
+}
+
+.cheby-circle-points {
+  fill:none;
+  stroke: red;
+  stroke-width: 1; 
+}
+
+.cheby-result-presentation-drawing text.cheby-line-text-radius {
+  font-family: Roboto;
+  font-size: 25px;
+  fill: #0D731D;
+  font-weight: bold;
+  stroke:none;
+}
+
+.cheby-result-presentation-drawing text.cheby-line-text-chebyDist {
+  font-family: Roboto;
+  font-size: 25px;
+  fill: #03C4F9;
+  font-weight: bold;
+  stroke:none;
+}

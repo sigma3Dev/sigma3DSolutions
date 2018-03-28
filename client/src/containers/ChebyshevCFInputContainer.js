@@ -6,7 +6,7 @@ import ChebyshevCFInput from '../components/ChebyshevCFInput/ChebyshevCFInput';
 import { pushChebyshevCircleFitCoords } from '../actions/pushChebyshevCircleFitCoords/pushChebyshevCircleFitCoordsActions';
 import { getCirclePoints} from '../selectors/ChebyshevCircleFitSelector/getChebyshevCircleFitInputDataSelector/getChebyshevCircleFitInputDataSelector';
 import { submitChebyshevCircleFitCoords} from '../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
-import { clearInput} from '../actions/clearInput/clearInputActions';
+import { clearChebyshevInput} from '../actions/clearInput/clearInputActions';
 import InfoModal from '../components/InfoModal/InfoModal';
 
 var cdi = require('coordinatedataimporter');
@@ -14,7 +14,7 @@ var cdi = require('coordinatedataimporter');
 const mapDispatchToProps = dispatch => ({
   OnPushChebyshevCircleFitCoords: (file) => dispatch(pushChebyshevCircleFitCoords(file)),
   onSubmitChebyshevCircleFitCoords: () => dispatch(submitChebyshevCircleFitCoords()),
-  onClearInput: () => dispatch(clearInput()),
+  onclearChebyshevInput: () => dispatch(clearChebyshevInput()),
 });
 
 const mapStateToProps = (state, props) => ({
@@ -35,7 +35,6 @@ class ChebyshevCFInputContainer extends Component {
    * @param {Object} props 
    * @memberof ChebyshevCFInputContainer
    */
-  // kontruktor erklären!!!!!!!!!!!!!!!!!!!!!!!!!
   constructor() {
     super();
     this.state = {
@@ -44,11 +43,11 @@ class ChebyshevCFInputContainer extends Component {
     }
     this.parseCoords = this.parseCoords.bind(this);
     this.submitChebyshevCircleFitCoords = this.submitChebyshevCircleFitCoords.bind(this);
-    this.clearInput = this.clearInput.bind(this);
+    this.clearChebyshevInput = this.clearChebyshevInput.bind(this);
   }
 
   /**
-   * Uses cdi module to transform .txt file into an array of start points
+   * Uses cdi module to transform .txt file into an array of circle points
    * @param {*} file - .txt file with point coordinates
    * @memberof ChebyshevCFInputContainer
    */
@@ -59,9 +58,9 @@ class ChebyshevCFInputContainer extends Component {
   }
 
   /**
-   * Closes the Modal-window
-   * @memberof ChebyshevCFInputContainer
-   */
+  * Closes the Modal-window
+  * @memberof ChebyshevCFInputContainer
+  */
   closeModal = () => {
     this.setState({...this.state, notification: null});
   }
@@ -74,7 +73,7 @@ class ChebyshevCFInputContainer extends Component {
     this.setState({...this.state, isInfoOpen: !this.state.isInfoOpen});
   }
 
-    /**
+  /**
    * Handles coords submit, navigates to "result" page
    * @memberof ChebyshevCFInputContainer
    */
@@ -104,10 +103,9 @@ class ChebyshevCFInputContainer extends Component {
    * deletes all points, updates input display
    * @memberof ChebyshevCFInputContainer
    */
-  clearInput = () => {
-    this.props.onClearInput();
+  clearChebyshevInput = () => {
+    this.props.onclearChebyshevInput();
   }
-// worauf bezeiht sich hier das this?????????????
   render() {
     const infoPanelText=(
       <FormattedMessage
@@ -133,7 +131,7 @@ class ChebyshevCFInputContainer extends Component {
           circlePoints={ this.props.circlePoints }
           handleInfoClick={ this.displayInfoPanel }
           handleSubmitClick={ this.submitChebyshevCircleFitCoords }
-          handleDeleteClick= { this.clearInput }
+          handleDeleteClick= { this.clearChebyshevInput }
           isInfoOpen={ this.state.isInfoOpen }
           infoPanelText={ infoPanelText }
         />

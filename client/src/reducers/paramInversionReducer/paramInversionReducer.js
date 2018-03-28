@@ -1,8 +1,4 @@
 import {
-  CLEAR_INPUT,
-} from '../../actions/clearInput/clearInputActions';
-
-import {
   SUBMIT_PARAM_INVERSION_COORDS_SUCCESS,
 } from '../../actions/paramInversionCoords/paramInversionCoordsActions';
 
@@ -37,18 +33,6 @@ function paramInversion(state = initialParamInversionData, action) {
         q2: action.response.data.result.q2,
         q3: action.response.data.result.q3,
         m: action.response.data.result.m,
-      };
-    case CLEAR_INPUT:
-      return {
-        ...state,
-        tx: 0,
-        ty: 0,
-        tz: 0,
-        q0: 0,
-        q1: 0,
-        q2: 0,
-        q3: 0,
-        m: 0
       }
     default:
       return state;
