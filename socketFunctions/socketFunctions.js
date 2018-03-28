@@ -50,7 +50,7 @@ const threeDTrafoDifferenceSendToSocket = (params, callback) => {
   let differences = [];
 
   let socket = getWebSocket().then(function(socket) {
-    startPoints.map((point, i) => {
+    startPoints.forEach((point, i) => {
       globalIdCounter++;
       const objDifference = comm.applyTransformation(point, trafoParams, globalIdCounter);
       socket.send(objDifference);
@@ -59,7 +59,7 @@ const threeDTrafoDifferenceSendToSocket = (params, callback) => {
         const response = JSON.parse(e.data).result;
         calculatedTarget.push(response);
         if (calculatedTarget.length === startPoints.length) {
-          calculatedTarget.map((target, i) => {
+          calculatedTarget.forEach((target, i) => {
             differences.push({});
             differences[i].vx = targetPoints[i].x - target.x;
             differences[i].vy = targetPoints[i].y - target.y;
