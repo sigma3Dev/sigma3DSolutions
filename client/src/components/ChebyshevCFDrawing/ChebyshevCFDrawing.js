@@ -39,7 +39,7 @@ const ChebyshevCFDrawing = ({
       let xVector=xShifted-250;
       let yVector=yShifted-250;
       let distanceToCentralPoint = Math.sqrt(xVector*xVector+yVector*yVector);
-      let diffToCehbyCircle =distanceToCentralPoint-200; // 200 = radius defined by svg-circle
+      let diffToChehbyCircle =distanceToCentralPoint-200; // 200 = radius defined by svg-circle
       let scaleChebyDist=(80/chebyDist)/scaleCircle;
       // normalized vector with length of 1
       let xNorm=xVector/distanceToCentralPoint;
@@ -47,16 +47,16 @@ const ChebyshevCFDrawing = ({
       // xCircle and yCircle are the coordinates which are located on the Chebysehv-circle
       let xCircle=0; 
       let yCircle=0;
-      if (diffToCehbyCircle>0.001){
-        xCircle=xShifted-diffToCehbyCircle*xNorm;
-        yCircle=yShifted-diffToCehbyCircle*yNorm;
-        xShifted=xCircle+diffToCehbyCircle*scaleChebyDist*xNorm;
-        yShifted=yCircle+diffToCehbyCircle*scaleChebyDist*yNorm; 
-      } else if (diffToCehbyCircle<-0.001){
-        xCircle=xShifted-diffToCehbyCircle*xNorm;
-        yCircle=yShifted-diffToCehbyCircle*yNorm;
-        xShifted=xCircle+diffToCehbyCircle*scaleChebyDist*xNorm;
-        yShifted=yCircle+diffToCehbyCircle*scaleChebyDist*yNorm;
+      if (diffToChehbyCircle>0.001){
+        xCircle=xShifted-diffToChehbyCircle*xNorm;
+        yCircle=yShifted-diffToChehbyCircle*yNorm;
+        xShifted=xCircle+diffToChehbyCircle*scaleChebyDist*xNorm;
+        yShifted=yCircle+diffToChehbyCircle*scaleChebyDist*yNorm; 
+      } else if (diffToChehbyCircle<-0.001){
+        xCircle=xShifted-diffToChehbyCircle*xNorm;
+        yCircle=yShifted-diffToChehbyCircle*yNorm;
+        xShifted=xCircle+diffToChehbyCircle*scaleChebyDist*xNorm;
+        yShifted=yCircle+diffToChehbyCircle*scaleChebyDist*yNorm;
       }
 
       if(index===0){
@@ -78,7 +78,7 @@ const ChebyshevCFDrawing = ({
         <line  x1="10"  y1="8.5" x2="10" y2="50" fill="black"/>
         <line  x1="10"  y1="50" x2="5" y2="40" fill="black"/>
         <line  x1="10"  y1="50" x2="15" y2="40" fill="black"/>
-        <text x="15" y="50" stroke="none"s>+Y</text>
+        <text x="15" y="50" stroke="none">+Y</text>
         <circle cx="250" cy="250" r="240" className="cheby-exterior-circle"/>
         <circle cx="250" cy="250" r="160" className="cheby-interior-circle"/>
         <circle cx="250" cy="250" r="200" className="chebychev-circle"/>
