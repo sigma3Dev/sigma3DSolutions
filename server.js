@@ -37,7 +37,6 @@ app.post('/calculate-trafo', (req, res) => {
     if (isOk) {
       res.status(200).send(response);
     } else {
-      console.log(response);
       res.status(500).send(response);
     } 
   });
@@ -54,7 +53,6 @@ app.post('/param-inversion', (req, res) => {
       res.status(200).send(response);
     } else {
       console.log(response);
-      res.status(500).send(response);
     } 
   });
 });
@@ -74,7 +72,6 @@ app.post('/calculate-trafo-difference', (req, res) => {
     if (isOk) {
       res.status(200).send(response);
     } else {
-      console.log(response);
       res.status(500).send(response);
     } 
   });

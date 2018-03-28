@@ -1,8 +1,9 @@
 const comm        = require('s3d-fitting-commands');
-
-const WebSocket = require('ws');
+const WebSocket   = require('ws');
 
 let socket = null;
+
+let globalIdCounter = 0;
 
 let getWebSocket = () => (new Promise((resolve, reject) => {
   if(socket === null || socket.readyState !== 1) {
@@ -13,18 +14,16 @@ let getWebSocket = () => (new Promise((resolve, reject) => {
     socket.onerror = function(err) {
       reject(err);
     };
-    socket.onclose = function(err) {
-      console.log("WEBSOCKET ZUUUUUUU")
-    };
   } else {
     resolve(socket);
   }
 }));
 
 const threeDTrafoSendToSocket = (coords, callback) => {
+  globalIdCounter++;
   const startPoints = coords.startSystemPoints;
   const targetPoints = coords.targetSystemPoints;
-  const threeDTrafoRequest = comm.transformation3D6W(startPoints, targetPoints, 1);
+  const threeDTrafoRequest = comm.transformation3D6W(startPoints, targetPoints, globalIdCounter);
 
   let socket = getWebSocket().then(function(socket) {
     socket.onerror = error => {
@@ -43,7 +42,8 @@ const threeDTrafoSendToSocket = (coords, callback) => {
 }
 
 const paramInversionSendToSocket = (coords, callback) => {
-  const inversionRequest = comm.invertTransformationParameters(coords, 1);
+  globalIdCounter++;
+  const inversionRequest = comm.invertTransformationParameters(coords, globalIdCounter);
 
   let socket = getWebSocket().then(function(socket) {
     socket.onerror = error => {
@@ -72,7 +72,8 @@ const threeDTrafoDifferenceSendToSocket = (params, callback) => {
 
   let socket = getWebSocket().then(function(socket) {
     startPoints.map((point, i) => {
-      const objDifference = comm.applyTransformation(point, trafoParams, 1);
+      globalIdCounter++;
+      const objDifference = comm.applyTransformation(point, trafoParams, globalIdCounter);
       socket.send(objDifference);
 
       socket.onmessage = e => {
