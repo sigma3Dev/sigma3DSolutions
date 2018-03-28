@@ -25,6 +25,19 @@ const ErrorScreen = ({
         />
       </h1>
       <p className="error-message">{ error }</p>
+      <div className="s3d-info">
+        <FormattedMessage
+          id="ErrorScreen.label.s3dinfo"
+          defaultMessage={`
+            Maybe you don't have the service for mathematical operations by sigma3D running.\n\n
+            If you don't own the service, please contact sigma3D:
+          `}
+        />
+        <div className="s3d-contact-info">       
+          <p>+49 (0) 2542 - 91898 0</p>
+          <a href="mailto:info@sigma3d.de">info@sigma3d.de</a>
+        </div>
+      </div>
       <BackToInputBtn handleClick={ handleClick } />
       <Sidebar />
     </div>

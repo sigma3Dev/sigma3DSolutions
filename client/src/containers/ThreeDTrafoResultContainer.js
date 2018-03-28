@@ -11,12 +11,12 @@ import {
   getTrafoDifference,
   getIsCalculating, 
   getTransformedStartPoints,
-}                           from '../selectors/TrafoSelectors/getTrafoResultDataSelector/getTrafoResultDataSelector';
+}                           from '../selectors/ThreeDTrafoSelectors/getTrafoResultDataSelector/getTrafoResultDataSelector';
 import { 
   getStartSystemPoints,
   getTargetSystemPoints,
   getListOfUsedCoords
-}                           from '../selectors/TrafoSelectors/getTrafoInputDataSelector/getTrafoInputDataSelector';
+}                           from '../selectors/ThreeDTrafoSelectors/getTrafoInputDataSelector/getTrafoInputDataSelector';
 import {
   calculateTrafoDifference
 }                           from '../actions/submitCoords/submitCoordsActions';

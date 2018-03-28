@@ -4,12 +4,12 @@ import {
 
 import {
   PUSH_START_SYSTEM_COORDINATES, 
-  PUSH_TARGET_SYSTEM_COORDINATES
+  PUSH_TARGET_SYSTEM_COORDINATES,
 } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
 
 import {
   CLEAR_START_INPUT,
-  CLEAR_TARGET_INPUT
+  CLEAR_TARGET_INPUT,
 } from '../../actions/clearInput/clearInputActions';
 
 /* Holds the initial transformation data input. */

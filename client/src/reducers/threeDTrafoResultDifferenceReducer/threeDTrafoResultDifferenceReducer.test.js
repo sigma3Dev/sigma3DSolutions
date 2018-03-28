@@ -1,7 +1,7 @@
 import { CALCULATE_TRAFO_DIFFERENCE_SUCCESS } from '../../actions/submitCoords/submitCoordsActions';
-import trafoResultDifferenceReducer from './trafoResultDifferenceReducer';
+import threeDTrafoResultDifferenceReducer from './threeDTrafoResultDifferenceReducer';
 
-describe('trafoResultDifferenceReducer', () => {
+describe('threeDTrafoResultDifferenceReducer', () => {
   it('should handle CALCULATE_TRAFO_DIFFERENCE_SUCCESS', () => {
     const state = [];
     const action = {
@@ -37,7 +37,7 @@ describe('trafoResultDifferenceReducer', () => {
         }
       ]
     };
-    const result = trafoResultDifferenceReducer(state, action);
+    const result = threeDTrafoResultDifferenceReducer(state, action);
     expect(result).toEqual(expectedState);
   });
 });

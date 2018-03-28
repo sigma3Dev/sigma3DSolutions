@@ -1,0 +1,55 @@
+.apply-trafo {
+  width: 68%;
+  height: 100%;
+  margin-left: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 12px;
+  font-family: Roboto;
+}
+
+.apply-trafo * {
+  text-align: center;
+}
+
+.apply-trafo h1 {
+  font-size: 3.0em;
+  border-bottom: 3px solid #0375ba;
+  padding-bottom: 5px;
+  margin: 30px 0 60px;
+}
+
+.apply-trafo .input-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 60vw;
+}
+
+.apply-trafo .dropzone {
+  height: 290px;
+  padding: 50px;
+  width: 100%;
+}
+
+.apply-trafo .trafo-params-input {
+  width: 30%;
+  font-size: 1.3em;
+}
+
+.apply-trafo .points-table {
+  margin-top: 15px;
+  width: 50vw;
+}
+
+.apply-trafo input {
+  margin-left: 10px;
+}
+
+.apply-trafo form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}

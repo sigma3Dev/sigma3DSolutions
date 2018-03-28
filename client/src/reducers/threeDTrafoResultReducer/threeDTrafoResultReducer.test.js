@@ -1,7 +1,7 @@
 import { SUBMIT_COORDS_SUCCESS } from '../../actions/submitCoords/submitCoordsActions';
-import trafoResultReducer from './trafoResultReducer';
+import threeDTrafoResultReducer from './threeDTrafoResultReducer';
 
-describe('trafoResultReducer', () => {
+describe('threeDTrafoResultReducer', () => {
   it('should handle SUBMIT_COORDS_SUCCESS', () => {
     const state = {
       tx: 0,
@@ -37,7 +37,7 @@ describe('trafoResultReducer', () => {
       q2:-0.0006079507786298357,
       q3:0.09896921012577276
     };
-    const result = trafoResultReducer(state, action);
+    const result = threeDTrafoResultReducer(state, action);
     expect(result).toEqual(expectedState);
   });
 });

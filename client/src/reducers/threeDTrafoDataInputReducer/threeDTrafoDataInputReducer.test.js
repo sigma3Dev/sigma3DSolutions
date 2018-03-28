@@ -9,9 +9,10 @@ import {
   CLEAR_START_INPUT,
   CLEAR_TARGET_INPUT
 } from '../../actions/clearInput/clearInputActions';
-import trafoDataInputReducer from './trafoDataInputReducer';
+import threeDTrafoDataInputReducer from './threeDTrafoDataInputReducer';
 
-describe('trafoDataInputReducer', () => {
+//TODO: write rest of the tests
+describe('threeDTrafoDataInputReducer', () => {
   it('should handle CHECKBOX_UPDATE', () => {
     const state = {
       targetSystemPoints: [
@@ -55,7 +56,7 @@ describe('trafoDataInputReducer', () => {
         }
       ]
     };
-    const result = trafoDataInputReducer(state, action);
+    const result = threeDTrafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
 });
