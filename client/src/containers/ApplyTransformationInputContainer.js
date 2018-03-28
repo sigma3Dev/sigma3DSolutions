@@ -9,6 +9,9 @@ import {
 import {
   changeApplyTrafoParamInputField
 }                           from '../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
+import { 
+  submitApplyTrafoValues
+}                           from '../actions/submitApplyTransformationValuesActions/submitApplyTransformationValuesActions';
 import {
   getParams,
   getPoints
@@ -20,12 +23,13 @@ const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
   onPushCoordinates: (file) => dispatch(pushCoordinates(file)),
+  onSubmitValues: (values) => dispatch(submitApplyTrafoValues(values)),
   onClearApplyTrafoInput: () => dispatch(clearApplyTrafoInput()),
   onChangeParamInputField: (name, val) => dispatch(changeApplyTrafoParamInputField(name, val)),
 });
 
 const mapStateToProps = (state, props) => ({
-  params: getParams(state),
+  transformation: getParams(state),
   points: getPoints(state),
 });
 
@@ -113,10 +117,11 @@ class ApplyTransformationInputContainer extends Component {
         />)
       })
     } else {
-      // const values = {
-      //   values: this.state.values,
-      // }
-      // this.props.onSubmitCoords(coords);
+      const values = {
+        points: this.props.points,
+        transformation: this.props.transformation,
+      }
+      this.props.onSubmitValues(values);
       this.props.history.push('/transformations/transform/result');
     }
   };
@@ -148,7 +153,7 @@ class ApplyTransformationInputContainer extends Component {
           handleDeleteDataInput={ this.clearApplyTrafoInput }
           handleInfoClick={ this.displayInfoPanel }
           isInfoOpen={ this.state.isInfoOpen }
-          params={ this.props.params }
+          transformation={ this.props.transformation }
           points={ this.props.points }
           infoPanelText={ infoPanelText }
         />
@@ -160,7 +165,8 @@ class ApplyTransformationInputContainer extends Component {
 ApplyTransformationInputContainer.propTypes = {
   onPushCoordinates: PropTypes.func.isRequired,
   onClearApplyTrafoInput: PropTypes.func.isRequired,
-  params: PropTypes.objectOf(PropTypes.number).isRequired,
+  transformation: PropTypes.objectOf(PropTypes.number).isRequired,
+  points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ApplyTransformationInputContainer);

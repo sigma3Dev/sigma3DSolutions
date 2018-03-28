@@ -35,7 +35,11 @@ const ErrorScreen = ({
         />
         <div className="s3d-contact-info">       
           <p>+49 (0) 2542 - 91898 0</p>
-          <a href="mailto:info@sigma3d.de">info@sigma3d.de</a>
+          <div className="links">
+            <a href="mailto:info@sigma3d.de">info@sigma3d.de</a>
+            <p>  |  </p>
+            <a href="http://sigma3d.de/">http://www.sigma3d.de</a>
+          </div>
         </div>
       </div>
       <BackToInputBtn handleClick={ handleClick } />

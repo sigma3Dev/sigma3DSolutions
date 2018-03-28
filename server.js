@@ -99,6 +99,19 @@ app.post('/calculate-chebyshev-circle-fit', (req, res) => {
   });
 });
 
+app.post('/apply-trafo', (req, res) => {
+  //TODO: remove console.log
+  console.log(req.body.values);
+  if (
+    !req.body.hasOwnProperty('values') ||
+    !req.body.values.hasOwnProperty('point') ||
+    !req.body.values.hasOwnProperty('transformation')
+  ) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  };
+})
+
 app.listen(app.get('port'), () => {
   console.log('Server is running...');
 });

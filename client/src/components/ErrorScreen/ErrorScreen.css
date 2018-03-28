@@ -35,3 +35,7 @@
   font-size: 0.8em;
   margin-top: 30px;
 }
+
+.error-screen .s3d-info .s3d-contact-info .links * {
+  display: inline;
+}

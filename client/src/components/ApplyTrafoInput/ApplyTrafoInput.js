@@ -20,7 +20,7 @@ const ApplyTrafoInput = ({
   isInfoOpen,
   infoPanelText,
   points,
-  params,
+  transformation,
 }) => {
   const tableRows = points.map((line, i) => {
     return (
@@ -55,7 +55,7 @@ const ApplyTrafoInput = ({
               Tx:
               <input 
                 type="text" 
-                value={params.tx ? params.tx : (0).toFixed(2)} 
+                value={transformation.tx ? transformation.tx : (0).toFixed(2)} 
                 onChange={handleChange} 
                 name="tx" 
                 autoComplete="off" />
@@ -64,7 +64,7 @@ const ApplyTrafoInput = ({
               Ty:
               <input 
                 type="text" 
-                value={params.ty ? params.ty : (0).toFixed(2)} 
+                value={transformation.ty ? transformation.ty : (0).toFixed(2)} 
                 onChange={handleChange} 
                 name="ty" 
                 autoComplete="off" />
@@ -73,7 +73,7 @@ const ApplyTrafoInput = ({
               Tz:
               <input 
                 type="text" 
-                value={params.tz ? params.tz : (0).toFixed(2)} 
+                value={transformation.tz ? transformation.tz : (0).toFixed(2)} 
                 onChange={handleChange} 
                 name="tz" 
                 autoComplete="off" />
@@ -82,7 +82,7 @@ const ApplyTrafoInput = ({
               Q0:
               <input 
                 type="text" 
-                value={params.q0 ? params.q0 : (0).toFixed(6)} 
+                value={transformation.q0 ? transformation.q0 : (0).toFixed(6)} 
                 onChange={handleChange} 
                 name="q0" 
                 autoComplete="off" />
@@ -91,7 +91,7 @@ const ApplyTrafoInput = ({
               Q1:
               <input 
                 type="text" 
-                value={params.q1 ? params.q1 : (0).toFixed(6)} 
+                value={transformation.q1 ? transformation.q1 : (0).toFixed(6)} 
                 onChange={handleChange} 
                 name="q1" 
                 autoComplete="off" />
@@ -100,7 +100,7 @@ const ApplyTrafoInput = ({
               Q2:
               <input 
                 type="text" 
-                value={params.q2 ? params.q2 : (0).toFixed(6)} 
+                value={transformation.q2 ? transformation.q2 : (0).toFixed(6)} 
                 onChange={handleChange} 
                 name="q2" 
                 autoComplete="off" />
@@ -109,7 +109,7 @@ const ApplyTrafoInput = ({
               Q3:
               <input 
                 type="text" 
-                value={params.q3 ? params.q3 : (0).toFixed(6)} 
+                value={transformation.q3 ? transformation.q3 : (0).toFixed(6)} 
                 onChange={handleChange} 
                 name="q3" 
                 autoComplete="off" />
@@ -118,7 +118,7 @@ const ApplyTrafoInput = ({
               M:
               <input 
                 type="text" 
-                value={params.m ? params.m : (1).toFixed(6)} 
+                value={transformation.m ? transformation.m : (1).toFixed(6)} 
                 onChange={handleChange} 
                 name="m" 
                 autoComplete="off" />
@@ -164,7 +164,7 @@ ApplyTrafoInput.propTypes = {
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
   points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
-  params: PropTypes.objectOf(PropTypes.number).isRequired,
+  transformation: PropTypes.objectOf(PropTypes.number).isRequired,
 };
 
 export default ApplyTrafoInput;

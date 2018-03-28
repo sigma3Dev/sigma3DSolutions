@@ -16,7 +16,7 @@ import {
 
 /** holds the initial transform data input */
 const initialTrafoData = {
-  params: {},
+  transformation: {},
   points: [],
 }
 
@@ -41,13 +41,13 @@ function applyTrafo(state = initialTrafoData, action) {
     case SUBMIT_COORDS_SUCCESS:
       return {
         ...state,
-        params: action.response.data.result
+        transformation: action.response.data.result
       }
     case CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD:
       return {
         ...state,
-        params: {
-          ...state.params,
+        transformation: {
+          ...state.transformation,
           [action.name]: action.val
         }
       }

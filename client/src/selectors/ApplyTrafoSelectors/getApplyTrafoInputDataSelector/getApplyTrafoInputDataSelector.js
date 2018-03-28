@@ -1,8 +1,7 @@
 import { createSelector } from 'reselect';
 
 const getPointsSelector = state => state.applyTrafoDataInput.points;
-const getParamsSelector = state => state.applyTrafoDataInput.params;
-
+const getParamsSelector = state => state.applyTrafoDataInput.transformation;
 export const getPoints = createSelector(
   getPointsSelector, points => points 
 );

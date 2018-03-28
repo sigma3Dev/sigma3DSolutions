@@ -120,6 +120,11 @@ const ChebyCircleFitSendToSocket = (coords, callback) => {
   });
 }
 
+const applyTransformation = (values, callback) => {
+  const points = values.points;
+  const trafoParams = values.transformation;
+}
+
 module.exports = {
   threeDTrafoSendToSocket,
   paramInversionSendToSocket,
