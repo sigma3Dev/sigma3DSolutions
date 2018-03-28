@@ -6,3 +6,5 @@ cache:
   - node_modules
 script:
   - cd client && npm install && npm test && npm run deploy
+deploy:
+  github-token: $GITHUB_TOKEN
