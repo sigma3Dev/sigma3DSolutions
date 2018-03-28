@@ -41,27 +41,6 @@ const threeDTrafoSendToSocket = (coords, callback) => {
   });
 }
 
-const paramInversionSendToSocket = (coords, callback) => {
-  globalIdCounter++;
-  const inversionRequest = comm.invertTransformationParameters(coords, globalIdCounter);
-
-  let socket = getWebSocket().then(function(socket) {
-    socket.onerror = error => {
-      callback(error.error, false)
-    }
-  
-    socket.onmessage = e => {
-      const response = e.data;
-      callback(response, true)
-    }
-
-    socket.send(inversionRequest);
-  }).catch(function(err) {
-    callback(err, false)
-  });
-
-}
-
 const threeDTrafoDifferenceSendToSocket = (params, callback) => {
   const startPoints = params.startPoints;
   const targetPoints = params.targetPoints;
@@ -100,9 +79,50 @@ const threeDTrafoDifferenceSendToSocket = (params, callback) => {
   });
 }
 
+const paramInversionSendToSocket = (coords, callback) => {
+  globalIdCounter++;
+  const inversionRequest = comm.invertTransformationParameters(coords, globalIdCounter);
+
+  let socket = getWebSocket().then(function(socket) {
+    socket.onerror = error => {
+      callback(error.error, false)
+    }
+  
+    socket.onmessage = e => {
+      const response = e.data;
+      callback(response, true)
+    }
+
+    socket.send(inversionRequest);
+  }).catch(function(err) {
+    callback(err, false)
+  });
+
+}
+
+const ChebyCircleFitSendToSocket = (coords, callback) => {
+  globalIdCounter++;
+  const ChebyCircleFitRequest = comm.fitCircle3DTscheby(coords, globalIdCounter);
+
+  let socket = getWebSocket().then(function(socket) {
+    socket.onerror = error => {
+      callback(error.error, false)
+    }
+  
+    socket.onmessage = e => {
+      const response = e.data;
+      callback(response, true)
+    }
+
+    socket.send(ChebyCircleFitRequest);
+  }).catch(function(err) {
+    callback(err, false)
+  });
+}
+
 module.exports = {
   threeDTrafoSendToSocket,
   paramInversionSendToSocket,
   threeDTrafoDifferenceSendToSocket,
-  getWebSocket,
+  ChebyCircleFitSendToSocket
 };

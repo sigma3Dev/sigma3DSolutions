@@ -22,6 +22,18 @@ describe('POST /calculate-trafo', () => {
   });
 });
 
+describe('POST /calculate-trafo-difference', () => {
+  it('returns an object and status code 400 upon wrong input', (done) => {
+    request(app)
+      .post('/calculate-trafo-difference')
+      .send({
+        wrongData: null
+      })
+      .expect('Content-Type', 'text/html; charset=utf-8')
+      .expect(400, done);
+  });
+});
+
 describe('POST /param-inversion', () => {
   it('returns a string and status code 400 upon wrong input', (done) => {
     request(app)
@@ -34,14 +46,14 @@ describe('POST /param-inversion', () => {
   });
 });
 
-describe('POST /calculate-trafo-difference', () => {
-  it('returns an object and status code 400 upon wrong input', (done) => {
+describe('POST /calculate-chebyshev-circle-fit', () => {
+  it('returns a string and status code 400 upon wrong input', (done) => {
     request(app)
-      .post('/calculate-trafo-difference')
+      .post('/calculate-chebyshev-circle-fit')
       .send({
         wrongData: null
       })
       .expect('Content-Type', 'text/html; charset=utf-8')
       .expect(400, done);
   });
-});
+})
