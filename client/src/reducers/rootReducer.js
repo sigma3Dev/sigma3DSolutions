@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux';
 import applyTrafoDataInputReducer from './applyTrafoDataInputReducer/applyTrafoDataInputReducer';
+import applyTrafoDataResultReducer from './applyTrafoDataResultReducer/applyTrafoDataResultReducer';
 import calculationStatusReducer from './calculationStatusReducer/calculationStatusReducer';
 import chebyshevCircleFitDataInputReducer from './chebyshevCircleFitDataInputReducer/chebyshevCircleFitDataInputReducer';
 import chebyshevCircleFitResultReducer from './chebyshevCircleFitResultReducer/chebyshevCircleFitResultReducer';
@@ -9,10 +10,10 @@ import threeDTrafoDataInputReducer from './threeDTrafoDataInputReducer/threeDTra
 import threeDTrafoResultReducer from './threeDTrafoResultReducer/threeDTrafoResultReducer';
 import threeDTrafoResultDifferenceReducer from './threeDTrafoResultDifferenceReducer/threeDTrafoResultDifferenceReducer';
 
-//TODO: create more specialized reducers
 /* root reducer */
 export default combineReducers({
   applyTrafoDataInput: applyTrafoDataInputReducer,
+  applyTrafoDataResult: applyTrafoDataResultReducer,
   calculationStatus: calculationStatusReducer,
   chebyshevCircleFitDataInput: chebyshevCircleFitDataInputReducer,
   chebyshevCircleFitResult: chebyshevCircleFitResultReducer,

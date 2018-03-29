@@ -49,7 +49,6 @@ export const submitCoordsFailure = (error) => ({
 /**
  * sends an axios request to the backend
  * @param {dispatchCallback} dispatch - callback that handles dispatching of the action
- * @param {getStateCallback} getState - callback that gets current state
  * @returns {Object} response from backend or error message
  */
 export const submitCoords = (coords) => (dispatch) => {

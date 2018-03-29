@@ -164,7 +164,7 @@ ApplyTrafoInput.propTypes = {
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
   points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
-  transformation: PropTypes.objectOf(PropTypes.number).isRequired,
+  transformation: PropTypes.objectOf(PropTypes.string).isRequired,
 };
 
 export default ApplyTrafoInput;

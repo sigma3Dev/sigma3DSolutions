@@ -1,15 +1,14 @@
-import React                        from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { 
-  FormattedMessage,
-}                                   from 'react-intl';
-import { CopyToClipboard }          from 'react-copy-to-clipboard';
-import Sidebar                      from '../Sidebar/Sidebar';
+import { FormattedMessage } from 'react-intl';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Sidebar from '../Sidebar/Sidebar';
 import CoordinateDifferenceBarGraph from '../CoordinateDifferenceBarGraph/CoordinateDifferenceBarGraph';
-import BackToInputBtn               from '../BackToInputBtn/BackToInputBtn';
+import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import './ThreeDTrafoResult.css';
 
 const GoClippy = require('react-icons/lib/go/clippy');
+
 const ClipboardIcon = React.createElement(GoClippy, null);
 
 /**
@@ -28,7 +27,7 @@ const ThreeDTrafoResult = ({
   translationDecimalPlaces,
   rotationDecimalPlaces,
 }) => {
-  const copyText = trafoParams.join(" ");
+  const copyText = trafoParams.join(' ');
   return (
     <div className="three-d-trafo-result">
       <h1>
@@ -47,7 +46,7 @@ const ThreeDTrafoResult = ({
             <th>Q1</th>
             <th>Q2</th>
             <th>Q3</th>
-            <th></th>
+            <th />
           </tr>
         </thead>
         <tbody>
@@ -74,7 +73,7 @@ const ThreeDTrafoResult = ({
               { trafoParams[6].toFixed(rotationDecimalPlaces) }
             </th>
             <th>
-              <CopyToClipboard text={ copyText }>
+              <CopyToClipboard text={copyText}>
                 <button className="copy" title="Copy to clipboard">
                   { ClipboardIcon }
                 </button>
@@ -83,20 +82,20 @@ const ThreeDTrafoResult = ({
           </tr>
         </tbody>
       </table>
-      <div className="download-link" onClick={handleDownloadClick}>
+      <button className="download-link" onClick={handleDownloadClick}>
         <FormattedMessage
           id="ThreeDTrafoResult.link.downloadFile"
           defaultMessage="Download transformed start points as .txt file"
         />
-      </div>
+      </button>
       <div className="bar-graph">
         <CoordinateDifferenceBarGraph values={trafoDifference} />
       </div>
-      <BackToInputBtn handleClick={ handleClick } />
+      <BackToInputBtn handleClick={handleClick} />
       <Sidebar />
     </div>
-  )
-}
+  );
+};
 
 ThreeDTrafoResult.propTypes = {
   trafoParams: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -105,6 +104,6 @@ ThreeDTrafoResult.propTypes = {
   handleDownloadClick: PropTypes.func.isRequired,
   translationDecimalPlaces: PropTypes.number.isRequired,
   rotationDecimalPlaces: PropTypes.number.isRequired,
-}
+};
 
 export default ThreeDTrafoResult;

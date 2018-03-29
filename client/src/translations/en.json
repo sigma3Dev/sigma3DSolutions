@@ -1,5 +1,6 @@
 {
   "ApplyTrafoInput.caption.applyTrafoHeader": "Apply Transformation",
+  "ApplyTrafoResult.label.caption": "Transformation Results",
   "AppSelectionBtn.caption.3Dtransformation": "3D-Transformation",
   "AppSelectionBtn.caption.chebyshev_circle_fit": "Chebyshev-Circle",
   "AppSelectionBtn.caption.paramInversion": "Paramater Inversion",

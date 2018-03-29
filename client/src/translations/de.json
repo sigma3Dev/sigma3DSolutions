@@ -1,5 +1,6 @@
 {
     "ApplyTrafoInput.caption.applyTrafoHeader": "Transformation anwenden",
+    "ApplyTrafoResult.label.caption": "Transformationsergebnisse",
     "AppSelectionBtn.caption.3Dtransformation": "3D-Transformation",
     "AppSelectionBtn.caption.chebyshev_circle_fit": "Tschebyscheff-Kreis",
     "AppSelectionBtn.caption.paramInversion": "Parameterinversion",

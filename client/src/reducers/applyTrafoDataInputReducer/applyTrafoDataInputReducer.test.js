@@ -1,21 +1,13 @@
-import {
-  PUSH_COORDINATES,
-} from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
-import {
-  CLEAR_APPLY_TRAFO_INPUT,
-} from '../../actions/clearInput/clearInputActions';
-import {
-  SUBMIT_COORDS_SUCCESS,
-} from '../../actions/submitCoords/submitCoordsActions';
-import {
-  CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD
-} from '../../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
+import { PUSH_COORDINATES } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import { CLEAR_APPLY_TRAFO_INPUT } from '../../actions/clearInput/clearInputActions';
+import { SUBMIT_COORDS_SUCCESS } from '../../actions/submitCoords/submitCoordsActions';
+import { CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD } from '../../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
 import applyTrafoDataInputReducer from './applyTrafoDataInputReducer';
 
 describe('applyTrafoDataInputReducer', () => {
   it('should handle PUSH_COORDINATES', () => {
     const state = {
-      points: []
+      points: [],
     };
     const action = {
       type: PUSH_COORDINATES,
@@ -23,26 +15,26 @@ describe('applyTrafoDataInputReducer', () => {
         {
           x: 1,
           y: 2,
-          z: 3
+          z: 3,
         }, {
           x: 4,
           y: 5,
-          z: 6
-        }
-      ]
+          z: 6,
+        },
+      ],
     };
     const expectedState = {
       points: [
         {
           x: 1,
           y: 2,
-          z: 3
+          z: 3,
         }, {
           x: 4,
           y: 5,
-          z: 6
-        }
-      ]
+          z: 6,
+        },
+      ],
     };
     const result = applyTrafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
@@ -53,26 +45,26 @@ describe('applyTrafoDataInputReducer', () => {
         {
           x: 1,
           y: 2,
-          z: 3
+          z: 3,
         }, {
           x: 4,
           y: 5,
-          z: 6
-        }
-      ]
+          z: 6,
+        },
+      ],
     };
     const action = {
-      type: CLEAR_APPLY_TRAFO_INPUT
+      type: CLEAR_APPLY_TRAFO_INPUT,
     };
     const expectedState = {
-      points:[]
-    };    
+      points: [],
+    };
     const result = applyTrafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
   it('should handle SUBMIT_COORDS_SUCCESS', () => {
     const state = {
-      params: {
+      transformation: {
         tx: 0,
         ty: 0,
         tz: 0,
@@ -81,7 +73,7 @@ describe('applyTrafoDataInputReducer', () => {
         q2: 0,
         q3: 0,
         m: 1,
-      }
+      },
     };
     const action = {
       type: SUBMIT_COORDS_SUCCESS,
@@ -96,12 +88,12 @@ describe('applyTrafoDataInputReducer', () => {
             q2: 0,
             q3: 0,
             m: 1,
-          }
-        }
-      }
+          },
+        },
+      },
     };
     const expectedState = {
-      params: {
+      transformation: {
         tx: 10,
         ty: 10,
         tz: 10,
@@ -110,14 +102,14 @@ describe('applyTrafoDataInputReducer', () => {
         q2: 0,
         q3: 0,
         m: 1,
-      }
+      },
     };
     const result = applyTrafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
   it('should handle CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD', () => {
     const state = {
-      params: {
+      transformation: {
         tx: 10,
         ty: 10,
         tz: 10,
@@ -126,15 +118,15 @@ describe('applyTrafoDataInputReducer', () => {
         q2: 0,
         q3: 0,
         m: 1,
-      }
+      },
     };
     const action = {
       type: CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD,
       name: 'tx',
-      val: 20
+      val: 20,
     };
     const expectedState = {
-      params: {
+      transformation: {
         tx: 20,
         ty: 10,
         tz: 10,
@@ -143,9 +135,9 @@ describe('applyTrafoDataInputReducer', () => {
         q2: 0,
         q3: 0,
         m: 1,
-      }
+      },
     };
     const result = applyTrafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-})
+});

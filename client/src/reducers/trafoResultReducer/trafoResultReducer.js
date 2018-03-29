@@ -19,7 +19,7 @@ const initialResultData = {
  * @returns {Object} state - updated State
  */
 function trafoResult(state = initialResultData, action) {
-  switch (action.type) {
+  switch(action.type) {
     case SUBMIT_COORDS_SUCCESS:
       return {
         ...state,

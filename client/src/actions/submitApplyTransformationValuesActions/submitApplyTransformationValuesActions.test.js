@@ -19,7 +19,7 @@ const mockStore = configureMockStore(middlewares);
 describe('submitApplyTrafoValuesActions', () => {
   it('should create a SUBMIT_APPLY_TRAFO_VALUES_REQUEST action', () => {
     const expected = {
-      type: SUBMIT_APPLY_TRAFO_VALUES_REQUEST
+      type: SUBMIT_APPLY_TRAFO_VALUES_REQUEST,
     };
     const result = submitApplyTrafoValuesRequest();
     expect(result.type).toEqual(expected.type);
@@ -31,13 +31,13 @@ describe('submitApplyTrafoValuesActions', () => {
         result: {
           x: 22.5,
           y: 33.7,
-          z: 21.6
-        }
-      }
+          z: 21.6,
+        },
+      },
     };
     const expected = {
       type: SUBMIT_APPLY_TRAFO_VALUES_SUCCESS,
-      response: response
+      response,
     };
     const result = submitApplyTrafoValuesSuccess(response);
     expect(result.type).toEqual(expected.type);
@@ -45,10 +45,10 @@ describe('submitApplyTrafoValuesActions', () => {
     expect(result.receivedAt).toBeDefined();
   });
   it('should create a SUBMIT_APPLY_TRAFO_VALUES_FAILURE action', () => {
-    const error = "Error while trying to fit.";
+    const error = 'Error while trying to fit.';
     const expected = {
       type: SUBMIT_APPLY_TRAFO_VALUES_FAILURE,
-      error: error
+      error,
     };
     const result = submitApplyTrafoValuesFailure(error);
     expect(result.type).toEqual(expected.type);
@@ -61,14 +61,14 @@ describe('submitApplyTrafoValuesActions', () => {
       result: {
         x: 1,
         y: 2,
-        z: 3
-      }
+        z: 3,
+      },
     };
     const values = {
       point: {
         x: 12.5,
         y: 23.7,
-        z: 11.6
+        z: 11.6,
       },
       transformation: {
         tx: 10.0,
@@ -78,20 +78,16 @@ describe('submitApplyTrafoValuesActions', () => {
         q1: 0.000000,
         q2: 0.000000,
         q3: 0.000000,
-        m: 1.0
-      }
+        m: 1.0,
+      },
     };
     const mock = new MockAdapter(axios);
-    mock.onPost('/apply-trafo').reply(200, expResponse );
+    mock.onPost('/apply-trafo').reply(200, expResponse);
     return store.dispatch(submitApplyTrafoValues(values)).then(() => {
       // return of async actions
       expect(store.getActions().length).toEqual(2);
-      expect(store.getActions()[0].type).toEqual(
-        SUBMIT_APPLY_TRAFO_VALUES_REQUEST
-      );
-      expect(store.getActions()[1].type).toEqual(
-        SUBMIT_APPLY_TRAFO_VALUES_SUCCESS
-      );
+      expect(store.getActions()[0].type).toEqual(SUBMIT_APPLY_TRAFO_VALUES_REQUEST);
+      expect(store.getActions()[1].type).toEqual(SUBMIT_APPLY_TRAFO_VALUES_SUCCESS);
     });
   });
   it('should dispatch a SUBMIT_APPLY_TRAFO_VALUES_REQUEST and a SUBMIT_APPLY_TRAFO_VALUES_FAILURE action', () => {
@@ -99,15 +95,15 @@ describe('submitApplyTrafoValuesActions', () => {
     const error = {
       data: {
         error: {
-          message: "Error while trying to fit."
-        }
-      }
+          message: 'Error while trying to fit.',
+        },
+      },
     };
     const values = {
       point: {
         x: 12.5,
         y: 23.7,
-        z: 11.6
+        z: 11.6,
       },
       transformation: {
         tx: 10.0,
@@ -117,20 +113,16 @@ describe('submitApplyTrafoValuesActions', () => {
         q1: 0.000000,
         q2: 0.000000,
         q3: 0.000000,
-        m: 1.0
-      }
+        m: 1.0,
+      },
     };
     const mock = new MockAdapter(axios);
-    mock.onPost('/apply-trafo').reply(500, error );
+    mock.onPost('/apply-trafo').reply(500, error);
     return store.dispatch(submitApplyTrafoValues(values)).then(() => {
       // return of async actions
       expect(store.getActions().length).toEqual(2);
-      expect(store.getActions()[0].type).toEqual(
-        SUBMIT_APPLY_TRAFO_VALUES_REQUEST
-      );
-      expect(store.getActions()[1].type).toEqual(
-        SUBMIT_APPLY_TRAFO_VALUES_FAILURE
-      );
+      expect(store.getActions()[0].type).toEqual(SUBMIT_APPLY_TRAFO_VALUES_REQUEST);
+      expect(store.getActions()[1].type).toEqual(SUBMIT_APPLY_TRAFO_VALUES_FAILURE);
     });
   });
 });

@@ -14874,11 +14874,23 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
           <p>
             +49 (0) 2542 - 91898 0
           </p>
-          <a
-            href="mailto:info@sigma3d.de"
+          <div
+            className="links"
           >
-            info@sigma3d.de
-          </a>
+            <a
+              href="mailto:info@sigma3d.de"
+            >
+              info@sigma3d.de
+            </a>
+            <p>
+                |  
+            </p>
+            <a
+              href="http://sigma3d.de/"
+            >
+              http://www.sigma3d.de
+            </a>
+          </div>
         </div>
       </div>
       <button
@@ -17943,6 +17955,11 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
             <li>
               <span>
                 Parameterinversion
+              </span>
+            </li>
+            <li>
+              <span>
+                Transformation anwenden
               </span>
             </li>
           </ul>

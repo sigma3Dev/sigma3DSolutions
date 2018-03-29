@@ -1,0 +1,47 @@
+.apply-trafo-result {
+  width: 75%;
+  height: 90vh;
+  margin-left: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 12px;
+  font-family: Roboto;
+}
+
+.apply-trafo-result h1 {
+  font-size: 2.5em;
+  border-bottom: 3px solid #0375ba;
+  margin-bottom: 50px;
+}
+
+.apply-trafo-result .result-table {
+  padding-top: 10px;
+  width: 70%;
+  border-collapse: collapse;
+}
+
+.apply-trafo-result .result-table * {
+  font-size: 1.05em;
+  text-align: center;
+}
+
+.apply-trafo-result .result-table th {
+  padding: 10px 0;
+}
+
+.apply-trafo-result .result-table th.pointId {
+  width: 10%;
+  background-color: #d9e9f0;
+}
+
+.apply-trafo-result .result-table .caption {
+  background-color: #d9e9f0;
+}
+
+.apply-trafo-result .back-to-input-btn {
+  position: fixed;
+  top: 83%;
+  left: 83%;
+}
