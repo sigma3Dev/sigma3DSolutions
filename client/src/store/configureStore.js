@@ -34,7 +34,7 @@ export default function configureStore(preloadedState) {
       applyMiddleware(
         thunkMiddleware,
         logger,
-        error
+        error,
       ),
       window.devToolsExtension ? window.devToolsExtension() : f => f, // for debugging in a browser
     ),
