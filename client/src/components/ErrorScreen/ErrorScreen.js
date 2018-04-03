@@ -25,10 +25,7 @@ const ErrorScreen = ({ error, handleClick }) => (
     <div className='s3d-info'>
       <FormattedMessage
         id='ErrorScreen.label.s3dinfo'
-        defaultMessage="
-          Do you have the service for mathematical operations by sigma3D running?\n\n
-          If you don't own the service, please contact sigma3D:
-        "
+        defaultMessage="Do you have the service for mathematical operations by sigma3D running?\n\nIf you don't own the service, please contact sigma3D:"
       />
       <div className='s3d-contact-info'>
         <p>+49 (0) 2542 - 91898 0</p>
