@@ -1,9 +1,12 @@
-import { CHECKBOX_UPDATE } from '../../actions/submitCoords/submitCoordsActions';
+import { CHECKBOX_UPDATE } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import {
-  PUSH_START_SYSTEM_COORDINATES,
-  PUSH_TARGET_SYSTEM_COORDINATES,
+  PUSH_3D_TRAFO_START_SYSTEM_COORDS,
+  PUSH_3D_TRAFO_TARGET_SYSTEM_COORDS,
 } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
-import { CLEAR_START_INPUT, CLEAR_TARGET_INPUT } from '../../actions/clearInput/clearInputActions';
+import {
+  CLEAR_THREE_D_TRAFO_6W_START_INPUT,
+  CLEAR_THREE_D_TRAFO_6W_TARGET_INPUT,
+} from '../../actions/clearInput/clearInputActions';
 import threeDTrafoDataInputReducer from './threeDTrafoDataInputReducer';
 
 describe('threeDTrafoDataInputReducer', () => {
@@ -55,12 +58,12 @@ describe('threeDTrafoDataInputReducer', () => {
     const result = threeDTrafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle PUSH_START_SYSTEM_COORDINATES', () => {
+  it('should handle PUSH_3D_TRAFO_START_SYSTEM_COORDS', () => {
     const state = {
       startSystemPoints: [],
     };
     const action = {
-      type: PUSH_START_SYSTEM_COORDINATES,
+      type: PUSH_3D_TRAFO_START_SYSTEM_COORDS,
       coords: [
         {
           x: 1,
@@ -81,12 +84,12 @@ describe('threeDTrafoDataInputReducer', () => {
     const result = threeDTrafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle PUSH_TARGET_SYSTEM_COORDINATES', () => {
+  it('should handle PUSH_3D_TRAFO_TARGET_SYSTEM_COORDS', () => {
     const state = {
       targetSystemPoints: [],
     };
     const action = {
-      type: PUSH_TARGET_SYSTEM_COORDINATES,
+      type: PUSH_3D_TRAFO_TARGET_SYSTEM_COORDS,
       coords: [
         {
           x: 1,
@@ -107,7 +110,7 @@ describe('threeDTrafoDataInputReducer', () => {
     const result = threeDTrafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle CLEAR_START_INPUT', () => {
+  it('should handle CLEAR_THREE_D_TRAFO_6W_START_INPUT', () => {
     const state = {
       startSystemPoints: [
         {
@@ -118,7 +121,7 @@ describe('threeDTrafoDataInputReducer', () => {
       ],
     };
     const action = {
-      type: CLEAR_START_INPUT,
+      type: CLEAR_THREE_D_TRAFO_6W_START_INPUT,
     };
     const expectedState = {
       startSystemPoints: [],
@@ -126,7 +129,7 @@ describe('threeDTrafoDataInputReducer', () => {
     const result = threeDTrafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle CLEAR_TARGET_INPUT', () => {
+  it('should handle CLEAR_THREE_D_TRAFO_6W_TARGET_INPUT', () => {
     const state = {
       targetSystemPoints: [
         {
@@ -137,7 +140,7 @@ describe('threeDTrafoDataInputReducer', () => {
       ],
     };
     const action = {
-      type: CLEAR_TARGET_INPUT,
+      type: CLEAR_THREE_D_TRAFO_6W_TARGET_INPUT,
     };
     const expectedState = {
       targetSystemPoints: [],

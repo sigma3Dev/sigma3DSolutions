@@ -1,11 +1,11 @@
-import { CALCULATE_TRAFO_DIFFERENCE_SUCCESS } from '../../actions/submitCoords/submitCoordsActions';
+import { CALCULATE_3D_TRAFO_DIFFERENCE_SUCCESS } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import threeDTrafoResultDifferenceReducer from './threeDTrafoResultDifferenceReducer';
 
 describe('threeDTrafoResultDifferenceReducer', () => {
-  it('should handle CALCULATE_TRAFO_DIFFERENCE_SUCCESS', () => {
+  it('should handle CALCULATE_3D_TRAFO_DIFFERENCE_SUCCESS', () => {
     const state = [];
     const action = {
-      type: CALCULATE_TRAFO_DIFFERENCE_SUCCESS,
+      type: CALCULATE_3D_TRAFO_DIFFERENCE_SUCCESS,
       response: {
         data: [
           {

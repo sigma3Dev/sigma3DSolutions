@@ -1,11 +1,14 @@
-import { CHECKBOX_UPDATE } from '../../actions/submitCoords/submitCoordsActions';
+import { CHECKBOX_UPDATE } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 
 import {
-  PUSH_START_SYSTEM_COORDINATES,
-  PUSH_TARGET_SYSTEM_COORDINATES,
+  PUSH_3D_TRAFO_START_SYSTEM_COORDS,
+  PUSH_3D_TRAFO_TARGET_SYSTEM_COORDS,
 } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
 
-import { CLEAR_START_INPUT, CLEAR_TARGET_INPUT } from '../../actions/clearInput/clearInputActions';
+import {
+  CLEAR_THREE_D_TRAFO_6W_START_INPUT,
+  CLEAR_THREE_D_TRAFO_6W_TARGET_INPUT,
+} from '../../actions/clearInput/clearInputActions';
 
 /* Holds the initial transformation data input. */
 const initialTrafoData = {
@@ -24,12 +27,12 @@ function transformationDataInput(state = initialTrafoData, action) {
   let points;
 
   switch (action.type) {
-    case PUSH_START_SYSTEM_COORDINATES:
+    case PUSH_3D_TRAFO_START_SYSTEM_COORDS:
       return {
         ...state,
         startSystemPoints: action.coords,
       };
-    case PUSH_TARGET_SYSTEM_COORDINATES:
+    case PUSH_3D_TRAFO_TARGET_SYSTEM_COORDS:
       return {
         ...state,
         targetSystemPoints: action.coords,
@@ -52,12 +55,12 @@ function transformationDataInput(state = initialTrafoData, action) {
         ...state,
         targetSystemPoints: points,
       };
-    case CLEAR_START_INPUT:
+    case CLEAR_THREE_D_TRAFO_6W_START_INPUT:
       return {
         ...state,
         startSystemPoints: [],
       };
-    case CLEAR_TARGET_INPUT:
+    case CLEAR_THREE_D_TRAFO_6W_TARGET_INPUT:
       return {
         ...state,
         targetSystemPoints: [],

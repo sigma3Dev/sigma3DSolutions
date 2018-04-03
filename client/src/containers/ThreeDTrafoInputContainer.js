@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import {
-  pushStartSystemCoordinates,
-  pushTargetSystemCoordinates,
+  pushThreeDTrafoStartSystemCoordinates,
+  pushThreeDTrafoTargetSystemCoordinates,
 } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
-import { checkboxUpdate, submitCoords } from '../actions/submitCoords/submitCoordsActions';
-import { clearStartInput, clearTargetInput } from '../actions/clearInput/clearInputActions';
+import { checkboxUpdate, submitThreeDTrafoCoords } from '../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
+import { clearThreeDTrafo6WStartInput, clearThreeDTrafo6WTargetInput } from '../actions/clearInput/clearInputActions';
 import {
   getStartSystemPoints,
   getTargetSystemPoints,
@@ -19,12 +19,12 @@ import InfoModal from '../components/InfoModal/InfoModal';
 const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  onPushStartSystemCoordinates: file => dispatch(pushStartSystemCoordinates(file)),
-  onPushTargetSystemCoordinates: file => dispatch(pushTargetSystemCoordinates(file)),
+  onPushStartSystemCoordinates: file => dispatch(pushThreeDTrafoStartSystemCoordinates(file)),
+  onPushTargetSystemCoordinates: file => dispatch(pushThreeDTrafoTargetSystemCoordinates(file)),
   onCheckboxUpdate: id => dispatch(checkboxUpdate(id)),
-  onSubmitCoords: coords => dispatch(submitCoords(coords)),
-  onClearStartInput: () => dispatch(clearStartInput()),
-  onClearTargetInput: () => dispatch(clearTargetInput()),
+  onSubmitCoords: coords => dispatch(submitThreeDTrafoCoords(coords)),
+  onClearStartInput: () => dispatch(clearThreeDTrafo6WStartInput()),
+  onClearTargetInput: () => dispatch(clearThreeDTrafo6WTargetInput()),
 });
 
 const mapStateToProps = state => ({
@@ -52,7 +52,7 @@ class ThreeDTrafoInputContainer extends Component {
     this.parseStartCoords = this.parseStartCoords.bind(this);
     this.parseTargetCoords = this.parseTargetCoords.bind(this);
     this.checkboxUpdate = this.checkboxUpdate.bind(this);
-    this.submitCoords = this.submitCoords.bind(this);
+    this.submitThreeDTrafoCoords = this.submitThreeDTrafoCoords.bind(this);
     this.clearStartInput = this.clearStartInput.bind(this);
     this.clearTargetInput = this.clearTargetInput.bind(this);
     this.closeModal = this.closeModal.bind(this);
@@ -111,7 +111,7 @@ class ThreeDTrafoInputContainer extends Component {
    * Handles coords submit, navigates to "result" page
    * @memberof ThreeDTrafoInputContainer
    */
-  submitCoords = () => {
+  submitThreeDTrafoCoords = () => {
     if (!this.props.startSystemPoints || this.props.startSystemPoints.length === 0) {
       this.setState({
         notification: (
@@ -216,7 +216,7 @@ class ThreeDTrafoInputContainer extends Component {
           targetSystemPoints={this.props.targetSystemPoints}
           checkboxUpdate={this.checkboxUpdate}
           handleInfoClick={this.displayInfoPanel}
-          handleSubmitClick={this.submitCoords}
+          handleSubmitClick={this.submitThreeDTrafoCoords}
           handleStartDeleteClick={this.clearStartInput}
           handleTargetDeleteClick={this.clearTargetInput}
           listOfUsedCoords={this.props.listOfUsedCoords}

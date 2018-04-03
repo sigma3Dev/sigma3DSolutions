@@ -6,26 +6,26 @@ import thunk from 'redux-thunk';
 import {
   CHECKBOX_UPDATE,
   checkboxUpdate,
-  submitCoords,
-  SUBMIT_COORDS_REQUEST,
-  submitCoordsRequest,
-  SUBMIT_COORDS_SUCCESS,
-  submitCoordsSuccess,
-  SUBMIT_COORDS_FAILURE,
-  submitCoordsFailure,
-  calculateTrafoDifference,
-  CALCULATE_TRAFO_DIFFERENCE_REQUEST,
-  calculateTrafoDifferenceRequest,
-  CALCULATE_TRAFO_DIFFERENCE_SUCCESS,
-  calculateTrafoDifferenceSuccess,
-  CALCULATE_TRAFO_DIFFERENCE_FAILURE,
-  calculateTrafoDifferenceFailure,
-} from './submitCoordsActions';
+  submitThreeDTrafoCoords,
+  SUBMIT_3D_TRAFO_COORDS_REQUEST,
+  submitThreeDTrafoCoordsRequest,
+  SUBMIT_3D_TRAFO_COORDS_SUCCESS,
+  submitThreeDTrafoCoordsSuccess,
+  SUBMIT_3D_TRAFO_COORDS_FAILURE,
+  submitThreeDTrafoCoordsFailure,
+  calculateThreeDTrafoDifference,
+  CALCULATE_3D_TRAFO_DIFFERENCE_REQUEST,
+  calculateThreeDTrafoDifferenceRequest,
+  CALCULATE_3D_TRAFO_DIFFERENCE_SUCCESS,
+  calculateThreeDTrafoDifferenceSuccess,
+  CALCULATE_3D_TRAFO_DIFFERENCE_FAILURE,
+  calculateThreeDTrafoDifferenceFailure,
+} from './submitThreeDTrafoCoordsActions';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-describe('submitCoordsActions', () => {
+describe('submitThreeDTrafoCoordsActions', () => {
   it('should create a CHECKBOX_UPDATE action', () => {
     const id = 'x0';
     const expected = {
@@ -37,15 +37,15 @@ describe('submitCoordsActions', () => {
     expect(result.id).toEqual(expected.id);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should create a SUBMIT_COORDS_REQUEST action', () => {
+  it('should create a SUBMIT_3D_TRAFO_COORDS_REQUEST action', () => {
     const expected = {
-      type: SUBMIT_COORDS_REQUEST,
+      type: SUBMIT_3D_TRAFO_COORDS_REQUEST,
     };
-    const result = submitCoordsRequest();
+    const result = submitThreeDTrafoCoordsRequest();
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should create a SUBMIT_COORDS_SUCCESS action', () => {
+  it('should create a SUBMIT_3D_TRAFO_COORDS_SUCCESS action', () => {
     const response = {
       data: {
         result: {
@@ -60,26 +60,26 @@ describe('submitCoordsActions', () => {
       },
     };
     const expected = {
-      type: SUBMIT_COORDS_SUCCESS,
+      type: SUBMIT_3D_TRAFO_COORDS_SUCCESS,
       response,
     };
-    const result = submitCoordsSuccess(response);
+    const result = submitThreeDTrafoCoordsSuccess(response);
     expect(result.type).toEqual(expected.type);
     expect(result.response).toEqual(expected.response);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should create a SUBMIT_COORDS_FAILURE action', () => {
+  it('should create a SUBMIT_3D_TRAFO_COORDS_FAILURE action', () => {
     const error = 'Error while trying to fit.';
     const expected = {
-      type: SUBMIT_COORDS_FAILURE,
+      type: SUBMIT_3D_TRAFO_COORDS_FAILURE,
       error,
     };
-    const result = submitCoordsFailure(error);
+    const result = submitThreeDTrafoCoordsFailure(error);
     expect(result.type).toEqual(expected.type);
     expect(result.error).toEqual(expected.error);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should dispatch a SUBMIT_COORDS_REQUEST and a SUBMIT_COORDS_SUCCESS action', () => {
+  it('should dispatch a SUBMIT_3D_TRAFO_COORDS_REQUEST and a SUBMIT_3D_TRAFO_COORDS_SUCCESS action', () => {
     const store = mockStore({});
     const expResponse = {
       result: {
@@ -120,14 +120,14 @@ describe('submitCoordsActions', () => {
     };
     const mock = new MockAdapter(axios);
     mock.onPost('/calculate-trafo').reply(200, expResponse);
-    return store.dispatch(submitCoords(coords)).then(() => {
+    return store.dispatch(submitThreeDTrafoCoords(coords)).then(() => {
       // return of async actions
       expect(store.getActions().length).toEqual(2);
-      expect(store.getActions()[0].type).toEqual(SUBMIT_COORDS_REQUEST);
-      expect(store.getActions()[1].type).toEqual(SUBMIT_COORDS_SUCCESS);
+      expect(store.getActions()[0].type).toEqual(SUBMIT_3D_TRAFO_COORDS_REQUEST);
+      expect(store.getActions()[1].type).toEqual(SUBMIT_3D_TRAFO_COORDS_SUCCESS);
     });
   });
-  it('should dispatch a SUBMIT_COORDS_REQUEST and a SUBMIT_COORDS_FAILURE action', () => {
+  it('should dispatch a SUBMIT_3D_TRAFO_COORDS_REQUEST and a SUBMIT_3D_TRAFO_COORDS_FAILURE action', () => {
     const store = mockStore({});
     const error = {
       data: {
@@ -164,22 +164,22 @@ describe('submitCoordsActions', () => {
     };
     const mock = new MockAdapter(axios);
     mock.onPost('/calculate-trafo').reply(500, error);
-    return store.dispatch(submitCoords(coords)).then(() => {
+    return store.dispatch(submitThreeDTrafoCoords(coords)).then(() => {
       // return of async actions
       expect(store.getActions().length).toEqual(2);
-      expect(store.getActions()[0].type).toEqual(SUBMIT_COORDS_REQUEST);
-      expect(store.getActions()[1].type).toEqual(SUBMIT_COORDS_FAILURE);
+      expect(store.getActions()[0].type).toEqual(SUBMIT_3D_TRAFO_COORDS_REQUEST);
+      expect(store.getActions()[1].type).toEqual(SUBMIT_3D_TRAFO_COORDS_FAILURE);
     });
   });
-  it('should create a CALCULATE_TRAFO_DIFFERENCE_REQUEST action', () => {
+  it('should create a CALCULATE_3D_TRAFO_DIFFERENCE_REQUEST action', () => {
     const expected = {
-      type: CALCULATE_TRAFO_DIFFERENCE_REQUEST,
+      type: CALCULATE_3D_TRAFO_DIFFERENCE_REQUEST,
     };
-    const result = calculateTrafoDifferenceRequest();
+    const result = calculateThreeDTrafoDifferenceRequest();
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should create a CALCULATE_TRAFO_DIFFERENCE_SUCCESS action', () => {
+  it('should create a CALCULATE_3D_TRAFO_DIFFERENCE_SUCCESS action', () => {
     const response = {
       data: [
         {
@@ -191,26 +191,26 @@ describe('submitCoordsActions', () => {
       ],
     };
     const expected = {
-      type: CALCULATE_TRAFO_DIFFERENCE_SUCCESS,
+      type: CALCULATE_3D_TRAFO_DIFFERENCE_SUCCESS,
       response,
     };
-    const result = calculateTrafoDifferenceSuccess(response);
+    const result = calculateThreeDTrafoDifferenceSuccess(response);
     expect(result.type).toEqual(expected.type);
     expect(result.response).toEqual(expected.response);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should create a CALCULATE_TRAFO_DIFFERENCE_FAILURE action', () => {
+  it('should create a CALCULATE_3D_TRAFO_DIFFERENCE_FAILURE action', () => {
     const error = 'Error while trying to fit.';
     const expected = {
-      type: CALCULATE_TRAFO_DIFFERENCE_FAILURE,
+      type: CALCULATE_3D_TRAFO_DIFFERENCE_FAILURE,
       error,
     };
-    const result = calculateTrafoDifferenceFailure(error);
+    const result = calculateThreeDTrafoDifferenceFailure(error);
     expect(result.type).toEqual(expected.type);
     expect(result.error).toEqual(expected.error);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should dispatch a CALCULATE_TRAFO_DIFFERENCE_REQUEST and a CALCULATE_TRAFO_DIFFERENCE_SUCCESS action', () => {
+  it('should dispatch a CALCULATE_3D_TRAFO_DIFFERENCE_REQUEST and a CALCULATE_3D_TRAFO_DIFFERENCE_SUCCESS action', () => {
     const store = mockStore({});
     const expResponse = [
       {
@@ -228,14 +228,14 @@ describe('submitCoordsActions', () => {
     ];
     const mock = new MockAdapter(axios);
     mock.onPost('/calculate-trafo-difference').reply(200, expResponse);
-    return store.dispatch(calculateTrafoDifference()).then(() => {
+    return store.dispatch(calculateThreeDTrafoDifference()).then(() => {
       // return of async actions
       expect(store.getActions().length).toEqual(2);
-      expect(store.getActions()[0].type).toEqual(CALCULATE_TRAFO_DIFFERENCE_REQUEST);
-      expect(store.getActions()[1].type).toEqual(CALCULATE_TRAFO_DIFFERENCE_SUCCESS);
+      expect(store.getActions()[0].type).toEqual(CALCULATE_3D_TRAFO_DIFFERENCE_REQUEST);
+      expect(store.getActions()[1].type).toEqual(CALCULATE_3D_TRAFO_DIFFERENCE_SUCCESS);
     });
   });
-  it('should dispatch a CALCULATE_TRAFO_DIFFERENCE_REQUEST and a CALCULATE_TRAFO_DIFFERENCE_FAILURE action', () => {
+  it('should dispatch a CALCULATE_3D_TRAFO_DIFFERENCE_REQUEST and a CALCULATE_3D_TRAFO_DIFFERENCE_FAILURE action', () => {
     const store = mockStore({});
     const error = {
       data: {
@@ -246,11 +246,11 @@ describe('submitCoordsActions', () => {
     };
     const mock = new MockAdapter(axios);
     mock.onPost('/calculate-trafo-difference').reply(500, error);
-    return store.dispatch(calculateTrafoDifference()).then(() => {
+    return store.dispatch(calculateThreeDTrafoDifference()).then(() => {
       // return of async actions
       expect(store.getActions().length).toEqual(2);
-      expect(store.getActions()[0].type).toEqual(CALCULATE_TRAFO_DIFFERENCE_REQUEST);
-      expect(store.getActions()[1].type).toEqual(CALCULATE_TRAFO_DIFFERENCE_FAILURE);
+      expect(store.getActions()[0].type).toEqual(CALCULATE_3D_TRAFO_DIFFERENCE_REQUEST);
+      expect(store.getActions()[1].type).toEqual(CALCULATE_3D_TRAFO_DIFFERENCE_FAILURE);
     });
   });
 });

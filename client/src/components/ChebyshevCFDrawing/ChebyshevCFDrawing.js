@@ -65,9 +65,11 @@ const ChebyshevCFDrawing = ({ radius, chebyDist, points }) => {
       if (index === 0) {
         xPoint1 = xShifted;
         yPoint1 = yShifted;
-        return <circle cx={xShifted} cy={yShifted} r='3' fill='red' />;
+        return <circle cx={xShifted} cy={yShifted} r='3' fill='red' key={index} />;
       }
-      return <circle cx={xShifted} cy={yShifted} r='3' className='cheby-circle-points' />;
+      return (
+        <circle cx={xShifted} cy={yShifted} r='3' className='cheby-circle-points' key={index} />
+      );
     });
   }
 
@@ -112,9 +114,9 @@ const ChebyshevCFDrawing = ({ radius, chebyDist, points }) => {
 };
 
 ChebyshevCFDrawing.propTypes = {
-  radius: PropTypes.number.isRequired,
-  chebyDist: PropTypes.number.isRequired,
-  points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
+  radius: PropTypes.string.isRequired,
+  chebyDist: PropTypes.string.isRequired,
+  points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
 };
 
 export default ChebyshevCFDrawing;

@@ -1,5 +1,5 @@
 import { REMOVE_ERROR } from '../../actions/errorHandling/errorHandlingActions';
-import { SUBMIT_COORDS_FAILURE } from '../../actions/submitCoords/submitCoordsActions';
+import { SUBMIT_3D_TRAFO_COORDS_FAILURE } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import errorReducer from './errorReducer';
 
 describe('errorReducer', () => {
@@ -18,14 +18,14 @@ describe('errorReducer', () => {
     const result = errorReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle SUBMIT_COORDS_FAILURE', () => {
+  it('should handle SUBMIT_3D_TRAFO_COORDS_FAILURE', () => {
     const state = {
       error: {
         error: null,
       },
     };
     const action = {
-      type: SUBMIT_COORDS_FAILURE,
+      type: SUBMIT_3D_TRAFO_COORDS_FAILURE,
       error: {
         error: 'Error while trying to fit.',
       },

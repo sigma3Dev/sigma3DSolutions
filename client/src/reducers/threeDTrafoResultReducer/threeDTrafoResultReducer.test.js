@@ -1,8 +1,8 @@
-import { SUBMIT_COORDS_SUCCESS } from '../../actions/submitCoords/submitCoordsActions';
+import { SUBMIT_3D_TRAFO_COORDS_SUCCESS } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import threeDTrafoResultReducer from './threeDTrafoResultReducer';
 
 describe('threeDTrafoResultReducer', () => {
-  it('should handle SUBMIT_COORDS_SUCCESS', () => {
+  it('should handle SUBMIT_3D_TRAFO_COORDS_SUCCESS', () => {
     const state = {
       tx: 0,
       ty: 0,
@@ -13,7 +13,7 @@ describe('threeDTrafoResultReducer', () => {
       q3: 0,
     };
     const action = {
-      type: SUBMIT_COORDS_SUCCESS,
+      type: SUBMIT_3D_TRAFO_COORDS_SUCCESS,
       response: {
         data: {
           result: {

@@ -1,13 +1,13 @@
-export const PUSH_START_SYSTEM_COORDINATES = 'PUSH_START_SYSTEM_COORDINATES';
-export const PUSH_TARGET_SYSTEM_COORDINATES = 'PUSH_TARGET_SYSTEM_COORDINATES';
-export const PUSH_COORDINATES = 'PUSH_COORDINATES';
+export const PUSH_3D_TRAFO_START_SYSTEM_COORDS = 'PUSH_3D_TRAFO_START_SYSTEM_COORDS';
+export const PUSH_3D_TRAFO_TARGET_SYSTEM_COORDS = 'PUSH_3D_TRAFO_TARGET_SYSTEM_COORDS';
+export const PUSH_COORDS = 'PUSH_COORDS';
 
 /**
  * pushes the start system coordinates
  * @param {Object} coords - the coordinates file from start system input
  */
-export const pushStartSystemCoordinates = coords => ({
-  type: PUSH_START_SYSTEM_COORDINATES,
+export const pushThreeDTrafoStartSystemCoords = coords => ({
+  type: PUSH_3D_TRAFO_START_SYSTEM_COORDS,
   coords,
   receivedAt: Date.now(),
 });
@@ -16,8 +16,8 @@ export const pushStartSystemCoordinates = coords => ({
  * pushes the target system coordinates
  * @param {Object} coords - the coordinates file from target system input
  */
-export const pushTargetSystemCoordinates = coords => ({
-  type: PUSH_TARGET_SYSTEM_COORDINATES,
+export const pushThreeDTrafoTargetSystemCoords = coords => ({
+  type: PUSH_3D_TRAFO_TARGET_SYSTEM_COORDS,
   coords,
   receivedAt: Date.now(),
 });
@@ -26,8 +26,8 @@ export const pushTargetSystemCoordinates = coords => ({
  * pushes the coordinates
  * @param {Object} coords - the coordinates file from input
  */
-export const pushCoordinates = coords => ({
-  type: PUSH_COORDINATES,
+export const pushCoords = coords => ({
+  type: PUSH_COORDS,
   coords,
   receivedAt: Date.now(),
 });

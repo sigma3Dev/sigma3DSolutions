@@ -14,7 +14,7 @@ import {
   getStartSystemPoints,
   getTargetSystemPoints,
 } from '../selectors/ThreeDTrafoSelectors/getTrafoInputDataSelector/getTrafoInputDataSelector';
-import { calculateTrafoDifference } from '../actions/submitCoords/submitCoordsActions';
+import { calculateThreeDTrafoDifference } from '../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
@@ -30,7 +30,7 @@ const messages = defineMessages({
 const mapDispatchToProps = dispatch => ({
   onRemoveError: () => dispatch(removeError()),
   onCalculateTrafoDifference: (startPoints, targetPoints, trafoParams) => {
-    dispatch(calculateTrafoDifference(startPoints, targetPoints, trafoParams));
+    dispatch(calculateThreeDTrafoDifference(startPoints, targetPoints, trafoParams));
   },
 });
 
@@ -62,7 +62,7 @@ class ThreeDTrafoResultContainer extends Component {
   }
 
   /**
-   * runs calculateTrafoDifference when the page is first loaded and when trafoParams are updated
+   * runs calculateThreeDTrafoDifference when the page is first loaded and when trafoParams are updated
    * @param {Object} prevProps - previous Props
    * @memberof ThreeDTrafoResultContainer
    */

@@ -14,7 +14,6 @@ const ApplyTrafoResult = ({ result, handleReturnClick }) => {
       <th>{point.z.toFixed(5)}</th>
     </tr>
   ));
-  console.log(tableRows);
 
   return (
     <div className='apply-trafo-result'>

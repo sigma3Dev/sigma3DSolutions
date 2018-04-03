@@ -106,10 +106,10 @@ const ParamInversion = ({
 );
 
 ParamInversion.propTypes = {
-  handleSubmit: PropTypes.func.isRequired,
-  handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func,
+  handleChange: PropTypes.func,
   values: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])).isRequired,
-  textAreaDisplay: PropTypes.string.isRequired,
+  textAreaDisplay: PropTypes.string,
 };
 
 export default ParamInversion;

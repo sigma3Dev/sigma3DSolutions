@@ -171,7 +171,8 @@ ApplyTransformationInputContainer.propTypes = {
   onClearApplyTrafoInput: PropTypes.func.isRequired,
   onChangeParamInputField: PropTypes.func.isRequired,
   onSubmitValues: PropTypes.func.isRequired,
-  transformation: PropTypes.objectOf(PropTypes.string).isRequired,
+  transformation: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string]))
+    .isRequired,
   points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
   history: PropTypes.any,
 };

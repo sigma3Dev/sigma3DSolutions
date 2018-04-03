@@ -1,6 +1,6 @@
 import { PUSH_COORDINATES } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
 import { CLEAR_APPLY_TRAFO_INPUT } from '../../actions/clearInput/clearInputActions';
-import { SUBMIT_COORDS_SUCCESS } from '../../actions/submitCoords/submitCoordsActions';
+import { SUBMIT_3D_TRAFO_COORDS_SUCCESS } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import { CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD } from '../../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
 
 /** holds the initial transform data input */
@@ -27,7 +27,7 @@ function applyTrafo(state = initialTrafoData, action) {
         ...state,
         points: [],
       };
-    case SUBMIT_COORDS_SUCCESS:
+    case SUBMIT_3D_TRAFO_COORDS_SUCCESS:
       return {
         ...state,
         transformation: action.response.data.result,
