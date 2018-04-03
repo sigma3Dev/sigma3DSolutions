@@ -3,11 +3,17 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import {
-  pushThreeDTrafoStartSystemCoordinates,
-  pushThreeDTrafoTargetSystemCoordinates,
+  pushThreeDTrafoStartSystemCoords,
+  pushThreeDTrafoTargetSystemCoords,
 } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
-import { checkboxUpdate, submitThreeDTrafoCoords } from '../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
-import { clearThreeDTrafo6WStartInput, clearThreeDTrafo6WTargetInput } from '../actions/clearInput/clearInputActions';
+import {
+  threeDTrafoCheckboxUpdate,
+  submitThreeDTrafoCoords,
+} from '../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
+import {
+  clearThreeDTrafo6WStartInput,
+  clearThreeDTrafo6WTargetInput,
+} from '../actions/clearInput/clearInputActions';
 import {
   getStartSystemPoints,
   getTargetSystemPoints,
@@ -19,9 +25,9 @@ import InfoModal from '../components/InfoModal/InfoModal';
 const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  onPushStartSystemCoordinates: file => dispatch(pushThreeDTrafoStartSystemCoordinates(file)),
-  onPushTargetSystemCoordinates: file => dispatch(pushThreeDTrafoTargetSystemCoordinates(file)),
-  onCheckboxUpdate: id => dispatch(checkboxUpdate(id)),
+  onPushStartSystemCoords: file => dispatch(pushThreeDTrafoStartSystemCoords(file)),
+  onPushTargetSystemCoords: file => dispatch(pushThreeDTrafoTargetSystemCoords(file)),
+  onCheckboxUpdate: id => dispatch(threeDTrafoCheckboxUpdate(id)),
   onSubmitCoords: coords => dispatch(submitThreeDTrafoCoords(coords)),
   onClearStartInput: () => dispatch(clearThreeDTrafo6WStartInput()),
   onClearTargetInput: () => dispatch(clearThreeDTrafo6WTargetInput()),
@@ -51,7 +57,7 @@ class ThreeDTrafoInputContainer extends Component {
     };
     this.parseStartCoords = this.parseStartCoords.bind(this);
     this.parseTargetCoords = this.parseTargetCoords.bind(this);
-    this.checkboxUpdate = this.checkboxUpdate.bind(this);
+    this.threeDTrafoCheckboxUpdate = this.threeDTrafoCheckboxUpdate.bind(this);
     this.submitThreeDTrafoCoords = this.submitThreeDTrafoCoords.bind(this);
     this.clearStartInput = this.clearStartInput.bind(this);
     this.clearTargetInput = this.clearTargetInput.bind(this);
@@ -66,7 +72,7 @@ class ThreeDTrafoInputContainer extends Component {
    */
   parseStartCoords = (file) => {
     cdi.startCoordinateDataImport(file, (coords) => {
-      this.props.onPushStartSystemCoordinates(coords);
+      this.props.onPushStartSystemCoords(coords);
     });
   };
 
@@ -77,16 +83,16 @@ class ThreeDTrafoInputContainer extends Component {
    */
   parseTargetCoords = (file) => {
     cdi.targetCoordinateDataImport(file, (coords) => {
-      this.props.onPushTargetSystemCoordinates(coords);
+      this.props.onPushTargetSystemCoords(coords);
     });
   };
 
   /**
-   * Handles checkbox update
+   * Handles threeDTrafoCheckbox update
    * @param {Object} e - Click event
    * @memberof ThreeDTrafoInputContainer
    */
-  checkboxUpdate = (e) => {
+  threeDTrafoCheckboxUpdate = (e) => {
     const id = e.target.name;
     this.props.onCheckboxUpdate(id);
   };
@@ -214,7 +220,7 @@ class ThreeDTrafoInputContainer extends Component {
           onTargetFileDrop={this.parseTargetCoords}
           startSystemPoints={this.props.startSystemPoints}
           targetSystemPoints={this.props.targetSystemPoints}
-          checkboxUpdate={this.checkboxUpdate}
+          checkboxUpdate={this.threeDTrafoCheckboxUpdate}
           handleInfoClick={this.displayInfoPanel}
           handleSubmitClick={this.submitThreeDTrafoCoords}
           handleStartDeleteClick={this.clearStartInput}
@@ -229,8 +235,8 @@ class ThreeDTrafoInputContainer extends Component {
 }
 
 ThreeDTrafoInputContainer.propTypes = {
-  onPushStartSystemCoordinates: PropTypes.func.isRequired,
-  onPushTargetSystemCoordinates: PropTypes.func.isRequired,
+  onPushStartSystemCoords: PropTypes.func.isRequired,
+  onPushTargetSystemCoords: PropTypes.func.isRequired,
   onCheckboxUpdate: PropTypes.func.isRequired,
   onSubmitCoords: PropTypes.func.isRequired,
   onClearStartInput: PropTypes.func.isRequired,

@@ -1,4 +1,4 @@
-import { PUSH_COORDINATES } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import { PUSH_COORDS } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
 import { CLEAR_APPLY_TRAFO_INPUT } from '../../actions/clearInput/clearInputActions';
 import { SUBMIT_3D_TRAFO_COORDS_SUCCESS } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import { CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD } from '../../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
@@ -17,7 +17,7 @@ const initialTrafoData = {
  */
 function applyTrafo(state = initialTrafoData, action) {
   switch (action.type) {
-    case PUSH_COORDINATES:
+    case PUSH_COORDS:
       return {
         ...state,
         points: action.coords,

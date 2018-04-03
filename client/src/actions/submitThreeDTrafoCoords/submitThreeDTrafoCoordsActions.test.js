@@ -4,8 +4,8 @@ import MockAdapter from 'axios-mock-adapter';
 import thunk from 'redux-thunk';
 
 import {
-  CHECKBOX_UPDATE,
-  checkboxUpdate,
+  THREE_D_TRAFO_CHECKBOX_UPDATE,
+  threeDTrafoCheckboxUpdate,
   submitThreeDTrafoCoords,
   SUBMIT_3D_TRAFO_COORDS_REQUEST,
   submitThreeDTrafoCoordsRequest,
@@ -26,13 +26,13 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe('submitThreeDTrafoCoordsActions', () => {
-  it('should create a CHECKBOX_UPDATE action', () => {
+  it('should create a THREE_D_TRAFO_CHECKBOX_UPDATE action', () => {
     const id = 'x0';
     const expected = {
-      type: CHECKBOX_UPDATE,
+      type: THREE_D_TRAFO_CHECKBOX_UPDATE,
       id,
     };
-    const result = checkboxUpdate(id);
+    const result = threeDTrafoCheckboxUpdate(id);
     expect(result.type).toEqual(expected.type);
     expect(result.id).toEqual(expected.id);
     expect(result.receivedAt).toBeDefined();

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
-import { pushCoordinates } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import { pushCoords } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
 import { clearApplyTrafoInput } from '../actions/clearInput/clearInputActions';
 import { changeApplyTrafoParamInputField } from '../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
 import { submitApplyTrafoValues } from '../actions/submitApplyTransformationValuesActions/submitApplyTransformationValuesActions';
@@ -16,7 +16,7 @@ import InfoModal from '../components/InfoModal/InfoModal';
 const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  onPushCoordinates: file => dispatch(pushCoordinates(file)),
+  onPushCoords: file => dispatch(pushCoords(file)),
   onSubmitValues: values => dispatch(submitApplyTrafoValues(values)),
   onClearApplyTrafoInput: () => dispatch(clearApplyTrafoInput()),
   onChangeParamInputField: (name, val) => dispatch(changeApplyTrafoParamInputField(name, val)),
@@ -86,7 +86,7 @@ class ApplyTransformationInputContainer extends Component {
    */
   parseCoords = (file) => {
     cdi.startCoordinateDataImport(file, (coords) => {
-      this.props.onPushCoordinates(coords);
+      this.props.onPushCoords(coords);
     });
   };
 
@@ -167,7 +167,7 @@ class ApplyTransformationInputContainer extends Component {
 }
 
 ApplyTransformationInputContainer.propTypes = {
-  onPushCoordinates: PropTypes.func.isRequired,
+  onPushCoords: PropTypes.func.isRequired,
   onClearApplyTrafoInput: PropTypes.func.isRequired,
   onChangeParamInputField: PropTypes.func.isRequired,
   onSubmitValues: PropTypes.func.isRequired,

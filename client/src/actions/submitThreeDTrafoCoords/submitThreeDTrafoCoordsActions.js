@@ -1,4 +1,4 @@
-export const CHECKBOX_UPDATE = 'CHECKBOX_UPDATE';
+export const THREE_D_TRAFO_CHECKBOX_UPDATE = 'THREE_D_TRAFO_CHECKBOX_UPDATE';
 export const SUBMIT_3D_TRAFO_COORDS = 'SUBMIT_3D_TRAFO_COORDS';
 export const SUBMIT_3D_TRAFO_COORDS_REQUEST = 'SUBMIT_3D_TRAFO_COORDS_REQUEST';
 export const SUBMIT_3D_TRAFO_COORDS_SUCCESS = 'SUBMIT_3D_TRAFO_COORDS_SUCCESS';
@@ -11,11 +11,11 @@ export const CALCULATE_3D_TRAFO_DIFFERENCE_FAILURE = 'CALCULATE_3D_TRAFO_DIFFERE
 const axios = require('axios');
 
 /**
- * handle checkbox changes
- * @param {string} id - The id of the checkbox
+ * handle threeDTrafoCheckbox changes
+ * @param {string} id - The id of the threeDTrafoCheckbox
  */
-export const checkboxUpdate = id => ({
-  type: CHECKBOX_UPDATE,
+export const threeDTrafoCheckboxUpdate = id => ({
+  type: THREE_D_TRAFO_CHECKBOX_UPDATE,
   id,
   receivedAt: Date.now(),
 });

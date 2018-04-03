@@ -1,4 +1,4 @@
-import { CHECKBOX_UPDATE } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
+import { THREE_D_TRAFO_CHECKBOX_UPDATE } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import {
   PUSH_3D_TRAFO_START_SYSTEM_COORDS,
   PUSH_3D_TRAFO_TARGET_SYSTEM_COORDS,
@@ -10,7 +10,7 @@ import {
 import threeDTrafoDataInputReducer from './threeDTrafoDataInputReducer';
 
 describe('threeDTrafoDataInputReducer', () => {
-  it('should handle CHECKBOX_UPDATE', () => {
+  it('should handle THREE_D_TRAFO_CHECKBOX_UPDATE', () => {
     const state = {
       targetSystemPoints: [
         {
@@ -32,7 +32,7 @@ describe('threeDTrafoDataInputReducer', () => {
       ],
     };
     const action = {
-      type: CHECKBOX_UPDATE,
+      type: THREE_D_TRAFO_CHECKBOX_UPDATE,
       id: 'x0',
     };
     const expectedState = {

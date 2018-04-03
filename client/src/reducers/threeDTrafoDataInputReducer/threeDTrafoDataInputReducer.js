@@ -1,4 +1,4 @@
-import { CHECKBOX_UPDATE } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
+import { THREE_D_TRAFO_CHECKBOX_UPDATE } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 
 import {
   PUSH_3D_TRAFO_START_SYSTEM_COORDS,
@@ -37,7 +37,7 @@ function transformationDataInput(state = initialTrafoData, action) {
         ...state,
         targetSystemPoints: action.coords,
       };
-    case CHECKBOX_UPDATE:
+    case THREE_D_TRAFO_CHECKBOX_UPDATE:
       points = state.targetSystemPoints.map((targetSystemPoint) => {
         point = { ...targetSystemPoint };
         if (targetSystemPoint === state.targetSystemPoints[action.id[1]]) {

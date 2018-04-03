@@ -14,7 +14,7 @@ stories.addDecorator(withKnobs);
 stories.addDecorator(StoryRouter.default());
 
 const values = {
-  params: {
+  transformation: {
     tx: 1380.49,
     ty: 9336.54,
     tz: -3796.4,
@@ -39,5 +39,9 @@ const values = {
 };
 
 stories.add('Page for inputting data for applyTransformation - DontTest', () => (
-  <ApplyTrafoInput points={values.points} params={values.params} handleDrop={() => {}} />
+  <ApplyTrafoInput
+    points={values.points}
+    transformation={values.transformation}
+    handleDrop={() => {}}
+  />
 ));
