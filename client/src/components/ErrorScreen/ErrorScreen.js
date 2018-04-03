@@ -5,6 +5,10 @@ import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import Sidebar from '../Sidebar/Sidebar';
 import './ErrorScreen.css';
 
+const TiWarningOutline = require('react-icons/lib/ti/warning-outline');
+
+const warningIcon = React.createElement(TiWarningOutline, null);
+
 /**
  * Shows up if there's an error in the calculation. Displays error message
  * @param {Object} error - error message
@@ -14,7 +18,7 @@ import './ErrorScreen.css';
 const ErrorScreen = ({ error, handleClick }) => (
   <div className='error-screen'>
     <h1 className='error-header'>
-      <span className='error-span'>⚠ </span>
+      <span className='error-span'>{warningIcon} </span>
       <FormattedMessage id='ErrorScreen.label.error' defaultMessage='Error!' />
     </h1>
     <p className='error-message'>{error}</p>
@@ -22,7 +26,7 @@ const ErrorScreen = ({ error, handleClick }) => (
       <FormattedMessage
         id='ErrorScreen.label.s3dinfo'
         defaultMessage="
-          Maybe you don't have the service for mathematical operations by sigma3D running.\n\n
+          Do you have the service for mathematical operations by sigma3D running?\n\n
           If you don't own the service, please contact sigma3D:
         "
       />
@@ -30,7 +34,7 @@ const ErrorScreen = ({ error, handleClick }) => (
         <p>+49 (0) 2542 - 91898 0</p>
         <div className='links'>
           <a href='mailto:info@sigma3d.de'>info@sigma3d.de</a>
-          <p> | </p>
+          <span> | </span>
           <a href='http://sigma3d.de/'>http://www.sigma3d.de</a>
         </div>
       </div>

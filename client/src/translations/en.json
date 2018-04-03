@@ -23,7 +23,7 @@
   "CoordinateDifferenceBarGraph.caption.deviation": "Deviation: ",
   "ErrorScreen.label.error": "Error!",
   "ErrorScreen.label.s3dinfo":
-    "Maybe you don't have the service for mathematical operations by sigma3D running.\n\n If you don't own the service, please contact sigma3D:",
+    "Do you have the service for mathematical operations by sigma3D running?\n\n If you don't own the service, please contact sigma3D:",
   "InfoModal.caption.wrongInput": "Wrong Input",
   "InfoModal.label.mCantBeZero": "M cannot be zero!",
   "InfoModal.label.noCirclePoints": "Please import circle points!",

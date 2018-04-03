@@ -2,17 +2,22 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
+import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import { getParamInversion } from '../selectors/ParamInversionSelectors/getParamInversionSelector';
+import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import { submitParamInversionCoords } from '../actions/paramInversionCoords/paramInversionCoordsActions';
-import ParamInversion from '../components/ParamInversion/ParamInversion';
+import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
 import InfoModal from '../components/InfoModal/InfoModal';
+import ParamInversion from '../components/ParamInversion/ParamInversion';
 
 const mapDispatchToProps = dispatch => ({
+  onRemoveError: () => dispatch(removeError()),
   onSubmitParamInversionCoords: coords => dispatch(submitParamInversionCoords(coords)),
 });
 
 const mapStateToProps = state => ({
   paramInversion: getParamInversion(state),
+  error: getError(state),
 });
 
 /**
@@ -104,6 +109,14 @@ class ParamInversionContainer extends Component {
     this.setState({ ...this.state, notification: null });
   };
 
+  /**
+   * Navigates back to input page of the current transformation
+   * @memberof ParamInversionContainer
+   */
+  goBack = () => {
+    this.props.onRemoveError();
+  };
+
   render() {
     let textAreaDisplay;
     if (this.state.submitted) {
@@ -125,6 +138,9 @@ class ParamInversionContainer extends Component {
       textAreaDisplay = '';
     }
 
+    if (this.props.error) {
+      return <ErrorScreen error={this.props.error} handleClick={this.goBack} />;
+    }
     return (
       <div>
         {this.state.notification}
@@ -141,7 +157,9 @@ class ParamInversionContainer extends Component {
 
 ParamInversionContainer.propTypes = {
   onSubmitParamInversionCoords: PropTypes.func.isRequired,
+  onRemoveError: PropTypes.func.isRequired,
   paramInversion: PropTypes.arrayOf(PropTypes.string).isRequired,
+  error: PropTypes.string,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ParamInversionContainer);

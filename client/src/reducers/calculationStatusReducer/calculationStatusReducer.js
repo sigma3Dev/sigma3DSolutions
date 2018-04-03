@@ -4,6 +4,12 @@ import {
   SUBMIT_3D_TRAFO_COORDS_FAILURE,
 } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 
+import {
+  SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST,
+  SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS,
+  SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE,
+} from '../../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
+
 /*  true when a request has been sent, but no response or error has returned yet */
 const initialCalculationStateData = {
   isCalculating: false,
@@ -28,6 +34,21 @@ function calculationStatus(state = initialCalculationStateData, action) {
         isCalculating: false,
       };
     case SUBMIT_3D_TRAFO_COORDS_FAILURE:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST:
+      return {
+        ...state,
+        isCalculating: true,
+      };
+    case SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE:
       return {
         ...state,
         isCalculating: false,

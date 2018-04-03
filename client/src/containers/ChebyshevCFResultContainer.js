@@ -7,6 +7,8 @@ import {
   getIsCalculating,
 } from '../selectors/ChebyshevCircleFitSelector/getChebyshevCircleFitResultDataSelector/getChebyshevCircleFitResultDataSelector';
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
+import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
+import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
 import ChebyshevCFResult from '../components/ChebyshevCFResult/ChebyshevCFResult';
 
 const mapDispatchToProps = dispatch => ({
@@ -45,14 +47,14 @@ class ChebyshevCFResultContainer extends Component {
   };
 
   render() {
+    if (this.props.isCalculating) {
+      return <LoadingScreen />;
+    } else if (this.props.error) {
+      return <ErrorScreen error={this.props.error} handleClick={this.goBack} />;
+    }
     return (
       <div>
-        <ChebyshevCFResult
-          chebyshevParams={this.props.chebyshevParams}
-          error={this.props.error}
-          isCalculating={this.props.isCalculating}
-          handleClick={this.goBack}
-        />
+        <ChebyshevCFResult chebyshevParams={this.props.chebyshevParams} handleClick={this.goBack} />
       </div>
     );
   }

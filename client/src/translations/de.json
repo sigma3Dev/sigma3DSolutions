@@ -23,7 +23,7 @@
   "CoordinateDifferenceBarGraph.caption.deviation": "Abweichung: ",
   "ErrorScreen.label.error": "Fehler!",
   "ErrorScreen.label.s3dinfo":
-    "Möglicherweise läuft der Fittingservice von sigma3D nicht.\n\n Wenn Sie das Programm nicht besitzen, kontaktieren Sie bitte sigma3D:",
+    "Läuft der Fittingservice von sigma3D im Hintergrund?.\n\n Wenn Sie das Programm nicht besitzen, kontaktieren Sie bitte sigma3D:",
   "InfoModal.caption.wrongInput": "Fehlerhaftes Input",
   "InfoModal.label.mCantBeZero": "M darf nicht null sein!",
   "InfoModal.label.noCirclePoints": "Bitte Kreispunkte importieren!",
