@@ -14,7 +14,7 @@ const axios = require('axios');
  * handle checkbox changes
  * @param {string} id - The id of the checkbox
  */
-export const checkboxUpdate = (id) => ({
+export const checkboxUpdate = id => ({
   type: CHECKBOX_UPDATE,
   id,
   receivedAt: Date.now(),
@@ -26,21 +26,21 @@ export const submitCoordsRequest = () => ({
   receivedAt: Date.now(),
 });
 
-/** 
+/**
  * fired when a response is returned from the backend
  * @param {Object} response - Response that is returned from the node server
  */
-export const submitCoordsSuccess = (response) => ({
+export const submitCoordsSuccess = response => ({
   type: SUBMIT_COORDS_SUCCESS,
   response,
   receivedAt: Date.now(),
 });
 
-/** 
+/**
  * fired when an error is returned from the backend
  * @param {Object} error - Error that is returned from the node server
  */
-export const submitCoordsFailure = (error) => ({
+export const submitCoordsFailure = error => ({
   type: SUBMIT_COORDS_FAILURE,
   error,
   receivedAt: Date.now(),
@@ -52,24 +52,24 @@ export const submitCoordsFailure = (error) => ({
  * @param {getStateCallback} getState - callback that gets current state
  * @returns {Object} response from backend or error message
  */
-export const submitCoords = (coords) => (dispatch) => {
+export const submitCoords = coords => (dispatch) => {
   dispatch(submitCoordsRequest());
   if (!coords || coords.length === 0) {
-    return dispatch(submitCoordsFailure("Object of input coordinates is not valid!"));
+    return dispatch(submitCoordsFailure('Object of input coordinates is not valid!'));
   }
   return axios.post('/calculate-trafo', {
-      coords
-    })
-    .then(response => {
-      if (response.data.hasOwnProperty('result')) {
+    coords,
+  })
+    .then((response) => {
+      if (Object.prototype.hasOwnProperty.call(response.data, 'result')) {
         dispatch(submitCoordsSuccess(response));
       } else {
-        dispatch(submitCoordsFailure(response.data.error.message))
+        dispatch(submitCoordsFailure(response.data.error.message));
       }
     })
-    .catch(error => {
+    .catch((error) => {
       dispatch(submitCoordsFailure(error.message));
-    })
+    });
 };
 
 /** doesn't do anything, fires whenever calculateTrafoDifference is requested */
@@ -78,21 +78,21 @@ export const calculateTrafoDifferenceRequest = () => ({
   receivedAt: Date.now(),
 });
 
-/** 
+/**
  * fired when a response is returned from the backend
  * @param {Object} response - Response that is returned from the node server
  */
-export const calculateTrafoDifferenceSuccess = (response) => ({
+export const calculateTrafoDifferenceSuccess = response => ({
   type: CALCULATE_TRAFO_DIFFERENCE_SUCCESS,
   response,
   receivedAt: Date.now(),
 });
 
-/** 
+/**
  * fired when an error is returned from the backend
  * @param {Object} error - Error that is returned from the node server
  */
-export const calculateTrafoDifferenceFailure = (error) => ({
+export const calculateTrafoDifferenceFailure = error => ({
   type: CALCULATE_TRAFO_DIFFERENCE_FAILURE,
   error,
   receivedAt: Date.now(),
@@ -104,21 +104,21 @@ export const calculateTrafoDifferenceFailure = (error) => ({
  * @param {getStateCallback} getState - callback that gets current state
  * @returns {Object} response from backend or error message
  */
-export const calculateTrafoDifference = (startPoints, targetPoints, trafoParams) => (dispatch, getState) => {
+export const calculateTrafoDifference = (startPoints, targetPoints, trafoParams) => (dispatch) => {
   dispatch(calculateTrafoDifferenceRequest());
   return axios.post('/calculate-trafo-difference', {
-      startPoints,
-      targetPoints,
-      trafoParams,
-    })
-    .then(response => {
-      if (response.data !== [] && response.data[0].hasOwnProperty('vx')) {
+    startPoints,
+    targetPoints,
+    trafoParams,
+  })
+    .then((response) => {
+      if (response.data !== [] && Object.protoype.hasOwnProperty.call(response.data[0], 'vx')) {
         dispatch(calculateTrafoDifferenceSuccess(response));
       } else {
-        dispatch(calculateTrafoDifferenceFailure(response.data.error.message))
+        dispatch(calculateTrafoDifferenceFailure(response.data.error.message));
       }
     })
-    .catch(error => {
+    .catch((error) => {
       dispatch(calculateTrafoDifferenceFailure(error.message));
-    })
+    });
 };

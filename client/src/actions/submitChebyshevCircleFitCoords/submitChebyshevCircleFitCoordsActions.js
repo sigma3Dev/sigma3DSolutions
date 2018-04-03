@@ -11,21 +11,21 @@ export const submitChebyshevCircleFitCoordsRequest = () => ({
   receivedAt: Date.now(),
 });
 
-/** 
+/**
  * fired when a response is returned from the backend
  * @param {Object} response - Response that is returned from the node server
  */
-export const submitChebyshevCircleFitCoordsSuccess = (response) => ({
+export const submitChebyshevCircleFitCoordsSuccess = response => ({
   type: SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS,
   response,
   receivedAt: Date.now(),
 });
 
-/** 
+/**
  * fired when an error is returned from the backend
  * @param {Object} error - Error that is returned from the node server
  */
-export const submitChebyshevCircleFitCoordsFailure = (error) => ({
+export const submitChebyshevCircleFitCoordsFailure = error => ({
   type: SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE,
   error,
   receivedAt: Date.now(),
@@ -41,16 +41,16 @@ export const submitChebyshevCircleFitCoords = () => (dispatch, getState) => {
   dispatch(submitChebyshevCircleFitCoordsRequest());
   const coords = getState();
   return axios.post('/calculate-chebyshev-circle-fit', {
-      coords
-    })
-    .then(response => {
-      if (response.data.hasOwnProperty('result')) {
+    coords,
+  })
+    .then((response) => {
+      if (Object.prototype.hasOwnProperty.call(response.data, 'result')) {
         dispatch(submitChebyshevCircleFitCoordsSuccess(response));
       } else {
-        dispatch(submitChebyshevCircleFitCoordsFailure(response.data.error.message))
+        dispatch(submitChebyshevCircleFitCoordsFailure(response.data.error.message));
       }
     })
-    .catch(error => {
+    .catch((error) => {
       dispatch(submitChebyshevCircleFitCoordsFailure(error.message));
-    })
+    });
 };
