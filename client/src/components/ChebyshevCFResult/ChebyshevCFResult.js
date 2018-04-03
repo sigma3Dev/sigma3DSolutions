@@ -3,14 +3,9 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Sidebar from '../Sidebar/Sidebar';
-import ErrorScreen from '../ErrorScreen/ErrorScreen';
 import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import ChebyshevCFDrawing from '../ChebyshevCFDrawing/ChebyshevCFDrawing';
 import './ChebyshevCFResult.css';
-
-const FaSpinner = require('react-icons/lib/fa/spinner');
-
-const spinnerIcon = React.createElement(FaSpinner, null);
 
 const GoClippy = require('react-icons/lib/go/clippy');
 
@@ -25,24 +20,7 @@ const ClipboardIcon = React.createElement(GoClippy, null);
  * @param {function} handleClick - functionality to navigate back to start screen
  * @returns {*} ChebyshevCFResult - .jsx Element
  */
-const ChebyshevCFResult = ({
-  chebyshevParams, error, isCalculating, handleClick,
-}) => {
-  if (isCalculating) {
-    return (
-      <div className='chebyshev-circle-fit-result'>
-        <h1>
-          <FormattedMessage
-            id='ChebyshevCFResult.label.calculating'
-            defaultMessage='Calculating...'
-          />
-        </h1>
-        <div className='fa-spinner'>{spinnerIcon}</div>
-      </div>
-    );
-  } else if (error) {
-    return <ErrorScreen error={error} handleClick={handleClick} />;
-  }
+const ChebyshevCFResult = ({ chebyshevParams, handleClick }) => {
   const copyText = chebyshevParams.join(' ');
   return (
     <div className='chebyshev-circle-fit-result'>
@@ -143,8 +121,6 @@ const ChebyshevCFResult = ({
 ChebyshevCFResult.propTypes = {
   handleClick: PropTypes.func.isRequired,
   chebyshevParams: PropTypes.arrayOf(PropTypes.number).isRequired,
-  error: PropTypes.string,
-  isCalculating: PropTypes.bool.isRequired,
 };
 
 export default ChebyshevCFResult;

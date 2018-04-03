@@ -62,7 +62,8 @@ class ThreeDTrafoResultContainer extends Component {
   }
 
   /**
-   * runs calculateThreeDTrafoDifference when the page is first loaded and when trafoParams are updated
+   * runs calculateThreeDTrafoDifference when the page is first loaded
+   * and when trafoParams are updated
    * @param {Object} prevProps - previous Props
    * @memberof ThreeDTrafoResultContainer
    */
