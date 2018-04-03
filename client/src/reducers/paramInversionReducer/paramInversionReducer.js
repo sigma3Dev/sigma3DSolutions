@@ -1,6 +1,4 @@
-import {
-  SUBMIT_PARAM_INVERSION_COORDS_SUCCESS,
-} from '../../actions/paramInversionCoords/paramInversionCoordsActions';
+import { SUBMIT_PARAM_INVERSION_COORDS_SUCCESS } from '../../actions/paramInversionCoords/paramInversionCoordsActions';
 
 /* Holds the initial transformation data input. */
 const initialParamInversionData = {
@@ -11,7 +9,7 @@ const initialParamInversionData = {
   q1: 0,
   q2: 0,
   q3: 0,
-  m: 0
+  m: 0,
 };
 
 /**
@@ -33,7 +31,7 @@ function paramInversion(state = initialParamInversionData, action) {
         q2: action.response.data.result.q2,
         q3: action.response.data.result.q3,
         m: action.response.data.result.m,
-      }
+      };
     default:
       return state;
   }

@@ -8,41 +8,41 @@ import calculationStatusReducer from './calculationStatusReducer';
 describe('calculationStatusReducer', () => {
   it('should handle SUBMIT_COORDS_REQUEST', () => {
     const state = {
-      isCalculating: false
+      isCalculating: false,
     };
     const action = {
-      type: SUBMIT_COORDS_REQUEST
+      type: SUBMIT_COORDS_REQUEST,
     };
     const expectedState = {
-      isCalculating: true
+      isCalculating: true,
     };
     const result = calculationStatusReducer(state, action);
-    expect(result).toEqual(expectedState)
+    expect(result).toEqual(expectedState);
   });
   it('should handle SUBMIT_COORDS_SUCCESS', () => {
     const state = {
-      isCalculating: true
+      isCalculating: true,
     };
     const action = {
-      type: SUBMIT_COORDS_SUCCESS
+      type: SUBMIT_COORDS_SUCCESS,
     };
     const expectedState = {
-      isCalculating: false
+      isCalculating: false,
     };
     const result = calculationStatusReducer(state, action);
-    expect(result).toEqual(expectedState)
+    expect(result).toEqual(expectedState);
   });
   it('should handle SUBMIT_COORDS_FAILURE', () => {
     const state = {
-      isCalculating: true
+      isCalculating: true,
     };
     const action = {
-      type: SUBMIT_COORDS_FAILURE
+      type: SUBMIT_COORDS_FAILURE,
     };
     const expectedState = {
-      isCalculating: false
+      isCalculating: false,
     };
     const result = calculationStatusReducer(state, action);
-    expect(result).toEqual(expectedState)
+    expect(result).toEqual(expectedState);
   });
 });

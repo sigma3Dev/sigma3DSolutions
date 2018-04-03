@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { injectIntl } from 'react-intl';
 import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
-import { getIsCalculating, getApplyTrafoResult } from '../selectors/ApplyTrafoSelectors/getApplyTrafoResultDataSelector/getApplyTrafoResultDataSelector';
+import {
+  getIsCalculating,
+  getApplyTrafoResult,
+} from '../selectors/ApplyTrafoSelectors/getApplyTrafoResultDataSelector/getApplyTrafoResultDataSelector';
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
@@ -32,24 +35,17 @@ class ApplyTransformationResultContainer extends Component {
   goBack = () => {
     this.props.onRemoveError();
     this.props.history.push('/transformations/transform/data-input');
-  }
+  };
 
   render() {
     if (this.props.isCalculating) {
-      return (
-        <LoadingScreen />
-      );
+      return <LoadingScreen />;
     } else if (this.props.error) {
-      return (
-        <ErrorScreen error={this.props.error} handleClick={this.goBack} />
-      );
+      return <ErrorScreen error={this.props.error} handleClick={this.goBack} />;
     }
     return (
       <div>
-        <ApplyTrafoResult
-          result={this.props.result}
-          handleReturnClick={this.goBack}
-        />
+        <ApplyTrafoResult result={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );
   }
@@ -63,5 +59,4 @@ ApplyTransformationResultContainer.propTypes = {
   history: PropTypes.any,
 };
 
-export default
-injectIntl(connect(mapStateToProps, mapDispatchToProps)(ApplyTransformationResultContainer));
+export default injectIntl(connect(mapStateToProps, mapDispatchToProps)(ApplyTransformationResultContainer));

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {
-  injectIntl,
-  defineMessages,
-} from 'react-intl';
+import { injectIntl, defineMessages } from 'react-intl';
 import fileSaver from 'file-saver';
 import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import {
@@ -81,7 +78,7 @@ class ThreeDTrafoResultContainer extends Component {
         this.props.onCalculateTrafoDifference(startPoints, targetPoints, trafoParams);
       }
     }
-  }
+  };
 
   /**
    * Navigates back to input page of the current transformation
@@ -90,7 +87,7 @@ class ThreeDTrafoResultContainer extends Component {
   goBack = () => {
     this.props.onRemoveError();
     this.props.history.push('/transformations/three-d-transformation/data-input');
-  }
+  };
 
   downloadFile = () => {
     const askFilename = this.props.intl.formatMessage(messages.filename);
@@ -107,17 +104,13 @@ class ThreeDTrafoResultContainer extends Component {
     // turns string into blob and then into .txt
     const blobVar = new Blob([coordsAsText], { type: 'text/plain;charset=utf-8' });
     fileSaver(blobVar, fileName, '.txt');
-  }
+  };
 
   render() {
     if (this.props.isCalculating) {
-      return (
-        <LoadingScreen />
-      );
+      return <LoadingScreen />;
     } else if (this.props.error) {
-      return (
-        <ErrorScreen error={this.props.error} handleClick={this.goBack} />
-      );
+      return <ErrorScreen error={this.props.error} handleClick={this.goBack} />;
     }
     return (
       <div>
@@ -139,10 +132,7 @@ ThreeDTrafoResultContainer.propTypes = {
   onCalculateTrafoDifference: PropTypes.func.isRequired,
   transformedStartPoints: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
   startSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
-  targetSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.bool,
-  ]))).isRequired,
+  targetSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
   trafoParams: PropTypes.arrayOf(PropTypes.number).isRequired,
   trafoDifference: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
   error: PropTypes.string,

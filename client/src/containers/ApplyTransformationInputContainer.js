@@ -6,7 +6,10 @@ import { pushCoordinates } from '../actions/pushTrafoCoords/pushTrafoCoordsActio
 import { clearApplyTrafoInput } from '../actions/clearInput/clearInputActions';
 import { changeApplyTrafoParamInputField } from '../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
 import { submitApplyTrafoValues } from '../actions/submitApplyTransformationValuesActions/submitApplyTransformationValuesActions';
-import { getParams, getPoints } from '../selectors/ApplyTrafoSelectors/getApplyTrafoInputDataSelector/getApplyTrafoInputDataSelector';
+import {
+  getParams,
+  getPoints,
+} from '../selectors/ApplyTrafoSelectors/getApplyTrafoInputDataSelector/getApplyTrafoInputDataSelector';
 import ApplyTrafoInput from '../components/ApplyTrafoInput/ApplyTrafoInput';
 import InfoModal from '../components/InfoModal/InfoModal';
 
@@ -66,7 +69,7 @@ class ApplyTransformationInputContainer extends Component {
    */
   clearApplyTrafoInput = () => {
     this.props.onClearApplyTrafoInput();
-  }
+  };
 
   /**
    * Decides wheter InfoPanel is displayed or not
@@ -74,7 +77,7 @@ class ApplyTransformationInputContainer extends Component {
    */
   displayInfoPanel = () => {
     this.setState({ ...this.state, isInfoOpen: !this.state.isInfoOpen });
-  }
+  };
 
   /**
    * Uses cdi module to transform .txt file into an array of start points
@@ -85,27 +88,29 @@ class ApplyTransformationInputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoordinates(coords);
     });
-  }
+  };
 
   /**
-  * Handles coords submit, navigates to "result" page
-  * @memberof ApplyTransformationInputContainer
-  */
+   * Handles coords submit, navigates to "result" page
+   * @memberof ApplyTransformationInputContainer
+   */
   submitApplyTrafoCoords = () => {
     if (this.props.points.length === 0) {
       this.setState({
-        notification: (<InfoModal
-          header={(
-            <FormattedMessage
-              id="InfoModal.caption.wrongInput"
-              defaultMessage="Wrong Input"
-            />)}
-          body={(<FormattedMessage
-            id="InfoModal.label.noPoints"
-            defaultMessage="Please import points!"
-          />)}
-          handleClick={this.closeModal}
-        />),
+        notification: (
+          <InfoModal
+            header={
+              <FormattedMessage id='InfoModal.caption.wrongInput' defaultMessage='Wrong Input' />
+            }
+            body={
+              <FormattedMessage
+                id='InfoModal.label.noPoints'
+                defaultMessage='Please import points!'
+              />
+            }
+            handleClick={this.closeModal}
+          />
+        ),
       });
     } else {
       const values = {
@@ -128,18 +133,18 @@ class ApplyTransformationInputContainer extends Component {
   render() {
     const infoPanelText = (
       <FormattedMessage
-        id="ThreeDTrafoInputContainer.panel.infoPanelText"
-        defaultMessage={`
+        id='ThreeDTrafoInputContainer.panel.infoPanelText'
+        defaultMessage='
           The input should be a simple .txt file.\n
-        
-          The file should consist of one or more points, each on its own line. 
+
+          The file should consist of one or more points, each on its own line.
           Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n
-        
+
           Example:\n
           41.3 11.2 17.1\n
           24.2 33.1 19.8\n
           9.1 5.4 12.9
-        `}
+        '
       />
     );
     return (

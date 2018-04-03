@@ -39,9 +39,10 @@ export const submitParamInversionCoordsFailure = error => ({
  */
 export const submitParamInversionCoords = coords => (dispatch) => {
   dispatch(submitParamInversionCoordsRequest());
-  return axios.post('/param-inversion', {
-    coords,
-  })
+  return axios
+    .post('/param-inversion', {
+      coords,
+    })
     .then((response) => {
       if (Object.prototype.hasOwnProperty.call(response.data, 'result')) {
         dispatch(submitParamInversionCoordsSuccess(response));

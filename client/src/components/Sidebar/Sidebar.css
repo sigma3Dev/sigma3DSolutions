@@ -20,7 +20,8 @@
   opacity: 0.8;
 }
 
-.Sidebar .link:hover, .Sidebar .link-active {  
+.Sidebar .link:hover,
+.Sidebar .link-active {
   font-family: Roboto;
   opacity: 1;
   text-decoration: none;

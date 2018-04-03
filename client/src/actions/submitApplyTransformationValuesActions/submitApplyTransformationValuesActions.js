@@ -41,9 +41,10 @@ export const submitApplyTrafoValues = values => (dispatch) => {
   if (!values || values.length === 0) {
     return dispatch(submitApplyTrafoValuesFailure('Object of input coordinates is not valid!'));
   }
-  return axios.post('/apply-trafo', {
-    values,
-  })
+  return axios
+    .post('/apply-trafo', {
+      values,
+    })
     .then((response) => {
       if (Object.prototype.hasOwnProperty.call(response, 'data')) {
         dispatch(submitApplyTrafoValuesSuccess(response.data));

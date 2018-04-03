@@ -56,9 +56,10 @@ export const submitCoords = coords => (dispatch) => {
   if (!coords || coords.length === 0) {
     return dispatch(submitCoordsFailure('Object of input coordinates is not valid!'));
   }
-  return axios.post('/calculate-trafo', {
-    coords,
-  })
+  return axios
+    .post('/calculate-trafo', {
+      coords,
+    })
     .then((response) => {
       if (Object.prototype.hasOwnProperty.call(response.data, 'result')) {
         dispatch(submitCoordsSuccess(response));
@@ -105,13 +106,14 @@ export const calculateTrafoDifferenceFailure = error => ({
  */
 export const calculateTrafoDifference = (startPoints, targetPoints, trafoParams) => (dispatch) => {
   dispatch(calculateTrafoDifferenceRequest());
-  return axios.post('/calculate-trafo-difference', {
-    startPoints,
-    targetPoints,
-    trafoParams,
-  })
+  return axios
+    .post('/calculate-trafo-difference', {
+      startPoints,
+      targetPoints,
+      trafoParams,
+    })
     .then((response) => {
-      if (response.data !== [] && Object.protoype.hasOwnProperty.call(response.data[0], 'vx')) {
+      if (response.data !== [] && Object.prototype.hasOwnProperty.call(response.data[0], 'vx')) {
         dispatch(calculateTrafoDifferenceSuccess(response));
       } else {
         dispatch(calculateTrafoDifferenceFailure(response.data.error.message));

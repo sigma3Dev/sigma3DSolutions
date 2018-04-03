@@ -10,6 +10,6 @@ const stories = storiesOf('Start.BackToInputBtn', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));
 stories.addDecorator(withKnobs);
 
-stories
-  .add('Button to navigate back to previous data input page', () => (
-    <BackToInputBtn handleClick={() => {}} />));
+stories.add('Button to navigate back to previous data input page', () => (
+  <BackToInputBtn handleClick={() => {}} />
+));

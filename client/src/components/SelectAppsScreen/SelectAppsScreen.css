@@ -1,20 +1,20 @@
 .select-apps-screen .buttons-display {
   display: flex;
- }  
+}
 
 .select-apps-screen {
-    height: 100%;
-    width: 72%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-left: 200px;
-  }  
+  height: 100%;
+  width: 72%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 200px;
+}
 
-  .select-apps-screen * {
-    text-decoration: none;
-  }
-  
-  .select-apps-screen a:hover {
-    text-decoration: none;
-  }
+.select-apps-screen * {
+  text-decoration: none;
+}
+
+.select-apps-screen a:hover {
+  text-decoration: none;
+}

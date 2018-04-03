@@ -1,7 +1,10 @@
 export const SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS = 'SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS';
-export const SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST = 'SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST';
-export const SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS = 'SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS';
-export const SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE = 'SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE';
+export const SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST =
+  'SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST';
+export const SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS =
+  'SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS';
+export const SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE =
+  'SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE';
 
 const axios = require('axios');
 
@@ -40,9 +43,10 @@ export const submitChebyshevCircleFitCoordsFailure = error => ({
 export const submitChebyshevCircleFitCoords = () => (dispatch, getState) => {
   dispatch(submitChebyshevCircleFitCoordsRequest());
   const coords = getState();
-  return axios.post('/calculate-chebyshev-circle-fit', {
-    coords,
-  })
+  return axios
+    .post('/calculate-chebyshev-circle-fit', {
+      coords,
+    })
     .then((response) => {
       if (Object.prototype.hasOwnProperty.call(response.data, 'result')) {
         dispatch(submitChebyshevCircleFitCoordsSuccess(response));

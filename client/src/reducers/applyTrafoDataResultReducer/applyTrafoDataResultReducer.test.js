@@ -13,7 +13,8 @@ describe('applyTrafoDataResultReducer', () => {
           x: 1,
           y: 2,
           z: 3,
-        }, {
+        },
+        {
           x: 4,
           y: 5,
           z: 6,
@@ -26,7 +27,8 @@ describe('applyTrafoDataResultReducer', () => {
           x: 1,
           y: 2,
           z: 3,
-        }, {
+        },
+        {
           x: 4,
           y: 5,
           z: 6,

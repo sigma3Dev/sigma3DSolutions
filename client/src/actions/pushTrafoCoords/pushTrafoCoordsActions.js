@@ -23,10 +23,10 @@ export const pushTargetSystemCoordinates = coords => ({
 });
 
 /**
- * pushes the coordinates 
+ * pushes the coordinates
  * @param {Object} coords - the coordinates file from input
  */
-export const pushCoordinates = (coords)  => ({
+export const pushCoordinates = coords => ({
   type: PUSH_COORDINATES,
   coords,
   receivedAt: Date.now(),

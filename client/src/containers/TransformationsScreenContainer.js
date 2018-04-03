@@ -7,24 +7,22 @@ import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
  * @extends {Component}
  */
 class TransformationsScreenContainer extends Component {
-  render() { 
-    const buttons = [ 
+  render() {
+    const buttons = [
       {
-        type: "3Dtransformation",
-        link: '/transformations/three-d-transformation/data-input'
+        type: '3Dtransformation',
+        link: '/transformations/three-d-transformation/data-input',
       },
       {
-        type: "paramInversion",
-        link: '/transformations/parameter-inversion'
+        type: 'paramInversion',
+        link: '/transformations/parameter-inversion',
       },
       {
-        type: "transform",
-        link: '/transformations/transform/data-input'
-      }
+        type: 'transform',
+        link: '/transformations/transform/data-input',
+      },
     ];
-    return (
-      <SelectAppsScreen buttons={ buttons } /> 
-    )
+    return <SelectAppsScreen buttons={buttons} />;
   }
 }
 

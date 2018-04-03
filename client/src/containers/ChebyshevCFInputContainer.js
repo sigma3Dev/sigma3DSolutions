@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import { FormattedMessage } from 'react-intl';
+import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import ChebyshevCFInput from '../components/ChebyshevCFInput/ChebyshevCFInput';
 import { pushChebyshevCircleFitCoords } from '../actions/pushChebyshevCircleFitCoords/pushChebyshevCircleFitCoordsActions';
-import { getCirclePoints} from '../selectors/ChebyshevCircleFitSelector/getChebyshevCircleFitInputDataSelector/getChebyshevCircleFitInputDataSelector';
-import { submitChebyshevCircleFitCoords} from '../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
-import { clearChebyshevInput} from '../actions/clearInput/clearInputActions';
+import { getCirclePoints } from '../selectors/ChebyshevCircleFitSelector/getChebyshevCircleFitInputDataSelector/getChebyshevCircleFitInputDataSelector';
+import { submitChebyshevCircleFitCoords } from '../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
+import { clearChebyshevInput } from '../actions/clearInput/clearInputActions';
 import InfoModal from '../components/InfoModal/InfoModal';
 
-var cdi = require('coordinatedataimporter');
+const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  OnPushChebyshevCircleFitCoords: (file) => dispatch(pushChebyshevCircleFitCoords(file)),
+  onPushChebyshevCircleFitCoords: file => dispatch(pushChebyshevCircleFitCoords(file)),
   onSubmitChebyshevCircleFitCoords: () => dispatch(submitChebyshevCircleFitCoords()),
-  onclearChebyshevInput: () => dispatch(clearChebyshevInput()),
+  onClearChebyshevInput: () => dispatch(clearChebyshevInput()),
 });
 
-const mapStateToProps = (state, props) => ({
-  //selectors, only here
+const mapStateToProps = state => ({
+  // selectors, only here
   error: getError(state),
   circlePoints: getCirclePoints(state),
 });
@@ -29,10 +30,9 @@ const mapStateToProps = (state, props) => ({
  * @extends {Component}
  */
 class ChebyshevCFInputContainer extends Component {
-
   /**
    * Creates an instance of ChebyshevCFInputContainer.
-   * @param {Object} props 
+   * @param {Object} props
    * @memberof ChebyshevCFInputContainer
    */
   constructor() {
@@ -40,7 +40,7 @@ class ChebyshevCFInputContainer extends Component {
     this.state = {
       notification: null,
       isInfoOpen: false,
-    }
+    };
     this.parseCoords = this.parseCoords.bind(this);
     this.submitChebyshevCircleFitCoords = this.submitChebyshevCircleFitCoords.bind(this);
     this.clearChebyshevInput = this.clearChebyshevInput.bind(this);
@@ -52,93 +52,102 @@ class ChebyshevCFInputContainer extends Component {
    * @memberof ChebyshevCFInputContainer
    */
   parseCoords = (file) => {
-    cdi.startCoordinateDataImport(file, coords => {
-      this.props.OnPushChebyshevCircleFitCoords(coords);
-    }); 
-  }
+    cdi.startCoordinateDataImport(file, (coords) => {
+      this.props.onPushChebyshevCircleFitCoords(coords);
+    });
+  };
 
   /**
-  * Closes the Modal-window
-  * @memberof ChebyshevCFInputContainer
-  */
+   * Closes the Modal-window
+   * @memberof ChebyshevCFInputContainer
+   */
   closeModal = () => {
-    this.setState({...this.state, notification: null});
-  }
+    this.setState({ ...this.state, notification: null });
+  };
 
   /**
    * Decides wheter InfoPanel is displayed or not
    * @memberof ChebyshevCFInputContainer
    */
   displayInfoPanel = () => {
-    this.setState({...this.state, isInfoOpen: !this.state.isInfoOpen});
-  }
+    this.setState({ ...this.state, isInfoOpen: !this.state.isInfoOpen });
+  };
 
   /**
    * Handles coords submit, navigates to "result" page
    * @memberof ChebyshevCFInputContainer
    */
   submitChebyshevCircleFitCoords = () => {
-    if (!this.props.circlePoints || this.props.circlePoints.length === 0 ) {
+    if (!this.props.circlePoints || this.props.circlePoints.length === 0) {
       this.setState({
-        notification: (<InfoModal 
-          header={(     
-            <FormattedMessage
-              id="InfoModal.caption.wrongInput"
-              defaultMessage="Wrong Input"
-            /> )}
-          body={(<FormattedMessage
-            id="InfoModal.label.noCirclePoints"
-            defaultMessage="Please import circle points!"
-          /> )}
-          handleClick={this.closeModal}
-        />)
-      })
+        notification: (
+          <InfoModal
+            header={
+              <FormattedMessage id='InfoModal.caption.wrongInput' defaultMessage='Wrong Input' />
+            }
+            body={
+              <FormattedMessage
+                id='InfoModal.label.noCirclePoints'
+                defaultMessage='Please import circle points!'
+              />
+            }
+            handleClick={this.closeModal}
+          />
+        ),
+      });
     } else {
       this.props.onSubmitChebyshevCircleFitCoords();
       this.props.history.push('/geometry/chebyshev-circle-fit/result');
     }
-  }
+  };
 
-     /**
+  /**
    * deletes all points, updates input display
    * @memberof ChebyshevCFInputContainer
    */
   clearChebyshevInput = () => {
-    this.props.onclearChebyshevInput();
-  }
+    this.props.onClearChebyshevInput();
+  };
   render() {
-    const infoPanelText=(
+    const infoPanelText = (
       <FormattedMessage
-        id="ChebyshevCFInputContainer.panel.infoPanelText"
-        defaultMessage={`
+        id='ChebyshevCFInputContainer.panel.infoPanelText'
+        defaultMessage='
           The input should be a simple .txt file.\n
-        
-          The file should consist of one or more points, each on its own line. 
+
+          The file should consist of one or more points, each on its own line.
           Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n
-        
+
           Example:\n
           41.3 11.2 17.1\n
           24.2 33.1 19.8\n
           9.1 5.4 12.9
-        `}
+        '
       />
-    )
+    );
     return (
       <div>
         {this.state.notification}
-        <ChebyshevCFInput 
-          onFileDrop={ this.parseCoords } 
-          circlePoints={ this.props.circlePoints }
-          handleInfoClick={ this.displayInfoPanel }
-          handleSubmitClick={ this.submitChebyshevCircleFitCoords }
-          handleDeleteClick= { this.clearChebyshevInput }
-          isInfoOpen={ this.state.isInfoOpen }
-          infoPanelText={ infoPanelText }
+        <ChebyshevCFInput
+          onFileDrop={this.parseCoords}
+          circlePoints={this.props.circlePoints}
+          handleInfoClick={this.displayInfoPanel}
+          handleSubmitClick={this.submitChebyshevCircleFitCoords}
+          handleDeleteClick={this.clearChebyshevInput}
+          isInfoOpen={this.state.isInfoOpen}
+          infoPanelText={infoPanelText}
         />
       </div>
-    )
+    );
   }
-  
 }
+
+ChebyshevCFInputContainer.propTypes = {
+  onPushChebyshevCircleFitCoords: PropTypes.func.isRequired,
+  onSubmitChebyshevCircleFitCoords: PropTypes.func.isRequired,
+  onClearChebyshevInput: PropTypes.func.isRequired,
+  circlePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
+  history: PropTypes.any,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ChebyshevCFInputContainer);

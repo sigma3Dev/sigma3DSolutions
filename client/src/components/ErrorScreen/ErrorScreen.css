@@ -12,13 +12,13 @@
 }
 
 .error-screen .error-header {
-  font-size: 5.0em;
+  font-size: 5em;
   border-bottom: none;
 }
 
 .error-screen .error-span {
   color: darkred;
-  font-size: 1.0em;
+  font-size: 1em;
   border-bottom: 0;
 }
 

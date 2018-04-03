@@ -9,27 +9,15 @@ import './SelectAppsScreen.css';
  * @param {Object} props - properties passed down from parent element
  * @returns {*} SelectAppsScreen - .jsx Element
  */
-const SelectAppsScreen = ({
-    buttons,
-}) => {
-  return (
-    <div className="select-apps-screen">
-      <Sidebar />    
-        {
-          buttons.map(b => (
-              <AppSelectionBtn
-                  label={ b.type }
-                  key={ b.type }
-                  link = { b.link }
-              />
-          ))
-        } 
-    </div>
-  );
-}
+const SelectAppsScreen = ({ buttons }) => (
+  <div className='select-apps-screen'>
+    <Sidebar />
+    {buttons.map(b => <AppSelectionBtn label={b.type} key={b.type} link={b.link} />)}
+  </div>
+);
 
 SelectAppsScreen.propTypes = {
   buttons: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)).isRequired,
-}
+};
 
 export default SelectAppsScreen;

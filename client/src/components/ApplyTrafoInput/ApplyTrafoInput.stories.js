@@ -17,12 +17,12 @@ const values = {
   params: {
     tx: 1380.49,
     ty: 9336.54,
-    tz: -3796.40,
+    tz: -3796.4,
     q0: -0.9951,
     q1: -0.0048,
     q2: -0.0006,
-    q3: 0.0990,
-    m: 1.00000,
+    q3: 0.099,
+    m: 1.0,
   },
   points: [
     {
@@ -38,10 +38,6 @@ const values = {
   ],
 };
 
-stories
-  .add('Page for inputting data for applyTransformation - DontTest', () => (
-    <ApplyTrafoInput
-      points={values.points}
-      params={values.params}
-      handleDrop={() => {}}
-    />));
+stories.add('Page for inputting data for applyTransformation - DontTest', () => (
+  <ApplyTrafoInput points={values.points} params={values.params} handleDrop={() => {}} />
+));

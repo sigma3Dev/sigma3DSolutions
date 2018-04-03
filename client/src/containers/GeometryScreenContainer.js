@@ -7,16 +7,14 @@ import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
  * @extends {Component}
  */
 class GeometryScreenContainer extends Component {
-  render() { 
-    const buttons = [ 
+  render() {
+    const buttons = [
       {
-        type: "chebyshev_circle_fit",
-        link: '/geometry/chebyshev-circle-fit/data-input'
-      } 
+        type: 'chebyshev_circle_fit',
+        link: '/geometry/chebyshev-circle-fit/data-input',
+      },
     ];
-    return (
-      <SelectAppsScreen buttons={ buttons } /> 
-    )
+    return <SelectAppsScreen buttons={buttons} />;
   }
 }
 

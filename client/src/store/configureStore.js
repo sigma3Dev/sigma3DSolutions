@@ -31,11 +31,7 @@ export default function configureStore(preloadedState) {
     rootReducer,
     preloadedState,
     compose(
-      applyMiddleware(
-        thunkMiddleware,
-        logger,
-        error,
-      ),
+      applyMiddleware(thunkMiddleware, logger, error),
       window.devToolsExtension ? window.devToolsExtension() : f => f, // for debugging in a browser
     ),
   );

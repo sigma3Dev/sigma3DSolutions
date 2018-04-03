@@ -29,12 +29,12 @@ describe('submitChebyshevCircleFitCoordsActions', () => {
     const response = {
       data: {
         result: {
-          x: 0.00,
-          y: 0.00,
-          z: 0.00,
-          i: 0.00000,
-          j: 0.00000,
-          k: 1.00000,
+          x: 0.0,
+          y: 0.0,
+          z: 0.0,
+          i: 0.0,
+          j: 0.0,
+          k: 1.0,
           radius: 1.0,
           tschebyDistance: 0.0,
           stdev: 0.0,
@@ -65,12 +65,12 @@ describe('submitChebyshevCircleFitCoordsActions', () => {
     const store = mockStore({});
     const expResponse = {
       result: {
-        x: 0.00,
-        y: 0.00,
-        z: 0.00,
-        i: 0.00000,
-        j: 0.00000,
-        k: 1.00000,
+        x: 0.0,
+        y: 0.0,
+        z: 0.0,
+        i: 0.0,
+        j: 0.0,
+        k: 1.0,
         radius: 1.0,
         tschebyDistance: 0.0,
         stdev: 0.0,

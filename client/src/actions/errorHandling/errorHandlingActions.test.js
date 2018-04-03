@@ -1,7 +1,4 @@
-import {
-  REMOVE_ERROR,
-  removeError,
-} from './errorHandlingActions';
+import { REMOVE_ERROR, removeError } from './errorHandlingActions';
 
 describe('errorHandlingActions', () => {
   it('should create a REMOVE_ERROR action', () => {

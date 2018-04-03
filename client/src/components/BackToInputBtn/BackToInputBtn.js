@@ -10,11 +10,9 @@ const arrowLeft = React.createElement(FaArrowLeft, null);
  * Navigates back to the previous input page
  * @returns {*} BackToInputBtn - .jsx Element
  */
-const BackToInputBtn = ({
-  handleClick,
-}) => (
+const BackToInputBtn = ({ handleClick }) => (
   <button className='back-to-input-btn' onClick={handleClick}>
-    <div className='arrow-left'>{ arrowLeft }</div>
+    <div className='arrow-left'>{arrowLeft}</div>
   </button>
 );
 

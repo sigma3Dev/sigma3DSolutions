@@ -98,7 +98,8 @@ describe('submitCoordsActions', () => {
           x: 1.0,
           y: 2.0,
           z: 3.0,
-        }, {
+        },
+        {
           x: 4.0,
           y: 5.0,
           z: 6.0,
@@ -109,7 +110,8 @@ describe('submitCoordsActions', () => {
           x: 1.5,
           y: 2.5,
           z: 3.5,
-        }, {
+        },
+        {
           x: 4.5,
           y: 5.5,
           z: 6.5,
@@ -140,7 +142,8 @@ describe('submitCoordsActions', () => {
           x: 1.0,
           y: 2.0,
           z: 3.0,
-        }, {
+        },
+        {
           x: 4.0,
           y: 5.0,
           z: 6.0,
@@ -151,7 +154,8 @@ describe('submitCoordsActions', () => {
           x: 1.5,
           y: 2.5,
           z: 3.5,
-        }, {
+        },
+        {
           x: 4.5,
           y: 5.5,
           z: 6.5,
@@ -214,7 +218,8 @@ describe('submitCoordsActions', () => {
         vy: 0.13,
         vz: 0.44,
         v: 0.35,
-      }, {
+      },
+      {
         vx: 0.81,
         vy: 0.26,
         vz: 0.11,

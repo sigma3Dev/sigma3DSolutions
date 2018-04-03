@@ -36,7 +36,7 @@ describe('clearInputActions', () => {
   });
   it('should create a CLEAR_APPLY_TRAFO_INPUT action', () => {
     const expected = {
-      type: CLEAR_APPLY_TRAFO_INPUT
+      type: CLEAR_APPLY_TRAFO_INPUT,
     };
     const result = clearApplyTrafoInput();
     expect(result.type).toEqual(expected.type);

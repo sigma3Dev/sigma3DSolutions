@@ -29,16 +29,16 @@ const ThreeDTrafoResult = ({
 }) => {
   const copyText = trafoParams.join(' ');
   return (
-    <div className="three-d-trafo-result">
+    <div className='three-d-trafo-result'>
       <h1>
         <FormattedMessage
-          id="ThreeDTrafoResult.label.caption"
-          defaultMessage="Transformation Parameters"
+          id='ThreeDTrafoResult.label.caption'
+          defaultMessage='Transformation Parameters'
         />
       </h1>
-      <table className="result-table">
+      <table className='result-table'>
         <thead>
-          <tr className="caption">
+          <tr className='caption'>
             <th>Tx</th>
             <th>Ty</th>
             <th>Tz</th>
@@ -51,44 +51,30 @@ const ThreeDTrafoResult = ({
         </thead>
         <tbody>
           <tr>
-            <th>
-              { trafoParams[0].toFixed(translationDecimalPlaces) }
-            </th>
-            <th>
-              { trafoParams[1].toFixed(translationDecimalPlaces) }
-            </th>
-            <th>
-              { trafoParams[2].toFixed(translationDecimalPlaces) }
-            </th>
-            <th>
-              { trafoParams[3].toFixed(rotationDecimalPlaces) }
-            </th>
-            <th>
-              { trafoParams[4].toFixed(rotationDecimalPlaces) }
-            </th>
-            <th>
-              { trafoParams[5].toFixed(rotationDecimalPlaces) }
-            </th>
-            <th>
-              { trafoParams[6].toFixed(rotationDecimalPlaces) }
-            </th>
+            <th>{trafoParams[0].toFixed(translationDecimalPlaces)}</th>
+            <th>{trafoParams[1].toFixed(translationDecimalPlaces)}</th>
+            <th>{trafoParams[2].toFixed(translationDecimalPlaces)}</th>
+            <th>{trafoParams[3].toFixed(rotationDecimalPlaces)}</th>
+            <th>{trafoParams[4].toFixed(rotationDecimalPlaces)}</th>
+            <th>{trafoParams[5].toFixed(rotationDecimalPlaces)}</th>
+            <th>{trafoParams[6].toFixed(rotationDecimalPlaces)}</th>
             <th>
               <CopyToClipboard text={copyText}>
-                <button className="copy" title="Copy to clipboard">
-                  { ClipboardIcon }
+                <button className='copy' title='Copy to clipboard'>
+                  {ClipboardIcon}
                 </button>
               </CopyToClipboard>
             </th>
           </tr>
         </tbody>
       </table>
-      <button className="download-link" onClick={handleDownloadClick}>
+      <button className='download-link' onClick={handleDownloadClick}>
         <FormattedMessage
-          id="ThreeDTrafoResult.link.downloadFile"
-          defaultMessage="Download transformed start points as .txt file"
+          id='ThreeDTrafoResult.link.downloadFile'
+          defaultMessage='Download transformed start points as .txt file'
         />
       </button>
-      <div className="bar-graph">
+      <div className='bar-graph'>
         <CoordinateDifferenceBarGraph values={trafoDifference} />
       </div>
       <BackToInputBtn handleClick={handleClick} />

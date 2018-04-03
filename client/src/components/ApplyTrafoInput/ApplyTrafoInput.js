@@ -24,11 +24,11 @@ const ApplyTrafoInput = ({
   transformation,
 }) => {
   const tableRows = points.map((line, i) => (
-    <tr>
-      <th className='grey'>{ i + 1 }</th>
-      <th>{ line.x.toFixed(2) }</th>
-      <th>{ line.y.toFixed(2) }</th>
-      <th>{ line.z.toFixed(2) }</th>
+    <tr key={`${line.x}:${i}`}>
+      <th className='grey'>{i + 1}</th>
+      <th>{line.x.toFixed(2)}</th>
+      <th>{line.y.toFixed(2)}</th>
+      <th>{line.z.toFixed(2)}</th>
     </tr>
   ));
   return (
@@ -41,10 +41,7 @@ const ApplyTrafoInput = ({
         />
         <div className='info-section'>
           <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-          <InputInfoPanel
-            isDisplayed={isInfoOpen}
-            body={infoPanelText}
-          />
+          <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
         </div>
       </h1>
       <div className='input-area'>
@@ -144,7 +141,7 @@ const ApplyTrafoInput = ({
                   title='Clear input'
                   onClick={handleDeleteDataInput}
                 >
-                  { trashIcon }
+                  {trashIcon}
                 </button>
               </th>
               <th>x</th>
@@ -152,9 +149,7 @@ const ApplyTrafoInput = ({
               <th>z</th>
             </tr>
           </thead>
-          <tbody>
-            { tableRows }
-          </tbody>
+          <tbody>{tableRows}</tbody>
         </table>
       </div>
       <SubmitBtn handleClick={handleSubmit} autoFocus />

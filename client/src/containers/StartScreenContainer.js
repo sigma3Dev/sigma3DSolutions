@@ -7,11 +7,8 @@ import StartScreen from '../components/StartScreen/StartScreen';
  * @extends {Component}
  */
 class StartScreenContainer extends Component {
-  render() { 
-    
-    return (
-      <StartScreen/> 
-    )
+  render() {
+    return <StartScreen />;
   }
 }
 

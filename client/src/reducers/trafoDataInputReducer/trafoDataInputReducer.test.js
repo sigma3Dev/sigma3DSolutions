@@ -1,14 +1,9 @@
+import { CHECKBOX_UPDATE } from '../../actions/submitCoords/submitCoordsActions';
 import {
-  CHECKBOX_UPDATE
-} from '../../actions/submitCoords/submitCoordsActions';
-import {
-  PUSH_START_SYSTEM_COORDINATES, 
-  PUSH_TARGET_SYSTEM_COORDINATES
+  PUSH_START_SYSTEM_COORDINATES,
+  PUSH_TARGET_SYSTEM_COORDINATES,
 } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
-import {
-  CLEAR_START_INPUT,
-  CLEAR_TARGET_INPUT
-} from '../../actions/clearInput/clearInputActions';
+import { CLEAR_START_INPUT, CLEAR_TARGET_INPUT } from '../../actions/clearInput/clearInputActions';
 import trafoDataInputReducer from './trafoDataInputReducer';
 
 describe('trafoDataInputReducer', () => {
@@ -21,20 +16,21 @@ describe('trafoDataInputReducer', () => {
           z: 3.0,
           useX: true,
           useY: true,
-          useZ: false
-        }, {
+          useZ: false,
+        },
+        {
           x: 4.0,
           y: 5.0,
           z: 6.0,
           useX: false,
           useY: true,
-          useZ: false
-        }
-      ]
+          useZ: false,
+        },
+      ],
     };
     const action = {
       type: CHECKBOX_UPDATE,
-      id: 'x0'
+      id: 'x0',
     };
     const expectedState = {
       targetSystemPoints: [
@@ -44,19 +40,19 @@ describe('trafoDataInputReducer', () => {
           z: 3.0,
           useX: false,
           useY: true,
-          useZ: false
-        }, {
+          useZ: false,
+        },
+        {
           x: 4.0,
           y: 5.0,
           z: 6.0,
           useX: false,
           useY: true,
-          useZ: false
-        }
-      ]
+          useZ: false,
+        },
+      ],
     };
     const result = trafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
 });
-

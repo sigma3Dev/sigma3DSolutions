@@ -1,22 +1,20 @@
-import {
-  CHECKBOX_UPDATE
-} from '../../actions/submitCoords/submitCoordsActions';
+import { CHECKBOX_UPDATE } from '../../actions/submitCoords/submitCoordsActions';
 
 import {
-  PUSH_START_SYSTEM_COORDINATES, 
-  PUSH_TARGET_SYSTEM_COORDINATES
+  PUSH_START_SYSTEM_COORDINATES,
+  PUSH_TARGET_SYSTEM_COORDINATES,
 } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
 
-import {
-  CLEAR_START_INPUT,
-  CLEAR_TARGET_INPUT
-} from '../../actions/clearInput/clearInputActions';
+import { CLEAR_START_INPUT, CLEAR_TARGET_INPUT } from '../../actions/clearInput/clearInputActions';
 
 /* Holds the initial transformation data input. */
 const initialTrafoData = {
   startSystemPoints: [],
   targetSystemPoints: [],
 };
+
+let points;
+let point;
 
 /**
  * Handles all kinds of 3D trafo data input
@@ -27,18 +25,18 @@ const initialTrafoData = {
 function transformationDataInput(state = initialTrafoData, action) {
   switch (action.type) {
     case PUSH_START_SYSTEM_COORDINATES:
-    return {
-      ...state,
-      startSystemPoints: action.coords,
-    }
+      return {
+        ...state,
+        startSystemPoints: action.coords,
+      };
     case PUSH_TARGET_SYSTEM_COORDINATES:
       return {
         ...state,
         targetSystemPoints: action.coords,
-      }
+      };
     case CHECKBOX_UPDATE:
-      const points = state.targetSystemPoints.map((targetSystemPoint, index) => {
-        const point = {...targetSystemPoint}
+      points = state.targetSystemPoints.map((targetSystemPoint) => {
+        point = { ...targetSystemPoint };
         if (targetSystemPoint === state.targetSystemPoints[action.id[1]]) {
           if (action.id[0] === 'x') {
             point.useX = !targetSystemPoint.useX;
@@ -47,24 +45,24 @@ function transformationDataInput(state = initialTrafoData, action) {
           } else {
             point.useZ = !targetSystemPoint.useZ;
           }
-        };
+        }
 
         return point;
       });
       return {
         ...state,
         targetSystemPoints: points,
-      }
+      };
     case CLEAR_START_INPUT:
       return {
         ...state,
         startSystemPoints: [],
-      }
+      };
     case CLEAR_TARGET_INPUT:
       return {
         ...state,
         targetSystemPoints: [],
-      }
+      };
     default:
       return state;
   }

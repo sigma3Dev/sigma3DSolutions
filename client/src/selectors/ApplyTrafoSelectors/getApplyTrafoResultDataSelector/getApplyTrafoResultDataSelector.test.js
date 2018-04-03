@@ -1,7 +1,4 @@
-import {
-  getIsCalculating,
-  getApplyTrafoResult,
-} from './getApplyTrafoResultDataSelector';
+import { getIsCalculating, getApplyTrafoResult } from './getApplyTrafoResultDataSelector';
 
 describe('getApplyTrafoResultDataSelector', () => {
   it('getIsCalculating', () => {
@@ -22,7 +19,8 @@ describe('getApplyTrafoResultDataSelector', () => {
             x: 1,
             y: 2,
             z: 3,
-          }, {
+          },
+          {
             x: 4,
             y: 5,
             z: 6,
@@ -35,7 +33,8 @@ describe('getApplyTrafoResultDataSelector', () => {
         x: 1,
         y: 2,
         z: 3,
-      }, {
+      },
+      {
         x: 4,
         y: 5,
         z: 6,

@@ -21,11 +21,7 @@ import './ChebyshevCFDrawing.css';
  */
 let xPoint1 = -10;
 let yPoint1 = -10;
-const ChebyshevCFDrawing = ({
-  radius,
-  chebyDist,
-  points,
-}) => {
+const ChebyshevCFDrawing = ({ radius, chebyDist, points }) => {
   let shiftedPoints = null;
   let circlePoints = null;
   let scaleCircle = 0;
@@ -34,8 +30,8 @@ const ChebyshevCFDrawing = ({
     scaleCircle = 200 / radius;
     shiftedPoints = points.map((point) => {
       // transformed points with translation in the middle of the svg-area (250 / 250)
-      const xShifted = (point.x * scaleCircle) + 250;
-      const yShifted = (point.y * scaleCircle) + 250;
+      const xShifted = point.x * scaleCircle + 250;
+      const yShifted = point.y * scaleCircle + 250;
       return { x: xShifted, y: yShifted };
     });
     circlePoints = shiftedPoints.map((shiftedPoint, index) => {
@@ -45,9 +41,9 @@ const ChebyshevCFDrawing = ({
       // vector from central point to point of index
       const xVector = xShifted - 250;
       const yVector = yShifted - 250;
-      const distanceToCentralPoint = Math.sqrt((xVector * xVector) + (yVector * yVector));
+      const distanceToCentralPoint = Math.sqrt(xVector * xVector + yVector * yVector);
       const diffToChebyCircle = distanceToCentralPoint - 200; // 200 = radius defined by svg-circle
-      const scaleChebyDist = (80 / chebyDist) / scaleCircle;
+      const scaleChebyDist = 80 / chebyDist / scaleCircle;
       // normalized vector with length of 1
       const xNorm = xVector / distanceToCentralPoint;
       const yNorm = yVector / distanceToCentralPoint;
@@ -55,15 +51,15 @@ const ChebyshevCFDrawing = ({
       let xCircle = 0;
       let yCircle = 0;
       if (diffToChebyCircle > 0.001) {
-        xCircle = xShifted - (diffToChebyCircle * xNorm);
-        yCircle = yShifted - (diffToChebyCircle * yNorm);
-        xShifted = xCircle + (diffToChebyCircle * scaleChebyDist * xNorm);
-        yShifted = yCircle + (diffToChebyCircle * scaleChebyDist * yNorm);
+        xCircle = xShifted - diffToChebyCircle * xNorm;
+        yCircle = yShifted - diffToChebyCircle * yNorm;
+        xShifted = xCircle + diffToChebyCircle * scaleChebyDist * xNorm;
+        yShifted = yCircle + diffToChebyCircle * scaleChebyDist * yNorm;
       } else if (diffToChebyCircle < -0.001) {
-        xCircle = xShifted - (diffToChebyCircle * xNorm);
-        yCircle = yShifted - (diffToChebyCircle * yNorm);
-        xShifted = xCircle + (diffToChebyCircle * scaleChebyDist * xNorm);
-        yShifted = yCircle + (diffToChebyCircle * scaleChebyDist * yNorm);
+        xCircle = xShifted - diffToChebyCircle * xNorm;
+        yCircle = yShifted - diffToChebyCircle * yNorm;
+        xShifted = xCircle + diffToChebyCircle * scaleChebyDist * xNorm;
+        yShifted = yCircle + diffToChebyCircle * scaleChebyDist * yNorm;
       }
 
       if (index === 0) {
@@ -81,34 +77,44 @@ const ChebyshevCFDrawing = ({
         <line x1='10' y1='10' x2='50' y2='10' fill='black' />
         <line x1='50' y1='10' x2='40' y2='5' fill='black' />
         <line x1='50' y1='10' x2='40' y2='15' fill='black' />
-        <text x='52' y='10' stroke='none'>+X</text>
+        <text x='52' y='10' stroke='none'>
+          +X
+        </text>
         <line x1='10' y1='8.5' x2='10' y2='50' fill='black' />
         <line x1='10' y1='50' x2='5' y2='40' fill='black' />
         <line x1='10' y1='50' x2='15' y2='40' fill='black' />
-        <text x='15' y='50' stroke='none'>+Y</text>
+        <text x='15' y='50' stroke='none'>
+          +Y
+        </text>
         <circle cx='250' cy='250' r='240' className='cheby-exterior-circle' />
         <circle cx='250' cy='250' r='160' className='cheby-interior-circle' />
         <circle cx='250' cy='250' r='200' className='chebychev-circle' />
         <line x1='250' y1='250' x2='450' y2='250' className='line-cheby-cf' />
-        <text x='300' y='240' className='cheby-line-text-radius'>{radius}</text>
+        <text x='300' y='240' className='cheby-line-text-radius'>
+          {radius}
+        </text>
         <circle cx='250' cy='250' r='3' className='cheby-points' />
         <circle cx='450' cy='250' r='3' className='cheby-points' />
         <line x1='250' y1='410' x2='250' y2='490' className='line-cheby-cf' />
-        <text x='235' y='400' className='cheby-line-text-chebyDist'>{chebyDist}</text>
+        <text x='235' y='400' className='cheby-line-text-chebyDist'>
+          {chebyDist}
+        </text>
         <circle cx='250' cy='410' r='3' className='cheby-points' />
         <circle cx='250' cy='490' r='3' className='cheby-points' />
         {circlePoints}
         <circle cx={xPoint1} cy={yPoint1} r='5' fill='red' />
-        <text x={xPoint1 + 8} y={yPoint1} stroke='none'>Punkt 1</text>
+        <text x={xPoint1 + 8} y={yPoint1} stroke='none'>
+          Punkt 1
+        </text>
       </svg>
     </div>
   );
 };
 
 ChebyshevCFDrawing.propTypes = {
-  radius: PropTypes.string,
-  chebyDist: PropTypes.string,
-  points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
+  radius: PropTypes.number.isRequired,
+  chebyDist: PropTypes.number.isRequired,
+  points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
 };
 
 export default ChebyshevCFDrawing;
