@@ -1,12 +1,6 @@
-import { 
-  REMOVE_ERROR,
-} from '../../actions/errorHandling/errorHandlingActions';
-import {
-  SUBMIT_COORDS_FAILURE,
-} from '../../actions/submitCoords/submitCoordsActions';
-import {
-  SUBMIT_PARAM_INVERSION_COORDS_FAILURE,
-} from '../../actions/paramInversionCoords/paramInversionCoordsActions';
+import { REMOVE_ERROR } from '../../actions/errorHandling/errorHandlingActions';
+import { SUBMIT_3D_TRAFO_COORDS_FAILURE } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
+import { SUBMIT_PARAM_INVERSION_COORDS_FAILURE } from '../../actions/paramInversionCoords/paramInversionCoordsActions';
 
 const initialErrorState = { error: null };
 
@@ -21,17 +15,17 @@ function errorHandling(state = initialErrorState, action) {
     case REMOVE_ERROR:
       return {
         ...state,
-        error: null
-      }
-    case SUBMIT_COORDS_FAILURE:
+        error: null,
+      };
+    case SUBMIT_3D_TRAFO_COORDS_FAILURE:
       return {
         ...state,
-        error: action.error
+        error: action.error,
       };
     case SUBMIT_PARAM_INVERSION_COORDS_FAILURE:
       return {
         ...state,
-        error: action.error
+        error: action.error,
       };
     default:
       return state;

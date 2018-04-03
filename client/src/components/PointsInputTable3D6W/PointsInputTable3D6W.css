@@ -15,18 +15,17 @@
 
 .points-table .trash-icon:hover {
   cursor: pointer;
-  color: rgb(180,0,0);
+  color: rgb(180, 0, 0);
 }
 
 .points-table .trash-icon:focus {
   outline: 0;
 }
 
-
 .points-table table {
   width: 100%;
   border-collapse: collapse;
-} 
+}
 
 .points-table th {
   padding: 8px;

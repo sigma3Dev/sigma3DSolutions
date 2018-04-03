@@ -16,7 +16,7 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
         q1: -0.004830151859800749,
         q2: -0.0006079507786298357,
         q3: 0.09896921012577276,
-      }
+      },
     };
     const expected = [
       1380.4859742435729,
@@ -38,18 +38,18 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
             vx: 0.15,
             vy: 0.21,
             vz: 0.11,
-            v: 0.16
-          }
-        ]
-      }
+            v: 0.16,
+          },
+        ],
+      },
     };
     const expected = [
       {
         vx: 0.15,
         vy: 0.21,
         vz: 0.11,
-        v: 0.16
-      }
+        v: 0.16,
+      },
     ];
     const result = getTrafoDifference(state);
     expect(result).toEqual(expected);
@@ -57,9 +57,9 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
   it('getIsCalculating', () => {
     const state = {
       calculationStatus: {
-        isCalculating: false
-      }
-    }
+        isCalculating: false,
+      },
+    };
     const expected = false;
     const result = getIsCalculating(state);
     expect(result).toEqual(expected);
@@ -72,14 +72,15 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
             vx: 0.15,
             vy: 0.21,
             vz: 0.11,
-            v: 0.16
-          }, {
+            v: 0.16,
+          },
+          {
             vx: 0.15,
             vy: 0.21,
             vz: 0.11,
-            v: 0.16
-          }
-        ]
+            v: 0.16,
+          },
+        ],
       },
       threeDTrafoDataInput: {
         targetSystemPoints: [
@@ -98,28 +99,18 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
             useX: true,
             useY: true,
             useZ: true,
-          }
-        ]
-      }
+          },
+        ],
+      },
     };
-    const expected = [
-      [
-        1.15,
-        2.21,
-        3.11,
-      ], [
-        6.15,
-        8.21,
-        5.11,
-      ], 
-    ];
+    const expected = [[1.15, 2.21, 3.11], [6.15, 8.21, 5.11]];
     const result = getTransformedStartPoints(state);
     expect(result).toEqual(expected);
   });
   it('getTransformedStartPoints', () => {
     const state = {
       threeDTrafoResultDifference: {
-        difference: []
+        difference: [],
       },
       threeDTrafoDataInput: {
         targetSystemPoints: [
@@ -138,9 +129,9 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
             useX: true,
             useY: true,
             useZ: true,
-          }
-        ]
-      }
+          },
+        ],
+      },
     };
     const expected = [];
     const result = getTransformedStartPoints(state);

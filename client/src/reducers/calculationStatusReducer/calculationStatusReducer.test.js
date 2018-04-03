@@ -1,48 +1,48 @@
 import {
-  SUBMIT_COORDS_REQUEST,
-  SUBMIT_COORDS_SUCCESS,
-  SUBMIT_COORDS_FAILURE,
-} from '../../actions/submitCoords/submitCoordsActions';
+  SUBMIT_3D_TRAFO_COORDS_REQUEST,
+  SUBMIT_3D_TRAFO_COORDS_SUCCESS,
+  SUBMIT_3D_TRAFO_COORDS_FAILURE,
+} from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import calculationStatusReducer from './calculationStatusReducer';
 
 describe('calculationStatusReducer', () => {
-  it('should handle SUBMIT_COORDS_REQUEST', () => {
+  it('should handle SUBMIT_3D_TRAFO_COORDS_REQUEST', () => {
     const state = {
-      isCalculating: false
+      isCalculating: false,
     };
     const action = {
-      type: SUBMIT_COORDS_REQUEST
+      type: SUBMIT_3D_TRAFO_COORDS_REQUEST,
     };
     const expectedState = {
-      isCalculating: true
+      isCalculating: true,
     };
     const result = calculationStatusReducer(state, action);
-    expect(result).toEqual(expectedState)
+    expect(result).toEqual(expectedState);
   });
-  it('should handle SUBMIT_COORDS_SUCCESS', () => {
+  it('should handle SUBMIT_3D_TRAFO_COORDS_SUCCESS', () => {
     const state = {
-      isCalculating: true
+      isCalculating: true,
     };
     const action = {
-      type: SUBMIT_COORDS_SUCCESS
+      type: SUBMIT_3D_TRAFO_COORDS_SUCCESS,
     };
     const expectedState = {
-      isCalculating: false
+      isCalculating: false,
     };
     const result = calculationStatusReducer(state, action);
-    expect(result).toEqual(expectedState)
+    expect(result).toEqual(expectedState);
   });
-  it('should handle SUBMIT_COORDS_FAILURE', () => {
+  it('should handle SUBMIT_3D_TRAFO_COORDS_FAILURE', () => {
     const state = {
-      isCalculating: true
+      isCalculating: true,
     };
     const action = {
-      type: SUBMIT_COORDS_FAILURE
+      type: SUBMIT_3D_TRAFO_COORDS_FAILURE,
     };
     const expectedState = {
-      isCalculating: false
+      isCalculating: false,
     };
     const result = calculationStatusReducer(state, action);
-    expect(result).toEqual(expectedState)
+    expect(result).toEqual(expectedState);
   });
 });

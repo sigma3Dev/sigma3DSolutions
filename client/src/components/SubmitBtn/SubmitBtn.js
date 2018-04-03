@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {FormattedMessage} from 'react-intl';
+import { FormattedMessage } from 'react-intl';
 import './SubmitBtn.css';
 
 const FaArrowRight = require('react-icons/lib/fa/arrow-right');
+
 const arrowRight = React.createElement(FaArrowRight, null);
 
 /**
@@ -11,20 +12,15 @@ const arrowRight = React.createElement(FaArrowRight, null);
  * @param {function} handleClick - handles SubmitBtn click
  * @returns {*} SubmitBtn - .jsx Element
  */
-const SubmitBtn = ({
-  handleClick
-}) => (
-  <button className="submit-btn" onClick={handleClick}>    
-    <FormattedMessage
-      id="SubmitBtn.label.caption"
-      defaultMessage="Submit "
-    />
-    <div className="arrow-right">{ arrowRight }</div>
+const SubmitBtn = ({ handleClick }) => (
+  <button className='submit-btn' onClick={handleClick}>
+    <FormattedMessage id='SubmitBtn.label.caption' defaultMessage='Submit ' />
+    <div className='arrow-right'>{arrowRight}</div>
   </button>
 );
 
 SubmitBtn.propTypes = {
   handleClick: PropTypes.func.isRequired,
-}
+};
 
 export default SubmitBtn;

@@ -5,19 +5,15 @@ import Sidebar from '../Sidebar/Sidebar';
 import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import './ApplyTrafoResult.css';
 
-const ApplyTrafoResult = ({
-  result,
-  handleReturnClick,
-}) => {
+const ApplyTrafoResult = ({ result, handleReturnClick }) => {
   const tableRows = result.map((point, i) => (
-    <tr>
-      <th className='pointId'>{ i + 1 }</th>
-      <th>{ point.x.toFixed(5) }</th>
-      <th>{ point.y.toFixed(5) }</th>
-      <th>{ point.z.toFixed(5) }</th>
+    <tr key={`${point.x}:${i}`}>
+      <th className='pointId'>{i + 1}</th>
+      <th>{point.x.toFixed(5)}</th>
+      <th>{point.y.toFixed(5)}</th>
+      <th>{point.z.toFixed(5)}</th>
     </tr>
   ));
-  console.log(tableRows);
 
   return (
     <div className='apply-trafo-result'>
@@ -36,9 +32,7 @@ const ApplyTrafoResult = ({
             <th>z</th>
           </tr>
         </thead>
-        <tbody>
-          {tableRows}
-        </tbody>
+        <tbody>{tableRows}</tbody>
       </table>
       <Sidebar />
       <BackToInputBtn handleClick={handleReturnClick} className='back-to-input-btn' />

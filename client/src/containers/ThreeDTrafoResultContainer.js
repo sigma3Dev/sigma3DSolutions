@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import {
-  injectIntl,
-  defineMessages,
-} from 'react-intl';
+import { injectIntl, defineMessages } from 'react-intl';
 import fileSaver from 'file-saver';
 import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import {
@@ -17,7 +14,7 @@ import {
   getStartSystemPoints,
   getTargetSystemPoints,
 } from '../selectors/ThreeDTrafoSelectors/getTrafoInputDataSelector/getTrafoInputDataSelector';
-import { calculateTrafoDifference } from '../actions/submitCoords/submitCoordsActions';
+import { calculateThreeDTrafoDifference } from '../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
@@ -33,7 +30,7 @@ const messages = defineMessages({
 const mapDispatchToProps = dispatch => ({
   onRemoveError: () => dispatch(removeError()),
   onCalculateTrafoDifference: (startPoints, targetPoints, trafoParams) => {
-    dispatch(calculateTrafoDifference(startPoints, targetPoints, trafoParams));
+    dispatch(calculateThreeDTrafoDifference(startPoints, targetPoints, trafoParams));
   },
 });
 
@@ -65,7 +62,7 @@ class ThreeDTrafoResultContainer extends Component {
   }
 
   /**
-   * runs calculateTrafoDifference when the page is first loaded and when trafoParams are updated
+   * runs calculateThreeDTrafoDifference when the page is first loaded and when trafoParams are updated
    * @param {Object} prevProps - previous Props
    * @memberof ThreeDTrafoResultContainer
    */
@@ -81,7 +78,7 @@ class ThreeDTrafoResultContainer extends Component {
         this.props.onCalculateTrafoDifference(startPoints, targetPoints, trafoParams);
       }
     }
-  }
+  };
 
   /**
    * Navigates back to input page of the current transformation
@@ -90,7 +87,7 @@ class ThreeDTrafoResultContainer extends Component {
   goBack = () => {
     this.props.onRemoveError();
     this.props.history.push('/transformations/three-d-transformation/data-input');
-  }
+  };
 
   downloadFile = () => {
     const askFilename = this.props.intl.formatMessage(messages.filename);
@@ -107,17 +104,13 @@ class ThreeDTrafoResultContainer extends Component {
     // turns string into blob and then into .txt
     const blobVar = new Blob([coordsAsText], { type: 'text/plain;charset=utf-8' });
     fileSaver(blobVar, fileName, '.txt');
-  }
+  };
 
   render() {
     if (this.props.isCalculating) {
-      return (
-        <LoadingScreen />
-      );
+      return <LoadingScreen />;
     } else if (this.props.error) {
-      return (
-        <ErrorScreen error={this.props.error} handleClick={this.goBack} />
-      );
+      return <ErrorScreen error={this.props.error} handleClick={this.goBack} />;
     }
     return (
       <div>
@@ -139,10 +132,7 @@ ThreeDTrafoResultContainer.propTypes = {
   onCalculateTrafoDifference: PropTypes.func.isRequired,
   transformedStartPoints: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
   startSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
-  targetSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.bool,
-  ]))).isRequired,
+  targetSystemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
   trafoParams: PropTypes.arrayOf(PropTypes.number).isRequired,
   trafoDifference: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
   error: PropTypes.string,

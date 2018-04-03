@@ -1,19 +1,30 @@
 module.exports = {
-    "extends": "airbnb",
-    "parser": "babel-eslint",
-    "env": {
-        "browser": true,
-        "jest": true,
-    },
-    "rules": {
-        "import/no-extraneous-dependencies": 0,
-        "jsx-a11y/click-events-have-key-events": null,
-        "linebreak-style": 0,
-        "no-alert": "off",
-        "no-console": "off",
-        "jsx-quotes": ["error", "prefer-single"],
-        "react/forbid-prop-types": [0],
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "react/require-default-props": [0, { forbidDefaultForRequired: false }],
-    }
+  extends: 'airbnb',
+  parser: 'babel-eslint',
+  parserOptions: {
+    sourceType: 'module',
+  },
+  plugins: ['react', 'jsx-a11y', 'import'],
+  env: {
+    browser: true,
+    jest: true,
+  },
+  rules: {
+    'import/no-extraneous-dependencies': 0,
+    'import/prefer-default-export': 0,
+    'jsx-a11y/anchor-is-valid': 0,
+    'jsx-a11y/click-events-have-key-events': 0,
+    'jsx-a11y/no-autofocus': 0,
+    'jsx-quotes': ['error', 'prefer-single'],
+    'linebreak-style': 0,
+    'no-alert': 'off',
+    'no-console': 'off',
+    'no-mixed-operators': 'off',
+    'no-restricted-syntax': 'off',
+    'react/forbid-prop-types': [0],
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/no-array-index-key': 'off',
+    'react/prefer-stateless-function': 'off',
+    'react/require-default-props': [0, { forbidDefaultForRequired: false }],
+  },
 };

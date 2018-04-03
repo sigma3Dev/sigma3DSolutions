@@ -16,28 +16,18 @@ describe('getChebyshevCircleFitResultDataSelector Used By ChebyshevCFInputContai
         radius: 1.01,
         tschebyDistance: 0.01,
         stdev: 0.01,
-      }
+      },
     };
-    const expected = [
-      "0.01",
-      "0.01",
-      "0.01",
-      "0.000001",
-      "0.000001",
-      "1.000001",
-      "1.01",
-      "0.01",
-      "0.01",
-    ]
+    const expected = [0.01, 0.01, 0.01, 0.000001, 0.000001, 1.000001, 1.01, 0.01, 0.01];
     const result = getChebyshevCircleFitInput(state);
     expect(result).toEqual(expected);
   });
   it('getIsCalculating', () => {
     const state = {
       calculationStatus: {
-        isCalculating: false
-      }
-    }
+        isCalculating: false,
+      },
+    };
     const expected = false;
     const result = getIsCalculating(state);
     expect(result).toEqual(expected);

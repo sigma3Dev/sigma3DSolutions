@@ -2,18 +2,21 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
-import { pushCoordinates } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import { pushCoords } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
 import { clearApplyTrafoInput } from '../actions/clearInput/clearInputActions';
 import { changeApplyTrafoParamInputField } from '../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
 import { submitApplyTrafoValues } from '../actions/submitApplyTransformationValuesActions/submitApplyTransformationValuesActions';
-import { getParams, getPoints } from '../selectors/ApplyTrafoSelectors/getApplyTrafoInputDataSelector/getApplyTrafoInputDataSelector';
+import {
+  getParams,
+  getPoints,
+} from '../selectors/ApplyTrafoSelectors/getApplyTrafoInputDataSelector/getApplyTrafoInputDataSelector';
 import ApplyTrafoInput from '../components/ApplyTrafoInput/ApplyTrafoInput';
 import InfoModal from '../components/InfoModal/InfoModal';
 
 const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  onPushCoordinates: file => dispatch(pushCoordinates(file)),
+  onPushCoords: file => dispatch(pushCoords(file)),
   onSubmitValues: values => dispatch(submitApplyTrafoValues(values)),
   onClearApplyTrafoInput: () => dispatch(clearApplyTrafoInput()),
   onChangeParamInputField: (name, val) => dispatch(changeApplyTrafoParamInputField(name, val)),
@@ -66,7 +69,7 @@ class ApplyTransformationInputContainer extends Component {
    */
   clearApplyTrafoInput = () => {
     this.props.onClearApplyTrafoInput();
-  }
+  };
 
   /**
    * Decides wheter InfoPanel is displayed or not
@@ -74,7 +77,7 @@ class ApplyTransformationInputContainer extends Component {
    */
   displayInfoPanel = () => {
     this.setState({ ...this.state, isInfoOpen: !this.state.isInfoOpen });
-  }
+  };
 
   /**
    * Uses cdi module to transform .txt file into an array of start points
@@ -83,29 +86,31 @@ class ApplyTransformationInputContainer extends Component {
    */
   parseCoords = (file) => {
     cdi.startCoordinateDataImport(file, (coords) => {
-      this.props.onPushCoordinates(coords);
+      this.props.onPushCoords(coords);
     });
-  }
+  };
 
   /**
-  * Handles coords submit, navigates to "result" page
-  * @memberof ApplyTransformationInputContainer
-  */
+   * Handles coords submit, navigates to "result" page
+   * @memberof ApplyTransformationInputContainer
+   */
   submitApplyTrafoCoords = () => {
     if (this.props.points.length === 0) {
       this.setState({
-        notification: (<InfoModal
-          header={(
-            <FormattedMessage
-              id="InfoModal.caption.wrongInput"
-              defaultMessage="Wrong Input"
-            />)}
-          body={(<FormattedMessage
-            id="InfoModal.label.noPoints"
-            defaultMessage="Please import points!"
-          />)}
-          handleClick={this.closeModal}
-        />),
+        notification: (
+          <InfoModal
+            header={
+              <FormattedMessage id='InfoModal.caption.wrongInput' defaultMessage='Wrong Input' />
+            }
+            body={
+              <FormattedMessage
+                id='InfoModal.label.noPoints'
+                defaultMessage='Please import points!'
+              />
+            }
+            handleClick={this.closeModal}
+          />
+        ),
       });
     } else {
       const values = {
@@ -128,18 +133,18 @@ class ApplyTransformationInputContainer extends Component {
   render() {
     const infoPanelText = (
       <FormattedMessage
-        id="ThreeDTrafoInputContainer.panel.infoPanelText"
-        defaultMessage={`
+        id='ThreeDTrafoInputContainer.panel.infoPanelText'
+        defaultMessage='
           The input should be a simple .txt file.\n
-        
-          The file should consist of one or more points, each on its own line. 
+
+          The file should consist of one or more points, each on its own line.
           Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n
-        
+
           Example:\n
           41.3 11.2 17.1\n
           24.2 33.1 19.8\n
           9.1 5.4 12.9
-        `}
+        '
       />
     );
     return (
@@ -162,11 +167,12 @@ class ApplyTransformationInputContainer extends Component {
 }
 
 ApplyTransformationInputContainer.propTypes = {
-  onPushCoordinates: PropTypes.func.isRequired,
+  onPushCoords: PropTypes.func.isRequired,
   onClearApplyTrafoInput: PropTypes.func.isRequired,
   onChangeParamInputField: PropTypes.func.isRequired,
   onSubmitValues: PropTypes.func.isRequired,
-  transformation: PropTypes.objectOf(PropTypes.string).isRequired,
+  transformation: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string]))
+    .isRequired,
   points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
   history: PropTypes.any,
 };

@@ -1,22 +1,23 @@
-import { PUSH_COORDINATES } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import { PUSH_COORDS } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
 import { CLEAR_APPLY_TRAFO_INPUT } from '../../actions/clearInput/clearInputActions';
-import { SUBMIT_COORDS_SUCCESS } from '../../actions/submitCoords/submitCoordsActions';
+import { SUBMIT_3D_TRAFO_COORDS_SUCCESS } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import { CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD } from '../../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
 import applyTrafoDataInputReducer from './applyTrafoDataInputReducer';
 
 describe('applyTrafoDataInputReducer', () => {
-  it('should handle PUSH_COORDINATES', () => {
+  it('should handle PUSH_COORDS', () => {
     const state = {
       points: [],
     };
     const action = {
-      type: PUSH_COORDINATES,
+      type: PUSH_COORDS,
       coords: [
         {
           x: 1,
           y: 2,
           z: 3,
-        }, {
+        },
+        {
           x: 4,
           y: 5,
           z: 6,
@@ -29,7 +30,8 @@ describe('applyTrafoDataInputReducer', () => {
           x: 1,
           y: 2,
           z: 3,
-        }, {
+        },
+        {
           x: 4,
           y: 5,
           z: 6,
@@ -46,7 +48,8 @@ describe('applyTrafoDataInputReducer', () => {
           x: 1,
           y: 2,
           z: 3,
-        }, {
+        },
+        {
           x: 4,
           y: 5,
           z: 6,
@@ -62,7 +65,7 @@ describe('applyTrafoDataInputReducer', () => {
     const result = applyTrafoDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle SUBMIT_COORDS_SUCCESS', () => {
+  it('should handle SUBMIT_3D_TRAFO_COORDS_SUCCESS', () => {
     const state = {
       transformation: {
         tx: 0,
@@ -76,7 +79,7 @@ describe('applyTrafoDataInputReducer', () => {
       },
     };
     const action = {
-      type: SUBMIT_COORDS_SUCCESS,
+      type: SUBMIT_3D_TRAFO_COORDS_SUCCESS,
       response: {
         data: {
           result: {

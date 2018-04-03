@@ -1,6 +1,4 @@
-import {
-  SUBMIT_COORDS_SUCCESS,
-} from '../../actions/submitCoords/submitCoordsActions';
+import { SUBMIT_3D_TRAFO_COORDS_SUCCESS } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 
 const initialResultData = {
   tx: 0,
@@ -9,8 +7,8 @@ const initialResultData = {
   q0: 0,
   q1: 0,
   q2: 0,
-  q3: 0
-}
+  q3: 0,
+};
 
 /**
  * Handles responses from the backend
@@ -20,7 +18,7 @@ const initialResultData = {
  */
 function trafoResult(state = initialResultData, action) {
   switch (action.type) {
-    case SUBMIT_COORDS_SUCCESS:
+    case SUBMIT_3D_TRAFO_COORDS_SUCCESS:
       return {
         ...state,
         tx: action.response.data.result.tx,
@@ -29,7 +27,7 @@ function trafoResult(state = initialResultData, action) {
         q0: action.response.data.result.q0,
         q1: action.response.data.result.q1,
         q2: action.response.data.result.q2,
-        q3: action.response.data.result.q3
+        q3: action.response.data.result.q3,
       };
     default:
       return state;

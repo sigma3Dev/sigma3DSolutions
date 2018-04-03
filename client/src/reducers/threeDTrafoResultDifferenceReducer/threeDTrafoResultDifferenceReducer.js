@@ -1,6 +1,4 @@
-import {
-  CALCULATE_TRAFO_DIFFERENCE_SUCCESS,
-} from '../../actions/submitCoords/submitCoordsActions';
+import { CALCULATE_3D_TRAFO_DIFFERENCE_SUCCESS } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 
 const initialResultData = {
   difference: [],
@@ -13,8 +11,8 @@ const initialResultData = {
  * @returns {Object} state - updated State
  */
 function trafoResult(state = initialResultData, action) {
-  switch(action.type) {
-    case CALCULATE_TRAFO_DIFFERENCE_SUCCESS:
+  switch (action.type) {
+    case CALCULATE_3D_TRAFO_DIFFERENCE_SUCCESS:
       return {
         ...state,
         difference: action.response.data,

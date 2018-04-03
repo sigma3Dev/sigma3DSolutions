@@ -1,5 +1,6 @@
 import React from 'react';
-import {FormattedMessage} from 'react-intl';
+import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 import PointsInput from '../PointsInput/PointsInput';
 import PointsInputTable3D6W from '../PointsInputTable3D6W/PointsInputTable3D6W';
 import SubmitBtn from '../SubmitBtn/SubmitBtn';
@@ -25,37 +26,41 @@ const ChebyshevCFInput = ({
   handleSubmitClick,
   handleDeleteClick,
   isInfoOpen,
-  infoPanelText
-}) => {
-  
-  return (
-    <div>
-      <Sidebar />
-      <div className="chebyshev-circle-fit-input">
-        <div className="circle-input">
-          <h1>
-            <FormattedMessage
-              id="ChebyshevCFInput.label.circlePointsCaption"
-              defaultMessage="Circle Points:"
-            />
-            <div className="info-section">
-              <InfoBtn className="info-btn" handleClick={ handleInfoClick } />
-              <InputInfoPanel 
-                isDisplayed={ isInfoOpen }
-                body={ infoPanelText }
-              />
-            </div>
-          </h1>
-          <PointsInput onDrop={onFileDrop} />
-          <PointsInputTable3D6W 
-            systemPoints={circlePoints} 
-            handleDeleteDataInput={handleDeleteClick}
+  infoPanelText,
+}) => (
+  <div>
+    <Sidebar />
+    <div className='chebyshev-circle-fit-input'>
+      <div className='circle-input'>
+        <h1>
+          <FormattedMessage
+            id='ChebyshevCFInput.label.circlePointsCaption'
+            defaultMessage='Circle Points:'
           />
-        </div>
-        <SubmitBtn handleClick={handleSubmitClick} />
+          <div className='info-section'>
+            <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+            <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
+          </div>
+        </h1>
+        <PointsInput onDrop={onFileDrop} />
+        <PointsInputTable3D6W
+          systemPoints={circlePoints}
+          handleDeleteDataInput={handleDeleteClick}
+        />
       </div>
+      <SubmitBtn handleClick={handleSubmitClick} />
     </div>
-  );
-}
+  </div>
+);
+
+ChebyshevCFInput.propTypes = {
+  onFileDrop: PropTypes.func.isRequired,
+  handleInfoClick: PropTypes.func.isRequired,
+  handleSubmitClick: PropTypes.func.isRequired,
+  handleDeleteClick: PropTypes.func.isRequired,
+  isInfoOpen: PropTypes.bool.isRequired,
+  circlePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
+  infoPanelText: PropTypes.objectOf(PropTypes.any).isRequired,
+};
 
 export default ChebyshevCFInput;

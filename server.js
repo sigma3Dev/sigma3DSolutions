@@ -20,9 +20,9 @@ app.get('/', (req, res) => {
 /** calculate 3DTrafo6W */
 app.post('/calculate-trafo', (req, res) => {
   if (
-    !(Object.prototype.hasOwnProperty.call(req.body, 'coords')) ||
-    !(Object.prototype.hasOwnProperty.call(req.body.coords, 'startSystemPoints')) ||
-    !(Object.prototype.hasOwnProperty.call(req.body.coords, 'targetSystemPoints')) ||
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'startSystemPoints') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'targetSystemPoints') ||
     !Array.isArray(req.body.coords.startSystemPoints) ||
     !Array.isArray(req.body.coords.targetSystemPoints) ||
     req.body.coords.startSystemPoints.length !== req.body.coords.targetSystemPoints.length
@@ -43,9 +43,9 @@ app.post('/calculate-trafo', (req, res) => {
 /** use applyTransformation to calculate difference */
 app.post('/calculate-trafo-difference', (req, res) => {
   if (
-    !(Object.prototype.hasOwnProperty.call(req.body, 'startPoints')) ||
-    !(Object.prototype.hasOwnProperty.call(req.body, 'targetPoints')) ||
-    !(Object.prototype.hasOwnProperty.call(req.body, 'trafoParams'))
+    !Object.prototype.hasOwnProperty.call(req.body, 'startPoints') ||
+    !Object.prototype.hasOwnProperty.call(req.body, 'targetPoints') ||
+    !Object.prototype.hasOwnProperty.call(req.body, 'trafoParams')
   ) {
     res.status(400).send('Invalid input coordinates');
     return;
@@ -62,7 +62,7 @@ app.post('/calculate-trafo-difference', (req, res) => {
 
 /** calculate parameter inversion */
 app.post('/param-inversion', (req, res) => {
-  if (!(Object.prototype.hasOwnProperty.call(req.body, 'coords'))) {
+  if (!Object.prototype.hasOwnProperty.call(req.body, 'coords')) {
     res.status(400).send('Invalid input coordinates');
     return;
   }
@@ -79,9 +79,12 @@ app.post('/param-inversion', (req, res) => {
 /** calculate chebyshev circle fit */
 app.post('/calculate-chebyshev-circle-fit', (req, res) => {
   if (
-    !(Object.prototype.hasOwnProperty.call(req.body, 'coords')) ||
-    !(Object.prototype.hasOwnProperty.call(req.body.coords, 'chebyshevCircleFitDataInput')) ||
-    !(Object.prototype.hasOwnProperty.call(req.body.coords.chebyshevCircleFitDataInput, 'circlePoints')) ||
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'chebyshevCircleFitDataInput') ||
+    !Object.prototype.hasOwnProperty.call(
+      req.body.coords.chebyshevCircleFitDataInput,
+      'circlePoints',
+    ) ||
     !Array.isArray(req.body.coords.chebyshevCircleFitDataInput.circlePoints) ||
     req.body.coords.chebyshevCircleFitDataInput.circlePoints.length === 0
   ) {
@@ -102,9 +105,9 @@ app.post('/calculate-chebyshev-circle-fit', (req, res) => {
 
 app.post('/apply-trafo', (req, res) => {
   if (
-    !(Object.prototype.hasOwnProperty.call(req.body, 'values')) ||
-    !(Object.prototype.hasOwnProperty.call(req.body.values, 'points')) ||
-    !(Object.prototype.hasOwnProperty.call(req.body.values, 'transformation'))
+    !Object.prototype.hasOwnProperty.call(req.body, 'values') ||
+    !Object.prototype.hasOwnProperty.call(req.body.values, 'points') ||
+    !Object.prototype.hasOwnProperty.call(req.body.values, 'transformation')
   ) {
     res.status(400).send('Invalid input coordinates');
     return;
