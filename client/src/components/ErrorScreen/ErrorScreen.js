@@ -5,9 +5,9 @@ import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import Sidebar from '../Sidebar/Sidebar';
 import './ErrorScreen.css';
 
-const TiWarningOutline = require('react-icons/lib/ti/warning-outline');
+const tiWarningOutline = require('react-icons/lib/ti/warning-outline');
 
-const warningIcon = React.createElement(TiWarningOutline, null);
+const warningIcon = React.createElement(tiWarningOutline, null);
 
 /**
  * Shows up if there's an error in the calculation. Displays error message
