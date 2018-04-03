@@ -5,6 +5,8 @@ import {
   clearTargetInput,
   CLEAR_CHEBYSHEV_INPUT,
   clearChebyshevInput,
+  CLEAR_APPLY_TRAFO_INPUT,
+  clearApplyTrafoInput,
 } from './clearInputActions';
 
 describe('clearInputActions', () => {
@@ -29,6 +31,14 @@ describe('clearInputActions', () => {
       type: CLEAR_CHEBYSHEV_INPUT,
     };
     const result = clearChebyshevInput();
+    expect(result.type).toEqual(expected.type);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a CLEAR_APPLY_TRAFO_INPUT action', () => {
+    const expected = {
+      type: CLEAR_APPLY_TRAFO_INPUT
+    };
+    const result = clearApplyTrafoInput();
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });
