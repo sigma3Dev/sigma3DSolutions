@@ -15,6 +15,7 @@ const messages = {
   'de': require('../src/translations/de.json'),
 };
 
+// Get messages
 const getMessages = locale => messages[locale];
 
 // Set intl configuration
