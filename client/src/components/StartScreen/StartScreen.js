@@ -50,6 +50,12 @@ const StartScreen = () => {
                 defaultMessage="Parameter Inversion"
               />
             </li>
+            <li>
+              <FormattedMessage
+                id="ApplyTrafoInput.caption.applyTrafoHeader"
+                defaultMessage="Apply Transformation"
+              />
+            </li>
           </ul>
         </div>
         <div className="element"> 

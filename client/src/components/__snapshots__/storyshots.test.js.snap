@@ -14860,6 +14860,39 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
       >
         
       </p>
+      <div
+        className="s3d-info"
+      >
+        <span>
+          Möglicherweise läuft der Fittingservice von sigma3D nicht.
+          
+           Wenn Sie das Programm nicht besitzen, kontaktieren Sie bitte sigma3D:
+        </span>
+        <div
+          className="s3d-contact-info"
+        >
+          <p>
+            +49 (0) 2542 - 91898 0
+          </p>
+          <div
+            className="links"
+          >
+            <a
+              href="mailto:info@sigma3d.de"
+            >
+              info@sigma3d.de
+            </a>
+            <p>
+                |  
+            </p>
+            <a
+              href="http://sigma3d.de/"
+            >
+              http://www.sigma3d.de
+            </a>
+          </div>
+        </div>
+      </div>
       <button
         className="back-to-input-btn"
         onClick={[Function]}
@@ -17922,6 +17955,11 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
             <li>
               <span>
                 Parameterinversion
+              </span>
+            </li>
+            <li>
+              <span>
+                Transformation anwenden
               </span>
             </li>
           </ul>

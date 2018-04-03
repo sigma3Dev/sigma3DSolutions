@@ -52,6 +52,8 @@
 .three-d-trafo-result .download-link {
   text-decoration: underline;
   color: darkblue;
+  border: none;
+  background: none;
 }
 
 .three-d-trafo-result .download-link:hover {

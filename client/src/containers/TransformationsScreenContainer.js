@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
+
 /**
- * start screen of the app
- * @class StartScreenContainer
+ * lists all transformations
+ * @class TransformationsScreenContainer
  * @extends {Component}
  */
 class TransformationsScreenContainer extends Component {
@@ -15,7 +16,11 @@ class TransformationsScreenContainer extends Component {
       {
         type: "paramInversion",
         link: '/transformations/parameter-inversion'
-      } 
+      },
+      {
+        type: "transform",
+        link: '/transformations/transform/data-input'
+      }
     ];
     return (
       <SelectAppsScreen buttons={ buttons } /> 

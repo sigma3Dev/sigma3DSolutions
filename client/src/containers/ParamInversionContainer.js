@@ -45,7 +45,6 @@ class ParamInversionContainer extends Component {
         m: 1,
       },
       notification: null,
-      pastedValue: "",
       submitted: false,
     };
     this.parseInput = this.parseInput.bind(this);
@@ -139,7 +138,6 @@ class ParamInversionContainer extends Component {
 
 ParamInversionContainer.propTypes = {
   onSubmitParamInversionCoords: PropTypes.func.isRequired,
-  onClearInput: PropTypes.func.isRequired,
   paramInversion: PropTypes.arrayOf(PropTypes.string).isRequired,
   error: PropTypes.string,
 }
