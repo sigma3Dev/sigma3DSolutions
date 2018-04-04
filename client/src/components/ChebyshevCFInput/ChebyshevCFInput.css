@@ -1,7 +1,6 @@
 .chebyshev-circle-fit-input {
-  width: 74%;
-  margin-left: 220px;
-  margin-top: 35px;
+  margin-top: 5vh;
+  width: 100%;
   font-family: Roboto;
 }
 
@@ -26,6 +25,6 @@
 }
 
 .circle-input {
-  width: 85%;
-  margin-right: 20px;
+  width: 62vw;
+  margin-left: 16vw;
 }

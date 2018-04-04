@@ -1,12 +1,10 @@
 .apply-trafo {
-  width: 68%;
   height: 100%;
-  margin-left: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin-top: 12px;
+  margin-top: 2vh;
   font-family: Roboto;
 }
 
@@ -31,7 +29,8 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 60vw;
+  left: 15vw;
+  width: 65vw;
 }
 
 .apply-trafo .dropzone {

@@ -1,6 +1,5 @@
 .three-d-trafo-input {
-  width: 70%;
-  margin-left: 220px;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -25,10 +24,11 @@
 }
 
 .start-input {
-  width: 38%;
-  margin-right: 20px;
+  width: 25vw;
+  margin-left: 16vw;
 }
 
 .target-input {
-  width: 50%;
+  width: 35vw;
+  margin-left: 5vh;
 }
