@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import Sidebar from '../Sidebar/Sidebar';
 import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import ChebyshevCFDrawing from '../ChebyshevCFDrawing/ChebyshevCFDrawing';
 import './ChebyshevCFResult.css';
@@ -113,7 +112,6 @@ const ChebyshevCFResult = ({ chebyshevParams, handleClick }) => {
           <BackToInputBtn handleClick={handleClick} />
         </div>
       </div>
-      <Sidebar />
     </div>
   );
 };

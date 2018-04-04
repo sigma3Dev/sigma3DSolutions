@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import Sidebar from '../Sidebar/Sidebar';
 import CoordinateDifferenceBarGraph from '../CoordinateDifferenceBarGraph/CoordinateDifferenceBarGraph';
 import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import './ThreeDTrafoResult.css';
@@ -78,7 +77,6 @@ const ThreeDTrafoResult = ({
         <CoordinateDifferenceBarGraph values={trafoDifference} />
       </div>
       <BackToInputBtn handleClick={handleClick} />
-      <Sidebar />
     </div>
   );
 };

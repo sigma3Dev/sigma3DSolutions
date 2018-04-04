@@ -18,6 +18,7 @@ import { calculateThreeDTrafoDifference } from '../actions/submitThreeDTrafoCoor
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
+import Sidebar from '../components/Sidebar/Sidebar';
 import ThreeDTrafoResult from '../components/ThreeDTrafoResult/ThreeDTrafoResult';
 
 const messages = defineMessages({
@@ -114,6 +115,7 @@ class ThreeDTrafoResultContainer extends Component {
     }
     return (
       <div>
+        <Sidebar />
         <ThreeDTrafoResult
           trafoParams={this.props.trafoParams}
           trafoDifference={this.props.trafoDifference}

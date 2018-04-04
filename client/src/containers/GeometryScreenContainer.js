@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Sidebar from '../components/Sidebar/Sidebar';
 import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
 
 /**
@@ -14,7 +15,12 @@ class GeometryScreenContainer extends Component {
         link: '/geometry/chebyshev-circle-fit/data-input',
       },
     ];
-    return <SelectAppsScreen buttons={buttons} />;
+    return (
+      <div>
+        <Sidebar />
+        <SelectAppsScreen buttons={buttons} />;
+      </div>
+    );
   }
 }
 

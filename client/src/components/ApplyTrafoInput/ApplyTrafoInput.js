@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import PointsInput from '../PointsInput/PointsInput';
 import SubmitBtn from '../SubmitBtn/SubmitBtn';
-import Sidebar from '../Sidebar/Sidebar';
 import InfoBtn from '../InfoBtn/InfoBtn';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
 import './ApplyTrafoInput.css';
@@ -33,7 +32,6 @@ const ApplyTrafoInput = ({
   ));
   return (
     <div className='apply-trafo'>
-      <Sidebar />
       <h1>
         <FormattedMessage
           id='ApplyTrafoInput.caption.applyTrafoHeader'

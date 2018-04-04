@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import Sidebar from '../Sidebar/Sidebar';
 import './ParamInversion.css';
 
 /**
@@ -13,7 +12,6 @@ const ParamInversion = ({
   handleSubmit, handleChange, values, textAreaDisplay,
 }) => (
   <div className='param-inversion'>
-    <Sidebar />
     <h1>
       <FormattedMessage
         id='ParamInversion.caption.paramInversionHeader'

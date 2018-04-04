@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import Sidebar from '../Sidebar/Sidebar';
 import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import './ApplyTrafoResult.css';
 
@@ -34,7 +33,6 @@ const ApplyTrafoResult = ({ result, handleReturnClick }) => {
         </thead>
         <tbody>{tableRows}</tbody>
       </table>
-      <Sidebar />
       <BackToInputBtn handleClick={handleReturnClick} className='back-to-input-btn' />
     </div>
   );

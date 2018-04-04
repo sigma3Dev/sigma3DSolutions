@@ -4,7 +4,6 @@ import { FormattedMessage } from 'react-intl';
 import PointsInput from '../PointsInput/PointsInput';
 import PointsInputTable3D6W from '../PointsInputTable3D6W/PointsInputTable3D6W';
 import SubmitBtn from '../SubmitBtn/SubmitBtn';
-import Sidebar from '../Sidebar/Sidebar';
 import InfoBtn from '../InfoBtn/InfoBtn';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
 import './ThreeDTrafoInput.css';
@@ -38,7 +37,6 @@ const ThreeDTrafoInput = ({
   infoPanelText,
 }) => (
   <div>
-    <Sidebar />
     <div className='three-d-trafo-input'>
       <div className='start-input'>
         <h1>

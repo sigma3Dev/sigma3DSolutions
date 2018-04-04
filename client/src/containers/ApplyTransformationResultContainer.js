@@ -10,6 +10,7 @@ import {
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
+import Sidebar from '../components/Sidebar/Sidebar';
 import ApplyTrafoResult from '../components/ApplyTrafoResult/ApplyTrafoResult';
 
 const mapDispatchToProps = dispatch => ({
@@ -45,6 +46,7 @@ class ApplyTransformationResultContainer extends Component {
     }
     return (
       <div>
+        <Sidebar />
         <ApplyTrafoResult result={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );

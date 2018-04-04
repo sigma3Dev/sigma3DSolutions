@@ -8,6 +8,7 @@ import { pushChebyshevCircleFitCoords } from '../actions/pushChebyshevCircleFitC
 import { getCirclePoints } from '../selectors/ChebyshevCircleFitSelector/getChebyshevCircleFitInputDataSelector/getChebyshevCircleFitInputDataSelector';
 import { submitChebyshevCircleFitCoords } from '../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
 import { clearChebyshevInput } from '../actions/clearInput/clearInputActions';
+import Sidebar from '../components/Sidebar/Sidebar';
 import InfoModal from '../components/InfoModal/InfoModal';
 
 const cdi = require('coordinatedataimporter');
@@ -128,6 +129,7 @@ class ChebyshevCFInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
+        <Sidebar />
         <ChebyshevCFInput
           onFileDrop={this.parseCoords}
           circlePoints={this.props.circlePoints}
