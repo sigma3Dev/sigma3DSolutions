@@ -4,11 +4,11 @@
 
 .select-apps-screen {
   height: 100%;
-  width: 72%;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-left: 200px;
+  margin-left: 15vw;
 }
 
 .select-apps-screen * {

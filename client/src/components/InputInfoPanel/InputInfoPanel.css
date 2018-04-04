@@ -1,3 +1,4 @@
 .info-panel {
-  width: 18%;
+  min-width: 17vw;
+  margin-right: 3vw;
 }

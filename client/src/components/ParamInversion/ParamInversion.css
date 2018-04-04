@@ -1,7 +1,6 @@
 .param-inversion {
-  width: 72%;
+  width: 100%;
   height: 100%;
-  margin-left: 240px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -22,7 +21,8 @@
 }
 
 .param-inversion .input-display {
-  width: 80%;
+  width: 65vw;
+  margin-left: 16vw;
   display: flex;
   justify-content: space-around;
   font-size: 1.3em;
@@ -39,14 +39,15 @@
 }
 
 .param-inversion textarea {
-  width: 40%;
+  width: 50%;
   font-size: 1.4em;
 }
 
 .param-inversion .param-submit-btn {
-  width: 70%;
+  width: 65vw;
+  margin-left: 16vw;
   margin-top: 20px;
-  padding: 10px 0;
+  padding: 40px 0;
   border: 3px #06a solid;
   background: #b5d5ff;
   border-radius: 3px;
