@@ -29,7 +29,7 @@ export const getTransformedStartPoints = createSelector(
   getTrafoDifference,
   getTargetSystemPoints,
   (difference, targetPoints) => {
-    if (difference.length === 0) return [];
+    if (difference.length === 0 || difference.length !== targetPoints.length) return [];
     return targetPoints.map((point, i) => [
       point.x + difference[i].vx,
       point.y + difference[i].vy,
