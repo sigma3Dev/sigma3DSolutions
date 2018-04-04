@@ -30,10 +30,11 @@ export const getTransformedStartPoints = createSelector(
   getTargetSystemPoints,
   (difference, targetPoints) => {
     if (difference.length === 0) return [];
-    return targetPoints.map((point, i) => [
-      point.x + difference[i].vx,
-      point.y + difference[i].vy,
-      point.z + difference[i].vz,
-    ]);
+    return targetPoints.map((point, i) => {
+      if (difference.length > i) {
+        return [point.x + difference[i].vx, point.y + difference[i].vy, point.z + difference[i].vz];
+      }
+      return [];
+    });
   },
 );
