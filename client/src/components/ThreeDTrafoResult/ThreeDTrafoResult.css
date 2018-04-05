@@ -16,34 +16,6 @@
   margin-bottom: 10px;
 }
 
-.three-d-trafo-result .result-table {
-  padding-top: 10px;
-  width: 80%;
-  border-collapse: collapse;
-}
-
-.three-d-trafo-result .result-table * {
-  font-size: 1.05em;
-  text-align: center;
-}
-
-.three-d-trafo-result .result-table th {
-  padding: 10px 0;
-}
-
-.three-d-trafo-result .result-table .caption {
-  background-color: #d9e9f0;
-}
-
-.three-d-trafo-result .copy {
-  font-size: 0.8em;
-  padding: 10px;
-}
-
-.three-d-trafo-result .copy:hover {
-  cursor: pointer;
-}
-
 .three-d-trafo-result .bar-graph {
   width: 80%;
   height: 40vh;

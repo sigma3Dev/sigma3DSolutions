@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import PointsInput from '../PointsInput/PointsInput';
-import PointsInputTable3D6W from '../PointsInputTable3D6W/PointsInputTable3D6W';
+import PointsInputDropzone from '../PointsInputDropzone/PointsInputDropzone';
+import PointsTable from '../PointsTable/PointsTable';
 import SubmitBtn from '../SubmitBtn/SubmitBtn';
 import InfoBtn from '../InfoBtn/InfoBtn';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
@@ -45,8 +45,8 @@ const ThreeDTrafoInput = ({
             defaultMessage='Start System Points:'
           />
         </h1>
-        <PointsInput onDrop={onStartFileDrop} />
-        <PointsInputTable3D6W
+        <PointsInputDropzone onDrop={onStartFileDrop} />
+        <PointsTable
           systemPoints={startSystemPoints}
           handleDeleteDataInput={handleStartDeleteClick}
         />
@@ -62,8 +62,8 @@ const ThreeDTrafoInput = ({
             <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
           </div>
         </h1>
-        <PointsInput onDrop={onTargetFileDrop} />
-        <PointsInputTable3D6W
+        <PointsInputDropzone onDrop={onTargetFileDrop} />
+        <PointsTable
           systemPoints={targetSystemPoints}
           handleChange={checkboxUpdate}
           handleDeleteDataInput={handleTargetDeleteClick}

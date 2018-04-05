@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import PointsInput from '../PointsInput/PointsInput';
-import PointsInputTable3D6W from '../PointsInputTable3D6W/PointsInputTable3D6W';
+import PointsInputDropzone from '../PointsInputDropzone/PointsInputDropzone';
+import PointsTable from '../PointsTable/PointsTable';
 import SubmitBtn from '../SubmitBtn/SubmitBtn';
 import InfoBtn from '../InfoBtn/InfoBtn';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
@@ -40,11 +40,8 @@ const ChebyshevCFInput = ({
             <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
           </div>
         </h1>
-        <PointsInput onDrop={onFileDrop} />
-        <PointsInputTable3D6W
-          systemPoints={circlePoints}
-          handleDeleteDataInput={handleDeleteClick}
-        />
+        <PointsInputDropzone onDrop={onFileDrop} />
+        <PointsTable systemPoints={circlePoints} handleDeleteDataInput={handleDeleteClick} />
       </div>
       <SubmitBtn handleClick={handleSubmitClick} />
     </div>

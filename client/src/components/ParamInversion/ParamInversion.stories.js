@@ -24,6 +24,6 @@ stories.addDecorator((story, context) => withInfo('common info')(story)(context)
 stories.addDecorator(withKnobs);
 stories.addDecorator(StoryRouter.default());
 
-stories.add('Screen to display if there is an error in the calculation', () => (
+stories.add('Shows input and results for Parameter Inversions', () => (
   <ParamInversion values={values} />
 ));
