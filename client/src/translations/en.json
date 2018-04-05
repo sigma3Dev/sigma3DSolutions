@@ -25,7 +25,10 @@
   "ErrorScreen.label.error": "Error!",
   "ErrorScreen.label.s3dinfo":
     "Do you have the service for mathematical operations by sigma3D running?\n\n If you don't own the service, please contact sigma3D:",
+  "FitPlaneErrorBarGraph.caption.errors": "Fitting Errors",
   "FitPlaneInput.label.caption": "Gauss Plane",
+  "FitPlaneResult.label.caption": "Fit Plane Result",
+  "FitPlaneResultTable.label.stdev": "Standard Deviation",
   "InfoModal.caption.wrongInput": "Wrong Input",
   "InfoModal.label.mCantBeZero": "M cannot be zero!",
   "InfoModal.label.noCirclePoints": "Please import circle points!",

@@ -96,7 +96,7 @@ const paramInversionSendToSocket = (coords, callback) => {
   const socket = getWebSocket()
     .then((socket) => {
       socket.onerror = (error) => {
-        callback(error.error, false);
+        callback(error, false);
       };
 
       socket.onmessage = (e) => {
@@ -118,7 +118,7 @@ const ChebyCircleFitSendToSocket = (coords, callback) => {
   const socket = getWebSocket()
     .then((socket) => {
       socket.onerror = (error) => {
-        callback(error.error, false);
+        callback(error, false);
       };
 
       socket.onmessage = (e) => {
@@ -165,29 +165,22 @@ const applyTransformation = (values, callback) => {
 };
 
 const fitPlane = (coords, callback) => {
+  globalIdCounter += 1;
   const points = coords.planePoints;
-
-  const results = [];
+  const requestObj = comm.fitPlaneL2(points, globalIdCounter);
 
   const socket = getWebSocket()
     .then((socket) => {
-      points.forEach((point, i) => {
-        globalIdCounter += 1;
-        const objTransformation = comm.fitPlane(points, globalIdCounter);
-        socket.send(objTransformation);
+      socket.onerror = (error) => {
+        callback(error, false);
+      };
 
-        socket.onmessage = (e) => {
-          const response = JSON.parse(e.data).result;
-          results.push(response);
-          if (results.length === i + 1) {
-            callback(results, true);
-          }
-        };
+      socket.onmessage = (e) => {
+        const response = e.data;
+        callback(response, true);
+      };
 
-        socket.onerror = (error) => {
-          callback(error, false);
-        };
-      });
+      socket.send(requestObj);
     })
     .catch((err) => {
       callback(err, false);

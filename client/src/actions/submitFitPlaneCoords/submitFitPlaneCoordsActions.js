@@ -53,6 +53,6 @@ export const submitFitPlaneCoords = coords => (dispatch) => {
       }
     })
     .catch((error) => {
-      dispatch(submitFitPlaneCoordsFailure(error));
+      dispatch(submitFitPlaneCoordsFailure(error.message));
     });
 };

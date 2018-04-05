@@ -6,6 +6,7 @@ import ChebyshevCFInputContainer from './containers/ChebyshevCFInputContainer';
 import ChebyshevCFResultContainer from './containers/ChebyshevCFResultContainer';
 import GeometryScreenContainer from './containers/GeometryScreenContainer';
 import FitPlaneInputContainer from './containers/FitPlaneInputContainer';
+import FitPlaneResultContainer from './containers/FitPlaneResultContainer';
 import ParamInversionContainer from './containers/ParamInversionContainer';
 import StartScreenContainer from './containers/StartScreenContainer';
 import ThreeDTrafoInputContainer from './containers/ThreeDTrafoInputContainer';
@@ -47,6 +48,7 @@ const App = () => (
       />
       <Route path='/geometry/chebyshev-circle-fit/result' component={ChebyshevCFResultContainer} />
       <Route path='/geometry/fit-plane/data-input' component={FitPlaneInputContainer} />
+      <Route path='/geometry/fit-plane/result' component={FitPlaneResultContainer} />
       <Redirect from='*' to='/' />
     </Switch>
   </div>

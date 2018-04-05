@@ -1,4 +1,4 @@
-.three-d-trafo-result {
+.fit-plane-result {
   width: 79%;
   height: 90vh;
   margin-left: 16vw;
@@ -10,25 +10,13 @@
   font-family: Roboto;
 }
 
-.three-d-trafo-result h1 {
+.fit-plane-result h1 {
   font-size: 2.5em;
   border-bottom: 3px solid #0375ba;
   margin-bottom: 10px;
 }
 
-.three-d-trafo-result .bar-graph {
+.fit-plane-result .bar-graph {
   width: 80%;
   height: 40vh;
-}
-
-.three-d-trafo-result .download-link {
-  text-decoration: underline;
-  color: darkblue;
-  border: none;
-  background: none;
-}
-
-.three-d-trafo-result .download-link:hover {
-  cursor: pointer;
-  color: blue;
 }
