@@ -22,7 +22,7 @@ const ThreeDTrafoResult = ({
   translationDecimalPlaces,
   rotationDecimalPlaces,
 }) => {
-  const copyText = trafoParams.join(' ');
+  const copyText = trafoParams.join('	');
   return (
     <div className='three-d-trafo-result'>
       <h1>

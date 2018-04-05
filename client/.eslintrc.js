@@ -21,6 +21,7 @@ module.exports = {
     'no-console': 'off',
     'no-mixed-operators': 'off',
     'no-restricted-syntax': 'off',
+    'no-tabs': 'off',
     'react/forbid-prop-types': [0],
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
     'react/no-array-index-key': 'off',
