@@ -9,6 +9,7 @@ import {
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
+import Sidebar from '../components/Sidebar/Sidebar';
 import ChebyshevCFResult from '../components/ChebyshevCFResult/ChebyshevCFResult';
 
 const mapDispatchToProps = dispatch => ({
@@ -54,6 +55,7 @@ class ChebyshevCFResultContainer extends Component {
     }
     return (
       <div>
+        <Sidebar />
         <ChebyshevCFResult chebyshevParams={this.props.chebyshevParams} handleClick={this.goBack} />
       </div>
     );

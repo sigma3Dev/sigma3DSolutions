@@ -4,7 +4,6 @@ import { FormattedMessage } from 'react-intl';
 import PointsInput from '../PointsInput/PointsInput';
 import PointsInputTable3D6W from '../PointsInputTable3D6W/PointsInputTable3D6W';
 import SubmitBtn from '../SubmitBtn/SubmitBtn';
-import Sidebar from '../Sidebar/Sidebar';
 import InfoBtn from '../InfoBtn/InfoBtn';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
 import './ChebyshevCFInput.css';
@@ -29,7 +28,6 @@ const ChebyshevCFInput = ({
   infoPanelText,
 }) => (
   <div>
-    <Sidebar />
     <div className='chebyshev-circle-fit-input'>
       <div className='circle-input'>
         <h1>

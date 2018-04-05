@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AppSelectionBtn from '../AppSelectionBtn/AppSelectionBtn';
-import Sidebar from '../Sidebar/Sidebar';
 import './SelectAppsScreen.css';
 
 /**
@@ -11,7 +10,6 @@ import './SelectAppsScreen.css';
  */
 const SelectAppsScreen = ({ buttons }) => (
   <div className='select-apps-screen'>
-    <Sidebar />
     {buttons.map(b => <AppSelectionBtn label={b.type} key={b.type} link={b.link} />)}
   </div>
 );

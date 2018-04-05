@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Sidebar from '../components/Sidebar/Sidebar';
 import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
 
 /**
@@ -22,7 +23,12 @@ class TransformationsScreenContainer extends Component {
         link: '/transformations/transform/data-input',
       },
     ];
-    return <SelectAppsScreen buttons={buttons} />;
+    return (
+      <div>
+        <Sidebar />
+        <SelectAppsScreen buttons={buttons} />
+      </div>
+    );
   }
 }
 

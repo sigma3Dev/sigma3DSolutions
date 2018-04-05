@@ -20,6 +20,7 @@ import {
   getListOfUsedCoords,
 } from '../selectors/ThreeDTrafoSelectors/getTrafoInputDataSelector/getTrafoInputDataSelector';
 import ThreeDTrafoInput from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
+import Sidebar from '../components/Sidebar/Sidebar';
 import InfoModal from '../components/InfoModal/InfoModal';
 
 const cdi = require('coordinatedataimporter');
@@ -215,6 +216,7 @@ class ThreeDTrafoInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
+        <Sidebar />
         <ThreeDTrafoInput
           onStartFileDrop={this.parseStartCoords}
           onTargetFileDrop={this.parseTargetCoords}

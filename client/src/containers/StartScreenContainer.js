@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Sidebar from '../components/Sidebar/Sidebar';
 import StartScreen from '../components/StartScreen/StartScreen';
 
 /**
@@ -8,7 +9,12 @@ import StartScreen from '../components/StartScreen/StartScreen';
  */
 class StartScreenContainer extends Component {
   render() {
-    return <StartScreen />;
+    return (
+      <div>
+        <Sidebar />
+        <StartScreen />
+      </div>
+    );
   }
 }
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
-import Sidebar from '../Sidebar/Sidebar';
 import './StartScreen.css';
 
 /**
@@ -9,7 +8,6 @@ import './StartScreen.css';
  */
 const StartScreen = () => (
   <div className='start-screen'>
-    <Sidebar />
     <h1 className='header'>
       <FormattedMessage
         id='StartScreen.header.welcome'

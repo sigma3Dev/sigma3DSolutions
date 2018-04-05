@@ -11,6 +11,7 @@ import {
   getPoints,
 } from '../selectors/ApplyTrafoSelectors/getApplyTrafoInputDataSelector/getApplyTrafoInputDataSelector';
 import ApplyTrafoInput from '../components/ApplyTrafoInput/ApplyTrafoInput';
+import Sidebar from '../components/Sidebar/Sidebar';
 import InfoModal from '../components/InfoModal/InfoModal';
 
 const cdi = require('coordinatedataimporter');
@@ -150,6 +151,7 @@ class ApplyTransformationInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
+        <Sidebar />
         <ApplyTrafoInput
           handleSubmit={this.submitApplyTrafoCoords}
           handleChange={this.parseTrafoParamInput}
