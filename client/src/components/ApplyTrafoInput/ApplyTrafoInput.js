@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import PointsInput from '../PointsInput/PointsInput';
+import PointsInputDropzone from '../PointsInputDropzone/PointsInputDropzone';
 import SubmitBtn from '../SubmitBtn/SubmitBtn';
 import InfoBtn from '../InfoBtn/InfoBtn';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
@@ -127,7 +127,7 @@ const ApplyTrafoInput = ({
             </label>
           </form>
         </div>
-        <PointsInput onDrop={handleDrop} className='dropzone' />
+        <PointsInputDropzone onDrop={handleDrop} className='dropzone' />
       </div>
       <div className='points-table'>
         <table>

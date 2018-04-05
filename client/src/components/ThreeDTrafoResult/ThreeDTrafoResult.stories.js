@@ -28,7 +28,7 @@ const stories = storiesOf('Start.ThreeDTrafoResult', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));
 stories.addDecorator(StoryRouter.default());
 
-stories.add('Table to display the result of the calculated transformation - DontTest', () => (
+stories.add('Table to display the result of the calculated 3D-Transformation - DontTest', () => (
   <ThreeDTrafoResult
     trafoParams={trafoParams}
     trafoDifference={trafoDifference}

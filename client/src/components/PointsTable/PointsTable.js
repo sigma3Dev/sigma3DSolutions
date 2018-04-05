@@ -1,22 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import './PointsInputTable3D6W.css';
+import './PointsTable.css';
 
 const FaTrash = require('react-icons/lib/fa/trash-o');
 
 const trashIcon = React.createElement(FaTrash, null);
 
 /**
- * Table to display the input values from PointsInput,
+ * Table to display the input values from PointsInputDropzone,
  * with checkboxes to select which points to use
  * @param {Array} systemPoints - array of points
  * @param {Object} checkboxesDisplay - style for checkboxes, if start-input: 'display: none'
  * @param {function} handleChange - handles checkbox clicks
  * @param {function} handleDeleteDataInput - handles deletion of points input
- * @returns {*} PointsInputTable3D6W - .jsx Element
+ * @returns {*} PointsTable - .jsx Element
  */
-const PointsInputTable3D6W = ({
+const PointsTable = ({
   systemPoints,
   handleChange,
   handleDeleteDataInput,
@@ -107,11 +107,11 @@ const PointsInputTable3D6W = ({
   );
 };
 
-PointsInputTable3D6W.propTypes = {
+PointsTable.propTypes = {
   systemPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
   handleChange: PropTypes.func,
   handleDeleteDataInput: PropTypes.func.isRequired,
   listOfUsedCoords: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.bool)),
 };
 
-export default PointsInputTable3D6W;
+export default PointsTable;

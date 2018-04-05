@@ -7,7 +7,7 @@ const InputInfoPanel = ({ body, isDisplayed }) => {
   const show = isDisplayed
     ? {
       whiteSpace: 'pre-wrap',
-      fontSize: '0.51em',
+      fontSize: '0.6em',
     }
     : {
       display: 'none',
@@ -18,7 +18,7 @@ const InputInfoPanel = ({ body, isDisplayed }) => {
       style={show}
       title='Input Info'
       placement='right'
-      className='info-panel'
+      className='input-info-panel'
       positionLeft='80%'
       positionTop={17}
       arrowOffsetTop='30px'

@@ -97,9 +97,9 @@ class ThreeDTrafoResultContainer extends Component {
     const coords = this.props.transformedStartPoints;
     const coordsAsText = coords.reduce((acc, val, i) => {
       if (i < coords.length - 1) {
-        return `${acc}${val[0].toFixed(2)} ${val[1].toFixed(2)} ${val[2].toFixed(2)}\r\n`;
+        return `${acc}${val[0]} ${val[1]} ${val[2]}\r\n`;
       }
-      return `${acc}${val[0].toFixed(2)} ${val[1].toFixed(2)} ${val[2].toFixed(2)}`;
+      return `${acc}${val[0]} ${val[1]} ${val[2]}`;
     }, '');
 
     // turns string into blob and then into .txt

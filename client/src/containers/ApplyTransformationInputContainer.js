@@ -139,7 +139,9 @@ class ApplyTransformationInputContainer extends Component {
           The input should be a simple .txt file.\n
 
           The file should consist of one or more points, each on its own line.
-          Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n
+          Each point should be made up of three coordinates: x, y and z. These should be simple numbers, separated by a single space.\n
+
+          Please make sure you have no empty lines and no trailing spaces at the end of a line.\n
 
           Example:\n
           41.3 11.2 17.1\n

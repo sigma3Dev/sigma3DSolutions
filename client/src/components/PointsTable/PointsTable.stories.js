@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
-import PointsInputTable3D6W from './PointsInputTable3D6W';
+import PointsTable from './PointsTable';
 
 const systemPoints = [
   {
@@ -41,12 +41,12 @@ const systemPoints = [
   },
 ];
 
-const stories = storiesOf('Start.PointsInputTable3D6W', module);
+const stories = storiesOf('Start.PointsTable', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));
 stories.addDecorator(withKnobs);
 
-stories.add('Table to display start and target system points input', () => (
-  <PointsInputTable3D6W
+stories.add('Table to display points input', () => (
+  <PointsTable
     systemPoints={systemPoints}
     handleChange={() => {}}
     handleDeleteDataInput={() => {}}

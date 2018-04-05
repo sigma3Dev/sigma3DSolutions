@@ -15580,7 +15580,7 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
         className="s3d-info"
       >
         <span>
-          Läuft der Fittingservice von sigma3D im Hintergrund?.
+          Läuft der Fittingservice von sigma3D im Hintergrund?
           
            Wenn Sie das Programm nicht besitzen, kontaktieren Sie bitte sigma3D:
         </span>
@@ -16358,6 +16358,894 @@ exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
 </div>
 `;
 
+exports[`Storyshots Start.InfoModal Modal to show information if there is invalid input 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="static-modal"
+    >
+      <div
+        className="modal"
+        role="dialog"
+        style={
+          Object {
+            "display": "block",
+          }
+        }
+        tabIndex="-1"
+      >
+        <div
+          className="modal-dialog"
+        >
+          <div
+            className="modal-content"
+            role="document"
+          >
+            <div
+              className="modal-header"
+            >
+              <h4
+                className="modal-title"
+              >
+                <span>
+                  Fehlerhaftes Input
+                </span>
+              </h4>
+            </div>
+            <div
+              className="modal-body"
+            >
+              <span>
+                Start- und Zielsystem haben unterschiedliche Länge!
+              </span>
+            </div>
+            <div
+              className="modal-footer"
+            >
+              <button
+                className="btn btn-primary"
+                disabled={false}
+                onClick={[Function]}
+                type="button"
+              >
+                OK
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#28c",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    style={
+      Object {
+        "background": "white",
+        "bottom": 0,
+        "display": "none",
+        "left": 0,
+        "overflow": "auto",
+        "padding": "0 40px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+        "zIndex": 99999,
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      ×
+    </button>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginBottom": "20px",
+            "marginTop": "20px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            Start.InfoModal
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            Modal to show information if there is invalid input
+          </h2>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+                "fontSize": "15px",
+              }
+            }
+          >
+            common info
+          </div>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                InfoModal
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    body
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          &lt;FormattedMessage /&gt;
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    header
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          &lt;FormattedMessage /&gt;
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    handleClick
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          handleClick()
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              InfoModal
+              " Component
+            </h2>
+            <table
+              className="css-1ytzlk7"
+            >
+              <thead>
+                <tr>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    property
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    propType
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    required
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    default
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    header
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    body
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    handleClick
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Start.InputInfoPanel Show informations about the input 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="input-info-panel popover right"
+      id="popover-basic"
+      role="tooltip"
+      style={
+        Object {
+          "display": "block",
+          "fontSize": "0.6em",
+          "left": "80%",
+          "top": 17,
+          "whiteSpace": "pre-wrap",
+        }
+      }
+    >
+      <div
+        className="arrow"
+        style={
+          Object {
+            "left": undefined,
+            "top": "30px",
+          }
+        }
+      />
+      <h3
+        className="popover-title"
+      >
+        Input Info
+      </h3>
+      <div
+        className="popover-content"
+      >
+        <span>
+          Das Input sollte eine einfache .txt Datei sein.
+          
+          Die Datei sollte aus einem oder mehreren Punkten bestehen, jeder davon in einer Zeile. Jeder dieser Punkte sollte aus drei Koordinaten bestehen: x, y und z. Diese sollten einfache Zahlen und durch ein Leerzeichen getrennt sein.
+          
+          Stellen Sie sicher, dass sich am Ende der Zeile kein Leerzeichen befindet, und dass am Ende der Datei keine Leerzeilen sind.
+          
+          Beispiel:
+          41.3 11.2 17.1
+          24.2 33.1 19.8
+          9.1 5.4 12.9
+        </span>
+      </div>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#28c",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    style={
+      Object {
+        "background": "white",
+        "bottom": 0,
+        "display": "none",
+        "left": 0,
+        "overflow": "auto",
+        "padding": "0 40px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+        "zIndex": 99999,
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      ×
+    </button>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginBottom": "20px",
+            "marginTop": "20px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            Start.InputInfoPanel
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            Show informations about the input
+          </h2>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+                "fontSize": "15px",
+              }
+            }
+          >
+            common info
+          </div>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                InputInfoPanel
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    body
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          &lt;FormattedMessage /&gt;
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    isDisplayed
+                  </span>
+                   
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              InputInfoPanel
+              " Component
+            </h2>
+            <table
+              className="css-1ytzlk7"
+            >
+              <thead>
+                <tr>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    property
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    propType
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    required
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    default
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    body
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    isDisplayed
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Start.LoadingScreen Screen to display while calculation is loading 1`] = `
 <div>
   <div
@@ -16628,7 +17516,7 @@ exports[`Storyshots Start.LoadingScreen Screen to display while calculation is l
 </div>
 `;
 
-exports[`Storyshots Start.ParamInversion Screen to display if there is an error in the calculation 1`] = `
+exports[`Storyshots Start.ParamInversion Shows input and results for Parameter Inversions 1`] = `
 <div>
   <div
     style={
@@ -16873,7 +17761,7 @@ exports[`Storyshots Start.ParamInversion Screen to display if there is an error 
               }
             }
           >
-            Screen to display if there is an error in the calculation
+            Shows input and results for Parameter Inversions
           </h2>
         </div>
         <div
@@ -17224,7 +18112,7 @@ exports[`Storyshots Start.ParamInversion Screen to display if there is an error 
 </div>
 `;
 
-exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target system points input 1`] = `
+exports[`Storyshots Start.PointsTable Table to display points input 1`] = `
 <div>
   <div
     style={
@@ -17662,7 +18550,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
               }
             }
           >
-            Start.PointsInputTable3D6W
+            Start.PointsTable
           </h1>
           <h2
             style={
@@ -17674,7 +18562,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
               }
             }
           >
-            Table to display start and target system points input
+            Table to display points input
           </h2>
         </div>
         <div
@@ -17738,7 +18626,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
                 }
               >
                 &lt;
-                PointsInputTable3D6W
+                PointsTable
               </span>
               <span>
                 <span>
@@ -18168,7 +19056,7 @@ exports[`Storyshots Start.PointsInputTable3D6W Table to display start and target
               }
             >
               "
-              PointsInputTable3D6W
+              PointsTable
               " Component
             </h2>
             <table
@@ -19726,6 +20614,629 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
                     className="css-1ygfcef"
                   >
                     handleClick
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Start.ThreeDTrafoResultTable Table to display calculated transformation parameters for 3D transformation 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <table
+      className="result-table"
+    >
+      <thead>
+        <tr
+          className="caption"
+        >
+          <th>
+            Tx
+          </th>
+          <th>
+            Ty
+          </th>
+          <th>
+            Tz
+          </th>
+          <th>
+            Q0
+          </th>
+          <th>
+            Q1
+          </th>
+          <th>
+            Q2
+          </th>
+          <th>
+            Q3
+          </th>
+          <th />
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>
+            477.24
+          </th>
+          <th>
+            -9389.08
+          </th>
+          <th>
+            3886.74
+          </th>
+          <th>
+            0.9951
+          </th>
+          <th>
+            -0.0048
+          </th>
+          <th>
+            -0.0006
+          </th>
+          <th>
+            0.0990
+          </th>
+          <th>
+            <button
+              className="copy"
+              onClick={[Function]}
+              title="Copy to clipboard"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "color": undefined,
+                    "verticalAlign": "middle",
+                  }
+                }
+                viewBox="0 0 40 40"
+                width="1em"
+              >
+                <g>
+                  <path
+                    d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
+                  />
+                </g>
+              </svg>
+            </button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#28c",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    style={
+      Object {
+        "background": "white",
+        "bottom": 0,
+        "display": "none",
+        "left": 0,
+        "overflow": "auto",
+        "padding": "0 40px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+        "zIndex": 99999,
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      ×
+    </button>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginBottom": "20px",
+            "marginTop": "20px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            Start.ThreeDTrafoResultTable
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            Table to display calculated transformation parameters for 3D transformation
+          </h2>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+                "fontSize": "15px",
+              }
+            }
+          >
+            common info
+          </div>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                ThreeDTrafoResultTable
+              </span>
+              <span>
+                <span>
+                  <span>
+                    <br />
+                      
+                  </span>
+                  <span
+                    style={Object {}}
+                  >
+                    trafoParams
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          [
+                          <span>
+                            {
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              477.2449196367121
+                            </span>
+                            }
+                          </span>
+                          , 
+                          <span>
+                            {
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              -9389.077335081724
+                            </span>
+                            }
+                          </span>
+                          , 
+                          <span>
+                            {
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              3886.7391116598624
+                            </span>
+                            }
+                          </span>
+                          , 
+                          …
+                          ]
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                  <span>
+                    <br />
+                      
+                  </span>
+                  <span
+                    style={Object {}}
+                  >
+                    translationDecimalPlaces
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#a11",
+                            }
+                          }
+                        >
+                          2
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                  <span>
+                    <br />
+                      
+                  </span>
+                  <span
+                    style={Object {}}
+                  >
+                    rotationDecimalPlaces
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#a11",
+                            }
+                          }
+                        >
+                          4
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                  <span>
+                    <br />
+                      
+                  </span>
+                  <span
+                    style={Object {}}
+                  >
+                    copyText
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#22a",
+                            "wordBreak": "break-word",
+                          }
+                        }
+                      >
+                        "
+                        
+                        "
+                      </span>
+                    </span>
+                  </span>
+                  <br />
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              ThreeDTrafoResultTable
+              " Component
+            </h2>
+            <table
+              className="css-1ytzlk7"
+            >
+              <thead>
+                <tr>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    property
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    propType
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    required
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    default
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    trafoParams
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    translationDecimalPlaces
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    rotationDecimalPlaces
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    copyText
                   </td>
                   <td
                     className="css-1ygfcef"
