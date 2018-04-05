@@ -11,14 +11,18 @@ class GeometryScreenContainer extends Component {
   render() {
     const buttons = [
       {
-        type: 'chebyshev_circle_fit',
+        type: 'chebyshevCircleFit',
         link: '/geometry/chebyshev-circle-fit/data-input',
+      },
+      {
+        type: 'fitPlane',
+        link: '/geometry/fit-plane/data-input',
       },
     ];
     return (
       <div>
         <Sidebar />
-        <SelectAppsScreen buttons={buttons} />;
+        <SelectAppsScreen buttons={buttons} />
       </div>
     );
   }

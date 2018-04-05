@@ -23,7 +23,17 @@ const mapStateToProps = state => ({
   result: getApplyTrafoResult(state),
 });
 
+/**
+ * container to display applyTrafo result
+ * @class ApplyTransformationResultContainer
+ * @extends {Component}
+ */
 class ApplyTransformationResultContainer extends Component {
+  /**
+   * Creates an instance of ApplyTransformationResultContainer.
+   * @param {Object} props
+   * @memberof ApplyTransformationResultContainer
+   */
   constructor(props) {
     super(props);
     this.goBack = this.goBack.bind(this);

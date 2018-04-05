@@ -7,6 +7,8 @@ import {
   clearChebyshevInput,
   CLEAR_APPLY_TRAFO_INPUT,
   clearApplyTrafoInput,
+  CLEAR_PLANE_INPUT,
+  clearPlaneInput,
 } from './clearInputActions';
 
 describe('clearInputActions', () => {
@@ -39,6 +41,14 @@ describe('clearInputActions', () => {
       type: CLEAR_APPLY_TRAFO_INPUT,
     };
     const result = clearApplyTrafoInput();
+    expect(result.type).toEqual(expected.type);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a CLEAR_PLANE_INPUT action', () => {
+    const expected = {
+      type: CLEAR_PLANE_INPUT,
+    };
+    const result = clearPlaneInput();
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });

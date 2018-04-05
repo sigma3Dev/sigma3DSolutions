@@ -14,7 +14,7 @@ import {
   SUBMIT_APPLY_TRAFO_VALUES_REQUEST,
   SUBMIT_APPLY_TRAFO_VALUES_SUCCESS,
   SUBMIT_APPLY_TRAFO_VALUES_FAILURE,
-} from '../../actions/submitApplyTransformationValuesActions/submitApplyTransformationValuesActions';
+} from '../../actions/submitApplyTransformationValues/submitApplyTransformationValuesActions';
 
 /*  true when a request has been sent, but no response or error has returned yet */
 const initialCalculationStateData = {

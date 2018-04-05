@@ -3,7 +3,7 @@ import { THREE_D_TRAFO_CHECKBOX_UPDATE } from '../../actions/submitThreeDTrafoCo
 import {
   PUSH_3D_TRAFO_START_SYSTEM_COORDS,
   PUSH_3D_TRAFO_TARGET_SYSTEM_COORDS,
-} from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
+} from '../../actions/pushCoords/pushCoordsActions';
 
 import {
   CLEAR_THREE_D_TRAFO_6W_START_INPUT,

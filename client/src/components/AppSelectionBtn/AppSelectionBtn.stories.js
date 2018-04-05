@@ -7,7 +7,7 @@ import { withInfo } from '@storybook/addon-info';
 import AppSelectionBtn from './AppSelectionBtn';
 
 const label = 'Tschebyscheff-Kreis';
-const link = '/geometries/chebyshev_circle_fit';
+const link = '/geometry/chebyshevCircleFit';
 
 const StoryRouter = require('storybook-router');
 

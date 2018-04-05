@@ -2,6 +2,7 @@ export const CLEAR_THREE_D_TRAFO_6W_START_INPUT = 'CLEAR_THREE_D_TRAFO_6W_START_
 export const CLEAR_THREE_D_TRAFO_6W_TARGET_INPUT = 'CLEAR_THREE_D_TRAFO_6W_TARGET_INPUT';
 export const CLEAR_CHEBYSHEV_INPUT = 'CLEAR_CHEBYSHEV_INPUT';
 export const CLEAR_APPLY_TRAFO_INPUT = 'CLEAR_APPLY_TRAFO_INPUT';
+export const CLEAR_PLANE_INPUT = 'CLEAR_PLANE_INPUT';
 
 /** clears the start input */
 export const clearThreeDTrafo6WStartInput = () => ({
@@ -24,5 +25,11 @@ export const clearChebyshevInput = () => ({
 /** clears any apply trafo input */
 export const clearApplyTrafoInput = () => ({
   type: CLEAR_APPLY_TRAFO_INPUT,
+  receivedAt: Date.now(),
+});
+
+/** clears any plane input */
+export const clearPlaneInput = () => ({
+  type: CLEAR_PLANE_INPUT,
   receivedAt: Date.now(),
 });

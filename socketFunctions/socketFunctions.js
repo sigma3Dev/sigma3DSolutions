@@ -164,10 +164,41 @@ const applyTransformation = (values, callback) => {
     });
 };
 
+const fitPlane = (coords, callback) => {
+  const points = coords.planePoints;
+
+  const results = [];
+
+  const socket = getWebSocket()
+    .then((socket) => {
+      points.forEach((point, i) => {
+        globalIdCounter += 1;
+        const objTransformation = comm.fitPlane(points, globalIdCounter);
+        socket.send(objTransformation);
+
+        socket.onmessage = (e) => {
+          const response = JSON.parse(e.data).result;
+          results.push(response);
+          if (results.length === i + 1) {
+            callback(results, true);
+          }
+        };
+
+        socket.onerror = (error) => {
+          callback(error, false);
+        };
+      });
+    })
+    .catch((err) => {
+      callback(err, false);
+    });
+};
+
 module.exports = {
   threeDTrafoSendToSocket,
   paramInversionSendToSocket,
   threeDTrafoDifferenceSendToSocket,
   ChebyCircleFitSendToSocket,
   applyTransformation,
+  fitPlane,
 };

@@ -14,7 +14,7 @@ import {
   SUBMIT_APPLY_TRAFO_VALUES_REQUEST,
   SUBMIT_APPLY_TRAFO_VALUES_SUCCESS,
   SUBMIT_APPLY_TRAFO_VALUES_FAILURE,
-} from '../../actions/submitApplyTransformationValuesActions/submitApplyTransformationValuesActions';
+} from '../../actions/submitApplyTransformationValues/submitApplyTransformationValuesActions';
 
 import calculationStatusReducer from './calculationStatusReducer';
 

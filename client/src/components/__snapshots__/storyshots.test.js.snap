@@ -12,7 +12,7 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
   >
     <a
       className="btn-link"
-      href="/geometries/chebyshev_circle_fit"
+      href="/geometry/chebyshevCircleFit"
       onClick={[Function]}
     >
       <div
@@ -266,7 +266,7 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
                         }
                       >
                         "
-                        /geometries/chebyshev_circle_fit
+                        /geometry/chebyshevCircleFit
                         "
                       </span>
                     </span>
@@ -19238,7 +19238,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
             className="app-selection-btn-description"
           >
             <span>
-              3D-Transformation
+              6 Parameter, gewichtet
             </span>
           </div>
         </div>
@@ -19266,7 +19266,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
             className="app-selection-btn-description"
           >
             <span>
-              Parameterinversion
+              7 Parameter
             </span>
           </div>
         </div>

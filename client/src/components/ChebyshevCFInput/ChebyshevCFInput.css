@@ -1,6 +1,7 @@
 .chebyshev-circle-fit-input {
+  width: 62vw;
+  margin-left: 16vw;
   margin-top: 5vh;
-  width: 100%;
   font-family: Roboto;
 }
 
@@ -8,7 +9,7 @@
   text-align: center;
 }
 
-.chebyshev-circle-fit-input .circle-input h1 {
+.chebyshev-circle-fit-input h1 {
   display: flex;
   justify-content: space-around;
   border-bottom: 3px solid #0270a5;
@@ -22,9 +23,4 @@
 
 .chebyshev-circle-fit-input .info-section .info-btn {
   font-size: 0.6em;
-}
-
-.circle-input {
-  width: 62vw;
-  margin-left: 16vw;
 }
