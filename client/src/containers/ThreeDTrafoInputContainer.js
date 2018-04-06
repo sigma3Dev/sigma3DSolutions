@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl';
 import {
   pushThreeDTrafoStartSystemCoords,
   pushThreeDTrafoTargetSystemCoords,
-} from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
+} from '../actions/pushCoords/pushCoordsActions';
 import {
   threeDTrafoCheckboxUpdate,
   submitThreeDTrafoCoords,

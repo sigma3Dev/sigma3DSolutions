@@ -63,22 +63,27 @@
   margin: 0 auto;
 }
 
-.app-selection-btn .s3d-icon[data-category="3Dtransformation"] {
+.app-selection-btn .s3d-icon[data-category='3Dtransformation'] {
   background-image: url('../../images/3DTransformation.svg');
   width: 80px;
 }
 
-.app-selection-btn .s3d-icon[data-category="chebyshev_circle_fit"] {
+.app-selection-btn .s3d-icon[data-category='chebyshevCircleFit'] {
   background-image: url('../../images/chebyshev-circle.svg');
   background-size: 100% 100%;
 }
 
-.app-selection-btn .s3d-icon[data-category="paramInversion"] {
+.app-selection-btn .s3d-icon[data-category='fitPlane'] {
+  background-image: url('../../images/Plane.svg');
+  background-size: 100% 100%;
+}
+
+.app-selection-btn .s3d-icon[data-category='paramInversion'] {
   background-image: url('../../images/InvertTransformationParameters.svg');
   background-size: 100% 100%;
 }
 
-.app-selection-btn .s3d-icon[data-category="transform"] {
+.app-selection-btn .s3d-icon[data-category='transform'] {
   background-image: url('../../images/Transform.svg');
   background-size: 100% 100%;
 }

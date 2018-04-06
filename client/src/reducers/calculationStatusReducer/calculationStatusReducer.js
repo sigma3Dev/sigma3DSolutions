@@ -14,7 +14,13 @@ import {
   SUBMIT_APPLY_TRAFO_VALUES_REQUEST,
   SUBMIT_APPLY_TRAFO_VALUES_SUCCESS,
   SUBMIT_APPLY_TRAFO_VALUES_FAILURE,
-} from '../../actions/submitApplyTransformationValuesActions/submitApplyTransformationValuesActions';
+} from '../../actions/submitApplyTransformationValues/submitApplyTransformationValuesActions';
+
+import {
+  SUBMIT_FIT_PLANE_COORDS_REQUEST,
+  SUBMIT_FIT_PLANE_COORDS_SUCCESS,
+  SUBMIT_FIT_PLANE_COORDS_FAILURE,
+} from '../../actions/submitFitPlaneCoords/submitFitPlaneCoordsActions';
 
 /*  true when a request has been sent, but no response or error has returned yet */
 const initialCalculationStateData = {
@@ -70,6 +76,21 @@ function calculationStatus(state = initialCalculationStateData, action) {
         isCalculating: false,
       };
     case SUBMIT_APPLY_TRAFO_VALUES_FAILURE:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_FIT_PLANE_COORDS_REQUEST:
+      return {
+        ...state,
+        isCalculating: true,
+      };
+    case SUBMIT_FIT_PLANE_COORDS_SUCCESS:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_FIT_PLANE_COORDS_FAILURE:
       return {
         ...state,
         isCalculating: false,

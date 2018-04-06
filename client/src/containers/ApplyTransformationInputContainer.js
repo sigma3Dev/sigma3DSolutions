@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
-import { pushCoords } from '../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import { pushApplyTrafoCoords } from '../actions/pushCoords/pushCoordsActions';
 import { clearApplyTrafoInput } from '../actions/clearInput/clearInputActions';
 import { changeApplyTrafoParamInputField } from '../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
-import { submitApplyTrafoValues } from '../actions/submitApplyTransformationValuesActions/submitApplyTransformationValuesActions';
+import { submitApplyTrafoValues } from '../actions/submitApplyTransformationValues/submitApplyTransformationValuesActions';
 import {
   getParams,
   getPoints,
@@ -17,7 +17,7 @@ import InfoModal from '../components/InfoModal/InfoModal';
 const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  onPushCoords: file => dispatch(pushCoords(file)),
+  onPushCoords: file => dispatch(pushApplyTrafoCoords(file)),
   onSubmitValues: values => dispatch(submitApplyTrafoValues(values)),
   onClearApplyTrafoInput: () => dispatch(clearApplyTrafoInput()),
   onChangeParamInputField: (name, val) => dispatch(changeApplyTrafoParamInputField(name, val)),
@@ -34,6 +34,11 @@ const mapStateToProps = state => ({
  * @extends {Component}
  */
 class ApplyTransformationInputContainer extends Component {
+  /**
+   * Creates an instance of ApplyTransformationInputContainer.
+   * @param {Object} prop
+   * @memberof ApplyTransformationInputContainer
+   */
   constructor(props) {
     super(props);
     this.state = {

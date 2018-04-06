@@ -1,4 +1,4 @@
-import { SUBMIT_APPLY_TRAFO_VALUES_SUCCESS } from '../../actions/submitApplyTransformationValuesActions/submitApplyTransformationValuesActions';
+import { SUBMIT_APPLY_TRAFO_VALUES_SUCCESS } from '../../actions/submitApplyTransformationValues/submitApplyTransformationValuesActions';
 import applyTrafoDataResultReducer from './applyTrafoDataResultReducer';
 
 describe('applyTrafoDataResultReducer', () => {

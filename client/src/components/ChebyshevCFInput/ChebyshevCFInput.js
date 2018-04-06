@@ -29,22 +29,20 @@ const ChebyshevCFInput = ({
 }) => (
   <div>
     <div className='chebyshev-circle-fit-input'>
-      <div className='circle-input'>
-        <h1>
-          <FormattedMessage
-            id='ChebyshevCFInput.label.circlePointsCaption'
-            defaultMessage='Circle Points:'
-          />
-          <div className='info-section'>
-            <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-            <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-          </div>
-        </h1>
-        <PointsInputDropzone onDrop={onFileDrop} />
-        <PointsTable systemPoints={circlePoints} handleDeleteDataInput={handleDeleteClick} />
-      </div>
-      <SubmitBtn handleClick={handleSubmitClick} />
+      <h1>
+        <FormattedMessage
+          id='ChebyshevCFInput.label.circlePointsCaption'
+          defaultMessage='Circle Points:'
+        />
+        <div className='info-section'>
+          <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+          <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
+        </div>
+      </h1>
+      <PointsInputDropzone onDrop={onFileDrop} />
+      <PointsTable systemPoints={circlePoints} handleDeleteDataInput={handleDeleteClick} />
     </div>
+    <SubmitBtn handleClick={handleSubmitClick} />
   </div>
 );
 

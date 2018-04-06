@@ -1,16 +1,16 @@
-import { PUSH_COORDS } from '../../actions/pushTrafoCoords/pushTrafoCoordsActions';
+import { PUSH_APPLY_TRAFO_COORDS } from '../../actions/pushCoords/pushCoordsActions';
 import { CLEAR_APPLY_TRAFO_INPUT } from '../../actions/clearInput/clearInputActions';
 import { SUBMIT_3D_TRAFO_COORDS_SUCCESS } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 import { CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD } from '../../actions/changeApplyTrafoParamInputField/changeApplyTrafoParamInputFieldActions';
 import applyTrafoDataInputReducer from './applyTrafoDataInputReducer';
 
 describe('applyTrafoDataInputReducer', () => {
-  it('should handle PUSH_COORDS', () => {
+  it('should handle PUSH_APPLY_TRAFO_COORDS', () => {
     const state = {
       points: [],
     };
     const action = {
-      type: PUSH_COORDS,
+      type: PUSH_APPLY_TRAFO_COORDS,
       coords: [
         {
           x: 1,

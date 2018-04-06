@@ -53,6 +53,6 @@ export const submitApplyTrafoValues = values => (dispatch) => {
       }
     })
     .catch((error) => {
-      dispatch(submitApplyTrafoValuesFailure(error));
+      dispatch(submitApplyTrafoValuesFailure(error.message));
     });
 };

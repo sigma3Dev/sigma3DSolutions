@@ -5,6 +5,8 @@ import ApplyTransformationResultContainer from './containers/ApplyTransformation
 import ChebyshevCFInputContainer from './containers/ChebyshevCFInputContainer';
 import ChebyshevCFResultContainer from './containers/ChebyshevCFResultContainer';
 import GeometryScreenContainer from './containers/GeometryScreenContainer';
+import FitPlaneInputContainer from './containers/FitPlaneInputContainer';
+import FitPlaneResultContainer from './containers/FitPlaneResultContainer';
 import ParamInversionContainer from './containers/ParamInversionContainer';
 import StartScreenContainer from './containers/StartScreenContainer';
 import ThreeDTrafoInputContainer from './containers/ThreeDTrafoInputContainer';
@@ -22,11 +24,7 @@ const App = () => (
     <Switch>
       <Route exact path='/' component={StartScreenContainer} />
       <Route exact path='/transformations' component={TransformationsScreenContainer} />
-      <Route
-        exact
-        path='/transformations/parameter-inversion'
-        component={ParamInversionContainer}
-      />
+      <Route path='/transformations/parameter-inversion' component={ParamInversionContainer} />
       <Route
         path='/transformations/three-d-transformation/data-input'
         component={ThreeDTrafoInputContainer}
@@ -45,11 +43,12 @@ const App = () => (
       />
       <Route exact path='/geometry' component={GeometryScreenContainer} />
       <Route
-        exact
         path='/geometry/chebyshev-circle-fit/data-input'
         component={ChebyshevCFInputContainer}
       />
       <Route path='/geometry/chebyshev-circle-fit/result' component={ChebyshevCFResultContainer} />
+      <Route path='/geometry/fit-plane/data-input' component={FitPlaneInputContainer} />
+      <Route path='/geometry/fit-plane/result' component={FitPlaneResultContainer} />
       <Redirect from='*' to='/' />
     </Switch>
   </div>

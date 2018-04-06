@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
-import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import ChebyshevCFInput from '../components/ChebyshevCFInput/ChebyshevCFInput';
 import { pushChebyshevCircleFitCoords } from '../actions/pushChebyshevCircleFitCoords/pushChebyshevCircleFitCoordsActions';
 import { getCirclePoints } from '../selectors/ChebyshevCircleFitSelector/getChebyshevCircleFitInputDataSelector/getChebyshevCircleFitInputDataSelector';
@@ -20,8 +19,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  // selectors, only here
-  error: getError(state),
   circlePoints: getCirclePoints(state),
 });
 
@@ -109,6 +106,7 @@ class ChebyshevCFInputContainer extends Component {
   clearChebyshevInput = () => {
     this.props.onClearChebyshevInput();
   };
+
   render() {
     const infoPanelText = (
       <FormattedMessage
