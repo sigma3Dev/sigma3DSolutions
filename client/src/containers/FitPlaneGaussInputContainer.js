@@ -43,6 +43,7 @@ class FitPlaneGaussInputContainer extends Component {
     this.parseCoords = this.parseCoords.bind(this);
     this.clearPlaneInput = this.clearPlaneInput.bind(this);
     this.submitFitPlaneGaussCoords = this.submitFitPlaneGaussCoords.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   /**
@@ -54,6 +55,14 @@ class FitPlaneGaussInputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * Closes the Modal-window
+   * @memberof FitPlaneGaussInputContainer
+   */
+  closeModal = () => {
+    this.setState({ ...this.state, notification: null });
   };
 
   /**
