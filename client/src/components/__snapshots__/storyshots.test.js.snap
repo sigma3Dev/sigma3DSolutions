@@ -16005,7 +16005,7 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
 </div>
 `;
 
-exports[`Storyshots Start.FitPlaneResultTable - DontTest Table to display calculated params of plane fit 1`] = `
+exports[`Storyshots Start.FitPlaneGaussResultTable - DontTest Table to display calculated params of plane fit 1`] = `
 <div>
   <div
     style={
@@ -16200,7 +16200,7 @@ exports[`Storyshots Start.FitPlaneResultTable - DontTest Table to display calcul
               }
             }
           >
-            Start.FitPlaneResultTable - DontTest
+            Start.FitPlaneGaussResultTable - DontTest
           </h1>
           <h2
             style={
@@ -16276,7 +16276,7 @@ exports[`Storyshots Start.FitPlaneResultTable - DontTest Table to display calcul
                 }
               >
                 &lt;
-                FitPlaneResultTable
+                FitPlaneGaussResultTable
               </span>
               <span>
                 <span>
@@ -16414,7 +16414,7 @@ exports[`Storyshots Start.FitPlaneResultTable - DontTest Table to display calcul
               }
             >
               "
-              FitPlaneResultTable
+              FitPlaneGaussResultTable
               " Component
             </h2>
             <table

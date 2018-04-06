@@ -17,10 +17,10 @@ import {
 } from '../../actions/submitApplyTransformationValues/submitApplyTransformationValuesActions';
 
 import {
-  SUBMIT_FIT_PLANE_COORDS_REQUEST,
-  SUBMIT_FIT_PLANE_COORDS_SUCCESS,
-  SUBMIT_FIT_PLANE_COORDS_FAILURE,
-} from '../../actions/submitFitPlaneCoords/submitFitPlaneCoordsActions';
+  SUBMIT_FIT_PLANE_GAUSS_COORDS_REQUEST,
+  SUBMIT_FIT_PLANE_GAUSS_COORDS_SUCCESS,
+  SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE,
+} from '../../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 
 import calculationStatusReducer from './calculationStatusReducer';
 
@@ -142,12 +142,12 @@ describe('calculationStatusReducer', () => {
     const result = calculationStatusReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle SUBMIT_FIT_PLANE_COORDS_REQUEST', () => {
+  it('should handle SUBMIT_FIT_PLANE_GAUSS_COORDS_REQUEST', () => {
     const state = {
       isCalculating: false,
     };
     const action = {
-      type: SUBMIT_FIT_PLANE_COORDS_REQUEST,
+      type: SUBMIT_FIT_PLANE_GAUSS_COORDS_REQUEST,
     };
     const expectedState = {
       isCalculating: true,
@@ -155,12 +155,12 @@ describe('calculationStatusReducer', () => {
     const result = calculationStatusReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle SUBMIT_FIT_PLANE_COORDS_SUCCESS', () => {
+  it('should handle SUBMIT_FIT_PLANE_GAUSS_COORDS_SUCCESS', () => {
     const state = {
       isCalculating: true,
     };
     const action = {
-      type: SUBMIT_FIT_PLANE_COORDS_SUCCESS,
+      type: SUBMIT_FIT_PLANE_GAUSS_COORDS_SUCCESS,
     };
     const expectedState = {
       isCalculating: false,
@@ -168,12 +168,12 @@ describe('calculationStatusReducer', () => {
     const result = calculationStatusReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle SUBMIT_FIT_PLANE_COORDS_FAILURE', () => {
+  it('should handle SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE', () => {
     const state = {
       isCalculating: true,
     };
     const action = {
-      type: SUBMIT_FIT_PLANE_COORDS_FAILURE,
+      type: SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE,
     };
     const expectedState = {
       isCalculating: false,

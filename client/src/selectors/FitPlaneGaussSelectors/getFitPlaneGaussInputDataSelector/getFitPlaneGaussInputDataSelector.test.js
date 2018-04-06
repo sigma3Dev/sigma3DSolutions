@@ -1,9 +1,9 @@
-import { getPlanePoints } from './getFitPlaneInputDataSelector';
+import { getPlanePoints } from './getFitPlaneGaussInputDataSelector';
 
-describe('getFitPlaneInputDataSelector Used By FitPlaneInputContainer', () => {
+describe('getFitPlaneGaussInputDataSelector Used By FitPlaneGaussInputContainer', () => {
   it('getPlanePoints', () => {
     const state = {
-      fitPlaneDataInput: {
+      fitPlaneGaussDataInput: {
         points: [
           {
             x: 12.5,

@@ -70,10 +70,10 @@ describe('POST /apply-trafo', () => {
   });
 });
 
-describe('POST /fit-plane', () => {
+describe('POST /fit-plane-gauss', () => {
   it('returns a string and status code 400 upon wrong input', (done) => {
     request(app)
-      .post('/fit-plane')
+      .post('/fit-plane-gauss')
       .send({
         wrongData: null,
       })

@@ -164,7 +164,7 @@ const applyTransformation = (values, callback) => {
     });
 };
 
-const fitPlane = (coords, callback) => {
+const fitPlaneGauss = (coords, callback) => {
   globalIdCounter += 1;
   const points = coords.planePoints;
   const requestObj = comm.fitPlaneL2(points, globalIdCounter);
@@ -193,5 +193,5 @@ module.exports = {
   threeDTrafoDifferenceSendToSocket,
   ChebyCircleFitSendToSocket,
   applyTransformation,
-  fitPlane,
+  fitPlaneGauss,
 };

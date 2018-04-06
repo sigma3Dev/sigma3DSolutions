@@ -2,19 +2,19 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
-import { pushFitPlaneCoords } from '../actions/pushCoords/pushCoordsActions';
-import { submitFitPlaneCoords } from '../actions/submitFitPlaneCoords/submitFitPlaneCoordsActions';
+import { pushFitPlaneGaussCoords } from '../actions/pushCoords/pushCoordsActions';
+import { submitFitPlaneGaussCoords } from '../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 import { clearPlaneInput } from '../actions/clearInput/clearInputActions';
-import { getPlanePoints } from '../selectors/FitPlaneSelectors/getFitPlaneInputDataSelector/getFitPlaneInputDataSelector';
+import { getPlanePoints } from '../selectors/FitPlaneGaussSelectors/getFitPlaneGaussInputDataSelector/getFitPlaneGaussInputDataSelector';
 import Sidebar from '../components/Sidebar/Sidebar';
 import InfoModal from '../components/InfoModal/InfoModal';
-import FitPlaneInput from '../components/FitPlaneInput/FitPlaneInput';
+import FitPlaneGaussInput from '../components/FitPlaneGaussInput/FitPlaneGaussInput';
 
 const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  onPushCoords: file => dispatch(pushFitPlaneCoords(file)),
-  onSubmitCoords: coords => dispatch(submitFitPlaneCoords(coords)),
+  onPushCoords: file => dispatch(pushFitPlaneGaussCoords(file)),
+  onSubmitCoords: coords => dispatch(submitFitPlaneGaussCoords(coords)),
   onClearPlaneInput: () => dispatch(clearPlaneInput()),
 });
 
@@ -23,15 +23,15 @@ const mapStateToProps = state => ({
 });
 
 /**
- * container for fitPlane input
- * @class FitPlaneInputContainer
+ * container for Gauss input
+ * @class FitPlaneGaussInputContainer
  * @extends {Component}
  */
-class FitPlaneInputContainer extends Component {
+class FitPlaneGaussInputContainer extends Component {
   /**
-   * Creates an instance of FitPlaneInputContainer.
+   * Creates an instance of FitPlaneGaussInputContainer.
    * @param {Object} props
-   * @memberof FitPlaneInputContainer
+   * @memberof FitPlaneGaussInputContainer
    */
   constructor(props) {
     super(props);
@@ -42,13 +42,13 @@ class FitPlaneInputContainer extends Component {
     this.displayInfoPanel = this.displayInfoPanel.bind(this);
     this.parseCoords = this.parseCoords.bind(this);
     this.clearPlaneInput = this.clearPlaneInput.bind(this);
-    this.submitFitPlaneCoords = this.submitFitPlaneCoords.bind(this);
+    this.submitFitPlaneGaussCoords = this.submitFitPlaneGaussCoords.bind(this);
   }
 
   /**
    * Uses cdi module to transform .txt file into an array of points
    * @param {*} file - .txt file with point coordinates
-   * @memberof FitPlaneInputContainer
+   * @memberof FitPlaneGaussInputContainer
    */
   parseCoords = (file) => {
     cdi.startCoordinateDataImport(file, (coords) => {
@@ -58,9 +58,9 @@ class FitPlaneInputContainer extends Component {
 
   /**
    * Handles coords submit, navigates to "result" page
-   * @memberof FitPlaneInputContainer
+   * @memberof FitPlaneGaussInputContainer
    */
-  submitFitPlaneCoords = () => {
+  submitFitPlaneGaussCoords = () => {
     if (!this.props.planePoints || this.props.planePoints.length === 0) {
       this.setState({
         notification: (
@@ -83,13 +83,13 @@ class FitPlaneInputContainer extends Component {
         planePoints: this.props.planePoints,
       };
       this.props.onSubmitCoords(coords);
-      this.props.history.push('/geometry/fit-plane/result');
+      this.props.history.push('/geometry/fit-plane-gauss/result');
     }
   };
 
   /**
    * deletes all start system points, updates input display
-   * @memberof FitPlaneInputContainer
+   * @memberof FitPlaneGaussInputContainer
    */
   clearPlaneInput = () => {
     this.props.onClearPlaneInput();
@@ -97,7 +97,7 @@ class FitPlaneInputContainer extends Component {
 
   /**
    * Decides wheter InfoPanel is displayed or not
-   * @memberof FitPlaneInputContainer
+   * @memberof FitPlaneGaussInputContainer
    */
   displayInfoPanel = () => {
     this.setState({ ...this.state, isInfoOpen: !this.state.isInfoOpen });
@@ -110,7 +110,7 @@ class FitPlaneInputContainer extends Component {
         defaultMessage='
           The input should be a simple .txt file.\n
 
-          The file should consist of one or more points, each on its own line.
+          The file should consist of three or more points, each on its own line.
           Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n
 
           Example:\n
@@ -124,13 +124,13 @@ class FitPlaneInputContainer extends Component {
       <div>
         {this.state.notification}
         <Sidebar />
-        <FitPlaneInput
+        <FitPlaneGaussInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
           handleInfoClick={this.displayInfoPanel}
           handleDeleteClick={this.clearPlaneInput}
           handleFileDrop={this.parseCoords}
-          handleSubmitClick={this.submitFitPlaneCoords}
+          handleSubmitClick={this.submitFitPlaneGaussCoords}
           planePoints={this.props.planePoints}
         />
       </div>
@@ -138,7 +138,7 @@ class FitPlaneInputContainer extends Component {
   }
 }
 
-FitPlaneInputContainer.propTypes = {
+FitPlaneGaussInputContainer.propTypes = {
   onPushCoords: PropTypes.func.isRequired,
   onClearPlaneInput: PropTypes.func.isRequired,
   onSubmitCoords: PropTypes.func.isRequired,
@@ -146,4 +146,4 @@ FitPlaneInputContainer.propTypes = {
   history: PropTypes.any,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(FitPlaneInputContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FitPlaneGaussInputContainer);

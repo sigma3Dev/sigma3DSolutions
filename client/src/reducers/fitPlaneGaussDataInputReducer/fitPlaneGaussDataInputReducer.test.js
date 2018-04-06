@@ -1,14 +1,14 @@
-import { PUSH_FIT_PLANE_COORDS } from '../../actions/pushCoords/pushCoordsActions';
+import { PUSH_FIT_PLANE_GAUSS_COORDS } from '../../actions/pushCoords/pushCoordsActions';
 import { CLEAR_PLANE_INPUT } from '../../actions/clearInput/clearInputActions';
-import fitPlaneDataInputReducer from './fitPlaneDataInputReducer';
+import FitPlaneGaussDataInputReducer from './fitPlaneGaussDataInputReducer';
 
-describe('fitPlaneDataInputReducer', () => {
-  it('should handle PUSH_FIT_PLANE_COORDS', () => {
+describe('FitPlaneGaussDataInputReducer', () => {
+  it('should handle PUSH_FIT_PLANE_GAUSS_COORDS', () => {
     const state = {
       points: [],
     };
     const action = {
-      type: PUSH_FIT_PLANE_COORDS,
+      type: PUSH_FIT_PLANE_GAUSS_COORDS,
       coords: [
         {
           x: 1,
@@ -36,7 +36,7 @@ describe('fitPlaneDataInputReducer', () => {
         },
       ],
     };
-    const result = fitPlaneDataInputReducer(state, action);
+    const result = FitPlaneGaussDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
   it('should handle CLEAR_APPLY_TRAFO_INPUT', () => {
@@ -60,7 +60,7 @@ describe('fitPlaneDataInputReducer', () => {
     const expectedState = {
       points: [],
     };
-    const result = fitPlaneDataInputReducer(state, action);
+    const result = FitPlaneGaussDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
 });
