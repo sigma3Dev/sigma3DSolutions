@@ -1,0 +1,92 @@
+.quat-cardan {
+  width: 82vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 12px;
+  margin-left: 16vw;
+  font-family: Roboto;
+}
+
+.quat-cardan * {
+  text-align: center;
+}
+
+.quat-cardan h1 {
+  font-size: 3em;
+  border-bottom: 3px solid #0375ba;
+  padding-bottom: 5px;
+  margin: 4vh 0 10vh;
+}
+
+.quat-cardan .inputs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.quat-cardan .inputs .quat-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 60vh;
+  padding: 5vh 0;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 0 5vw;
+}
+
+.quat-cardan .inputs .cardan-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 60vh;
+  padding: 5vh 0;
+  border: 1px solid grey;
+  border-radius: 5px;
+  margin: 0 5vw;
+}
+
+.quat-cardan .inputs .quat-input form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.58em;
+  margin: 0 5vw;
+}
+
+.quat-cardan .inputs .quat-input form input {
+  margin-left: 14px;
+  margin-bottom: 2vh;
+}
+
+.quat-cardan .inputs .cardan-input form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 1.58em;
+  margin: 0 5vw;
+}
+
+.quat-cardan .inputs .cardan-input form input {
+  margin-left: 14px;
+  margin-bottom: 2vh;
+}
+
+.quat-cardan button {
+  border: none;
+  margin-top: 5vh;
+  padding: 2vh 5vw;
+  font-size: 1.4em;
+  width: 70%;
+  border-radius: 3px;
+}
+
+.quat-cardan button:hover {
+  background: rgb(226, 226, 226);
+}

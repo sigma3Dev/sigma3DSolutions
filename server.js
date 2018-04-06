@@ -140,6 +140,44 @@ app.post('/fit-plane-gauss', (req, res) => {
   });
 });
 
+app.post('/quat-to-cardan', (req, res) => {
+  if (
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'q0') ||
+    req.body.coords.length !== 4
+  ) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  }
+
+  sf.quatToCardan(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      res.status(500).send(response);
+    }
+  });
+});
+
+app.post('/cardan-to-quat', (req, res) => {
+  if (
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'Rx') ||
+    req.body.coords.length !== 3
+  ) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  }
+
+  sf.cardanToQuat(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      res.status(500).send(response);
+    }
+  });
+});
+
 app.listen(app.get('port'), () => {
   console.log('Server is running...');
 });

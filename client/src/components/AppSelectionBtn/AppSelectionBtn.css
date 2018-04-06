@@ -83,6 +83,11 @@
   background-size: 100% 100%;
 }
 
+.app-selection-btn .s3d-icon[data-category='quatCardan'] {
+  background-image: url('../../images/QuatCardan.svg');
+  background-size: 100% 100%;
+}
+
 .app-selection-btn .s3d-icon[data-category='transform'] {
   background-image: url('../../images/Transform.svg');
   background-size: 100% 100%;
