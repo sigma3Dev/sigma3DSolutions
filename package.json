@@ -21,7 +21,7 @@
     "node": "^9.5.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "s3d-fitting-commands": "^0.3.2",
+    "s3d-fitting-commands": "^0.4.1",
     "ws": "^4.1.0"
   },
   "devDependencies": {
@@ -30,9 +30,8 @@
     "@storybook/addons": "^3.3.14",
     "@storybook/react": "^3.3.14",
     "babel-core": "^6.26.0",
-    "chai": "^4.1.2",
-    "chai-spies": "^1.0.0",
     "concurrently": "^3.5.1",
+    "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",

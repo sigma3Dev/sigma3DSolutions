@@ -90,3 +90,11 @@
 .quat-cardan button:hover {
   background: rgb(226, 226, 226);
 }
+
+.quat-cardan button:focus {
+  outline: 0;
+}
+
+.quat-cardan button:active {
+  background: rgb(232, 232, 232);
+}

@@ -141,10 +141,13 @@ app.post('/fit-plane-gauss', (req, res) => {
 });
 
 app.post('/quat-to-cardan', (req, res) => {
+  console.log(JSON.stringify(req.body));
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
     !Object.prototype.hasOwnProperty.call(req.body.coords, 'q0') ||
-    req.body.coords.length !== 4
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'q1') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'q2') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'q3')
   ) {
     res.status(400).send('Invalid input coordinates');
     return;
@@ -163,7 +166,8 @@ app.post('/cardan-to-quat', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
     !Object.prototype.hasOwnProperty.call(req.body.coords, 'Rx') ||
-    req.body.coords.length !== 3
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'Ry') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'Rz')
   ) {
     res.status(400).send('Invalid input coordinates');
     return;

@@ -18,6 +18,8 @@ import {
   submitCardanToQuatCoordsSuccess,
   SUBMIT_CARDAN_TO_QUAT_COORDS_FAILURE,
   submitCardanToQuatCoordsFailure,
+  CHANGE_QUAT_CARDAN_INPUT_FIELD,
+  changeQuatCardanInputField,
 } from './quatCardanCoordsActions';
 
 const middlewares = [thunk];
@@ -174,5 +176,22 @@ describe('quatCardanCoordsActions', () => {
       expect(store.getActions()[0].type).toEqual(SUBMIT_CARDAN_TO_QUAT_COORDS_REQUEST);
       expect(store.getActions()[1].type).toEqual(SUBMIT_CARDAN_TO_QUAT_COORDS_FAILURE);
     });
+  });
+});
+
+describe('changeQuatCardanInputField', () => {
+  it('should dispatch a CHANGE_QUAT_CARDAN_INPUT_FIELD action', () => {
+    const name = 'Q0';
+    const val = '12';
+    const expected = {
+      type: CHANGE_QUAT_CARDAN_INPUT_FIELD,
+      name,
+      val,
+    };
+    const result = changeQuatCardanInputField(name, val);
+    expect(result.type).toEqual(expected.type);
+    expect(result.name).toEqual(expected.name);
+    expect(result.val).toEqual(expected.val);
+    expect(result.receivedAt).toBeDefined();
   });
 });

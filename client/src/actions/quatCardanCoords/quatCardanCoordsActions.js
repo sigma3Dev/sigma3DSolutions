@@ -8,6 +8,8 @@ export const SUBMIT_CARDAN_TO_QUAT_COORDS_REQUEST = 'SUBMIT_CARDAN_TO_QUAT_COORD
 export const SUBMIT_CARDAN_TO_QUAT_COORDS_SUCCESS = 'SUBMIT_CARDAN_TO_QUAT_COORDS_SUCCESS';
 export const SUBMIT_CARDAN_TO_QUAT_COORDS_FAILURE = 'SUBMIT_CARDAN_TO_QUAT_COORDS_FAILURE';
 
+export const CHANGE_QUAT_CARDAN_INPUT_FIELD = 'CHANGE_QUAT_CARDAN_INPUT_FIELD';
+
 const axios = require('axios');
 
 /** doesn't do anything, fires whenever submitQuatToCardanCoords is requested */
@@ -109,3 +111,15 @@ export const submitCardanToQuatCoords = coords => (dispatch) => {
       dispatch(submitCardanToQuatCoordsFailure(error.message));
     });
 };
+
+/**
+ * fires whenever input field changes
+ * @param {string} name - name of the input field that is changed
+ * @param {string} val - value of the input field that is changed
+ */
+export const changeQuatCardanInputField = (name, val) => ({
+  type: CHANGE_QUAT_CARDAN_INPUT_FIELD,
+  name,
+  val,
+  receivedAt: Date.now(),
+});

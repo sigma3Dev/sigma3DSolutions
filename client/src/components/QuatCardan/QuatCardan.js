@@ -8,49 +8,53 @@ const IoArrow = require('react-icons/lib/io/arrow-swap');
 const arrowIcon = React.createElement(IoArrow, null);
 
 const QuatCardan = ({
-  handleChange, points, handleQuatToCardanClick, handleCardanToQuatClick,
+  handleChange,
+  quat,
+  cardan,
+  handleQuatToCardanClick,
+  handleCardanToQuatClick,
 }) => (
   <div className='quat-cardan'>
     <h1>Quaternion {arrowIcon} Cardan</h1>
     <div className='inputs'>
       <div className='quat-input'>
         <form>
-          <label htmlFor='q0'>
+          <label htmlFor='Q0'>
             Q0:
             <input
               type='text'
-              name='q0'
-              value={points.q0}
+              name='Q0'
+              value={quat[0]}
               onChange={handleChange}
               autoComplete='off'
             />
           </label>
-          <label htmlFor='q1'>
+          <label htmlFor='Q1'>
             Q1:
             <input
               type='text'
-              name='q1'
-              value={points.q1}
+              name='Q1'
+              value={quat[1]}
               onChange={handleChange}
               autoComplete='off'
             />
           </label>
-          <label htmlFor='q2'>
+          <label htmlFor='Q2'>
             Q2:
             <input
               type='text'
-              name='q2'
-              value={points.q2}
+              name='Q2'
+              value={quat[2]}
               onChange={handleChange}
               autoComplete='off'
             />
           </label>
-          <label htmlFor='q3'>
+          <label htmlFor='Q3'>
             Q3:
             <input
               type='text'
-              name='q3'
-              value={points.q3}
+              name='Q3'
+              value={quat[3]}
               onChange={handleChange}
               autoComplete='off'
             />
@@ -70,7 +74,7 @@ const QuatCardan = ({
             <input
               type='text'
               name='Rx'
-              value={points.Rx}
+              value={cardan[0]}
               onChange={handleChange}
               autoComplete='off'
             />
@@ -80,7 +84,7 @@ const QuatCardan = ({
             <input
               type='text'
               name='Ry'
-              value={points.Ry}
+              value={cardan[1]}
               onChange={handleChange}
               autoComplete='off'
             />
@@ -90,7 +94,7 @@ const QuatCardan = ({
             <input
               type='text'
               name='Rz'
-              value={points.Rz}
+              value={cardan[2]}
               onChange={handleChange}
               autoComplete='off'
             />
@@ -108,10 +112,11 @@ const QuatCardan = ({
 );
 
 QuatCardan.propTypes = {
-  handleQuatToCardanClick: PropTypes.func.isRequired,
-  handleCardanToQuatClick: PropTypes.func.isRequired,
-  handleChange: PropTypes.func.isRequired,
-  points: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
+  handleQuatToCardanClick: PropTypes.func,
+  handleCardanToQuatClick: PropTypes.func,
+  handleChange: PropTypes.func,
+  quat: PropTypes.arrayOf(PropTypes.string),
+  cardan: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default QuatCardan;
