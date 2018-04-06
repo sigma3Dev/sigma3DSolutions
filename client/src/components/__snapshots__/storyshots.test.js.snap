@@ -19759,7 +19759,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                 name="Q0"
                 onChange={undefined}
                 type="text"
-                value={undefined}
+                value="2.15000"
               />
             </label>
             <label
@@ -19771,7 +19771,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                 name="Q1"
                 onChange={undefined}
                 type="text"
-                value={undefined}
+                value="0.85000"
               />
             </label>
             <label
@@ -19783,7 +19783,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                 name="Q2"
                 onChange={undefined}
                 type="text"
-                value={undefined}
+                value="1.50000"
               />
             </label>
             <label
@@ -19795,7 +19795,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                 name="Q3"
                 onChange={undefined}
                 type="text"
-                value={undefined}
+                value="1.05000"
               />
             </label>
           </form>
@@ -19820,7 +19820,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                 name="Rx"
                 onChange={undefined}
                 type="text"
-                value={undefined}
+                value="10.00000"
               />
             </label>
             <label
@@ -19832,7 +19832,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                 name="Ry"
                 onChange={undefined}
                 type="text"
-                value={undefined}
+                value="4.00000"
               />
             </label>
             <label
@@ -19844,7 +19844,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                 name="Rz"
                 onChange={undefined}
                 type="text"
-                value={undefined}
+                value="12.00000"
               />
             </label>
           </form>
@@ -20059,17 +20059,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                             }
                           }
                         >
-                          {
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            q0
-                          </span>
-                          : 
+                          [
                           <span
                             style={
                               Object {
@@ -20086,16 +20076,6 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                           <span
                             style={
                               Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            q1
-                          </span>
-                          : 
-                          <span
-                            style={
-                              Object {
                                 "color": "#22a",
                                 "wordBreak": "break-word",
                               }
@@ -20106,16 +20086,6 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                             "
                           </span>
                           , 
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            q2
-                          </span>
-                          : 
                           <span
                             style={
                               Object {
@@ -20130,7 +20100,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                           </span>
                           , 
                           …
-                          }
+                          ]
                         </span>
                         }
                       </span>
@@ -20158,17 +20128,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                             }
                           }
                         >
-                          {
-                          <span
-                            style={
-                              Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            Rx
-                          </span>
-                          : 
+                          [
                           <span
                             style={
                               Object {
@@ -20185,16 +20145,6 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                           <span
                             style={
                               Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            Ry
-                          </span>
-                          : 
-                          <span
-                            style={
-                              Object {
                                 "color": "#22a",
                                 "wordBreak": "break-word",
                               }
@@ -20208,16 +20158,6 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                           <span
                             style={
                               Object {
-                                "color": "#666",
-                              }
-                            }
-                          >
-                            Rz
-                          </span>
-                          : 
-                          <span
-                            style={
-                              Object {
                                 "color": "#22a",
                                 "wordBreak": "break-word",
                               }
@@ -20227,7 +20167,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                             12.00000
                             "
                           </span>
-                          }
+                          ]
                         </span>
                         }
                       </span>
@@ -20320,7 +20260,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                   <td
                     className="css-d52hbj"
                   >
-                    yes
+                    -
                   </td>
                   <td
                     className="css-d52hbj"
@@ -20345,7 +20285,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                   <td
                     className="css-d52hbj"
                   >
-                    yes
+                    -
                   </td>
                   <td
                     className="css-d52hbj"
@@ -20370,7 +20310,7 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                   <td
                     className="css-d52hbj"
                   >
-                    yes
+                    -
                   </td>
                   <td
                     className="css-d52hbj"
