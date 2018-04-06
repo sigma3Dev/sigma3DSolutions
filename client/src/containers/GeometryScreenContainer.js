@@ -15,8 +15,8 @@ class GeometryScreenContainer extends Component {
         link: '/geometry/chebyshev-circle-fit/data-input',
       },
       {
-        type: 'fitPlane',
-        link: '/geometry/fit-plane/data-input',
+        type: 'fitPlaneGauss',
+        link: '/geometry/fit-plane-gauss/data-input',
       },
     ];
     return (

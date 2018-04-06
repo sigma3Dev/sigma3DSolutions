@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import {
   getIsCalculating,
-  getFitPlaneResult,
-} from '../selectors/FitPlaneSelectors/getFitPlaneResultDataSelector/getFitPlaneResultDataSelector';
+  getFitPlaneGaussResult,
+} from '../selectors/FitPlaneGaussSelectors/getFitPlaneGaussResultDataSelector/getFitPlaneGaussResultDataSelector';
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
 import Sidebar from '../components/Sidebar/Sidebar';
-import FitPlaneResult from '../components/FitPlaneResult/FitPlaneResult';
+import FitPlaneGaussResult from '../components/FitPlaneGaussResult/FitPlaneGaussResult';
 
 const mapDispatchToProps = dispatch => ({
   onRemoveError: () => dispatch(removeError()),
@@ -19,19 +19,19 @@ const mapDispatchToProps = dispatch => ({
 const mapStateToProps = state => ({
   error: getError(state),
   isCalculating: getIsCalculating(state),
-  result: getFitPlaneResult(state),
+  result: getFitPlaneGaussResult(state),
 });
 
 /**
  * page to display results of fit plane
- * @class FitPlaneResultContainer
+ * @class FitPlaneGaussResultContainer
  * @extends {Component}
  */
-class FitPlaneResultContainer extends Component {
+class FitPlaneGaussResultContainer extends Component {
   /**
-   * Creates an instance of FitPlaneResultContainer.
+   * Creates an instance of FitPlaneGaussResultContainer.
    * @param {Object} props
-   * @memberof FitPlaneResultContainer
+   * @memberof FitPlaneGaussResultContainer
    */
   constructor(props) {
     super(props);
@@ -40,11 +40,11 @@ class FitPlaneResultContainer extends Component {
 
   /**
    * Navigates back to input page of the current transformation
-   * @memberof FitPlaneResultContainer
+   * @memberof FitPlaneGaussResultContainer
    */
   goBack = () => {
     this.props.onRemoveError();
-    this.props.history.push('/geometry/fit-plane/data-input');
+    this.props.history.push('/geometry/fit-plane-gauss/data-input');
   };
 
   render() {
@@ -56,13 +56,13 @@ class FitPlaneResultContainer extends Component {
     return (
       <div>
         <Sidebar />
-        <FitPlaneResult params={this.props.result} handleReturnClick={this.goBack} />
+        <FitPlaneGaussResult params={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );
   }
 }
 
-FitPlaneResultContainer.propTypes = {
+FitPlaneGaussResultContainer.propTypes = {
   onRemoveError: PropTypes.func.isRequired,
   error: PropTypes.string,
   isCalculating: PropTypes.bool.isRequired,
@@ -70,4 +70,4 @@ FitPlaneResultContainer.propTypes = {
   history: PropTypes.any,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(FitPlaneResultContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FitPlaneGaussResultContainer);

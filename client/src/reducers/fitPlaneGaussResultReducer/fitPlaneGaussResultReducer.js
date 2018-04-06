@@ -1,4 +1,4 @@
-import { SUBMIT_FIT_PLANE_COORDS_SUCCESS } from '../../actions/submitFitPlaneCoords/submitFitPlaneCoordsActions';
+import { SUBMIT_FIT_PLANE_GAUSS_COORDS_SUCCESS } from '../../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 
 const initialResultData = {
   x: 0,
@@ -17,9 +17,9 @@ const initialResultData = {
  * @param {Object} action - action to be executed
  * @returns {Object} state - updated State
  */
-function fitPlaneResult(state = initialResultData, action) {
+function fitPlaneGaussResult(state = initialResultData, action) {
   switch (action.type) {
-    case SUBMIT_FIT_PLANE_COORDS_SUCCESS:
+    case SUBMIT_FIT_PLANE_GAUSS_COORDS_SUCCESS:
       return {
         ...state,
         x: action.response.result.x,
@@ -36,4 +36,4 @@ function fitPlaneResult(state = initialResultData, action) {
   }
 }
 
-export default fitPlaneResult;
+export default fitPlaneGaussResult;

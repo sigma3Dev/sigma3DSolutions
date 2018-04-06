@@ -17,10 +17,10 @@ import {
 } from '../../actions/submitApplyTransformationValues/submitApplyTransformationValuesActions';
 
 import {
-  SUBMIT_FIT_PLANE_COORDS_REQUEST,
-  SUBMIT_FIT_PLANE_COORDS_SUCCESS,
-  SUBMIT_FIT_PLANE_COORDS_FAILURE,
-} from '../../actions/submitFitPlaneCoords/submitFitPlaneCoordsActions';
+  SUBMIT_FIT_PLANE_GAUSS_COORDS_REQUEST,
+  SUBMIT_FIT_PLANE_GAUSS_COORDS_SUCCESS,
+  SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE,
+} from '../../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 
 /*  true when a request has been sent, but no response or error has returned yet */
 const initialCalculationStateData = {
@@ -80,17 +80,17 @@ function calculationStatus(state = initialCalculationStateData, action) {
         ...state,
         isCalculating: false,
       };
-    case SUBMIT_FIT_PLANE_COORDS_REQUEST:
+    case SUBMIT_FIT_PLANE_GAUSS_COORDS_REQUEST:
       return {
         ...state,
         isCalculating: true,
       };
-    case SUBMIT_FIT_PLANE_COORDS_SUCCESS:
+    case SUBMIT_FIT_PLANE_GAUSS_COORDS_SUCCESS:
       return {
         ...state,
         isCalculating: false,
       };
-    case SUBMIT_FIT_PLANE_COORDS_FAILURE:
+    case SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE:
       return {
         ...state,
         isCalculating: false,

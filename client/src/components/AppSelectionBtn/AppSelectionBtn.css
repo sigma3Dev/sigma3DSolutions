@@ -73,7 +73,7 @@
   background-size: 100% 100%;
 }
 
-.app-selection-btn .s3d-icon[data-category='fitPlane'] {
+.app-selection-btn .s3d-icon[data-category='fitPlaneGauss'] {
   background-image: url('../../images/Plane.svg');
   background-size: 100% 100%;
 }

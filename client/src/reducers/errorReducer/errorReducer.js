@@ -3,7 +3,7 @@ import { SUBMIT_3D_TRAFO_COORDS_FAILURE } from '../../actions/submitThreeDTrafoC
 import { SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE } from '../../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
 import { SUBMIT_PARAM_INVERSION_COORDS_FAILURE } from '../../actions/paramInversionCoords/paramInversionCoordsActions';
 import { SUBMIT_APPLY_TRAFO_VALUES_FAILURE } from '../../actions/submitApplyTransformationValues/submitApplyTransformationValuesActions';
-import { SUBMIT_FIT_PLANE_COORDS_FAILURE } from '../../actions/submitFitPlaneCoords/submitFitPlaneCoordsActions';
+import { SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE } from '../../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 
 const initialErrorState = { error: null };
 
@@ -40,7 +40,7 @@ function errorHandling(state = initialErrorState, action) {
         ...state,
         error: action.error,
       };
-    case SUBMIT_FIT_PLANE_COORDS_FAILURE:
+    case SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE:
       return {
         ...state,
         error: action.error,

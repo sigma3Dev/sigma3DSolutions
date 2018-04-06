@@ -1,6 +1,6 @@
-import { getIsCalculating, getFitPlaneResult } from './getFitPlaneResultDataSelector';
+import { getIsCalculating, getFitPlaneGaussResult } from './getFitPlaneGaussResultDataSelector';
 
-describe('getFitPlaneResultDataSelector', () => {
+describe('getFitPlaneGaussResultDataSelector', () => {
   it('getIsCalculating', () => {
     const state = {
       calculationStatus: {
@@ -11,9 +11,9 @@ describe('getFitPlaneResultDataSelector', () => {
     const result = getIsCalculating(state);
     expect(result).toEqual(expected);
   });
-  it('getFitPlaneResult', () => {
+  it('getFitPlaneGaussResult', () => {
     const state = {
-      fitPlaneResult: {
+      fitPlaneGaussResult: {
         x: 11.833,
         y: 8.633,
         z: 11.6,
@@ -25,7 +25,7 @@ describe('getFitPlaneResultDataSelector', () => {
       },
     };
     const expected = [11.833, 8.633, 11.6, 0.0, 0.0, 1.0, 0.0, [0, 0, 0]];
-    const result = getFitPlaneResult(state);
+    const result = getFitPlaneGaussResult(state);
     expect(result).toEqual(expected);
   });
 });

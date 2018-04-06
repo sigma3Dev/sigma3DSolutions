@@ -6,9 +6,9 @@ import InfoBtn from '../InfoBtn/InfoBtn';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
 import PointsInputDropzone from '../PointsInputDropzone/PointsInputDropzone';
 import PointsTable from '../PointsTable/PointsTable';
-import './FitPlaneInput.css';
+import './FitPlaneGaussInput.css';
 
-const FitPlaneInput = ({
+const FitPlaneGaussInput = ({
   isInfoOpen,
   handleInfoClick,
   infoPanelText,
@@ -19,7 +19,7 @@ const FitPlaneInput = ({
 }) => (
   <div className='fit-plane-input'>
     <h1>
-      <FormattedMessage id='FitPlaneInput.label.caption' defaultMessage='Gauss Plane' />
+      <FormattedMessage id='FitPlaneGaussInput.label.caption' defaultMessage='Gauss Plane' />
       <div className='info-section'>
         <InfoBtn className='info-btn' handleClick={handleInfoClick} />
         <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
@@ -31,7 +31,7 @@ const FitPlaneInput = ({
   </div>
 );
 
-FitPlaneInput.propTypes = {
+FitPlaneGaussInput.propTypes = {
   handleInfoClick: PropTypes.func.isRequired,
   handleDeleteClick: PropTypes.func.isRequired,
   handleFileDrop: PropTypes.func.isRequired,
@@ -41,4 +41,4 @@ FitPlaneInput.propTypes = {
   planePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
 };
 
-export default FitPlaneInput;
+export default FitPlaneGaussInput;

@@ -3,7 +3,7 @@ import { SUBMIT_3D_TRAFO_COORDS_FAILURE } from '../../actions/submitThreeDTrafoC
 import { SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE } from '../../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
 import { SUBMIT_PARAM_INVERSION_COORDS_FAILURE } from '../../actions/paramInversionCoords/paramInversionCoordsActions';
 import { SUBMIT_APPLY_TRAFO_VALUES_FAILURE } from '../../actions/submitApplyTransformationValues/submitApplyTransformationValuesActions';
-import { SUBMIT_FIT_PLANE_COORDS_FAILURE } from '../../actions/submitFitPlaneCoords/submitFitPlaneCoordsActions';
+import { SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE } from '../../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 import errorReducer from './errorReducer';
 
 describe('errorReducer', () => {
@@ -102,14 +102,14 @@ describe('errorReducer', () => {
     const result = errorReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle SUBMIT_FIT_PLANE_COORDS_FAILURE', () => {
+  it('should handle SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE', () => {
     const state = {
       error: {
         error: null,
       },
     };
     const action = {
-      type: SUBMIT_FIT_PLANE_COORDS_FAILURE,
+      type: SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE,
       error: {
         error: 'Error while trying to fit.',
       },

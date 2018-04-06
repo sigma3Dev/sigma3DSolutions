@@ -1,4 +1,4 @@
-import { PUSH_FIT_PLANE_COORDS } from '../../actions/pushCoords/pushCoordsActions';
+import { PUSH_FIT_PLANE_GAUSS_COORDS } from '../../actions/pushCoords/pushCoordsActions';
 import { CLEAR_PLANE_INPUT } from '../../actions/clearInput/clearInputActions';
 
 /** holds the initial transform data input */
@@ -6,9 +6,9 @@ const initialData = {
   points: [],
 };
 
-function fitPlane(state = initialData, action) {
+function fitPlaneGauss(state = initialData, action) {
   switch (action.type) {
-    case PUSH_FIT_PLANE_COORDS:
+    case PUSH_FIT_PLANE_GAUSS_COORDS:
       return {
         ...state,
         points: action.coords,
@@ -23,4 +23,4 @@ function fitPlane(state = initialData, action) {
   }
 }
 
-export default fitPlane;
+export default fitPlaneGauss;

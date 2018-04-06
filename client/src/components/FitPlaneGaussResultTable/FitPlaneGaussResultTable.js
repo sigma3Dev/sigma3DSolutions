@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import './FitPlaneResultTable.css';
+import './FitPlaneGaussResultTable.css';
 
 const GoClippy = require('react-icons/lib/go/clippy');
 
 const ClipboardIcon = React.createElement(GoClippy, null);
 
-const FitPlaneResultTable = ({ params, copyText }) => (
+const FitPlaneGaussResultTable = ({ params, copyText }) => (
   <table className='fit-plane-result-table'>
     <thead>
       <tr className='caption'>
@@ -42,9 +42,9 @@ const FitPlaneResultTable = ({ params, copyText }) => (
   </table>
 );
 
-FitPlaneResultTable.propTypes = {
+FitPlaneGaussResultTable.propTypes = {
   params: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.number)])).isRequired,
   copyText: PropTypes.string.isRequired,
 };
 
-export default FitPlaneResultTable;
+export default FitPlaneGaussResultTable;

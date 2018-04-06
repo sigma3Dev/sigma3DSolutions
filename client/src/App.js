@@ -5,8 +5,8 @@ import ApplyTransformationResultContainer from './containers/ApplyTransformation
 import ChebyshevCFInputContainer from './containers/ChebyshevCFInputContainer';
 import ChebyshevCFResultContainer from './containers/ChebyshevCFResultContainer';
 import GeometryScreenContainer from './containers/GeometryScreenContainer';
-import FitPlaneInputContainer from './containers/FitPlaneInputContainer';
-import FitPlaneResultContainer from './containers/FitPlaneResultContainer';
+import FitPlaneGaussInputContainer from './containers/FitPlaneGaussInputContainer';
+import FitPlaneGaussResultContainer from './containers/FitPlaneGaussResultContainer';
 import ParamInversionContainer from './containers/ParamInversionContainer';
 import StartScreenContainer from './containers/StartScreenContainer';
 import ThreeDTrafoInputContainer from './containers/ThreeDTrafoInputContainer';
@@ -47,8 +47,8 @@ const App = () => (
         component={ChebyshevCFInputContainer}
       />
       <Route path='/geometry/chebyshev-circle-fit/result' component={ChebyshevCFResultContainer} />
-      <Route path='/geometry/fit-plane/data-input' component={FitPlaneInputContainer} />
-      <Route path='/geometry/fit-plane/result' component={FitPlaneResultContainer} />
+      <Route path='/geometry/fit-plane-gauss/data-input' component={FitPlaneGaussInputContainer} />
+      <Route path='/geometry/fit-plane-gauss/result' component={FitPlaneGaussResultContainer} />
       <Redirect from='*' to='/' />
     </Switch>
   </div>

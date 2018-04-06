@@ -122,7 +122,7 @@ app.post('/apply-trafo', (req, res) => {
   });
 });
 
-app.post('/fit-plane', (req, res) => {
+app.post('/fit-plane-gauss', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
     !Object.prototype.hasOwnProperty.call(req.body.coords, 'planePoints')
@@ -131,7 +131,7 @@ app.post('/fit-plane', (req, res) => {
     return;
   }
 
-  sf.fitPlane(req.body.coords, (response, isOk) => {
+  sf.fitPlaneGauss(req.body.coords, (response, isOk) => {
     if (isOk) {
       res.status(200).send(response);
     } else {

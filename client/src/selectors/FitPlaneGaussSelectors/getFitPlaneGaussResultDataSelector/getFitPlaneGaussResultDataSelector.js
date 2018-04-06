@@ -1,14 +1,14 @@
 import { createSelector } from 'reselect';
 
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
-const getFitPlaneResultSelector = state => state.fitPlaneResult;
+const getFitPlaneGaussResultSelector = state => state.fitPlaneGaussResult;
 
 export const getIsCalculating = createSelector(
   getIsCalculatingSelector,
   isCalculating => isCalculating,
 );
 
-export const getFitPlaneResult = createSelector(getFitPlaneResultSelector, params => [
+export const getFitPlaneGaussResult = createSelector(getFitPlaneGaussResultSelector, params => [
   params.x,
   params.y,
   params.z,

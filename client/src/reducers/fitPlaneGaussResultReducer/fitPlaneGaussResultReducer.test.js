@@ -1,8 +1,8 @@
-import { SUBMIT_FIT_PLANE_COORDS_SUCCESS } from '../../actions/submitFitPlaneCoords/submitFitPlaneCoordsActions';
-import fitPlaneResultReducer from './fitPlaneResultReducer';
+import { SUBMIT_FIT_PLANE_GAUSS_COORDS_SUCCESS } from '../../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
+import fitPlaneGaussResultReducer from './fitPlaneGaussResultReducer';
 
-describe('fitPlaneResultReducer', () => {
-  it('should handle SUBMIT_FIT_PLANE_COORDS_SUCCESS', () => {
+describe('fitPlaneGaussResultReducer', () => {
+  it('should handle SUBMIT_FIT_PLANE_GAUSS_COORDS_SUCCESS', () => {
     const state = {
       x: 0,
       y: 0,
@@ -14,7 +14,7 @@ describe('fitPlaneResultReducer', () => {
       fittingErrors: [],
     };
     const action = {
-      type: SUBMIT_FIT_PLANE_COORDS_SUCCESS,
+      type: SUBMIT_FIT_PLANE_GAUSS_COORDS_SUCCESS,
       response: {
         result: {
           x: 11.833,
@@ -38,7 +38,7 @@ describe('fitPlaneResultReducer', () => {
       stdev: 0,
       fittingErrors: [0, 0, 0],
     };
-    const result = fitPlaneResultReducer(state, action);
+    const result = fitPlaneGaussResultReducer(state, action);
     expect(result).toEqual(expectedState);
   });
 });

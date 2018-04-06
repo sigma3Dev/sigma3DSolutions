@@ -5,8 +5,8 @@ import calculationStatusReducer from './calculationStatusReducer/calculationStat
 import chebyshevCircleFitDataInputReducer from './chebyshevCircleFitDataInputReducer/chebyshevCircleFitDataInputReducer';
 import chebyshevCircleFitResultReducer from './chebyshevCircleFitResultReducer/chebyshevCircleFitResultReducer';
 import errorReducer from './errorReducer/errorReducer';
-import fitPlaneDataInputReducer from './fitPlaneDataInputReducer/fitPlaneDataInputReducer';
-import fitPlaneResultReducer from './fitPlaneResultReducer/fitPlaneResultReducer';
+import fitPlaneGaussDataInputReducer from './fitPlaneGaussDataInputReducer/fitPlaneGaussDataInputReducer';
+import fitPlaneGaussResultReducer from './fitPlaneGaussResultReducer/fitPlaneGaussResultReducer';
 import paramInversionReducer from './paramInversionReducer/paramInversionReducer';
 import threeDTrafoDataInputReducer from './threeDTrafoDataInputReducer/threeDTrafoDataInputReducer';
 import threeDTrafoResultReducer from './threeDTrafoResultReducer/threeDTrafoResultReducer';
@@ -20,8 +20,8 @@ export default combineReducers({
   chebyshevCircleFitDataInput: chebyshevCircleFitDataInputReducer,
   chebyshevCircleFitResult: chebyshevCircleFitResultReducer,
   error: errorReducer,
-  fitPlaneDataInput: fitPlaneDataInputReducer,
-  fitPlaneResult: fitPlaneResultReducer,
+  fitPlaneGaussDataInput: fitPlaneGaussDataInputReducer,
+  fitPlaneGaussResult: fitPlaneGaussResultReducer,
   paramInversion: paramInversionReducer,
   threeDTrafoDataInput: threeDTrafoDataInputReducer,
   threeDTrafoResult: threeDTrafoResultReducer,
