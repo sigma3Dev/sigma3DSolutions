@@ -10,7 +10,7 @@ const FitPlaneGaussResult = ({ params, handleReturnClick }) => {
   const paramsNoErrors = params.slice(0, -1);
   const copyText = paramsNoErrors.join('	');
   return (
-    <div className='fit-plane-result'>
+    <div className='fit-plane-gauss-result'>
       <h1>
         <FormattedMessage
           id='FitPlaneGaussResult.label.caption'

@@ -1,5 +1,5 @@
 import { PUSH_FIT_PLANE_GAUSS_COORDS } from '../../../../actions/pushCoords/pushCoordsActions';
-import { CLEAR_PLANE_INPUT } from '../../../../actions/clearInput/clearInputActions';
+import { CLEAR_PLANE_GAUSS_INPUT } from '../../../../actions/clearInput/clearInputActions';
 import FitPlaneGaussDataInputReducer from './fitPlaneGaussDataInputReducer';
 
 describe('FitPlaneGaussDataInputReducer', () => {
@@ -55,7 +55,7 @@ describe('FitPlaneGaussDataInputReducer', () => {
       ],
     };
     const action = {
-      type: CLEAR_PLANE_INPUT,
+      type: CLEAR_PLANE_GAUSS_INPUT,
     };
     const expectedState = {
       points: [],

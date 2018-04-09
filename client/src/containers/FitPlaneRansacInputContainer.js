@@ -2,36 +2,42 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
-import { pushFitPlaneGaussCoords } from '../actions/pushCoords/pushCoordsActions';
-import { submitFitPlaneGaussCoords } from '../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
-import { clearPlaneGaussInput } from '../actions/clearInput/clearInputActions';
-import { getPlaneGaussPoints } from '../selectors/FitPlaneGaussSelectors/getFitPlaneGaussInputDataSelector/getFitPlaneGaussInputDataSelector';
+import { pushFitPlaneRansacCoords } from '../actions/pushCoords/pushCoordsActions';
+import { submitFitPlaneRansacCoords } from '../actions/submitFitPlaneRansacCoords/submitFitPlaneRansacCoordsActions';
+import { clearPlaneRansacInput } from '../actions/clearInput/clearInputActions';
+import { updateFitPlaneRansacTolerance } from '../actions/changeFitPlaneRansacInputField/changeFitPlaneRansacInputFieldActions';
+import {
+  getPlaneRansacPoints,
+  getPlaneRansacTolerance,
+} from '../selectors/FitPlaneRansacSelectors/getFitPlaneRansacInputDataSelector/getFitPlaneRansacInputDataSelector';
 import Sidebar from '../components/Sidebar/Sidebar';
 import InfoModal from '../components/InfoModal/InfoModal';
-import FitPlaneGaussInput from '../components/FitPlaneGaussInput/FitPlaneGaussInput';
+import FitPlaneRansacInput from '../components/FitPlaneRansacInput/FitPlaneRansacInput';
 
 const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  onPushCoords: file => dispatch(pushFitPlaneGaussCoords(file)),
-  onSubmitCoords: coords => dispatch(submitFitPlaneGaussCoords(coords)),
-  onClearPlaneInput: () => dispatch(clearPlaneGaussInput()),
+  onPushCoords: file => dispatch(pushFitPlaneRansacCoords(file)),
+  onSubmitCoords: coords => dispatch(submitFitPlaneRansacCoords(coords)),
+  onClearPlaneInput: () => dispatch(clearPlaneRansacInput()),
+  onUpdateTolerance: newTolerance => dispatch(updateFitPlaneRansacTolerance(newTolerance)),
 });
 
 const mapStateToProps = state => ({
-  planePoints: getPlaneGaussPoints(state),
+  planePoints: getPlaneRansacPoints(state),
+  planeTolerance: getPlaneRansacTolerance(state),
 });
 
 /**
- * container for Gauss input
- * @class FitPlaneGaussInputContainer
+ * container for Ransac input
+ * @class FitPlaneRansacInputContainer
  * @extends {Component}
  */
-class FitPlaneGaussInputContainer extends Component {
+class FitPlaneRansacInputContainer extends Component {
   /**
-   * Creates an instance of FitPlaneGaussInputContainer.
+   * Creates an instance of FitPlaneRansacInputContainer.
    * @param {Object} props
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitPlaneRansacInputContainer
    */
   constructor(props) {
     super(props);
@@ -41,15 +47,16 @@ class FitPlaneGaussInputContainer extends Component {
     };
     this.displayInfoPanel = this.displayInfoPanel.bind(this);
     this.parseCoords = this.parseCoords.bind(this);
-    this.clearPlaneGaussInput = this.clearPlaneGaussInput.bind(this);
-    this.submitFitPlaneGaussCoords = this.submitFitPlaneGaussCoords.bind(this);
+    this.clearPlaneRansacInput = this.clearPlaneRansacInput.bind(this);
+    this.submitFitPlaneRansacCoords = this.submitFitPlaneRansacCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.updateTolerance = this.updateTolerance.bind(this);
   }
 
   /**
    * Uses cdi module to transform .txt file into an array of points
    * @param {*} file - .txt file with point coordinates
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitPlaneRansacInputContainer
    */
   parseCoords = (file) => {
     cdi.startCoordinateDataImport(file, (coords) => {
@@ -59,7 +66,7 @@ class FitPlaneGaussInputContainer extends Component {
 
   /**
    * Closes the Modal-window
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitPlaneRansacInputContainer
    */
   closeModal = () => {
     this.setState({ ...this.state, notification: null });
@@ -67,9 +74,9 @@ class FitPlaneGaussInputContainer extends Component {
 
   /**
    * Handles coords submit, navigates to "result" page
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitPlaneRansacInputContainer
    */
-  submitFitPlaneGaussCoords = () => {
+  submitFitPlaneRansacCoords = () => {
     if (!this.props.planePoints || this.props.planePoints.length === 0) {
       this.setState({
         notification: (
@@ -90,26 +97,32 @@ class FitPlaneGaussInputContainer extends Component {
     } else {
       const coords = {
         planePoints: this.props.planePoints,
+        planeTolerance: this.props.planeTolerance,
       };
       this.props.onSubmitCoords(coords);
-      this.props.history.push('/geometry/fit-plane-gauss/result');
+      this.props.history.push('/geometry/fit-plane-ransac/result');
     }
   };
 
   /**
    * deletes all start system points, updates input display
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitPlaneRansacInputContainer
    */
-  clearPlaneGaussInput = () => {
+  clearPlaneRansacInput = () => {
     this.props.onClearPlaneInput();
   };
 
   /**
    * Decides wheter InfoPanel is displayed or not
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitPlaneRansacInputContainer
    */
   displayInfoPanel = () => {
     this.setState({ ...this.state, isInfoOpen: !this.state.isInfoOpen });
+  };
+
+  updateTolerance = (e) => {
+    const newTolerance = e.target.value;
+    this.props.onUpdateTolerance(newTolerance);
   };
 
   render() {
@@ -133,26 +146,30 @@ class FitPlaneGaussInputContainer extends Component {
       <div>
         {this.state.notification}
         <Sidebar />
-        <FitPlaneGaussInput
+        <FitPlaneRansacInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
           handleInfoClick={this.displayInfoPanel}
-          handleDeleteClick={this.clearPlaneGaussInput}
+          handleDeleteClick={this.clearPlaneRansacInput}
           handleFileDrop={this.parseCoords}
-          handleSubmitClick={this.submitFitPlaneGaussCoords}
+          handleSubmitClick={this.submitFitPlaneRansacCoords}
+          handleToleranceChange={this.updateTolerance}
           planePoints={this.props.planePoints}
+          planeTolerance={this.props.planeTolerance}
         />
       </div>
     );
   }
 }
 
-FitPlaneGaussInputContainer.propTypes = {
+FitPlaneRansacInputContainer.propTypes = {
   onPushCoords: PropTypes.func.isRequired,
   onClearPlaneInput: PropTypes.func.isRequired,
   onSubmitCoords: PropTypes.func.isRequired,
+  onUpdateTolerance: PropTypes.func.isRequired,
   planePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
+  planeTolerance: PropTypes.number,
   history: PropTypes.any,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(FitPlaneGaussInputContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FitPlaneRansacInputContainer);

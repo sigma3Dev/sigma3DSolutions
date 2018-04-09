@@ -1,15 +1,15 @@
-.fit-plane-input {
+.fit-plane-gauss-input {
   width: 62vw;
   margin-top: 5vh;
   margin-left: 16vw;
   font-family: Roboto;
 }
 
-.fit-plane-input * {
+.fit-plane-gauss-input * {
   text-align: center;
 }
 
-.fit-plane-input h1 {
+.fit-plane-gauss-input h1 {
   display: flex;
   justify-content: space-around;
   border-bottom: 3px solid #0270a5;
@@ -17,6 +17,6 @@
   margin: 20px 300px;
 }
 
-.fit-plane-input h1 .info-btn {
+.fit-plane-gauss-input h1 .info-btn {
   font-size: 0.6em;
 }

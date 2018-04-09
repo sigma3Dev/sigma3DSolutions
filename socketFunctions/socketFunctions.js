@@ -231,6 +231,30 @@ const cardanToQuat = (coords, callback) => {
     });
 };
 
+const fitPlaneRansac = (coords, callback) => {
+  globalIdCounter += 1;
+  const points = coords.planePoints;
+  const tolerance = coords.planeTolerance;
+  const requestObj = comm.fitPlaneRansac(points, tolerance, globalIdCounter);
+
+  const socket = getWebSocket()
+    .then((socket) => {
+      socket.onerror = (error) => {
+        callback(error, false);
+      };
+
+      socket.onmessage = (e) => {
+        const response = e.data;
+        callback(response, true);
+      };
+
+      socket.send(requestObj);
+    })
+    .catch((err) => {
+      callback(err, false);
+    });
+};
+
 module.exports = {
   threeDTrafoSendToSocket,
   paramInversionSendToSocket,
@@ -238,6 +262,7 @@ module.exports = {
   ChebyCircleFitSendToSocket,
   applyTransformation,
   fitPlaneGauss,
+  fitPlaneRansac,
   quatToCardan,
   cardanToQuat,
 };

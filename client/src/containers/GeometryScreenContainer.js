@@ -18,6 +18,10 @@ class GeometryScreenContainer extends Component {
         type: 'fitPlaneGauss',
         link: '/geometry/fit-plane-gauss/data-input',
       },
+      {
+        type: 'fitPlaneRansac',
+        link: '/geometry/fit-plane-ransac/data-input',
+      },
     ];
     return (
       <div>

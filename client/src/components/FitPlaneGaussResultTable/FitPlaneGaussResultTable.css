@@ -1,27 +1,27 @@
-.fit-plane-result-table {
+.fit-plane-gauss-result-table {
   padding-top: 10px;
   width: 100%;
   border-collapse: collapse;
 }
 
-.fit-plane-result-table * {
+.fit-plane-gauss-result-table * {
   font-size: 1.05em;
   text-align: center;
 }
 
-.fit-plane-result-table th {
+.fit-plane-gauss-result-table th {
   padding: 10px 0;
 }
 
-.fit-plane-result-table .caption {
+.fit-plane-gauss-result-table .caption {
   background-color: #d9e9f0;
 }
 
-.fit-plane-result-table .copy {
+.fit-plane-gauss-result-table .copy {
   font-size: 0.8em;
   padding: 10px;
 }
 
-.fit-plane-result-table .copy:hover {
+.fit-plane-gauss-result-table .copy:hover {
   cursor: pointer;
 }
