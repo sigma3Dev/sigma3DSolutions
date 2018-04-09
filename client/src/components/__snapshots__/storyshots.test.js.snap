@@ -16557,13 +16557,13 @@ exports[`Storyshots Start.FitPlaneRansacResultTable - DontTest Table to display 
       <tbody>
         <tr>
           <th>
-            11.833
+            11.8
           </th>
           <th>
-            8.633
+            8.6
           </th>
           <th>
-            11.600
+            11.6
           </th>
           <th>
             0.00000
@@ -16575,7 +16575,7 @@ exports[`Storyshots Start.FitPlaneRansacResultTable - DontTest Table to display 
             1.00000
           </th>
           <th>
-            0.00
+            0.0
           </th>
           <th>
             3
