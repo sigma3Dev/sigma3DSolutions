@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
-const getFitPlaneGaussResultSelector = state => state.fitPlaneGaussResult;
+const getFitPlaneGaussResultSelector = state => state.geometry.fitPlaneGauss.result;
 
 export const getIsCalculating = createSelector(
   getIsCalculatingSelector,

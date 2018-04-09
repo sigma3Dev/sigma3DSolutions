@@ -8,14 +8,18 @@ import {
 describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => {
   it('getTrafoParams', () => {
     const state = {
-      threeDTrafoResult: {
-        tx: 1380.4859742435729,
-        ty: 9336.536415479428,
-        tz: -3796.3960642844177,
-        q0: -0.9950785875879063,
-        q1: -0.004830151859800749,
-        q2: -0.0006079507786298357,
-        q3: 0.09896921012577276,
+      transformations: {
+        threeDTrafo: {
+          result: {
+            tx: 1380.4859742435729,
+            ty: 9336.536415479428,
+            tz: -3796.3960642844177,
+            q0: -0.9950785875879063,
+            q1: -0.004830151859800749,
+            q2: -0.0006079507786298357,
+            q3: 0.09896921012577276,
+          },
+        },
       },
     };
     const expected = [
@@ -32,15 +36,19 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
   });
   it('getTrafoDifference', () => {
     const state = {
-      threeDTrafoResultDifference: {
-        difference: [
-          {
-            vx: 0.15,
-            vy: 0.21,
-            vz: 0.11,
-            v: 0.16,
+      transformations: {
+        threeDTrafo: {
+          difference: {
+            difference: [
+              {
+                vx: 0.15,
+                vy: 0.21,
+                vz: 0.11,
+                v: 0.16,
+              },
+            ],
           },
-        ],
+        },
       },
     };
     const expected = [
@@ -66,41 +74,45 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
   });
   it('getTransformedStartPoints', () => {
     const state = {
-      threeDTrafoResultDifference: {
-        difference: [
-          {
-            vx: 0.15,
-            vy: 0.21,
-            vz: 0.11,
-            v: 0.16,
+      transformations: {
+        threeDTrafo: {
+          difference: {
+            difference: [
+              {
+                vx: 0.15,
+                vy: 0.21,
+                vz: 0.11,
+                v: 0.16,
+              },
+              {
+                vx: 0.15,
+                vy: 0.21,
+                vz: 0.11,
+                v: 0.16,
+              },
+            ],
           },
-          {
-            vx: 0.15,
-            vy: 0.21,
-            vz: 0.11,
-            v: 0.16,
+          input: {
+            targetSystemPoints: [
+              {
+                x: 1.0,
+                y: 2.0,
+                z: 3.0,
+                useX: true,
+                useY: true,
+                useZ: true,
+              },
+              {
+                x: 6.0,
+                y: 8.0,
+                z: 5.0,
+                useX: true,
+                useY: true,
+                useZ: true,
+              },
+            ],
           },
-        ],
-      },
-      threeDTrafoDataInput: {
-        targetSystemPoints: [
-          {
-            x: 1.0,
-            y: 2.0,
-            z: 3.0,
-            useX: true,
-            useY: true,
-            useZ: true,
-          },
-          {
-            x: 6.0,
-            y: 8.0,
-            z: 5.0,
-            useX: true,
-            useY: true,
-            useZ: true,
-          },
-        ],
+        },
       },
     };
     const expected = [[1.15, 2.21, 3.11], [6.15, 8.21, 5.11]];
@@ -109,28 +121,32 @@ describe('getTrafoResultDataSelector Used By ThreeDTrafoResultContainer', () => 
   });
   it('getTransformedStartPoints', () => {
     const state = {
-      threeDTrafoResultDifference: {
-        difference: [],
-      },
-      threeDTrafoDataInput: {
-        targetSystemPoints: [
-          {
-            x: 1.0,
-            y: 2.0,
-            z: 3.0,
-            useX: true,
-            useY: true,
-            useZ: true,
+      transformations: {
+        threeDTrafo: {
+          difference: {
+            difference: [],
           },
-          {
-            x: 6.0,
-            y: 8.0,
-            z: 5.0,
-            useX: true,
-            useY: true,
-            useZ: true,
+          input: {
+            targetSystemPoints: [
+              {
+                x: 1.0,
+                y: 2.0,
+                z: 3.0,
+                useX: true,
+                useY: true,
+                useZ: true,
+              },
+              {
+                x: 6.0,
+                y: 8.0,
+                z: 5.0,
+                useX: true,
+                useY: true,
+                useZ: true,
+              },
+            ],
           },
-        ],
+        },
       },
     };
     const expected = [];

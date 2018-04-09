@@ -1,7 +1,9 @@
 import { createSelector } from 'reselect';
 
-const getStartSystemPointsSelector = state => state.threeDTrafoDataInput.startSystemPoints;
-const getTargetSystemPointsSelector = state => state.threeDTrafoDataInput.targetSystemPoints;
+const getStartSystemPointsSelector = state =>
+  state.transformations.threeDTrafo.input.startSystemPoints;
+const getTargetSystemPointsSelector = state =>
+  state.transformations.threeDTrafo.input.targetSystemPoints;
 
 export const getStartSystemPoints = createSelector(getStartSystemPointsSelector, points => points);
 

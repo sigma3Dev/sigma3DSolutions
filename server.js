@@ -80,19 +80,14 @@ app.post('/param-inversion', (req, res) => {
 app.post('/calculate-chebyshev-circle-fit', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
-    !Object.prototype.hasOwnProperty.call(req.body.coords, 'chebyshevCircleFitDataInput') ||
-    !Object.prototype.hasOwnProperty.call(
-      req.body.coords.chebyshevCircleFitDataInput,
-      'circlePoints',
-    ) ||
-    !Array.isArray(req.body.coords.chebyshevCircleFitDataInput.circlePoints) ||
-    req.body.coords.chebyshevCircleFitDataInput.circlePoints.length === 0
+    !Array.isArray(req.body.coords) ||
+    req.body.coords.length === 0
   ) {
     res.status(400).send('Invalid input coordinates');
     return;
   }
 
-  const { circlePoints } = req.body.coords.chebyshevCircleFitDataInput;
+  const circlePoints = req.body.coords;
 
   sf.ChebyCircleFitSendToSocket(circlePoints, (response, isOk) => {
     if (isOk) {

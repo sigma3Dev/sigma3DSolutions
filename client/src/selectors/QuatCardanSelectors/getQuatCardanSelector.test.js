@@ -3,12 +3,16 @@ import { getQuat, getCardan } from './getQuatCardanSelector';
 describe('getQuatCardanSelector Used By QuatCardanContainer', () => {
   it('getQuat', () => {
     const state = {
-      quatCardan: {
-        quat: {
-          Q0: -0.9950785875879063,
-          Q1: -0.004830151859800749,
-          Q2: -0.0006079507786298357,
-          Q3: 0.09896921012577276,
+      transformations: {
+        quatCardan: {
+          quatCardan: {
+            quat: {
+              Q0: -0.9950785875879063,
+              Q1: -0.004830151859800749,
+              Q2: -0.0006079507786298357,
+              Q3: 0.09896921012577276,
+            },
+          },
         },
       },
     };
@@ -23,11 +27,15 @@ describe('getQuatCardanSelector Used By QuatCardanContainer', () => {
   });
   it('getCardan', () => {
     const state = {
-      quatCardan: {
-        cardan: {
-          Rx: 10,
-          Ry: 6,
-          Rz: 2,
+      transformations: {
+        quatCardan: {
+          quatCardan: {
+            cardan: {
+              Rx: 10,
+              Ry: 6,
+              Rz: 2,
+            },
+          },
         },
       },
     };

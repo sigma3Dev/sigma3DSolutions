@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 
-const getParamInversionSelector = state => state.paramInversion;
+const getParamInversionSelector = state => state.transformations.paramInversion.paramInversion;
 
 export const getParamInversion = createSelector(getParamInversionSelector, params => [
   params.tx.toFixed(2),

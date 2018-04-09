@@ -3,24 +3,28 @@ import { getPlanePoints } from './getFitPlaneGaussInputDataSelector';
 describe('getFitPlaneGaussInputDataSelector Used By FitPlaneGaussInputContainer', () => {
   it('getPlanePoints', () => {
     const state = {
-      fitPlaneGaussDataInput: {
-        points: [
-          {
-            x: 12.5,
-            y: 23.7,
-            z: 11.6,
+      geometry: {
+        fitPlaneGauss: {
+          input: {
+            points: [
+              {
+                x: 12.5,
+                y: 23.7,
+                z: 11.6,
+              },
+              {
+                x: 14.5,
+                y: 6.7,
+                z: 11.6,
+              },
+              {
+                x: 8.5,
+                y: -4.5,
+                z: 11.6,
+              },
+            ],
           },
-          {
-            x: 14.5,
-            y: 6.7,
-            z: 11.6,
-          },
-          {
-            x: 8.5,
-            y: -4.5,
-            z: 11.6,
-          },
-        ],
+        },
       },
     };
     const expected = [
