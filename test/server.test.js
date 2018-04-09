@@ -81,3 +81,27 @@ describe('POST /fit-plane-gauss', () => {
       .expect(400, done);
   });
 });
+
+describe('POST /quat-to-cardan', () => {
+  it('returns a string and status code 400 upon wrong input', (done) => {
+    request(app)
+      .post('/quat-to-cardan')
+      .send({
+        wrongData: null,
+      })
+      .expect('Content-Type', 'text/html; charset=utf-8')
+      .expect(400, done);
+  });
+});
+
+describe('POST /cardan-to-quat', () => {
+  it('returns a string and status code 400 upon wrong input', (done) => {
+    request(app)
+      .post('/cardan-to-quat')
+      .send({
+        wrongData: null,
+      })
+      .expect('Content-Type', 'text/html; charset=utf-8')
+      .expect(400, done);
+  });
+});

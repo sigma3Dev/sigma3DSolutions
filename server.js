@@ -140,6 +140,48 @@ app.post('/fit-plane-gauss', (req, res) => {
   });
 });
 
+app.post('/quat-to-cardan', (req, res) => {
+  console.log(JSON.stringify(req.body));
+  if (
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'q0') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'q1') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'q2') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'q3')
+  ) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  }
+
+  sf.quatToCardan(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      res.status(500).send(response);
+    }
+  });
+});
+
+app.post('/cardan-to-quat', (req, res) => {
+  if (
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'Rx') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'Ry') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'Rz')
+  ) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  }
+
+  sf.cardanToQuat(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      res.status(500).send(response);
+    }
+  });
+});
+
 app.listen(app.get('port'), () => {
   console.log('Server is running...');
 });

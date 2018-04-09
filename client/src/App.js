@@ -8,6 +8,7 @@ import GeometryScreenContainer from './containers/GeometryScreenContainer';
 import FitPlaneGaussInputContainer from './containers/FitPlaneGaussInputContainer';
 import FitPlaneGaussResultContainer from './containers/FitPlaneGaussResultContainer';
 import ParamInversionContainer from './containers/ParamInversionContainer';
+import QuatCardanContainer from './containers/QuatCardanContainer';
 import StartScreenContainer from './containers/StartScreenContainer';
 import ThreeDTrafoInputContainer from './containers/ThreeDTrafoInputContainer';
 import ThreeDTrafoResultContainer from './containers/ThreeDTrafoResultContainer';
@@ -25,6 +26,7 @@ const App = () => (
       <Route exact path='/' component={StartScreenContainer} />
       <Route exact path='/transformations' component={TransformationsScreenContainer} />
       <Route path='/transformations/parameter-inversion' component={ParamInversionContainer} />
+      <Route path='/transformations/quat-cardan' component={QuatCardanContainer} />
       <Route
         path='/transformations/three-d-transformation/data-input'
         component={ThreeDTrafoInputContainer}

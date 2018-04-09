@@ -8,6 +8,7 @@ import errorReducer from './errorReducer/errorReducer';
 import fitPlaneGaussDataInputReducer from './fitPlaneGaussDataInputReducer/fitPlaneGaussDataInputReducer';
 import fitPlaneGaussResultReducer from './fitPlaneGaussResultReducer/fitPlaneGaussResultReducer';
 import paramInversionReducer from './paramInversionReducer/paramInversionReducer';
+import quatCardanReducer from './quatCardanReducer/quatCardanReducer';
 import threeDTrafoDataInputReducer from './threeDTrafoDataInputReducer/threeDTrafoDataInputReducer';
 import threeDTrafoResultReducer from './threeDTrafoResultReducer/threeDTrafoResultReducer';
 import threeDTrafoResultDifferenceReducer from './threeDTrafoResultDifferenceReducer/threeDTrafoResultDifferenceReducer';
@@ -23,6 +24,7 @@ export default combineReducers({
   fitPlaneGaussDataInput: fitPlaneGaussDataInputReducer,
   fitPlaneGaussResult: fitPlaneGaussResultReducer,
   paramInversion: paramInversionReducer,
+  quatCardan: quatCardanReducer,
   threeDTrafoDataInput: threeDTrafoDataInputReducer,
   threeDTrafoResult: threeDTrafoResultReducer,
   threeDTrafoResultDifference: threeDTrafoResultDifferenceReducer,
