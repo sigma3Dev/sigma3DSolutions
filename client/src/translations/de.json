@@ -27,10 +27,10 @@
   "ErrorScreen.label.error": "Fehler!",
   "ErrorScreen.label.s3dinfo":
     "Läuft der Fittingservice von sigma3D im Hintergrund?\n\n Wenn Sie das Programm nicht besitzen, kontaktieren Sie bitte sigma3D:",
-  "FitPlaneGaussErrorBarGraph.caption.errors": "Abstände zur Ebene",
   "FitPlaneGaussInput.label.caption": "Gaußebene",
   "FitPlaneGaussResult.label.caption": "Gaußebene Ergebnis",
   "FitPlaneGaussResultTable.label.stdev": "Standardabweichung",
+  "FittingErrorBarGraph.caption.errors": "Abweichungen",
   "InfoModal.caption.wrongInput": "Fehlerhaftes Input",
   "InfoModal.label.mCantBeZero": "M darf nicht null sein!",
   "InfoModal.label.noCirclePoints": "Bitte Kreispunkte importieren!",
