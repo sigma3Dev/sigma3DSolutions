@@ -40,9 +40,8 @@ export const submitChebyshevCircleFitCoordsFailure = error => ({
  * @param {getStateCallback} getState - callback that gets current state
  * @returns {Object} response from backend or error message
  */
-export const submitChebyshevCircleFitCoords = () => (dispatch, getState) => {
+export const submitChebyshevCircleFitCoords = coords => (dispatch) => {
   dispatch(submitChebyshevCircleFitCoordsRequest());
-  const coords = getState();
   return axios
     .post('/calculate-chebyshev-circle-fit', {
       coords,

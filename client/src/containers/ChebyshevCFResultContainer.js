@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import {
-  getChebyshevCircleFitInput,
+  getChebyshevCircleFitResult,
   getIsCalculating,
 } from '../selectors/ChebyshevCircleFitSelector/getChebyshevCircleFitResultDataSelector/getChebyshevCircleFitResultDataSelector';
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
@@ -17,7 +17,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = state => ({
-  chebyshevParams: getChebyshevCircleFitInput(state),
+  chebyshevParams: getChebyshevCircleFitResult(state),
   error: getError(state),
   isCalculating: getIsCalculating(state),
 });

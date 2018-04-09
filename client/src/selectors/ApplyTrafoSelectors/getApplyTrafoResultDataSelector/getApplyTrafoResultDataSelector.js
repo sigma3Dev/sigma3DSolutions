@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
-const getApplyTrafoResultSelector = state => state.applyTrafoDataResult.points;
+const getApplyTrafoResultSelector = state => state.transformations.applyTrafo.result.points;
 
 export const getIsCalculating = createSelector(
   getIsCalculatingSelector,
