@@ -1,6 +1,6 @@
 .select-apps-screen {
   height: 100%;
-  width: 100%;
+  width: 84vw;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -8,5 +8,9 @@
 }
 
 .select-apps-screen * {
+  text-decoration: none;
+}
+
+.select-apps-screen a:hover {
   text-decoration: none;
 }

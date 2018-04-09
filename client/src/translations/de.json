@@ -52,6 +52,7 @@
   "Sidebar.label.transformation": "Transformationen",
   "StartScreen.element.3Dtransformations": "3D-Transformation",
   "StartScreen.element.chebyshev": "Tschebyscheff-Kreis",
+  "StartScreen.element.fitPlane": "Gaußebene",
   "StartScreen.elementheader.geometry": "Geometrie:",
   "StartScreen.elementheader.transformations": "Transformationen:",
   "StartScreen.header.welcome": "Willkommen zu sigma3DSolutions",

@@ -52,6 +52,7 @@
   "Sidebar.label.transformation": "Transformations",
   "StartScreen.element.3Dtransformations": "3D-Transformation",
   "StartScreen.element.chebyshev": "Chebyshev-Circle",
+  "StartScreen.element.fitPlane": "Gauss Plane",
   "StartScreen.elementheader.geometry": "Geometry:",
   "StartScreen.elementheader.transformations": "Transformations:",
   "StartScreen.header.welcome": "Welcome to sigma3DSolutions",

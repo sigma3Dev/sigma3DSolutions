@@ -53,6 +53,7 @@ const StartScreen = () => (
               defaultMessage='Apply Transformation'
             />
           </li>
+          <li>Quaternion ⇄ Cardan</li>
         </ul>
       </div>
       <div className='element'>
@@ -65,6 +66,9 @@ const StartScreen = () => (
               id='StartScreen.element.chebyshev'
               defaultMessage='Chebyshev-circle'
             />
+          </li>
+          <li>
+            <FormattedMessage id='StartScreen.element.fitPlane' defaultMessage='Gauss Plane' />
           </li>
         </ul>
       </div>
