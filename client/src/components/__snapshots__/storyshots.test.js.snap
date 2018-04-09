@@ -21217,6 +21217,9 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
                 Transformation anwenden
               </span>
             </li>
+            <li>
+              Quaternion ⇄ Cardan
+            </li>
           </ul>
         </div>
         <div
@@ -21233,6 +21236,11 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
             <li>
               <span>
                 Tschebyscheff-Kreis
+              </span>
+            </li>
+            <li>
+              <span>
+                Gaußebene
               </span>
             </li>
           </ul>

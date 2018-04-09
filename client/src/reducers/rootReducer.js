@@ -1,31 +1,13 @@
 import { combineReducers } from 'redux';
-import applyTrafoDataInputReducer from './applyTrafoDataInputReducer/applyTrafoDataInputReducer';
-import applyTrafoDataResultReducer from './applyTrafoDataResultReducer/applyTrafoDataResultReducer';
 import calculationStatusReducer from './calculationStatusReducer/calculationStatusReducer';
-import chebyshevCircleFitDataInputReducer from './chebyshevCircleFitDataInputReducer/chebyshevCircleFitDataInputReducer';
-import chebyshevCircleFitResultReducer from './chebyshevCircleFitResultReducer/chebyshevCircleFitResultReducer';
 import errorReducer from './errorReducer/errorReducer';
-import fitPlaneGaussDataInputReducer from './fitPlaneGaussDataInputReducer/fitPlaneGaussDataInputReducer';
-import fitPlaneGaussResultReducer from './fitPlaneGaussResultReducer/fitPlaneGaussResultReducer';
-import paramInversionReducer from './paramInversionReducer/paramInversionReducer';
-import quatCardanReducer from './quatCardanReducer/quatCardanReducer';
-import threeDTrafoDataInputReducer from './threeDTrafoDataInputReducer/threeDTrafoDataInputReducer';
-import threeDTrafoResultReducer from './threeDTrafoResultReducer/threeDTrafoResultReducer';
-import threeDTrafoResultDifferenceReducer from './threeDTrafoResultDifferenceReducer/threeDTrafoResultDifferenceReducer';
+import transformationsReducer from './transformations/transformationsReducer';
+import geometryReducer from './geometry/geometryReducer';
 
 /* root reducer */
 export default combineReducers({
-  applyTrafoDataInput: applyTrafoDataInputReducer,
-  applyTrafoDataResult: applyTrafoDataResultReducer,
   calculationStatus: calculationStatusReducer,
-  chebyshevCircleFitDataInput: chebyshevCircleFitDataInputReducer,
-  chebyshevCircleFitResult: chebyshevCircleFitResultReducer,
   error: errorReducer,
-  fitPlaneGaussDataInput: fitPlaneGaussDataInputReducer,
-  fitPlaneGaussResult: fitPlaneGaussResultReducer,
-  paramInversion: paramInversionReducer,
-  quatCardan: quatCardanReducer,
-  threeDTrafoDataInput: threeDTrafoDataInputReducer,
-  threeDTrafoResult: threeDTrafoResultReducer,
-  threeDTrafoResultDifference: threeDTrafoResultDifferenceReducer,
+  geometry: geometryReducer,
+  transformations: transformationsReducer,
 });
