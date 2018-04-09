@@ -2,16 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Bar } from 'react-chartjs-2';
 import { injectIntl, defineMessages } from 'react-intl';
-import './FitPlaneGaussErrorBarGraph.css';
+import './FittingErrorBarGraph.css';
 
 const messages = defineMessages({
   graphCaption: {
-    id: 'FitPlaneGaussErrorBarGraph.caption.errors',
+    id: 'FittingErrorBarGraph.caption.errors',
     defaultMessage: 'Fitting Errors: ',
   },
 });
 
-const FitPlaneGaussErrorBarGraph = ({ errors, intl }) => {
+const FittingErrorBarGraph = ({ errors, intl }) => {
   const chartData = {
     labels: errors.map((val, i) => i + 1),
     datasets: [
@@ -72,9 +72,9 @@ const FitPlaneGaussErrorBarGraph = ({ errors, intl }) => {
   );
 };
 
-FitPlaneGaussErrorBarGraph.propTypes = {
+FittingErrorBarGraph.propTypes = {
   errors: PropTypes.arrayOf(PropTypes.number).isRequired,
   intl: PropTypes.object.isRequired,
 };
 
-export default injectIntl(FitPlaneGaussErrorBarGraph);
+export default injectIntl(FittingErrorBarGraph);

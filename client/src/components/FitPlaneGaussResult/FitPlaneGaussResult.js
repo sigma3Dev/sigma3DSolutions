@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import FitPlaneGaussResultTable from '../FitPlaneGaussResultTable/FitPlaneGaussResultTable';
 import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
-import FitPlaneGaussErrorBarGraph from '../FitPlaneGaussErrorBarGraph/FitPlaneGaussErrorBarGraph';
+import FittingErrorBarGraph from '../FittingErrorBarGraph/FittingErrorBarGraph';
 import './FitPlaneGaussResult.css';
 
 const FitPlaneGaussResult = ({ params, handleReturnClick }) => {
@@ -19,7 +19,7 @@ const FitPlaneGaussResult = ({ params, handleReturnClick }) => {
       </h1>
       <FitPlaneGaussResultTable params={params} copyText={copyText} />
       <div className='bar-graph'>
-        <FitPlaneGaussErrorBarGraph errors={params[7]} />
+        <FittingErrorBarGraph errors={params[7]} />
       </div>
       <BackToInputBtn handleClick={handleReturnClick} />
     </div>
