@@ -1,7 +1,7 @@
 import { createSelector } from 'reselect';
 
-const getQuatSelector = state => state.quatCardan.quat;
-const getCardanSelector = state => state.quatCardan.cardan;
+const getQuatSelector = state => state.transformations.quatCardan.quatCardan.quat;
+const getCardanSelector = state => state.transformations.quatCardan.quatCardan.cardan;
 
 export const getQuat = createSelector(getQuatSelector, params => [
   params.Q0,

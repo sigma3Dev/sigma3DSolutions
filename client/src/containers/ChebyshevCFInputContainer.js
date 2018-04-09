@@ -14,7 +14,7 @@ const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
   onPushChebyshevCircleFitCoords: file => dispatch(pushChebyshevCircleFitCoords(file)),
-  onSubmitChebyshevCircleFitCoords: () => dispatch(submitChebyshevCircleFitCoords()),
+  onSubmitChebyshevCircleFitCoords: coords => dispatch(submitChebyshevCircleFitCoords(coords)),
   onClearChebyshevInput: () => dispatch(clearChebyshevInput()),
 });
 
@@ -94,7 +94,8 @@ class ChebyshevCFInputContainer extends Component {
         ),
       });
     } else {
-      this.props.onSubmitChebyshevCircleFitCoords();
+      const coords = this.props.circlePoints;
+      this.props.onSubmitChebyshevCircleFitCoords(coords);
       this.props.history.push('/geometry/chebyshev-circle-fit/result');
     }
   };
