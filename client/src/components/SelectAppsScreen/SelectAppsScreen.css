@@ -1,7 +1,3 @@
-.select-apps-screen .buttons-display {
-  display: flex;
-}
-
 .select-apps-screen {
   height: 100%;
   width: 100%;
@@ -12,9 +8,5 @@
 }
 
 .select-apps-screen * {
-  text-decoration: none;
-}
-
-.select-apps-screen a:hover {
   text-decoration: none;
 }
