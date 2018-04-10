@@ -10,7 +10,7 @@ const StoryRouter = require('storybook-router');
 
 const body = (
   <FormattedMessage
-    id='ThreeDTrafoInputContainer.panel.infoPanelText'
+    id='InputInfoPanel.panel.infoPanelTextOne'
     defaultMessage='
       The input should be a simple .txt file.\n
 
@@ -29,6 +29,4 @@ const stories = storiesOf('Start.InputInfoPanel', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));
 stories.addDecorator(StoryRouter.default());
 
-stories.add('Show informations about the input', () => (
-  <InputInfoPanel body={body} isDisplayed />
-));
+stories.add('Show informations about the input', () => <InputInfoPanel body={body} isDisplayed />);
