@@ -48,6 +48,14 @@
   "InfoModal.label.noTargetSystemPoints": "Please import target system points!",
   "InfoModal.label.startAndTargetDifferentLengths":
     "Length of start and target system don't match!",
+  "InputInfoPanel.panel.infoPanelTextFive":
+    "The input should be a simple .txt file.\nThe file should consist of five or more points, each on its own line.Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
+  "InputInfoPanel.panel.infoPanelTextFour":
+    "The input should be a simple .txt file.\nThe file should consist of four or more points, each on its own line.Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
+  "InputInfoPanel.panel.infoPanelTextOne":
+    "The input should be a simple .txt file.\nThe file should consist of one or more points, each on its own line.Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
+  "InputInfoPanel.panel.infoPanelTextThree":
+    "The input should be a simple .txt file.\nThe file should consist of three or more points, each on its own line.Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
   "LoadingScreen.label.calculating": "Calculating...",
   "ParamInversion.caption.paramInversionHeader": "Parameter Inversion",
   "PointsInputDropzone.label.inputTxtFile":
@@ -73,8 +81,6 @@
   "SubmitBtn.label.caption": "Submit ",
   "ThreeDTrafoInput.label.startSystemPointsCaption": "Start System Points:",
   "ThreeDTrafoInput.label.targetSystemPointsCaption": "Target System Points:",
-  "ThreeDTrafoInputContainer.panel.infoPanelText":
-    "The input should be a simple .txt file.\n\nThe file should consist of one or more points, each on its own line.Each point should be made up of three coordinates: x, y and z. These should be simple numbers, separated by a single space.\n\nPlease make sure you have no empty lines and no trailing spaces at the end of a line.\n\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
   "ThreeDTrafoResult.label.caption": "Transformation Parameters",
   "ThreeDTrafoResult.link.downloadFile": "Download transformed start points as .txt file",
   "ThreeDTrafoResultContainer.prompt.filename": "Please enter a file name: "

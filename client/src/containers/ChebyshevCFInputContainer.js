@@ -111,11 +111,11 @@ class ChebyshevCFInputContainer extends Component {
   render() {
     const infoPanelText = (
       <FormattedMessage
-        id='ChebyshevCFInputContainer.panel.infoPanelText'
+        id='InputInfoPanel.panel.infoPanelTextThree'
         defaultMessage='
           The input should be a simple .txt file.\n
 
-          The file should consist of one or more points, each on its own line.
+          The file should consist of three or more points, each on its own line.
           Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n
 
           Example:\n

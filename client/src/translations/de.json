@@ -48,6 +48,14 @@
   "InfoModal.label.noTargetSystemPoints": "Bitte Zielsystempunkte importieren!",
   "InfoModal.label.startAndTargetDifferentLengths":
     "Start- und Zielsystem haben unterschiedliche Länge!",
+  "InputInfoPanel.panel.infoPanelTextFive":
+    "Das Input sollte eine einfache .txt Datei sein.\n\nDie Datei sollte aus fünf oder mehr Punkten bestehen, jeder davon in einer Zeile. Jeder dieser Punkte sollte aus drei Koordinaten bestehen: x, y und z. Diese sollten einfache Zahlen und durch ein Leerzeichen getrennt sein.\n\nStellen Sie sicher, dass sich am Ende der Zeile kein Leerzeichen befindet, und dass am Ende der Datei keine Leerzeilen sind.\n\nBeispiel:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
+  "InputInfoPanel.panel.infoPanelTextFour":
+    "Das Input sollte eine einfache .txt Datei sein.\n\nDie Datei sollte aus vier oder mehr Punkten bestehen, jeder davon in einer Zeile. Jeder dieser Punkte sollte aus drei Koordinaten bestehen: x, y und z. Diese sollten einfache Zahlen und durch ein Leerzeichen getrennt sein.\n\nStellen Sie sicher, dass sich am Ende der Zeile kein Leerzeichen befindet, und dass am Ende der Datei keine Leerzeilen sind.\n\nBeispiel:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
+  "InputInfoPanel.panel.infoPanelTextOne":
+    "Das Input sollte eine einfache .txt Datei sein.\n\nDie Datei sollte aus einem oder mehr Punkten bestehen, jeder davon in einer Zeile. Jeder dieser Punkte sollte aus drei Koordinaten bestehen: x, y und z. Diese sollten einfache Zahlen und durch ein Leerzeichen getrennt sein.\n\nStellen Sie sicher, dass sich am Ende der Zeile kein Leerzeichen befindet, und dass am Ende der Datei keine Leerzeilen sind.\n\nBeispiel:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
+  "InputInfoPanel.panel.infoPanelTextThree":
+    "Das Input sollte eine einfache .txt Datei sein.\n\nDie Datei sollte aus drei oder mehr Punkten bestehen, jeder davon in einer Zeile. Jeder dieser Punkte sollte aus drei Koordinaten bestehen: x, y und z. Diese sollten einfache Zahlen und durch ein Leerzeichen getrennt sein.\n\nStellen Sie sicher, dass sich am Ende der Zeile kein Leerzeichen befindet, und dass am Ende der Datei keine Leerzeilen sind.\n\nBeispiel:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
   "LoadingScreen.label.calculating": "Rechne...",
   "ParamInversion.caption.paramInversionHeader": "Parameterinversion",
   "PointsInputDropzone.label.inputTxtFile":
@@ -74,8 +82,6 @@
   "SubmitBtn.label.caption": "Absenden ",
   "ThreeDTrafoInput.label.startSystemPointsCaption": "Startsystempunkte:",
   "ThreeDTrafoInput.label.targetSystemPointsCaption": "Zielsystempunkte:",
-  "ThreeDTrafoInputContainer.panel.infoPanelText":
-    "Das Input sollte eine einfache .txt Datei sein.\n\nDie Datei sollte aus einem oder mehreren Punkten bestehen, jeder davon in einer Zeile. Jeder dieser Punkte sollte aus drei Koordinaten bestehen: x, y und z. Diese sollten einfache Zahlen und durch ein Leerzeichen getrennt sein.\n\nStellen Sie sicher, dass sich am Ende der Zeile kein Leerzeichen befindet, und dass am Ende der Datei keine Leerzeilen sind.\n\nBeispiel:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
   "ThreeDTrafoResult.label.caption": "Transformationsparameter",
   "ThreeDTrafoResult.link.downloadFile": "Transformierte Startpunkte als .txt-Datei herunterladen",
   "ThreeDTrafoResultContainer.prompt.filename": "Bitte geben Sie einen Dateinamen an: "

@@ -139,7 +139,7 @@ class ApplyTransformationInputContainer extends Component {
   render() {
     const infoPanelText = (
       <FormattedMessage
-        id='ThreeDTrafoInputContainer.panel.infoPanelText'
+        id='InputInfoPanel.panel.infoPanelTextOne'
         defaultMessage='
           The input should be a simple .txt file.\n
 
