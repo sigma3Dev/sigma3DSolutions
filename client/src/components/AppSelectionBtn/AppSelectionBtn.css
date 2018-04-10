@@ -78,6 +78,11 @@
   background-size: 100% 100%;
 }
 
+.app-selection-btn .s3d-icon[data-category='fitPlaneRansac'] {
+  background-image: url('../../images/RANSACPlane.svg');
+  background-size: 100% 100%;
+}
+
 .app-selection-btn .s3d-icon[data-category='paramInversion'] {
   background-image: url('../../images/InvertTransformationParameters.svg');
   background-size: 100% 100%;

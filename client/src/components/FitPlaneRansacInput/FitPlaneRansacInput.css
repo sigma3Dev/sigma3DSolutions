@@ -1,0 +1,28 @@
+.fit-plane-ransac-input {
+  width: 62vw;
+  margin-top: 5vh;
+  margin-left: 16vw;
+  font-family: Roboto;
+}
+
+.fit-plane-ransac-input h1 {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 3px solid #0270a5;
+  padding: 0 50px 5px;
+  margin: 20px 250px;
+}
+
+.fit-plane-ransac-input h1 .info-btn {
+  font-size: 0.6em;
+}
+
+.fit-plane-ransac-input .tolerance-input label {
+  text-align: left;
+  font-size: 1.2em;
+  margin: 3vh 0 -1vh;
+}
+
+.fit-plane-ransac-input .tolerance-input input {
+  margin-left: 10px;
+}

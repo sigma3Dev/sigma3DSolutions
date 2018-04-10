@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
 
-const getPlanePointsSelector = state => state.geometry.fitPlaneGauss.input.points;
+const getPlaneGaussPointsSelector = state => state.geometry.fitPlaneGauss.input.points;
 
-export const getPlanePoints = createSelector(getPlanePointsSelector, points => points);
+export const getPlaneGaussPoints = createSelector(getPlaneGaussPointsSelector, points => points);

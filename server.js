@@ -136,7 +136,6 @@ app.post('/fit-plane-gauss', (req, res) => {
 });
 
 app.post('/quat-to-cardan', (req, res) => {
-  console.log(JSON.stringify(req.body));
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
     !Object.prototype.hasOwnProperty.call(req.body.coords, 'q0') ||
@@ -169,6 +168,25 @@ app.post('/cardan-to-quat', (req, res) => {
   }
 
   sf.cardanToQuat(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      res.status(500).send(response);
+    }
+  });
+});
+
+app.post('/fit-plane-ransac', (req, res) => {
+  if (
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'planePoints') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'planeTolerance')
+  ) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  }
+
+  sf.fitPlaneRansac(req.body.coords, (response, isOk) => {
     if (isOk) {
       res.status(200).send(response);
     } else {

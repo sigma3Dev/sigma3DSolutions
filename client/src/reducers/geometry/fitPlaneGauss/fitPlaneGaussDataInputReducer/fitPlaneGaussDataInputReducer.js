@@ -1,5 +1,5 @@
 import { PUSH_FIT_PLANE_GAUSS_COORDS } from '../../../../actions/pushCoords/pushCoordsActions';
-import { CLEAR_PLANE_INPUT } from '../../../../actions/clearInput/clearInputActions';
+import { CLEAR_PLANE_GAUSS_INPUT } from '../../../../actions/clearInput/clearInputActions';
 
 /** holds the initial transform data input */
 const initialData = {
@@ -13,7 +13,7 @@ function fitPlaneGauss(state = initialData, action) {
         ...state,
         points: action.coords,
       };
-    case CLEAR_PLANE_INPUT:
+    case CLEAR_PLANE_GAUSS_INPUT:
       return {
         ...state,
         points: [],

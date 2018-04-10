@@ -1,7 +1,7 @@
-import { getPlanePoints } from './getFitPlaneGaussInputDataSelector';
+import { getPlaneGaussPoints } from './getFitPlaneGaussInputDataSelector';
 
 describe('getFitPlaneGaussInputDataSelector Used By FitPlaneGaussInputContainer', () => {
-  it('getPlanePoints', () => {
+  it('getPlaneGaussPoints', () => {
     const state = {
       geometry: {
         fitPlaneGauss: {
@@ -44,7 +44,7 @@ describe('getFitPlaneGaussInputDataSelector Used By FitPlaneGaussInputContainer'
         z: 11.6,
       },
     ];
-    const result = getPlanePoints(state);
+    const result = getPlaneGaussPoints(state);
     expect(result).toEqual(expected);
   });
 });

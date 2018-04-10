@@ -1,4 +1,4 @@
-.fit-plane-gauss-result {
+.fit-plane-ransac-result {
   width: 79%;
   height: 90vh;
   margin-left: 16vw;
@@ -10,13 +10,13 @@
   font-family: Roboto;
 }
 
-.fit-plane-gauss-result h1 {
+.fit-plane-ransac-result h1 {
   font-size: 2.5em;
   border-bottom: 3px solid #0375ba;
   margin-bottom: 10px;
 }
 
-.fit-plane-gauss-result .bar-graph {
+.fit-plane-ransac-result .bar-graph {
   width: 80%;
   height: 40vh;
 }

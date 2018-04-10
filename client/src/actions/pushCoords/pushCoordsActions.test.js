@@ -7,6 +7,8 @@ import {
   pushApplyTrafoCoords,
   PUSH_FIT_PLANE_GAUSS_COORDS,
   pushFitPlaneGaussCoords,
+  PUSH_FIT_PLANE_RANSAC_COORDS,
+  pushFitPlaneRansacCoords,
 } from './pushCoordsActions';
 
 describe('pushThreeDTrafoCoordsActions', () => {
@@ -100,6 +102,31 @@ describe('pushThreeDTrafoCoordsActions', () => {
       coords: points,
     };
     const result = pushFitPlaneGaussCoords(points);
+    expect(result.type).toEqual(expected.type);
+    expect(result.coords).toEqual(expected.coords);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a PUSH_FIT_PLANE_RANSAC_COORDS action', () => {
+    const coords = {
+      points: [
+        {
+          x: 1.0,
+          y: 2.0,
+          z: 3.0,
+        },
+        {
+          x: 4.0,
+          y: 5.0,
+          z: 6.0,
+        },
+      ],
+      tolerance: 0.2,
+    };
+    const expected = {
+      type: PUSH_FIT_PLANE_RANSAC_COORDS,
+      coords,
+    };
+    const result = pushFitPlaneRansacCoords(coords);
     expect(result.type).toEqual(expected.type);
     expect(result.coords).toEqual(expected.coords);
     expect(result.receivedAt).toBeDefined();
