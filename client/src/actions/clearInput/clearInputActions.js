@@ -4,6 +4,7 @@ export const CLEAR_CHEBYSHEV_INPUT = 'CLEAR_CHEBYSHEV_INPUT';
 export const CLEAR_APPLY_TRAFO_INPUT = 'CLEAR_APPLY_TRAFO_INPUT';
 export const CLEAR_PLANE_GAUSS_INPUT = 'CLEAR_PLANE_GAUSS_INPUT';
 export const CLEAR_PLANE_RANSAC_INPUT = 'CLEAR_PLANE_RANSAC_INPUT';
+export const CLEAR_CYLINDER_INPUT = 'CLEAR_CYLINDER_INPUT';
 
 /** clears the start input */
 export const clearThreeDTrafo6WStartInput = () => ({
@@ -38,5 +39,11 @@ export const clearPlaneGaussInput = () => ({
 /** clears any plane input */
 export const clearPlaneRansacInput = () => ({
   type: CLEAR_PLANE_RANSAC_INPUT,
+  receivedAt: Date.now(),
+});
+
+/** clears any plane input */
+export const clearCylinderInput = () => ({
+  type: CLEAR_CYLINDER_INPUT,
   receivedAt: Date.now(),
 });

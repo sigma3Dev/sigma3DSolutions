@@ -8,13 +8,13 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || 80);
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, '/client/build')));
 
 app.get('/', (req, res) => {
-  res.send('Success!');
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 
 /** calculate 3DTrafo6W */
@@ -187,6 +187,25 @@ app.post('/fit-plane-ransac', (req, res) => {
   }
 
   sf.fitPlaneRansac(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      res.status(500).send(response);
+    }
+  });
+});
+
+app.post('/fit-cylinder', (req, res) => {
+  if (
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'cylinderPoints') ||
+    !Array.isArray(req.body.coords.cylinderPoints)
+  ) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  }
+
+  sf.fitCylinder(req.body.coords, (response, isOk) => {
     if (isOk) {
       res.status(200).send(response);
     } else {

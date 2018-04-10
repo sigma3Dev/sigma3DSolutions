@@ -3,6 +3,7 @@
   "ApplyTrafoResult.label.caption": "Transformation Results",
   "AppSelectionBtn.caption.3Dtransformation": "3D-Transformation",
   "AppSelectionBtn.caption.chebyshevCircleFit": "Chebyshev-Circle",
+  "AppSelectionBtn.caption.fitCylinder": "Cylinder",
   "AppSelectionBtn.caption.fitPlaneGauss": "Gauss Plane",
   "AppSelectionBtn.caption.fitPlaneRansac": "RANSAC Plane",
   "AppSelectionBtn.caption.paramInversion": "Paramater Inversion",
@@ -10,8 +11,9 @@
   "AppSelectionBtn.caption.transform": "Transformation",
   "AppSelectionBtn.description.3Dtransformation": "6 Parameters, weighted",
   "AppSelectionBtn.description.chebyshevCircleFit": "Central Point, Radius and Chebyshev-Distance",
+  "AppSelectionBtn.description.fitCylinder": "With fitting errors",
   "AppSelectionBtn.description.fitPlaneGauss": "With fitting errors",
-  "AppSelectionBtn.description.fitPlaneRansac": "With fitting errors",
+  "AppSelectionBtn.description.fitPlaneRansac": "With tolerance",
   "AppSelectionBtn.description.paramInversion": "7 Parameters",
   "AppSelectionBtn.description.quatCardan": "Transform Quaternion into Cardan and vice versa",
   "AppSelectionBtn.description.transform": "Transform points with parameters",
@@ -29,6 +31,8 @@
   "ErrorScreen.label.error": "Error!",
   "ErrorScreen.label.s3dinfo":
     "Do you have the service for mathematical operations by sigma3D running?\n\n If you don't own the service, please contact sigma3D:",
+  "FitCylinderInput.label.caption": "Cylinder",
+  "FitCylinderResult.label.caption": "Fit Cylinder Result",
   "FitPlaneGaussInput.label.caption": "Gauss Plane",
   "FitPlaneGaussResult.label.caption": "Fit Plane Result",
   "FitPlaneGaussResultTable.label.stdev": "Standard Deviation",
@@ -44,6 +48,14 @@
   "InfoModal.label.noTargetSystemPoints": "Please import target system points!",
   "InfoModal.label.startAndTargetDifferentLengths":
     "Length of start and target system don't match!",
+  "InputInfoPanel.panel.infoPanelTextFive":
+    "The input should be a simple .txt file.\nThe file should consist of five or more points, each on its own line.Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
+  "InputInfoPanel.panel.infoPanelTextFour":
+    "The input should be a simple .txt file.\nThe file should consist of four or more points, each on its own line.Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
+  "InputInfoPanel.panel.infoPanelTextOne":
+    "The input should be a simple .txt file.\nThe file should consist of one or more points, each on its own line.Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
+  "InputInfoPanel.panel.infoPanelTextThree":
+    "The input should be a simple .txt file.\nThe file should consist of three or more points, each on its own line.Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
   "LoadingScreen.label.calculating": "Calculating...",
   "ParamInversion.caption.paramInversionHeader": "Parameter Inversion",
   "PointsInputDropzone.label.inputTxtFile":
@@ -57,7 +69,9 @@
   "Sidebar.label.transformation": "Transformations",
   "StartScreen.element.3Dtransformations": "3D-Transformation",
   "StartScreen.element.chebyshev": "Chebyshev-Circle",
-  "StartScreen.element.fitPlane": "Gauss Plane",
+  "StartScreen.element.fitPlaneGauss": "Gauss Plane",
+  "StartScreen.element.fitPlaneRansac": "RANSAC Plane",
+  "StartScreen.element.fitCylinder": "Cylinder",
   "StartScreen.elementheader.geometry": "Geometry:",
   "StartScreen.elementheader.transformations": "Transformations:",
   "StartScreen.header.welcome": "Welcome to sigma3DSolutions",
@@ -67,8 +81,6 @@
   "SubmitBtn.label.caption": "Submit ",
   "ThreeDTrafoInput.label.startSystemPointsCaption": "Start System Points:",
   "ThreeDTrafoInput.label.targetSystemPointsCaption": "Target System Points:",
-  "ThreeDTrafoInputContainer.panel.infoPanelText":
-    "The input should be a simple .txt file.\n\nThe file should consist of one or more points, each on its own line.Each point should be made up of three coordinates: x, y and z. These should be simple numbers, separated by a single space.\n\nPlease make sure you have no empty lines and no trailing spaces at the end of a line.\n\nExample:\n41.3 11.2 17.1\n24.2 33.1 19.8\n9.1 5.4 12.9",
   "ThreeDTrafoResult.label.caption": "Transformation Parameters",
   "ThreeDTrafoResult.link.downloadFile": "Download transformed start points as .txt file",
   "ThreeDTrafoResultContainer.prompt.filename": "Please enter a file name: "

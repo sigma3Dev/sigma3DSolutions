@@ -1,9 +1,8 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "homepage": "https://sigma3Dev.github.io/sigma3DSolutions",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "http://localhost:80",
   "secure": false,
   "dependencies": {
     "axios": "^0.18.0",
@@ -36,8 +35,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -s public",
-    "deploy": "npm run build && gh-pages -d build"
+    "build-storybook": "build-storybook -s public"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.3.14",
@@ -60,7 +58,6 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.4.0",
-    "gh-pages": "^1.1.0",
     "prettier": "^1.11.1",
     "prettier-eslint": "^8.8.1",
     "react-intl-translations-manager": "^5.0.1",

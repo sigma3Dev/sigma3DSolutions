@@ -2,36 +2,36 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
-import { pushFitPlaneGaussCoords } from '../actions/pushCoords/pushCoordsActions';
-import { submitFitPlaneGaussCoords } from '../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
-import { clearPlaneGaussInput } from '../actions/clearInput/clearInputActions';
-import { getPlaneGaussPoints } from '../selectors/FitPlaneGaussSelectors/getFitPlaneGaussInputDataSelector/getFitPlaneGaussInputDataSelector';
+import { pushFitCylinderCoords } from '../actions/pushCoords/pushCoordsActions';
+import { submitFitCylinderCoords } from '../actions/submitFitCylinderCoords/submitFitCylinderCoordsActions';
+import { clearCylinderInput } from '../actions/clearInput/clearInputActions';
+import { getCylinderPoints } from '../selectors/FitCylinderSelectors/getFitCylinderInputDataSelector/getFitCylinderInputDataSelector';
 import Sidebar from '../components/Sidebar/Sidebar';
 import InfoModal from '../components/InfoModal/InfoModal';
-import FitPlaneGaussInput from '../components/FitPlaneGaussInput/FitPlaneGaussInput';
+import FitCylinderInput from '../components/FitCylinderInput/FitCylinderInput';
 
 const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  onPushCoords: file => dispatch(pushFitPlaneGaussCoords(file)),
-  onSubmitCoords: coords => dispatch(submitFitPlaneGaussCoords(coords)),
-  onClearPlaneInput: () => dispatch(clearPlaneGaussInput()),
+  onPushCoords: file => dispatch(pushFitCylinderCoords(file)),
+  onSubmitCoords: coords => dispatch(submitFitCylinderCoords(coords)),
+  onClearCylinderInput: () => dispatch(clearCylinderInput()),
 });
 
 const mapStateToProps = state => ({
-  planePoints: getPlaneGaussPoints(state),
+  cylinderPoints: getCylinderPoints(state),
 });
 
 /**
- * container for Gauss input
- * @class FitPlaneGaussInputContainer
+ * container for Cylinder input
+ * @class FitCylinderInputContainer
  * @extends {Component}
  */
-class FitPlaneGaussInputContainer extends Component {
+class FitCylinderInputContainer extends Component {
   /**
-   * Creates an instance of FitPlaneGaussInputContainer.
+   * Creates an instance of FitCylinderInputContainer.
    * @param {Object} props
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitCylinderInputContainer
    */
   constructor(props) {
     super(props);
@@ -41,15 +41,15 @@ class FitPlaneGaussInputContainer extends Component {
     };
     this.displayInfoPanel = this.displayInfoPanel.bind(this);
     this.parseCoords = this.parseCoords.bind(this);
-    this.clearPlaneGaussInput = this.clearPlaneGaussInput.bind(this);
-    this.submitFitPlaneGaussCoords = this.submitFitPlaneGaussCoords.bind(this);
+    this.clearCylinderInput = this.clearCylinderInput.bind(this);
+    this.submitFitCylinderCoords = this.submitFitCylinderCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
   }
 
   /**
    * Uses cdi module to transform .txt file into an array of points
    * @param {*} file - .txt file with point coordinates
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitCylinderInputContainer
    */
   parseCoords = (file) => {
     cdi.startCoordinateDataImport(file, (coords) => {
@@ -59,7 +59,7 @@ class FitPlaneGaussInputContainer extends Component {
 
   /**
    * Closes the Modal-window
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitCylinderInputContainer
    */
   closeModal = () => {
     this.setState({ ...this.state, notification: null });
@@ -67,10 +67,10 @@ class FitPlaneGaussInputContainer extends Component {
 
   /**
    * Handles coords submit, navigates to "result" page
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitCylinderInputContainer
    */
-  submitFitPlaneGaussCoords = () => {
-    if (!this.props.planePoints || this.props.planePoints.length === 0) {
+  submitFitCylinderCoords = () => {
+    if (!this.props.cylinderPoints || this.props.cylinderPoints.length === 0) {
       this.setState({
         notification: (
           <InfoModal
@@ -89,24 +89,24 @@ class FitPlaneGaussInputContainer extends Component {
       });
     } else {
       const coords = {
-        planePoints: this.props.planePoints,
+        cylinderPoints: this.props.cylinderPoints,
       };
       this.props.onSubmitCoords(coords);
-      this.props.history.push('/geometry/fit-plane-gauss/result');
+      this.props.history.push('/geometry/fit-cylinder/result');
     }
   };
 
   /**
    * deletes all start system points, updates input display
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitCylinderInputContainer
    */
-  clearPlaneGaussInput = () => {
-    this.props.onClearPlaneInput();
+  clearCylinderInput = () => {
+    this.props.onClearCylinderInput();
   };
 
   /**
    * Decides wheter InfoPanel is displayed or not
-   * @memberof FitPlaneGaussInputContainer
+   * @memberof FitCylinderInputContainer
    */
   displayInfoPanel = () => {
     this.setState({ ...this.state, isInfoOpen: !this.state.isInfoOpen });
@@ -115,11 +115,11 @@ class FitPlaneGaussInputContainer extends Component {
   render() {
     const infoPanelText = (
       <FormattedMessage
-        id='InputInfoPanel.panel.infoPanelTextThree'
+        id='InputInfoPanel.panel.infoPanelTextFive'
         defaultMessage='
           The input should be a simple .txt file.\n
 
-          The file should consist of three or more points, each on its own line.
+          The file should consist of five or more points, each on its own line.
           Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n
 
           Example:\n
@@ -133,26 +133,26 @@ class FitPlaneGaussInputContainer extends Component {
       <div>
         {this.state.notification}
         <Sidebar />
-        <FitPlaneGaussInput
+        <FitCylinderInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
           handleInfoClick={this.displayInfoPanel}
-          handleDeleteClick={this.clearPlaneGaussInput}
+          handleDeleteClick={this.clearCylinderInput}
           handleFileDrop={this.parseCoords}
-          handleSubmitClick={this.submitFitPlaneGaussCoords}
-          planePoints={this.props.planePoints}
+          handleSubmitClick={this.submitFitCylinderCoords}
+          cylinderPoints={this.props.cylinderPoints}
         />
       </div>
     );
   }
 }
 
-FitPlaneGaussInputContainer.propTypes = {
+FitCylinderInputContainer.propTypes = {
   onPushCoords: PropTypes.func.isRequired,
-  onClearPlaneInput: PropTypes.func.isRequired,
+  onClearCylinderInput: PropTypes.func.isRequired,
   onSubmitCoords: PropTypes.func.isRequired,
-  planePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
+  cylinderPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
   history: PropTypes.any,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(FitPlaneGaussInputContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FitCylinderInputContainer);

@@ -6,6 +6,7 @@ import { SUBMIT_APPLY_TRAFO_VALUES_FAILURE } from '../../actions/submitApplyTran
 import { SUBMIT_QUAT_TO_CARDAN_COORDS_FAILURE } from '../../actions/quatCardanCoords/quatCardanCoordsActions';
 import { SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE } from '../../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 import { SUBMIT_FIT_PLANE_RANSAC_COORDS_FAILURE } from '../../actions/submitFitPlaneRansacCoords/submitFitPlaneRansacCoordsActions';
+import { SUBMIT_FIT_CYLINDER_COORDS_FAILURE } from '../../actions/submitFitCylinderCoords/submitFitCylinderCoordsActions';
 
 const initialErrorState = { error: null };
 
@@ -53,6 +54,11 @@ function errorHandling(state = initialErrorState, action) {
         error: action.error,
       };
     case SUBMIT_FIT_PLANE_RANSAC_COORDS_FAILURE:
+      return {
+        ...state,
+        error: action.error,
+      };
+    case SUBMIT_FIT_CYLINDER_COORDS_FAILURE:
       return {
         ...state,
         error: action.error,

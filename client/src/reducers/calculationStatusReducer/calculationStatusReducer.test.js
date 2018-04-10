@@ -22,6 +22,18 @@ import {
   SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE,
 } from '../../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 
+import {
+  SUBMIT_FIT_PLANE_RANSAC_COORDS_REQUEST,
+  SUBMIT_FIT_PLANE_RANSAC_COORDS_SUCCESS,
+  SUBMIT_FIT_PLANE_RANSAC_COORDS_FAILURE,
+} from '../../actions/submitFitPlaneRansacCoords/submitFitPlaneRansacCoordsActions';
+
+import {
+  SUBMIT_FIT_CYLINDER_COORDS_REQUEST,
+  SUBMIT_FIT_CYLINDER_COORDS_SUCCESS,
+  SUBMIT_FIT_CYLINDER_COORDS_FAILURE,
+} from '../../actions/submitFitCylinderCoords/submitFitCylinderCoordsActions';
+
 import calculationStatusReducer from './calculationStatusReducer';
 
 describe('calculationStatusReducer', () => {
@@ -174,6 +186,84 @@ describe('calculationStatusReducer', () => {
     };
     const action = {
       type: SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE,
+    };
+    const expectedState = {
+      isCalculating: false,
+    };
+    const result = calculationStatusReducer(state, action);
+    expect(result).toEqual(expectedState);
+  });
+  it('should handle SUBMIT_FIT_PLANE_RANSAC_COORDS_REQUEST', () => {
+    const state = {
+      isCalculating: false,
+    };
+    const action = {
+      type: SUBMIT_FIT_PLANE_RANSAC_COORDS_REQUEST,
+    };
+    const expectedState = {
+      isCalculating: true,
+    };
+    const result = calculationStatusReducer(state, action);
+    expect(result).toEqual(expectedState);
+  });
+  it('should handle SUBMIT_FIT_PLANE_RANSAC_COORDS_SUCCESS', () => {
+    const state = {
+      isCalculating: true,
+    };
+    const action = {
+      type: SUBMIT_FIT_PLANE_RANSAC_COORDS_SUCCESS,
+    };
+    const expectedState = {
+      isCalculating: false,
+    };
+    const result = calculationStatusReducer(state, action);
+    expect(result).toEqual(expectedState);
+  });
+  it('should handle SUBMIT_FIT_PLANE_RANSAC_COORDS_FAILURE', () => {
+    const state = {
+      isCalculating: true,
+    };
+    const action = {
+      type: SUBMIT_FIT_PLANE_RANSAC_COORDS_FAILURE,
+    };
+    const expectedState = {
+      isCalculating: false,
+    };
+    const result = calculationStatusReducer(state, action);
+    expect(result).toEqual(expectedState);
+  });
+  it('should handle SUBMIT_FIT_CYLINDER_COORDS_REQUEST', () => {
+    const state = {
+      isCalculating: false,
+    };
+    const action = {
+      type: SUBMIT_FIT_CYLINDER_COORDS_REQUEST,
+    };
+    const expectedState = {
+      isCalculating: true,
+    };
+    const result = calculationStatusReducer(state, action);
+    expect(result).toEqual(expectedState);
+  });
+  it('should handle SUBMIT_FIT_CYLINDER_COORDS_SUCCESS', () => {
+    const state = {
+      isCalculating: true,
+    };
+    const action = {
+      type: SUBMIT_FIT_CYLINDER_COORDS_SUCCESS,
+    };
+    const expectedState = {
+      isCalculating: false,
+    };
+    const result = calculationStatusReducer(state, action);
+    expect(result).toEqual(expectedState);
+  });
+  it('should handle SUBMIT_FIT_CYLINDER_COORDS_FAILURE', () => {
+    const state = {
+      isCalculating: true,
+    };
+    const action = {
+      type: SUBMIT_FIT_CYLINDER_COORDS_FAILURE,
     };
     const expectedState = {
       isCalculating: false,
