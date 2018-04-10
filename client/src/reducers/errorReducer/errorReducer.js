@@ -3,6 +3,7 @@ import { SUBMIT_3D_TRAFO_COORDS_FAILURE } from '../../actions/submitThreeDTrafoC
 import { SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE } from '../../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
 import { SUBMIT_PARAM_INVERSION_COORDS_FAILURE } from '../../actions/paramInversionCoords/paramInversionCoordsActions';
 import { SUBMIT_APPLY_TRAFO_VALUES_FAILURE } from '../../actions/submitApplyTransformationValues/submitApplyTransformationValuesActions';
+import { SUBMIT_QUAT_TO_CARDAN_COORDS_FAILURE } from '../../actions/quatCardanCoords/quatCardanCoordsActions';
 import { SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE } from '../../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 import { SUBMIT_FIT_PLANE_RANSAC_COORDS_FAILURE } from '../../actions/submitFitPlaneRansacCoords/submitFitPlaneRansacCoordsActions';
 
@@ -37,6 +38,11 @@ function errorHandling(state = initialErrorState, action) {
         error: action.error,
       };
     case SUBMIT_APPLY_TRAFO_VALUES_FAILURE:
+      return {
+        ...state,
+        error: action.error,
+      };
+    case SUBMIT_QUAT_TO_CARDAN_COORDS_FAILURE:
       return {
         ...state,
         error: action.error,

@@ -22,6 +22,12 @@ import {
   SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE,
 } from '../../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 
+import {
+  SUBMIT_FIT_PLANE_RANSAC_COORDS_REQUEST,
+  SUBMIT_FIT_PLANE_RANSAC_COORDS_SUCCESS,
+  SUBMIT_FIT_PLANE_RANSAC_COORDS_FAILURE,
+} from '../../actions/submitFitPlaneRansacCoords/submitFitPlaneRansacCoordsActions';
+
 /*  true when a request has been sent, but no response or error has returned yet */
 const initialCalculationStateData = {
   isCalculating: false,
@@ -91,6 +97,21 @@ function calculationStatus(state = initialCalculationStateData, action) {
         isCalculating: false,
       };
     case SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_FIT_PLANE_RANSAC_COORDS_REQUEST:
+      return {
+        ...state,
+        isCalculating: true,
+      };
+    case SUBMIT_FIT_PLANE_RANSAC_COORDS_SUCCESS:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_FIT_PLANE_RANSAC_COORDS_FAILURE:
       return {
         ...state,
         isCalculating: false,
