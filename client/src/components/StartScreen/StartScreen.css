@@ -1,6 +1,6 @@
 .start-screen {
   height: 100%;
-  width: 72%;
+  width: 83vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,17 +37,25 @@
 .start-screen .element {
   display: flex;
   flex-direction: column;
-  align-items: baseline;
+  align-items: flex-start;
   font-size: 17px;
   border: 3px solid #0375ba;
   border-radius: 5px;
   background-color: #c5e0ff;
-  padding-right: 20px;
-  padding-top: 10px;
+  padding: 15px 20px 10px 0;
   margin: 20px 5px;
-  width: 220px;
+  width: 20vw;
 }
 
 .start-screen .element .element-header {
+  align-self: center;
+  font-size: 1.2em;
+  font-weight: bold;
   margin-left: 17px;
+  color: #01458a;
+}
+
+.start-screen .element ul li {
+  text-align: left;
+  color: #333;
 }

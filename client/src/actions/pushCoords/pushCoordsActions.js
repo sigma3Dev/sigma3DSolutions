@@ -3,6 +3,7 @@ export const PUSH_3D_TRAFO_TARGET_SYSTEM_COORDS = 'PUSH_3D_TRAFO_TARGET_SYSTEM_C
 export const PUSH_APPLY_TRAFO_COORDS = 'PUSH_APPLY_TRAFO_COORDS';
 export const PUSH_FIT_PLANE_GAUSS_COORDS = 'PUSH_FIT_PLANE_GAUSS_COORDS';
 export const PUSH_FIT_PLANE_RANSAC_COORDS = 'PUSH_FIT_PLANE_RANSAC_COORDS';
+export const PUSH_FIT_CYLINDER_COORDS = 'PUSH_FIT_CYLINDER_COORDS';
 
 /**
  * pushes the start system coordinates
@@ -50,6 +51,16 @@ export const pushFitPlaneGaussCoords = coords => ({
  */
 export const pushFitPlaneRansacCoords = coords => ({
   type: PUSH_FIT_PLANE_RANSAC_COORDS,
+  coords,
+  receivedAt: Date.now(),
+});
+
+/**
+ * pushes the coordinates
+ * @param {Object} coords - the coordinates file from input
+ */
+export const pushFitCylinderCoords = coords => ({
+  type: PUSH_FIT_CYLINDER_COORDS,
   coords,
   receivedAt: Date.now(),
 });

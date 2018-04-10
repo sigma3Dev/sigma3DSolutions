@@ -11,6 +11,8 @@ import {
   clearPlaneGaussInput,
   CLEAR_PLANE_RANSAC_INPUT,
   clearPlaneRansacInput,
+  CLEAR_CYLINDER_INPUT,
+  clearCylinderInput,
 } from './clearInputActions';
 
 describe('clearInputActions', () => {
@@ -59,6 +61,14 @@ describe('clearInputActions', () => {
       type: CLEAR_PLANE_RANSAC_INPUT,
     };
     const result = clearPlaneRansacInput();
+    expect(result.type).toEqual(expected.type);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a CLEAR_CYLINDER_INPUT action', () => {
+    const expected = {
+      type: CLEAR_CYLINDER_INPUT,
+    };
+    const result = clearCylinderInput();
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });

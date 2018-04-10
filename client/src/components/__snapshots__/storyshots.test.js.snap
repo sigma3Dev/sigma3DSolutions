@@ -21754,6 +21754,16 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
                 Gaußebene
               </span>
             </li>
+            <li>
+              <span>
+                RANSAC-Ebene
+              </span>
+            </li>
+            <li>
+              <span>
+                Zylinder
+              </span>
+            </li>
           </ul>
         </div>
       </div>

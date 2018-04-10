@@ -195,6 +195,25 @@ app.post('/fit-plane-ransac', (req, res) => {
   });
 });
 
+app.post('/fit-cylinder', (req, res) => {
+  if (
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'cylinderPoints') ||
+    !Array.isArray(req.body.coords.cylinderPoints)
+  ) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  }
+
+  sf.fitCylinder(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      res.status(500).send(response);
+    }
+  });
+});
+
 app.listen(app.get('port'), () => {
   console.log('Server is running...');
 });

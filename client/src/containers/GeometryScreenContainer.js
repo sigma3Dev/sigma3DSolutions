@@ -22,6 +22,10 @@ class GeometryScreenContainer extends Component {
         type: 'fitPlaneRansac',
         link: '/geometry/fit-plane-ransac/data-input',
       },
+      {
+        type: 'fitCylinder',
+        link: '/geometry/fit-cylinder/data-input',
+      },
     ];
     return (
       <div>

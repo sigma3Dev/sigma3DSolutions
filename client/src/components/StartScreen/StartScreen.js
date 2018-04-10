@@ -68,7 +68,16 @@ const StartScreen = () => (
             />
           </li>
           <li>
-            <FormattedMessage id='StartScreen.element.fitPlane' defaultMessage='Gauss Plane' />
+            <FormattedMessage id='StartScreen.element.fitPlaneGauss' defaultMessage='Gauss Plane' />
+          </li>
+          <li>
+            <FormattedMessage
+              id='StartScreen.element.fitPlaneRansac'
+              defaultMessage='RANSAC Plane'
+            />
+          </li>
+          <li>
+            <FormattedMessage id='StartScreen.element.fitCylinder' defaultMessage='Cylinder' />
           </li>
         </ul>
       </div>
