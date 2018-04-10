@@ -133,7 +133,7 @@ describe('pushThreeDTrafoCoordsActions', () => {
     expect(result.coords).toEqual(expected.coords);
     expect(result.receivedAt).toBeDefined();
   });
-  it('should create a PUSH_FIT_PLANE_RANSAC_COORDS action', () => {
+  it('should create a PUSH_FIT_CYLINDER_COORDS action', () => {
     const points = [
       {
         x: 1.0,

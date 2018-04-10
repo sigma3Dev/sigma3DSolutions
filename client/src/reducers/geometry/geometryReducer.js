@@ -4,9 +4,10 @@ import fitPlaneGaussReducer from './fitPlaneGauss/fitPlaneGaussReducer';
 import fitPlaneRansacReducer from './fitPlaneRansac/fitPlaneRansacReducer';
 import fitCylinderReducer from './fitCylinder/fitCylinderReducer';
 
+// try to keep alphabetical order here
 export default combineReducers({
   chebyshevCircleFit: chebyshevCircleFitReducer,
+  fitCylinder: fitCylinderReducer,
   fitPlaneGauss: fitPlaneGaussReducer,
   fitPlaneRansac: fitPlaneRansacReducer,
-  fitCylinder: fitCylinderReducer,
 });

@@ -16041,6 +16041,9 @@ exports[`Storyshots Start.FitCylinderResultTable - DontTest Table to display cal
             K
           </th>
           <th>
+            Radius
+          </th>
+          <th>
             StDev
           </th>
           <th />
@@ -16049,13 +16052,13 @@ exports[`Storyshots Start.FitCylinderResultTable - DontTest Table to display cal
       <tbody>
         <tr>
           <th>
-            11.833
+            11.83
           </th>
           <th>
-            8.633
+            8.63
           </th>
           <th>
-            11.600
+            11.60
           </th>
           <th>
             0.00000
@@ -16067,7 +16070,10 @@ exports[`Storyshots Start.FitCylinderResultTable - DontTest Table to display cal
             1.00000
           </th>
           <th>
-            0.00
+            1.0
+          </th>
+          <th>
+            0.0
           </th>
           <th>
             <button
