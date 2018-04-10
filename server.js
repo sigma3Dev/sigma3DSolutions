@@ -11,10 +11,10 @@ app.use(bodyParser.json());
 app.set('port', process.env.PORT || 3001);
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, '/client/build')));
 
 app.get('/', (req, res) => {
-  res.send('Success!');
+  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 
 /** calculate 3DTrafo6W */
