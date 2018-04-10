@@ -23,7 +23,7 @@ const mapStateToProps = state => ({
 });
 
 /**
- * container for Gauss input
+ * container for Cylinder input
  * @class FitCylinderInputContainer
  * @extends {Component}
  */
@@ -92,7 +92,7 @@ class FitCylinderInputContainer extends Component {
         cylinderPoints: this.props.cylinderPoints,
       };
       this.props.onSubmitCoords(coords);
-      this.props.history.push('/geometry/fit-cylinder-gauss/result');
+      this.props.history.push('/geometry/fit-cylinder/result');
     }
   };
 

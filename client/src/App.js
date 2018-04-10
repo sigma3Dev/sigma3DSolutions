@@ -6,6 +6,7 @@ import ChebyshevCFInputContainer from './containers/ChebyshevCFInputContainer';
 import ChebyshevCFResultContainer from './containers/ChebyshevCFResultContainer';
 import GeometryScreenContainer from './containers/GeometryScreenContainer';
 import FitCylinderInputContainer from './containers/FitCylinderInputContainer';
+import FitCylinderResultContainer from './containers/FitCylinderResultContainer';
 import FitPlaneGaussInputContainer from './containers/FitPlaneGaussInputContainer';
 import FitPlaneGaussResultContainer from './containers/FitPlaneGaussResultContainer';
 import FitPlaneRansacInputContainer from './containers/FitPlaneRansacInputContainer';
@@ -62,6 +63,10 @@ const App = () => (
       <Route
         path='/geometry/fit-cylinder/data-input'
         component={FitCylinderInputContainer}
+      />
+      <Route
+        path='/geometry/fit-cylinder/result'
+        component={FitCylinderResultContainer}
       />
       <Redirect from='*' to='/' />
     </Switch>

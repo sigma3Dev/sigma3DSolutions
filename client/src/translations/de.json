@@ -32,6 +32,7 @@
   "ErrorScreen.label.s3dinfo":
     "Läuft der Fittingservice von sigma3D im Hintergrund?\n\n Wenn Sie das Programm nicht besitzen, kontaktieren Sie bitte sigma3D:",
   "FitCylinderInput.label.caption": "Zylinder",
+  "FitCylinderResult.label.caption": "Zylinder Ergebnis",
   "FitPlaneGaussInput.label.caption": "Gaußebene",
   "FitPlaneGaussResult.label.caption": "Gaußebene Ergebnis",
   "FitPlaneGaussResultTable.label.stdev": "Standardabweichung",

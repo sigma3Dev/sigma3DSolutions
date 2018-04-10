@@ -32,6 +32,7 @@
   "ErrorScreen.label.s3dinfo":
     "Do you have the service for mathematical operations by sigma3D running?\n\n If you don't own the service, please contact sigma3D:",
   "FitCylinderInput.label.caption": "Cylinder",
+  "FitCylinderResult.label.caption": "Fit Cylinder Result",
   "FitPlaneGaussInput.label.caption": "Gauss Plane",
   "FitPlaneGaussResult.label.caption": "Fit Plane Result",
   "FitPlaneGaussResultTable.label.stdev": "Standard Deviation",

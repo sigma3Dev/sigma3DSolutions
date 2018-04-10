@@ -259,7 +259,6 @@ const fitCylinder = (coords, callback) => {
   globalIdCounter += 1;
   const points = coords.cylinderPoints;
   const requestObj = comm.fitCylinder(points, globalIdCounter);
-  console.log(JSON.stringify(requestObj));
 
   const socket = getWebSocket()
     .then((socket) => {

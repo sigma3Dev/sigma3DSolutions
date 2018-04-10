@@ -1,0 +1,27 @@
+.fit-cylinder-result-table {
+  padding-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fit-cylinder-result-table * {
+  font-size: 1.05em;
+  text-align: center;
+}
+
+.fit-cylinder-result-table th {
+  padding: 10px 0;
+}
+
+.fit-cylinder-result-table .caption {
+  background-color: #d9e9f0;
+}
+
+.fit-cylinder-result-table .copy {
+  font-size: 0.8em;
+  padding: 10px;
+}
+
+.fit-cylinder-result-table .copy:hover {
+  cursor: pointer;
+}
