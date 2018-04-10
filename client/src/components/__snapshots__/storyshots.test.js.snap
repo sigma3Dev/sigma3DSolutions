@@ -22193,7 +22193,7 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
         className="header"
       >
         <span>
-          Willkommen zu sigma3DSolutions
+          Willkommen zu sigma3DSolutions!
         </span>
       </h1>
       <h2
@@ -22273,6 +22273,11 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
             <li>
               <span>
                 Zylinder
+              </span>
+            </li>
+            <li>
+              <span>
+                Punkt
               </span>
             </li>
           </ul>
