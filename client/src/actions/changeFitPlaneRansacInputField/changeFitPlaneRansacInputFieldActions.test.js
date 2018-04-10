@@ -4,7 +4,7 @@ import {
 } from './changeFitPlaneRansacInputFieldActions';
 
 describe('changeApplyTrafoParamInputFieldActions', () => {
-  it('should create a CHANGE_APPLY_TRAFO_PARAM_INPUT_FIELD action', () => {
+  it('should create a UPDATE_FIT_PLANE_RANSAC_TOLERANCE action', () => {
     const newTolerance = 0.3;
     const expected = {
       type: UPDATE_FIT_PLANE_RANSAC_TOLERANCE,
