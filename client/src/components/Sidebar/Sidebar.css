@@ -26,8 +26,20 @@
   opacity: 1;
   text-decoration: none;
   margin: 10px 0;
-  color: white;
+  color: #afb2b6;
   opacity: 1;
+}
+
+.sidebar-link-container {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  padding: 10px;
+  width: 100%;
+}
+
+.sidebar-link-container:hover {
+  transform: scale(1.2);
+  background-color: #505251; 
 }
 
 .logo {
@@ -37,4 +49,8 @@
   width: 100px;
   height: 100px;
   margin: 25px 0 20px;
+}
+
+.logo:hover {
+  transform: scale(1.2);
 }

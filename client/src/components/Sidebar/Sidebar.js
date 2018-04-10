@@ -12,12 +12,16 @@ const Sidebar = () => (
     <Link to='/'>
       <div className='logo' />
     </Link>
-    <Link to='/transformations' className='link-active'>
-      <FormattedMessage id='Sidebar.label.transformation' defaultMessage='Transformations' />
-    </Link>
-    <Link to='/geometry' className='link-active'>
-      <FormattedMessage id='Sidebar.label.geometry' defaultMessage='Geometry' />
-    </Link>
+    <div className='sidebar-link-container'>
+      <Link to='/transformations' className='link-active'>
+        <FormattedMessage id='Sidebar.label.transformation' defaultMessage='Transformations' />
+      </Link>
+    </div>
+    <div className='sidebar-link-container'>
+      <Link to='/geometry' className='link-active'>
+        <FormattedMessage id='Sidebar.label.geometry' defaultMessage='Geometry' />
+      </Link>
+    </div>
   </div>
 );
 
