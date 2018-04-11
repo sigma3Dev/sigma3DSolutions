@@ -42,6 +42,7 @@
   "FitPlaneRansacResult.label.caption": "RANSAC-Ebene Ergebnis",
   "FitPlaneRansacResultTable.label.stdev": "Standardabweichung",
   "FitPointInput.label.caption": "Punkt",
+  "FitPointResult.label.caption": "Punkt Ergebnis",
   "FittingErrorBarGraph.caption.errors": "Abweichungen",
   "InfoModal.caption.wrongInput": "Fehlerhaftes Input",
   "InfoModal.label.mCantBeZero": "M darf nicht null sein!",

@@ -42,6 +42,7 @@
   "FitPlaneRansacResult.label.caption": "Fit Plane Result",
   "FitPlaneRansacResultTable.label.stdev": "Standard Deviation",
   "FitPointInput.label.caption": "Point",
+  "FitPointResult.label.caption": "Fit Point Result",
   "FittingErrorBarGraph.caption.errors": "Fitting Errors",
   "InfoModal.caption.wrongInput": "Wrong Input",
   "InfoModal.label.mCantBeZero": "M cannot be zero!",
