@@ -2,7 +2,7 @@
   height: 100%;
   width: 84vw;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   margin-left: 15vw;
 }
