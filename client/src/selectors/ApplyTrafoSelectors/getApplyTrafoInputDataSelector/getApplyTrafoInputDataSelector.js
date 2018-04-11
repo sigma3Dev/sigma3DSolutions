@@ -1,4 +1,7 @@
-import { createSelector } from 'reselect';
+import {
+  createSelectorWithDependencies as createSelector,
+  registerSelectors,
+} from 'reselect-tools';
 
 const getPointsSelector = state => state.transformations.applyTrafo.input.points;
 const getParamsSelector = state => state.transformations.applyTrafo.input.transformation;
@@ -6,3 +9,5 @@ const getParamsSelector = state => state.transformations.applyTrafo.input.transf
 export const getPoints = createSelector(getPointsSelector, points => points);
 
 export const getParams = createSelector(getParamsSelector, params => params);
+
+registerSelectors({ getPoints, getParams });

@@ -1,4 +1,7 @@
-import { createSelector } from 'reselect';
+import {
+  createSelectorWithDependencies as createSelector,
+  registerSelectors,
+} from 'reselect-tools';
 
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
 const getFitPlaneRansacResultSelector = state => state.geometry.fitPlaneRansac.result;
@@ -18,3 +21,5 @@ export const getFitPlaneRansacResult = createSelector(getFitPlaneRansacResultSel
   params.stdev,
   params.numPoints,
 ]);
+
+registerSelectors({ getIsCalculating, getFitPlaneRansacResult });

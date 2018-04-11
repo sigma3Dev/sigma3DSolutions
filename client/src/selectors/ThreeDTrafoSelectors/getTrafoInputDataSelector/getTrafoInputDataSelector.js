@@ -1,4 +1,7 @@
-import { createSelector } from 'reselect';
+import {
+  createSelectorWithDependencies as createSelector,
+  registerSelectors,
+} from 'reselect-tools';
 
 const getStartSystemPointsSelector = state =>
   state.transformations.threeDTrafo.input.startSystemPoints;
@@ -14,3 +17,5 @@ export const getTargetSystemPoints = createSelector(
 
 export const getListOfUsedCoords = createSelector(getTargetSystemPointsSelector, points =>
   points.map(p => [p.useX, p.useY, p.useZ]));
+
+registerSelectors({ getStartSystemPoints, getTargetSystemPoints, getListOfUsedCoords });

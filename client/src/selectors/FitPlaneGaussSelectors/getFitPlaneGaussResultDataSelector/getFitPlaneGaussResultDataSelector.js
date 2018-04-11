@@ -1,4 +1,7 @@
-import { createSelector } from 'reselect';
+import {
+  createSelectorWithDependencies as createSelector,
+  registerSelectors,
+} from 'reselect-tools';
 
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
 const getFitPlaneGaussResultSelector = state => state.geometry.fitPlaneGauss.result;
@@ -18,3 +21,5 @@ export const getFitPlaneGaussResult = createSelector(getFitPlaneGaussResultSelec
   params.stdev,
   params.fittingErrors,
 ]);
+
+registerSelectors({ getIsCalculating, getFitPlaneGaussResult });
