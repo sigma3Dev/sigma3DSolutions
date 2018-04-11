@@ -48,7 +48,7 @@ export const pushFitChebyCircleCoords = coords => ({
 });
 
 /**
- * pushes the coordinates
+ * pushes the cylinder coordinates
  * @param {Object} coords - the coordinates file from input
  */
 export const pushFitCylinderCoords = coords => ({
