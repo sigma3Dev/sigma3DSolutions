@@ -34,6 +34,12 @@ import {
   SUBMIT_FIT_CYLINDER_COORDS_FAILURE,
 } from '../../actions/submitFitCylinderCoords/submitFitCylinderCoordsActions';
 
+import {
+  SUBMIT_FIT_POINT_COORDS_REQUEST,
+  SUBMIT_FIT_POINT_COORDS_SUCCESS,
+  SUBMIT_FIT_POINT_COORDS_FAILURE,
+} from '../../actions/submitFitPointCoords/submitFitPointCoordsActions';
+
 /*  true when a request has been sent, but no response or error has returned yet */
 const initialCalculationStateData = {
   isCalculating: false,
@@ -133,6 +139,21 @@ function calculationStatus(state = initialCalculationStateData, action) {
         isCalculating: false,
       };
     case SUBMIT_FIT_CYLINDER_COORDS_FAILURE:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_FIT_POINT_COORDS_REQUEST:
+      return {
+        ...state,
+        isCalculating: true,
+      };
+    case SUBMIT_FIT_POINT_COORDS_SUCCESS:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_FIT_POINT_COORDS_FAILURE:
       return {
         ...state,
         isCalculating: false,

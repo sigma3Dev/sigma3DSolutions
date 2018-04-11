@@ -1,14 +1,14 @@
-import { PUSH_CHEBYSHEV_CIRCLE_FIT_COORDINATES } from '../../../../actions/pushChebyshevCircleFitCoords/pushChebyshevCircleFitCoordsActions';
+import { PUSH_FIT_CHEBY_CIRCLE_COORDS } from '../../../../actions/pushCoords/pushCoordsActions';
 import { CLEAR_CHEBYSHEV_INPUT } from '../../../../actions/clearInput/clearInputActions';
 import chebyshevCircleFitDataInputReducer from './chebyshevCircleFitDataInputReducer';
 
 describe('chebyshevCircleFitDataInputReducer', () => {
-  it('should handle PUSH_CHEBYSHEV_CIRCLE_FIT_COORDINATES', () => {
+  it('should handle PUSH_FIT_CHEBY_CIRCLE_COORDS', () => {
     const state = {
       circlePoints: [],
     };
     const action = {
-      type: PUSH_CHEBYSHEV_CIRCLE_FIT_COORDINATES,
+      type: PUSH_FIT_CHEBY_CIRCLE_COORDS,
       coords: [
         {
           x: 1.0,

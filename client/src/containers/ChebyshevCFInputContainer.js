@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import ChebyshevCFInput from '../components/ChebyshevCFInput/ChebyshevCFInput';
-import { pushChebyshevCircleFitCoords } from '../actions/pushChebyshevCircleFitCoords/pushChebyshevCircleFitCoordsActions';
+import { pushFitChebyCircleCoords } from '../actions/pushCoords/pushCoordsActions';
 import { getCirclePoints } from '../selectors/ChebyshevCircleFitSelector/getChebyshevCircleFitInputDataSelector/getChebyshevCircleFitInputDataSelector';
 import { submitChebyshevCircleFitCoords } from '../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
 import { clearChebyshevInput } from '../actions/clearInput/clearInputActions';
@@ -13,7 +13,7 @@ import InfoModal from '../components/InfoModal/InfoModal';
 const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  onPushChebyshevCircleFitCoords: file => dispatch(pushChebyshevCircleFitCoords(file)),
+  onPushChebyshevCircleFitCoords: file => dispatch(pushFitChebyCircleCoords(file)),
   onSubmitChebyshevCircleFitCoords: coords => dispatch(submitChebyshevCircleFitCoords(coords)),
   onClearChebyshevInput: () => dispatch(clearChebyshevInput()),
 });
