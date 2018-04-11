@@ -21929,24 +21929,32 @@ exports[`Storyshots Start.Sidebar Sidebar for selecting App category 1`] = `
           className="logo"
         />
       </a>
-      <a
-        className="link-active"
-        href="/transformations"
-        onClick={[Function]}
+      <div
+        className="sidebar-link-container"
       >
-        <span>
-          Transformationen
-        </span>
-      </a>
-      <a
-        className="link-active"
-        href="/geometry"
-        onClick={[Function]}
+        <a
+          className="link-active"
+          href="/transformations"
+          onClick={[Function]}
+        >
+          <span>
+            Transformationen
+          </span>
+        </a>
+      </div>
+      <div
+        className="sidebar-link-container"
       >
-        <span>
-          Geometrien
-        </span>
-      </a>
+        <a
+          className="link-active"
+          href="/geometry"
+          onClick={[Function]}
+        >
+          <span>
+            Geometrien
+          </span>
+        </a>
+      </div>
     </div>
   </div>
   <button
