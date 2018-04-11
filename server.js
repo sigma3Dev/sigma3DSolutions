@@ -224,7 +224,7 @@ app.post('/fit-point', (req, res) => {
     return;
   }
 
-  sf.fitCylinder(req.body.coords, (response, isOk) => {
+  sf.fitPoint(req.body.coords, (response, isOk) => {
     if (isOk) {
       res.status(200).send(response);
     } else {
