@@ -7,6 +7,7 @@ export const PUSH_FIT_PLANE_GAUSS_COORDS = 'PUSH_FIT_PLANE_GAUSS_COORDS';
 export const PUSH_FIT_PLANE_RANSAC_COORDS = 'PUSH_FIT_PLANE_RANSAC_COORDS';
 export const PUSH_FIT_POINT_COORDS = 'PUSH_FIT_POINT_COORDS';
 export const PUSH_FIT_LINE_L_TWO_COORDS = 'PUSH_FIT_LINE_L_TWO_COORDS';
+export const PUSH_FIT_LINE_RANSAC_COORDS = 'PUSH_FIT_LINE_RANSAC_COORDS';
 
 /**
  * pushes the start system coordinates
@@ -94,6 +95,16 @@ export const pushFitPointCoords = coords => ({
  */
 export const pushFitLineL2Coords = coords => ({
   type: PUSH_FIT_LINE_L_TWO_COORDS,
+  coords,
+  receivedAt: Date.now(),
+});
+
+/**
+ * pushes the ransac line coordinates
+ * @param {Object} coords - the coordinates file from fit line points
+ */
+export const pushFitLineRansacCoords = coords => ({
+  type: PUSH_FIT_LINE_RANSAC_COORDS,
   coords,
   receivedAt: Date.now(),
 });

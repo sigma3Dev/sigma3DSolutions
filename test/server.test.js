@@ -153,3 +153,15 @@ describe('POST /fit-line-l-two', () => {
       .expect(400, done);
   });
 });
+
+describe('POST /fit-line-ransac', () => {
+  it('returns a string and status code 400 upon wrong input', (done) => {
+    request(app)
+      .post('/fit-line-ransac')
+      .send({
+        wrongData: null,
+      })
+      .expect('Content-Type', 'text/html; charset=utf-8')
+      .expect(400, done);
+  });
+});

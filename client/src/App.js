@@ -15,6 +15,8 @@ import FitPointInputContainer from './containers/FitPointInputContainer';
 import FitPointResultContainer from './containers/FitPointResultContainer';
 import FitLineL2InputContainer from './containers/FitLineL2InputContainer';
 import FitLineL2ResultContainer from './containers/FitLineL2ResultContainer';
+import FitLineRansacInputContainer from './containers/FitLineRansacInputContainer';
+import FitLineRansacResultContainer from './containers/FitLineRansacResultContainer';
 import ParamInversionContainer from './containers/ParamInversionContainer';
 import QuatCardanContainer from './containers/QuatCardanContainer';
 import StartScreenContainer from './containers/StartScreenContainer';
@@ -70,6 +72,8 @@ const App = () => (
       <Route path='/geometry/fit-point/result' component={FitPointResultContainer} />
       <Route path='/geometry/fit-line-l-two/data-input' component={FitLineL2InputContainer} />
       <Route path='/geometry/fit-line-l-two/result' component={FitLineL2ResultContainer} />
+      <Route path='/geometry/fit-line-ransac/data-input' component={FitLineRansacInputContainer} />
+      <Route path='/geometry/fit-line-ransac/result' component={FitLineRansacResultContainer} />
       <Redirect from='*' to='/' />
     </Switch>
   </div>
