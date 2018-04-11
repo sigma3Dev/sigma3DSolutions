@@ -40,6 +40,12 @@ import {
   SUBMIT_FIT_POINT_COORDS_FAILURE,
 } from '../../actions/submitFitPointCoords/submitFitPointCoordsActions';
 
+import {
+  SUBMIT_FIT_LINE_L_TWO_COORDS_REQUEST,
+  SUBMIT_FIT_LINE_L_TWO_COORDS_SUCCESS,
+  SUBMIT_FIT_LINE_L_TWO_COORDS_FAILURE,
+} from '../../actions/submitFitLineL2Coords/submitFitLineL2CoordsActions';
+
 /*  true when a request has been sent, but no response or error has returned yet */
 const initialCalculationStateData = {
   isCalculating: false,
@@ -154,6 +160,21 @@ function calculationStatus(state = initialCalculationStateData, action) {
         isCalculating: false,
       };
     case SUBMIT_FIT_POINT_COORDS_FAILURE:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_FIT_LINE_L_TWO_COORDS_REQUEST:
+      return {
+        ...state,
+        isCalculating: true,
+      };
+    case SUBMIT_FIT_LINE_L_TWO_COORDS_SUCCESS:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_FIT_LINE_L_TWO_COORDS_FAILURE:
       return {
         ...state,
         isCalculating: false,

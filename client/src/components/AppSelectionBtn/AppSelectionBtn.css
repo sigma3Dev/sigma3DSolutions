@@ -7,7 +7,7 @@
   width: 250px;
   padding: 15px;
   margin: 20px 0px 20px 0px;
-  border-radius:10px;
+  border-radius: 10px;
   background: white;
 }
 
@@ -79,6 +79,11 @@
 
 .app-selection-btn .s3d-icon[data-category='fitCylinder'] {
   background-image: url('../../images/Cylinder.svg');
+  background-size: 100% 100%;
+}
+
+.app-selection-btn .s3d-icon[data-category='fitLineL2'] {
+  background-image: url('../../images/3DLine.svg');
   background-size: 100% 100%;
 }
 

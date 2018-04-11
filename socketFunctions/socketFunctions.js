@@ -301,6 +301,29 @@ const fitPoint= (coords, callback) => {
     });
 };
 
+const fitLineL2= (coords, callback) => {
+  globalIdCounter += 1;
+  const points = coords.lineL2Points;
+  const requestObj = comm.fitLineL2(points, globalIdCounter);
+
+  const socket = getWebSocket()
+    .then((socket) => {
+      socket.onerror = (error) => {
+        callback(error, false);
+      };
+
+      socket.onmessage = (e) => {
+        const response = e.data;
+        callback(response, true);
+      };
+
+      socket.send(requestObj);
+    })
+    .catch((err) => {
+      callback(err, false);
+    });
+};
+
 module.exports = {
   threeDTrafoSendToSocket,
   paramInversionSendToSocket,
@@ -313,4 +336,5 @@ module.exports = {
   fitPoint,
   quatToCardan,
   cardanToQuat,
+  fitLineL2,
 };

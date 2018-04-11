@@ -1,0 +1,22 @@
+.fit-line-l2-input {
+  width: 62vw;
+  margin-top: 5vh;
+  margin-left: 16vw;
+  font-family: Roboto;
+}
+
+.fit-line-l2-input * {
+  text-align: center;
+}
+
+.fit-line-l2-input h1 {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 3px solid #0270a5;
+  padding: 0 50px 5px;
+  margin: 20px 300px;
+}
+
+.fit-line-l2-input h1 .info-btn {
+  font-size: 0.6em;
+}

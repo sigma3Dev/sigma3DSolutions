@@ -6,6 +6,7 @@ export const CLEAR_PLANE_GAUSS_INPUT = 'CLEAR_PLANE_GAUSS_INPUT';
 export const CLEAR_PLANE_RANSAC_INPUT = 'CLEAR_PLANE_RANSAC_INPUT';
 export const CLEAR_CYLINDER_INPUT = 'CLEAR_CYLINDER_INPUT';
 export const CLEAR_POINT_INPUT = 'CLEAR_POINT_INPUT';
+export const CLEAR_LINE_L_TWO_INPUT = 'CLEAR_LINE_L_TWO_INPUT';
 
 /** clears the 3dTrafo6W start input */
 export const clearThreeDTrafo6WStartInput = () => ({
@@ -52,5 +53,11 @@ export const clearCylinderInput = () => ({
 /** clears any point input */
 export const clearPointInput = () => ({
   type: CLEAR_POINT_INPUT,
+  receivedAt: Date.now(),
+});
+
+/** clears any line input */
+export const clearLineL2Input = () => ({
+  type: CLEAR_LINE_L_TWO_INPUT,
   receivedAt: Date.now(),
 });

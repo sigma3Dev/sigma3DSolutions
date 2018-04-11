@@ -82,6 +82,9 @@ const StartScreen = () => (
           <li>
             <FormattedMessage id='StartScreen.element.fitPoint' defaultMessage='Point' />
           </li>
+          <li>
+            <FormattedMessage id='StartScreen.element.fitLineL2' defaultMessage='Line' />
+          </li>
         </ul>
       </div>
     </div>

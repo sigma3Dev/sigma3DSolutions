@@ -30,6 +30,10 @@ class GeometryScreenContainer extends Component {
         type: 'fitPoint',
         link: '/geometry/fit-point/data-input',
       },
+      {
+        type: 'fitLineL2',
+        link: '/geometry/fit-line-l-two/data-input',
+      },
     ];
     return (
       <div>

@@ -8,6 +8,7 @@ import { SUBMIT_FIT_PLANE_GAUSS_COORDS_FAILURE } from '../../actions/submitFitPl
 import { SUBMIT_FIT_PLANE_RANSAC_COORDS_FAILURE } from '../../actions/submitFitPlaneRansacCoords/submitFitPlaneRansacCoordsActions';
 import { SUBMIT_FIT_CYLINDER_COORDS_FAILURE } from '../../actions/submitFitCylinderCoords/submitFitCylinderCoordsActions';
 import { SUBMIT_FIT_POINT_COORDS_FAILURE } from '../../actions/submitFitPointCoords/submitFitPointCoordsActions';
+import { SUBMIT_FIT_LINE_L_TWO_COORDS_FAILURE } from '../../actions/submitFitLineL2Coords/submitFitLineL2CoordsActions';
 
 const initialErrorState = { error: null };
 
@@ -65,6 +66,11 @@ function errorHandling(state = initialErrorState, action) {
         error: action.error,
       };
     case SUBMIT_FIT_POINT_COORDS_FAILURE:
+      return {
+        ...state,
+        error: action.error,
+      };
+    case SUBMIT_FIT_LINE_L_TWO_COORDS_FAILURE:
       return {
         ...state,
         error: action.error,
