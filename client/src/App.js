@@ -11,6 +11,8 @@ import FitPlaneGaussInputContainer from './containers/FitPlaneGaussInputContaine
 import FitPlaneGaussResultContainer from './containers/FitPlaneGaussResultContainer';
 import FitPlaneRansacInputContainer from './containers/FitPlaneRansacInputContainer';
 import FitPlaneRansacResultContainer from './containers/FitPlaneRansacResultContainer';
+import FitPointInputContainer from './containers/FitPointInputContainer';
+import FitPointResultContainer from './containers/FitPointResultContainer';
 import ParamInversionContainer from './containers/ParamInversionContainer';
 import QuatCardanContainer from './containers/QuatCardanContainer';
 import StartScreenContainer from './containers/StartScreenContainer';
@@ -60,14 +62,10 @@ const App = () => (
         component={FitPlaneRansacInputContainer}
       />
       <Route path='/geometry/fit-plane-ransac/result' component={FitPlaneRansacResultContainer} />
-      <Route
-        path='/geometry/fit-cylinder/data-input'
-        component={FitCylinderInputContainer}
-      />
-      <Route
-        path='/geometry/fit-cylinder/result'
-        component={FitCylinderResultContainer}
-      />
+      <Route path='/geometry/fit-cylinder/data-input' component={FitCylinderInputContainer} />
+      <Route path='/geometry/fit-cylinder/result' component={FitCylinderResultContainer} />
+      <Route path='/geometry/fit-point/data-input' component={FitPointInputContainer} />
+      <Route path='/geometry/fit-point/result' component={FitPointResultContainer} />
       <Redirect from='*' to='/' />
     </Switch>
   </div>

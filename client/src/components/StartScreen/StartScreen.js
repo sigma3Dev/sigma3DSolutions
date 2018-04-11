@@ -11,7 +11,7 @@ const StartScreen = () => (
     <h1 className='header'>
       <FormattedMessage
         id='StartScreen.header.welcome'
-        defaultMessage='Welcome to sigma3DSolutions'
+        defaultMessage='Welcome to sigma3DSolutions!'
       />
     </h1>
     <h2 className='subheader'>
@@ -78,6 +78,9 @@ const StartScreen = () => (
           </li>
           <li>
             <FormattedMessage id='StartScreen.element.fitCylinder' defaultMessage='Cylinder' />
+          </li>
+          <li>
+            <FormattedMessage id='StartScreen.element.fitPoint' defaultMessage='Point' />
           </li>
         </ul>
       </div>

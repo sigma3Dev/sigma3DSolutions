@@ -26,6 +26,10 @@ class GeometryScreenContainer extends Component {
         type: 'fitCylinder',
         link: '/geometry/fit-cylinder/data-input',
       },
+      {
+        type: 'fitPoint',
+        link: '/geometry/fit-point/data-input',
+      },
     ];
     return (
       <div>

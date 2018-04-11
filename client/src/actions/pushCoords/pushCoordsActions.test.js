@@ -11,9 +11,13 @@ import {
   pushFitPlaneRansacCoords,
   PUSH_FIT_CYLINDER_COORDS,
   pushFitCylinderCoords,
+  PUSH_FIT_POINT_COORDS,
+  pushFitPointCoords,
+  PUSH_FIT_CHEBY_CIRCLE_COORDS,
+  pushFitChebyCircleCoords,
 } from './pushCoordsActions';
 
-describe('pushThreeDTrafoCoordsActions', () => {
+describe('pushCoordsActions', () => {
   it('should create a PUSH_3D_TRAFO_START_SYSTEM_COORDS action', () => {
     const startSystemPoints = [
       {
@@ -151,6 +155,50 @@ describe('pushThreeDTrafoCoordsActions', () => {
       coords: points,
     };
     const result = pushFitCylinderCoords(points);
+    expect(result.type).toEqual(expected.type);
+    expect(result.coords).toEqual(expected.coords);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a PUSH_FIT_POINT_COORDS action', () => {
+    const points = [
+      {
+        x: 1.0,
+        y: 2.0,
+        z: 3.0,
+      },
+      {
+        x: 4.0,
+        y: 5.0,
+        z: 6.0,
+      },
+    ];
+    const expected = {
+      type: PUSH_FIT_POINT_COORDS,
+      coords: points,
+    };
+    const result = pushFitPointCoords(points);
+    expect(result.type).toEqual(expected.type);
+    expect(result.coords).toEqual(expected.coords);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a PUSH_FIT_CHEBY_CIRCLE_COORDS action', () => {
+    const points = [
+      {
+        x: 1.0,
+        y: 2.0,
+        z: 3.0,
+      },
+      {
+        x: 4.0,
+        y: 5.0,
+        z: 6.0,
+      },
+    ];
+    const expected = {
+      type: PUSH_FIT_CHEBY_CIRCLE_COORDS,
+      coords: points,
+    };
+    const result = pushFitChebyCircleCoords(points);
     expect(result.type).toEqual(expected.type);
     expect(result.coords).toEqual(expected.coords);
     expect(result.receivedAt).toBeDefined();
