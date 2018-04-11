@@ -129,3 +129,15 @@ describe('POST /fit-cylinder', () => {
       .expect(400, done);
   });
 });
+
+describe('POST /fit-point', () => {
+  it('returns a string and status code 400 upon wrong input', (done) => {
+    request(app)
+      .post('/fit-point')
+      .send({
+        wrongData: null,
+      })
+      .expect('Content-Type', 'text/html; charset=utf-8')
+      .expect(400, done);
+  });
+});
