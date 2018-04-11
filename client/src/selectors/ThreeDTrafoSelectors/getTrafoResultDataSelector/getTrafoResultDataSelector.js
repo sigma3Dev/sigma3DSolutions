@@ -1,4 +1,7 @@
-import { createSelector } from 'reselect';
+import {
+  createSelectorWithDependencies as createSelector,
+  registerSelectors,
+} from 'reselect-tools';
 import { getTargetSystemPoints } from '../getTrafoInputDataSelector/getTrafoInputDataSelector';
 
 const getTrafoParamsSelector = state => state.transformations.threeDTrafo.result;
@@ -37,3 +40,10 @@ export const getTransformedStartPoints = createSelector(
     ]);
   },
 );
+
+registerSelectors({
+  getTrafoParams,
+  getTrafoDifference,
+  getIsCalculating,
+  getTransformedStartPoints,
+});

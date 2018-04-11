@@ -1,4 +1,7 @@
-import { createSelector } from 'reselect';
+import {
+  createSelectorWithDependencies as createSelector,
+  registerSelectors,
+} from 'reselect-tools';
 
 const getQuatSelector = state => state.transformations.quatCardan.quatCardan.quat;
 const getCardanSelector = state => state.transformations.quatCardan.quatCardan.cardan;
@@ -15,3 +18,5 @@ export const getCardan = createSelector(getCardanSelector, params => [
   params.Ry,
   params.Rz,
 ]);
+
+registerSelectors({ getQuat, getCardan });

@@ -1,4 +1,7 @@
-import { createSelector } from 'reselect';
+import {
+  createSelectorWithDependencies as createSelector,
+  registerSelectors,
+} from 'reselect-tools';
 
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
 const getFitCylinderResultSelector = state => state.geometry.fitCylinder.result;
@@ -19,3 +22,5 @@ export const getFitCylinderResult = createSelector(getFitCylinderResultSelector,
   params.stdev,
   params.fittingErrors,
 ]);
+
+registerSelectors({ getIsCalculating, getFitCylinderResult });

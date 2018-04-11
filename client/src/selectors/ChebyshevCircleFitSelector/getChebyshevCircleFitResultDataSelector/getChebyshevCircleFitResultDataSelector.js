@@ -1,4 +1,7 @@
-import { createSelector } from 'reselect';
+import {
+  createSelectorWithDependencies as createSelector,
+  registerSelectors,
+} from 'reselect-tools';
 
 const getChebyshevCircleFitResultSelector = state => state.geometry.chebyshevCircleFit.result;
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
@@ -22,3 +25,5 @@ export const getIsCalculating = createSelector(
   getIsCalculatingSelector,
   isCalculating => isCalculating,
 );
+
+registerSelectors({ getChebyshevCircleFitResult, getIsCalculating });

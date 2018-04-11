@@ -1,4 +1,7 @@
-import { createSelector } from 'reselect';
+import {
+  createSelectorWithDependencies as createSelector,
+  registerSelectors,
+} from 'reselect-tools';
 
 const getParamInversionSelector = state => state.transformations.paramInversion.paramInversion;
 
@@ -12,3 +15,5 @@ export const getParamInversion = createSelector(getParamInversionSelector, param
   params.q3.toFixed(4),
   params.m.toFixed(1),
 ]);
+
+registerSelectors({ getParamInversion });
