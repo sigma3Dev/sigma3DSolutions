@@ -23442,7 +23442,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
             className="app-selection-btn-caption"
           >
             <span>
-              3D-Transformation
+              3D-TRANSFORMATION
             </span>
           </div>
           <div
@@ -23470,7 +23470,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
             className="app-selection-btn-caption"
           >
             <span>
-              Parameterinversion
+              PARAMETERINVERSION
             </span>
           </div>
           <div
