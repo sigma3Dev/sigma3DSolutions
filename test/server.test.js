@@ -177,3 +177,15 @@ describe('POST /fit-circle-l-two', () => {
       .expect(400, done);
   });
 });
+
+describe('POST /fit-sphere', () => {
+  it('returns a string and status code 400 upon wrong input', (done) => {
+    request(app)
+      .post('/fit-sphere')
+      .send({
+        wrongData: null,
+      })
+      .expect('Content-Type', 'text/html; charset=utf-8')
+      .expect(400, done);
+  });
+});

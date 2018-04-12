@@ -291,6 +291,25 @@ app.post('/fit-circle-l-two', (req, res) => {
   });
 });
 
+app.post('/fit-sphere', (req, res) => {
+  if (
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'spherePoints') ||
+    !Array.isArray(req.body.coords.spherePoints)
+  ) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  }
+
+  sf.fitCircleL2(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      res.status(500).send(response);
+    }
+  });
+});
+
 app.listen(app.get('port'), () => {
   console.log('Server is running...');
 });

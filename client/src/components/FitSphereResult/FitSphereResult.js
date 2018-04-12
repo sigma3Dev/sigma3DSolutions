@@ -16,7 +16,7 @@ const FitSphereResult = ({ params, handleReturnClick }) => {
       </h1>
       <FitSphereResultTable params={params} copyText={copyText} />
       <div className='bar-graph'>
-        <FittingErrorBarGraph errors={params[8]} />
+        <FittingErrorBarGraph errors={params[5]} />
       </div>
       <BackToInputBtn handleClick={handleReturnClick} />
     </div>
