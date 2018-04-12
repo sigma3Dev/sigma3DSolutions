@@ -77,6 +77,11 @@
   background-size: 100% 100%;
 }
 
+.app-selection-btn .s3d-icon[data-category='fitCircleL2'] {
+  background-image: url('../../images/3DCircle.svg');
+  background-size: 100% 100%;
+}
+
 .app-selection-btn .s3d-icon[data-category='fitCylinder'] {
   background-image: url('../../images/Cylinder.svg');
   background-size: 100% 100%;

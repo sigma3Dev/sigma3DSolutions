@@ -5,6 +5,8 @@ import ApplyTransformationResultContainer from './containers/ApplyTransformation
 import ChebyshevCFInputContainer from './containers/ChebyshevCFInputContainer';
 import ChebyshevCFResultContainer from './containers/ChebyshevCFResultContainer';
 import GeometryScreenContainer from './containers/GeometryScreenContainer';
+import FitCircleL2InputContainer from './containers/FitCircleL2InputContainer';
+import FitCircleL2ResultContainer from './containers/FitCircleL2ResultContainer';
 import FitCylinderInputContainer from './containers/FitCylinderInputContainer';
 import FitCylinderResultContainer from './containers/FitCylinderResultContainer';
 import FitPlaneGaussInputContainer from './containers/FitPlaneGaussInputContainer';
@@ -74,6 +76,8 @@ const App = () => (
       <Route path='/geometry/fit-line-l-two/result' component={FitLineL2ResultContainer} />
       <Route path='/geometry/fit-line-ransac/data-input' component={FitLineRansacInputContainer} />
       <Route path='/geometry/fit-line-ransac/result' component={FitLineRansacResultContainer} />
+      <Route path='/geometry/fit-circle-l-two/data-input' component={FitCircleL2InputContainer} />
+      <Route path='/geometry/fit-circle-l-two/result' component={FitCircleL2ResultContainer} />
       <Redirect from='*' to='/' />
     </Switch>
   </div>

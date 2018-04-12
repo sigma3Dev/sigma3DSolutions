@@ -8,6 +8,7 @@ export const CLEAR_CYLINDER_INPUT = 'CLEAR_CYLINDER_INPUT';
 export const CLEAR_POINT_INPUT = 'CLEAR_POINT_INPUT';
 export const CLEAR_LINE_L_TWO_INPUT = 'CLEAR_LINE_L_TWO_INPUT';
 export const CLEAR_LINE_RANSAC_INPUT = 'CLEAR_LINE_RANSAC_INPUT';
+export const CLEAR_CIRCLE_L_TWO_INPUT = 'CLEAR_CIRCLE_L_TWO_INPUT';
 
 /** clears the 3dTrafo6W start input */
 export const clearThreeDTrafo6WStartInput = () => ({
@@ -66,5 +67,11 @@ export const clearLineL2Input = () => ({
 /** clears any ransac line input */
 export const clearLineRansacInput = () => ({
   type: CLEAR_LINE_RANSAC_INPUT,
+  receivedAt: Date.now(),
+});
+
+/** clears any circleL2 input */
+export const clearCircleL2Input = () => ({
+  type: CLEAR_CIRCLE_L_TWO_INPUT,
   receivedAt: Date.now(),
 });
