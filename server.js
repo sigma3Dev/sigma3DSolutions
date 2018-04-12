@@ -77,7 +77,7 @@ app.post('/param-inversion', (req, res) => {
 });
 
 /** calculate chebyshev circle fit */
-app.post('/calculate-chebyshev-circle-fit', (req, res) => {
+app.post('/fit-circle-chebyshev', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
     !Array.isArray(req.body.coords) ||

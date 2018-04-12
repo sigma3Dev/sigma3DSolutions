@@ -6,7 +6,7 @@ import PointsTable from '../PointsTable/PointsTable';
 import SubmitBtn from '../SubmitBtn/SubmitBtn';
 import InfoBtn from '../InfoBtn/InfoBtn';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
-import './ChebyshevCFInput.css';
+import './FitCircleChebyshevInput.css';
 
 /**
  * page for chebyshev-circle-fit data inputs
@@ -18,7 +18,7 @@ import './ChebyshevCFInput.css';
  * @param {Array} isInfoOpen - is info panel open?
  * @returns {*} chebyshev-circle-fit - .jsx Element
  */
-const ChebyshevCFInput = ({
+const FitCircleChebyshevInput = ({
   onFileDrop,
   circlePoints,
   handleInfoClick,
@@ -31,7 +31,7 @@ const ChebyshevCFInput = ({
     <div className='chebyshev-circle-fit-input'>
       <h1>
         <FormattedMessage
-          id='ChebyshevCFInput.label.circlePointsCaption'
+          id='FitCircleChebyshevInput.label.circlePointsCaption'
           defaultMessage='Circle Points:'
         />
         <div className='info-section'>
@@ -46,7 +46,7 @@ const ChebyshevCFInput = ({
   </div>
 );
 
-ChebyshevCFInput.propTypes = {
+FitCircleChebyshevInput.propTypes = {
   onFileDrop: PropTypes.func.isRequired,
   handleInfoClick: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
@@ -56,4 +56,4 @@ ChebyshevCFInput.propTypes = {
   infoPanelText: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default ChebyshevCFInput;
+export default FitCircleChebyshevInput;

@@ -4,11 +4,11 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
-import ChebyshevCFInput from './ChebyshevCFInput';
+import FitCircleChebyshevInput from './FitCircleChebyshevInput';
 
 const StoryRouter = require('storybook-router');
 
-const stories = storiesOf('Start.ChebyshevCFInput', module);
+const stories = storiesOf('Start.FitCircleChebyshevInput', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));
 stories.addDecorator(withKnobs);
 stories.addDecorator(StoryRouter.default());
@@ -21,5 +21,5 @@ const systemPoints = [
 ];
 
 stories.add('Page for inputting data for chebyshev-circle-fit - DontTest', () => (
-  <ChebyshevCFInput onFileDrop={() => {}} circlePoints={systemPoints} />
+  <FitCircleChebyshevInput onFileDrop={() => {}} circlePoints={systemPoints} />
 ));

@@ -1,10 +1,10 @@
 import { createSelector } from 'reselect';
 
-const getChebyshevCircleFitResultSelector = state => state.geometry.chebyshevCircleFit.result;
+const getFitCircleChebyshevResultSelector = state => state.geometry.fitCircleChebyshev.result;
 const getIsCalculatingSelector = state => state.calculationStatus.isCalculating;
 
-export const getChebyshevCircleFitResult = createSelector(
-  getChebyshevCircleFitResultSelector,
+export const getFitCircleChebyshevResult = createSelector(
+  getFitCircleChebyshevResultSelector,
   params => [
     params.x,
     params.y,

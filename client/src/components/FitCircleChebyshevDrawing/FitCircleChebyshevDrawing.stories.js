@@ -4,11 +4,11 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs, number } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
-import ChebyshevCFDrawing from './ChebyshevCFDrawing';
+import FitCircleChebyshevDrawing from './FitCircleChebyshevDrawing';
 
 const StoryRouter = require('storybook-router');
 
-const stories = storiesOf('Start.ChebyshevCFDrawing', module);
+const stories = storiesOf('Start.FitCircleChebyshevDrawing', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));
 stories.addDecorator(withKnobs);
 stories.addDecorator(StoryRouter.default());
@@ -18,14 +18,14 @@ stories.add(
   () => {
     const radius = (81.0).toFixed(2);
     const chebyDist = (3.88).toFixed(2);
-    return <ChebyshevCFDrawing radius={radius} chebyDist={chebyDist} />;
+    return <FitCircleChebyshevDrawing radius={radius} chebyDist={chebyDist} />;
   },
 );
 
 stories.add('chebyshev circle with high radius or chebyDist', () => {
   const radius = number('radius', (1081.0).toFixed(2));
   const chebyDist = number('chebyDist', (13.88).toFixed(2));
-  return <ChebyshevCFDrawing radius={radius} chebyDist={chebyDist} />;
+  return <FitCircleChebyshevDrawing radius={radius} chebyDist={chebyDist} />;
 });
 
 stories.add('chebyshev circle with 100 circle points in svg', () => {
@@ -124,7 +124,7 @@ stories.add('chebyshev circle with 100 circle points in svg', () => {
     { x: 197.05, y: -28.83 },
     { x: 197.51, y: -12.95 },
   ];
-  return <ChebyshevCFDrawing radius={radius} chebyDist={chebyDist} points={points} />;
+  return <FitCircleChebyshevDrawing radius={radius} chebyDist={chebyDist} points={points} />;
 });
 
 stories.add('chebyshev circle with circle points in svg (scale=1)', () => {
@@ -156,7 +156,7 @@ stories.add('chebyshev circle with circle points in svg (scale=1)', () => {
     { x: 173.21, y: -100.0 },
     { x: 193.19, y: -51.76 },
   ];
-  return <ChebyshevCFDrawing radius={radius} chebyDist={chebyDist} points={points} />;
+  return <FitCircleChebyshevDrawing radius={radius} chebyDist={chebyDist} points={points} />;
 });
 
 stories.add('chebyshev circle with circle points in svg (scale=0.2)', () => {
@@ -189,7 +189,7 @@ stories.add('chebyshev circle with circle points in svg (scale=0.2)', () => {
     { x: 866.03, y: -500.0 },
     { x: 965.93, y: -258.82 },
   ];
-  return <ChebyshevCFDrawing radius={radius} chebyDist={chebyDist} points={points} />;
+  return <FitCircleChebyshevDrawing radius={radius} chebyDist={chebyDist} points={points} />;
 });
 
 stories.add('chebyshev circle with 1500 circle points in svg', () => {
@@ -1696,5 +1696,5 @@ stories.add('chebyshev circle with 1500 circle points in svg', () => {
     { x: -161.72, y: 93.03 },
     { x: -161.18, y: 93.92 },
   ];
-  return <ChebyshevCFDrawing radius={radius} chebyDist={chebyDist} points={points} />;
+  return <FitCircleChebyshevDrawing radius={radius} chebyDist={chebyDist} points={points} />;
 });

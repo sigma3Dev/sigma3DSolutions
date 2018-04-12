@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import chebyshevCircleFitDataInputReducer from './chebyshevCircleFitDataInputReducer/chebyshevCircleFitDataInputReducer';
-import chebyshevCircleFitResultReducer from './chebyshevCircleFitResultReducer/chebyshevCircleFitResultReducer';
+import fitCircleChebyshevDataInputReducer from './fitCircleChebyshevDataInputReducer/fitCircleChebyshevDataInputReducer';
+import fitCircleChebyshevResultReducer from './fitCircleChebyshevResultReducer/fitCircleChebyshevResultReducer';
 
 export default combineReducers({
-  input: chebyshevCircleFitDataInputReducer,
-  result: chebyshevCircleFitResultReducer,
+  input: fitCircleChebyshevDataInputReducer,
+  result: fitCircleChebyshevResultReducer,
 });

@@ -1,13 +1,13 @@
 import {
-  getChebyshevCircleFitResult,
+  getFitCircleChebyshevResult,
   getIsCalculating,
-} from './getChebyshevCircleFitResultDataSelector';
+} from './getFitCircleChebyshevResultDataSelector';
 
-describe('getChebyshevCircleFitResultDataSelector Used By ChebyshevCFInputContainer', () => {
-  it('getChebyshevCircleFitResult', () => {
+describe('getFitCircleChebyshevResultDataSelector Used By FitCircleChebyshevInputContainer', () => {
+  it('getFitCircleChebyshevResult', () => {
     const state = {
       geometry: {
-        chebyshevCircleFit: {
+        fitCircleChebyshev: {
           result: {
             x: 0.01,
             y: 0.01,
@@ -23,7 +23,7 @@ describe('getChebyshevCircleFitResultDataSelector Used By ChebyshevCFInputContai
       },
     };
     const expected = [0.01, 0.01, 0.01, 0.000001, 0.000001, 1.000001, 1.01, 0.01, 0.01];
-    const result = getChebyshevCircleFitResult(state);
+    const result = getFitCircleChebyshevResult(state);
     expect(result).toEqual(expected);
   });
   it('getIsCalculating', () => {

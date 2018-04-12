@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import chebyshevCircleFitReducer from './chebyshevCircleFit/chebyshevCircleFitReducer';
+import fitCircleChebyshevReducer from './fitCircleChebyshev/fitCircleChebyshevReducer';
 import fitPlaneGaussReducer from './fitPlaneGauss/fitPlaneGaussReducer';
 import fitPlaneRansacReducer from './fitPlaneRansac/fitPlaneRansacReducer';
 import fitCylinderReducer from './fitCylinder/fitCylinderReducer';
@@ -11,7 +11,7 @@ import fitSphereReducer from './fitSphere/fitSphereReducer';
 
 // try to keep alphabetical order here
 export default combineReducers({
-  chebyshevCircleFit: chebyshevCircleFitReducer,
+  fitCircleChebyshev: fitCircleChebyshevReducer,
   fitCircleL2: fitCircleL2Reducer,
   fitCylinder: fitCylinderReducer,
   fitLineL2: fitLineL2Reducer,

@@ -46,10 +46,10 @@ describe('POST /param-inversion', () => {
   });
 });
 
-describe('POST /calculate-chebyshev-circle-fit', () => {
+describe('POST /fit-circle-chebyshev', () => {
   it('returns a string and status code 400 upon wrong input', (done) => {
     request(app)
-      .post('/calculate-chebyshev-circle-fit')
+      .post('/fit-circle-chebyshev')
       .send({
         wrongData: null,
       })

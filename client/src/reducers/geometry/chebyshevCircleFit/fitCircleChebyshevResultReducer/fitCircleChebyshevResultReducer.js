@@ -1,4 +1,4 @@
-import { SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS } from '../../../../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
+import { SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_SUCCESS } from '../../../../actions/submitFitCircleChebyshevCoords/submitFitCircleChebyshevCoordsActions';
 
 const initialResultData = {
   x: 0.0,
@@ -18,9 +18,9 @@ const initialResultData = {
  * @param {Object} action - action to be executed
  * @returns {Object} state - updated State
  */
-function chebyshevCircleFitResult(state = initialResultData, action) {
+function fitCircleChebyshevResult(state = initialResultData, action) {
   switch (action.type) {
-    case SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS:
+    case SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_SUCCESS:
       return {
         ...state,
         x: action.response.data.result.x,
@@ -38,4 +38,4 @@ function chebyshevCircleFitResult(state = initialResultData, action) {
   }
 }
 
-export default chebyshevCircleFitResult;
+export default fitCircleChebyshevResult;

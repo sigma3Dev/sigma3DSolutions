@@ -2,18 +2,18 @@ import { PUSH_FIT_CHEBY_CIRCLE_COORDS } from '../../../../actions/pushCoords/pus
 
 import { CLEAR_CHEBYSHEV_INPUT } from '../../../../actions/clearInput/clearInputActions';
 
-/* Holds the initial ChebyshevCircleFit data input. */
-const initialChebyshevCircleFitData = {
+/* Holds the initial FitCircleChebyshev data input. */
+const initialFitCircleChebyshevData = {
   circlePoints: [],
 };
 
 /**
  * Handles all kinds of chebyshev circle fit data input
- * @param {Object} state - current ChebyshevCircleFit data state
+ * @param {Object} state - current FitCircleChebyshev data state
  * @param {Object} action - action to be executed
  * @returns {Object} state - updated State
  */
-function chebyshevCircleFitDataInput(state = initialChebyshevCircleFitData, action) {
+function fitCircleChebyshevDataInput(state = initialFitCircleChebyshevData, action) {
   switch (action.type) {
     case PUSH_FIT_CHEBY_CIRCLE_COORDS:
       return {
@@ -30,4 +30,4 @@ function chebyshevCircleFitDataInput(state = initialChebyshevCircleFitData, acti
   }
 }
 
-export default chebyshevCircleFitDataInput;
+export default fitCircleChebyshevDataInput;

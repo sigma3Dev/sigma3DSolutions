@@ -1,9 +1,9 @@
 import { createSelector } from 'reselect';
 
-const getChebyshevCircleFitInputDataSelector = state =>
-  state.geometry.chebyshevCircleFit.input.circlePoints;
+const getFitCircleChebyshevInputDataSelector = state =>
+  state.geometry.fitCircleChebyshev.input.circlePoints;
 
 export const getCirclePoints = createSelector(
-  getChebyshevCircleFitInputDataSelector,
+  getFitCircleChebyshevInputDataSelector,
   points => points,
 );

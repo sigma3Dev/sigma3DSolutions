@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
-import ChebyshevCFDrawing from '../ChebyshevCFDrawing/ChebyshevCFDrawing';
-import './ChebyshevCFResult.css';
+import FitCircleChebyshevDrawing from '../FitCircleChebyshevDrawing/FitCircleChebyshevDrawing';
+import './FitCircleChebyshevResult.css';
 
 const GoClippy = require('react-icons/lib/go/clippy');
 
@@ -17,20 +17,20 @@ const ClipboardIcon = React.createElement(GoClippy, null);
  * calculation
  * @param {Object} error - error that is returned from backend after unsuccessful calculation
  * @param {function} handleClick - functionality to navigate back to start screen
- * @returns {*} ChebyshevCFResult - .jsx Element
+ * @returns {*} FitCircleChebyshevResult - .jsx Element
  */
-const ChebyshevCFResult = ({ chebyshevParams, handleClick }) => {
+const FitCircleChebyshevResult = ({ chebyshevParams, handleClick }) => {
   const copyText = chebyshevParams.join(' ');
   return (
     <div className='chebyshev-circle-fit-result'>
       <h1>
         <FormattedMessage
-          id='ChebyshevCFResult.label.caption'
+          id='FitCircleChebyshevResult.label.caption'
           defaultMessage='Chebyshev Circle Fit Parameters'
         />
       </h1>
       <div className='cheby-cf-result-presentation'>
-        <ChebyshevCFDrawing
+        <FitCircleChebyshevDrawing
           radius={chebyshevParams[6].toFixed(2)}
           chebyDist={chebyshevParams[7].toFixed(2)}
         />
@@ -40,12 +40,12 @@ const ChebyshevCFResult = ({ chebyshevParams, handleClick }) => {
               <tr className='caption'>
                 <th>
                   <FormattedMessage
-                    id='ChebyshevCFResult.table.parameter'
+                    id='FitCircleChebyshevResult.table.parameter'
                     defaultMessage='Parameter'
                   />
                 </th>
                 <th>
-                  <FormattedMessage id='ChebyshevCFResult.table.value' defaultMessage='Value' />
+                  <FormattedMessage id='FitCircleChebyshevResult.table.value' defaultMessage='Value' />
                 </th>
                 <th className='copy-to-clippi'>
                   <CopyToClipboard text={copyText}>
@@ -83,14 +83,14 @@ const ChebyshevCFResult = ({ chebyshevParams, handleClick }) => {
               </tr>
               <tr>
                 <th className='cheby-cf-radius-text'>
-                  <FormattedMessage id='ChebyshevCFResult.table.radius' defaultMessage='Radius:' />
+                  <FormattedMessage id='FitCircleChebyshevResult.table.radius' defaultMessage='Radius:' />
                 </th>
                 <th>{chebyshevParams[6].toFixed(2)}</th>
               </tr>
               <tr>
                 <th className='cheby-cf-chebyDist-text'>
                   <FormattedMessage
-                    id='ChebyshevCFResult.table.chebyshevDist'
+                    id='FitCircleChebyshevResult.table.chebyshevDist'
                     defaultMessage='Chebyshev Distance:'
                   />
                 </th>
@@ -99,7 +99,7 @@ const ChebyshevCFResult = ({ chebyshevParams, handleClick }) => {
               <tr>
                 <th>
                   <FormattedMessage
-                    id='ChebyshevCFResult.table.Stdev'
+                    id='FitCircleChebyshevResult.table.Stdev'
                     defaultMessage='Error value:'
                   />
                 </th>
@@ -116,9 +116,9 @@ const ChebyshevCFResult = ({ chebyshevParams, handleClick }) => {
   );
 };
 
-ChebyshevCFResult.propTypes = {
+FitCircleChebyshevResult.propTypes = {
   handleClick: PropTypes.func.isRequired,
   chebyshevParams: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
-export default ChebyshevCFResult;
+export default FitCircleChebyshevResult;
