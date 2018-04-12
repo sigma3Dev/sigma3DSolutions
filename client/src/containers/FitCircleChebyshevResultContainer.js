@@ -5,7 +5,7 @@ import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import {
   getFitCircleChebyshevResult,
   getIsCalculating,
-} from '../selectors/FitCircleChebyshevSelector/getFitCircleChebyshevResultDataSelector/getFitCircleChebyshevResultDataSelector';
+} from '../selectors/FitCircleChebyshevSelectors/getFitCircleChebyshevResultDataSelector/getFitCircleChebyshevResultDataSelector';
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';

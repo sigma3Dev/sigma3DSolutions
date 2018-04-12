@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import FitCircleChebyshevInput from '../components/FitCircleChebyshevInput/FitCircleChebyshevInput';
 import { pushFitChebyCircleCoords } from '../actions/pushCoords/pushCoordsActions';
-import { getCirclePoints } from '../selectors/FitCircleChebyshevSelector/getFitCircleChebyshevInputDataSelector/getFitCircleChebyshevInputDataSelector';
+import { getCirclePoints } from '../selectors/FitCircleChebyshevSelectors/getFitCircleChebyshevInputDataSelector/getFitCircleChebyshevInputDataSelector';
 import { submitFitCircleChebyshevCoords } from '../actions/submitFitCircleChebyshevCoords/submitFitCircleChebyshevCoordsActions';
 import { clearChebyshevInput } from '../actions/clearInput/clearInputActions';
 import Sidebar from '../components/Sidebar/Sidebar';
