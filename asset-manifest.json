@@ -1,0 +1,19 @@
+{
+  "main.css": "static/css/main.7138516f.css",
+  "main.css.map": "static/css/main.7138516f.css.map",
+  "main.js": "static/js/main.83d55763.js",
+  "main.js.map": "static/js/main.83d55763.js.map",
+  "static/media/3DCircle.svg": "static/media/3DCircle.017c350e.svg",
+  "static/media/3DLine.svg": "static/media/3DLine.15254e4c.svg",
+  "static/media/3DLine2.svg": "static/media/3DLine2.190a3866.svg",
+  "static/media/3DTransformation.svg": "static/media/3DTransformation.b916bd58.svg",
+  "static/media/Cylinder.svg": "static/media/Cylinder.4517a5ec.svg",
+  "static/media/InvertTransformationParameters.svg": "static/media/InvertTransformationParameters.6253729c.svg",
+  "static/media/Plane.svg": "static/media/Plane.a38d8874.svg",
+  "static/media/Point.svg": "static/media/Point.200b3c6e.svg",
+  "static/media/QuatCardan.svg": "static/media/QuatCardan.fd00275e.svg",
+  "static/media/RANSACPlane.svg": "static/media/RANSACPlane.df5e046d.svg",
+  "static/media/Transform.svg": "static/media/Transform.e4fc3495.svg",
+  "static/media/chebyshev-circle.svg": "static/media/chebyshev-circle.c5ab8fb7.svg",
+  "static/media/s3dlogo.png": "static/media/s3dlogo.e6c46d17.png"
+}
