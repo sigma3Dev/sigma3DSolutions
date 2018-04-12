@@ -348,6 +348,29 @@ const fitLineRansac = (coords, callback) => {
     });
 };
 
+const fitCircleL2 = (coords, callback) => {
+  globalIdCounter += 1;
+  const points = coords.circleL2Points;
+  const requestObj = comm.fitCircleL2(points, globalIdCounter);
+
+  const socket = getWebSocket()
+    .then((socket) => {
+      socket.onerror = (error) => {
+        callback(error, false);
+      };
+
+      socket.onmessage = (e) => {
+        const response = e.data;
+        callback(response, true);
+      };
+
+      socket.send(requestObj);
+    })
+    .catch((err) => {
+      callback(err, false);
+    });
+};
+
 module.exports = {
   threeDTrafoSendToSocket,
   paramInversionSendToSocket,
@@ -362,4 +385,5 @@ module.exports = {
   fitPoint,
   quatToCardan,
   cardanToQuat,
+  fitCircleL2,
 };
