@@ -17,6 +17,8 @@ import {
   clearPointInput,
   CLEAR_LINE_L_TWO_INPUT,
   clearLineL2Input,
+  CLEAR_LINE_RANSAC_INPUT,
+  clearLineRansacInput,
 } from './clearInputActions';
 
 describe('clearInputActions', () => {
@@ -89,6 +91,14 @@ describe('clearInputActions', () => {
       type: CLEAR_LINE_L_TWO_INPUT,
     };
     const result = clearLineL2Input();
+    expect(result.type).toEqual(expected.type);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a CLEAR_LINE_RANSAC_INPUT action', () => {
+    const expected = {
+      type: CLEAR_LINE_RANSAC_INPUT,
+    };
+    const result = clearLineRansacInput();
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });
