@@ -21,6 +21,8 @@ import {
   clearLineRansacInput,
   CLEAR_CIRCLE_L_TWO_INPUT,
   clearCircleL2Input,
+  CLEAR_SPHERE_INPUT,
+  clearSphereInput,
 } from './clearInputActions';
 
 describe('clearInputActions', () => {
@@ -109,6 +111,14 @@ describe('clearInputActions', () => {
       type: CLEAR_CIRCLE_L_TWO_INPUT,
     };
     const result = clearCircleL2Input();
+    expect(result.type).toEqual(expected.type);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a CLEAR_SPHERE_INPUT action', () => {
+    const expected = {
+      type: CLEAR_SPHERE_INPUT,
+    };
+    const result = clearSphereInput();
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });

@@ -68,6 +68,9 @@ const StartScreen = () => (
             />
           </li>
           <li>
+            <FormattedMessage id='StartScreen.element.circleL2' defaultMessage='Circle L2' />
+          </li>
+          <li>
             <FormattedMessage id='StartScreen.element.fitPlaneGauss' defaultMessage='Gauss Plane' />
           </li>
           <li>
@@ -84,6 +87,12 @@ const StartScreen = () => (
           </li>
           <li>
             <FormattedMessage id='StartScreen.element.fitLineL2' defaultMessage='Line' />
+          </li>
+          <li>
+            <FormattedMessage id='StartScreen.element.fitLineRansac' defaultMessage='Line RANSAC' />
+          </li>
+          <li>
+            <FormattedMessage id='StartScreen.element.fitSphere' defaultMessage='Sphere' />
           </li>
         </ul>
       </div>
