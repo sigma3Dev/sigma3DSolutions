@@ -1,6 +1,7 @@
 {
   "name": "client",
   "version": "0.1.0",
+  "homepage": "https://sigma3dev.github.io/sigma3DSolutions",
   "private": true,
   "proxy": "http://localhost:80",
   "secure": false,

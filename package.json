@@ -1,7 +1,6 @@
 {
   "name": "fittingservicereact",
   "version": "1.0.0",
-  "homepage": "https://sigma3dev.github.io/sigma3DSolutions",
   "description": "",
   "main": "server.js",
   "scripts": {
