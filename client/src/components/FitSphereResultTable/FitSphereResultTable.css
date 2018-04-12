@@ -1,0 +1,27 @@
+.fit-sphere-result-table {
+  padding-top: 10px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fit-sphere-result-table * {
+  font-size: 1.05em;
+  text-align: center;
+}
+
+.fit-sphere-result-table th {
+  padding: 10px 0;
+}
+
+.fit-sphere-result-table .caption {
+  background-color: #d9e9f0;
+}
+
+.fit-sphere-result-table .copy {
+  font-size: 0.8em;
+  padding: 10px;
+}
+
+.fit-sphere-result-table .copy:hover {
+  cursor: pointer;
+}

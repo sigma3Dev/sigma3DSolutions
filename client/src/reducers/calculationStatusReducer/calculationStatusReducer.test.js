@@ -58,6 +58,12 @@ import {
   SUBMIT_FIT_CIRCLE_L_TWO_COORDS_FAILURE,
 } from '../../actions/submitFitCircleL2Coords/submitFitCircleL2CoordsActions';
 
+import {
+  SUBMIT_FIT_SPHERE_COORDS_REQUEST,
+  SUBMIT_FIT_SPHERE_COORDS_SUCCESS,
+  SUBMIT_FIT_SPHERE_COORDS_FAILURE,
+} from '../../actions/submitFitSphereCoords/submitFitSphereCoordsActions';
+
 import calculationStatusReducer from './calculationStatusReducer';
 
 describe('calculationStatusReducer', () => {
@@ -444,6 +450,45 @@ describe('calculationStatusReducer', () => {
     };
     const action = {
       type: SUBMIT_FIT_CIRCLE_L_TWO_COORDS_FAILURE,
+    };
+    const expectedState = {
+      isCalculating: false,
+    };
+    const result = calculationStatusReducer(state, action);
+    expect(result).toEqual(expectedState);
+  });
+  it('should handle SUBMIT_FIT_SPHERE_COORDS_REQUEST', () => {
+    const state = {
+      isCalculating: false,
+    };
+    const action = {
+      type: SUBMIT_FIT_SPHERE_COORDS_REQUEST,
+    };
+    const expectedState = {
+      isCalculating: true,
+    };
+    const result = calculationStatusReducer(state, action);
+    expect(result).toEqual(expectedState);
+  });
+  it('should handle SUBMIT_FIT_SPHERE_COORDS_SUCCESS', () => {
+    const state = {
+      isCalculating: true,
+    };
+    const action = {
+      type: SUBMIT_FIT_SPHERE_COORDS_SUCCESS,
+    };
+    const expectedState = {
+      isCalculating: false,
+    };
+    const result = calculationStatusReducer(state, action);
+    expect(result).toEqual(expectedState);
+  });
+  it('should handle SUBMIT_FIT_SPHERE_COORDS_FAILURE', () => {
+    const state = {
+      isCalculating: true,
+    };
+    const action = {
+      type: SUBMIT_FIT_SPHERE_COORDS_FAILURE,
     };
     const expectedState = {
       isCalculating: false,
