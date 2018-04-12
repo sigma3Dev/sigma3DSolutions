@@ -45,86 +45,90 @@ const ApplyTrafoInput = ({
       <div className='input-area'>
         <div className='trafo-params-input'>
           <form>
-            <label htmlFor='tx'>
-              Tx:
-              <input
-                type='text'
-                value={transformation.tx ? transformation.tx : (0).toFixed(2)}
-                onChange={handleChange}
-                name='tx'
-                autoComplete='off'
-              />
-            </label>
-            <label htmlFor='ty'>
-              Ty:
-              <input
-                type='text'
-                value={transformation.ty ? transformation.ty : (0).toFixed(2)}
-                onChange={handleChange}
-                name='ty'
-                autoComplete='off'
-              />
-            </label>
-            <label htmlFor='tz'>
-              Tz:
-              <input
-                type='text'
-                value={transformation.tz ? transformation.tz : (0).toFixed(2)}
-                onChange={handleChange}
-                name='tz'
-                autoComplete='off'
-              />
-            </label>
-            <label htmlFor='q0'>
-              Q0:
-              <input
-                type='text'
-                value={transformation.q0 ? transformation.q0 : (0).toFixed(6)}
-                onChange={handleChange}
-                name='q0'
-                autoComplete='off'
-              />
-            </label>
-            <label htmlFor='q1'>
-              Q1:
-              <input
-                type='text'
-                value={transformation.q1 ? transformation.q1 : (0).toFixed(6)}
-                onChange={handleChange}
-                name='q1'
-                autoComplete='off'
-              />
-            </label>
-            <label htmlFor='q2'>
-              Q2:
-              <input
-                type='text'
-                value={transformation.q2 ? transformation.q2 : (0).toFixed(6)}
-                onChange={handleChange}
-                name='q2'
-                autoComplete='off'
-              />
-            </label>
-            <label htmlFor='q3'>
-              Q3:
-              <input
-                type='text'
-                value={transformation.q3 ? transformation.q3 : (0).toFixed(6)}
-                onChange={handleChange}
-                name='q3'
-                autoComplete='off'
-              />
-            </label>
-            <label htmlFor='m'>
-              M:
-              <input
-                type='text'
-                value={transformation.m ? transformation.m : (1).toFixed(6)}
-                onChange={handleChange}
-                name='m'
-                autoComplete='off'
-              />
-            </label>
+            <div className='input-section-one'>
+              <label htmlFor='tx'>
+                Tx:
+                <input
+                  type='text'
+                  value={transformation.tx ? transformation.tx : (0).toFixed(2)}
+                  onChange={handleChange}
+                  name='tx'
+                  autoComplete='off'
+                />
+              </label>
+              <label htmlFor='ty'>
+                Ty:
+                <input
+                  type='text'
+                  value={transformation.ty ? transformation.ty : (0).toFixed(2)}
+                  onChange={handleChange}
+                  name='ty'
+                  autoComplete='off'
+                />
+              </label>
+              <label htmlFor='tz'>
+                Tz:
+                <input
+                  type='text'
+                  value={transformation.tz ? transformation.tz : (0).toFixed(2)}
+                  onChange={handleChange}
+                  name='tz'
+                  autoComplete='off'
+                />
+              </label>
+            </div>
+            <div className='input-section-two'>
+              <label htmlFor='q0'>
+                Q0:
+                <input
+                  type='text'
+                  value={transformation.q0 ? transformation.q0 : (0).toFixed(6)}
+                  onChange={handleChange}
+                  name='q0'
+                  autoComplete='off'
+                />
+              </label>
+              <label htmlFor='q1'>
+                Q1:
+                <input
+                  type='text'
+                  value={transformation.q1 ? transformation.q1 : (0).toFixed(6)}
+                  onChange={handleChange}
+                  name='q1'
+                  autoComplete='off'
+                />
+              </label>
+              <label htmlFor='q2'>
+                Q2:
+                <input
+                  type='text'
+                  value={transformation.q2 ? transformation.q2 : (0).toFixed(6)}
+                  onChange={handleChange}
+                  name='q2'
+                  autoComplete='off'
+                />
+              </label>
+              <label htmlFor='q3'>
+                Q3:
+                <input
+                  type='text'
+                  value={transformation.q3 ? transformation.q3 : (0).toFixed(6)}
+                  onChange={handleChange}
+                  name='q3'
+                  autoComplete='off'
+                />
+              </label>
+              <label htmlFor='m'>
+                M:
+                <input
+                  type='text'
+                  value={transformation.m ? transformation.m : (1).toFixed(6)}
+                  onChange={handleChange}
+                  name='m'
+                  autoComplete='off'
+                />
+              </label>
+            </div>
           </form>
         </div>
         <PointsInputDropzone onDrop={handleDrop} className='dropzone' />

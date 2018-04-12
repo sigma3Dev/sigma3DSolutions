@@ -1,6 +1,5 @@
 .fit-line-ransac-input {
-  width: 62vw;
-  margin-top: 5vh;
+  width: 82vw;
   margin-left: 16vw;
   font-family: Roboto;
 }
@@ -17,9 +16,13 @@
   font-size: 0.6em;
 }
 
+.fit-line-ransac-input .tolerance-input {
+  float: left;
+}
+
 .fit-line-ransac-input .tolerance-input label {
   text-align: left;
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin: 3vh 0 -1vh;
 }
 

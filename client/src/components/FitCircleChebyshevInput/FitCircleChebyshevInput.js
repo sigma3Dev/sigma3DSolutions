@@ -27,8 +27,8 @@ const FitCircleChebyshevInput = ({
   isInfoOpen,
   infoPanelText,
 }) => (
-  <div>
-    <div className='chebyshev-circle-fit-input'>
+  <div className='chebyshev-circle-fit-input'>
+    <div>
       <h1>
         <FormattedMessage
           id='FitCircleChebyshevInput.label.circlePointsCaption'

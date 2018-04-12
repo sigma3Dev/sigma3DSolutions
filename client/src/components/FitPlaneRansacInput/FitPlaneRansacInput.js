@@ -28,6 +28,7 @@ const FitPlaneRansacInput = ({
       </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
+    <PointsTable systemPoints={planePoints} handleDeleteDataInput={handleDeleteClick} />
     <div className='tolerance-input'>
       <form>
         <label htmlFor='tolerance'>
@@ -42,7 +43,6 @@ const FitPlaneRansacInput = ({
         </label>
       </form>
     </div>
-    <PointsTable systemPoints={planePoints} handleDeleteDataInput={handleDeleteClick} />
     <SubmitBtn handleClick={handleSubmitClick} />
   </div>
 );

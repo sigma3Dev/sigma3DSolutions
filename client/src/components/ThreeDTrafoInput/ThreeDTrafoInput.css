@@ -1,14 +1,17 @@
 .three-d-trafo-input {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-top: 12px;
+  width: 82vw;
+  margin-left: 16vw;
   font-family: Roboto;
 }
 
 .three-d-trafo-input * {
   text-align: center;
+}
+
+.three-d-trafo-input .inputs {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .three-d-trafo-input h1 {
@@ -24,11 +27,10 @@
 }
 
 .start-input {
-  width: 25vw;
-  margin-left: 16vw;
+  width: 40%;
 }
 
 .target-input {
-  width: 35vw;
-  margin-left: 5vh;
+  width: 60%;
+  margin-left: 2vw;
 }

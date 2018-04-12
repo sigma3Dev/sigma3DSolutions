@@ -28,6 +28,7 @@ const FitLineRansacInput = ({
       </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
+    <PointsTable systemPoints={linePoints} handleDeleteDataInput={handleDeleteClick} />
     <div className='tolerance-input'>
       <form>
         <label htmlFor='tolerance'>
@@ -42,7 +43,6 @@ const FitLineRansacInput = ({
         </label>
       </form>
     </div>
-    <PointsTable systemPoints={linePoints} handleDeleteDataInput={handleDeleteClick} />
     <SubmitBtn handleClick={handleSubmitClick} />
   </div>
 );

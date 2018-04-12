@@ -5,7 +5,10 @@
 }
 
 .points-table {
-  padding-top: 20px;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+  height: 42vh;
+  overflow: auto;
 }
 
 .points-table .trash-icon {

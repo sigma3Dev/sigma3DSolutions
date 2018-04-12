@@ -1,10 +1,8 @@
 .apply-trafo {
+  width: 82vw;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 2vh;
+  margin-left: 16vw;
   font-family: Roboto;
 }
 
@@ -13,12 +11,11 @@
 }
 
 .apply-trafo h1 {
-  width: 30vw;
   display: flex;
   justify-content: space-around;
   border-bottom: 3px solid #0270a5;
-  padding-bottom: 5px;
-  margin: 20px 45px;
+  padding: 0 50px 5px;
+  margin: 20px 300px;
 }
 
 .apply-trafo h1 .info-btn {
@@ -29,24 +26,25 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  left: 15vw;
-  width: 65vw;
+  width: 100%;
 }
 
 .apply-trafo .dropzone {
-  height: 290px;
   padding: 50px;
   width: 100%;
 }
 
 .apply-trafo .trafo-params-input {
-  width: 30%;
+  width: 60%;
   font-size: 1.3em;
 }
 
+.apply-trafo .points-input {
+  width: 40%;
+}
+
 .apply-trafo .points-table {
-  margin-top: 15px;
-  width: 50vw;
+  width: 100%;
 }
 
 .apply-trafo input {
@@ -54,6 +52,17 @@
 }
 
 .apply-trafo form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.apply-trafo form .input-section-one {
+  display: flex;
+  flex-direction: column;
+}
+
+.apply-trafo form .input-section-two {
   display: flex;
   flex-direction: column;
   align-items: flex-end;

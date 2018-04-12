@@ -64,6 +64,7 @@ class ThreeDTrafoInputContainer extends Component {
     this.clearTargetInput = this.clearTargetInput.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.displayInfoPanel = this.displayInfoPanel.bind(this);
+    this.clickAnywhere = this.clickAnywhere.bind(this);
   }
 
   /**
@@ -104,6 +105,16 @@ class ThreeDTrafoInputContainer extends Component {
    */
   closeModal = () => {
     this.setState({ ...this.state, notification: null });
+  };
+
+  /**
+   * closes info, if it is open
+   * @memberof ThreeDTrafoInputContainer
+   */
+  clickAnywhere = () => {
+    if (this.state.isInfoOpen) {
+      this.setState({ ...this.state, isInfoOpen: false });
+    }
   };
 
   /**
@@ -230,6 +241,7 @@ class ThreeDTrafoInputContainer extends Component {
           listOfUsedCoords={this.props.listOfUsedCoords}
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
+          clickAnywhere={this.clickAnywhere}
         />
       </div>
     );
