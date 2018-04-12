@@ -9,6 +9,7 @@ export const PUSH_FIT_POINT_COORDS = 'PUSH_FIT_POINT_COORDS';
 export const PUSH_FIT_LINE_L_TWO_COORDS = 'PUSH_FIT_LINE_L_TWO_COORDS';
 export const PUSH_FIT_LINE_RANSAC_COORDS = 'PUSH_FIT_LINE_RANSAC_COORDS';
 export const PUSH_FIT_CIRCLE_L_TWO_COORDS = 'PUSH_FIT_CIRCLE_L_TWO_COORDS';
+export const PUSH_FIT_SPHERE_COORDS = 'PUSH_FIT_SPHERE_COORDS';
 
 /**
  * pushes the start system coordinates
@@ -116,6 +117,16 @@ export const pushFitLineRansacCoords = coords => ({
  */
 export const pushFitCircleL2Coords = coords => ({
   type: PUSH_FIT_CIRCLE_L_TWO_COORDS,
+  coords,
+  receivedAt: Date.now(),
+});
+
+/**
+ * pushes the sphere coordinates
+ * @param {Object} coords - the coordinates file from fit line points
+ */
+export const pushFitSphereCoords = coords => ({
+  type: PUSH_FIT_SPHERE_COORDS,
   coords,
   receivedAt: Date.now(),
 });

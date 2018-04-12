@@ -42,6 +42,10 @@ class GeometryScreenContainer extends Component {
         type: 'fitLineRansac',
         link: '/geometry/fit-line-ransac/data-input',
       },
+      // {
+      //   type: 'fitSphere',
+      //   link: '/geometry/fit-sphere/data-input',
+      // },
     ];
     return (
       <div>

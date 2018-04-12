@@ -371,6 +371,29 @@ const fitCircleL2 = (coords, callback) => {
     });
 };
 
+const fitSphere = (coords, callback) => {
+  globalIdCounter += 1;
+  const points = coords.spherePoints;
+  const requestObj = comm.fitSphere(points, globalIdCounter);
+
+  const socket = getWebSocket()
+    .then((socket) => {
+      socket.onerror = (error) => {
+        callback(error, false);
+      };
+
+      socket.onmessage = (e) => {
+        const response = e.data;
+        callback(response, true);
+      };
+
+      socket.send(requestObj);
+    })
+    .catch((err) => {
+      callback(err, false);
+    });
+};
+
 module.exports = {
   threeDTrafoSendToSocket,
   paramInversionSendToSocket,

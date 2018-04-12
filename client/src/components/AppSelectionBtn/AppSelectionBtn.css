@@ -111,6 +111,11 @@
   background-size: 100% 100%;
 }
 
+.app-selection-btn .s3d-icon[data-category='fitSphere'] {
+  background-image: url('../../images/Sphere.svg');
+  background-size: 100% 100%;
+}
+
 .app-selection-btn .s3d-icon[data-category='paramInversion'] {
   background-image: url('../../images/InvertTransformationParameters.svg');
   background-size: 100% 100%;

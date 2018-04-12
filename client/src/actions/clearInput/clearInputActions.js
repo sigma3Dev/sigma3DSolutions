@@ -9,6 +9,7 @@ export const CLEAR_POINT_INPUT = 'CLEAR_POINT_INPUT';
 export const CLEAR_LINE_L_TWO_INPUT = 'CLEAR_LINE_L_TWO_INPUT';
 export const CLEAR_LINE_RANSAC_INPUT = 'CLEAR_LINE_RANSAC_INPUT';
 export const CLEAR_CIRCLE_L_TWO_INPUT = 'CLEAR_CIRCLE_L_TWO_INPUT';
+export const CLEAR_SPHERE_INPUT = 'CLEAR_SPHERE_INPUT';
 
 /** clears the 3dTrafo6W start input */
 export const clearThreeDTrafo6WStartInput = () => ({
@@ -73,5 +74,11 @@ export const clearLineRansacInput = () => ({
 /** clears any circleL2 input */
 export const clearCircleL2Input = () => ({
   type: CLEAR_CIRCLE_L_TWO_INPUT,
+  receivedAt: Date.now(),
+});
+
+/** clears any sphere input */
+export const clearSphereInput = () => ({
+  type: CLEAR_SPHERE_INPUT,
   receivedAt: Date.now(),
 });
