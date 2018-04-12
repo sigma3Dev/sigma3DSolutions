@@ -1,10 +1,10 @@
-import { getCirclePoints } from './getChebyshevCircleFitInputDataSelector';
+import { getCirclePoints } from './getFitCircleChebyshevInputDataSelector';
 
-describe('getChebyshevCircleFitInputDataSelector Used By ChebyshevCFInputContainer', () => {
+describe('getFitCircleChebyshevInputDataSelector Used By FitCircleChebyshevInputContainer', () => {
   it('getCirclePoints', () => {
     const state = {
       geometry: {
-        chebyshevCircleFit: {
+        fitCircleChebyshev: {
           input: {
             circlePoints: [
               {

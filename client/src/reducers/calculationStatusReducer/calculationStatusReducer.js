@@ -5,10 +5,10 @@ import {
 } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 
 import {
-  SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST,
-  SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS,
-  SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE,
-} from '../../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
+  SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_REQUEST,
+  SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_SUCCESS,
+  SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_FAILURE,
+} from '../../actions/submitFitCircleChebyshevCoords/submitFitCircleChebyshevCoordsActions';
 
 import {
   SUBMIT_APPLY_TRAFO_VALUES_REQUEST,
@@ -92,17 +92,17 @@ function calculationStatus(state = initialCalculationStateData, action) {
         ...state,
         isCalculating: false,
       };
-    case SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST:
+    case SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_REQUEST:
       return {
         ...state,
         isCalculating: true,
       };
-    case SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS:
+    case SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_SUCCESS:
       return {
         ...state,
         isCalculating: false,
       };
-    case SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE:
+    case SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_FAILURE:
       return {
         ...state,
         isCalculating: false,

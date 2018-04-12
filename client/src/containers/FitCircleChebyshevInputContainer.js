@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
-import ChebyshevCFInput from '../components/ChebyshevCFInput/ChebyshevCFInput';
+import FitCircleChebyshevInput from '../components/FitCircleChebyshevInput/FitCircleChebyshevInput';
 import { pushFitChebyCircleCoords } from '../actions/pushCoords/pushCoordsActions';
-import { getCirclePoints } from '../selectors/ChebyshevCircleFitSelector/getChebyshevCircleFitInputDataSelector/getChebyshevCircleFitInputDataSelector';
-import { submitChebyshevCircleFitCoords } from '../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
+import { getCirclePoints } from '../selectors/FitCircleChebyshevSelectors/getFitCircleChebyshevInputDataSelector/getFitCircleChebyshevInputDataSelector';
+import { submitFitCircleChebyshevCoords } from '../actions/submitFitCircleChebyshevCoords/submitFitCircleChebyshevCoordsActions';
 import { clearChebyshevInput } from '../actions/clearInput/clearInputActions';
 import Sidebar from '../components/Sidebar/Sidebar';
 import InfoModal from '../components/InfoModal/InfoModal';
@@ -13,8 +13,8 @@ import InfoModal from '../components/InfoModal/InfoModal';
 const cdi = require('coordinatedataimporter');
 
 const mapDispatchToProps = dispatch => ({
-  onPushChebyshevCircleFitCoords: file => dispatch(pushFitChebyCircleCoords(file)),
-  onSubmitChebyshevCircleFitCoords: coords => dispatch(submitChebyshevCircleFitCoords(coords)),
+  onPushFitCircleChebyshevCoords: file => dispatch(pushFitChebyCircleCoords(file)),
+  onSubmitFitCircleChebyshevCoords: coords => dispatch(submitFitCircleChebyshevCoords(coords)),
   onClearChebyshevInput: () => dispatch(clearChebyshevInput()),
 });
 
@@ -24,14 +24,14 @@ const mapStateToProps = state => ({
 
 /**
  * What does this container do?
- * @class ChebyshevCFInputContainer
+ * @class FitCircleChebyshevInputContainer
  * @extends {Component}
  */
-class ChebyshevCFInputContainer extends Component {
+class FitCircleChebyshevInputContainer extends Component {
   /**
-   * Creates an instance of ChebyshevCFInputContainer.
+   * Creates an instance of FitCircleChebyshevInputContainer.
    * @param {Object} props
-   * @memberof ChebyshevCFInputContainer
+   * @memberof FitCircleChebyshevInputContainer
    */
   constructor() {
     super();
@@ -40,24 +40,24 @@ class ChebyshevCFInputContainer extends Component {
       isInfoOpen: false,
     };
     this.parseCoords = this.parseCoords.bind(this);
-    this.submitChebyshevCircleFitCoords = this.submitChebyshevCircleFitCoords.bind(this);
+    this.submitFitCircleChebyshevCoords = this.submitFitCircleChebyshevCoords.bind(this);
     this.clearChebyshevInput = this.clearChebyshevInput.bind(this);
   }
 
   /**
    * Uses cdi module to transform .txt file into an array of circle points
    * @param {*} file - .txt file with point coordinates
-   * @memberof ChebyshevCFInputContainer
+   * @memberof FitCircleChebyshevInputContainer
    */
   parseCoords = (file) => {
     cdi.startCoordinateDataImport(file, (coords) => {
-      this.props.onPushChebyshevCircleFitCoords(coords);
+      this.props.onPushFitCircleChebyshevCoords(coords);
     });
   };
 
   /**
    * Closes the Modal-window
-   * @memberof ChebyshevCFInputContainer
+   * @memberof FitCircleChebyshevInputContainer
    */
   closeModal = () => {
     this.setState({ ...this.state, notification: null });
@@ -65,7 +65,7 @@ class ChebyshevCFInputContainer extends Component {
 
   /**
    * Decides wheter InfoPanel is displayed or not
-   * @memberof ChebyshevCFInputContainer
+   * @memberof FitCircleChebyshevInputContainer
    */
   displayInfoPanel = () => {
     this.setState({ ...this.state, isInfoOpen: !this.state.isInfoOpen });
@@ -73,9 +73,9 @@ class ChebyshevCFInputContainer extends Component {
 
   /**
    * Handles coords submit, navigates to "result" page
-   * @memberof ChebyshevCFInputContainer
+   * @memberof FitCircleChebyshevInputContainer
    */
-  submitChebyshevCircleFitCoords = () => {
+  submitFitCircleChebyshevCoords = () => {
     if (!this.props.circlePoints || this.props.circlePoints.length === 0) {
       this.setState({
         notification: (
@@ -95,14 +95,14 @@ class ChebyshevCFInputContainer extends Component {
       });
     } else {
       const coords = this.props.circlePoints;
-      this.props.onSubmitChebyshevCircleFitCoords(coords);
-      this.props.history.push('/geometry/chebyshev-circle-fit/result');
+      this.props.onSubmitFitCircleChebyshevCoords(coords);
+      this.props.history.push('/geometry/fit-circle-chebyshev/result');
     }
   };
 
   /**
    * deletes all points, updates input display
-   * @memberof ChebyshevCFInputContainer
+   * @memberof FitCircleChebyshevInputContainer
    */
   clearChebyshevInput = () => {
     this.props.onClearChebyshevInput();
@@ -129,11 +129,11 @@ class ChebyshevCFInputContainer extends Component {
       <div>
         {this.state.notification}
         <Sidebar />
-        <ChebyshevCFInput
+        <FitCircleChebyshevInput
           onFileDrop={this.parseCoords}
           circlePoints={this.props.circlePoints}
           handleInfoClick={this.displayInfoPanel}
-          handleSubmitClick={this.submitChebyshevCircleFitCoords}
+          handleSubmitClick={this.submitFitCircleChebyshevCoords}
           handleDeleteClick={this.clearChebyshevInput}
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
@@ -143,12 +143,12 @@ class ChebyshevCFInputContainer extends Component {
   }
 }
 
-ChebyshevCFInputContainer.propTypes = {
-  onPushChebyshevCircleFitCoords: PropTypes.func.isRequired,
-  onSubmitChebyshevCircleFitCoords: PropTypes.func.isRequired,
+FitCircleChebyshevInputContainer.propTypes = {
+  onPushFitCircleChebyshevCoords: PropTypes.func.isRequired,
+  onSubmitFitCircleChebyshevCoords: PropTypes.func.isRequired,
   onClearChebyshevInput: PropTypes.func.isRequired,
   circlePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
   history: PropTypes.any,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ChebyshevCFInputContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FitCircleChebyshevInputContainer);

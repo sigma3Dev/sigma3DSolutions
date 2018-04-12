@@ -104,7 +104,7 @@ class ParamInversionContainer extends Component {
 
   /**
    * Closes the Modal-window
-   * @memberof ChebyshevCFInputContainer
+   * @memberof FitCircleChebyshevInputContainer
    */
   closeModal = () => {
     this.setState({ ...this.state, notification: null });

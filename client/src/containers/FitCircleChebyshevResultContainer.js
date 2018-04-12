@@ -3,35 +3,35 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
 import {
-  getChebyshevCircleFitResult,
+  getFitCircleChebyshevResult,
   getIsCalculating,
-} from '../selectors/ChebyshevCircleFitSelector/getChebyshevCircleFitResultDataSelector/getChebyshevCircleFitResultDataSelector';
+} from '../selectors/FitCircleChebyshevSelectors/getFitCircleChebyshevResultDataSelector/getFitCircleChebyshevResultDataSelector';
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
 import Sidebar from '../components/Sidebar/Sidebar';
-import ChebyshevCFResult from '../components/ChebyshevCFResult/ChebyshevCFResult';
+import FitCircleChebyshevResult from '../components/FitCircleChebyshevResult/FitCircleChebyshevResult';
 
 const mapDispatchToProps = dispatch => ({
   onRemoveError: () => dispatch(removeError()),
 });
 
 const mapStateToProps = state => ({
-  chebyshevParams: getChebyshevCircleFitResult(state),
+  chebyshevParams: getFitCircleChebyshevResult(state),
   error: getError(state),
   isCalculating: getIsCalculating(state),
 });
 
 /**
  * Displays the calculation results
- * @class ChebyshevCFResultContainer
+ * @class FitCircleChebyshevResultContainer
  * @extends {Component}
  */
-class ChebyshevCFResultContainer extends Component {
+class FitCircleChebyshevResultContainer extends Component {
   /**
-   * Creates an instance of ChebyshevCFResultContainer.
+   * Creates an instance of FitCircleChebyshevResultContainer.
    * @param {Object} props
-   * @memberof ChebyshevCFResultContainer
+   * @memberof FitCircleChebyshevResultContainer
    */
   constructor(props) {
     super(props);
@@ -40,11 +40,11 @@ class ChebyshevCFResultContainer extends Component {
 
   /**
    * Navigates back to input page of the current chebyshev circle fit adjustment
-   * @memberof ChebyshevCFResultContainer
+   * @memberof FitCircleChebyshevResultContainer
    */
   goBack = () => {
     this.props.onRemoveError();
-    this.props.history.push('/geometry/chebyshev-circle-fit/data-input');
+    this.props.history.push('/geometry/fit-circle-chebyshev/data-input');
   };
 
   render() {
@@ -56,13 +56,16 @@ class ChebyshevCFResultContainer extends Component {
     return (
       <div>
         <Sidebar />
-        <ChebyshevCFResult chebyshevParams={this.props.chebyshevParams} handleClick={this.goBack} />
+        <FitCircleChebyshevResult
+          chebyshevParams={this.props.chebyshevParams}
+          handleClick={this.goBack}
+        />
       </div>
     );
   }
 }
 
-ChebyshevCFResultContainer.propTypes = {
+FitCircleChebyshevResultContainer.propTypes = {
   onRemoveError: PropTypes.func.isRequired,
   chebyshevParams: PropTypes.arrayOf(PropTypes.number),
   history: PropTypes.any,
@@ -70,4 +73,4 @@ ChebyshevCFResultContainer.propTypes = {
   isCalculating: PropTypes.bool.isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ChebyshevCFResultContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(FitCircleChebyshevResultContainer);

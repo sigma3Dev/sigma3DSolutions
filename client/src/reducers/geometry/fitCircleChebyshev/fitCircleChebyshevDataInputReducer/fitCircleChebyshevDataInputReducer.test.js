@@ -1,8 +1,8 @@
 import { PUSH_FIT_CHEBY_CIRCLE_COORDS } from '../../../../actions/pushCoords/pushCoordsActions';
 import { CLEAR_CHEBYSHEV_INPUT } from '../../../../actions/clearInput/clearInputActions';
-import chebyshevCircleFitDataInputReducer from './chebyshevCircleFitDataInputReducer';
+import fitCircleChebyshevDataInputReducer from './fitCircleChebyshevDataInputReducer';
 
-describe('chebyshevCircleFitDataInputReducer', () => {
+describe('fitCircleChebyshevDataInputReducer', () => {
   it('should handle PUSH_FIT_CHEBY_CIRCLE_COORDS', () => {
     const state = {
       circlePoints: [],
@@ -36,7 +36,7 @@ describe('chebyshevCircleFitDataInputReducer', () => {
         },
       ],
     };
-    const result = chebyshevCircleFitDataInputReducer(state, action);
+    const result = fitCircleChebyshevDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
   it('should handle CLEAR_CHEBYSHEV_INPUT', () => {
@@ -60,7 +60,7 @@ describe('chebyshevCircleFitDataInputReducer', () => {
     const expectedState = {
       circlePoints: [],
     };
-    const result = chebyshevCircleFitDataInputReducer(state, action);
+    const result = fitCircleChebyshevDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
 });

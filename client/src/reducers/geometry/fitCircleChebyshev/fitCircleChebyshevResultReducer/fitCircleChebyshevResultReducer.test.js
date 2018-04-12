@@ -1,8 +1,8 @@
-import { SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS } from '../../../../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
-import chebyshevCircleFitResultReducer from './chebyshevCircleFitResultReducer';
+import { SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_SUCCESS } from '../../../../actions/submitFitCircleChebyshevCoords/submitFitCircleChebyshevCoordsActions';
+import fitCircleChebyshevResultReducer from './fitCircleChebyshevResultReducer';
 
-describe('chebyshevCircleFitResultReducer', () => {
-  it('should handle SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS', () => {
+describe('fitCircleChebyshevResultReducer', () => {
+  it('should handle SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_SUCCESS', () => {
     const state = {
       x: 0.0,
       y: 0.0,
@@ -15,7 +15,7 @@ describe('chebyshevCircleFitResultReducer', () => {
       stdev: 0.0,
     };
     const action = {
-      type: SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS,
+      type: SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_SUCCESS,
       response: {
         data: {
           result: {
@@ -43,7 +43,7 @@ describe('chebyshevCircleFitResultReducer', () => {
       tschebyDistance: 0.0,
       stdev: 0.0,
     };
-    const result = chebyshevCircleFitResultReducer(state, action);
+    const result = fitCircleChebyshevResultReducer(state, action);
     expect(result).toEqual(expectedState);
   });
 });

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './ChebyshevCFDrawing.css';
+import './FitCircleChebyshevDrawing.css';
 
 /**
  * shows two circles, radius and chebyshev-distance in a .svg
@@ -17,11 +17,11 @@ import './ChebyshevCFDrawing.css';
  * calculation
  * @param {Object} points - responses an array of points that is returned from backend after
  * successful calculation
- * @returns {*} ChebyshevCFDrawing - .jsx Element
+ * @returns {*} FitCircleChebyshevDrawing - .jsx Element
  */
 let xPoint1 = -10;
 let yPoint1 = -10;
-const ChebyshevCFDrawing = ({ radius, chebyDist, points }) => {
+const FitCircleChebyshevDrawing = ({ radius, chebyDist, points }) => {
   let shiftedPoints = null;
   let circlePoints = null;
   let scaleCircle = 0;
@@ -113,10 +113,10 @@ const ChebyshevCFDrawing = ({ radius, chebyDist, points }) => {
   );
 };
 
-ChebyshevCFDrawing.propTypes = {
+FitCircleChebyshevDrawing.propTypes = {
   radius: PropTypes.string.isRequired,
   chebyDist: PropTypes.string.isRequired,
   points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),
 };
 
-export default ChebyshevCFDrawing;
+export default FitCircleChebyshevDrawing;
