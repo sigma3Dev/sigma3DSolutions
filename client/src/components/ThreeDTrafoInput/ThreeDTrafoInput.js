@@ -35,9 +35,10 @@ const ThreeDTrafoInput = ({
   listOfUsedCoords,
   isInfoOpen,
   infoPanelText,
+  clickAnywhere,
 }) => (
-  <div>
-    <div className='three-d-trafo-input'>
+  <div className='three-d-trafo-input' onClick={clickAnywhere}>
+    <div className='inputs'>
       <div className='start-input'>
         <h1>
           <FormattedMessage
@@ -57,10 +58,6 @@ const ThreeDTrafoInput = ({
             id='ThreeDTrafoInput.label.targetSystemPointsCaption'
             defaultMessage='Target System Points:'
           />
-          <div className='info-section'>
-            <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-            <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-          </div>
         </h1>
         <PointsInputDropzone onDrop={onTargetFileDrop} />
         <PointsTable
@@ -70,8 +67,10 @@ const ThreeDTrafoInput = ({
           listOfUsedCoords={listOfUsedCoords}
         />
       </div>
-      <SubmitBtn handleClick={handleSubmitClick} />
     </div>
+    <SubmitBtn handleClick={handleSubmitClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
   </div>
 );
 
@@ -85,6 +84,7 @@ ThreeDTrafoInput.propTypes = {
   handleSubmitClick: PropTypes.func.isRequired,
   handleStartDeleteClick: PropTypes.func.isRequired,
   handleTargetDeleteClick: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   listOfUsedCoords: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.bool)).isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,

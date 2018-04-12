@@ -18,16 +18,14 @@ const FitLineRansacInput = ({
   handleToleranceChange,
   linePoints,
   lineTolerance,
+  clickAnywhere,
 }) => (
-  <div className='fit-line-ransac-input'>
+  <div className='fit-line-ransac-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitLineRansacInput.label.caption' defaultMessage='Ransac Line' />
-      <div className='info-section'>
-        <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-        <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
+    <PointsTable systemPoints={linePoints} handleDeleteDataInput={handleDeleteClick} />
     <div className='tolerance-input'>
       <form>
         <label htmlFor='tolerance'>
@@ -42,7 +40,8 @@ const FitLineRansacInput = ({
         </label>
       </form>
     </div>
-    <PointsTable systemPoints={linePoints} handleDeleteDataInput={handleDeleteClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     <SubmitBtn handleClick={handleSubmitClick} />
   </div>
 );
@@ -53,6 +52,7 @@ FitLineRansacInput.propTypes = {
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
   handleToleranceChange: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
   linePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),

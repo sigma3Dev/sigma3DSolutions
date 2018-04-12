@@ -44,6 +44,7 @@ class FitCircleL2InputContainer extends Component {
     this.clearCircleL2Input = this.clearCircleL2Input.bind(this);
     this.submitFitCircleL2Coords = this.submitFitCircleL2Coords.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.clickAnywhere = this.clickAnywhere.bind(this);
   }
 
   /**
@@ -55,6 +56,16 @@ class FitCircleL2InputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * closes info, if it is open
+   * @memberof FitCircleL2InputContainer
+   */
+  clickAnywhere = () => {
+    if (this.state.isInfoOpen) {
+      this.setState({ ...this.state, isInfoOpen: false });
+    }
   };
 
   /**
@@ -141,6 +152,7 @@ class FitCircleL2InputContainer extends Component {
           handleFileDrop={this.parseCoords}
           handleSubmitClick={this.submitFitCircleL2Coords}
           circleL2Points={this.props.circleL2Points}
+          clickAnywhere={this.clickAnywhere}
         />
       </div>
     );

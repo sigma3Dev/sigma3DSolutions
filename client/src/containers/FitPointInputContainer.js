@@ -44,6 +44,8 @@ class FitPointInputContainer extends Component {
     this.clearPointInput = this.clearPointInput.bind(this);
     this.submitFitPointCoords = this.submitFitPointCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.clickAnywhere = this.clickAnywhere.bind(this);
   }
 
   /**
@@ -55,6 +57,16 @@ class FitPointInputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * closes info, if it is open
+   * @memberof PointInputContainer
+   */
+  clickAnywhere = () => {
+    if (this.state.isInfoOpen) {
+      this.setState({ ...this.state, isInfoOpen: false });
+    }
   };
 
   /**
@@ -141,6 +153,7 @@ class FitPointInputContainer extends Component {
           handleFileDrop={this.parseCoords}
           handleSubmitClick={this.submitFitPointCoords}
           points={this.props.points}
+          clickAnywhere={this.clickAnywhere}
         />
       </div>
     );

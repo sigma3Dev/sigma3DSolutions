@@ -18,16 +18,14 @@ const FitPlaneRansacInput = ({
   handleToleranceChange,
   planePoints,
   planeTolerance,
+  clickAnywhere,
 }) => (
-  <div className='fit-plane-ransac-input'>
+  <div className='fit-plane-ransac-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitPlaneRansacInput.label.caption' defaultMessage='Ransac Plane' />
-      <div className='info-section'>
-        <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-        <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
+    <PointsTable systemPoints={planePoints} handleDeleteDataInput={handleDeleteClick} />
     <div className='tolerance-input'>
       <form>
         <label htmlFor='tolerance'>
@@ -42,7 +40,8 @@ const FitPlaneRansacInput = ({
         </label>
       </form>
     </div>
-    <PointsTable systemPoints={planePoints} handleDeleteDataInput={handleDeleteClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     <SubmitBtn handleClick={handleSubmitClick} />
   </div>
 );
@@ -53,6 +52,7 @@ FitPlaneRansacInput.propTypes = {
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
   handleToleranceChange: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
   planePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),

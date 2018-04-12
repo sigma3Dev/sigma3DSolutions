@@ -20888,15 +20888,15 @@ exports[`Storyshots Start.InputInfoPanel Show informations about the input 1`] =
     }
   >
     <div
-      className="input-info-panel popover right"
+      className="input-info-panel popover left"
       id="popover-basic"
       role="tooltip"
       style={
         Object {
           "display": "block",
-          "fontSize": "0.6em",
-          "left": "80%",
-          "top": 17,
+          "fontSize": "1em",
+          "left": "76%",
+          "top": 14,
           "whiteSpace": "pre-wrap",
         }
       }
@@ -20906,7 +20906,7 @@ exports[`Storyshots Start.InputInfoPanel Show informations about the input 1`] =
         style={
           Object {
             "left": undefined,
-            "top": "30px",
+            "top": "10px",
           }
         }
       />

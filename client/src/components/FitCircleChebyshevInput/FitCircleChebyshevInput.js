@@ -26,23 +26,22 @@ const FitCircleChebyshevInput = ({
   handleDeleteClick,
   isInfoOpen,
   infoPanelText,
+  clickAnywhere,
 }) => (
-  <div>
-    <div className='chebyshev-circle-fit-input'>
+  <div className='chebyshev-circle-fit-input' onClick={clickAnywhere}>
+    <div>
       <h1>
         <FormattedMessage
           id='FitCircleChebyshevInput.label.circlePointsCaption'
           defaultMessage='Circle Points:'
         />
-        <div className='info-section'>
-          <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-          <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-        </div>
       </h1>
       <PointsInputDropzone onDrop={onFileDrop} />
       <PointsTable systemPoints={circlePoints} handleDeleteDataInput={handleDeleteClick} />
     </div>
     <SubmitBtn handleClick={handleSubmitClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
   </div>
 );
 
@@ -51,6 +50,7 @@ FitCircleChebyshevInput.propTypes = {
   handleInfoClick: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
   handleDeleteClick: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   circlePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
   infoPanelText: PropTypes.objectOf(PropTypes.any).isRequired,
