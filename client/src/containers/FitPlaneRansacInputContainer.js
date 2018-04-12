@@ -51,6 +51,7 @@ class FitPlaneRansacInputContainer extends Component {
     this.submitFitPlaneRansacCoords = this.submitFitPlaneRansacCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.updateTolerance = this.updateTolerance.bind(this);
+    this.clickAnywhere = this.clickAnywhere.bind(this);
   }
 
   /**
@@ -120,6 +121,16 @@ class FitPlaneRansacInputContainer extends Component {
     this.setState({ ...this.state, isInfoOpen: !this.state.isInfoOpen });
   };
 
+  /**
+   * closes info, if it is open
+   * @memberof FitPlaneRansacInputContainer
+   */
+  clickAnywhere = () => {
+    if (this.state.isInfoOpen) {
+      this.setState({ ...this.state, isInfoOpen: false });
+    }
+  };
+
   updateTolerance = (e) => {
     const newTolerance = e.target.value;
     this.props.onUpdateTolerance(newTolerance);
@@ -156,6 +167,7 @@ class FitPlaneRansacInputContainer extends Component {
           handleToleranceChange={this.updateTolerance}
           planePoints={this.props.planePoints}
           planeTolerance={this.props.planeTolerance}
+          clickAnywhere={this.clickAnywhere}
         />
       </div>
     );

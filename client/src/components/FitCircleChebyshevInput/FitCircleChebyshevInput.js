@@ -26,8 +26,9 @@ const FitCircleChebyshevInput = ({
   handleDeleteClick,
   isInfoOpen,
   infoPanelText,
+  clickAnywhere,
 }) => (
-  <div className='chebyshev-circle-fit-input'>
+  <div className='chebyshev-circle-fit-input' onClick={clickAnywhere}>
     <div>
       <h1>
         <FormattedMessage
@@ -51,6 +52,7 @@ FitCircleChebyshevInput.propTypes = {
   handleInfoClick: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
   handleDeleteClick: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   circlePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
   infoPanelText: PropTypes.objectOf(PropTypes.any).isRequired,

@@ -18,8 +18,9 @@ const FitLineRansacInput = ({
   handleToleranceChange,
   linePoints,
   lineTolerance,
+  clickAnywhere,
 }) => (
-  <div className='fit-line-ransac-input'>
+  <div className='fit-line-ransac-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitLineRansacInput.label.caption' defaultMessage='Ransac Line' />
       <div className='info-section'>
@@ -53,6 +54,7 @@ FitLineRansacInput.propTypes = {
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
   handleToleranceChange: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
   linePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),

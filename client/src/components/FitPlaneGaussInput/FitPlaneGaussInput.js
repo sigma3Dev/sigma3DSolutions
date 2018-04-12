@@ -16,8 +16,9 @@ const FitPlaneGaussInput = ({
   handleFileDrop,
   handleSubmitClick,
   planePoints,
+  clickAnywhere,
 }) => (
-  <div className='fit-plane-gauss-input'>
+  <div className='fit-plane-gauss-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitPlaneGaussInput.label.caption' defaultMessage='Gauss Plane' />
       <div className='info-section'>
@@ -36,6 +37,7 @@ FitPlaneGaussInput.propTypes = {
   handleDeleteClick: PropTypes.func.isRequired,
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
   planePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),

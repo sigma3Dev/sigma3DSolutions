@@ -16,8 +16,9 @@ const FitCylinderInput = ({
   handleFileDrop,
   handleSubmitClick,
   cylinderPoints,
+  clickAnywhere,
 }) => (
-  <div className='fit-cylinder-input'>
+  <div className='fit-cylinder-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitCylinderInput.label.caption' defaultMessage='Cylinder' />
       <div className='info-section'>
@@ -36,6 +37,7 @@ FitCylinderInput.propTypes = {
   handleDeleteClick: PropTypes.func.isRequired,
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
   cylinderPoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),

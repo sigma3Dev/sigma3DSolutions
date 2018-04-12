@@ -18,8 +18,9 @@ const FitPlaneRansacInput = ({
   handleToleranceChange,
   planePoints,
   planeTolerance,
+  clickAnywhere,
 }) => (
-  <div className='fit-plane-ransac-input'>
+  <div className='fit-plane-ransac-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitPlaneRansacInput.label.caption' defaultMessage='Ransac Plane' />
       <div className='info-section'>
@@ -53,6 +54,7 @@ FitPlaneRansacInput.propTypes = {
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
   handleToleranceChange: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
   planePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),

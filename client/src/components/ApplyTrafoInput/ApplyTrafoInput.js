@@ -21,6 +21,7 @@ const ApplyTrafoInput = ({
   infoPanelText,
   points,
   transformation,
+  clickAnywhere,
 }) => {
   const tableRows = points.map((line, i) => (
     <tr key={`${line.x}:${i}`}>
@@ -31,7 +32,7 @@ const ApplyTrafoInput = ({
     </tr>
   ));
   return (
-    <div className='apply-trafo'>
+    <div className='apply-trafo' onClick={clickAnywhere}>
       <h1>
         <FormattedMessage
           id='ApplyTrafoInput.caption.applyTrafoHeader'
@@ -165,6 +166,7 @@ ApplyTrafoInput.propTypes = {
   handleInfoClick: PropTypes.func.isRequired,
   handleDeleteDataInput: PropTypes.func.isRequired,
   handleDrop: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
   points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,

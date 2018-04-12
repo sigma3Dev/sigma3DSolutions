@@ -42,6 +42,7 @@ class FitCircleChebyshevInputContainer extends Component {
     this.parseCoords = this.parseCoords.bind(this);
     this.submitFitCircleChebyshevCoords = this.submitFitCircleChebyshevCoords.bind(this);
     this.clearChebyshevInput = this.clearChebyshevInput.bind(this);
+    this.clickAnywhere = this.clickAnywhere.bind(this);
   }
 
   /**
@@ -61,6 +62,16 @@ class FitCircleChebyshevInputContainer extends Component {
    */
   closeModal = () => {
     this.setState({ ...this.state, notification: null });
+  };
+
+  /**
+   * closes info, if it is open
+   * @memberof FitCircleChebyshevInputContainer
+   */
+  clickAnywhere = () => {
+    if (this.state.isInfoOpen) {
+      this.setState({ ...this.state, isInfoOpen: false });
+    }
   };
 
   /**
@@ -137,6 +148,7 @@ class FitCircleChebyshevInputContainer extends Component {
           handleDeleteClick={this.clearChebyshevInput}
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
+          clickAnywhere={this.clickAnywhere}
         />
       </div>
     );
