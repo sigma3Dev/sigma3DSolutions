@@ -21,14 +21,12 @@ const FitPlaneGaussInput = ({
   <div className='fit-plane-gauss-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitPlaneGaussInput.label.caption' defaultMessage='Gauss Plane' />
-      <div className='info-section'>
-        <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-        <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
     <PointsTable systemPoints={planePoints} handleDeleteDataInput={handleDeleteClick} />
     <SubmitBtn handleClick={handleSubmitClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
   </div>
 );
 

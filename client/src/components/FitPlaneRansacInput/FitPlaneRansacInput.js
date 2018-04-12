@@ -23,10 +23,6 @@ const FitPlaneRansacInput = ({
   <div className='fit-plane-ransac-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitPlaneRansacInput.label.caption' defaultMessage='Ransac Plane' />
-      <div className='info-section'>
-        <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-        <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
     <PointsTable systemPoints={planePoints} handleDeleteDataInput={handleDeleteClick} />
@@ -44,6 +40,8 @@ const FitPlaneRansacInput = ({
         </label>
       </form>
     </div>
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     <SubmitBtn handleClick={handleSubmitClick} />
   </div>
 );

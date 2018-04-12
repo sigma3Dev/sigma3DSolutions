@@ -1,6 +1,9 @@
 .info-btn {
   border: none;
   background: none;
+  position: fixed;
+  top: 1vh;
+  right: 1vw;
 }
 
 .info-btn:hover {

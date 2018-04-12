@@ -21,13 +21,11 @@ const FitLineL2Input = ({
   <div className='fit-line-l2-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitLineL2Input.label.caption' defaultMessage='LineL2' />
-      <div className='info-section'>
-        <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-        <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
     <PointsTable systemPoints={lineL2Points} handleDeleteDataInput={handleDeleteClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     <SubmitBtn handleClick={handleSubmitClick} />
   </div>
 );

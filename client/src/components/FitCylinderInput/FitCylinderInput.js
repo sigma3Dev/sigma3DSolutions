@@ -21,13 +21,11 @@ const FitCylinderInput = ({
   <div className='fit-cylinder-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitCylinderInput.label.caption' defaultMessage='Cylinder' />
-      <div className='info-section'>
-        <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-        <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
     <PointsTable systemPoints={cylinderPoints} handleDeleteDataInput={handleDeleteClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     <SubmitBtn handleClick={handleSubmitClick} />
   </div>
 );

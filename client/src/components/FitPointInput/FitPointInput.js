@@ -21,13 +21,11 @@ const FitPointInput = ({
   <div className='fit-point-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitPointInput.label.caption' defaultMessage='Point' />
-      <div className='info-section'>
-        <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-        <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
     <PointsTable systemPoints={points} handleDeleteDataInput={handleDeleteClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     <SubmitBtn handleClick={handleSubmitClick} />
   </div>
 );

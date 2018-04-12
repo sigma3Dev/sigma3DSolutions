@@ -9,13 +9,6 @@
 }
 
 .fit-cylinder-input h1 {
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 3px solid #0270a5;
-  padding: 0 50px 5px;
-  margin: 20px 300px;
-}
-
-.fit-cylinder-input h1 .info-btn {
-  font-size: 0.6em;
+  color: rgb(128, 128, 128);
+  padding: 20px 0;
 }

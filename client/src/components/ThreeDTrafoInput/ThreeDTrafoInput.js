@@ -58,10 +58,6 @@ const ThreeDTrafoInput = ({
             id='ThreeDTrafoInput.label.targetSystemPointsCaption'
             defaultMessage='Target System Points:'
           />
-          <div className='info-section'>
-            <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-            <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-          </div>
         </h1>
         <PointsInputDropzone onDrop={onTargetFileDrop} />
         <PointsTable
@@ -73,6 +69,8 @@ const ThreeDTrafoInput = ({
       </div>
     </div>
     <SubmitBtn handleClick={handleSubmitClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
   </div>
 );
 

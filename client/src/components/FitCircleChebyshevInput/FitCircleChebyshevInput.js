@@ -35,15 +35,13 @@ const FitCircleChebyshevInput = ({
           id='FitCircleChebyshevInput.label.circlePointsCaption'
           defaultMessage='Circle Points:'
         />
-        <div className='info-section'>
-          <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-          <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-        </div>
       </h1>
       <PointsInputDropzone onDrop={onFileDrop} />
       <PointsTable systemPoints={circlePoints} handleDeleteDataInput={handleDeleteClick} />
     </div>
     <SubmitBtn handleClick={handleSubmitClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
   </div>
 );
 

@@ -38,10 +38,6 @@ const ApplyTrafoInput = ({
           id='ApplyTrafoInput.caption.applyTrafoHeader'
           defaultMessage='Apply Transformation'
         />
-        <div className='info-section'>
-          <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-          <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-        </div>
       </h1>
       <div className='input-area'>
         <div className='trafo-params-input'>
@@ -156,6 +152,8 @@ const ApplyTrafoInput = ({
         </table>
       </div>
       <SubmitBtn handleClick={handleSubmit} autoFocus />
+      <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+      <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     </div>
   );
 };

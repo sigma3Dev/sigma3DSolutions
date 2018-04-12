@@ -15,15 +15,8 @@
 }
 
 .three-d-trafo-input h1 {
-  display: flex;
-  justify-content: space-around;
-  border-bottom: 3px solid #0270a5;
-  padding-bottom: 5px;
-  margin: 20px 45px;
-}
-
-.three-d-trafo-input h1 .info-btn {
-  font-size: 0.6em;
+  color: rgb(128, 128, 128);
+  margin: 20px 0;
 }
 
 .start-input {

@@ -21,14 +21,12 @@ const FitCircleL2Input = ({
   <div className='fit-circle-l2-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitCircleL2Input.label.caption' defaultMessage='CircleL2' />
-      <div className='info-section'>
-        <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-        <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
     <PointsTable systemPoints={circleL2Points} handleDeleteDataInput={handleDeleteClick} />
     <SubmitBtn handleClick={handleSubmitClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
   </div>
 );
 

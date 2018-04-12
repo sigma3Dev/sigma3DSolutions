@@ -23,10 +23,6 @@ const FitLineRansacInput = ({
   <div className='fit-line-ransac-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitLineRansacInput.label.caption' defaultMessage='Ransac Line' />
-      <div className='info-section'>
-        <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-        <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
     <PointsTable systemPoints={linePoints} handleDeleteDataInput={handleDeleteClick} />
@@ -44,6 +40,8 @@ const FitLineRansacInput = ({
         </label>
       </form>
     </div>
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     <SubmitBtn handleClick={handleSubmitClick} />
   </div>
 );
