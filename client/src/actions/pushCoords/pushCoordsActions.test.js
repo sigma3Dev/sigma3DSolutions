@@ -17,6 +17,10 @@ import {
   pushFitChebyCircleCoords,
   PUSH_FIT_LINE_L_TWO_COORDS,
   pushFitLineL2Coords,
+  PUSH_FIT_LINE_RANSAC_COORDS,
+  pushFitLineRansacCoords,
+  PUSH_FIT_CIRCLE_L_TWO_COORDS,
+  pushFitCircleL2Coords,
 } from './pushCoordsActions';
 
 describe('pushCoordsActions', () => {
@@ -223,6 +227,53 @@ describe('pushCoordsActions', () => {
       coords: points,
     };
     const result = pushFitLineL2Coords(points);
+    expect(result.type).toEqual(expected.type);
+    expect(result.coords).toEqual(expected.coords);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a PUSH_FIT_LINE_RANSAC_COORDS action', () => {
+    const coords = {
+      points: [
+        {
+          x: 1.0,
+          y: 2.0,
+          z: 3.0,
+        },
+        {
+          x: 4.0,
+          y: 5.0,
+          z: 6.0,
+        },
+      ],
+      tolerance: 0.2,
+    };
+    const expected = {
+      type: PUSH_FIT_LINE_RANSAC_COORDS,
+      coords,
+    };
+    const result = pushFitLineRansacCoords(coords);
+    expect(result.type).toEqual(expected.type);
+    expect(result.coords).toEqual(expected.coords);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a PUSH_FIT_CIRCLE_L_TWO_COORDS action', () => {
+    const points = [
+      {
+        x: 1.0,
+        y: 2.0,
+        z: 3.0,
+      },
+      {
+        x: 4.0,
+        y: 5.0,
+        z: 6.0,
+      },
+    ];
+    const expected = {
+      type: PUSH_FIT_CIRCLE_L_TWO_COORDS,
+      coords: points,
+    };
+    const result = pushFitCircleL2Coords(points);
     expect(result.type).toEqual(expected.type);
     expect(result.coords).toEqual(expected.coords);
     expect(result.receivedAt).toBeDefined();

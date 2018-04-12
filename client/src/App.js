@@ -5,6 +5,8 @@ import ApplyTransformationResultContainer from './containers/ApplyTransformation
 import ChebyshevCFInputContainer from './containers/ChebyshevCFInputContainer';
 import ChebyshevCFResultContainer from './containers/ChebyshevCFResultContainer';
 import GeometryScreenContainer from './containers/GeometryScreenContainer';
+import FitCircleL2InputContainer from './containers/FitCircleL2InputContainer';
+import FitCircleL2ResultContainer from './containers/FitCircleL2ResultContainer';
 import FitCylinderInputContainer from './containers/FitCylinderInputContainer';
 import FitCylinderResultContainer from './containers/FitCylinderResultContainer';
 import FitPlaneGaussInputContainer from './containers/FitPlaneGaussInputContainer';
@@ -15,6 +17,8 @@ import FitPointInputContainer from './containers/FitPointInputContainer';
 import FitPointResultContainer from './containers/FitPointResultContainer';
 import FitLineL2InputContainer from './containers/FitLineL2InputContainer';
 import FitLineL2ResultContainer from './containers/FitLineL2ResultContainer';
+import FitLineRansacInputContainer from './containers/FitLineRansacInputContainer';
+import FitLineRansacResultContainer from './containers/FitLineRansacResultContainer';
 import ParamInversionContainer from './containers/ParamInversionContainer';
 import QuatCardanContainer from './containers/QuatCardanContainer';
 import StartScreenContainer from './containers/StartScreenContainer';
@@ -70,6 +74,10 @@ const App = () => (
       <Route path='/geometry/fit-point/result' component={FitPointResultContainer} />
       <Route path='/geometry/fit-line-l-two/data-input' component={FitLineL2InputContainer} />
       <Route path='/geometry/fit-line-l-two/result' component={FitLineL2ResultContainer} />
+      <Route path='/geometry/fit-line-ransac/data-input' component={FitLineRansacInputContainer} />
+      <Route path='/geometry/fit-line-ransac/result' component={FitLineRansacResultContainer} />
+      <Route path='/geometry/fit-circle-l-two/data-input' component={FitCircleL2InputContainer} />
+      <Route path='/geometry/fit-circle-l-two/result' component={FitCircleL2ResultContainer} />
       <Redirect from='*' to='/' />
     </Switch>
   </div>

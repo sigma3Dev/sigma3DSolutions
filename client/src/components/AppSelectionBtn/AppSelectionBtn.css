@@ -1,12 +1,12 @@
 .app-selection-btn {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   text-align: center;
   height: 250px;
   width: 250px;
-  padding: 15px;
-  margin: 20px 20px 0px;
+  padding: 10px;
+  margin: 20px 10px 0px;
   border-radius: 10px;
   background: white;
 }
@@ -32,7 +32,6 @@
   padding: 8px;
   font-family: Roboto;
   font-size: 18px;
-  font-weight: bold;
   font-style: normal;
   font-stretch: condensed;
   line-height: 0.83;
@@ -51,7 +50,7 @@
   padding: 8px;
   font-family: Roboto;
   font-size: 14px;
-  font-style: normal;
+  font-style: italic;
   font-stretch: condensed;
   line-height: 0.83;
   letter-spacing: normal;
@@ -77,6 +76,11 @@
   background-size: 100% 100%;
 }
 
+.app-selection-btn .s3d-icon[data-category='fitCircleL2'] {
+  background-image: url('../../images/3DCircle.svg');
+  background-size: 100% 100%;
+}
+
 .app-selection-btn .s3d-icon[data-category='fitCylinder'] {
   background-image: url('../../images/Cylinder.svg');
   background-size: 100% 100%;
@@ -84,6 +88,11 @@
 
 .app-selection-btn .s3d-icon[data-category='fitLineL2'] {
   background-image: url('../../images/3DLine.svg');
+  background-size: 100% 100%;
+}
+
+.app-selection-btn .s3d-icon[data-category='fitLineRansac'] {
+  background-image: url('../../images/3DLine2.svg');
   background-size: 100% 100%;
 }
 
