@@ -46,10 +46,10 @@ describe('POST /param-inversion', () => {
   });
 });
 
-describe('POST /calculate-chebyshev-circle-fit', () => {
+describe('POST /fit-circle-chebyshev', () => {
   it('returns a string and status code 400 upon wrong input', (done) => {
     request(app)
-      .post('/calculate-chebyshev-circle-fit')
+      .post('/fit-circle-chebyshev')
       .send({
         wrongData: null,
       })
@@ -170,6 +170,18 @@ describe('POST /fit-circle-l-two', () => {
   it('returns a string and status code 400 upon wrong input', (done) => {
     request(app)
       .post('/fit-circle-l-two')
+      .send({
+        wrongData: null,
+      })
+      .expect('Content-Type', 'text/html; charset=utf-8')
+      .expect(400, done);
+  });
+});
+
+describe('POST /fit-sphere', () => {
+  it('returns a string and status code 400 upon wrong input', (done) => {
+    request(app)
+      .post('/fit-sphere')
       .send({
         wrongData: null,
       })

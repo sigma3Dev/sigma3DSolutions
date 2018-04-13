@@ -12,7 +12,7 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
   >
     <a
       className="btn-link"
-      href="/geometry/chebyshevCircleFit"
+      href="/geometry/fitCircleChebyshev"
       onClick={[Function]}
     >
       <div
@@ -266,7 +266,7 @@ exports[`Storyshots Start.AppSelectionBtn Button for choosing an App 1`] = `
                         }
                       >
                         "
-                        /geometry/chebyshevCircleFit
+                        /geometry/fitCircleChebyshev
                         "
                       </span>
                     </span>
@@ -757,7 +757,485 @@ exports[`Storyshots Start.BackToInputBtn Button to navigate back to previous dat
 </div>
 `;
 
-exports[`Storyshots Start.ChebyshevCFDrawing Drawing to display the result of the calculated chebyshev circle fit adjustment especially radius and chebyshev distance 1`] = `
+exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in the calculation 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="error-screen"
+    >
+      <h1
+        className="error-header"
+      >
+        <span
+          className="error-span"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            preserveAspectRatio="xMidYMid meet"
+            style={
+              Object {
+                "color": undefined,
+                "verticalAlign": "middle",
+              }
+            }
+            viewBox="0 0 40 40"
+            width="1em"
+          >
+            <g>
+              <path
+                d="m20 9.2c0.9 0 1.9 0.6 2.6 1.8l9.8 16.4c1.4 2.3 0.3 4.3-2.4 4.3h-20c-2.7 0-3.8-2-2.4-4.3l9.8-16.4c0.7-1.2 1.7-1.8 2.6-1.8z m0-3.3c-2.2 0-4.1 1.2-5.4 3.3l-9.9 16.5c-1.3 2.1-1.4 4.5-0.4 6.3s3.2 3 5.7 3h20c2.5 0 4.6-1.1 5.7-3s0.9-4.2-0.4-6.3l-9.9-16.5c-1.3-2.1-3.2-3.3-5.4-3.3z m2.2 20.8c0 1.2-1 2.1-2.2 2.1s-2.2-0.9-2.2-2.1c0-1.2 1-2.2 2.2-2.2s2.2 1 2.2 2.2z m0.3-10c0-1.4-1.1-2.5-2.5-2.5s-2.5 1.1-2.5 2.5c0 0.3 0.1 0.6 0.2 0.9 0.9 2.3 2.3 5.7 2.3 5.7s1.4-3.4 2.3-5.7c0.1-0.3 0.2-0.6 0.2-0.9z"
+              />
+            </g>
+          </svg>
+           
+        </span>
+        <span>
+          Fehler!
+        </span>
+      </h1>
+      <p
+        className="error-message"
+      >
+        
+      </p>
+      <div
+        className="s3d-info"
+      >
+        <span>
+          Läuft der Fittingservice von sigma3D im Hintergrund?
+          
+           Wenn Sie das Programm nicht besitzen, kontaktieren Sie bitte sigma3D:
+        </span>
+        <div
+          className="s3d-contact-info"
+        >
+          <p>
+            +49 (0) 2542 - 91898 0
+          </p>
+          <div
+            className="links"
+          >
+            <a
+              href="mailto:info@sigma3d.de"
+            >
+              info@sigma3d.de
+            </a>
+            <span>
+               | 
+            </span>
+            <a
+              href="http://sigma3d.de/"
+            >
+              http://www.sigma3d.de
+            </a>
+          </div>
+        </div>
+      </div>
+      <button
+        className="back-to-input-btn"
+        onClick={[Function]}
+      >
+        <div
+          className="arrow-left"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            preserveAspectRatio="xMidYMid meet"
+            style={
+              Object {
+                "color": undefined,
+                "verticalAlign": "middle",
+              }
+            }
+            viewBox="0 0 40 40"
+            width="1em"
+          >
+            <g>
+              <path
+                d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
+              />
+            </g>
+          </svg>
+        </div>
+      </button>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#28c",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    style={
+      Object {
+        "background": "white",
+        "bottom": 0,
+        "display": "none",
+        "left": 0,
+        "overflow": "auto",
+        "padding": "0 40px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+        "zIndex": 99999,
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      ×
+    </button>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginBottom": "20px",
+            "marginTop": "20px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            Start.ErrorScreen
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            Screen to display if there is an error in the calculation
+          </h2>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+                "fontSize": "15px",
+              }
+            }
+          >
+            common info
+          </div>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                ErrorScreen
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    error
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#22a",
+                            "wordBreak": "break-word",
+                          }
+                        }
+                      >
+                        "
+                        
+                        "
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    handleClick
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          handleClick()
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              ErrorScreen
+              " Component
+            </h2>
+            <table
+              className="css-1ytzlk7"
+            >
+              <thead>
+                <tr>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    property
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    propType
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    required
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    default
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    error
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    handleClick
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Start.FitCircleChebyshevDrawing Drawing to display the result of the calculated chebyshev circle fit adjustment especially radius and chebyshev distance 1`] = `
 <div>
   <div
     style={
@@ -1016,7 +1494,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing Drawing to display the result of th
               }
             }
           >
-            Start.ChebyshevCFDrawing
+            Start.FitCircleChebyshevDrawing
           </h1>
           <h2
             style={
@@ -1092,7 +1570,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing Drawing to display the result of th
                 }
               >
                 &lt;
-                ChebyshevCFDrawing
+                FitCircleChebyshevDrawing
               </span>
               <span>
                 <span>
@@ -1185,7 +1663,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing Drawing to display the result of th
               }
             >
               "
-              ChebyshevCFDrawing
+              FitCircleChebyshevDrawing
               " Component
             </h2>
             <table
@@ -1306,7 +1784,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing Drawing to display the result of th
 </div>
 `;
 
-exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with 100 circle points in svg 1`] = `
+exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with 100 circle points in svg 1`] = `
 <div>
   <div
     style={
@@ -2111,7 +2589,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with 100 circle po
               }
             }
           >
-            Start.ChebyshevCFDrawing
+            Start.FitCircleChebyshevDrawing
           </h1>
           <h2
             style={
@@ -2187,7 +2665,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with 100 circle po
                 }
               >
                 &lt;
-                ChebyshevCFDrawing
+                FitCircleChebyshevDrawing
               </span>
               <span>
                 <span>
@@ -2496,7 +2974,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with 100 circle po
               }
             >
               "
-              ChebyshevCFDrawing
+              FitCircleChebyshevDrawing
               " Component
             </h2>
             <table
@@ -2617,7 +3095,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with 100 circle po
 </div>
 `;
 
-exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with 1500 circle points in svg 1`] = `
+exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with 1500 circle points in svg 1`] = `
 <div>
   <div
     style={
@@ -11870,7 +12348,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with 1500 circle p
               }
             }
           >
-            Start.ChebyshevCFDrawing
+            Start.FitCircleChebyshevDrawing
           </h1>
           <h2
             style={
@@ -11946,7 +12424,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with 1500 circle p
                 }
               >
                 &lt;
-                ChebyshevCFDrawing
+                FitCircleChebyshevDrawing
               </span>
               <span>
                 <span>
@@ -12255,7 +12733,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with 1500 circle p
               }
             >
               "
-              ChebyshevCFDrawing
+              FitCircleChebyshevDrawing
               " Component
             </h2>
             <table
@@ -12376,7 +12854,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with 1500 circle p
 </div>
 `;
 
-exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with circle points in svg (scale=0.2) 1`] = `
+exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with circle points in svg (scale=0.2) 1`] = `
 <div>
   <div
     style={
@@ -12785,7 +13263,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with circle points
               }
             }
           >
-            Start.ChebyshevCFDrawing
+            Start.FitCircleChebyshevDrawing
           </h1>
           <h2
             style={
@@ -12861,7 +13339,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with circle points
                 }
               >
                 &lt;
-                ChebyshevCFDrawing
+                FitCircleChebyshevDrawing
               </span>
               <span>
                 <span>
@@ -13170,7 +13648,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with circle points
               }
             >
               "
-              ChebyshevCFDrawing
+              FitCircleChebyshevDrawing
               " Component
             </h2>
             <table
@@ -13291,7 +13769,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with circle points
 </div>
 `;
 
-exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with circle points in svg (scale=1) 1`] = `
+exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with circle points in svg (scale=1) 1`] = `
 <div>
   <div
     style={
@@ -13694,7 +14172,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with circle points
               }
             }
           >
-            Start.ChebyshevCFDrawing
+            Start.FitCircleChebyshevDrawing
           </h1>
           <h2
             style={
@@ -13770,7 +14248,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with circle points
                 }
               >
                 &lt;
-                ChebyshevCFDrawing
+                FitCircleChebyshevDrawing
               </span>
               <span>
                 <span>
@@ -14079,7 +14557,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with circle points
               }
             >
               "
-              ChebyshevCFDrawing
+              FitCircleChebyshevDrawing
               " Component
             </h2>
             <table
@@ -14200,7 +14678,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with circle points
 </div>
 `;
 
-exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with high radius or chebyDist 1`] = `
+exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with high radius or chebyDist 1`] = `
 <div>
   <div
     style={
@@ -14459,7 +14937,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with high radius o
               }
             }
           >
-            Start.ChebyshevCFDrawing
+            Start.FitCircleChebyshevDrawing
           </h1>
           <h2
             style={
@@ -14535,7 +15013,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with high radius o
                 }
               >
                 &lt;
-                ChebyshevCFDrawing
+                FitCircleChebyshevDrawing
               </span>
               <span>
                 <span>
@@ -14628,7 +15106,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with high radius o
               }
             >
               "
-              ChebyshevCFDrawing
+              FitCircleChebyshevDrawing
               " Component
             </h2>
             <table
@@ -14749,7 +15227,7 @@ exports[`Storyshots Start.ChebyshevCFDrawing chebyshev circle with high radius o
 </div>
 `;
 
-exports[`Storyshots Start.ChebyshevCFResult Table to display the result of the calculated chebyshev circle fit adjustment 1`] = `
+exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result of the calculated chebyshev circle fit adjustment 1`] = `
 <div>
   <div
     style={
@@ -15188,7 +15666,7 @@ exports[`Storyshots Start.ChebyshevCFResult Table to display the result of the c
               }
             }
           >
-            Start.ChebyshevCFResult
+            Start.FitCircleChebyshevResult
           </h1>
           <h2
             style={
@@ -15264,7 +15742,7 @@ exports[`Storyshots Start.ChebyshevCFResult Table to display the result of the c
                 }
               >
                 &lt;
-                ChebyshevCFResult
+                FitCircleChebyshevResult
               </span>
               <span>
                 <span>
@@ -15431,7 +15909,7 @@ exports[`Storyshots Start.ChebyshevCFResult Table to display the result of the c
               }
             >
               "
-              ChebyshevCFResult
+              FitCircleChebyshevResult
               " Component
             </h2>
             <table
@@ -15497,484 +15975,6 @@ exports[`Storyshots Start.ChebyshevCFResult Table to display the result of the c
                     className="css-1ygfcef"
                   >
                     chebyshevParams
-                  </td>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    <span />
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    yes
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  />
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in the calculation 1`] = `
-<div>
-  <div
-    style={
-      Object {
-        "position": "relative",
-        "zIndex": 0,
-      }
-    }
-  >
-    <div
-      className="error-screen"
-    >
-      <h1
-        className="error-header"
-      >
-        <span
-          className="error-span"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            preserveAspectRatio="xMidYMid meet"
-            style={
-              Object {
-                "color": undefined,
-                "verticalAlign": "middle",
-              }
-            }
-            viewBox="0 0 40 40"
-            width="1em"
-          >
-            <g>
-              <path
-                d="m20 9.2c0.9 0 1.9 0.6 2.6 1.8l9.8 16.4c1.4 2.3 0.3 4.3-2.4 4.3h-20c-2.7 0-3.8-2-2.4-4.3l9.8-16.4c0.7-1.2 1.7-1.8 2.6-1.8z m0-3.3c-2.2 0-4.1 1.2-5.4 3.3l-9.9 16.5c-1.3 2.1-1.4 4.5-0.4 6.3s3.2 3 5.7 3h20c2.5 0 4.6-1.1 5.7-3s0.9-4.2-0.4-6.3l-9.9-16.5c-1.3-2.1-3.2-3.3-5.4-3.3z m2.2 20.8c0 1.2-1 2.1-2.2 2.1s-2.2-0.9-2.2-2.1c0-1.2 1-2.2 2.2-2.2s2.2 1 2.2 2.2z m0.3-10c0-1.4-1.1-2.5-2.5-2.5s-2.5 1.1-2.5 2.5c0 0.3 0.1 0.6 0.2 0.9 0.9 2.3 2.3 5.7 2.3 5.7s1.4-3.4 2.3-5.7c0.1-0.3 0.2-0.6 0.2-0.9z"
-              />
-            </g>
-          </svg>
-           
-        </span>
-        <span>
-          Fehler!
-        </span>
-      </h1>
-      <p
-        className="error-message"
-      >
-        
-      </p>
-      <div
-        className="s3d-info"
-      >
-        <span>
-          Läuft der Fittingservice von sigma3D im Hintergrund?
-          
-           Wenn Sie das Programm nicht besitzen, kontaktieren Sie bitte sigma3D:
-        </span>
-        <div
-          className="s3d-contact-info"
-        >
-          <p>
-            +49 (0) 2542 - 91898 0
-          </p>
-          <div
-            className="links"
-          >
-            <a
-              href="mailto:info@sigma3d.de"
-            >
-              info@sigma3d.de
-            </a>
-            <span>
-               | 
-            </span>
-            <a
-              href="http://sigma3d.de/"
-            >
-              http://www.sigma3d.de
-            </a>
-          </div>
-        </div>
-      </div>
-      <button
-        className="back-to-input-btn"
-        onClick={[Function]}
-      >
-        <div
-          className="arrow-left"
-        >
-          <svg
-            fill="currentColor"
-            height="1em"
-            preserveAspectRatio="xMidYMid meet"
-            style={
-              Object {
-                "color": undefined,
-                "verticalAlign": "middle",
-              }
-            }
-            viewBox="0 0 40 40"
-            width="1em"
-          >
-            <g>
-              <path
-                d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
-              />
-            </g>
-          </svg>
-        </div>
-      </button>
-    </div>
-  </div>
-  <button
-    onClick={[Function]}
-    style={
-      Object {
-        "background": "#28c",
-        "border": "none",
-        "borderRadius": "0 0 0 5px",
-        "color": "#fff",
-        "cursor": "pointer",
-        "display": "block",
-        "fontFamily": "sans-serif",
-        "fontSize": "12px",
-        "padding": "5px 15px",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="button"
-  >
-    Show Info
-  </button>
-  <div
-    style={
-      Object {
-        "background": "white",
-        "bottom": 0,
-        "display": "none",
-        "left": 0,
-        "overflow": "auto",
-        "padding": "0 40px",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-        "zIndex": 99999,
-      }
-    }
-  >
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#28c",
-          "border": "none",
-          "borderRadius": "0 0 0 5px",
-          "color": "#fff",
-          "cursor": "pointer",
-          "display": "block",
-          "fontFamily": "sans-serif",
-          "fontSize": "12px",
-          "padding": "5px 15px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-        }
-      }
-      type="button"
-    >
-      ×
-    </button>
-    <div
-      style={undefined}
-    >
-      <div
-        style={
-          Object {
-            "WebkitFontSmoothing": "antialiased",
-            "backgroundColor": "#fff",
-            "border": "1px solid #eee",
-            "borderRadius": "2px",
-            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-            "color": "#444",
-            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-            "fontSize": "15px",
-            "fontWeight": 300,
-            "lineHeight": 1.45,
-            "marginBottom": "20px",
-            "marginTop": "20px",
-            "padding": "20px 40px 40px",
-          }
-        }
-      >
-        <div
-          style={
-            Object {
-              "borderBottom": "1px solid #eee",
-              "marginBottom": 10,
-              "paddingTop": 10,
-            }
-          }
-        >
-          <h1
-            style={
-              Object {
-                "fontSize": "35px",
-                "margin": 0,
-                "padding": 0,
-              }
-            }
-          >
-            Start.ErrorScreen
-          </h1>
-          <h2
-            style={
-              Object {
-                "fontSize": "22px",
-                "fontWeight": 400,
-                "margin": "0 0 10px 0",
-                "padding": 0,
-              }
-            }
-          >
-            Screen to display if there is an error in the calculation
-          </h2>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": 0,
-            }
-          }
-        >
-          <div
-            style={
-              Object {
-                "WebkitFontSmoothing": "antialiased",
-                "color": "#444",
-                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-                "fontSize": "15px",
-              }
-            }
-          >
-            common info
-          </div>
-        </div>
-        <div>
-          <h1
-            style={
-              Object {
-                "borderBottom": "1px solid #EEE",
-                "fontSize": "25px",
-                "margin": "20px 0 0 0",
-                "padding": "0 0 5px 0",
-              }
-            }
-          >
-            Story Source
-          </h1>
-          <pre
-            style={
-              Object {
-                "backgroundColor": "#fafafa",
-                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
-                "fontSize": ".88em",
-                "lineHeight": 1.5,
-                "overflowX": "scroll",
-                "padding": ".5rem",
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "paddingLeft": 18,
-                  "paddingRight": 3,
-                }
-              }
-            >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;
-                ErrorScreen
-              </span>
-              <span>
-                <span>
-                   
-                  <span
-                    style={Object {}}
-                  >
-                    error
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#22a",
-                            "wordBreak": "break-word",
-                          }
-                        }
-                      >
-                        "
-                        
-                        "
-                      </span>
-                    </span>
-                  </span>
-                </span>
-                <span>
-                   
-                  <span
-                    style={Object {}}
-                  >
-                    handleClick
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span>
-                        {
-                        <span
-                          style={
-                            Object {
-                              "color": "#170",
-                            }
-                          }
-                        >
-                          handleClick()
-                        </span>
-                        }
-                      </span>
-                    </span>
-                  </span>
-                   
-                </span>
-              </span>
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                /&gt;
-              </span>
-            </div>
-          </pre>
-        </div>
-        <div>
-          <h1
-            style={
-              Object {
-                "borderBottom": "1px solid #EEE",
-                "fontSize": "25px",
-                "margin": "20px 0 0 0",
-                "padding": "0 0 5px 0",
-              }
-            }
-          >
-            Prop Types
-          </h1>
-          <div>
-            <h2
-              style={
-                Object {
-                  "margin": "20px 0 0 0",
-                }
-              }
-            >
-              "
-              ErrorScreen
-              " Component
-            </h2>
-            <table
-              className="css-1ytzlk7"
-            >
-              <thead>
-                <tr>
-                  <th
-                    className="css-d52hbj"
-                  >
-                    property
-                  </th>
-                  <th
-                    className="css-d52hbj"
-                  >
-                    propType
-                  </th>
-                  <th
-                    className="css-d52hbj"
-                  >
-                    required
-                  </th>
-                  <th
-                    className="css-d52hbj"
-                  >
-                    default
-                  </th>
-                  <th
-                    className="css-d52hbj"
-                  >
-                    description
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    error
-                  </td>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    <span />
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    yes
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  />
-                </tr>
-                <tr>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    handleClick
                   </td>
                   <td
                     className="css-1ygfcef"
@@ -19546,6 +19546,499 @@ exports[`Storyshots Start.FitPointResultTable - DontTest Table to display calcul
 </div>
 `;
 
+exports[`Storyshots Start.FitSphereResultTable - DontTest Table to display calculated params of sphere fit 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <table
+      className="fit-sphere-result-table"
+    >
+      <thead>
+        <tr
+          className="caption"
+        >
+          <th>
+            X
+          </th>
+          <th>
+            Y
+          </th>
+          <th>
+            Z
+          </th>
+          <th>
+            Radius
+          </th>
+          <th>
+            StDev
+          </th>
+          <th />
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>
+            11.83
+          </th>
+          <th>
+            8.63
+          </th>
+          <th>
+            11.60
+          </th>
+          <th>
+            0.00000
+          </th>
+          <th>
+            0.00000
+          </th>
+          <th>
+            <button
+              className="copy"
+              onClick={[Function]}
+              title="Copy to clipboard"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "color": undefined,
+                    "verticalAlign": "middle",
+                  }
+                }
+                viewBox="0 0 40 40"
+                width="1em"
+              >
+                <g>
+                  <path
+                    d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
+                  />
+                </g>
+              </svg>
+            </button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#28c",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    style={
+      Object {
+        "background": "white",
+        "bottom": 0,
+        "display": "none",
+        "left": 0,
+        "overflow": "auto",
+        "padding": "0 40px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+        "zIndex": 99999,
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      ×
+    </button>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginBottom": "20px",
+            "marginTop": "20px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            Start.FitSphereResultTable - DontTest
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            Table to display calculated params of sphere fit
+          </h2>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+                "fontSize": "15px",
+              }
+            }
+          >
+            common info
+          </div>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                FitSphereResultTable
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    params
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          [
+                          <span>
+                            {
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              11.833
+                            </span>
+                            }
+                          </span>
+                          , 
+                          <span>
+                            {
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              8.633
+                            </span>
+                            }
+                          </span>
+                          , 
+                          <span>
+                            {
+                            <span
+                              style={
+                                Object {
+                                  "color": "#a11",
+                                }
+                              }
+                            >
+                              11.6
+                            </span>
+                            }
+                          </span>
+                          , 
+                          …
+                          ]
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    copyText
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span
+                        style={
+                          Object {
+                            "color": "#22a",
+                            "wordBreak": "break-word",
+                          }
+                        }
+                      >
+                        "
+                        
+                        "
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              FitSphereResultTable
+              " Component
+            </h2>
+            <table
+              className="css-1ytzlk7"
+            >
+              <thead>
+                <tr>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    property
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    propType
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    required
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    default
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    params
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    copyText
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
 <div>
   <div
@@ -20395,15 +20888,15 @@ exports[`Storyshots Start.InputInfoPanel Show informations about the input 1`] =
     }
   >
     <div
-      className="input-info-panel popover right"
+      className="input-info-panel popover left"
       id="popover-basic"
       role="tooltip"
       style={
         Object {
           "display": "block",
-          "fontSize": "0.6em",
-          "left": "80%",
-          "top": 17,
+          "fontSize": "1em",
+          "left": "76%",
+          "top": 14,
           "whiteSpace": "pre-wrap",
         }
       }
@@ -20413,7 +20906,7 @@ exports[`Storyshots Start.InputInfoPanel Show informations about the input 1`] =
         style={
           Object {
             "left": undefined,
-            "top": "30px",
+            "top": "10px",
           }
         }
       />
@@ -24284,6 +24777,11 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
             </li>
             <li>
               <span>
+                Kreis L2
+              </span>
+            </li>
+            <li>
+              <span>
                 Gaußebene
               </span>
             </li>
@@ -24305,6 +24803,16 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
             <li>
               <span>
                 Linie L2
+              </span>
+            </li>
+            <li>
+              <span>
+                Linie RANSAC
+              </span>
+            </li>
+            <li>
+              <span>
+                Sphäre
               </span>
             </li>
           </ul>

@@ -44,7 +44,7 @@ class FitPointResultContainer extends Component {
    */
   goBack = () => {
     this.props.onRemoveError();
-    this.props.history.push('/geometry/fit-cylinder/data-input');
+    this.props.history.push('/geometry/fit-point/data-input');
   };
 
   render() {

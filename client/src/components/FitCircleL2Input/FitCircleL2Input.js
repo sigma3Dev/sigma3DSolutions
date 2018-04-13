@@ -16,18 +16,17 @@ const FitCircleL2Input = ({
   handleFileDrop,
   handleSubmitClick,
   circleL2Points,
+  clickAnywhere,
 }) => (
-  <div className='fit-circle-l2-input'>
+  <div className='fit-circle-l2-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitCircleL2Input.label.caption' defaultMessage='CircleL2' />
-      <div className='info-section'>
-        <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-        <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
     <PointsTable systemPoints={circleL2Points} handleDeleteDataInput={handleDeleteClick} />
     <SubmitBtn handleClick={handleSubmitClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
   </div>
 );
 
@@ -36,6 +35,7 @@ FitCircleL2Input.propTypes = {
   handleDeleteClick: PropTypes.func.isRequired,
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
   circleL2Points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),

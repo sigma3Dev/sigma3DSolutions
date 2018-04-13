@@ -44,6 +44,8 @@ class FitLineL2InputContainer extends Component {
     this.clearLineL2Input = this.clearLineL2Input.bind(this);
     this.submitFitLineL2Coords = this.submitFitLineL2Coords.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+    this.clickAnywhere = this.clickAnywhere.bind(this);
   }
 
   /**
@@ -55,6 +57,16 @@ class FitLineL2InputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * closes info, if it is open
+   * @memberof FitLineL2InputContainer
+   */
+  clickAnywhere = () => {
+    if (this.state.isInfoOpen) {
+      this.setState({ ...this.state, isInfoOpen: false });
+    }
   };
 
   /**
@@ -141,6 +153,7 @@ class FitLineL2InputContainer extends Component {
           handleFileDrop={this.parseCoords}
           handleSubmitClick={this.submitFitLineL2Coords}
           lineL2Points={this.props.lineL2Points}
+          clickAnywhere={this.clickAnywhere}
         />
       </div>
     );

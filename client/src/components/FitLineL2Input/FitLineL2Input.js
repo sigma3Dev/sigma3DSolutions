@@ -16,17 +16,16 @@ const FitLineL2Input = ({
   handleFileDrop,
   handleSubmitClick,
   lineL2Points,
+  clickAnywhere,
 }) => (
-  <div className='fit-line-l2-input'>
+  <div className='fit-line-l2-input' onClick={clickAnywhere}>
     <h1>
       <FormattedMessage id='FitLineL2Input.label.caption' defaultMessage='LineL2' />
-      <div className='info-section'>
-        <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-        <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      </div>
     </h1>
     <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
     <PointsTable systemPoints={lineL2Points} handleDeleteDataInput={handleDeleteClick} />
+    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     <SubmitBtn handleClick={handleSubmitClick} />
   </div>
 );
@@ -36,6 +35,7 @@ FitLineL2Input.propTypes = {
   handleDeleteClick: PropTypes.func.isRequired,
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
+  clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,
   lineL2Points: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)),

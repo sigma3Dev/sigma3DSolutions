@@ -44,6 +44,7 @@ class FitCylinderInputContainer extends Component {
     this.clearCylinderInput = this.clearCylinderInput.bind(this);
     this.submitFitCylinderCoords = this.submitFitCylinderCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.clickAnywhere = this.clickAnywhere.bind(this);
   }
 
   /**
@@ -55,6 +56,16 @@ class FitCylinderInputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * closes info, if it is open
+   * @memberof CylinderInputContainer
+   */
+  clickAnywhere = () => {
+    if (this.state.isInfoOpen) {
+      this.setState({ ...this.state, isInfoOpen: false });
+    }
   };
 
   /**
@@ -141,6 +152,7 @@ class FitCylinderInputContainer extends Component {
           handleFileDrop={this.parseCoords}
           handleSubmitClick={this.submitFitCylinderCoords}
           cylinderPoints={this.props.cylinderPoints}
+          clickAnywhere={this.clickAnywhere}
         />
       </div>
     );

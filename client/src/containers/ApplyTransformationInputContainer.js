@@ -49,6 +49,7 @@ class ApplyTransformationInputContainer extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.submitApplyTrafoCoords = this.submitApplyTrafoCoords.bind(this);
     this.displayInfoPanel = this.displayInfoPanel.bind(this);
+    this.clickAnywhere = this.clickAnywhere.bind(this);
   }
 
   /**
@@ -83,6 +84,16 @@ class ApplyTransformationInputContainer extends Component {
    */
   displayInfoPanel = () => {
     this.setState({ ...this.state, isInfoOpen: !this.state.isInfoOpen });
+  };
+
+  /**
+   * closes info, if it is open
+   * @memberof ApplyTransformationInputContainer
+   */
+  clickAnywhere = () => {
+    if (this.state.isInfoOpen) {
+      this.setState({ ...this.state, isInfoOpen: false });
+    }
   };
 
   /**
@@ -169,6 +180,7 @@ class ApplyTransformationInputContainer extends Component {
           transformation={this.props.transformation}
           points={this.props.points}
           infoPanelText={infoPanelText}
+          clickAnywhere={this.clickAnywhere}
         />
       </div>
     );

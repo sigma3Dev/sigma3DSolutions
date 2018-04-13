@@ -71,7 +71,7 @@
   width: 80px;
 }
 
-.app-selection-btn .s3d-icon[data-category='chebyshevCircleFit'] {
+.app-selection-btn .s3d-icon[data-category='fitCircleChebyshev'] {
   background-image: url('../../images/chebyshev-circle.svg');
   background-size: 100% 100%;
 }
@@ -108,6 +108,11 @@
 
 .app-selection-btn .s3d-icon[data-category='fitPoint'] {
   background-image: url('../../images/Point.svg');
+  background-size: 100% 100%;
+}
+
+.app-selection-btn .s3d-icon[data-category='fitSphere'] {
+  background-image: url('../../images/Sphere.svg');
   background-size: 100% 100%;
 }
 

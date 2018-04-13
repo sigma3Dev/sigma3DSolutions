@@ -16,13 +16,13 @@
 
 .quat-cardan h1 {
   font-size: 3em;
-  border-bottom: 3px solid #0375ba;
-  padding-bottom: 5px;
-  margin: 4vh 0 10vh;
+  color: rgb(128, 128, 128);
+  margin: 20px 0;
 }
 
 .quat-cardan .inputs {
   width: 100%;
+  margin-top: 4vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;

@@ -1,0 +1,14 @@
+.chebyshev-circle-fit-input {
+  width: 82vw;
+  margin-left: 16vw;
+  font-family: Roboto;
+}
+
+.chebyshev-circle-fit-input * {
+  text-align: center;
+}
+
+.chebyshev-circle-fit-input h1 {
+  margin: 20px 0;
+  color: rgb(128, 128, 128);
+}

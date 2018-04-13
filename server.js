@@ -77,7 +77,7 @@ app.post('/param-inversion', (req, res) => {
 });
 
 /** calculate chebyshev circle fit */
-app.post('/calculate-chebyshev-circle-fit', (req, res) => {
+app.post('/fit-circle-chebyshev', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
     !Array.isArray(req.body.coords) ||
@@ -277,6 +277,25 @@ app.post('/fit-circle-l-two', (req, res) => {
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
     !Object.prototype.hasOwnProperty.call(req.body.coords, 'circleL2Points') ||
     !Array.isArray(req.body.coords.circleL2Points)
+  ) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  }
+
+  sf.fitCircleL2(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      res.status(500).send(response);
+    }
+  });
+});
+
+app.post('/fit-sphere', (req, res) => {
+  if (
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'spherePoints') ||
+    !Array.isArray(req.body.coords.spherePoints)
   ) {
     res.status(400).send('Invalid input coordinates');
     return;

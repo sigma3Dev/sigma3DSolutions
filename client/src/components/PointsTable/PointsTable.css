@@ -5,7 +5,10 @@
 }
 
 .points-table {
-  padding-top: 20px;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+  height: 42vh;
+  overflow: auto;
 }
 
 .points-table .trash-icon {
@@ -41,5 +44,6 @@
 }
 
 .points-table .grey {
-  background-color: #d9e9f0;
+  color: #afa993;
+  background-color: rgb(52, 54, 57);
 }

@@ -15,12 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "coordinatedataimporter": "^0.5.0",
     "express": "^4.16.2",
     "express-react-views": "^0.10.5",
     "node": "^9.5.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
     "s3d-fitting-commands": "^0.4.10",
     "ws": "^4.1.0"
   },

@@ -44,6 +44,7 @@ class FitPlaneGaussInputContainer extends Component {
     this.clearPlaneGaussInput = this.clearPlaneGaussInput.bind(this);
     this.submitFitPlaneGaussCoords = this.submitFitPlaneGaussCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.clickAnywhere = this.clickAnywhere.bind(this);
   }
 
   /**
@@ -105,6 +106,16 @@ class FitPlaneGaussInputContainer extends Component {
   };
 
   /**
+   * closes info, if it is open
+   * @memberof FitPlaneGaussInputContainer
+   */
+  clickAnywhere = () => {
+    if (this.state.isInfoOpen) {
+      this.setState({ ...this.state, isInfoOpen: false });
+    }
+  };
+
+  /**
    * Decides wheter InfoPanel is displayed or not
    * @memberof FitPlaneGaussInputContainer
    */
@@ -141,6 +152,7 @@ class FitPlaneGaussInputContainer extends Component {
           handleFileDrop={this.parseCoords}
           handleSubmitClick={this.submitFitPlaneGaussCoords}
           planePoints={this.props.planePoints}
+          clickAnywhere={this.clickAnywhere}
         />
       </div>
     );

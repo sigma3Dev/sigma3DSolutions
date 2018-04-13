@@ -5,10 +5,10 @@ import {
 } from '../../actions/submitThreeDTrafoCoords/submitThreeDTrafoCoordsActions';
 
 import {
-  SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST,
-  SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS,
-  SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE,
-} from '../../actions/submitChebyshevCircleFitCoords/submitChebyshevCircleFitCoordsActions';
+  SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_REQUEST,
+  SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_SUCCESS,
+  SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_FAILURE,
+} from '../../actions/submitFitCircleChebyshevCoords/submitFitCircleChebyshevCoordsActions';
 
 import {
   SUBMIT_APPLY_TRAFO_VALUES_REQUEST,
@@ -58,6 +58,12 @@ import {
   SUBMIT_FIT_CIRCLE_L_TWO_COORDS_FAILURE,
 } from '../../actions/submitFitCircleL2Coords/submitFitCircleL2CoordsActions';
 
+import {
+  SUBMIT_FIT_SPHERE_COORDS_REQUEST,
+  SUBMIT_FIT_SPHERE_COORDS_SUCCESS,
+  SUBMIT_FIT_SPHERE_COORDS_FAILURE,
+} from '../../actions/submitFitSphereCoords/submitFitSphereCoordsActions';
+
 /*  true when a request has been sent, but no response or error has returned yet */
 const initialCalculationStateData = {
   isCalculating: false,
@@ -86,17 +92,17 @@ function calculationStatus(state = initialCalculationStateData, action) {
         ...state,
         isCalculating: false,
       };
-    case SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_REQUEST:
+    case SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_REQUEST:
       return {
         ...state,
         isCalculating: true,
       };
-    case SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_SUCCESS:
+    case SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_SUCCESS:
       return {
         ...state,
         isCalculating: false,
       };
-    case SUBMIT_CHEBYSHEV_CIRCLE_FIT_COORDS_FAILURE:
+    case SUBMIT_FIT_CIRCLE_CHEBYSHEV_COORDS_FAILURE:
       return {
         ...state,
         isCalculating: false,
@@ -217,6 +223,21 @@ function calculationStatus(state = initialCalculationStateData, action) {
         isCalculating: false,
       };
     case SUBMIT_FIT_CIRCLE_L_TWO_COORDS_FAILURE:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_FIT_SPHERE_COORDS_REQUEST:
+      return {
+        ...state,
+        isCalculating: true,
+      };
+    case SUBMIT_FIT_SPHERE_COORDS_SUCCESS:
+      return {
+        ...state,
+        isCalculating: false,
+      };
+    case SUBMIT_FIT_SPHERE_COORDS_FAILURE:
       return {
         ...state,
         isCalculating: false,

@@ -51,6 +51,7 @@ class FitLineRansacInputContainer extends Component {
     this.submitFitLineRansacCoords = this.submitFitLineRansacCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.updateTolerance = this.updateTolerance.bind(this);
+    this.clickAnywhere = this.clickAnywhere.bind(this);
   }
 
   /**
@@ -62,6 +63,16 @@ class FitLineRansacInputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * closes info, if it is open
+   * @memberof FitLineRansacInputContainer
+   */
+  clickAnywhere = () => {
+    if (this.state.isInfoOpen) {
+      this.setState({ ...this.state, isInfoOpen: false });
+    }
   };
 
   /**
@@ -156,6 +167,7 @@ class FitLineRansacInputContainer extends Component {
           handleToleranceChange={this.updateTolerance}
           linePoints={this.props.linePoints}
           lineTolerance={this.props.lineTolerance}
+          clickAnywhere={this.clickAnywhere}
         />
       </div>
     );
