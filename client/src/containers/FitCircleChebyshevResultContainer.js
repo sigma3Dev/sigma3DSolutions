@@ -55,7 +55,7 @@ class FitCircleChebyshevResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitCircleChebyshevResult
           chebyshevParams={this.props.chebyshevParams}
           handleClick={this.goBack}

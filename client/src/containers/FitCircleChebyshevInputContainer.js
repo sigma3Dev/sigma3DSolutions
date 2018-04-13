@@ -139,7 +139,7 @@ class FitCircleChebyshevInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitCircleChebyshevInput
           onFileDrop={this.parseCoords}
           circlePoints={this.props.circlePoints}

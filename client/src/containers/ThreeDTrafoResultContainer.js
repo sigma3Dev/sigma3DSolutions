@@ -115,7 +115,7 @@ class ThreeDTrafoResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='trafo' />
         <ThreeDTrafoResult
           trafoParams={this.props.trafoParams}
           trafoDifference={this.props.trafoDifference}

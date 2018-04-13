@@ -93,7 +93,7 @@ class QuatCardanContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='trafo' />
         <QuatCardan
           quat={this.props.quat}
           cardan={this.props.cardan}

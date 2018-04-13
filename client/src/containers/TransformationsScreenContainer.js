@@ -29,7 +29,7 @@ class TransformationsScreenContainer extends Component {
     ];
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='trafo' />
         <SelectAppsScreen buttons={buttons} />
       </div>
     );

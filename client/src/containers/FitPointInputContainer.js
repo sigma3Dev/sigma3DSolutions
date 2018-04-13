@@ -144,7 +144,7 @@ class FitPointInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitPointInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}

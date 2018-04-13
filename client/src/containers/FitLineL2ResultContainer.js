@@ -55,7 +55,7 @@ class FitLineL2ResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitLineL2Result params={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );

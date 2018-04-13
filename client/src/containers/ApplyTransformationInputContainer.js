@@ -169,7 +169,7 @@ class ApplyTransformationInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Sidebar currentMenu='trafo' />
         <ApplyTrafoInput
           handleSubmit={this.submitApplyTrafoCoords}
           handleChange={this.parseTrafoParamInput}

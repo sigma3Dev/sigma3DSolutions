@@ -55,7 +55,7 @@ class FitPlaneRansacResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitPlaneRansacResult params={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );

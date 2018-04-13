@@ -49,7 +49,7 @@ class GeometryScreenContainer extends Component {
     ];
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <SelectAppsScreen buttons={buttons} />
       </div>
     );

@@ -56,7 +56,7 @@ class ApplyTransformationResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='trafo' />
         <ApplyTrafoResult result={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );

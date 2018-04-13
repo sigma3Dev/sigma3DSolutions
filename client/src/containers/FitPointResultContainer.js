@@ -55,7 +55,7 @@ class FitPointResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitPointResult params={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );
