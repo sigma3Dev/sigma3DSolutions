@@ -11,16 +11,12 @@
   background: white;
 }
 
-.app-selection-btn:hover {
-  transform: scale(1.1);
-  background: #cad9f7;
-}
-
 .btn-link {
   text-decoration: none;
 }
 
 .app-selection-btn:hover {
+  animation: app-selection-btn-transition linear 100ms forwards;
   cursor: pointer;
 }
 
@@ -129,4 +125,15 @@
 .app-selection-btn .s3d-icon[data-category='transform'] {
   background-image: url('../../images/Transform.svg');
   background-size: 100% 100%;
+}
+
+@keyframes app-selection-btn-transition {
+  0% {
+    transform: scale(1);
+    background: white;
+  }
+  100% {
+    transform: scale(1.1);
+    background: #cad9f7;
+  }
 }

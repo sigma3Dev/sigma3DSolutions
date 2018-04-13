@@ -143,7 +143,7 @@ class FitCircleL2InputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitCircleL2Input
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}

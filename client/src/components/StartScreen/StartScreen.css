@@ -46,20 +46,41 @@
   width: 20vw;
 }
 
-.start-screen .element:hover{
+.start-screen .element:hover {
   background-color: #9ab9ea;
-  transform: scale(1.5);
+  animation: start-screen-element-transition linear 150ms forwards;
 }
 
 .start-screen .element .element-header {
   align-self: center;
   font-size: 1.2em;
   font-weight: bold;
-  margin-left: 17px;
+  margin: 0 0 8px 17px;
   color: #01458a;
+}
+
+.start-screen .element .element-header a:hover {
+  text-decoration: none;
 }
 
 .start-screen .element ul li {
   text-align: left;
+}
+
+.start-screen .element ul li a {
   color: #333;
+}
+
+.start-screen .element ul li a:hover {
+  text-decoration: none;
+  color: #151515;
+}
+
+@keyframes start-screen-element-transition {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.3);
+  }
 }

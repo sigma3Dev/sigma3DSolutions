@@ -132,7 +132,7 @@ class FitSphereInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitSphereInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}

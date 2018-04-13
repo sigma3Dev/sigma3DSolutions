@@ -227,7 +227,7 @@ class ThreeDTrafoInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Sidebar currentMenu='trafo' />
         <ThreeDTrafoInput
           onStartFileDrop={this.parseStartCoords}
           onTargetFileDrop={this.parseTargetCoords}

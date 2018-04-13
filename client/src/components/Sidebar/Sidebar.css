@@ -13,36 +13,58 @@
   overflow-x: hidden;
 }
 
-.Sidebar .link {
+.Sidebar a.link span {
+  height: 100%;
+  display: block;
+  width: 100%;
   font-family: Roboto;
   color: white;
   text-decoration: none;
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
-.Sidebar .link:hover,
-.Sidebar .link-active {
+.Sidebar a.link-active span {
+  height: 100%;
+  display: block;
+  width: 100%;
   font-family: Roboto;
-  opacity: 1;
+  color: white;
   text-decoration: none;
-  margin: 10px 0;
-  color: #afb2b6;
   opacity: 1;
 }
 
-.sidebar-link-container {
-  font-size: 1.2em;
+.Sidebar a.link:hover {
+  display: block;
+  font-family: Roboto;
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+.Sidebar a.link:hover span {
+  opacity: 1;
+}
+
+.Sidebar a.link-active:hover {
+  display: block;
+  font-family: Roboto;
+  text-decoration: none;
+  border: none;
+}
+
+.Sidebar .sidebar-link-container {
+  font-size: 1.15em;
   text-transform: uppercase;
   padding: 10px;
   width: 100%;
 }
 
-.sidebar-link-container:hover {
-  transform: scale(1.2);
-  background-color: #505251; 
+.Sidebar .sidebar-link-container:hover {
+  animation: size-transition linear 200ms forwards;
+  background-color: #505251;
 }
 
-.logo {
+.Sidebar .logo {
   background-image: url('./s3dlogo.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -51,6 +73,34 @@
   margin: 25px 0 20px;
 }
 
-.logo:hover {
-  transform: scale(1.2);
+.Sidebar .logo:hover {
+  animation: size-transition linear 200ms forwards;
+}
+
+.Sidebar .info-section {
+  align-self: flex-start;
+  text-align: left;
+  position: fixed;
+  color: white;
+  bottom: 10px;
+  margin-left: 15px;
+}
+
+.Sidebar .info-section a {
+  text-decoration: none;
+  color: white;
+  opacity: 0.8;
+}
+
+.Sidebar .info-section a:hover {
+  opacity: 1;
+}
+
+@keyframes size-transition {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }

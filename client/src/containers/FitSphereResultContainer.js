@@ -55,7 +55,7 @@ class FitSphereResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitSphereResult params={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );

@@ -144,7 +144,7 @@ class FitLineL2InputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitLineL2Input
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}

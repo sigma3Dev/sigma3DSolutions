@@ -156,7 +156,7 @@ class FitLineRansacInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitLineRansacInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}

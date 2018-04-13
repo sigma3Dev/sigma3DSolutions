@@ -55,7 +55,7 @@ class FitCircleL2ResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitCircleL2Result params={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );

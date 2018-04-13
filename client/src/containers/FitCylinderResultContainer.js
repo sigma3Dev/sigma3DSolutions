@@ -55,7 +55,7 @@ class FitCylinderResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Sidebar currentMenu='geometry' />
         <FitCylinderResult params={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );

@@ -145,7 +145,7 @@ class ParamInversionContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Sidebar currentMenu='trafo' />
         <ParamInversion
           handleSubmit={this.submitParamInversionCoords}
           handleChange={this.parseInput}
