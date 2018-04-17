@@ -1,0 +1,14 @@
+.bundle-adjustment-input {
+  width: 82vw;
+  margin-left: 16vw;
+  font-family: Roboto;
+}
+
+.bundle-adjustment-input * {
+  text-align: center;
+}
+
+.bundle-adjustment-input h1 {
+  color: rgb(128, 128, 128);
+  margin: 20px 0;
+}

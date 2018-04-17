@@ -88,6 +88,14 @@ const StartScreen = () => (
             </Link>
           </li>
           <li>
+            <Link to='/geometry/bundle-adjustment/data-input'>
+              <FormattedMessage
+                id='StartScreen.element.bundleAdjustment'
+                defaultMessage='Bundle Adjustment'
+              />
+            </Link>
+          </li>
+          <li>
             <Link to='/geometry/fit-plane-gauss/data-input'>
               <FormattedMessage
                 id='StartScreen.element.fitPlaneGauss'

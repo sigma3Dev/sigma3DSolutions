@@ -12,6 +12,7 @@ import { SUBMIT_FIT_LINE_L_TWO_COORDS_FAILURE } from '../../actions/submitFitLin
 import { SUBMIT_FIT_LINE_RANSAC_COORDS_FAILURE } from '../../actions/submitFitLineRansacCoords/submitFitLineRansacCoordsActions';
 import { SUBMIT_FIT_CIRCLE_L_TWO_COORDS_FAILURE } from '../../actions/submitFitCircleL2Coords/submitFitCircleL2CoordsActions';
 import { SUBMIT_FIT_SPHERE_COORDS_FAILURE } from '../../actions/submitFitSphereCoords/submitFitSphereCoordsActions';
+import { SUBMIT_BUNDLE_ADJUSTMENT_COORDS_FAILURE } from '../../actions/submitBundleAdjustmentCoords/submitBundleAdjustmentCoordsActions';
 
 const initialErrorState = { error: null };
 
@@ -89,6 +90,11 @@ function errorHandling(state = initialErrorState, action) {
         error: action.error,
       };
     case SUBMIT_FIT_SPHERE_COORDS_FAILURE:
+      return {
+        ...state,
+        error: action.error,
+      };
+    case SUBMIT_BUNDLE_ADJUSTMENT_COORDS_FAILURE:
       return {
         ...state,
         error: action.error,

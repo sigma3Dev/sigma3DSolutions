@@ -2,6 +2,8 @@ import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import ApplyTransformationInputContainer from './containers/ApplyTransformationInputContainer';
 import ApplyTransformationResultContainer from './containers/ApplyTransformationResultContainer';
+import BundleAdjustmentInputContainer from './containers/BundleAdjustmentInputContainer';
+import BundleAdjustmentResultContainer from './containers/BundleAdjustmentResultContainer';
 import FitCircleChebyshevInputContainer from './containers/FitCircleChebyshevInputContainer';
 import FitCircleChebyshevResultContainer from './containers/FitCircleChebyshevResultContainer';
 import GeometryScreenContainer from './containers/GeometryScreenContainer';
@@ -62,7 +64,10 @@ const App = () => (
         path='/geometry/fit-circle-chebyshev/data-input'
         component={FitCircleChebyshevInputContainer}
       />
-      <Route path='/geometry/fit-circle-chebyshev/result' component={FitCircleChebyshevResultContainer} />
+      <Route
+        path='/geometry/fit-circle-chebyshev/result'
+        component={FitCircleChebyshevResultContainer}
+      />
       <Route path='/geometry/fit-plane-gauss/data-input' component={FitPlaneGaussInputContainer} />
       <Route path='/geometry/fit-plane-gauss/result' component={FitPlaneGaussResultContainer} />
       <Route
@@ -82,6 +87,14 @@ const App = () => (
       <Route path='/geometry/fit-circle-l-two/result' component={FitCircleL2ResultContainer} />
       <Route path='/geometry/fit-sphere/data-input' component={FitSphereInputContainer} />
       <Route path='/geometry/fit-sphere/result' component={FitSphereResultContainer} />
+      <Route
+        path='/geometry/bundle-adjustment/data-input'
+        component={BundleAdjustmentInputContainer}
+      />
+      <Route
+        path='/geometry/bundle-adjustment/result'
+        component={BundleAdjustmentResultContainer}
+      />
       <Redirect from='*' to='/' />
     </Switch>
   </div>

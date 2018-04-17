@@ -23,6 +23,8 @@ import {
   clearCircleL2Input,
   CLEAR_SPHERE_INPUT,
   clearSphereInput,
+  CLEAR_BUNDLE_INPUT,
+  clearBundleInput,
 } from './clearInputActions';
 
 describe('clearInputActions', () => {
@@ -119,6 +121,14 @@ describe('clearInputActions', () => {
       type: CLEAR_SPHERE_INPUT,
     };
     const result = clearSphereInput();
+    expect(result.type).toEqual(expected.type);
+    expect(result.receivedAt).toBeDefined();
+  });
+  it('should create a CLEAR_BUNDLE_INPUT action', () => {
+    const expected = {
+      type: CLEAR_BUNDLE_INPUT,
+    };
+    const result = clearBundleInput();
     expect(result.type).toEqual(expected.type);
     expect(result.receivedAt).toBeDefined();
   });

@@ -32,7 +32,7 @@ const FitCircleChebyshevInput = ({
     <div>
       <h1>
         <FormattedMessage
-          id='FitCircleChebyshevInput.label.circlePointsCaption'
+          id='FitCircleChebyshevInput.label.caption'
           defaultMessage='Circle Points:'
         />
       </h1>

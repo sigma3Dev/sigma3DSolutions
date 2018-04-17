@@ -19,6 +19,10 @@ class GeometryScreenContainer extends Component {
         link: '/geometry/fit-circle-l-two/data-input',
       },
       {
+        type: 'bundleAdjustment',
+        link: '/geometry/bundle-adjustment/data-input',
+      },
+      {
         type: 'fitPlaneGauss',
         link: '/geometry/fit-plane-gauss/data-input',
       },
