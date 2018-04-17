@@ -53,7 +53,7 @@ class BundleAdjustmentInputContainer extends Component {
    * @memberof BundleAdjustmentInputContainer
    */
   parseCoords = (file) => {
-    cdi.startCoordinateDataImport(file, (coords) => {
+    cdi.bundleAdjustmentDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
   };

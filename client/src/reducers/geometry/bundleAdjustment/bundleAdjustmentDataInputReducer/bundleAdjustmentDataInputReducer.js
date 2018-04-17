@@ -1,5 +1,5 @@
 import { PUSH_BUNDLE_ADJUSTMENT_COORDS } from '../../../../actions/pushCoords/pushCoordsActions';
-import { CLEAR_CYLINDER_INPUT } from '../../../../actions/clearInput/clearInputActions';
+import { CLEAR_BUNDLE_INPUT } from '../../../../actions/clearInput/clearInputActions';
 
 /** holds the initial transform data input */
 const initialData = {
@@ -13,7 +13,7 @@ function bundleAdjustment(state = initialData, action) {
         ...state,
         points: action.coords,
       };
-    case CLEAR_CYLINDER_INPUT:
+    case CLEAR_BUNDLE_INPUT:
       return {
         ...state,
         points: [],

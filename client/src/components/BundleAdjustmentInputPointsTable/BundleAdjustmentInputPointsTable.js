@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
 import './BundleAdjustmentInputPointsTable.css';
 
 const FaTrash = require('react-icons/lib/fa/trash-o');
@@ -40,8 +41,12 @@ const BundleAdjustmentInputPointsTable = ({ bundlePoints, handleDeleteDataInput 
               </button>
             </th>
             <th>Station ID</th>
-            <th>Name</th>
-            <th>x</th>
+            <th>
+              <FormattedMessage
+                id='BundleAdjustmentInputPointsTable.label.geometryId'
+                defaultMessage='Geometry ID'
+              />
+            </th>
             <th>x</th>
             <th>y</th>
             <th>z</th>

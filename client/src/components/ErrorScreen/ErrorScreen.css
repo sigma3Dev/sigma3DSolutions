@@ -1,12 +1,11 @@
 .error-screen {
-  width: 83%;
-  height: 80vh;
-  margin-left: 240px;
+  width: 82vw;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-top: 30px;
+  margin: 4vh 0 0 16vw;
   font-family: Roboto;
   text-align: center;
 }

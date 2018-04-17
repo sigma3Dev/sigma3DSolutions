@@ -30,6 +30,8 @@
   "AppSelectionBtn.description.quatCardan": "Quaternionen zu Cardan und umgekehrt",
   "AppSelectionBtn.description.transform": "Punkte mit Parametern transformieren",
   "BundleAdjustmentInput.label.caption": "Bündelausgleich",
+  "BundleAdjustmentInputPointsTable.label.geometryId": "Geometrie ID",
+  "BundleAdjustmentResult.label.baseStation": "Basisstation: ",
   "BundleAdjustmentResult.label.caption": "Bündelausgleich Ergebnis",
   "CoordinateDifferenceBarGraph.caption.deviation": "Abweichung: ",
   "ErrorScreen.label.error": "Fehler!",

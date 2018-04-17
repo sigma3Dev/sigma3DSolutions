@@ -1,7 +1,7 @@
 import { SUBMIT_BUNDLE_ADJUSTMENT_COORDS_SUCCESS } from '../../../../actions/submitBundleAdjustmentCoords/submitBundleAdjustmentCoordsActions';
 
 const initialResultData = {
-  baseStationId: undefined,
+  baseStationId: 0,
   transformationParameters: [],
   geometries: [],
 };
