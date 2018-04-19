@@ -13,21 +13,14 @@ const BundleAdjustmentResult = ({ params, handleReturnClick }) => (
         defaultMessage='Bundle Adjustment Result'
       />
     </h1>
-    <h2 className='bundle-adjustment-result-base-station'>
-      <FormattedMessage
-        id='BundleAdjustmentResult.label.baseStation'
-        defaultMessage='Base Station: '
-      />
-      params[0];
-    </h2>
-    <BundleAdjustmentResultTable params={params} />
+    <BundleAdjustmentResultTable result={params} />
     <BackToInputBtn handleClick={handleReturnClick} />
   </div>
 );
 
 BundleAdjustmentResult.propTypes = {
   handleReturnClick: PropTypes.func.isRequired,
-  params: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number))])),
+  params: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number))])),
 };
 
 export default BundleAdjustmentResult;

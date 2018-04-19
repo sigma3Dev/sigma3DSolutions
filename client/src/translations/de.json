@@ -31,8 +31,8 @@
   "AppSelectionBtn.description.transform": "Punkte mit Parametern transformieren",
   "BundleAdjustmentInput.label.caption": "Bündelausgleich",
   "BundleAdjustmentInputPointsTable.label.geometryId": "Geometrie ID",
-  "BundleAdjustmentResult.label.baseStation": "Basisstation: ",
   "BundleAdjustmentResult.label.caption": "Bündelausgleich Ergebnis",
+  "BundleAdjustmentResultTable.label.baseStation": "Basisstation: ",
   "CoordinateDifferenceBarGraph.caption.deviation": "Abweichung: ",
   "ErrorScreen.label.error": "Fehler!",
   "ErrorScreen.label.s3dinfo":

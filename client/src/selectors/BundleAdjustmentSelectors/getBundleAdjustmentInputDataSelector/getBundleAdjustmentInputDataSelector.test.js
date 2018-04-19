@@ -6,7 +6,7 @@ describe('getBundleAdjustmentInputDataSelector Used By BundleAdjustmentInputCont
       geometry: {
         bundleAdjustment: {
           input: {
-            bundlePoints: [
+            points: [
               {
                 stationId: 1000,
                 geometryId: 1,

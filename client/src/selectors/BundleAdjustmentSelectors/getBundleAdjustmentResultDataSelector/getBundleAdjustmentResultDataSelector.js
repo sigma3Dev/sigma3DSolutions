@@ -7,24 +7,24 @@ export const getBundleAdjustmentResult = createSelector(
   getBundleAdjustmentResultSelector,
   params => [
     params.baseStationId,
-    params.transformationParameters.map(trafoParam => [
-      trafoParam.stationId,
-      trafoParam.tx,
-      trafoParam.ty,
-      trafoParam.tz,
-      trafoParam.m,
-      trafoParam.q0,
-      trafoParam.q1,
-      trafoParam.q2,
-      trafoParam.q3,
-    ]),
-    params.geometries.map(geometry => [
-      geometry.id,
-      geometry.x,
-      geometry.y,
-      geometry.z,
-      geometry.stdev,
-    ]),
+    params.transformationParameters.map(trafoParam => ({
+      stationId: trafoParam.stationId,
+      tx: trafoParam.tx,
+      ty: trafoParam.ty,
+      tz: trafoParam.tz,
+      m: trafoParam.m,
+      q0: trafoParam.q0,
+      q1: trafoParam.q1,
+      q2: trafoParam.q2,
+      q3: trafoParam.q3,
+    })),
+    params.geometries.map(geometry => ({
+      id: geometry.id,
+      x: geometry.x,
+      y: geometry.y,
+      z: geometry.z,
+      stdev: geometry.stdev,
+    })),
   ],
 );
 

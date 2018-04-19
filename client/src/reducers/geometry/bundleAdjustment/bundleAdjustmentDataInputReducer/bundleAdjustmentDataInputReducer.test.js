@@ -1,5 +1,5 @@
 import { PUSH_BUNDLE_ADJUSTMENT_COORDS } from '../../../../actions/pushCoords/pushCoordsActions';
-import { CLEAR_CYLINDER_INPUT } from '../../../../actions/clearInput/clearInputActions';
+import { CLEAR_BUNDLE_INPUT } from '../../../../actions/clearInput/clearInputActions';
 import BundleAdjustmentDataInputReducer from './bundleAdjustmentDataInputReducer';
 
 describe('BundleAdjustmentDataInputReducer', () => {
@@ -51,7 +51,7 @@ describe('BundleAdjustmentDataInputReducer', () => {
     const result = BundleAdjustmentDataInputReducer(state, action);
     expect(result).toEqual(expectedState);
   });
-  it('should handle CLEAR_APPLY_TRAFO_INPUT', () => {
+  it('should handle CLEAR_BUNDLE_INPUT', () => {
     const state = {
       points: [
         {
@@ -73,7 +73,7 @@ describe('BundleAdjustmentDataInputReducer', () => {
       ],
     };
     const action = {
-      type: CLEAR_CYLINDER_INPUT,
+      type: CLEAR_BUNDLE_INPUT,
     };
     const expectedState = {
       points: [],

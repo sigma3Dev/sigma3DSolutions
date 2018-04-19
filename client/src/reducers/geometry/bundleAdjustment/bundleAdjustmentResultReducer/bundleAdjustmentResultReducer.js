@@ -17,9 +17,9 @@ function bundleAdjustmentResult(state = initialResultData, action) {
     case SUBMIT_BUNDLE_ADJUSTMENT_COORDS_SUCCESS:
       return {
         ...state,
-        baseStationId: action.response.result.baseStationId,
-        transformationParameters: action.response.result.transformationParameters,
-        geometries: action.response.result.geometries,
+        baseStationId: action.response.data.result.baseStation,
+        transformationParameters: action.response.data.result.transformationParameters,
+        geometries: action.response.data.result.geometries,
       };
     default:
       return state;

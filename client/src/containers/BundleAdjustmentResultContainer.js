@@ -66,7 +66,7 @@ BundleAdjustmentResultContainer.propTypes = {
   onRemoveError: PropTypes.func.isRequired,
   error: PropTypes.string,
   isCalculating: PropTypes.bool.isRequired,
-  result: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.number)])),
+  result: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number))])),
   history: PropTypes.any,
 };
 

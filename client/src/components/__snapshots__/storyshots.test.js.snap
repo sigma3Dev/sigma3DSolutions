@@ -806,10 +806,9 @@ exports[`Storyshots Start.BundleAdjustmentInputPointsTable Table to display bund
               Station ID
             </th>
             <th>
-              Name
-            </th>
-            <th>
-              x
+              <span>
+                Geometrie ID
+              </span>
             </th>
             <th>
               x
@@ -1503,6 +1502,62 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
               http://www.sigma3d.de
             </a>
           </div>
+        </div>
+      </div>
+      <div
+        className="Sidebar"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+          title="Homepage"
+        >
+          <div
+            className="logo"
+          />
+        </a>
+        <div
+          className="sidebar-link-container"
+        >
+          <a
+            className="link"
+            href="/transformations"
+            onClick={[Function]}
+          >
+            <span>
+              Transformationen
+            </span>
+          </a>
+        </div>
+        <div
+          className="sidebar-link-container"
+        >
+          <a
+            className="link"
+            href="/geometry"
+            onClick={[Function]}
+          >
+            <span>
+              Geometrien
+            </span>
+          </a>
+        </div>
+        <div
+          className="info-section"
+        >
+          sigma3D
+          <br />
+          Max-Hufschmidt-Str. 4a
+          <br />
+          55130 Mainz
+          <br />
+          +49 (0) 2542 - 91898 0
+          <br />
+          <a
+            href="mailto:info@sigma3d.de"
+          >
+            info@sigma3d.de
+          </a>
         </div>
       </div>
       <button

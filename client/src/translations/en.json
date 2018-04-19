@@ -31,8 +31,8 @@
   "AppSelectionBtn.description.transform": "Transform points with parameters",
   "BundleAdjustmentInput.label.caption": "Bundle Adjustment",
   "BundleAdjustmentInputPointsTable.label.geometryId": "Geometry ID",
-  "BundleAdjustmentResult.label.baseStation": "Base Station: ",
   "BundleAdjustmentResult.label.caption": "Bundle Adjustment Result",
+  "BundleAdjustmentResultTable.label.baseStation": "Base Station: ",
   "CoordinateDifferenceBarGraph.caption.deviation": "Deviation: ",
   "ErrorScreen.label.error": "Error!",
   "ErrorScreen.label.s3dinfo":
