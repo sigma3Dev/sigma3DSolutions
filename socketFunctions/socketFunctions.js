@@ -396,8 +396,9 @@ const fitSphere = (coords, callback) => {
 
 const bundleAdjustment = (coords, callback) => {
   globalIdCounter += 1;
-  const points = coords;
-  const requestObj = comm.bundleAdjustment(points, globalIdCounter);
+  const points = coords.bundlePoints;
+  const { baseStation } = coords;
+  const requestObj = comm.bundleAdjustment(points, baseStation, globalIdCounter);
 
   const socket = getWebSocket()
     .then((socket) => {

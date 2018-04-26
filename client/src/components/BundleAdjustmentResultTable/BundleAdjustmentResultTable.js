@@ -66,7 +66,7 @@ const BundleAdjustmentResultTable = ({ result }) => {
   return (
     <div className='bundle-adjustment-result-table'>
       <div className='bundle-tabs'>
-        <Tabs defaultActiveKey={1} id='bundle-trafo-params' bsStyle='pills'>
+        <Tabs defaultActiveKey={1} id='bundle-trafo-params'>
           {paramTabs}
         </Tabs>
         <h2>

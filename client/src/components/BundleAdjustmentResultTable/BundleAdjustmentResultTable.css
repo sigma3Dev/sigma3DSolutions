@@ -82,3 +82,11 @@
 .bundle-adjustment-result-table .copy:hover {
   cursor: pointer;
 }
+
+.bundle-adjustment-result-table .nav.nav-tabs {
+  margin-bottom: 2vh;
+}
+
+.bundle-adjustment-result-table .nav.nav-tabs li a {
+  color: black;
+}

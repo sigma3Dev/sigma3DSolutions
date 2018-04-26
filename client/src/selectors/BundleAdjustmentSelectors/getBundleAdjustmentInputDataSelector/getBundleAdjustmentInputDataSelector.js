@@ -1,8 +1,15 @@
 import { createSelector } from 'reselect';
 
-const getBundleAdjustmentInputDataSelector = state => state.geometry.bundleAdjustment.input.points;
+const getBundleAdjustmentPointsSelector = state => state.geometry.bundleAdjustment.input.points;
+const getBundleAdjustmentBaseStationSelector = state =>
+  state.geometry.bundleAdjustment.input.baseStation;
 
 export const getBundleAdjustmentPoints = createSelector(
-  getBundleAdjustmentInputDataSelector,
+  getBundleAdjustmentPointsSelector,
   points => points,
+);
+
+export const getBundleAdjustmentBaseStation = createSelector(
+  getBundleAdjustmentBaseStationSelector,
+  baseStation => baseStation,
 );

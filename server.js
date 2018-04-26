@@ -326,7 +326,7 @@ app.post('/bundle-adjustment', (req, res) => {
     return;
   }
 
-  sf.bundleAdjustment(req.body.coords.bundlePoints, (response, isOk) => {
+  sf.bundleAdjustment(req.body.coords, (response, isOk) => {
     if (isOk) {
       res.status(200).send(response);
     } else {

@@ -29,6 +29,7 @@
   "AppSelectionBtn.description.paramInversion": "7 Parameters",
   "AppSelectionBtn.description.quatCardan": "Transform Quaternion into Cardan and vice versa",
   "AppSelectionBtn.description.transform": "Transform points with parameters",
+  "BundleAdjustmentInput.dropdown.caption": "Base Station: ",
   "BundleAdjustmentInput.label.caption": "Bundle Adjustment",
   "BundleAdjustmentInputPointsTable.label.geometryId": "Geometry ID",
   "BundleAdjustmentResult.label.caption": "Bundle Adjustment Result",

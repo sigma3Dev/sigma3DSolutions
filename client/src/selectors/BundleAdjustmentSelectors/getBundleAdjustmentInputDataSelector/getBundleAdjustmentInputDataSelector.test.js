@@ -1,4 +1,7 @@
-import { getBundleAdjustmentPoints } from './getBundleAdjustmentInputDataSelector';
+import {
+  getBundleAdjustmentPoints,
+  getBundleAdjustmentBaseStation,
+} from './getBundleAdjustmentInputDataSelector';
 
 describe('getBundleAdjustmentInputDataSelector Used By BundleAdjustmentInputContainer', () => {
   it('getBundleAdjustmentPoints', () => {
@@ -47,6 +50,20 @@ describe('getBundleAdjustmentInputDataSelector Used By BundleAdjustmentInputCont
       },
     ];
     const result = getBundleAdjustmentPoints(state);
+    expect(result).toEqual(expected);
+  });
+  it('getBundleAdjustmentBaseStation', () => {
+    const state = {
+      geometry: {
+        bundleAdjustment: {
+          input: {
+            baseStation: 1000,
+          },
+        },
+      },
+    };
+    const expected = 1000;
+    const result = getBundleAdjustmentBaseStation(state);
     expect(result).toEqual(expected);
   });
 });
