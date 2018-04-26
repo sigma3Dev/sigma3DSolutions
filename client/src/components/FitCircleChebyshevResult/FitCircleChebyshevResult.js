@@ -38,14 +38,12 @@ const FitCircleChebyshevResult = ({ chebyshevParams, handleClick }) => {
           <table className='result-table'>
             <thead>
               <tr className='caption'>
+                <th>Parameter</th>
                 <th>
                   <FormattedMessage
-                    id='FitCircleChebyshevResult.table.parameter'
-                    defaultMessage='Parameter'
+                    id='FitCircleChebyshevResult.table.value'
+                    defaultMessage='Value'
                   />
-                </th>
-                <th>
-                  <FormattedMessage id='FitCircleChebyshevResult.table.value' defaultMessage='Value' />
                 </th>
                 <th className='copy-to-clippi'>
                   <CopyToClipboard text={copyText}>
@@ -82,9 +80,7 @@ const FitCircleChebyshevResult = ({ chebyshevParams, handleClick }) => {
                 <th>{chebyshevParams[5].toFixed(6)}</th>
               </tr>
               <tr>
-                <th className='cheby-cf-radius-text'>
-                  <FormattedMessage id='FitCircleChebyshevResult.table.radius' defaultMessage='Radius:' />
-                </th>
+                <th className='cheby-cf-radius-text'>Radius</th>
                 <th>{chebyshevParams[6].toFixed(2)}</th>
               </tr>
               <tr>

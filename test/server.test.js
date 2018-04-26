@@ -189,3 +189,15 @@ describe('POST /fit-sphere', () => {
       .expect(400, done);
   });
 });
+
+describe('POST /bundle-adjustment', () => {
+  it('returns a string and status code 400 upon wrong input', (done) => {
+    request(app)
+      .post('/bundle-adjustment')
+      .send({
+        wrongData: null,
+      })
+      .expect('Content-Type', 'text/html; charset=utf-8')
+      .expect(400, done);
+  });
+});

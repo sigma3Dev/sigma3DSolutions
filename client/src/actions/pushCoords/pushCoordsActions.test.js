@@ -302,4 +302,32 @@ describe('pushCoordsActions', () => {
     expect(result.coords).toEqual(expected.coords);
     expect(result.receivedAt).toBeDefined();
   });
+  it('should create a PUSH_BUNDLE_ADJUSTMENT_COORDS action', () => {
+    const points = [
+      {
+        stationId: 1000,
+        geometryId: 1,
+        x: 1.0,
+        y: 2.0,
+        z: 3.0,
+        stdev: 0.1,
+      },
+      {
+        stationId: 1000,
+        geometryId: 1,
+        x: 4.0,
+        y: 5.0,
+        z: 6.0,
+        stdev: 0.1,
+      },
+    ];
+    const expected = {
+      type: PUSH_FIT_SPHERE_COORDS,
+      coords: points,
+    };
+    const result = pushFitSphereCoords(points);
+    expect(result.type).toEqual(expected.type);
+    expect(result.coords).toEqual(expected.coords);
+    expect(result.receivedAt).toBeDefined();
+  });
 });

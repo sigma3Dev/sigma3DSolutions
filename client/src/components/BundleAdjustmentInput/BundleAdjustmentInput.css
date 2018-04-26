@@ -1,0 +1,80 @@
+.bundle-adjustment-input {
+  width: 82vw;
+  margin-left: 16vw;
+  font-family: Roboto;
+}
+
+.bundle-adjustment-input * {
+  text-align: center;
+}
+
+.bundle-adjustment-input h1 {
+  color: rgb(128, 128, 128);
+  margin: 20px 0;
+}
+
+.bundle-adjustment-input .bundle-input-table-and-dropdown {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bundle-adjustment-input .bundle-input-table-and-dropdown .bundle-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.bundle-adjustment-input .bundle-input-table-and-dropdown .bundle-dropdown-btn {
+  padding: 15px 50px;
+  margin-top: 2vh;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 5px;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown-content {
+  display: none;
+  position: absolute;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown-content
+  .dropdown-link {
+  display: block;
+  font-size: 1.25em;
+  color: black;
+  padding: 15px;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown-caption {
+  margin-top: 2vh;
+  font-size: 2.5em;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown:hover
+  .bundle-dropdown-btn {
+  background: #bbb;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown:hover
+  .bundle-dropdown-content {
+  display: block;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown-content
+  .dropdown-link:hover {
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+}

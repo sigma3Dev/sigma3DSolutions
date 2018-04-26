@@ -4,6 +4,7 @@
   border-radius: 2px;
   font-size: 2em;
   color: #292929;
+  vertical-align: middle;
 }
 
 .back-to-input-btn:hover {

@@ -10,9 +10,10 @@ export const PUSH_FIT_LINE_L_TWO_COORDS = 'PUSH_FIT_LINE_L_TWO_COORDS';
 export const PUSH_FIT_LINE_RANSAC_COORDS = 'PUSH_FIT_LINE_RANSAC_COORDS';
 export const PUSH_FIT_CIRCLE_L_TWO_COORDS = 'PUSH_FIT_CIRCLE_L_TWO_COORDS';
 export const PUSH_FIT_SPHERE_COORDS = 'PUSH_FIT_SPHERE_COORDS';
+export const PUSH_BUNDLE_ADJUSTMENT_COORDS = 'PUSH_BUNDLE_ADJUSTMENT_COORDS';
 
 /**
- * pushes the start system coordinates
+ * pushes the 3D trafo start system coordinates
  * @param {Object} coords - the coordinates file from 3DTrafo6W start system input
  */
 export const pushThreeDTrafoStartSystemCoords = coords => ({
@@ -22,7 +23,7 @@ export const pushThreeDTrafoStartSystemCoords = coords => ({
 });
 
 /**
- * pushes the target system coordinates
+ * pushes the 3D trafo target system coordinates
  * @param {Object} coords - the coordinates file from 3DTrafo6W target system input
  */
 export const pushThreeDTrafoTargetSystemCoords = coords => ({
@@ -32,7 +33,7 @@ export const pushThreeDTrafoTargetSystemCoords = coords => ({
 });
 
 /**
- * pushes the coordinates
+ * pushes the trafo coordinates
  * @param {Object} coords - the coordinates file from applyTrafo input
  */
 export const pushApplyTrafoCoords = coords => ({
@@ -62,7 +63,7 @@ export const pushFitCylinderCoords = coords => ({
 });
 
 /**
- * pushes the coordinates
+ * pushes the gauss plane coordinates
  * @param {Object} coords - the coordinates file from Gauss Plane input
  */
 export const pushFitPlaneGaussCoords = coords => ({
@@ -72,7 +73,7 @@ export const pushFitPlaneGaussCoords = coords => ({
 });
 
 /**
- * pushes the coordinates
+ * pushes the ransac plane coordinates
  * @param {Object} coords - the coordinates file from RANSAC plane input
  */
 export const pushFitPlaneRansacCoords = coords => ({
@@ -127,6 +128,16 @@ export const pushFitCircleL2Coords = coords => ({
  */
 export const pushFitSphereCoords = coords => ({
   type: PUSH_FIT_SPHERE_COORDS,
+  coords,
+  receivedAt: Date.now(),
+});
+
+/**
+ * pushes the bundle coordinates
+ * @param {Object} coords - the coordinates file from fit line points
+ */
+export const pushBundleAdjustmentCoords = coords => ({
+  type: PUSH_BUNDLE_ADJUSTMENT_COORDS,
   coords,
   receivedAt: Date.now(),
 });
