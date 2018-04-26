@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
-    "coordinatedataimporter": "^0.7.1",
+    "coordinatedataimporter": "^0.7.2",
     "express": "^4.16.2",
     "express-react-views": "^0.10.5",
     "node": "^9.5.0",
