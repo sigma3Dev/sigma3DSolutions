@@ -143,17 +143,20 @@ class BundleAdjustmentInputContainer extends Component {
   render() {
     const infoPanelText = (
       <FormattedMessage
-        id='InputInfoPanel.panel.infoPanelTextThree'
+        id='InputInfoPanel.panel.infoPanelTextBundle'
         defaultMessage='
           The input should be a simple .txt file.\n
 
-          The file should consist of three or more points, each on its own line.
-          Each point should be made up of three coordinates: x, y and z. These should be simple numbers.\n
+          The file should consist of two or more points, each on its own line.
+          Each point should be made up of a station ID, a geometry ID, three coordinates: x, y and z and a standard deviation. These should be simple numbers.\n
 
           Example:\n
-          41.3 11.2 17.1\n
-          24.2 33.1 19.8\n
-          9.1 5.4 12.9
+          1000 3 23.5 33.3 45.7 0.1\n
+          1000 2 5.5 3.3 7.7 0.1\n
+          2000 3 33.5 43.3 55.7 0.1\n
+          1000 5 16.5 44.3 34.7 0.1 \n
+          2000 2 15.5 13.3 17.7 0.1\n
+          2000 5 26.5 54.3 44.7 0.1
         '
       />
     );
