@@ -16,6 +16,7 @@
   margin: 100px 0 50px;
   font-size: 4.5em;
   text-align: center;
+  font-family: Raleway;
 }
 
 .start-screen .subheader {
@@ -55,6 +56,7 @@
   align-self: center;
   font-size: 1.2em;
   font-weight: bold;
+  font-family: Raleway;
   margin: 0 0 8px 17px;
   color: #01458a;
 }

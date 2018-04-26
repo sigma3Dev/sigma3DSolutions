@@ -7,6 +7,7 @@
 .fit-line-ransac-input h1 {
   color: rgb(128, 128, 128);
   padding: 20px 0;
+  font-family: Raleway;
 }
 
 .fit-line-ransac-input .tolerance-input {
