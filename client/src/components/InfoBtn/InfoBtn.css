@@ -10,10 +10,6 @@
   cursor: pointer;
 }
 
-.info-btn:focus {
-  outline: 0;
-}
-
 .info-btn .info-sign {
   color: rgb(20, 20, 150);
   font-size: 1.5em;
