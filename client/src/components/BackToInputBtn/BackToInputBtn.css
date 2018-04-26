@@ -4,7 +4,6 @@
   border-radius: 2px;
   font-size: 2em;
   color: #292929;
-  vertical-align: middle;
 }
 
 .back-to-input-btn:hover {
@@ -15,4 +14,8 @@
 .back-to-input-btn .arrow-left {
   display: inline-block;
   font-size: 1.3em;
+}
+
+.back-to-input-btn .arrow-left svg {
+  vertical-align: baseline !important;
 }
