@@ -1,7 +1,6 @@
 .bundle-adjustment-result-table {
-  margin-top: 8vh;
+  margin-top: 5vh;
   width: 100%;
-  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -9,7 +8,9 @@
 }
 
 .bundle-adjustment-result-table table {
-  width: 100%;
+  width: 80%;
+  font-size: 1vw;
+  margin-top: 2vh;
 }
 
 .bundle-adjustment-result-table .bundle-tabs {
@@ -17,11 +18,12 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 4vh;
+  font-size: 1vw;
 }
 
 .bundle-adjustment-result-table .bundle-tabs .bundle-trafo-param-list {
   padding: 0;
-  width: 30vw;
+  width: 40vw;
   display: flex;
   justify-content: flex-start;
   align-items: center;

@@ -29,7 +29,7 @@
   "AppSelectionBtn.description.paramInversion": "7 Parameter",
   "AppSelectionBtn.description.quatCardan": "Quaternionen zu Cardan und umgekehrt",
   "AppSelectionBtn.description.transform": "Punkte mit Parametern transformieren",
-  "BundleAdjustmentInput.dropdown.caption": "Basisstation: ",
+  "BundleAdjustmentInput.dropdown.caption": "Basisstation:",
   "BundleAdjustmentInput.label.caption": "Bündelausgleich",
   "BundleAdjustmentInputPointsTable.label.geometryId": "Geometrie ID",
   "BundleAdjustmentResult.label.caption": "Bündelausgleich Ergebnis",

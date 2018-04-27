@@ -1,8 +1,6 @@
 .apply-trafo {
-  width: 82vw;
   height: 100%;
-  margin-top: 2vh;
-  margin-left: 16vw;
+  margin: 2vh 2vw 0 20vw;
   font-family: Roboto;
 }
 
@@ -14,6 +12,7 @@
   color: rgb(128, 128, 128);
   margin: 20px 0;
   font-family: Raleway;
+  font-size: 2vw;
 }
 
 .apply-trafo .input-area {

@@ -1,9 +1,12 @@
 .back-to-input-btn {
-  padding: 20px 80px;
+  padding: 4vh 5vw;
   border: none;
-  border-radius: 2px;
+  border-radius: 5%;
   font-size: 2em;
   color: #292929;
+  position: fixed;
+  bottom: 3vh;
+  right: 2vw;
 }
 
 .back-to-input-btn:hover {
@@ -13,9 +16,5 @@
 
 .back-to-input-btn .arrow-left {
   display: inline-block;
-  font-size: 1.3em;
-}
-
-.bundle-adjustment-result .back-to-input-btn .arrow-left svg {
-  vertical-align: baseline !important;
+  font-size: 2.5vw;
 }

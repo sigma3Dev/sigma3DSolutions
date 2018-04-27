@@ -52,17 +52,19 @@ const BundleAdjustmentInput = ({
           handleDeleteDataInput={handleDeleteClick}
           className='bundle-input-table'
         />
-        <div className='bundle-dropdown-caption'>
-          <FormattedMessage
-            id='BundleAdjustmentInput.dropdown.caption'
-            defaultMessage='Base Station: '
-          />
-        </div>
-        <div className='bundle-dropdown'>
-          <button className='bundle-dropdown-btn'>
-            {dropdownBtnCaption} {arrowDropdown}
-          </button>
-          <div className='bundle-dropdown-content'>{stationIds}</div>
+        <div className='bundle-dropdown-with-caption'>
+          <div className='bundle-dropdown-caption'>
+            <FormattedMessage
+              id='BundleAdjustmentInput.dropdown.caption'
+              defaultMessage='Base Station: '
+            />
+          </div>
+          <div className='bundle-dropdown'>
+            <button className='bundle-dropdown-btn'>
+              {dropdownBtnCaption} {arrowDropdown}
+            </button>
+            <div className='bundle-dropdown-content'>{stationIds}</div>
+          </div>
         </div>
       </div>
       <InfoBtn className='info-btn' handleClick={handleInfoClick} />

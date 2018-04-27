@@ -33,22 +33,22 @@ const BundleAdjustmentResultTable = ({ result }) => {
           <li>
             <strong>M:</strong> {param.m.toFixed(1)}
           </li>
-        </div>
-        <div className='param-list-middle'>
           <li>
             <strong>Tx:</strong> {param.tx.toFixed(1)}
           </li>
+        </div>
+        <div className='param-list-middle'>
           <li>
             <strong>Ty:</strong> {param.ty.toFixed(1)}
           </li>
           <li>
             <strong>Tz:</strong> {param.tz.toFixed(1)}
           </li>
-        </div>
-        <div className='param-list-right'>
           <li>
             <strong>Q0:</strong> {param.q0.toFixed(5)}
           </li>
+        </div>
+        <div className='param-list-right'>
           <li>
             <strong>Q1:</strong> {param.q1.toFixed(5)}
           </li>
@@ -66,7 +66,7 @@ const BundleAdjustmentResultTable = ({ result }) => {
   return (
     <div className='bundle-adjustment-result-table'>
       <div className='bundle-tabs'>
-        <Tabs defaultActiveKey={1} id='bundle-trafo-params'>
+        <Tabs defaultActiveKey={1} className='bundle-trafo-params'>
           {paramTabs}
         </Tabs>
         <h2>

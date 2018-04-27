@@ -4,7 +4,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
-  width: 14vw;
+  width: 19vw;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -53,7 +53,7 @@
 }
 
 .Sidebar .sidebar-link-container {
-  font-size: 1.15em;
+  font-size: 1.3vw;
   text-transform: uppercase;
   padding: 10px;
   width: 100%;
@@ -68,9 +68,9 @@
   background-image: url('./s3dlogo.png');
   background-size: contain;
   background-repeat: no-repeat;
-  width: 100px;
-  height: 100px;
-  margin: 25px 0 20px;
+  width: 10vw;
+  height: 10vw;
+  margin: 4vh 0 3vh;
 }
 
 .Sidebar .logo:hover {

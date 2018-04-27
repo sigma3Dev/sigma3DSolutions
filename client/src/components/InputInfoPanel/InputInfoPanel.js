@@ -19,8 +19,8 @@ const InputInfoPanel = ({ body, isDisplayed }) => {
       title='Input Info'
       placement='left'
       className='input-info-panel'
-      positionLeft='76%'
-      positionTop={14}
+      positionLeft='70vw'
+      positionTop='2vh'
       arrowOffsetTop='10px'
     >
       {body}
