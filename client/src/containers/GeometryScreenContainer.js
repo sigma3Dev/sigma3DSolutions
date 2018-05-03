@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
 
 /**
@@ -17,10 +17,6 @@ class GeometryScreenContainer extends Component {
       {
         type: 'fitCircleL2',
         link: '/geometry/fit-circle-l-two/data-input',
-      },
-      {
-        type: 'bundleAdjustment',
-        link: '/geometry/bundle-adjustment/data-input',
       },
       {
         type: 'fitPlaneGauss',
@@ -53,7 +49,7 @@ class GeometryScreenContainer extends Component {
     ];
     return (
       <div>
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='geometry' />
         <SelectAppsScreen buttons={buttons} />
       </div>
     );

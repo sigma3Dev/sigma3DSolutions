@@ -2,36 +2,32 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
-import './Sidebar.css';
+import './Navbar.css';
 
 /**
  * sidebar for selecting app category
- * @returns {*} Sidebar - .jsx Element
+ * @returns {*} Navbar - .jsx Element
  */
-const Sidebar = ({ currentMenu }) => (
-  <div className='Sidebar'>
+const Navbar = ({ currentMenu }) => (
+  <div className='Navbar'>
     <Link to='/' title='Homepage'>
       <div className='logo' />
     </Link>
     <div className='sidebar-link-container'>
       <Link to='/transformations' className={currentMenu === 'trafo' ? 'link-active' : 'link'}>
-        <FormattedMessage id='Sidebar.label.transformation' defaultMessage='Transformations' />
+        <FormattedMessage id='Navbar.label.transformation' defaultMessage='Transformations' />
       </Link>
     </div>
     <div className='sidebar-link-container'>
       <Link to='/geometry' className={currentMenu === 'geometry' ? 'link-active' : 'link'}>
-        <FormattedMessage id='Sidebar.label.geometry' defaultMessage='Geometry' />
+        <FormattedMessage id='Navbar.label.geometry' defaultMessage='Geometry' />
       </Link>
-    </div>
-    <div className='info-section'>
-      sigma3D<br />Max-Hufschmidt-Str. 4a<br />55130 Mainz<br />+49 (0) 2542 - 91898 0<br />
-      <a href='mailto:info@sigma3d.de'>info@sigma3d.de</a>
     </div>
   </div>
 );
 
-Sidebar.propTypes = {
+Navbar.propTypes = {
   currentMenu: PropTypes.string,
 };
 
-export default Sidebar;
+export default Navbar;

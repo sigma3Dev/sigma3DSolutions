@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import Footer from '../Footer/Footer';
 import './ApplyTrafoResult.css';
 
 const ApplyTrafoResult = ({ result, handleReturnClick }) => {
@@ -22,18 +22,25 @@ const ApplyTrafoResult = ({ result, handleReturnClick }) => {
           defaultMessage='Transformation Results'
         />
       </h1>
-      <table className='result-table'>
-        <thead>
-          <tr className='caption'>
-            <th className='pointId'>ID</th>
-            <th>x</th>
-            <th>y</th>
-            <th>z</th>
-          </tr>
-        </thead>
-        <tbody>{tableRows}</tbody>
-      </table>
-      <BackToInputBtn handleClick={handleReturnClick} className='back-to-input-btn' />
+      <div className='result-table'>
+        <table>
+          <thead>
+            <tr className='caption'>
+              <th className='pointId'>ID</th>
+              <th>x</th>
+              <th>y</th>
+              <th>z</th>
+            </tr>
+          </thead>
+          <tbody>{tableRows}</tbody>
+        </table>
+      </div>
+      <Footer
+        handleReturnClick={handleReturnClick}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed={false}
+        isSubmitBtnDisplayed={false}
+      />
     </div>
   );
 };

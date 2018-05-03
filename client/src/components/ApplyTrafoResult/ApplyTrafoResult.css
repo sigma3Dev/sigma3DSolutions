@@ -1,39 +1,43 @@
 .apply-trafo-result {
   height: 100%;
-  margin: 2vh 2vw 0 20vw;
+  margin: 15vh 2vw 0 2vw;
   font-family: Roboto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 }
 
 .apply-trafo-result h1 {
-  font-size: 3vw;
-  border-bottom: 3px solid #0375ba;
-  margin-bottom: 5vh;
+  color: rgb(128, 128, 128);
+  margin: 20px 0;
   font-family: Raleway;
+  font-size: 2.5vw;
 }
 
 .apply-trafo-result .result-table {
-  width: 70%;
-  border-collapse: collapse;
+  max-height: 65vh;
+  overflow: auto;
+  width: 70vw;
+  margin: 0 auto;
+}
+
+.apply-trafo-result .result-table table {
+  width: 100%;
 }
 
 .apply-trafo-result .result-table * {
-  font-size: 1.3vw;
+  font-size: 1vw;
   text-align: center;
 }
 
-.apply-trafo-result .result-table th {
+.apply-trafo-result .result-table table th {
   padding: 2vh 0;
 }
 
-.apply-trafo-result .result-table th.pointId {
+.apply-trafo-result .result-table table th.pointId {
   width: 10%;
-  background-color: #d9e9f0;
+  color: #afa993;
+  background-color: rgb(52, 54, 57);
 }
 
-.apply-trafo-result .result-table .caption {
-  background-color: #d9e9f0;
+.apply-trafo-result .result-table table .caption {
+  color: #afa993;
+  background-color: rgb(52, 54, 57);
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import BundleAdjustmentResultTable from '../BundleAdjustmentResultTable/BundleAdjustmentResultTable';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import Footer from '../Footer/Footer';
 import './BundleAdjustmentResult.css';
 
 const BundleAdjustmentResult = ({ params, handleReturnClick }) => (
@@ -13,8 +13,13 @@ const BundleAdjustmentResult = ({ params, handleReturnClick }) => (
         defaultMessage='Bundle Adjustment Result'
       />
     </h1>
-    <BundleAdjustmentResultTable result={params} />
-    <BackToInputBtn handleClick={handleReturnClick} />
+    <BundleAdjustmentResultTable result={params} className='bundle-adjustment-result-table' />
+    <Footer
+      handleReturnClick={handleReturnClick}
+      isReturnBtnDisplayed
+      isInfoBtnDisplayed={false}
+      isSubmitBtnDisplayed={false}
+    />
   </div>
 );
 

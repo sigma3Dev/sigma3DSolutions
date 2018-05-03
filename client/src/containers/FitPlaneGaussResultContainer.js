@@ -9,7 +9,7 @@ import {
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import FitPlaneGaussResult from '../components/FitPlaneGaussResult/FitPlaneGaussResult';
 
 const mapDispatchToProps = dispatch => ({
@@ -55,7 +55,7 @@ class FitPlaneGaussResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='geometry' />
         <FitPlaneGaussResult params={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );

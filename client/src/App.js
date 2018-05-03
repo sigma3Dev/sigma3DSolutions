@@ -88,11 +88,11 @@ const App = () => (
       <Route path='/geometry/fit-sphere/data-input' component={FitSphereInputContainer} />
       <Route path='/geometry/fit-sphere/result' component={FitSphereResultContainer} />
       <Route
-        path='/geometry/bundle-adjustment/data-input'
+        path='/transformations/bundle-adjustment/data-input'
         component={BundleAdjustmentInputContainer}
       />
       <Route
-        path='/geometry/bundle-adjustment/result'
+        path='/transformations/bundle-adjustment/result'
         component={BundleAdjustmentResultContainer}
       />
       <Redirect from='*' to='/' />

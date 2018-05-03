@@ -1,8 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import SubmitBtn from '../SubmitBtn/SubmitBtn';
-import InfoBtn from '../InfoBtn/InfoBtn';
+import Footer from '../Footer/Footer';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
 import PointsInputDropzone from '../PointsInputDropzone/PointsInputDropzone';
 import PointsTable from '../PointsTable/PointsTable';
@@ -14,27 +13,42 @@ const FitLineL2Input = ({
   infoPanelText,
   handleDeleteClick,
   handleFileDrop,
+  handleReturn,
   handleSubmitClick,
   lineL2Points,
   clickAnywhere,
-}) => (
-  <div className='fit-line-l2-input' onClick={clickAnywhere}>
-    <h1>
-      <FormattedMessage id='FitLineL2Input.label.caption' defaultMessage='LineL2' />
-    </h1>
-    <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
-    <PointsTable systemPoints={lineL2Points} handleDeleteDataInput={handleDeleteClick} />
-    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-    <SubmitBtn handleClick={handleSubmitClick} />
-  </div>
-);
+}) => {
+  const isPointsInput = !(lineL2Points.length === 0);
+  return (
+    <div className='fit-line-l2-input' onClick={clickAnywhere}>
+      <h1>
+        <FormattedMessage id='FitLineL2Input.label.caption' defaultMessage='LineL2' />
+      </h1>
+      <div className='fit-line-l2-dropzone-and-table'>
+        <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
+        <div className='fit-line-l2-points-table'>
+          <PointsTable systemPoints={lineL2Points} handleDeleteDataInput={handleDeleteClick} />
+        </div>
+      </div>
+      <Footer
+        handleSubmitClick={handleSubmitClick}
+        handleInfoClick={handleInfoClick}
+        handleReturnClick={handleReturn}
+        isSubmitBtnDisplayed={isPointsInput}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed
+      />
+      <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
+    </div>
+  );
+};
 
 FitLineL2Input.propTypes = {
   handleInfoClick: PropTypes.func.isRequired,
   handleDeleteClick: PropTypes.func.isRequired,
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
+  handleReturn: PropTypes.func.isRequired,
   clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,

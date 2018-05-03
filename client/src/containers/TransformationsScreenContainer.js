@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
 
 /**
@@ -13,6 +13,10 @@ class TransformationsScreenContainer extends Component {
       {
         type: '3Dtransformation',
         link: '/transformations/three-d-transformation/data-input',
+      },
+      {
+        type: 'bundleAdjustment',
+        link: '/transformations/bundle-adjustment/data-input',
       },
       {
         type: 'paramInversion',
@@ -29,7 +33,7 @@ class TransformationsScreenContainer extends Component {
     ];
     return (
       <div>
-        <Sidebar currentMenu='trafo' />
+        <Navbar currentMenu='trafo' />
         <SelectAppsScreen buttons={buttons} />
       </div>
     );

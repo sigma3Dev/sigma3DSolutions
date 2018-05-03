@@ -10,7 +10,7 @@ import {
   getLineRansacPoints,
   getLineRansacTolerance,
 } from '../selectors/FitLineRansacSelectors/getFitLineRansacInputDataSelector/getFitLineRansacInputDataSelector';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 import FitLineRansacInput from '../components/FitLineRansacInput/FitLineRansacInput';
 
@@ -156,7 +156,7 @@ class FitLineRansacInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='geometry' />
         <FitLineRansacInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}

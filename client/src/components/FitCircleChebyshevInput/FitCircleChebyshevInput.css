@@ -1,6 +1,6 @@
 .chebyshev-circle-fit-input {
-  width: 82vw;
-  margin-left: 16vw;
+  height: 100%;
+  margin: 15vh 2vw 0 2vw;
   font-family: Roboto;
 }
 
@@ -9,7 +9,23 @@
 }
 
 .chebyshev-circle-fit-input h1 {
-  margin: 20px 0;
   color: rgb(128, 128, 128);
+  margin-bottom: 5vh;
   font-family: Raleway;
+  font-size: 2.5vw;
+}
+
+.chebyshev-circle-fit-input .chebyshev-dropzone-and-table {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.chebyshev-circle-fit-input .chebyshev-dropzone-and-table .chebyshev-dropzone {
+  width: 45%;
+}
+
+.chebyshev-circle-fit-input
+  .chebyshev-dropzone-and-table
+  .chebyshev-points-table {
+  width: 50vw;
 }

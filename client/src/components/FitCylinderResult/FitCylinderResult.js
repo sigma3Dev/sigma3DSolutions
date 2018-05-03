@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import FitCylinderResultTable from '../FitCylinderResultTable/FitCylinderResultTable';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import Footer from '../Footer/Footer';
 import FittingErrorBarGraph from '../FittingErrorBarGraph/FittingErrorBarGraph';
 import './FitCylinderResult.css';
 
@@ -21,7 +21,12 @@ const FitCylinderResult = ({ params, handleReturnClick }) => {
       <div className='bar-graph'>
         <FittingErrorBarGraph errors={params[8]} />
       </div>
-      <BackToInputBtn handleClick={handleReturnClick} />
+      <Footer
+        handleReturnClick={handleReturnClick}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed={false}
+        isSubmitBtnDisplayed={false}
+      />
     </div>
   );
 };

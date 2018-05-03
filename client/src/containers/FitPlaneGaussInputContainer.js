@@ -6,7 +6,7 @@ import { pushFitPlaneGaussCoords } from '../actions/pushCoords/pushCoordsActions
 import { submitFitPlaneGaussCoords } from '../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 import { clearPlaneGaussInput } from '../actions/clearInput/clearInputActions';
 import { getPlaneGaussPoints } from '../selectors/FitPlaneGaussSelectors/getFitPlaneGaussInputDataSelector/getFitPlaneGaussInputDataSelector';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 import FitPlaneGaussInput from '../components/FitPlaneGaussInput/FitPlaneGaussInput';
 
@@ -143,7 +143,7 @@ class FitPlaneGaussInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='geometry' />
         <FitPlaneGaussInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}

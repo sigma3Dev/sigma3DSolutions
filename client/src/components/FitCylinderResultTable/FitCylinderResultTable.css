@@ -1,6 +1,5 @@
 .fit-cylinder-result-table {
-  padding-top: 10px;
-  width: 100%;
+  width: 92%;
   border-collapse: collapse;
 }
 
@@ -10,11 +9,12 @@
 }
 
 .fit-cylinder-result-table th {
-  padding: 10px 0;
+  padding: 1vh 0;
 }
 
 .fit-cylinder-result-table .caption {
-  background-color: #d9e9f0;
+  color: #afa993;
+  background-color: rgb(52, 54, 57);
 }
 
 .fit-cylinder-result-table .copy {

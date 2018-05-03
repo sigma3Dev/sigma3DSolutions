@@ -9,7 +9,7 @@ import {
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import BundleAdjustmentResult from '../components/BundleAdjustmentResult/BundleAdjustmentResult';
 
 const mapDispatchToProps = dispatch => ({
@@ -44,7 +44,7 @@ class BundleAdjustmentResultContainer extends Component {
    */
   goBack = () => {
     this.props.onRemoveError();
-    this.props.history.push('/geometry/bundle-adjustment/data-input');
+    this.props.history.push('/transformations/bundle-adjustment/data-input');
   };
 
   render() {
@@ -55,7 +55,7 @@ class BundleAdjustmentResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='transformations' />
         <BundleAdjustmentResult params={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );

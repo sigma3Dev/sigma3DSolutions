@@ -3,7 +3,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 2vh 0 0 20vw;
+  margin: 15vh 2vw 0 2vw;
 }
 
 .select-apps-screen * {

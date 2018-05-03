@@ -6,7 +6,7 @@ import { pushFitPointCoords } from '../actions/pushCoords/pushCoordsActions';
 import { submitFitPointCoords } from '../actions/submitFitPointCoords/submitFitPointCoordsActions';
 import { clearPointInput } from '../actions/clearInput/clearInputActions';
 import { getPoints } from '../selectors/FitPointSelectors/getFitPointInputDataSelector/getFitPointInputDataSelector';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 import FitPointInput from '../components/FitPointInput/FitPointInput';
 
@@ -144,7 +144,7 @@ class FitPointInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='geometry' />
         <FitPointInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}

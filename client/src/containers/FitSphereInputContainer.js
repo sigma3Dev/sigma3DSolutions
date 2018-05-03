@@ -6,7 +6,7 @@ import { pushFitSphereCoords } from '../actions/pushCoords/pushCoordsActions';
 import { submitFitSphereCoords } from '../actions/submitFitSphereCoords/submitFitSphereCoordsActions';
 import { clearSphereInput } from '../actions/clearInput/clearInputActions';
 import { getSpherePoints } from '../selectors/FitSphereSelectors/getFitSphereInputDataSelector/getFitSphereInputDataSelector';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 import FitSphereInput from '../components/FitSphereInput/FitSphereInput';
 
@@ -132,7 +132,7 @@ class FitSphereInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='geometry' />
         <FitSphereInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}

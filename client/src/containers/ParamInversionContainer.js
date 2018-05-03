@@ -8,7 +8,7 @@ import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import { submitParamInversionCoords } from '../actions/paramInversionCoords/paramInversionCoordsActions';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
 import InfoModal from '../components/InfoModal/InfoModal';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import ParamInversion from '../components/ParamInversion/ParamInversion';
 
 const mapDispatchToProps = dispatch => ({
@@ -145,7 +145,7 @@ class ParamInversionContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar currentMenu='trafo' />
+        <Navbar currentMenu='trafo' />
         <ParamInversion
           handleSubmit={this.submitParamInversionCoords}
           handleChange={this.parseInput}

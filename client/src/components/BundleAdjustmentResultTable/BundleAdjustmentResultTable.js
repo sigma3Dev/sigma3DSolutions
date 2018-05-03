@@ -24,7 +24,13 @@ const BundleAdjustmentResultTable = ({ result }) => {
   });
 
   const paramTabs = result[1].map((param, i) => (
-    <Tab key={param.stationId} eventKey={i + 1} title={param.stationId} className='bundle-tab'>
+    <Tab
+      id={param.stationId}
+      key={param.stationId}
+      eventKey={i + 1}
+      title={param.stationId}
+      className='bundle-tab'
+    >
       <ul className='bundle-trafo-param-list'>
         <div className='param-list-left'>
           <li>
@@ -66,7 +72,7 @@ const BundleAdjustmentResultTable = ({ result }) => {
   return (
     <div className='bundle-adjustment-result-table'>
       <div className='bundle-tabs'>
-        <Tabs defaultActiveKey={1} className='bundle-trafo-params'>
+        <Tabs defaultActiveKey={1} className='bundle-trafo-params' id='Parameter Tabs'>
           {paramTabs}
         </Tabs>
         <h2>

@@ -10,7 +10,7 @@ import {
   getPlaneRansacPoints,
   getPlaneRansacTolerance,
 } from '../selectors/FitPlaneRansacSelectors/getFitPlaneRansacInputDataSelector/getFitPlaneRansacInputDataSelector';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 import FitPlaneRansacInput from '../components/FitPlaneRansacInput/FitPlaneRansacInput';
 
@@ -156,7 +156,7 @@ class FitPlaneRansacInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='geometry' />
         <FitPlaneRansacInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}

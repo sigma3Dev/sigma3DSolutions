@@ -1,8 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import SubmitBtn from '../SubmitBtn/SubmitBtn';
-import InfoBtn from '../InfoBtn/InfoBtn';
+import Footer from '../Footer/Footer';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
 import PointsInputDropzone from '../PointsInputDropzone/PointsInputDropzone';
 import BundleAdjustmentInputPointsTable from '../BundleAdjustmentInputPointsTable/BundleAdjustmentInputPointsTable';
@@ -20,10 +19,12 @@ const BundleAdjustmentInput = ({
   handleFileDrop,
   handleSelectBaseStation,
   handleSubmitClick,
+  handleReturn,
   bundlePoints,
   baseStation,
   clickAnywhere,
 }) => {
+  const isPointsInput = !(bundlePoints.length === 0);
   const stationIdsArr = [];
   const stationIds = bundlePoints.map((point) => {
     if (stationIdsArr.indexOf(point.stationId) === -1) {
@@ -45,8 +46,8 @@ const BundleAdjustmentInput = ({
           defaultMessage='Bundle Adjustment'
         />
       </h1>
-      <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
       <div className='bundle-input-table-and-dropdown'>
+        <PointsInputDropzone onDrop={handleFileDrop} className='bundle-dropzone' />
         <BundleAdjustmentInputPointsTable
           bundlePoints={bundlePoints}
           handleDeleteDataInput={handleDeleteClick}
@@ -67,9 +68,15 @@ const BundleAdjustmentInput = ({
           </div>
         </div>
       </div>
-      <InfoBtn className='info-btn' handleClick={handleInfoClick} />
+      <Footer
+        handleSubmitClick={handleSubmitClick}
+        handleInfoClick={handleInfoClick}
+        handleReturnClick={handleReturn}
+        isSubmitBtnDisplayed={isPointsInput}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed
+      />
       <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-      <SubmitBtn handleClick={handleSubmitClick} />
     </div>
   );
 };
@@ -79,6 +86,7 @@ BundleAdjustmentInput.propTypes = {
   handleDeleteClick: PropTypes.func.isRequired,
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
+  handleReturn: PropTypes.func.isRequired,
   handleSelectBaseStation: PropTypes.func.isRequired,
   clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,

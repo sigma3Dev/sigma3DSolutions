@@ -10,7 +10,7 @@ import {
   changeQuatCardanInputField,
 } from '../actions/quatCardanCoords/quatCardanCoordsActions';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import QuatCardan from '../components/QuatCardan/QuatCardan';
 
 const mapDispatchToProps = dispatch => ({
@@ -93,7 +93,7 @@ class QuatCardanContainer extends Component {
     }
     return (
       <div>
-        <Sidebar currentMenu='trafo' />
+        <Navbar currentMenu='trafo' />
         <QuatCardan
           quat={this.props.quat}
           cardan={this.props.cardan}

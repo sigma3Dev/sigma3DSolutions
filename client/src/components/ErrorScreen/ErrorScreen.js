@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
-import Sidebar from '../Sidebar/Sidebar';
+import Navbar from '../Navbar/Navbar';
 import './ErrorScreen.css';
 
 const tiWarningOutline = require('react-icons/lib/ti/warning-outline');
@@ -36,7 +36,7 @@ const ErrorScreen = ({ error, handleClick }) => (
         </div>
       </div>
     </div>
-    <Sidebar />
+    <Navbar />
     <BackToInputBtn handleClick={handleClick} />
   </div>
 );

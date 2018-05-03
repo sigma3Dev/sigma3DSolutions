@@ -1,24 +1,16 @@
 .submit-btn {
-  padding: 2vh 0;
-  font-family: Roboto;
-  font-size: 1.2vw;
-  width: 14vw;
-  position: fixed;
-  right: 2vw;
-  bottom: 3vh;
+  background: none;
   color: white;
-  background: #0375ba;
-  border-radius: 5px;
-  border: 3px solid #058;
-}
-
-.submit-btn:hover {
-  cursor: pointer;
-  background: #0381bc;
-  border: 3px solid #068;
+  z-index: 999;
+  border: none;
+  opacity: 0.8;
 }
 
 .submit-btn .arrow-right {
-  display: inline-block;
-  font-size: 1.3em;
+  font-size: 3vw;
+  margin-bottom: 1vh;
+}
+
+.submit-btn:hover {
+  opacity: 1;
 }
