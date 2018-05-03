@@ -88,15 +88,6 @@
   background-color: rgb(52, 54, 57);
 }
 
-.bundle-adjustment-result-table .copy {
-  font-size: 0.8em;
-  padding: 10px;
-}
-
-.bundle-adjustment-result-table .copy:hover {
-  cursor: pointer;
-}
-
 .bundle-adjustment-result-table .nav.nav-tabs {
   margin-bottom: 2vh;
 }

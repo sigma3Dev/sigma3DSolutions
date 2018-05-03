@@ -1,17 +1,19 @@
 .fit-line-ransac-input {
-  width: 82vw;
-  margin-left: 16vw;
+  height: 100%;
+  margin: 15vh 2vw 0 2vw;
   font-family: Roboto;
 }
 
 .fit-line-ransac-input h1 {
+  font-size: 2vw;
   color: rgb(128, 128, 128);
-  padding: 20px 0;
+  margin: 20px 0;
   font-family: Raleway;
 }
 
 .fit-line-ransac-input .tolerance-input {
   float: left;
+  width: 45vw;
 }
 
 .fit-line-ransac-input .tolerance-input label {
@@ -22,4 +24,17 @@
 
 .fit-line-ransac-input .tolerance-input input {
   margin-left: 10px;
+}
+
+.fit-line-ransac-input .fit-line-ransac-dropzone-and-table {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fit-line-ransac-input
+  .fit-line-ransac-dropzone-and-table
+  .fit-line-ransac-dropzone-and-tolerance {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
