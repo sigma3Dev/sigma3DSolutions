@@ -1,6 +1,6 @@
 .fit-point-input {
-  width: 82vw;
-  margin-left: 16vw;
+  height: 100%;
+  margin: 15vh 2vw 0 2vw;
   font-family: Roboto;
 }
 
@@ -9,7 +9,17 @@
 }
 
 .fit-point-input h1 {
+  font-size: 2vw;
   color: rgb(128, 128, 128);
-  padding: 20px 0;
+  margin: 20px 0;
   font-family: Raleway;
+}
+
+.fit-point-input .fit-point-dropzone-and-table {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fit-point-input .fit-point-dropzone-and-table .fit-point-points-table {
+  width: 50vw;
 }

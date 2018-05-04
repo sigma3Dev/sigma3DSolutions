@@ -14,13 +14,13 @@ const InputInfoPanel = ({ body, isDisplayed }) => {
     };
   return (
     <Popover
-      id='popover-right'
+      id='popover-bottom'
       style={show}
       title='Input Info'
-      placement='right'
+      placement='bottom'
       className='input-info-panel'
-      positionLeft='2vw'
-      positionTop='24vh'
+      positionLeft='42vw'
+      positionTop='1vh'
     >
       {body}
     </Popover>

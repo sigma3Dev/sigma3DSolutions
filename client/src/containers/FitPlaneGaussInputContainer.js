@@ -45,6 +45,7 @@ class FitPlaneGaussInputContainer extends Component {
     this.submitFitPlaneGaussCoords = this.submitFitPlaneGaussCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -56,6 +57,14 @@ class FitPlaneGaussInputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * goes back to previous page
+   * @memberof FitPlaneGaussInputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/geometry/');
   };
 
   /**
@@ -150,6 +159,7 @@ class FitPlaneGaussInputContainer extends Component {
           handleInfoClick={this.displayInfoPanel}
           handleDeleteClick={this.clearPlaneGaussInput}
           handleFileDrop={this.parseCoords}
+          handleReturn={this.backToPrevPage}
           handleSubmitClick={this.submitFitPlaneGaussCoords}
           planePoints={this.props.planePoints}
           clickAnywhere={this.clickAnywhere}

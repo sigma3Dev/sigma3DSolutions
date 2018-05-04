@@ -11,11 +11,6 @@
   font-family: Raleway;
 }
 
-.fit-line-ransac-input .tolerance-input {
-  float: left;
-  width: 45vw;
-}
-
 .fit-line-ransac-input .tolerance-input label {
   text-align: left;
   font-size: 1.5em;
@@ -37,4 +32,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.fit-line-ransac-input
+  .fit-line-ransac-dropzone-and-table
+  .fit-line-ransac-points-table {
+  width: 50vw;
+}
+
+.fit-line-ransac-input .fit-line-ransac-dropzone-and-table .dropzone {
+  height: 50vh;
 }

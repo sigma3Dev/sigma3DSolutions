@@ -1,8 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import SubmitBtn from '../SubmitBtn/SubmitBtn';
-import InfoBtn from '../InfoBtn/InfoBtn';
+import Footer from '../Footer/Footer';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
 import PointsInputDropzone from '../PointsInputDropzone/PointsInputDropzone';
 import PointsTable from '../PointsTable/PointsTable';
@@ -14,27 +13,42 @@ const FitPointInput = ({
   infoPanelText,
   handleDeleteClick,
   handleFileDrop,
+  handleReturn,
   handleSubmitClick,
   points,
   clickAnywhere,
-}) => (
-  <div className='fit-point-input' onClick={clickAnywhere}>
-    <h1>
-      <FormattedMessage id='FitPointInput.label.caption' defaultMessage='Point' />
-    </h1>
-    <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
-    <PointsTable systemPoints={points} handleDeleteDataInput={handleDeleteClick} />
-    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-    <SubmitBtn handleClick={handleSubmitClick} />
-  </div>
-);
+}) => {
+  const isPointsInput = !(points.length === 0);
+  return (
+    <div className='fit-point-input' onClick={clickAnywhere}>
+      <h1>
+        <FormattedMessage id='FitPointInput.label.caption' defaultMessage='Point' />
+      </h1>
+      <div className='fit-point-dropzone-and-table'>
+        <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
+        <div className='fit-point-points-table'>
+          <PointsTable systemPoints={points} handleDeleteDataInput={handleDeleteClick} />
+        </div>
+      </div>
+      <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
+      <Footer
+        handleSubmitClick={handleSubmitClick}
+        handleInfoClick={handleInfoClick}
+        handleReturnClick={handleReturn}
+        isSubmitBtnDisplayed={isPointsInput}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed
+      />
+    </div>
+  );
+};
 
 FitPointInput.propTypes = {
   handleInfoClick: PropTypes.func.isRequired,
   handleDeleteClick: PropTypes.func.isRequired,
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
+  handleReturn: PropTypes.func.isRequired,
   clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,

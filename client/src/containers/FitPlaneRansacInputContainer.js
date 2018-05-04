@@ -52,6 +52,7 @@ class FitPlaneRansacInputContainer extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.updateTolerance = this.updateTolerance.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -63,6 +64,14 @@ class FitPlaneRansacInputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * goes back to previous page
+   * @memberof FitPlaneRansacInputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/geometry/');
   };
 
   /**
@@ -164,6 +173,7 @@ class FitPlaneRansacInputContainer extends Component {
           handleDeleteClick={this.clearPlaneRansacInput}
           handleFileDrop={this.parseCoords}
           handleSubmitClick={this.submitFitPlaneRansacCoords}
+          handleReturn={this.backToPrevPage}
           handleToleranceChange={this.updateTolerance}
           planePoints={this.props.planePoints}
           planeTolerance={this.props.planeTolerance}

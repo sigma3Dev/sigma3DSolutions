@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import FitPlaneRansacResultTable from '../FitPlaneRansacResultTable/FitPlaneRansacResultTable';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import Footer from '../Footer/Footer';
 import './FitPlaneRansacResult.css';
 
 const FitPlaneRansacResult = ({ params, handleReturnClick }) => {
@@ -16,7 +16,12 @@ const FitPlaneRansacResult = ({ params, handleReturnClick }) => {
         />
       </h1>
       <FitPlaneRansacResultTable params={params} copyText={copyText} />
-      <BackToInputBtn handleClick={handleReturnClick} />
+      <Footer
+        handleReturnClick={handleReturnClick}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed={false}
+        isSubmitBtnDisplayed={false}
+      />
     </div>
   );
 };

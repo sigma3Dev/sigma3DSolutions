@@ -417,6 +417,11 @@ exports[`Storyshots Start.BackToInputBtn Button to navigate back to previous dat
     <button
       className="back-to-input-btn"
       onClick={[Function]}
+      style={
+        Object {
+          "visibility": "hidden",
+        }
+      }
     >
       <div
         className="arrow-left"
@@ -727,6 +732,31 @@ exports[`Storyshots Start.BackToInputBtn Button to navigate back to previous dat
                     className="css-1ygfcef"
                   >
                     handleClick
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    isDisplayed
                   </td>
                   <td
                     className="css-1ygfcef"
@@ -1505,7 +1535,7 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
         </div>
       </div>
       <div
-        className="Sidebar"
+        className="Navbar"
       >
         <a
           href="/"
@@ -1542,27 +1572,15 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
             </span>
           </a>
         </div>
-        <div
-          className="info-section"
-        >
-          sigma3D
-          <br />
-          Max-Hufschmidt-Str. 4a
-          <br />
-          55130 Mainz
-          <br />
-          +49 (0) 2542 - 91898 0
-          <br />
-          <a
-            href="mailto:info@sigma3d.de"
-          >
-            info@sigma3d.de
-          </a>
-        </div>
       </div>
       <button
         className="back-to-input-btn"
         onClick={[Function]}
+        style={
+          Object {
+            "visibility": "hidden",
+          }
+        }
       >
         <div
           className="arrow-left"
@@ -1970,8 +1988,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing Drawing to display the resul
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -2519,8 +2539,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with 100 ci
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -3830,8 +3852,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with 1500 c
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -13589,8 +13613,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with circle
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -14504,8 +14530,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with circle
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -15413,8 +15441,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with high r
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -15973,8 +16003,10 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
           className="cheby-result-presentation-drawing"
         >
           <svg
-            height={500}
-            width={550}
+            className="cheby-drawing-svg-content"
+            preserveAspectRatio="xMinYMin meet"
+            version="1.1"
+            viewBox="0 0 500 500"
           >
             <line
               fill="black"
@@ -16117,168 +16149,237 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
             </text>
           </svg>
         </div>
-        <div>
-          <table
-            className="result-table"
-          >
-            <thead>
-              <tr
-                className="caption"
-              >
-                <th>
-                  Parameter
-                </th>
-                <th>
-                  <span>
-                    Wert
-                  </span>
-                </th>
-                <th
-                  className="copy-to-clippi"
-                >
-                  <button
-                    className="copy"
-                    onClick={[Function]}
-                    title="Copy to clipboard"
-                  >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "color": undefined,
-                          "verticalAlign": "middle",
-                        }
-                      }
-                      viewBox="0 0 40 40"
-                      width="1em"
-                    >
-                      <g>
-                        <path
-                          d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
-                        />
-                      </g>
-                    </svg>
-                  </button>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  Mx: 
-                </th>
-                <th>
-                  0.00
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  My: 
-                </th>
-                <th>
-                  0.00
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  Mz: 
-                </th>
-                <th>
-                  0.00
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  i: 
-                </th>
-                <th>
-                  0.000000
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  j: 
-                </th>
-                <th>
-                  0.000000
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  k: 
-                </th>
-                <th>
-                  1.000000
-                </th>
-              </tr>
-              <tr>
-                <th
-                  className="cheby-cf-radius-text"
-                >
-                  Radius
-                </th>
-                <th>
-                  1.00
-                </th>
-              </tr>
-              <tr>
-                <th
-                  className="cheby-cf-chebyDist-text"
-                >
-                  <span>
-                    Tschebyscheff Distanz:
-                  </span>
-                </th>
-                <th>
-                  0.00
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  <span>
-                    Fehlerwert:
-                  </span>
-                </th>
-                <th>
-                  0.00
-                </th>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div
-          className="cheby-cf-back-button"
+        <table
+          className="result-table"
         >
-          <button
-            className="back-to-input-btn"
-            onClick={[Function]}
-          >
-            <div
-              className="arrow-left"
+          <thead>
+            <tr
+              className="caption"
             >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
+              <th>
+                Parameter
+              </th>
+              <th>
+                <span>
+                  Wert
+                </span>
+              </th>
+              <th
+                className="copy-to-clippi"
               >
-                <g>
-                  <path
-                    d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
-                  />
-                </g>
-              </svg>
-            </div>
-          </button>
+                <button
+                  className="copy"
+                  onClick={[Function]}
+                  title="Copy to clipboard"
+                >
+                  <svg
+                    fill="currentColor"
+                    height="1em"
+                    preserveAspectRatio="xMidYMid meet"
+                    style={
+                      Object {
+                        "color": undefined,
+                        "verticalAlign": "middle",
+                      }
+                    }
+                    viewBox="0 0 40 40"
+                    width="1em"
+                  >
+                    <g>
+                      <path
+                        d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
+                      />
+                    </g>
+                  </svg>
+                </button>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                Mx: 
+              </th>
+              <th>
+                0.00
+              </th>
+            </tr>
+            <tr>
+              <th>
+                My: 
+              </th>
+              <th>
+                0.00
+              </th>
+            </tr>
+            <tr>
+              <th>
+                Mz: 
+              </th>
+              <th>
+                0.00
+              </th>
+            </tr>
+            <tr>
+              <th>
+                i: 
+              </th>
+              <th>
+                0.000000
+              </th>
+            </tr>
+            <tr>
+              <th>
+                j: 
+              </th>
+              <th>
+                0.000000
+              </th>
+            </tr>
+            <tr>
+              <th>
+                k: 
+              </th>
+              <th>
+                1.000000
+              </th>
+            </tr>
+            <tr>
+              <th
+                className="cheby-cf-radius-text"
+              >
+                Radius
+              </th>
+              <th>
+                1.00
+              </th>
+            </tr>
+            <tr>
+              <th
+                className="cheby-cf-chebyDist-text"
+              >
+                <span>
+                  Tschebyscheff Distanz:
+                </span>
+              </th>
+              <th>
+                0.00
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <span>
+                  Fehlerwert:
+                </span>
+              </th>
+              <th>
+                0.00
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        className="footer"
+      >
+        <button
+          className="back-to-input-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "visible",
+            }
+          }
+        >
+          <div
+            className="arrow-left"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </button>
+        <button
+          className="info-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "hidden",
+            }
+          }
+        >
+          <div
+            className="info-sign"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m18.4 15v-3.4h3.2v3.4h-3.2z m1.6 18.4c7.3 0 13.4-6.1 13.4-13.4s-6.1-13.4-13.4-13.4-13.4 6.1-13.4 13.4 6.1 13.4 13.4 13.4z m0-30c9.2 0 16.6 7.4 16.6 16.6s-7.4 16.6-16.6 16.6-16.6-7.4-16.6-16.6 7.4-16.6 16.6-16.6z m-1.6 25v-10h3.2v10h-3.2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </button>
+        <div
+          className="submit-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "hidden",
+            }
+          }
+        >
+          <div
+            className="arrow-right"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.4 21.4q0 1.2-0.9 2.1l-14.5 14.5q-0.9 0.8-2 0.8-1.2 0-2-0.8l-1.7-1.7q-0.9-0.8-0.9-2t0.9-2l6.5-6.6h-15.7q-1.1 0-1.9-0.8t-0.7-2v-2.9q0-1.2 0.7-2t1.9-0.9h15.7l-6.5-6.5q-0.9-0.8-0.9-2t0.9-2l1.7-1.7q0.8-0.9 2-0.9 1.2 0 2 0.9l14.5 14.5q0.9 0.8 0.9 2z"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -16666,7 +16767,7 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
                   <td
                     className="css-1ygfcef"
                   >
-                    handleClick
+                    handleReturnClick
                   </td>
                   <td
                     className="css-1ygfcef"
@@ -20769,6 +20870,11 @@ exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
     <button
       className="info-btn"
       onClick={[Function]}
+      style={
+        Object {
+          "visibility": "hidden",
+        }
+      }
     >
       <div
         className="info-sign"
@@ -21079,6 +21185,31 @@ exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
                     className="css-1ygfcef"
                   >
                     handleClick
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    isDisplayed
                   </td>
                   <td
                     className="css-1ygfcef"
@@ -21605,15 +21736,15 @@ exports[`Storyshots Start.InputInfoPanel Show informations about the input 1`] =
     }
   >
     <div
-      className="input-info-panel popover left"
-      id="popover-basic"
+      className="input-info-panel popover right"
+      id="popover-right"
       role="tooltip"
       style={
         Object {
           "display": "block",
-          "fontSize": "1em",
-          "left": "76%",
-          "top": 14,
+          "fontSize": "1.2em",
+          "left": "2vw",
+          "top": "24vh",
           "whiteSpace": "pre-wrap",
         }
       }
@@ -21623,7 +21754,7 @@ exports[`Storyshots Start.InputInfoPanel Show informations about the input 1`] =
         style={
           Object {
             "left": undefined,
-            "top": "10px",
+            "top": undefined,
           }
         }
       />
@@ -22257,6 +22388,340 @@ exports[`Storyshots Start.LoadingScreen Screen to display while calculation is l
             <small>
               No propTypes defined!
             </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Start.Navbar Navbar for selecting App category 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="Navbar"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+        title="Homepage"
+      >
+        <div
+          className="logo"
+        />
+      </a>
+      <div
+        className="sidebar-link-container"
+      >
+        <a
+          className="link"
+          href="/transformations"
+          onClick={[Function]}
+        >
+          <span>
+            Transformationen
+          </span>
+        </a>
+      </div>
+      <div
+        className="sidebar-link-container"
+      >
+        <a
+          className="link"
+          href="/geometry"
+          onClick={[Function]}
+        >
+          <span>
+            Geometrien
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#28c",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    style={
+      Object {
+        "background": "white",
+        "bottom": 0,
+        "display": "none",
+        "left": 0,
+        "overflow": "auto",
+        "padding": "0 40px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+        "zIndex": 99999,
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      ×
+    </button>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginBottom": "20px",
+            "marginTop": "20px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            Start.Navbar
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            Navbar for selecting App category
+          </h2>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+                "fontSize": "15px",
+              }
+            }
+          >
+            common info
+          </div>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                Navbar
+              </span>
+              <span />
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              Navbar
+              " Component
+            </h2>
+            <table
+              className="css-1ytzlk7"
+            >
+              <thead>
+                <tr>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    property
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    propType
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    required
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    default
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    currentMenu
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -25130,357 +25595,6 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
 </div>
 `;
 
-exports[`Storyshots Start.Sidebar Sidebar for selecting App category 1`] = `
-<div>
-  <div
-    style={
-      Object {
-        "position": "relative",
-        "zIndex": 0,
-      }
-    }
-  >
-    <div
-      className="Sidebar"
-    >
-      <a
-        href="/"
-        onClick={[Function]}
-        title="Homepage"
-      >
-        <div
-          className="logo"
-        />
-      </a>
-      <div
-        className="sidebar-link-container"
-      >
-        <a
-          className="link"
-          href="/transformations"
-          onClick={[Function]}
-        >
-          <span>
-            Transformationen
-          </span>
-        </a>
-      </div>
-      <div
-        className="sidebar-link-container"
-      >
-        <a
-          className="link"
-          href="/geometry"
-          onClick={[Function]}
-        >
-          <span>
-            Geometrien
-          </span>
-        </a>
-      </div>
-      <div
-        className="info-section"
-      >
-        sigma3D
-        <br />
-        Max-Hufschmidt-Str. 4a
-        <br />
-        55130 Mainz
-        <br />
-        +49 (0) 2542 - 91898 0
-        <br />
-        <a
-          href="mailto:info@sigma3d.de"
-        >
-          info@sigma3d.de
-        </a>
-      </div>
-    </div>
-  </div>
-  <button
-    onClick={[Function]}
-    style={
-      Object {
-        "background": "#28c",
-        "border": "none",
-        "borderRadius": "0 0 0 5px",
-        "color": "#fff",
-        "cursor": "pointer",
-        "display": "block",
-        "fontFamily": "sans-serif",
-        "fontSize": "12px",
-        "padding": "5px 15px",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="button"
-  >
-    Show Info
-  </button>
-  <div
-    style={
-      Object {
-        "background": "white",
-        "bottom": 0,
-        "display": "none",
-        "left": 0,
-        "overflow": "auto",
-        "padding": "0 40px",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-        "zIndex": 99999,
-      }
-    }
-  >
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#28c",
-          "border": "none",
-          "borderRadius": "0 0 0 5px",
-          "color": "#fff",
-          "cursor": "pointer",
-          "display": "block",
-          "fontFamily": "sans-serif",
-          "fontSize": "12px",
-          "padding": "5px 15px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-        }
-      }
-      type="button"
-    >
-      ×
-    </button>
-    <div
-      style={undefined}
-    >
-      <div
-        style={
-          Object {
-            "WebkitFontSmoothing": "antialiased",
-            "backgroundColor": "#fff",
-            "border": "1px solid #eee",
-            "borderRadius": "2px",
-            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-            "color": "#444",
-            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-            "fontSize": "15px",
-            "fontWeight": 300,
-            "lineHeight": 1.45,
-            "marginBottom": "20px",
-            "marginTop": "20px",
-            "padding": "20px 40px 40px",
-          }
-        }
-      >
-        <div
-          style={
-            Object {
-              "borderBottom": "1px solid #eee",
-              "marginBottom": 10,
-              "paddingTop": 10,
-            }
-          }
-        >
-          <h1
-            style={
-              Object {
-                "fontSize": "35px",
-                "margin": 0,
-                "padding": 0,
-              }
-            }
-          >
-            Start.Sidebar
-          </h1>
-          <h2
-            style={
-              Object {
-                "fontSize": "22px",
-                "fontWeight": 400,
-                "margin": "0 0 10px 0",
-                "padding": 0,
-              }
-            }
-          >
-            Sidebar for selecting App category
-          </h2>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": 0,
-            }
-          }
-        >
-          <div
-            style={
-              Object {
-                "WebkitFontSmoothing": "antialiased",
-                "color": "#444",
-                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-                "fontSize": "15px",
-              }
-            }
-          >
-            common info
-          </div>
-        </div>
-        <div>
-          <h1
-            style={
-              Object {
-                "borderBottom": "1px solid #EEE",
-                "fontSize": "25px",
-                "margin": "20px 0 0 0",
-                "padding": "0 0 5px 0",
-              }
-            }
-          >
-            Story Source
-          </h1>
-          <pre
-            style={
-              Object {
-                "backgroundColor": "#fafafa",
-                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
-                "fontSize": ".88em",
-                "lineHeight": 1.5,
-                "overflowX": "scroll",
-                "padding": ".5rem",
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "paddingLeft": 18,
-                  "paddingRight": 3,
-                }
-              }
-            >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;
-                Sidebar
-              </span>
-              <span />
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                /&gt;
-              </span>
-            </div>
-          </pre>
-        </div>
-        <div>
-          <h1
-            style={
-              Object {
-                "borderBottom": "1px solid #EEE",
-                "fontSize": "25px",
-                "margin": "20px 0 0 0",
-                "padding": "0 0 5px 0",
-              }
-            }
-          >
-            Prop Types
-          </h1>
-          <div>
-            <h2
-              style={
-                Object {
-                  "margin": "20px 0 0 0",
-                }
-              }
-            >
-              "
-              Sidebar
-              " Component
-            </h2>
-            <table
-              className="css-1ytzlk7"
-            >
-              <thead>
-                <tr>
-                  <th
-                    className="css-d52hbj"
-                  >
-                    property
-                  </th>
-                  <th
-                    className="css-d52hbj"
-                  >
-                    propType
-                  </th>
-                  <th
-                    className="css-d52hbj"
-                  >
-                    required
-                  </th>
-                  <th
-                    className="css-d52hbj"
-                  >
-                    default
-                  </th>
-                  <th
-                    className="css-d52hbj"
-                  >
-                    description
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    currentMenu
-                  </td>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    <span />
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  />
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
 <div>
   <div
@@ -25512,7 +25626,7 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
         className="generalText"
       >
         <span>
-          In der Sidebar sehen Sie verschiedene Themen. Beim Klicken darauf können Sie aus unterschiedlichen Apps wählen.
+          In der Navbar sehen Sie verschiedene Themen. Beim Klicken darauf können Sie aus unterschiedlichen Apps wählen.
         </span>
       </p>
       <div
@@ -25541,6 +25655,16 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
               >
                 <span>
                   3D-Transformation
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/transformations/bundle-adjustment/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  Bündelausgleichung
                 </span>
               </a>
             </li>
@@ -25607,16 +25731,6 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
               >
                 <span>
                   Kreis L2
-                </span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="/geometry/bundle-adjustment/data-input"
-                onClick={[Function]}
-              >
-                <span>
-                  Bündelausgleich
                 </span>
               </a>
             </li>
@@ -25922,13 +26036,15 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
       }
     }
   >
-    <button
+    <div
       className="submit-btn"
       onClick={[Function]}
+      style={
+        Object {
+          "visibility": "hidden",
+        }
+      }
     >
-      <span>
-        Absenden 
-      </span>
       <div
         className="arrow-right"
       >
@@ -25952,7 +26068,7 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
           </g>
         </svg>
       </div>
-    </button>
+    </div>
   </div>
   <button
     onClick={[Function]}
@@ -26238,6 +26354,31 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
                     className="css-1ygfcef"
                   >
                     handleClick
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    isDisplayed
                   </td>
                   <td
                     className="css-1ygfcef"

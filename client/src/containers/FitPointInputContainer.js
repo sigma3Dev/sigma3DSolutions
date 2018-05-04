@@ -46,6 +46,7 @@ class FitPointInputContainer extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -60,8 +61,16 @@ class FitPointInputContainer extends Component {
   };
 
   /**
+   * goes back to previous page
+   * @memberof FitPointInputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/geometry/');
+  };
+
+  /**
    * closes info, if it is open
-   * @memberof PointInputContainer
+   * @memberof FitPointInputContainer
    */
   clickAnywhere = () => {
     if (this.state.isInfoOpen) {
@@ -151,6 +160,7 @@ class FitPointInputContainer extends Component {
           handleInfoClick={this.displayInfoPanel}
           handleDeleteClick={this.clearPointInput}
           handleFileDrop={this.parseCoords}
+          handleReturn={this.backToPrevPage}
           handleSubmitClick={this.submitFitPointCoords}
           points={this.props.points}
           clickAnywhere={this.clickAnywhere}

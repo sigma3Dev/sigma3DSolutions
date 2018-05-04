@@ -1,11 +1,8 @@
 .start-screen {
-  height: 100%;
-  width: 84vw;
+  height: 93vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 100px;
-  margin-left: 14vw;
   font-family: Roboto;
   flex-direction: column;
 }
@@ -14,7 +11,7 @@
   color: #0375ba;
   justify-content: center;
   margin: 100px 0 50px;
-  font-size: 4.5em;
+  font-size: 4.5vw;
   text-align: center;
   font-family: Raleway;
 }
@@ -22,16 +19,17 @@
 .start-screen .subheader {
   color: #0165aa;
   justify-content: center;
-  font-size: 25px;
+  font-size: 2vw;
 }
 
 .start-screen .generalText {
   justify-content: center;
-  font-size: 20px;
+  font-size: 1.2vw;
 }
 
 .start-screen .lists {
-  justify-content: space-around;
+  width: 50vw;
+  justify-content: space-evenly;
   display: flex;
 }
 
@@ -39,10 +37,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 17px;
+  font-size: 1.2vw;
   border-radius: 10px;
   background-color: #c5e0ff;
-  padding: 15px 20px 10px 0;
+  padding: 2vh 0.4vw;
   margin: 20px 5px;
   width: 20vw;
 }
@@ -54,10 +52,10 @@
 
 .start-screen .element .element-header {
   align-self: center;
-  font-size: 1.2em;
+  font-size: 1.2vw;
   font-weight: bold;
   font-family: Raleway;
-  margin: 0 0 8px 17px;
+  margin: 0 0 1vh 1vw;
   color: #01458a;
 }
 
@@ -70,7 +68,7 @@
 }
 
 .start-screen .element ul li a {
-  color: #333;
+  color: #444;
 }
 
 .start-screen .element ul li a:hover {
