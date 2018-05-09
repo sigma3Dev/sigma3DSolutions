@@ -22,7 +22,7 @@
  <path d="m32.88 0.12458 2.9999 11.165-6.3768-0.03211z" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:.24923;stroke:#020202"/>
  <path d="m107.25 66.179-10.352 2.3184-0.0019-4.6473z" style="fill-rule:evenodd;paint-order:stroke markers fill;stroke-linecap:round;stroke-linejoin:round;stroke-width:.22791;stroke:#020202"/>
  <g transform="translate(-119.05 24.147)">
-  <path d="m182.6 62.081c-12.459 0-22.89-2.6828-23.221-6.0834v-51.667c0.55128 3.1702 11.092 5.3738 23.55 5.3738 12.459-2e-7 22.558-2.6525 22.892-6.0021v52.299c-0.33157 3.4006-10.763 6.0799-23.221 6.0799z" style="fill-rule:evenodd;fill:url(#radialGradient937);paint-order:stroke markers fill;stroke-linecap:round;stroke-width:1.3263;stroke:url(#radialGradient937)"/>
-  <path d="m159.38 4.3305c0-3.272 10.763-6.6573 23.221-6.6573 12.459 1e-7 23.221 2.757 23.221 6.0289 0 0-0.44782 5.8778-22.423 5.8279-22.803-0.051836-24.02-5.1995-24.02-5.1995z" style="fill-rule:evenodd;fill:#003200;paint-order:stroke markers fill;stroke-linecap:round;stroke-width:1.3263;stroke:#003200"/>
+  <path d="m182.6 62.081c-12.459 0-22.89-2.6828-23.221-6.0834v-51.667c0.55128 3.1702 11.092 5.3738 23.55 5.3738 12.459-2e-7 22.558-2.6525 22.892-6.0021v52.299c-0.33157 3.4006-10.763 6.0799-23.221 6.0799z" style="fill-rule:evenodd;fill:#07f;paint-order:stroke markers fill;stroke-linecap:round;stroke-width:1.3263;stroke:#07f"/>
+  <path d="m159.38 4.3305c0-3.272 10.763-6.6573 23.221-6.6573 12.459 1e-7 23.221 2.757 23.221 6.0289 0 0-0.44782 5.8778-22.423 5.8279-22.803-0.051836-24.02-5.1995-24.02-5.1995z" style="fill-rule:evenodd;fill:#03b;paint-order:stroke markers fill;stroke-linecap:round;stroke-width:1.3263;stroke:#03b"/>
  </g>
 </svg>

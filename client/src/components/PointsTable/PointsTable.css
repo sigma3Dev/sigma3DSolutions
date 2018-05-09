@@ -1,13 +1,11 @@
 .points-table * {
-  font-size: 1.02em;
+  font-size: 1vw;
   font-family: Roboto;
   text-align: center;
 }
 
 .points-table {
-  margin-top: 2vh;
-  margin-bottom: 3vh;
-  height: 42vh;
+  max-height: 60vh;
   overflow: auto;
 }
 
@@ -31,7 +29,7 @@
 }
 
 .points-table th {
-  padding: 8px;
+  padding: 2vh;
 }
 
 .points-table tr {
@@ -40,7 +38,7 @@
 
 .points-table th:first-child {
   width: 40px;
-  padding: 0;
+  padding: 0vh 2vh;
 }
 
 .points-table .grey {

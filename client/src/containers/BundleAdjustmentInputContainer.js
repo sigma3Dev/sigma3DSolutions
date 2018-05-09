@@ -10,7 +10,7 @@ import {
   getBundleAdjustmentPoints,
   getBundleAdjustmentBaseStation,
 } from '../selectors/BundleAdjustmentSelectors/getBundleAdjustmentInputDataSelector/getBundleAdjustmentInputDataSelector';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 import BundleAdjustmentInput from '../components/BundleAdjustmentInput/BundleAdjustmentInput';
 
@@ -52,6 +52,7 @@ class BundleAdjustmentInputContainer extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
     this.handleSelectBaseStation = this.handleSelectBaseStation.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -63,6 +64,14 @@ class BundleAdjustmentInputContainer extends Component {
     cdi.bundleAdjustmentDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * goes back to previous page
+   * @memberof BundleAdjustmentInputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/transformations/');
   };
 
   /**
@@ -110,7 +119,7 @@ class BundleAdjustmentInputContainer extends Component {
         baseStation: this.props.baseStation,
       };
       this.props.onSubmitCoords(coords);
-      this.props.history.push('/geometry/bundle-adjustment/result');
+      this.props.history.push('/transformations/bundle-adjustment/result');
     }
   };
 
@@ -163,7 +172,7 @@ class BundleAdjustmentInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='trafo' />
         <BundleAdjustmentInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
@@ -171,6 +180,7 @@ class BundleAdjustmentInputContainer extends Component {
           handleDeleteClick={this.clearBundleAdjustmentInput}
           handleSelectBaseStation={this.handleSelectBaseStation}
           handleFileDrop={this.parseCoords}
+          handleReturn={this.backToPrevPage}
           handleSubmitClick={this.submitBundleAdjustmentCoords}
           bundlePoints={this.props.bundlePoints}
           baseStation={this.props.baseStation}

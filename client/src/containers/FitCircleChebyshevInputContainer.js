@@ -7,7 +7,7 @@ import { pushFitChebyCircleCoords } from '../actions/pushCoords/pushCoordsAction
 import { getCirclePoints } from '../selectors/FitCircleChebyshevSelectors/getFitCircleChebyshevInputDataSelector/getFitCircleChebyshevInputDataSelector';
 import { submitFitCircleChebyshevCoords } from '../actions/submitFitCircleChebyshevCoords/submitFitCircleChebyshevCoordsActions';
 import { clearChebyshevInput } from '../actions/clearInput/clearInputActions';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 
 const cdi = require('coordinatedataimporter');
@@ -43,6 +43,7 @@ class FitCircleChebyshevInputContainer extends Component {
     this.submitFitCircleChebyshevCoords = this.submitFitCircleChebyshevCoords.bind(this);
     this.clearChebyshevInput = this.clearChebyshevInput.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -54,6 +55,14 @@ class FitCircleChebyshevInputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushFitCircleChebyshevCoords(coords);
     });
+  };
+
+  /**
+   * goes back to previous page
+   * @memberof FitCircleChebyshevInputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/geometry/');
   };
 
   /**
@@ -139,13 +148,14 @@ class FitCircleChebyshevInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='geometry' />
         <FitCircleChebyshevInput
           onFileDrop={this.parseCoords}
           circlePoints={this.props.circlePoints}
           handleInfoClick={this.displayInfoPanel}
           handleSubmitClick={this.submitFitCircleChebyshevCoords}
           handleDeleteClick={this.clearChebyshevInput}
+          handleReturn={this.backToPrevPage}
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
           clickAnywhere={this.clickAnywhere}

@@ -6,7 +6,7 @@ import { pushFitCircleL2Coords } from '../actions/pushCoords/pushCoordsActions';
 import { submitFitCircleL2Coords } from '../actions/submitFitCircleL2Coords/submitFitCircleL2CoordsActions';
 import { clearCircleL2Input } from '../actions/clearInput/clearInputActions';
 import { getCircleL2Points } from '../selectors/FitCircleL2Selectors/getFitCircleL2InputDataSelector/getFitCircleL2InputDataSelector';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 import FitCircleL2Input from '../components/FitCircleL2Input/FitCircleL2Input';
 
@@ -45,6 +45,7 @@ class FitCircleL2InputContainer extends Component {
     this.submitFitCircleL2Coords = this.submitFitCircleL2Coords.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -56,6 +57,14 @@ class FitCircleL2InputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * goes back to previous page
+   * @memberof FitCircleL2InputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/geometry/');
   };
 
   /**
@@ -143,13 +152,14 @@ class FitCircleL2InputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='geometry' />
         <FitCircleL2Input
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
           handleInfoClick={this.displayInfoPanel}
           handleDeleteClick={this.clearCircleL2Input}
           handleFileDrop={this.parseCoords}
+          handleReturn={this.backToPrevPage}
           handleSubmitClick={this.submitFitCircleL2Coords}
           circleL2Points={this.props.circleL2Points}
           clickAnywhere={this.clickAnywhere}

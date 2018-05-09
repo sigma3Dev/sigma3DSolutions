@@ -1,6 +1,6 @@
 .fit-line-l2-input {
-  width: 82vw;
-  margin-left: 16vw;
+  height: 100%;
+  margin: 15vh 2vw 0 2vw;
   font-family: Roboto;
 }
 
@@ -9,7 +9,19 @@
 }
 
 .fit-line-l2-input h1 {
+  font-size: 2vw;
   color: rgb(128, 128, 128);
-  padding: 20px 0;
+  margin: 20px 0;
   font-family: Raleway;
+}
+
+.fit-line-l2-input .fit-line-l2-dropzone-and-table {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fit-line-l2-input
+  .fit-line-l2-dropzone-and-table
+  .fit-line-l2-points-table {
+  width: 50vw;
 }

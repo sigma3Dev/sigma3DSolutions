@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import FitLineL2ResultTable from '../FitLineL2ResultTable/FitLineL2ResultTable';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import Footer from '../Footer/Footer';
 import './FitLineL2Result.css';
 
 const FitLineL2Result = ({ params, handleReturnClick }) => {
@@ -13,8 +13,16 @@ const FitLineL2Result = ({ params, handleReturnClick }) => {
       <h1>
         <FormattedMessage id='FitLineL2Result.label.caption' defaultMessage='Fit LineL2 Result' />
       </h1>
-      <FitLineL2ResultTable params={params} copyText={copyText} />
-      <BackToInputBtn handleClick={handleReturnClick} />
+      <FitLineL2ResultTable params={params} />
+      <Footer
+        handleReturnClick={handleReturnClick}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed={false}
+        isSubmitBtnDisplayed={false}
+        isCopyBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        copyText={copyText}
+      />
     </div>
   );
 };

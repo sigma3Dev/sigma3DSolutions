@@ -1,38 +1,39 @@
 .error-screen {
-  width: 82vw;
-  height: 95vh;
+  height: 100%;
+  margin: 18vh 2vw 0 2vw;
+  font-family: Roboto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 4vh 0 0 16vw;
-  font-family: Roboto;
   text-align: center;
 }
 
 .error-screen .error-header {
-  font-size: 5em;
+  font-size: 4vw;
+  margin-bottom: 8vh;
   border-bottom: none;
 }
 
 .error-screen .error-span {
   color: darkred;
-  font-size: 1em;
+  font-size: 4vw;
   border-bottom: 0;
 }
 
 .error-screen .error-message {
-  font-size: 1.3em;
+  font-size: 1.6vw;
+  margin-bottom: 8vh;
 }
 
 .error-screen .s3d-info {
-  font-size: 1.5em;
+  font-size: 2vw;
   white-space: pre-wrap;
 }
 
 .error-screen .s3d-info .s3d-contact-info {
-  font-size: 0.8em;
-  margin-top: 30px;
+  font-size: 1.6vw;
+  margin-top: 6vh;
 }
 
 .error-screen .s3d-info .s3d-contact-info .links * {

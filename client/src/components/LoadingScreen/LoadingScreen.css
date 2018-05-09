@@ -1,17 +1,15 @@
 .loading-screen {
-  width: 82%;
-  height: 610px;
-  margin-left: 240px;
+  height: 60vh;
+  margin: 15vh 2vw 0 2vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top: 12px;
   font-family: Roboto;
 }
 
 .loading-screen .fa-spinner {
-  font-size: 8em;
+  font-size: 12em;
   color: #515151;
   animation: spin 2000ms infinite linear;
 }

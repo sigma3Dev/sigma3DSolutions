@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 import './StartScreen.css';
 
 /**
@@ -47,6 +48,14 @@ const StartScreen = () => (
             </Link>
           </li>
           <li>
+            <Link to='/transformations/bundle-adjustment/data-input'>
+              <FormattedMessage
+                id='StartScreen.element.bundleAdjustment'
+                defaultMessage='Bundle Adjustment'
+              />
+            </Link>
+          </li>
+          <li>
             <Link to='/transformations/parameter-inversion'>
               <FormattedMessage
                 id='ParamInversion.caption.paramInversionHeader'
@@ -85,14 +94,6 @@ const StartScreen = () => (
           <li>
             <Link to='/geometry/fit-circle-l-two/data-input'>
               <FormattedMessage id='StartScreen.element.circleL2' defaultMessage='Circle L2' />
-            </Link>
-          </li>
-          <li>
-            <Link to='/geometry/bundle-adjustment/data-input'>
-              <FormattedMessage
-                id='StartScreen.element.bundleAdjustment'
-                defaultMessage='Bundle Adjustment'
-              />
             </Link>
           </li>
           <li>
@@ -142,6 +143,7 @@ const StartScreen = () => (
         </ul>
       </div>
     </div>
+    <Footer isSubmitBtnDisplayed={false} isReturnBtnDisplayed={false} isInfoBtnDisplayed={false} />
   </div>
 );
 

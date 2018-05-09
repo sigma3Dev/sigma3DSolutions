@@ -13,5 +13,5 @@ stories.addDecorator((story, context) => withInfo('common info')(story)(context)
 stories.addDecorator(withKnobs);
 
 stories.add('Table to display calculated params of point fit', () => (
-  <FitPointResultTable params={params} copyText='' />
+  <FitPointResultTable params={params} />
 ));

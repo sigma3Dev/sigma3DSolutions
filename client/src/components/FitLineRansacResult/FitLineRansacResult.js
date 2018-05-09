@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import FitLineRansacResultTable from '../FitLineRansacResultTable/FitLineRansacResultTable';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import Footer from '../Footer/Footer';
 import './FitLineRansacResult.css';
 
 const FitLineRansacResult = ({ params, handleReturnClick }) => {
@@ -15,8 +15,16 @@ const FitLineRansacResult = ({ params, handleReturnClick }) => {
           defaultMessage='Fit Line Ransac Result'
         />
       </h1>
-      <FitLineRansacResultTable params={params} copyText={copyText} />
-      <BackToInputBtn handleClick={handleReturnClick} />
+      <FitLineRansacResultTable params={params} />
+      <Footer
+        copyText={copyText}
+        handleReturnClick={handleReturnClick}
+        isReturnBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        isCopyBtnDisplayed
+        isInfoBtnDisplayed={false}
+        isSubmitBtnDisplayed={false}
+      />
     </div>
   );
 };

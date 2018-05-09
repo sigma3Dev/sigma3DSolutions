@@ -1,14 +1,12 @@
 .bundle-adjustment-input-points-table * {
-  font-size: 1.02em;
+  font-size: 1.1vw;
   font-family: Roboto;
   text-align: center;
 }
 
 .bundle-adjustment-input-points-table {
-  margin-top: 2vh;
-  margin-bottom: 3vh;
-  height: 42vh;
-  width: 70%;
+  height: 60vh;
+  width: 50%;
   overflow: auto;
 }
 
@@ -32,7 +30,7 @@
 }
 
 .bundle-adjustment-input-points-table th {
-  padding: 8px;
+  padding: 1vh;
 }
 
 .bundle-adjustment-input-points-table tr {

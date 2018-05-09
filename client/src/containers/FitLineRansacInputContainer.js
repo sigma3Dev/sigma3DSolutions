@@ -10,7 +10,7 @@ import {
   getLineRansacPoints,
   getLineRansacTolerance,
 } from '../selectors/FitLineRansacSelectors/getFitLineRansacInputDataSelector/getFitLineRansacInputDataSelector';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 import FitLineRansacInput from '../components/FitLineRansacInput/FitLineRansacInput';
 
@@ -52,6 +52,7 @@ class FitLineRansacInputContainer extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.updateTolerance = this.updateTolerance.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -74,6 +75,15 @@ class FitLineRansacInputContainer extends Component {
       this.setState({ ...this.state, isInfoOpen: false });
     }
   };
+
+  /**
+   * goes back to previous page
+   * @memberof FitLineRansacInputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/geometry/');
+  };
+
 
   /**
    * Closes the Modal-window
@@ -156,13 +166,14 @@ class FitLineRansacInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar currentMenu='geometry' />
+        <Navbar currentMenu='geometry' />
         <FitLineRansacInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
           handleInfoClick={this.displayInfoPanel}
           handleDeleteClick={this.clearLineRansacInput}
           handleFileDrop={this.parseCoords}
+          handleReturn={this.backToPrevPage}
           handleSubmitClick={this.submitFitLineRansacCoords}
           handleToleranceChange={this.updateTolerance}
           linePoints={this.props.linePoints}

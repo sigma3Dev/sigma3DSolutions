@@ -20,7 +20,7 @@ import {
   getListOfUsedCoords,
 } from '../selectors/ThreeDTrafoSelectors/getTrafoInputDataSelector/getTrafoInputDataSelector';
 import ThreeDTrafoInput from '../components/ThreeDTrafoInput/ThreeDTrafoInput';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 
 const cdi = require('coordinatedataimporter');
@@ -65,6 +65,7 @@ class ThreeDTrafoInputContainer extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.displayInfoPanel = this.displayInfoPanel.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -76,6 +77,14 @@ class ThreeDTrafoInputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushStartSystemCoords(coords);
     });
+  };
+
+  /**
+   * goes back to previous page
+   * @memberof ThreeDTrafoInputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/transformations/');
   };
 
   /**
@@ -227,7 +236,7 @@ class ThreeDTrafoInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar currentMenu='trafo' />
+        <Navbar currentMenu='trafo' />
         <ThreeDTrafoInput
           onStartFileDrop={this.parseStartCoords}
           onTargetFileDrop={this.parseTargetCoords}
@@ -238,6 +247,7 @@ class ThreeDTrafoInputContainer extends Component {
           handleSubmitClick={this.submitThreeDTrafoCoords}
           handleStartDeleteClick={this.clearStartInput}
           handleTargetDeleteClick={this.clearTargetInput}
+          handleReturn={this.backToPrevPage}
           listOfUsedCoords={this.props.listOfUsedCoords}
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}

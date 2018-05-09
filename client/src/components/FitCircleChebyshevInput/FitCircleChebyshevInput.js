@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import PointsInputDropzone from '../PointsInputDropzone/PointsInputDropzone';
 import PointsTable from '../PointsTable/PointsTable';
-import SubmitBtn from '../SubmitBtn/SubmitBtn';
-import InfoBtn from '../InfoBtn/InfoBtn';
+import Footer from '../Footer/Footer';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
 import './FitCircleChebyshevInput.css';
 
@@ -24,32 +23,48 @@ const FitCircleChebyshevInput = ({
   handleInfoClick,
   handleSubmitClick,
   handleDeleteClick,
+  handleReturn,
   isInfoOpen,
   infoPanelText,
   clickAnywhere,
-}) => (
-  <div className='chebyshev-circle-fit-input' onClick={clickAnywhere}>
-    <div>
+}) => {
+  const isPointsInput = !(circlePoints.length === 0);
+
+  return (
+    <div className='chebyshev-circle-fit-input' onClick={clickAnywhere}>
       <h1>
         <FormattedMessage
           id='FitCircleChebyshevInput.label.caption'
           defaultMessage='Circle Points:'
         />
       </h1>
-      <PointsInputDropzone onDrop={onFileDrop} />
-      <PointsTable systemPoints={circlePoints} handleDeleteDataInput={handleDeleteClick} />
+      <div className='chebyshev-dropzone-and-table'>
+        <PointsInputDropzone onDrop={onFileDrop} className='chebyshev-dropzone' />
+        <div className='chebyshev-points-table'>
+          <PointsTable systemPoints={circlePoints} handleDeleteDataInput={handleDeleteClick} />
+        </div>
+      </div>
+      <Footer
+        handleSubmitClick={handleSubmitClick}
+        handleInfoClick={handleInfoClick}
+        handleReturnClick={handleReturn}
+        isSubmitBtnDisplayed={isPointsInput}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        isCopyBtnDisplayed={false}
+      />
+      <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     </div>
-    <SubmitBtn handleClick={handleSubmitClick} />
-    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-  </div>
-);
+  );
+};
 
 FitCircleChebyshevInput.propTypes = {
   onFileDrop: PropTypes.func.isRequired,
   handleInfoClick: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
   handleDeleteClick: PropTypes.func.isRequired,
+  handleReturn: PropTypes.func.isRequired,
   clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   circlePoints: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,

@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import FitPlaneGaussResultTable from '../FitPlaneGaussResultTable/FitPlaneGaussResultTable';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import Footer from '../Footer/Footer';
 import FittingErrorBarGraph from '../FittingErrorBarGraph/FittingErrorBarGraph';
 import './FitPlaneGaussResult.css';
 
@@ -17,11 +17,19 @@ const FitPlaneGaussResult = ({ params, handleReturnClick }) => {
           defaultMessage='Fit Plane Result'
         />
       </h1>
-      <FitPlaneGaussResultTable params={params} copyText={copyText} />
+      <FitPlaneGaussResultTable params={params} />
       <div className='bar-graph'>
         <FittingErrorBarGraph errors={params[7]} />
       </div>
-      <BackToInputBtn handleClick={handleReturnClick} />
+      <Footer
+        handleReturnClick={handleReturnClick}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed={false}
+        isSubmitBtnDisplayed={false}
+        isDownloadBtnDisplayed={false}
+        isCopyBtnDisplayed
+        copyText={copyText}
+      />
     </div>
   );
 };
