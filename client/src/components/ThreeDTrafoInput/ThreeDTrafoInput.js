@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import PointsInputDropzone from '../PointsInputDropzone/PointsInputDropzone';
 import PointsTable from '../PointsTable/PointsTable';
-import SubmitBtn from '../SubmitBtn/SubmitBtn';
-import InfoBtn from '../InfoBtn/InfoBtn';
+import Footer from '../Footer/Footer';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
 import './ThreeDTrafoInput.css';
 
@@ -32,47 +31,59 @@ const ThreeDTrafoInput = ({
   handleSubmitClick,
   handleStartDeleteClick,
   handleTargetDeleteClick,
+  handleReturn,
   listOfUsedCoords,
   isInfoOpen,
   infoPanelText,
   clickAnywhere,
-}) => (
-  <div className='three-d-trafo-input' onClick={clickAnywhere}>
-    <div className='inputs'>
-      <div className='start-input'>
-        <h1>
-          <FormattedMessage
-            id='ThreeDTrafoInput.label.startSystemPointsCaption'
-            defaultMessage='Start System Points:'
+}) => {
+  const isPointsInput = !(startSystemPoints.length === 0) && !(targetSystemPoints.length === 0);
+  return (
+    <div className='three-d-trafo-input' onClick={clickAnywhere}>
+      <div className='inputs'>
+        <div className='start-input'>
+          <h1>
+            <FormattedMessage
+              id='ThreeDTrafoInput.label.startSystemPointsCaption'
+              defaultMessage='Start System Points:'
+            />
+          </h1>
+          <PointsInputDropzone onDrop={onStartFileDrop} className='three-d-trafo-dropzone' />
+          <PointsTable
+            systemPoints={startSystemPoints}
+            handleDeleteDataInput={handleStartDeleteClick}
           />
-        </h1>
-        <PointsInputDropzone onDrop={onStartFileDrop} />
-        <PointsTable
-          systemPoints={startSystemPoints}
-          handleDeleteDataInput={handleStartDeleteClick}
-        />
-      </div>
-      <div className='target-input'>
-        <h1>
-          <FormattedMessage
-            id='ThreeDTrafoInput.label.targetSystemPointsCaption'
-            defaultMessage='Target System Points:'
+        </div>
+        <div className='target-input'>
+          <h1>
+            <FormattedMessage
+              id='ThreeDTrafoInput.label.targetSystemPointsCaption'
+              defaultMessage='Target System Points:'
+            />
+          </h1>
+          <PointsInputDropzone onDrop={onTargetFileDrop} className='three-d-trafo-dropzone' />
+          <PointsTable
+            systemPoints={targetSystemPoints}
+            handleChange={checkboxUpdate}
+            handleDeleteDataInput={handleTargetDeleteClick}
+            listOfUsedCoords={listOfUsedCoords}
           />
-        </h1>
-        <PointsInputDropzone onDrop={onTargetFileDrop} />
-        <PointsTable
-          systemPoints={targetSystemPoints}
-          handleChange={checkboxUpdate}
-          handleDeleteDataInput={handleTargetDeleteClick}
-          listOfUsedCoords={listOfUsedCoords}
-        />
+        </div>
       </div>
+      <Footer
+        handleSubmitClick={handleSubmitClick}
+        handleInfoClick={handleInfoClick}
+        handleReturnClick={handleReturn}
+        isSubmitBtnDisplayed={isPointsInput}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed
+        isCopyBtnDisplayed={false}
+        isDownloadBtnDisplayed={false}
+      />
+      <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     </div>
-    <SubmitBtn handleClick={handleSubmitClick} />
-    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-  </div>
-);
+  );
+};
 
 ThreeDTrafoInput.propTypes = {
   onStartFileDrop: PropTypes.func.isRequired,

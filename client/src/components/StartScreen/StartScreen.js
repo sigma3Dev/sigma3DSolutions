@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 import './StartScreen.css';
 
 /**
@@ -142,6 +143,7 @@ const StartScreen = () => (
         </ul>
       </div>
     </div>
+    <Footer isSubmitBtnDisplayed={false} isReturnBtnDisplayed={false} isInfoBtnDisplayed={false} />
   </div>
 );
 

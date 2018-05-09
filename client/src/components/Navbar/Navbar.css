@@ -56,6 +56,18 @@
   margin: 1vh 1vw;
 }
 
+.Navbar .sidebar-link-container-right {
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  padding: 3vh 2vw;
+  margin: 1vh 1.8vw 1vh auto;
+}
+
+.Navbar .sidebar-link-container-right:hover {
+  animation: size-transition linear 200ms forwards;
+  background-color: #505251;
+}
+
 .Navbar .sidebar-link-container:hover {
   animation: size-transition linear 200ms forwards;
   background-color: #505251;

@@ -15,12 +15,15 @@ const FitPlaneRansacResult = ({ params, handleReturnClick }) => {
           defaultMessage='Fit Plane Ransac Result'
         />
       </h1>
-      <FitPlaneRansacResultTable params={params} copyText={copyText} />
+      <FitPlaneRansacResultTable params={params} />
       <Footer
         handleReturnClick={handleReturnClick}
         isReturnBtnDisplayed
         isInfoBtnDisplayed={false}
         isSubmitBtnDisplayed={false}
+        isCopyBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        copyText={copyText}
       />
     </div>
   );

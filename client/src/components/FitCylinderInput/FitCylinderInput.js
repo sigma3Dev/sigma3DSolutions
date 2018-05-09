@@ -37,6 +37,8 @@ const FitCylinderInput = ({
         isSubmitBtnDisplayed={isPointsInput}
         isReturnBtnDisplayed
         isInfoBtnDisplayed
+        isCopyBtnDisplayed={false}
+        isDownloadBtnDisplayed={false}
       />
       <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     </div>

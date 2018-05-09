@@ -12,7 +12,7 @@
 }
 
 .apply-trafo-result .result-table {
-  max-height: 65vh;
+  max-height: 63vh;
   overflow: auto;
   width: 70vw;
   margin: 0 auto;

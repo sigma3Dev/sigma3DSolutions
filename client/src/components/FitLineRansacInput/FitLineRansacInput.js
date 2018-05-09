@@ -60,6 +60,8 @@ const FitLineRansacInput = ({
         isSubmitBtnDisplayed={isPointsInput}
         isReturnBtnDisplayed
         isInfoBtnDisplayed
+        isCopyBtnDisplay={false}
+        isDownloadBtnDisplay={false}
       />
     </div>
   );

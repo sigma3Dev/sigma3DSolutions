@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Navbar from '../components/Navbar/Navbar';
 import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
 
@@ -8,6 +9,24 @@ import SelectAppsScreen from '../components/SelectAppsScreen/SelectAppsScreen';
  * @extends {Component}
  */
 class GeometryScreenContainer extends Component {
+  /**
+   * Creates an instance of GeometryScreenContainer.
+   * @param {Object} props
+   * @memberof GeometryScreenContainer
+   */
+  constructor(props) {
+    super(props);
+    this.goBack = this.goBack.bind(this);
+  }
+
+  /**
+   * Navigates back to start screen
+   * @memberof GeometryScreenContainer
+   */
+  goBack = () => {
+    this.props.history.push('/');
+  };
+
   render() {
     const buttons = [
       {
@@ -50,10 +69,14 @@ class GeometryScreenContainer extends Component {
     return (
       <div>
         <Navbar currentMenu='geometry' />
-        <SelectAppsScreen buttons={buttons} />
+        <SelectAppsScreen buttons={buttons} handleReturn={this.goBack} />
       </div>
     );
   }
 }
+
+GeometryScreenContainer.propTypes = {
+  history: PropTypes.any,
+};
 
 export default GeometryScreenContainer;

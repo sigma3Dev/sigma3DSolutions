@@ -38,6 +38,8 @@ const ApplyTrafoResult = ({ result, handleReturnClick }) => {
       <Footer
         handleReturnClick={handleReturnClick}
         isReturnBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        isCopyBtnDisplayed={false}
         isInfoBtnDisplayed={false}
         isSubmitBtnDisplayed={false}
       />

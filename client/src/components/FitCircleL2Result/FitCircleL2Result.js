@@ -17,7 +17,7 @@ const FitCircleL2Result = ({ params, handleReturnClick }) => {
           defaultMessage='Fit CircleL2 Result'
         />
       </h1>
-      <FitCircleL2ResultTable params={params} copyText={copyText} />
+      <FitCircleL2ResultTable params={params} />
       <div className='bar-graph'>
         <FittingErrorBarGraph errors={params[8]} />
       </div>
@@ -26,6 +26,9 @@ const FitCircleL2Result = ({ params, handleReturnClick }) => {
         isReturnBtnDisplayed
         isInfoBtnDisplayed={false}
         isSubmitBtnDisplayed={false}
+        isCopyBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        copyText={copyText}
       />
     </div>
   );

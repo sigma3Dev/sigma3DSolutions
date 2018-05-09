@@ -42,6 +42,7 @@ class QuatCardanContainer extends Component {
     this.parseInput = this.parseInput.bind(this);
     this.submitQuatToCardanCoords = this.submitQuatToCardanCoords.bind(this);
     this.submitCardanToQuatCoords = this.submitCardanToQuatCoords.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -52,6 +53,14 @@ class QuatCardanContainer extends Component {
   parseInput = (e) => {
     e.persist();
     this.props.onChangeInputField(e.target.name, e.target.value);
+  };
+
+  /**
+   * goes back to previous page
+   * @memberof QuatCardanContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/transformations/');
   };
 
   /**
@@ -98,6 +107,7 @@ class QuatCardanContainer extends Component {
           quat={this.props.quat}
           cardan={this.props.cardan}
           handleChange={this.parseInput}
+          handleReturn={this.backToPrevPage}
           handleQuatToCardanClick={this.submitQuatToCardanCoords}
           handleCardanToQuatClick={this.submitCardanToQuatCoords}
         />
@@ -114,6 +124,7 @@ QuatCardanContainer.propTypes = {
   quat: PropTypes.arrayOf(PropTypes.string),
   cardan: PropTypes.arrayOf(PropTypes.string),
   error: PropTypes.string,
+  history: PropTypes.any,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(QuatCardanContainer);

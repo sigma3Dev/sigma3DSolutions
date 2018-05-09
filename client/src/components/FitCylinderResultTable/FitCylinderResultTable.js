@@ -1,13 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 import './FitCylinderResultTable.css';
 
-const GoClippy = require('react-icons/lib/go/clippy');
-
-const ClipboardIcon = React.createElement(GoClippy, null);
-
-const FitCylinderResultTable = ({ params, copyText }) => (
+const FitCylinderResultTable = ({ params }) => (
   <table className='fit-cylinder-result-table'>
     <thead>
       <tr className='caption'>
@@ -19,7 +14,6 @@ const FitCylinderResultTable = ({ params, copyText }) => (
         <th>K</th>
         <th>Radius</th>
         <th>StDev</th>
-        <th />
       </tr>
     </thead>
     <tbody>
@@ -32,13 +26,6 @@ const FitCylinderResultTable = ({ params, copyText }) => (
         <th>{params[5].toFixed(5)}</th>
         <th>{params[6].toFixed(1)}</th>
         <th>{params[7].toFixed(1)}</th>
-        <th>
-          <CopyToClipboard text={copyText}>
-            <button className='copy' title='Copy to clipboard'>
-              {ClipboardIcon}
-            </button>
-          </CopyToClipboard>
-        </th>
       </tr>
     </tbody>
   </table>
@@ -46,7 +33,6 @@ const FitCylinderResultTable = ({ params, copyText }) => (
 
 FitCylinderResultTable.propTypes = {
   params: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.number)])).isRequired,
-  copyText: PropTypes.string.isRequired,
 };
 
 export default FitCylinderResultTable;

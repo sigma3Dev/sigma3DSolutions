@@ -1,5 +1,4 @@
 .chebyshev-circle-fit-result {
-  height: 100%;
   margin: 12vh 2vw 5vh 2vw;
   display: flex;
   flex-direction: column;
@@ -46,18 +45,6 @@
 }
 
 .chebyshev-circle-fit-result .result-table .caption {
-  background-color: #d5d5d5;
-}
-
-.chebyshev-circle-fit-result .copy {
-  font-size: 0.8em;
-  padding: 10px;
-}
-
-.copy-to-clippi {
-  padding-left: 0px;
-}
-
-.chebyshev-circle-fit-result .copy:hover {
-  cursor: pointer;
+  color: #afa993;
+  background-color: rgb(52, 54, 57);
 }

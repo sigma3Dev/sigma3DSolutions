@@ -119,7 +119,7 @@ class ThreeDTrafoResultContainer extends Component {
         <ThreeDTrafoResult
           trafoParams={this.props.trafoParams}
           trafoDifference={this.props.trafoDifference}
-          handleClick={this.goBack}
+          handleReturnClick={this.goBack}
           translationDecimalPlaces={2}
           rotationDecimalPlaces={4}
           handleDownloadClick={this.downloadFile}

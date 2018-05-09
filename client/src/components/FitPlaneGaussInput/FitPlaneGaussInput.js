@@ -37,6 +37,8 @@ const FitPlaneGaussInput = ({
         isSubmitBtnDisplayed={isPointsInput}
         isReturnBtnDisplayed
         isInfoBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        isCopyBtnDisplayed={false}
       />
       <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     </div>

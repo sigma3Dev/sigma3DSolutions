@@ -1,6 +1,5 @@
 .three-d-trafo-input {
-  width: 82vw;
-  margin-left: 16vw;
+  margin: 10vh 2vw 0 2vw;
   font-family: Roboto;
 }
 
@@ -11,13 +10,27 @@
 .three-d-trafo-input .inputs {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.three-d-trafo-input .dropzone {
+  max-height: 20vh;
+  margin-bottom: 1vh;
+}
+
+.three-d-trafo-input .points-table {
+  max-height: 45vh;
+}
+
+.three-d-trafo-input .points-table th {
+  padding: 1.5vh;
 }
 
 .three-d-trafo-input h1 {
   color: rgb(128, 128, 128);
   margin: 20px 0;
   font-family: Raleway;
+  font-size: 2vw;
 }
 
 .start-input {

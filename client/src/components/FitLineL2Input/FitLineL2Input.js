@@ -37,6 +37,8 @@ const FitLineL2Input = ({
         isSubmitBtnDisplayed={isPointsInput}
         isReturnBtnDisplayed
         isInfoBtnDisplayed
+        isCopyBtnDisplayed={false}
+        isDownloadBtnDisplayed={false}
       />
       <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
     </div>

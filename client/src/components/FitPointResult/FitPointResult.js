@@ -14,7 +14,7 @@ const FitPointResult = ({ params, handleReturnClick }) => {
       <h1>
         <FormattedMessage id='FitPointResult.label.caption' defaultMessage='Fit Point Result' />
       </h1>
-      <FitPointResultTable params={params} copyText={copyText} />
+      <FitPointResultTable params={params} />
       <div className='bar-graph'>
         <FittingErrorBarGraph errors={params[4]} />
       </div>
@@ -23,6 +23,9 @@ const FitPointResult = ({ params, handleReturnClick }) => {
         isReturnBtnDisplayed
         isInfoBtnDisplayed={false}
         isSubmitBtnDisplayed={false}
+        isCopyBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        copyText={copyText}
       />
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
 import './ErrorScreen.css';
 
@@ -37,7 +37,14 @@ const ErrorScreen = ({ error, handleClick }) => (
       </div>
     </div>
     <Navbar />
-    <BackToInputBtn handleClick={handleClick} />
+    <Footer
+      handleReturnClick={handleClick}
+      isReturnBtnDisplayed
+      isInfoBtnDisplayed={false}
+      isSubmitBtnDisplayed={false}
+      isDownloadBtnDisplayed={false}
+      isCopyBtnDisplayed={false}
+    />
   </div>
 );
 

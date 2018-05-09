@@ -17,7 +17,7 @@ const FitCylinderResult = ({ params, handleReturnClick }) => {
           defaultMessage='Fit Cylinder Result'
         />
       </h1>
-      <FitCylinderResultTable params={params} copyText={copyText} />
+      <FitCylinderResultTable params={params} />
       <div className='bar-graph'>
         <FittingErrorBarGraph errors={params[8]} />
       </div>
@@ -26,6 +26,9 @@ const FitCylinderResult = ({ params, handleReturnClick }) => {
         isReturnBtnDisplayed
         isInfoBtnDisplayed={false}
         isSubmitBtnDisplayed={false}
+        isCopyBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        copyText={copyText}
       />
     </div>
   );

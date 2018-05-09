@@ -15,7 +15,7 @@ const InfoBtn = ({ handleClick, isDisplayed }) => (
   <button
     className='info-btn'
     onClick={handleClick}
-    style={isDisplayed ? { visibility: 'visible' } : { visibility: 'hidden' }}
+    style={isDisplayed ? { display: 'inline-block' } : { display: 'none' }}
   >
     <div className='info-sign'>{infoSign}</div>
   </button>

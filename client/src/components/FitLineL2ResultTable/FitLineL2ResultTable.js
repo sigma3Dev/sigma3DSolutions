@@ -1,42 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 import './FitLineL2ResultTable.css';
 
-const GoClippy = require('react-icons/lib/go/clippy');
-
-const ClipboardIcon = React.createElement(GoClippy, null);
-
-const FitLineL2ResultTable = ({ params, copyText }) => (
+const FitLineL2ResultTable = ({ params }) => (
   <table className='fit-line-l2-result-table'>
-    <thead>
-      <tr className='caption'>
-        <th>X</th>
-        <th>Y</th>
-        <th>Z</th>
-        <th>I</th>
-        <th>J</th>
-        <th>K</th>
-        <th>StDev</th>
-        <th />
-      </tr>
-    </thead>
     <tbody>
       <tr>
-        <th>{params[0].toFixed(1)}</th>
-        <th>{params[1].toFixed(1)}</th>
-        <th>{params[2].toFixed(1)}</th>
-        <th>{params[3].toFixed(5)}</th>
-        <th>{params[4].toFixed(5)}</th>
-        <th>{params[5].toFixed(5)}</th>
-        <th>{params[6].toFixed(1)}</th>
-        <th>
-          <CopyToClipboard text={copyText}>
-            <button className='copy' title='Copy to clipboard'>
-              {ClipboardIcon}
-            </button>
-          </CopyToClipboard>
-        </th>
+        <th>X</th>
+        <td>{params[0].toFixed(1)}</td>
+      </tr>
+      <tr>
+        <th>Y</th>
+        <td>{params[1].toFixed(1)}</td>
+      </tr>
+      <tr>
+        <th>Z</th>
+        <td>{params[2].toFixed(1)}</td>
+      </tr>
+      <tr>
+        <th>I</th>
+        <td>{params[3].toFixed(5)}</td>
+      </tr>
+      <tr>
+        <th>J</th>
+        <td>{params[4].toFixed(5)}</td>
+      </tr>
+      <tr>
+        <th>K</th>
+        <td>{params[5].toFixed(5)}</td>
+      </tr>
+      <tr>
+        <th>StDev</th>
+        <td>{params[6].toFixed(1)}</td>
       </tr>
     </tbody>
   </table>
@@ -44,7 +39,6 @@ const FitLineL2ResultTable = ({ params, copyText }) => (
 
 FitLineL2ResultTable.propTypes = {
   params: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.arrayOf(PropTypes.number)])).isRequired,
-  copyText: PropTypes.string.isRequired,
 };
 
 export default FitLineL2ResultTable;

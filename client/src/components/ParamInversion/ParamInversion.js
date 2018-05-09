@@ -104,6 +104,8 @@ const ParamInversion = ({
       isSubmitBtnDisplayed
       isReturnBtnDisplayed
       isInfoBtnDisplayed={false}
+      isCopyBtnDisplayed={false}
+      isDownloadBtnDisplayed={false}
     />
   </div>
 );

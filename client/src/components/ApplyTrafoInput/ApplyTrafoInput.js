@@ -155,6 +155,8 @@ const ApplyTrafoInput = ({
         handleInfoClick={handleInfoClick}
         handleReturnClick={handleReturn}
         isSubmitBtnDisplayed={isPointsInput}
+        isDownloadBtnDisplayed={false}
+        isCopyBtnDisplayed={false}
         isReturnBtnDisplayed
         isInfoBtnDisplayed
       />

@@ -1,14 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 import Footer from '../Footer/Footer';
 import FitCircleChebyshevDrawing from '../FitCircleChebyshevDrawing/FitCircleChebyshevDrawing';
 import './FitCircleChebyshevResult.css';
-
-const GoClippy = require('react-icons/lib/go/clippy');
-
-const ClipboardIcon = React.createElement(GoClippy, null);
 
 /**
  * page to show the results of Chebyshev Circle Fit Adjustment
@@ -43,13 +38,6 @@ const FitCircleChebyshevResult = ({ chebyshevParams, handleReturnClick }) => {
                   id='FitCircleChebyshevResult.table.value'
                   defaultMessage='Value'
                 />
-              </th>
-              <th className='copy-to-clippi'>
-                <CopyToClipboard text={copyText}>
-                  <button className='copy' title='Copy to clipboard'>
-                    {ClipboardIcon}
-                  </button>
-                </CopyToClipboard>
               </th>
             </tr>
           </thead>
@@ -108,6 +96,9 @@ const FitCircleChebyshevResult = ({ chebyshevParams, handleReturnClick }) => {
         isReturnBtnDisplayed
         isInfoBtnDisplayed={false}
         isSubmitBtnDisplayed={false}
+        isDownloadBtnDisplayed={false}
+        isCopyBtnDisplayed
+        copyText={copyText}
       />
     </div>
   );

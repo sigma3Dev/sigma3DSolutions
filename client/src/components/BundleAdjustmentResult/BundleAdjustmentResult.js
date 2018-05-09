@@ -19,6 +19,8 @@ const BundleAdjustmentResult = ({ params, handleReturnClick }) => (
       isReturnBtnDisplayed
       isInfoBtnDisplayed={false}
       isSubmitBtnDisplayed={false}
+      isDownloadBtnDisplayed={false}
+      isCopyBtnDisplayed={false}
     />
   </div>
 );

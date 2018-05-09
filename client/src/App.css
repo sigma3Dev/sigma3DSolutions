@@ -11,3 +11,15 @@ body {
 button:focus {
   outline: 0;
 }
+
+button:hover {
+  cursor: pointer;
+}
+
+table th:hover {
+  cursor: default;
+}
+
+table td:hover {
+  cursor: default;
+}

@@ -38,6 +38,8 @@ const FitPointInput = ({
         isSubmitBtnDisplayed={isPointsInput}
         isReturnBtnDisplayed
         isInfoBtnDisplayed
+        isCopyBtnDisplayed={false}
+        isDownloadBtnDisplayed={false}
       />
     </div>
   );

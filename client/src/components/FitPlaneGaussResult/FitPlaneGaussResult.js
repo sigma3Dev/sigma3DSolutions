@@ -17,7 +17,7 @@ const FitPlaneGaussResult = ({ params, handleReturnClick }) => {
           defaultMessage='Fit Plane Result'
         />
       </h1>
-      <FitPlaneGaussResultTable params={params} copyText={copyText} />
+      <FitPlaneGaussResultTable params={params} />
       <div className='bar-graph'>
         <FittingErrorBarGraph errors={params[7]} />
       </div>
@@ -26,6 +26,9 @@ const FitPlaneGaussResult = ({ params, handleReturnClick }) => {
         isReturnBtnDisplayed
         isInfoBtnDisplayed={false}
         isSubmitBtnDisplayed={false}
+        isDownloadBtnDisplayed={false}
+        isCopyBtnDisplayed
+        copyText={copyText}
       />
     </div>
   );

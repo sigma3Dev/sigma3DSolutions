@@ -15,10 +15,13 @@ const FitLineRansacResult = ({ params, handleReturnClick }) => {
           defaultMessage='Fit Line Ransac Result'
         />
       </h1>
-      <FitLineRansacResultTable params={params} copyText={copyText} />
+      <FitLineRansacResultTable params={params} />
       <Footer
+        copyText={copyText}
         handleReturnClick={handleReturnClick}
         isReturnBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        isCopyBtnDisplayed
         isInfoBtnDisplayed={false}
         isSubmitBtnDisplayed={false}
       />

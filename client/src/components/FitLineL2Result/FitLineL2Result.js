@@ -13,12 +13,15 @@ const FitLineL2Result = ({ params, handleReturnClick }) => {
       <h1>
         <FormattedMessage id='FitLineL2Result.label.caption' defaultMessage='Fit LineL2 Result' />
       </h1>
-      <FitLineL2ResultTable params={params} copyText={copyText} />
+      <FitLineL2ResultTable params={params} />
       <Footer
         handleReturnClick={handleReturnClick}
         isReturnBtnDisplayed
         isInfoBtnDisplayed={false}
         isSubmitBtnDisplayed={false}
+        isCopyBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        copyText={copyText}
       />
     </div>
   );

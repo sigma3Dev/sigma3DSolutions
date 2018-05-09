@@ -23,6 +23,11 @@ const Navbar = ({ currentMenu }) => (
         <FormattedMessage id='Navbar.label.geometry' defaultMessage='Geometry' />
       </Link>
     </div>
+    <div className='sidebar-link-container-right'>
+      <a href='https://www.sigma3d.de/' target='_blank' rel='noopener noreferrer' className='link'>
+        <FormattedMessage id='Navbar.label.contact' defaultMessage='Contact' />
+      </a>
+    </div>
   </div>
 );
 

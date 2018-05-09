@@ -51,6 +51,7 @@ class ParamInversionContainer extends Component {
     this.parseInput = this.parseInput.bind(this);
     this.submitParamInversionCoords = this.submitParamInversionCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -85,6 +86,14 @@ class ParamInversionContainer extends Component {
       this.props.onSubmitParamInversionCoords(coords);
       this.setState({ submitted: true });
     }
+  };
+
+  /**
+   * goes back to previous page
+   * @memberof ParamInversionContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/transformations/');
   };
 
   /**
@@ -149,6 +158,7 @@ class ParamInversionContainer extends Component {
         <ParamInversion
           handleSubmit={this.submitParamInversionCoords}
           handleChange={this.parseInput}
+          handleReturn={this.backToPrevPage}
           values={this.state.points}
           textAreaDisplay={textAreaDisplay}
         />
@@ -162,6 +172,7 @@ ParamInversionContainer.propTypes = {
   onRemoveError: PropTypes.func.isRequired,
   paramInversion: PropTypes.arrayOf(PropTypes.string).isRequired,
   error: PropTypes.string,
+  history: PropTypes.any,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(ParamInversionContainer);
