@@ -1,6 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
+import Footer from '../Footer/Footer';
 import './QuatCardan.css';
 
 const IoArrow = require('react-icons/lib/io/arrow-swap');
@@ -9,6 +10,7 @@ const arrowIcon = React.createElement(IoArrow, null);
 
 const QuatCardan = ({
   handleChange,
+  handleReturn,
   quat,
   cardan,
   handleQuatToCardanClick,
@@ -108,6 +110,14 @@ const QuatCardan = ({
         </button>
       </div>
     </div>
+    <Footer
+      handleReturnClick={handleReturn}
+      isSubmitBtnDisplayed={false}
+      isReturnBtnDisplayed
+      isInfoBtnDisplayed={false}
+      isCopyBtnDisplayed={false}
+      isDownloadBtnDisplayed={false}
+    />
   </div>
 );
 
@@ -115,6 +125,7 @@ QuatCardan.propTypes = {
   handleQuatToCardanClick: PropTypes.func,
   handleCardanToQuatClick: PropTypes.func,
   handleChange: PropTypes.func,
+  handleReturn: PropTypes.func,
   quat: PropTypes.arrayOf(PropTypes.string),
   cardan: PropTypes.arrayOf(PropTypes.string),
 };

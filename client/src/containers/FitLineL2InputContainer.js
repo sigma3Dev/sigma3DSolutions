@@ -6,7 +6,7 @@ import { pushFitLineL2Coords } from '../actions/pushCoords/pushCoordsActions';
 import { submitFitLineL2Coords } from '../actions/submitFitLineL2Coords/submitFitLineL2CoordsActions';
 import { clearLineL2Input } from '../actions/clearInput/clearInputActions';
 import { getLineL2Points } from '../selectors/FitLineL2Selectors/getFitLineL2InputDataSelector/getFitLineL2InputDataSelector';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 import FitLineL2Input from '../components/FitLineL2Input/FitLineL2Input';
 
@@ -46,6 +46,7 @@ class FitLineL2InputContainer extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -67,6 +68,14 @@ class FitLineL2InputContainer extends Component {
     if (this.state.isInfoOpen) {
       this.setState({ ...this.state, isInfoOpen: false });
     }
+  };
+
+  /**
+   * goes back to previous page
+   * @memberof FitLineL2InputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/geometry/');
   };
 
   /**
@@ -144,13 +153,14 @@ class FitLineL2InputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Navbar currentMenu='geometry' />
         <FitLineL2Input
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
           handleInfoClick={this.displayInfoPanel}
           handleDeleteClick={this.clearLineL2Input}
           handleFileDrop={this.parseCoords}
+          handleReturn={this.backToPrevPage}
           handleSubmitClick={this.submitFitLineL2Coords}
           lineL2Points={this.props.lineL2Points}
           clickAnywhere={this.clickAnywhere}

@@ -11,14 +11,19 @@ const infoSign = React.createElement(MdInfoOutline, null);
  * @param {function} handleClick - handles SubmitBtn click
  * @returns {*} SubmitBtn - .jsx Element
  */
-const InfoBtn = ({ handleClick }) => (
-  <button className='info-btn' onClick={handleClick}>
+const InfoBtn = ({ handleClick, isDisplayed }) => (
+  <button
+    className='info-btn'
+    onClick={handleClick}
+    style={isDisplayed ? { display: 'inline-block' } : { display: 'none' }}
+  >
     <div className='info-sign'>{infoSign}</div>
   </button>
 );
 
 InfoBtn.propTypes = {
-  handleClick: PropTypes.func.isRequired,
+  handleClick: PropTypes.func,
+  isDisplayed: PropTypes.bool.isRequired,
 };
 
 export default InfoBtn;

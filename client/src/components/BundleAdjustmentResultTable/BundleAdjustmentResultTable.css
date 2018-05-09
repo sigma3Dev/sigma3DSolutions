@@ -1,0 +1,97 @@
+.bundle-adjustment-result-table {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-collapse: collapse;
+  margin-top: 2vh;
+}
+
+.bundle-adjustment-result-table table {
+  width: 100%;
+  font-size: 1vw;
+}
+
+.bundle-adjustment-result-table .bundle-tabs {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1vw;
+  width: 40%;
+}
+
+.bundle-adjustment-result-table .bundle-tabs .bundle-trafo-params {
+  width: 100%;
+  text-align: center;
+}
+
+.bundle-adjustment-result-table .bundle-tabs .bundle-trafo-param-list {
+  padding: 0;
+  width: 40vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.bundle-adjustment-result-table
+  .bundle-tabs
+  .bundle-trafo-param-list
+  .bundle-tab {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.bundle-adjustment-result-table
+  .bundle-tabs
+  .bundle-trafo-param-list
+  .param-list-left {
+  margin-right: 3vw;
+}
+
+.bundle-adjustment-result-table
+  .bundle-tabs
+  .bundle-trafo-param-list
+  .param-list-middle {
+  margin-right: 3vw;
+}
+
+.bundle-adjustment-result-table .bundle-tabs ul * {
+  text-align: left;
+}
+
+.bundle-adjustment-result-table .bundle-tabs h2 {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.bundle-adjustment-result-table * {
+  font-size: 1.05em;
+  text-align: center;
+  list-style: none;
+}
+
+.bundle-adjustment-result-table table {
+  width: 50%;
+}
+
+.bundle-adjustment-result-table th {
+  padding: 10px 0;
+}
+
+.bundle-adjustment-result-table .caption {
+  color: #afa993;
+  background-color: rgb(52, 54, 57);
+}
+
+.bundle-adjustment-result-table .nav.nav-tabs {
+  margin-bottom: 2vh;
+}
+
+.bundle-adjustment-result-table .nav.nav-tabs li a {
+  color: black;
+}

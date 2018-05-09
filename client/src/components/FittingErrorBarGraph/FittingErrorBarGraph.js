@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Bar } from 'react-chartjs-2';
 import { injectIntl, defineMessages } from 'react-intl';
-import './FittingErrorBarGraph.css';
 
 const messages = defineMessages({
   graphCaption: {
@@ -18,7 +17,7 @@ const FittingErrorBarGraph = ({ errors, intl }) => {
       {
         label: 'Fitting Errors',
         data: errors,
-        backgroundColor: '#0375ba',
+        backgroundColor: '#07f',
       },
     ],
   };

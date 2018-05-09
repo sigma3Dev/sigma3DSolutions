@@ -75,7 +75,12 @@ const FitCircleChebyshevDrawing = ({ radius, chebyDist, points }) => {
 
   return (
     <div className='cheby-result-presentation-drawing'>
-      <svg width={550} height={500}>
+      <svg
+        version='1.1'
+        viewBox='0 0 500 500'
+        preserveAspectRatio='xMinYMin meet'
+        className='cheby-drawing-svg-content'
+      >
         <line x1='10' y1='10' x2='50' y2='10' fill='black' />
         <line x1='50' y1='10' x2='40' y2='5' fill='black' />
         <line x1='50' y1='10' x2='40' y2='15' fill='black' />

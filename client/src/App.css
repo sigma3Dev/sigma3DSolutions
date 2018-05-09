@@ -1,9 +1,25 @@
 .App * {
-  font-family: 'Roboto';
+  /* font-family: 'Roboto'; */
   text-align: center;
   text-decoration: none;
 }
 
 body {
   background-color: #f0f0f0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+table th:hover {
+  cursor: default;
+}
+
+table td:hover {
+  cursor: default;
 }

@@ -1,8 +1,6 @@
 .apply-trafo {
-  width: 82vw;
   height: 100%;
-  margin-top: 2vh;
-  margin-left: 16vw;
+  margin: 15vh 2vw 0 2vw;
   font-family: Roboto;
 }
 
@@ -13,11 +11,14 @@
 .apply-trafo h1 {
   color: rgb(128, 128, 128);
   margin: 20px 0;
+  font-family: Raleway;
+  font-size: 2.5vw;
 }
 
 .apply-trafo .input-area {
+  margin-top: 5vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-around;
   width: 100%;
 }
@@ -28,16 +29,23 @@
 }
 
 .apply-trafo .trafo-params-input {
-  width: 60%;
+  width: 20%;
+}
+
+.apply-trafo .trafo-params-input form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   font-size: 1.3em;
+  height: 60vh;
 }
 
 .apply-trafo .points-input {
-  width: 40%;
+  width: 30%;
 }
 
 .apply-trafo .points-table {
-  width: 100%;
+  width: 40%;
 }
 
 .apply-trafo input {
@@ -48,15 +56,4 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.apply-trafo form .input-section-one {
-  display: flex;
-  flex-direction: column;
-}
-
-.apply-trafo form .input-section-two {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
 }

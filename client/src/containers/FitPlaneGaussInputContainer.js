@@ -6,7 +6,7 @@ import { pushFitPlaneGaussCoords } from '../actions/pushCoords/pushCoordsActions
 import { submitFitPlaneGaussCoords } from '../actions/submitFitPlaneGaussCoords/submitFitPlaneGaussCoordsActions';
 import { clearPlaneGaussInput } from '../actions/clearInput/clearInputActions';
 import { getPlaneGaussPoints } from '../selectors/FitPlaneGaussSelectors/getFitPlaneGaussInputDataSelector/getFitPlaneGaussInputDataSelector';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 import FitPlaneGaussInput from '../components/FitPlaneGaussInput/FitPlaneGaussInput';
 
@@ -45,6 +45,7 @@ class FitPlaneGaussInputContainer extends Component {
     this.submitFitPlaneGaussCoords = this.submitFitPlaneGaussCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -56,6 +57,14 @@ class FitPlaneGaussInputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * goes back to previous page
+   * @memberof FitPlaneGaussInputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/geometry/');
   };
 
   /**
@@ -143,13 +152,14 @@ class FitPlaneGaussInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Navbar currentMenu='geometry' />
         <FitPlaneGaussInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
           handleInfoClick={this.displayInfoPanel}
           handleDeleteClick={this.clearPlaneGaussInput}
           handleFileDrop={this.parseCoords}
+          handleReturn={this.backToPrevPage}
           handleSubmitClick={this.submitFitPlaneGaussCoords}
           planePoints={this.props.planePoints}
           clickAnywhere={this.clickAnywhere}

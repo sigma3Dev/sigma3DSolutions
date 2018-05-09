@@ -18,7 +18,7 @@ import { calculateThreeDTrafoDifference } from '../actions/submitThreeDTrafoCoor
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import ThreeDTrafoResult from '../components/ThreeDTrafoResult/ThreeDTrafoResult';
 
 const messages = defineMessages({
@@ -115,11 +115,11 @@ class ThreeDTrafoResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Navbar currentMenu='trafo' />
         <ThreeDTrafoResult
           trafoParams={this.props.trafoParams}
           trafoDifference={this.props.trafoDifference}
-          handleClick={this.goBack}
+          handleReturnClick={this.goBack}
           translationDecimalPlaces={2}
           rotationDecimalPlaces={4}
           handleDownloadClick={this.downloadFile}

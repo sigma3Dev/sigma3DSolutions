@@ -1,6 +1,6 @@
 .fit-circle-l2-input {
-  width: 82vw;
-  margin-left: 16vw;
+  height: 100%;
+  margin: 15vh 2vw 0 2vw;
   font-family: Roboto;
 }
 
@@ -9,6 +9,19 @@
 }
 
 .fit-circle-l2-input h1 {
+  font-size: 2vw;
   color: rgb(128, 128, 128);
   margin: 20px 0;
+  font-family: Raleway;
+}
+
+.fit-circle-l2-input .fit-circle-l2-dropzone-and-table {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.fit-circle-l2-input
+  .fit-circle-l2-dropzone-and-table
+  .fit-circle-l2-points-table {
+  width: 50vw;
 }

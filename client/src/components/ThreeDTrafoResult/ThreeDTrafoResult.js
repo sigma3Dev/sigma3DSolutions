@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import ThreeDTrafoResultTable from '../ThreeDTrafoResultTable/ThreeDTrafoResultTable';
+import Footer from '../Footer/Footer';
 import CoordinateDifferenceBarGraph from '../CoordinateDifferenceBarGraph/CoordinateDifferenceBarGraph';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
 import './ThreeDTrafoResult.css';
 
 /**
@@ -17,7 +17,7 @@ import './ThreeDTrafoResult.css';
 const ThreeDTrafoResult = ({
   trafoParams,
   trafoDifference,
-  handleClick,
+  handleReturnClick,
   handleDownloadClick,
   translationDecimalPlaces,
   rotationDecimalPlaces,
@@ -35,18 +35,20 @@ const ThreeDTrafoResult = ({
         trafoParams={trafoParams}
         translationDecimalPlaces={translationDecimalPlaces}
         rotationDecimalPlaces={rotationDecimalPlaces}
-        copyText={copyText}
       />
-      <button className='download-link' onClick={handleDownloadClick}>
-        <FormattedMessage
-          id='ThreeDTrafoResult.link.downloadFile'
-          defaultMessage='Download transformed start points as .txt file'
-        />
-      </button>
       <div className='bar-graph'>
         <CoordinateDifferenceBarGraph values={trafoDifference} />
       </div>
-      <BackToInputBtn handleClick={handleClick} />
+      <Footer
+        handleReturnClick={handleReturnClick}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed={false}
+        isSubmitBtnDisplayed={false}
+        isCopyBtnDisplayed
+        isDownloadBtnDisplayed
+        copyText={copyText}
+        handleDownloadClick={handleDownloadClick}
+      />
     </div>
   );
 };
@@ -54,7 +56,7 @@ const ThreeDTrafoResult = ({
 ThreeDTrafoResult.propTypes = {
   trafoParams: PropTypes.arrayOf(PropTypes.number).isRequired,
   trafoDifference: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.number)).isRequired,
-  handleClick: PropTypes.func.isRequired,
+  handleReturnClick: PropTypes.func.isRequired,
   handleDownloadClick: PropTypes.func.isRequired,
   translationDecimalPlaces: PropTypes.number.isRequired,
   rotationDecimalPlaces: PropTypes.number.isRequired,

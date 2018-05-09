@@ -7,21 +7,20 @@ const InputInfoPanel = ({ body, isDisplayed }) => {
   const show = isDisplayed
     ? {
       whiteSpace: 'pre-wrap',
-      fontSize: '1em',
+      fontSize: '1.2em',
     }
     : {
       display: 'none',
     };
   return (
     <Popover
-      id='popover-basic'
+      id='popover-bottom'
       style={show}
       title='Input Info'
-      placement='left'
+      placement='bottom'
       className='input-info-panel'
-      positionLeft='76%'
-      positionTop={14}
-      arrowOffsetTop='10px'
+      positionLeft='42vw'
+      positionTop='1vh'
     >
       {body}
     </Popover>

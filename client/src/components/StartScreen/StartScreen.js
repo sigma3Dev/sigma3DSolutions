@@ -1,5 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import { Link } from 'react-router-dom';
+import Footer from '../Footer/Footer';
 import './StartScreen.css';
 
 /**
@@ -28,75 +30,120 @@ const StartScreen = () => (
     </p>
     <div className='lists'>
       <div className='element'>
-        <p className='element-header'>
-          <FormattedMessage
-            id='StartScreen.elementheader.transformations'
-            defaultMessage='Transformations:'
-          />
-        </p>
+        <div className='element-header'>
+          <Link to='/transformations'>
+            <FormattedMessage
+              id='StartScreen.elementheader.transformations'
+              defaultMessage='Transformations:'
+            />
+          </Link>
+        </div>
         <ul>
           <li>
-            <FormattedMessage
-              id='StartScreen.element.3Dtransformations'
-              defaultMessage='3D-Transformation'
-            />
+            <Link to='/transformations/three-d-transformation/data-input'>
+              <FormattedMessage
+                id='StartScreen.element.3Dtransformations'
+                defaultMessage='3D-Transformation'
+              />
+            </Link>
           </li>
           <li>
-            <FormattedMessage
-              id='ParamInversion.caption.paramInversionHeader'
-              defaultMessage='Parameter Inversion'
-            />
+            <Link to='/transformations/bundle-adjustment/data-input'>
+              <FormattedMessage
+                id='StartScreen.element.bundleAdjustment'
+                defaultMessage='Bundle Adjustment'
+              />
+            </Link>
           </li>
           <li>
-            <FormattedMessage
-              id='ApplyTrafoInput.caption.applyTrafoHeader'
-              defaultMessage='Apply Transformation'
-            />
+            <Link to='/transformations/parameter-inversion'>
+              <FormattedMessage
+                id='ParamInversion.caption.paramInversionHeader'
+                defaultMessage='Parameter Inversion'
+              />
+            </Link>
           </li>
-          <li>Quaternion ⇄ Cardan</li>
+          <li>
+            <Link to='/transformations/transform/data-input'>
+              <FormattedMessage
+                id='ApplyTrafoInput.caption.applyTrafoHeader'
+                defaultMessage='Apply Transformation'
+              />
+            </Link>
+          </li>
+          <li>
+            <Link to='/transformations/quat-cardan'>Quaternion ⇄ Cardan</Link>
+          </li>
         </ul>
       </div>
       <div className='element'>
-        <p className='element-header'>
-          <FormattedMessage id='StartScreen.elementheader.geometry' defaultMessage='Geometry:' />
-        </p>
+        <div className='element-header'>
+          <Link to='/geometry'>
+            <FormattedMessage id='StartScreen.elementheader.geometry' defaultMessage='Geometry:' />
+          </Link>
+        </div>
         <ul>
           <li>
-            <FormattedMessage
-              id='StartScreen.element.chebyshev'
-              defaultMessage='Chebyshev-circle'
-            />
+            <Link to='/geometry/fit-circle-chebyshev/data-input'>
+              <FormattedMessage
+                id='StartScreen.element.chebyshev'
+                defaultMessage='Chebyshev-circle'
+              />
+            </Link>
           </li>
           <li>
-            <FormattedMessage id='StartScreen.element.circleL2' defaultMessage='Circle L2' />
+            <Link to='/geometry/fit-circle-l-two/data-input'>
+              <FormattedMessage id='StartScreen.element.circleL2' defaultMessage='Circle L2' />
+            </Link>
           </li>
           <li>
-            <FormattedMessage id='StartScreen.element.fitPlaneGauss' defaultMessage='Gauss Plane' />
+            <Link to='/geometry/fit-plane-gauss/data-input'>
+              <FormattedMessage
+                id='StartScreen.element.fitPlaneGauss'
+                defaultMessage='Gauss Plane'
+              />
+            </Link>
           </li>
           <li>
-            <FormattedMessage
-              id='StartScreen.element.fitPlaneRansac'
-              defaultMessage='RANSAC Plane'
-            />
+            <Link to='/geometry/fit-plane-ransac/data-input'>
+              <FormattedMessage
+                id='StartScreen.element.fitPlaneRansac'
+                defaultMessage='RANSAC Plane'
+              />
+            </Link>
           </li>
           <li>
-            <FormattedMessage id='StartScreen.element.fitCylinder' defaultMessage='Cylinder' />
+            <Link to='/geometry/fit-cylinder/data-input'>
+              <FormattedMessage id='StartScreen.element.fitCylinder' defaultMessage='Cylinder' />
+            </Link>
           </li>
           <li>
-            <FormattedMessage id='StartScreen.element.fitPoint' defaultMessage='Point' />
+            <Link to='/geometry/fit-point/data-input'>
+              <FormattedMessage id='StartScreen.element.fitPoint' defaultMessage='Point' />
+            </Link>
           </li>
           <li>
-            <FormattedMessage id='StartScreen.element.fitLineL2' defaultMessage='Line' />
+            <Link to='/geometry/fit-line-l-two/data-input'>
+              <FormattedMessage id='StartScreen.element.fitLineL2' defaultMessage='Line' />
+            </Link>
           </li>
           <li>
-            <FormattedMessage id='StartScreen.element.fitLineRansac' defaultMessage='Line RANSAC' />
+            <Link to='/geometry/fit-line-ransac/data-input'>
+              <FormattedMessage
+                id='StartScreen.element.fitLineRansac'
+                defaultMessage='Line RANSAC'
+              />
+            </Link>
           </li>
-          <li>
-            <FormattedMessage id='StartScreen.element.fitSphere' defaultMessage='Sphere' />
-          </li>
+          {/* <li>
+            <Link to='/geometry/fit-sphere/data-input'>
+              <FormattedMessage id='StartScreen.element.fitSphere' defaultMessage='Sphere' />
+            </Link>
+          </li> */}
         </ul>
       </div>
     </div>
+    <Footer isSubmitBtnDisplayed={false} isReturnBtnDisplayed={false} isInfoBtnDisplayed={false} />
   </div>
 );
 

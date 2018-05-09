@@ -18,7 +18,7 @@
     "express": "^4.16.2",
     "express-react-views": "^0.10.5",
     "node": "^9.5.0",
-    "s3d-fitting-commands": "^0.4.10",
+    "s3d-fitting-commands": "^0.4.13",
     "ws": "^4.1.0"
   },
   "devDependencies": {

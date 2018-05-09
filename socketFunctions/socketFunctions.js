@@ -394,6 +394,30 @@ const fitSphere = (coords, callback) => {
     });
 };
 
+const bundleAdjustment = (coords, callback) => {
+  globalIdCounter += 1;
+  const points = coords.bundlePoints;
+  const { baseStation } = coords;
+  const requestObj = comm.bundleAdjustment(points, baseStation, globalIdCounter);
+
+  const socket = getWebSocket()
+    .then((socket) => {
+      socket.onerror = (error) => {
+        callback(error, false);
+      };
+
+      socket.onmessage = (e) => {
+        const response = e.data;
+        callback(response, true);
+      };
+
+      socket.send(requestObj);
+    })
+    .catch((err) => {
+      callback(err, false);
+    });
+};
+
 module.exports = {
   threeDTrafoSendToSocket,
   paramInversionSendToSocket,
@@ -409,4 +433,5 @@ module.exports = {
   quatToCardan,
   cardanToQuat,
   fitCircleL2,
+  bundleAdjustment,
 };

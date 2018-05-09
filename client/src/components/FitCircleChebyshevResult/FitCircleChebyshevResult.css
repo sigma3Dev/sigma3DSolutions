@@ -1,24 +1,16 @@
 .chebyshev-circle-fit-result {
-  width: 100%;
-  height: 90vh;
+  margin: 12vh 2vw 5vh 2vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin-top: 12px;
   font-family: Roboto;
 }
 
 .cheby-cf-result-presentation {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  margin-left: 16vw;
-}
-
-.cheby-cf-back-button {
-  position: fixed;
-  bottom: 4vh;
-  left: 16vw;
+  justify-content: space-evenly;
 }
 
 .cheby-cf-radius-text {
@@ -31,41 +23,28 @@
 }
 
 .chebyshev-circle-fit-result h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-  border-bottom: 3px solid #0270a5;
+  color: rgb(128, 128, 128);
+  margin: 20px 0;
+  font-family: Raleway;
+  font-size: 2.5vw;
 }
 
 .chebyshev-circle-fit-result .result-table {
-  padding-top: 18vh;
-  width: 90%;
+  width: 30vw;
+  height: 65vh;
   border-collapse: collapse;
 }
 
 .chebyshev-circle-fit-result .result-table * {
-  font-size: 1.1em;
+  font-size: 1.2vw;
   text-align: center;
 }
 
 .chebyshev-circle-fit-result .result-table th {
-  padding: 12px 15px;
-  padding-right: 10px;
-  padding-left: 0px;
+  padding: 1vh 1vw 1vh 0;
 }
 
 .chebyshev-circle-fit-result .result-table .caption {
-  background-color: #d5d5d5;
-}
-
-.chebyshev-circle-fit-result .copy {
-  font-size: 0.8em;
-  padding: 10px;
-}
-
-.copy-to-clippi {
-  padding-left: 0px;
-}
-
-.chebyshev-circle-fit-result .copy:hover {
-  cursor: pointer;
+  color: #afa993;
+  background-color: rgb(52, 54, 57);
 }

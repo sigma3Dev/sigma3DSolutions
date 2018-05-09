@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import FitPointResultTable from '../FitPointResultTable/FitPointResultTable';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import Footer from '../Footer/Footer';
 import FittingErrorBarGraph from '../FittingErrorBarGraph/FittingErrorBarGraph';
 import './FitPointResult.css';
 
@@ -14,11 +14,19 @@ const FitPointResult = ({ params, handleReturnClick }) => {
       <h1>
         <FormattedMessage id='FitPointResult.label.caption' defaultMessage='Fit Point Result' />
       </h1>
-      <FitPointResultTable params={params} copyText={copyText} />
+      <FitPointResultTable params={params} />
       <div className='bar-graph'>
         <FittingErrorBarGraph errors={params[4]} />
       </div>
-      <BackToInputBtn handleClick={handleReturnClick} />
+      <Footer
+        handleReturnClick={handleReturnClick}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed={false}
+        isSubmitBtnDisplayed={false}
+        isCopyBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        copyText={copyText}
+      />
     </div>
   );
 };

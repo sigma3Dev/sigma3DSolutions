@@ -3,17 +3,12 @@
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  height: 250px;
-  width: 250px;
-  padding: 10px;
-  margin: 20px 10px 0px;
-  border-radius: 10px;
+  height: 18vw;
+  width: 18vw;
+  padding: 1vh 1vw;
+  margin: 0.5vw;
+  border-radius: 10%;
   background: white;
-}
-
-.app-selection-btn:hover {
-  transform: scale(1.1);
-  background: #cad9f7;
 }
 
 .btn-link {
@@ -21,6 +16,7 @@
 }
 
 .app-selection-btn:hover {
+  animation: app-selection-btn-transition linear 100ms forwards;
   cursor: pointer;
 }
 
@@ -29,9 +25,9 @@
 }
 
 .app-selection-btn-caption {
-  padding: 8px;
-  font-family: Roboto;
-  font-size: 18px;
+  padding: 0.8vh 0.8vw;
+  font-family: Raleway;
+  font-size: 1.3vw;
   font-style: normal;
   font-stretch: condensed;
   line-height: 0.83;
@@ -49,7 +45,7 @@
 .app-selection-btn-description {
   padding: 8px;
   font-family: Roboto;
-  font-size: 14px;
+  font-size: 1vw;
   font-style: italic;
   font-stretch: condensed;
   line-height: 0.83;
@@ -69,6 +65,11 @@
 .app-selection-btn .s3d-icon[data-category='3Dtransformation'] {
   background-image: url('../../images/3DTransformation.svg');
   width: 80px;
+}
+
+.app-selection-btn .s3d-icon[data-category='bundleAdjustment'] {
+  background-image: url('../../images/Bundeladjustment.svg');
+  background-size: 100% 100%;
 }
 
 .app-selection-btn .s3d-icon[data-category='fitCircleChebyshev'] {
@@ -129,4 +130,15 @@
 .app-selection-btn .s3d-icon[data-category='transform'] {
   background-image: url('../../images/Transform.svg');
   background-size: 100% 100%;
+}
+
+@keyframes app-selection-btn-transition {
+  0% {
+    transform: scale(1);
+    background: white;
+  }
+  100% {
+    transform: scale(1.1);
+    background: #cad9f7;
+  }
 }

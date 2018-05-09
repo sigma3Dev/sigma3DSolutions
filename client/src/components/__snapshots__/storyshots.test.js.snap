@@ -417,6 +417,11 @@ exports[`Storyshots Start.BackToInputBtn Button to navigate back to previous dat
     <button
       className="back-to-input-btn"
       onClick={[Function]}
+      style={
+        Object {
+          "visibility": "hidden",
+        }
+      }
     >
       <div
         className="arrow-left"
@@ -736,6 +741,696 @@ exports[`Storyshots Start.BackToInputBtn Button to navigate back to previous dat
                   <td
                     className="css-d52hbj"
                   >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    isDisplayed
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Start.BundleAdjustmentInputPointsTable Table to display bundle points input 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="bundle-adjustment-input-points-table"
+    >
+      <table>
+        <thead>
+          <tr
+            className="grey"
+          >
+            <th>
+              <button
+                className="trash-icon grey"
+                onClick={[Function]}
+                title="Clear input"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  preserveAspectRatio="xMidYMid meet"
+                  style={
+                    Object {
+                      "color": undefined,
+                      "verticalAlign": "middle",
+                    }
+                  }
+                  viewBox="0 0 40 40"
+                  width="1em"
+                >
+                  <g>
+                    <path
+                      d="m15.9 16.4v12.9q0 0.3-0.2 0.5t-0.5 0.2h-1.4q-0.3 0-0.5-0.2t-0.2-0.5v-12.9q0-0.3 0.2-0.5t0.5-0.2h1.4q0.3 0 0.5 0.2t0.2 0.5z m5.7 0v12.9q0 0.3-0.2 0.5t-0.5 0.2h-1.4q-0.3 0-0.5-0.2t-0.2-0.5v-12.9q0-0.3 0.2-0.5t0.5-0.2h1.4q0.3 0 0.5 0.2t0.2 0.5z m5.8 0v12.9q0 0.3-0.2 0.5t-0.6 0.2h-1.4q-0.3 0-0.5-0.2t-0.2-0.5v-12.9q0-0.3 0.2-0.5t0.5-0.2h1.4q0.4 0 0.6 0.2t0.2 0.5z m2.8 16.2v-21.2h-20v21.2q0 0.5 0.2 0.9t0.3 0.6 0.2 0.2h18.6q0.1 0 0.2-0.2t0.4-0.6 0.1-0.9z m-15-24h10l-1.1-2.6q-0.1-0.2-0.3-0.3h-7.1q-0.2 0.1-0.4 0.3z m20.7 0.7v1.4q0 0.3-0.2 0.5t-0.5 0.2h-2.1v21.2q0 1.8-1.1 3.2t-2.5 1.3h-18.6q-1.4 0-2.5-1.3t-1-3.1v-21.3h-2.2q-0.3 0-0.5-0.2t-0.2-0.5v-1.4q0-0.3 0.2-0.5t0.5-0.2h6.9l1.6-3.8q0.3-0.8 1.2-1.4t1.7-0.5h7.2q0.9 0 1.8 0.5t1.2 1.4l1.5 3.8h6.9q0.3 0 0.5 0.2t0.2 0.5z"
+                    />
+                  </g>
+                </svg>
+              </button>
+            </th>
+            <th>
+              Station ID
+            </th>
+            <th>
+              <span>
+                Geometrie ID
+              </span>
+            </th>
+            <th>
+              x
+            </th>
+            <th>
+              y
+            </th>
+            <th>
+              z
+            </th>
+            <th>
+              StDev
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th
+              className="grey"
+            >
+              1
+            </th>
+            <th>
+              1000
+            </th>
+            <th>
+              1
+            </th>
+            <th>
+              1.00
+            </th>
+            <th>
+              2.00
+            </th>
+            <th>
+              3.00
+            </th>
+            <th>
+              0.1
+            </th>
+          </tr>
+          <tr>
+            <th
+              className="grey"
+            >
+              2
+            </th>
+            <th>
+              2000
+            </th>
+            <th>
+              2
+            </th>
+            <th>
+              4.00
+            </th>
+            <th>
+              5.00
+            </th>
+            <th>
+              6.00
+            </th>
+            <th>
+              0.1
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#28c",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    style={
+      Object {
+        "background": "white",
+        "bottom": 0,
+        "display": "none",
+        "left": 0,
+        "overflow": "auto",
+        "padding": "0 40px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+        "zIndex": 99999,
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      ×
+    </button>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginBottom": "20px",
+            "marginTop": "20px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            Start.BundleAdjustmentInputPointsTable
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            Table to display bundle points input
+          </h2>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+                "fontSize": "15px",
+              }
+            }
+          >
+            common info
+          </div>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                BundleAdjustmentInputPointsTable
+              </span>
+              <span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    bundlePoints
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#666",
+                            }
+                          }
+                        >
+                          [
+                          <span>
+                            {
+                            <span
+                              style={
+                                Object {
+                                  "color": "#666",
+                                }
+                              }
+                            >
+                              {
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#666",
+                                  }
+                                }
+                              >
+                                stationId
+                              </span>
+                              : 
+                              <span>
+                                {
+                                <span
+                                  style={
+                                    Object {
+                                      "color": "#a11",
+                                    }
+                                  }
+                                >
+                                  1000
+                                </span>
+                                }
+                              </span>
+                              , 
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#666",
+                                  }
+                                }
+                              >
+                                geometryId
+                              </span>
+                              : 
+                              <span>
+                                {
+                                <span
+                                  style={
+                                    Object {
+                                      "color": "#a11",
+                                    }
+                                  }
+                                >
+                                  1
+                                </span>
+                                }
+                              </span>
+                              , 
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#666",
+                                  }
+                                }
+                              >
+                                x
+                              </span>
+                              : 
+                              <span>
+                                {
+                                <span
+                                  style={
+                                    Object {
+                                      "color": "#a11",
+                                    }
+                                  }
+                                >
+                                  1
+                                </span>
+                                }
+                              </span>
+                              , 
+                              …
+                              }
+                            </span>
+                            }
+                          </span>
+                          , 
+                          <span>
+                            {
+                            <span
+                              style={
+                                Object {
+                                  "color": "#666",
+                                }
+                              }
+                            >
+                              {
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#666",
+                                  }
+                                }
+                              >
+                                stationId
+                              </span>
+                              : 
+                              <span>
+                                {
+                                <span
+                                  style={
+                                    Object {
+                                      "color": "#a11",
+                                    }
+                                  }
+                                >
+                                  2000
+                                </span>
+                                }
+                              </span>
+                              , 
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#666",
+                                  }
+                                }
+                              >
+                                geometryId
+                              </span>
+                              : 
+                              <span>
+                                {
+                                <span
+                                  style={
+                                    Object {
+                                      "color": "#a11",
+                                    }
+                                  }
+                                >
+                                  2
+                                </span>
+                                }
+                              </span>
+                              , 
+                              <span
+                                style={
+                                  Object {
+                                    "color": "#666",
+                                  }
+                                }
+                              >
+                                x
+                              </span>
+                              : 
+                              <span>
+                                {
+                                <span
+                                  style={
+                                    Object {
+                                      "color": "#a11",
+                                    }
+                                  }
+                                >
+                                  4
+                                </span>
+                                }
+                              </span>
+                              , 
+                              …
+                              }
+                            </span>
+                            }
+                          </span>
+                          ]
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    handleDeleteDataInput
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          handleDeleteDataInput()
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                   
+                </span>
+              </span>
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              BundleAdjustmentInputPointsTable
+              " Component
+            </h2>
+            <table
+              className="css-1ytzlk7"
+            >
+              <thead>
+                <tr>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    property
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    propType
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    required
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    default
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    bundlePoints
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    handleDeleteDataInput
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
                     yes
                   </td>
                   <td
@@ -839,34 +1534,228 @@ exports[`Storyshots Start.ErrorScreen Screen to display if there is an error in 
           </div>
         </div>
       </div>
-      <button
-        className="back-to-input-btn"
-        onClick={[Function]}
+      <div
+        className="Navbar"
       >
-        <div
-          className="arrow-left"
+        <a
+          href="/"
+          onClick={[Function]}
+          title="Homepage"
         >
-          <svg
-            fill="currentColor"
-            height="1em"
-            preserveAspectRatio="xMidYMid meet"
+          <div
+            className="logo"
+          />
+        </a>
+        <div
+          className="sidebar-link-container"
+        >
+          <a
+            className="link"
+            href="/transformations"
+            onClick={[Function]}
+          >
+            <span>
+              Transformationen
+            </span>
+          </a>
+        </div>
+        <div
+          className="sidebar-link-container"
+        >
+          <a
+            className="link"
+            href="/geometry"
+            onClick={[Function]}
+          >
+            <span>
+              Geometrien
+            </span>
+          </a>
+        </div>
+        <div
+          className="sidebar-link-container-right"
+        >
+          <a
+            className="link"
+            href="https://www.sigma3d.de/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span>
+              Kontakt
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="footer"
+      >
+        <button
+          className="back-to-input-btn"
+          onClick={[Function]}
+          style={
+            Object {
+              "visibility": "visible",
+            }
+          }
+        >
+          <div
+            className="arrow-left"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </button>
+        <div
+          className="footer-center"
+        >
+          <button
+            className="download"
+            onClick={undefined}
             style={
               Object {
-                "color": undefined,
-                "verticalAlign": "middle",
+                "display": "none",
               }
             }
-            viewBox="0 0 40 40"
-            width="1em"
+            title="Download"
           >
-            <g>
-              <path
-                d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
-              />
-            </g>
-          </svg>
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30.1 30q0-0.6-0.5-1t-1-0.4-1 0.4-0.4 1 0.4 1 1 0.4 1-0.4 0.5-1z m5.7 0q0-0.6-0.4-1t-1-0.4-1 0.4-0.5 1 0.5 1 1 0.4 1-0.4 0.4-1z m2.8-5v7.1q0 0.9-0.6 1.6t-1.5 0.6h-32.9q-0.8 0-1.5-0.6t-0.6-1.6v-7.1q0-0.9 0.6-1.5t1.5-0.6h10.4l3 3q1.3 1.2 3.1 1.2t3-1.2l3-3h10.4q0.9 0 1.5 0.6t0.6 1.5z m-7.2-12.7q0.4 0.9-0.3 1.6l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.7-0.7-0.3-1.6 0.3-0.9 1.3-0.9h5.7v-10q0-0.6 0.4-1t1-0.4h5.7q0.6 0 1 0.4t0.5 1v10h5.7q0.9 0 1.3 0.9z"
+                />
+              </g>
+            </svg>
+          </button>
+          <button
+            className="info-btn"
+            onClick={undefined}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="info-sign"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "color": undefined,
+                    "verticalAlign": "middle",
+                  }
+                }
+                viewBox="0 0 40 40"
+                width="1em"
+              >
+                <g>
+                  <path
+                    d="m18.4 15v-3.4h3.2v3.4h-3.2z m1.6 18.4c7.3 0 13.4-6.1 13.4-13.4s-6.1-13.4-13.4-13.4-13.4 6.1-13.4 13.4 6.1 13.4 13.4 13.4z m0-30c9.2 0 16.6 7.4 16.6 16.6s-7.4 16.6-16.6 16.6-16.6-7.4-16.6-16.6 7.4-16.6 16.6-16.6z m-1.6 25v-10h3.2v10h-3.2z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <button
+            className="copy"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            title="Copy to clipboard"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
+                />
+              </g>
+            </svg>
+          </button>
         </div>
-      </button>
+        <div
+          className="submit-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "hidden",
+            }
+          }
+        >
+          <div
+            className="arrow-right"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.4 21.4q0 1.2-0.9 2.1l-14.5 14.5q-0.9 0.8-2 0.8-1.2 0-2-0.8l-1.7-1.7q-0.9-0.8-0.9-2t0.9-2l6.5-6.6h-15.7q-1.1 0-1.9-0.8t-0.7-2v-2.9q0-1.2 0.7-2t1.9-0.9h15.7l-6.5-6.5q-0.9-0.8-0.9-2t0.9-2l1.7-1.7q0.8-0.9 2-0.9 1.2 0 2 0.9l14.5 14.5q0.9 0.8 0.9 2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <button
@@ -1249,8 +2138,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing Drawing to display the resul
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -1798,8 +2689,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with 100 ci
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -3109,8 +4002,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with 1500 c
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -12868,8 +13763,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with circle
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -13783,8 +14680,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with circle
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -14692,8 +15591,10 @@ exports[`Storyshots Start.FitCircleChebyshevDrawing chebyshev circle with high r
       className="cheby-result-presentation-drawing"
     >
       <svg
-        height={500}
-        width={550}
+        className="cheby-drawing-svg-content"
+        preserveAspectRatio="xMinYMin meet"
+        version="1.1"
+        viewBox="0 0 500 500"
       >
         <line
           fill="black"
@@ -15252,8 +16153,10 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
           className="cheby-result-presentation-drawing"
         >
           <svg
-            height={500}
-            width={550}
+            className="cheby-drawing-svg-content"
+            preserveAspectRatio="xMinYMin meet"
+            version="1.1"
+            viewBox="0 0 500 500"
           >
             <line
               fill="black"
@@ -15396,150 +16299,187 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
             </text>
           </svg>
         </div>
-        <div>
-          <table
-            className="result-table"
-          >
-            <thead>
-              <tr
-                className="caption"
+        <table
+          className="result-table"
+        >
+          <thead>
+            <tr
+              className="caption"
+            >
+              <th>
+                Parameter
+              </th>
+              <th>
+                <span>
+                  Wert
+                </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>
+                Mx: 
+              </th>
+              <th>
+                0.00
+              </th>
+            </tr>
+            <tr>
+              <th>
+                My: 
+              </th>
+              <th>
+                0.00
+              </th>
+            </tr>
+            <tr>
+              <th>
+                Mz: 
+              </th>
+              <th>
+                0.00
+              </th>
+            </tr>
+            <tr>
+              <th>
+                i: 
+              </th>
+              <th>
+                0.000000
+              </th>
+            </tr>
+            <tr>
+              <th>
+                j: 
+              </th>
+              <th>
+                0.000000
+              </th>
+            </tr>
+            <tr>
+              <th>
+                k: 
+              </th>
+              <th>
+                1.000000
+              </th>
+            </tr>
+            <tr>
+              <th
+                className="cheby-cf-radius-text"
               >
-                <th>
-                  <span>
-                    Parameter
-                  </span>
-                </th>
-                <th>
-                  <span>
-                    Wert
-                  </span>
-                </th>
-                <th
-                  className="copy-to-clippi"
-                >
-                  <button
-                    className="copy"
-                    onClick={[Function]}
-                    title="Copy to clipboard"
-                  >
-                    <svg
-                      fill="currentColor"
-                      height="1em"
-                      preserveAspectRatio="xMidYMid meet"
-                      style={
-                        Object {
-                          "color": undefined,
-                          "verticalAlign": "middle",
-                        }
-                      }
-                      viewBox="0 0 40 40"
-                      width="1em"
-                    >
-                      <g>
-                        <path
-                          d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
-                        />
-                      </g>
-                    </svg>
-                  </button>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  Mx: 
-                </th>
-                <th>
-                  0.00
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  My: 
-                </th>
-                <th>
-                  0.00
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  Mz: 
-                </th>
-                <th>
-                  0.00
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  i: 
-                </th>
-                <th>
-                  0.000000
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  j: 
-                </th>
-                <th>
-                  0.000000
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  k: 
-                </th>
-                <th>
-                  1.000000
-                </th>
-              </tr>
-              <tr>
-                <th
-                  className="cheby-cf-radius-text"
-                >
-                  <span>
-                    Radius:
-                  </span>
-                </th>
-                <th>
-                  1.00
-                </th>
-              </tr>
-              <tr>
-                <th
-                  className="cheby-cf-chebyDist-text"
-                >
-                  <span>
-                    Tschebyscheff Distanz:
-                  </span>
-                </th>
-                <th>
-                  0.00
-                </th>
-              </tr>
-              <tr>
-                <th>
-                  <span>
-                    Fehlerwert:
-                  </span>
-                </th>
-                <th>
-                  0.00
-                </th>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                Radius
+              </th>
+              <th>
+                1.00
+              </th>
+            </tr>
+            <tr>
+              <th
+                className="cheby-cf-chebyDist-text"
+              >
+                <span>
+                  Tschebyscheff Distanz:
+                </span>
+              </th>
+              <th>
+                0.00
+              </th>
+            </tr>
+            <tr>
+              <th>
+                <span>
+                  Fehlerwert:
+                </span>
+              </th>
+              <th>
+                0.00
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div
+        className="footer"
+      >
+        <button
+          className="back-to-input-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "visible",
+            }
+          }
+        >
+          <div
+            className="arrow-left"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </button>
         <div
-          className="cheby-cf-back-button"
+          className="footer-center"
         >
           <button
-            className="back-to-input-btn"
-            onClick={[Function]}
+            className="download"
+            onClick={undefined}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            title="Download"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30.1 30q0-0.6-0.5-1t-1-0.4-1 0.4-0.4 1 0.4 1 1 0.4 1-0.4 0.5-1z m5.7 0q0-0.6-0.4-1t-1-0.4-1 0.4-0.5 1 0.5 1 1 0.4 1-0.4 0.4-1z m2.8-5v7.1q0 0.9-0.6 1.6t-1.5 0.6h-32.9q-0.8 0-1.5-0.6t-0.6-1.6v-7.1q0-0.9 0.6-1.5t1.5-0.6h10.4l3 3q1.3 1.2 3.1 1.2t3-1.2l3-3h10.4q0.9 0 1.5 0.6t0.6 1.5z m-7.2-12.7q0.4 0.9-0.3 1.6l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.7-0.7-0.3-1.6 0.3-0.9 1.3-0.9h5.7v-10q0-0.6 0.4-1t1-0.4h5.7q0.6 0 1 0.4t0.5 1v10h5.7q0.9 0 1.3 0.9z"
+                />
+              </g>
+            </svg>
+          </button>
+          <button
+            className="info-btn"
+            onClick={undefined}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
           >
             <div
-              className="arrow-left"
+              className="info-sign"
             >
               <svg
                 fill="currentColor"
@@ -15556,12 +16496,77 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
               >
                 <g>
                   <path
-                    d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
+                    d="m18.4 15v-3.4h3.2v3.4h-3.2z m1.6 18.4c7.3 0 13.4-6.1 13.4-13.4s-6.1-13.4-13.4-13.4-13.4 6.1-13.4 13.4 6.1 13.4 13.4 13.4z m0-30c9.2 0 16.6 7.4 16.6 16.6s-7.4 16.6-16.6 16.6-16.6-7.4-16.6-16.6 7.4-16.6 16.6-16.6z m-1.6 25v-10h3.2v10h-3.2z"
                   />
                 </g>
               </svg>
             </div>
           </button>
+          <button
+            className="copy"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+            title="Copy to clipboard"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div
+          className="submit-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "hidden",
+            }
+          }
+        >
+          <div
+            className="arrow-right"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.4 21.4q0 1.2-0.9 2.1l-14.5 14.5q-0.9 0.8-2 0.8-1.2 0-2-0.8l-1.7-1.7q-0.9-0.8-0.9-2t0.9-2l6.5-6.6h-15.7q-1.1 0-1.9-0.8t-0.7-2v-2.9q0-1.2 0.7-2t1.9-0.9h15.7l-6.5-6.5q-0.9-0.8-0.9-2t0.9-2l1.7-1.7q0.8-0.9 2-0.9 1.2 0 2 0.9l14.5 14.5q0.9 0.8 0.9 2z"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -15949,7 +16954,7 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
                   <td
                     className="css-1ygfcef"
                   >
-                    handleClick
+                    handleReturnClick
                   </td>
                   <td
                     className="css-1ygfcef"
@@ -16046,7 +17051,6 @@ exports[`Storyshots Start.FitCircleL2ResultTable - DontTest Table to display cal
           <th>
             StDev
           </th>
-          <th />
         </tr>
       </thead>
       <tbody>
@@ -16074,33 +17078,6 @@ exports[`Storyshots Start.FitCircleL2ResultTable - DontTest Table to display cal
           </th>
           <th>
             0.0
-          </th>
-          <th>
-            <button
-              className="copy"
-              onClick={[Function]}
-              title="Copy to clipboard"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
-              >
-                <g>
-                  <path
-                    d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
-                  />
-                </g>
-              </svg>
-            </button>
           </th>
         </tr>
       </tbody>
@@ -16356,33 +17333,6 @@ exports[`Storyshots Start.FitCircleL2ResultTable - DontTest Table to display cal
                       </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
-                  <span
-                    style={Object {}}
-                  >
-                    copyText
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#22a",
-                            "wordBreak": "break-word",
-                          }
-                        }
-                      >
-                        "
-                        
-                        "
-                      </span>
-                    </span>
-                  </span>
                    
                 </span>
               </span>
@@ -16481,31 +17431,6 @@ exports[`Storyshots Start.FitCircleL2ResultTable - DontTest Table to display cal
                     className="css-d52hbj"
                   />
                 </tr>
-                <tr>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    copyText
-                  </td>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    <span />
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    yes
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  />
-                </tr>
               </tbody>
             </table>
           </div>
@@ -16557,7 +17482,6 @@ exports[`Storyshots Start.FitCylinderResultTable - DontTest Table to display cal
           <th>
             StDev
           </th>
-          <th />
         </tr>
       </thead>
       <tbody>
@@ -16585,33 +17509,6 @@ exports[`Storyshots Start.FitCylinderResultTable - DontTest Table to display cal
           </th>
           <th>
             0.0
-          </th>
-          <th>
-            <button
-              className="copy"
-              onClick={[Function]}
-              title="Copy to clipboard"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
-              >
-                <g>
-                  <path
-                    d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
-                  />
-                </g>
-              </svg>
-            </button>
           </th>
         </tr>
       </tbody>
@@ -16867,33 +17764,6 @@ exports[`Storyshots Start.FitCylinderResultTable - DontTest Table to display cal
                       </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
-                  <span
-                    style={Object {}}
-                  >
-                    copyText
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#22a",
-                            "wordBreak": "break-word",
-                          }
-                        }
-                      >
-                        "
-                        
-                        "
-                      </span>
-                    </span>
-                  </span>
                    
                 </span>
               </span>
@@ -16992,31 +17862,6 @@ exports[`Storyshots Start.FitCylinderResultTable - DontTest Table to display cal
                     className="css-d52hbj"
                   />
                 </tr>
-                <tr>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    copyText
-                  </td>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    <span />
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    yes
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  />
-                </tr>
               </tbody>
             </table>
           </div>
@@ -17040,84 +17885,62 @@ exports[`Storyshots Start.FitLineL2ResultTable - DontTest Table to display calcu
     <table
       className="fit-line-l2-result-table"
     >
-      <thead>
-        <tr
-          className="caption"
-        >
-          <th>
-            X
-          </th>
-          <th>
-            Y
-          </th>
-          <th>
-            Z
-          </th>
-          <th>
-            I
-          </th>
-          <th>
-            J
-          </th>
-          <th>
-            K
-          </th>
-          <th>
-            StDev
-          </th>
-          <th />
-        </tr>
-      </thead>
       <tbody>
         <tr>
           <th>
+            X
+          </th>
+          <td>
             11.8
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
+            Y
+          </th>
+          <td>
             8.6
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
+            Z
+          </th>
+          <td>
             11.6
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
+            I
+          </th>
+          <td>
             0.00000
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
+            J
+          </th>
+          <td>
             0.00000
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
+            K
+          </th>
+          <td>
             1.00000
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
+            StDev
+          </th>
+          <td>
             1.0
-          </th>
-          <th>
-            <button
-              className="copy"
-              onClick={[Function]}
-              title="Copy to clipboard"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
-              >
-                <g>
-                  <path
-                    d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
-                  />
-                </g>
-              </svg>
-            </button>
-          </th>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -17372,33 +18195,6 @@ exports[`Storyshots Start.FitLineL2ResultTable - DontTest Table to display calcu
                       </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
-                  <span
-                    style={Object {}}
-                  >
-                    copyText
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#22a",
-                            "wordBreak": "break-word",
-                          }
-                        }
-                      >
-                        "
-                        
-                        "
-                      </span>
-                    </span>
-                  </span>
                    
                 </span>
               </span>
@@ -17497,31 +18293,6 @@ exports[`Storyshots Start.FitLineL2ResultTable - DontTest Table to display calcu
                     className="css-d52hbj"
                   />
                 </tr>
-                <tr>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    copyText
-                  </td>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    <span />
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    yes
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  />
-                </tr>
               </tbody>
             </table>
           </div>
@@ -17545,90 +18316,70 @@ exports[`Storyshots Start.FitLineRansacResultTable - DontTest Table to display c
     <table
       className="fit-line-ransac-result-table"
     >
-      <thead>
-        <tr
-          className="caption"
-        >
-          <th>
-            X
-          </th>
-          <th>
-            Y
-          </th>
-          <th>
-            Z
-          </th>
-          <th>
-            I
-          </th>
-          <th>
-            J
-          </th>
-          <th>
-            K
-          </th>
-          <th>
-            StDev
-          </th>
-          <th>
-            numPoints
-          </th>
-          <th />
-        </tr>
-      </thead>
       <tbody>
         <tr>
           <th>
+            X
+          </th>
+          <td>
             11.8
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
+            Y
+          </th>
+          <td>
             8.6
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
+            Z
+          </th>
+          <td>
             11.6
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
-            0.00000
+            I
           </th>
-          <th>
-            0.00000
-          </th>
-          <th>
-            1.00000
-          </th>
-          <th>
+          <td>
             0.0
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
-            3
+            J
           </th>
+          <td>
+            0.0
+          </td>
+        </tr>
+        <tr>
           <th>
-            <button
-              className="copy"
-              onClick={[Function]}
-              title="Copy to clipboard"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
-              >
-                <g>
-                  <path
-                    d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
-                  />
-                </g>
-              </svg>
-            </button>
+            K
           </th>
+          <td>
+            1.0
+          </td>
+        </tr>
+        <tr>
+          <th>
+            StDev
+          </th>
+          <td>
+            0.0
+          </td>
+        </tr>
+        <tr>
+          <th>
+            numPoints
+          </th>
+          <td>
+            3.0
+          </td>
         </tr>
       </tbody>
     </table>
@@ -17883,33 +18634,6 @@ exports[`Storyshots Start.FitLineRansacResultTable - DontTest Table to display c
                       </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
-                  <span
-                    style={Object {}}
-                  >
-                    copyText
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#22a",
-                            "wordBreak": "break-word",
-                          }
-                        }
-                      >
-                        "
-                        
-                        "
-                      </span>
-                    </span>
-                  </span>
                    
                 </span>
               </span>
@@ -18008,31 +18732,6 @@ exports[`Storyshots Start.FitLineRansacResultTable - DontTest Table to display c
                     className="css-d52hbj"
                   />
                 </tr>
-                <tr>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    copyText
-                  </td>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    <span />
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    yes
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  />
-                </tr>
               </tbody>
             </table>
           </div>
@@ -18081,7 +18780,6 @@ exports[`Storyshots Start.FitPlaneGaussResultTable - DontTest Table to display c
           <th>
             StDev
           </th>
-          <th />
         </tr>
       </thead>
       <tbody>
@@ -18106,33 +18804,6 @@ exports[`Storyshots Start.FitPlaneGaussResultTable - DontTest Table to display c
           </th>
           <th>
             0.00
-          </th>
-          <th>
-            <button
-              className="copy"
-              onClick={[Function]}
-              title="Copy to clipboard"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
-              >
-                <g>
-                  <path
-                    d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
-                  />
-                </g>
-              </svg>
-            </button>
           </th>
         </tr>
       </tbody>
@@ -18388,33 +19059,6 @@ exports[`Storyshots Start.FitPlaneGaussResultTable - DontTest Table to display c
                       </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
-                  <span
-                    style={Object {}}
-                  >
-                    copyText
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#22a",
-                            "wordBreak": "break-word",
-                          }
-                        }
-                      >
-                        "
-                        
-                        "
-                      </span>
-                    </span>
-                  </span>
                    
                 </span>
               </span>
@@ -18513,31 +19157,6 @@ exports[`Storyshots Start.FitPlaneGaussResultTable - DontTest Table to display c
                     className="css-d52hbj"
                   />
                 </tr>
-                <tr>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    copyText
-                  </td>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    <span />
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    yes
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  />
-                </tr>
               </tbody>
             </table>
           </div>
@@ -18561,90 +19180,70 @@ exports[`Storyshots Start.FitPlaneRansacResultTable - DontTest Table to display 
     <table
       className="fit-plane-ransac-result-table"
     >
-      <thead>
-        <tr
-          className="caption"
-        >
-          <th>
-            X
-          </th>
-          <th>
-            Y
-          </th>
-          <th>
-            Z
-          </th>
-          <th>
-            I
-          </th>
-          <th>
-            J
-          </th>
-          <th>
-            K
-          </th>
-          <th>
-            StDev
-          </th>
-          <th>
-            numPoints
-          </th>
-          <th />
-        </tr>
-      </thead>
       <tbody>
         <tr>
           <th>
+            X
+          </th>
+          <td>
             11.8
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
+            Y
+          </th>
+          <td>
             8.6
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
+            Z
+          </th>
+          <td>
             11.6
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
-            0.00000
+            I
           </th>
-          <th>
-            0.00000
-          </th>
-          <th>
-            1.00000
-          </th>
-          <th>
+          <td>
             0.0
-          </th>
+          </td>
+        </tr>
+        <tr>
           <th>
-            3
+            J
           </th>
+          <td>
+            0.0
+          </td>
+        </tr>
+        <tr>
           <th>
-            <button
-              className="copy"
-              onClick={[Function]}
-              title="Copy to clipboard"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
-              >
-                <g>
-                  <path
-                    d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
-                  />
-                </g>
-              </svg>
-            </button>
+            K
           </th>
+          <td>
+            1.0
+          </td>
+        </tr>
+        <tr>
+          <th>
+            StDev
+          </th>
+          <td>
+            0.0
+          </td>
+        </tr>
+        <tr>
+          <th>
+            numPoints
+          </th>
+          <td>
+            3.0
+          </td>
         </tr>
       </tbody>
     </table>
@@ -18899,33 +19498,6 @@ exports[`Storyshots Start.FitPlaneRansacResultTable - DontTest Table to display 
                       </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
-                  <span
-                    style={Object {}}
-                  >
-                    copyText
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#22a",
-                            "wordBreak": "break-word",
-                          }
-                        }
-                      >
-                        "
-                        
-                        "
-                      </span>
-                    </span>
-                  </span>
                    
                 </span>
               </span>
@@ -19024,31 +19596,6 @@ exports[`Storyshots Start.FitPlaneRansacResultTable - DontTest Table to display 
                     className="css-d52hbj"
                   />
                 </tr>
-                <tr>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    copyText
-                  </td>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    <span />
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    yes
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  />
-                </tr>
               </tbody>
             </table>
           </div>
@@ -19088,7 +19635,6 @@ exports[`Storyshots Start.FitPointResultTable - DontTest Table to display calcul
           <th>
             Radius
           </th>
-          <th />
         </tr>
       </thead>
       <tbody>
@@ -19104,33 +19650,6 @@ exports[`Storyshots Start.FitPointResultTable - DontTest Table to display calcul
           </th>
           <th>
             1.0
-          </th>
-          <th>
-            <button
-              className="copy"
-              onClick={[Function]}
-              title="Copy to clipboard"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
-              >
-                <g>
-                  <path
-                    d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
-                  />
-                </g>
-              </svg>
-            </button>
           </th>
         </tr>
       </tbody>
@@ -19386,33 +19905,6 @@ exports[`Storyshots Start.FitPointResultTable - DontTest Table to display calcul
                       </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                   
-                  <span
-                    style={Object {}}
-                  >
-                    copyText
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#22a",
-                            "wordBreak": "break-word",
-                          }
-                        }
-                      >
-                        "
-                        
-                        "
-                      </span>
-                    </span>
-                  </span>
                    
                 </span>
               </span>
@@ -19491,31 +19983,6 @@ exports[`Storyshots Start.FitPointResultTable - DontTest Table to display calcul
                     className="css-1ygfcef"
                   >
                     params
-                  </td>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    <span />
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    yes
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  />
-                </tr>
-                <tr>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    copyText
                   </td>
                   <td
                     className="css-1ygfcef"
@@ -20052,6 +20519,11 @@ exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
     <button
       className="info-btn"
       onClick={[Function]}
+      style={
+        Object {
+          "display": "none",
+        }
+      }
     >
       <div
         className="info-sign"
@@ -20362,6 +20834,31 @@ exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
                     className="css-1ygfcef"
                   >
                     handleClick
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    isDisplayed
                   </td>
                   <td
                     className="css-1ygfcef"
@@ -20888,15 +21385,15 @@ exports[`Storyshots Start.InputInfoPanel Show informations about the input 1`] =
     }
   >
     <div
-      className="input-info-panel popover left"
-      id="popover-basic"
+      className="input-info-panel popover bottom"
+      id="popover-bottom"
       role="tooltip"
       style={
         Object {
           "display": "block",
-          "fontSize": "1em",
-          "left": "76%",
-          "top": 14,
+          "fontSize": "1.2em",
+          "left": "42vw",
+          "top": "1vh",
           "whiteSpace": "pre-wrap",
         }
       }
@@ -20906,7 +21403,7 @@ exports[`Storyshots Start.InputInfoPanel Show informations about the input 1`] =
         style={
           Object {
             "left": undefined,
-            "top": "10px",
+            "top": undefined,
           }
         }
       />
@@ -20922,8 +21419,6 @@ exports[`Storyshots Start.InputInfoPanel Show informations about the input 1`] =
           Das Input sollte eine einfache .txt Datei sein.
           
           Die Datei sollte aus einem oder mehr Punkten bestehen, jeder davon in einer Zeile. Jeder dieser Punkte sollte aus drei Koordinaten bestehen: x, y und z. Diese sollten einfache Zahlen und durch ein Leerzeichen getrennt sein.
-          
-          Stellen Sie sicher, dass sich am Ende der Zeile kein Leerzeichen befindet, und dass am Ende der Datei keine Leerzeilen sind.
           
           Beispiel:
           41.3 11.2 17.1
@@ -21293,6 +21788,59 @@ exports[`Storyshots Start.LoadingScreen Screen to display while calculation is l
     <div
       className="loading-screen"
     >
+      <div
+        className="Navbar"
+      >
+        <a
+          href="/"
+          onClick={[Function]}
+          title="Homepage"
+        >
+          <div
+            className="logo"
+          />
+        </a>
+        <div
+          className="sidebar-link-container"
+        >
+          <a
+            className="link"
+            href="/transformations"
+            onClick={[Function]}
+          >
+            <span>
+              Transformationen
+            </span>
+          </a>
+        </div>
+        <div
+          className="sidebar-link-container"
+        >
+          <a
+            className="link"
+            href="/geometry"
+            onClick={[Function]}
+          >
+            <span>
+              Geometrien
+            </span>
+          </a>
+        </div>
+        <div
+          className="sidebar-link-container-right"
+        >
+          <a
+            className="link"
+            href="https://www.sigma3d.de/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span>
+              Kontakt
+            </span>
+          </a>
+        </div>
+      </div>
       <h1>
         <span>
           Rechne...
@@ -21550,6 +22098,354 @@ exports[`Storyshots Start.LoadingScreen Screen to display while calculation is l
 </div>
 `;
 
+exports[`Storyshots Start.Navbar Navbar for selecting App category 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "position": "relative",
+        "zIndex": 0,
+      }
+    }
+  >
+    <div
+      className="Navbar"
+    >
+      <a
+        href="/"
+        onClick={[Function]}
+        title="Homepage"
+      >
+        <div
+          className="logo"
+        />
+      </a>
+      <div
+        className="sidebar-link-container"
+      >
+        <a
+          className="link"
+          href="/transformations"
+          onClick={[Function]}
+        >
+          <span>
+            Transformationen
+          </span>
+        </a>
+      </div>
+      <div
+        className="sidebar-link-container"
+      >
+        <a
+          className="link"
+          href="/geometry"
+          onClick={[Function]}
+        >
+          <span>
+            Geometrien
+          </span>
+        </a>
+      </div>
+      <div
+        className="sidebar-link-container-right"
+      >
+        <a
+          className="link"
+          href="https://www.sigma3d.de/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <span>
+            Kontakt
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <button
+    onClick={[Function]}
+    style={
+      Object {
+        "background": "#28c",
+        "border": "none",
+        "borderRadius": "0 0 0 5px",
+        "color": "#fff",
+        "cursor": "pointer",
+        "display": "block",
+        "fontFamily": "sans-serif",
+        "fontSize": "12px",
+        "padding": "5px 15px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    type="button"
+  >
+    Show Info
+  </button>
+  <div
+    style={
+      Object {
+        "background": "white",
+        "bottom": 0,
+        "display": "none",
+        "left": 0,
+        "overflow": "auto",
+        "padding": "0 40px",
+        "position": "fixed",
+        "right": 0,
+        "top": 0,
+        "zIndex": 99999,
+      }
+    }
+  >
+    <button
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#28c",
+          "border": "none",
+          "borderRadius": "0 0 0 5px",
+          "color": "#fff",
+          "cursor": "pointer",
+          "display": "block",
+          "fontFamily": "sans-serif",
+          "fontSize": "12px",
+          "padding": "5px 15px",
+          "position": "fixed",
+          "right": 0,
+          "top": 0,
+        }
+      }
+      type="button"
+    >
+      ×
+    </button>
+    <div
+      style={undefined}
+    >
+      <div
+        style={
+          Object {
+            "WebkitFontSmoothing": "antialiased",
+            "backgroundColor": "#fff",
+            "border": "1px solid #eee",
+            "borderRadius": "2px",
+            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
+            "color": "#444",
+            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+            "fontSize": "15px",
+            "fontWeight": 300,
+            "lineHeight": 1.45,
+            "marginBottom": "20px",
+            "marginTop": "20px",
+            "padding": "20px 40px 40px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "borderBottom": "1px solid #eee",
+              "marginBottom": 10,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <h1
+            style={
+              Object {
+                "fontSize": "35px",
+                "margin": 0,
+                "padding": 0,
+              }
+            }
+          >
+            Start.Navbar
+          </h1>
+          <h2
+            style={
+              Object {
+                "fontSize": "22px",
+                "fontWeight": 400,
+                "margin": "0 0 10px 0",
+                "padding": 0,
+              }
+            }
+          >
+            Navbar for selecting App category
+          </h2>
+        </div>
+        <div
+          style={
+            Object {
+              "marginBottom": 0,
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "WebkitFontSmoothing": "antialiased",
+                "color": "#444",
+                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
+                "fontSize": "15px",
+              }
+            }
+          >
+            common info
+          </div>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Story Source
+          </h1>
+          <pre
+            style={
+              Object {
+                "backgroundColor": "#fafafa",
+                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
+                "fontSize": ".88em",
+                "lineHeight": 1.5,
+                "overflowX": "scroll",
+                "padding": ".5rem",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "paddingLeft": 18,
+                  "paddingRight": 3,
+                }
+              }
+            >
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                &lt;
+                Navbar
+              </span>
+              <span />
+              <span
+                style={
+                  Object {
+                    "color": "#777",
+                  }
+                }
+              >
+                /&gt;
+              </span>
+            </div>
+          </pre>
+        </div>
+        <div>
+          <h1
+            style={
+              Object {
+                "borderBottom": "1px solid #EEE",
+                "fontSize": "25px",
+                "margin": "20px 0 0 0",
+                "padding": "0 0 5px 0",
+              }
+            }
+          >
+            Prop Types
+          </h1>
+          <div>
+            <h2
+              style={
+                Object {
+                  "margin": "20px 0 0 0",
+                }
+              }
+            >
+              "
+              Navbar
+              " Component
+            </h2>
+            <table
+              className="css-1ytzlk7"
+            >
+              <thead>
+                <tr>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    property
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    propType
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    required
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    default
+                  </th>
+                  <th
+                    className="css-d52hbj"
+                  >
+                    description
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    currentMenu
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Start.ParamInversion Shows input and results for Parameter Inversions 1`] = `
 <div>
   <div
@@ -21674,13 +22570,175 @@ exports[`Storyshots Start.ParamInversion Shows input and results for Parameter I
           value={undefined}
         />
       </div>
-      <button
-        autoFocus={true}
-        className="param-submit-btn"
-        onClick={undefined}
+      <div
+        className="footer"
       >
-        Submit
-      </button>
+        <button
+          className="back-to-input-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "visible",
+            }
+          }
+        >
+          <div
+            className="arrow-left"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </button>
+        <div
+          className="footer-center"
+        >
+          <button
+            className="download"
+            onClick={undefined}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            title="Download"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30.1 30q0-0.6-0.5-1t-1-0.4-1 0.4-0.4 1 0.4 1 1 0.4 1-0.4 0.5-1z m5.7 0q0-0.6-0.4-1t-1-0.4-1 0.4-0.5 1 0.5 1 1 0.4 1-0.4 0.4-1z m2.8-5v7.1q0 0.9-0.6 1.6t-1.5 0.6h-32.9q-0.8 0-1.5-0.6t-0.6-1.6v-7.1q0-0.9 0.6-1.5t1.5-0.6h10.4l3 3q1.3 1.2 3.1 1.2t3-1.2l3-3h10.4q0.9 0 1.5 0.6t0.6 1.5z m-7.2-12.7q0.4 0.9-0.3 1.6l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.7-0.7-0.3-1.6 0.3-0.9 1.3-0.9h5.7v-10q0-0.6 0.4-1t1-0.4h5.7q0.6 0 1 0.4t0.5 1v10h5.7q0.9 0 1.3 0.9z"
+                />
+              </g>
+            </svg>
+          </button>
+          <button
+            className="info-btn"
+            onClick={undefined}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="info-sign"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "color": undefined,
+                    "verticalAlign": "middle",
+                  }
+                }
+                viewBox="0 0 40 40"
+                width="1em"
+              >
+                <g>
+                  <path
+                    d="m18.4 15v-3.4h3.2v3.4h-3.2z m1.6 18.4c7.3 0 13.4-6.1 13.4-13.4s-6.1-13.4-13.4-13.4-13.4 6.1-13.4 13.4 6.1 13.4 13.4 13.4z m0-30c9.2 0 16.6 7.4 16.6 16.6s-7.4 16.6-16.6 16.6-16.6-7.4-16.6-16.6 7.4-16.6 16.6-16.6z m-1.6 25v-10h3.2v10h-3.2z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <button
+            className="copy"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            title="Copy to clipboard"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div
+          className="submit-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "visible",
+            }
+          }
+        >
+          <div
+            className="arrow-right"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.4 21.4q0 1.2-0.9 2.1l-14.5 14.5q-0.9 0.8-2 0.8-1.2 0-2-0.8l-1.7-1.7q-0.9-0.8-0.9-2t0.9-2l6.5-6.6h-15.7q-1.1 0-1.9-0.8t-0.7-2v-2.9q0-1.2 0.7-2t1.9-0.9h15.7l-6.5-6.5q-0.9-0.8-0.9-2t0.9-2l1.7-1.7q0.8-0.9 2-0.9 1.2 0 2 0.9l14.5 14.5q0.9 0.8 0.9 2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <button
@@ -22041,6 +23099,31 @@ exports[`Storyshots Start.ParamInversion Shows input and results for Parameter I
                     className="css-1ygfcef"
                   >
                     handleSubmit
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    handleReturn
                   </td>
                   <td
                     className="css-1ygfcef"
@@ -23386,6 +24469,175 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
           </button>
         </div>
       </div>
+      <div
+        className="footer"
+      >
+        <button
+          className="back-to-input-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "visible",
+            }
+          }
+        >
+          <div
+            className="arrow-left"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </button>
+        <div
+          className="footer-center"
+        >
+          <button
+            className="download"
+            onClick={undefined}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            title="Download"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30.1 30q0-0.6-0.5-1t-1-0.4-1 0.4-0.4 1 0.4 1 1 0.4 1-0.4 0.5-1z m5.7 0q0-0.6-0.4-1t-1-0.4-1 0.4-0.5 1 0.5 1 1 0.4 1-0.4 0.4-1z m2.8-5v7.1q0 0.9-0.6 1.6t-1.5 0.6h-32.9q-0.8 0-1.5-0.6t-0.6-1.6v-7.1q0-0.9 0.6-1.5t1.5-0.6h10.4l3 3q1.3 1.2 3.1 1.2t3-1.2l3-3h10.4q0.9 0 1.5 0.6t0.6 1.5z m-7.2-12.7q0.4 0.9-0.3 1.6l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.7-0.7-0.3-1.6 0.3-0.9 1.3-0.9h5.7v-10q0-0.6 0.4-1t1-0.4h5.7q0.6 0 1 0.4t0.5 1v10h5.7q0.9 0 1.3 0.9z"
+                />
+              </g>
+            </svg>
+          </button>
+          <button
+            className="info-btn"
+            onClick={undefined}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="info-sign"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "color": undefined,
+                    "verticalAlign": "middle",
+                  }
+                }
+                viewBox="0 0 40 40"
+                width="1em"
+              >
+                <g>
+                  <path
+                    d="m18.4 15v-3.4h3.2v3.4h-3.2z m1.6 18.4c7.3 0 13.4-6.1 13.4-13.4s-6.1-13.4-13.4-13.4-13.4 6.1-13.4 13.4 6.1 13.4 13.4 13.4z m0-30c9.2 0 16.6 7.4 16.6 16.6s-7.4 16.6-16.6 16.6-16.6-7.4-16.6-16.6 7.4-16.6 16.6-16.6z m-1.6 25v-10h3.2v10h-3.2z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <button
+            className="copy"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            title="Copy to clipboard"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div
+          className="submit-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "hidden",
+            }
+          }
+        >
+          <div
+            className="arrow-right"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.4 21.4q0 1.2-0.9 2.1l-14.5 14.5q-0.9 0.8-2 0.8-1.2 0-2-0.8l-1.7-1.7q-0.9-0.8-0.9-2t0.9-2l6.5-6.6h-15.7q-1.1 0-1.9-0.8t-0.7-2v-2.9q0-1.2 0.7-2t1.9-0.9h15.7l-6.5-6.5q-0.9-0.8-0.9-2t0.9-2l1.7-1.7q0.8-0.9 2-0.9 1.2 0 2 0.9l14.5 14.5q0.9 0.8 0.9 2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <button
@@ -23854,6 +25106,31 @@ exports[`Storyshots Start.QuatCardan Shows input and results for QuatCardan 1`] 
                   <td
                     className="css-1ygfcef"
                   >
+                    handleReturn
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
                     quat
                   </td>
                   <td
@@ -23979,6 +25256,175 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
           </div>
         </div>
       </a>
+      <div
+        className="footer"
+      >
+        <button
+          className="back-to-input-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "visible",
+            }
+          }
+        >
+          <div
+            className="arrow-left"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </button>
+        <div
+          className="footer-center"
+        >
+          <button
+            className="download"
+            onClick={undefined}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            title="Download"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30.1 30q0-0.6-0.5-1t-1-0.4-1 0.4-0.4 1 0.4 1 1 0.4 1-0.4 0.5-1z m5.7 0q0-0.6-0.4-1t-1-0.4-1 0.4-0.5 1 0.5 1 1 0.4 1-0.4 0.4-1z m2.8-5v7.1q0 0.9-0.6 1.6t-1.5 0.6h-32.9q-0.8 0-1.5-0.6t-0.6-1.6v-7.1q0-0.9 0.6-1.5t1.5-0.6h10.4l3 3q1.3 1.2 3.1 1.2t3-1.2l3-3h10.4q0.9 0 1.5 0.6t0.6 1.5z m-7.2-12.7q0.4 0.9-0.3 1.6l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.7-0.7-0.3-1.6 0.3-0.9 1.3-0.9h5.7v-10q0-0.6 0.4-1t1-0.4h5.7q0.6 0 1 0.4t0.5 1v10h5.7q0.9 0 1.3 0.9z"
+                />
+              </g>
+            </svg>
+          </button>
+          <button
+            className="info-btn"
+            onClick={undefined}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="info-sign"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "color": undefined,
+                    "verticalAlign": "middle",
+                  }
+                }
+                viewBox="0 0 40 40"
+                width="1em"
+              >
+                <g>
+                  <path
+                    d="m18.4 15v-3.4h3.2v3.4h-3.2z m1.6 18.4c7.3 0 13.4-6.1 13.4-13.4s-6.1-13.4-13.4-13.4-13.4 6.1-13.4 13.4 6.1 13.4 13.4 13.4z m0-30c9.2 0 16.6 7.4 16.6 16.6s-7.4 16.6-16.6 16.6-16.6-7.4-16.6-16.6 7.4-16.6 16.6-16.6z m-1.6 25v-10h3.2v10h-3.2z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <button
+            className="copy"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            title="Copy to clipboard"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div
+          className="submit-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "hidden",
+            }
+          }
+        >
+          <div
+            className="arrow-right"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.4 21.4q0 1.2-0.9 2.1l-14.5 14.5q-0.9 0.8-2 0.8-1.2 0-2-0.8l-1.7-1.7q-0.9-0.8-0.9-2t0.9-2l6.5-6.6h-15.7q-1.1 0-1.9-0.8t-0.7-2v-2.9q0-1.2 0.7-2t1.9-0.9h15.7l-6.5-6.5q-0.9-0.8-0.9-2t0.9-2l1.7-1.7q0.8-0.9 2-0.9 1.2 0 2 0.9l14.5 14.5q0.9 0.8 0.9 2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <button
@@ -24405,284 +25851,33 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
                     className="css-d52hbj"
                   />
                 </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    handleReturn
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    yes
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
               </tbody>
             </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots Start.Sidebar Sidebar for selecting App category 1`] = `
-<div>
-  <div
-    style={
-      Object {
-        "position": "relative",
-        "zIndex": 0,
-      }
-    }
-  >
-    <div
-      className="Sidebar"
-    >
-      <a
-        href="/"
-        onClick={[Function]}
-      >
-        <div
-          className="logo"
-        />
-      </a>
-      <div
-        className="sidebar-link-container"
-      >
-        <a
-          className="link-active"
-          href="/transformations"
-          onClick={[Function]}
-        >
-          <span>
-            Transformationen
-          </span>
-        </a>
-      </div>
-      <div
-        className="sidebar-link-container"
-      >
-        <a
-          className="link-active"
-          href="/geometry"
-          onClick={[Function]}
-        >
-          <span>
-            Geometrien
-          </span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <button
-    onClick={[Function]}
-    style={
-      Object {
-        "background": "#28c",
-        "border": "none",
-        "borderRadius": "0 0 0 5px",
-        "color": "#fff",
-        "cursor": "pointer",
-        "display": "block",
-        "fontFamily": "sans-serif",
-        "fontSize": "12px",
-        "padding": "5px 15px",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-      }
-    }
-    type="button"
-  >
-    Show Info
-  </button>
-  <div
-    style={
-      Object {
-        "background": "white",
-        "bottom": 0,
-        "display": "none",
-        "left": 0,
-        "overflow": "auto",
-        "padding": "0 40px",
-        "position": "fixed",
-        "right": 0,
-        "top": 0,
-        "zIndex": 99999,
-      }
-    }
-  >
-    <button
-      onClick={[Function]}
-      style={
-        Object {
-          "background": "#28c",
-          "border": "none",
-          "borderRadius": "0 0 0 5px",
-          "color": "#fff",
-          "cursor": "pointer",
-          "display": "block",
-          "fontFamily": "sans-serif",
-          "fontSize": "12px",
-          "padding": "5px 15px",
-          "position": "fixed",
-          "right": 0,
-          "top": 0,
-        }
-      }
-      type="button"
-    >
-      ×
-    </button>
-    <div
-      style={undefined}
-    >
-      <div
-        style={
-          Object {
-            "WebkitFontSmoothing": "antialiased",
-            "backgroundColor": "#fff",
-            "border": "1px solid #eee",
-            "borderRadius": "2px",
-            "boxShadow": "0px 2px 3px rgba(0, 0, 0, 0.05)",
-            "color": "#444",
-            "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-            "fontSize": "15px",
-            "fontWeight": 300,
-            "lineHeight": 1.45,
-            "marginBottom": "20px",
-            "marginTop": "20px",
-            "padding": "20px 40px 40px",
-          }
-        }
-      >
-        <div
-          style={
-            Object {
-              "borderBottom": "1px solid #eee",
-              "marginBottom": 10,
-              "paddingTop": 10,
-            }
-          }
-        >
-          <h1
-            style={
-              Object {
-                "fontSize": "35px",
-                "margin": 0,
-                "padding": 0,
-              }
-            }
-          >
-            Start.Sidebar
-          </h1>
-          <h2
-            style={
-              Object {
-                "fontSize": "22px",
-                "fontWeight": 400,
-                "margin": "0 0 10px 0",
-                "padding": 0,
-              }
-            }
-          >
-            Sidebar for selecting App category
-          </h2>
-        </div>
-        <div
-          style={
-            Object {
-              "marginBottom": 0,
-            }
-          }
-        >
-          <div
-            style={
-              Object {
-                "WebkitFontSmoothing": "antialiased",
-                "color": "#444",
-                "fontFamily": "-apple-system, \\".SFNSText-Regular\\", \\"San Francisco\\", BlinkMacSystemFont, \\"Segoe UI\\", \\"Roboto\\", \\"Oxygen\\", \\"Ubuntu\\", \\"Cantarell\\", \\"Fira Sans\\", \\"Droid Sans\\", \\"Helvetica Neue\\", \\"Lucida Grande\\", \\"Arial\\", sans-serif",
-                "fontSize": "15px",
-              }
-            }
-          >
-            common info
-          </div>
-        </div>
-        <div>
-          <h1
-            style={
-              Object {
-                "borderBottom": "1px solid #EEE",
-                "fontSize": "25px",
-                "margin": "20px 0 0 0",
-                "padding": "0 0 5px 0",
-              }
-            }
-          >
-            Story Source
-          </h1>
-          <pre
-            style={
-              Object {
-                "backgroundColor": "#fafafa",
-                "fontFamily": "Menlo, Monaco, \\"Courier New\\", monospace",
-                "fontSize": ".88em",
-                "lineHeight": 1.5,
-                "overflowX": "scroll",
-                "padding": ".5rem",
-              }
-            }
-          >
-            <div
-              style={
-                Object {
-                  "paddingLeft": 18,
-                  "paddingRight": 3,
-                }
-              }
-            >
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                &lt;
-                Sidebar
-              </span>
-              <span />
-              <span
-                style={
-                  Object {
-                    "color": "#777",
-                  }
-                }
-              >
-                /&gt;
-              </span>
-            </div>
-          </pre>
-        </div>
-        <div>
-          <h1
-            style={
-              Object {
-                "borderBottom": "1px solid #EEE",
-                "fontSize": "25px",
-                "margin": "20px 0 0 0",
-                "padding": "0 0 5px 0",
-              }
-            }
-          >
-            Prop Types
-          </h1>
-          <div>
-            <h2
-              style={
-                Object {
-                  "margin": "20px 0 0 0",
-                }
-              }
-            >
-              "
-              Sidebar
-              " Component
-            </h2>
-            <small>
-              No propTypes defined!
-            </small>
           </div>
         </div>
       </div>
@@ -24722,7 +25917,7 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
         className="generalText"
       >
         <span>
-          In der Sidebar sehen Sie verschiedene Themen. Beim Klicken darauf können Sie aus unterschiedlichen Apps wählen.
+          In der Navbar sehen Sie verschiedene Themen. Beim Klicken darauf können Sie aus unterschiedlichen Apps wählen.
         </span>
       </p>
       <div
@@ -24731,91 +25926,335 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
         <div
           className="element"
         >
-          <p
+          <div
             className="element-header"
           >
-            <span>
-              Transformationen:
-            </span>
-          </p>
+            <a
+              href="/transformations"
+              onClick={[Function]}
+            >
+              <span>
+                Transformationen:
+              </span>
+            </a>
+          </div>
           <ul>
             <li>
-              <span>
-                3D-Transformation
-              </span>
+              <a
+                href="/transformations/three-d-transformation/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  3D-Transformation
+                </span>
+              </a>
             </li>
             <li>
-              <span>
-                Parameterinversion
-              </span>
+              <a
+                href="/transformations/bundle-adjustment/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  Bündelausgleichung
+                </span>
+              </a>
             </li>
             <li>
-              <span>
-                Transformation anwenden
-              </span>
+              <a
+                href="/transformations/parameter-inversion"
+                onClick={[Function]}
+              >
+                <span>
+                  Parameterinversion
+                </span>
+              </a>
             </li>
             <li>
-              Quaternion ⇄ Cardan
+              <a
+                href="/transformations/transform/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  Transformation anwenden
+                </span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/transformations/quat-cardan"
+                onClick={[Function]}
+              >
+                Quaternion ⇄ Cardan
+              </a>
             </li>
           </ul>
         </div>
         <div
           className="element"
         >
-          <p
+          <div
             className="element-header"
           >
-            <span>
-              Geometrie:
-            </span>
-          </p>
+            <a
+              href="/geometry"
+              onClick={[Function]}
+            >
+              <span>
+                Geometrie:
+              </span>
+            </a>
+          </div>
           <ul>
             <li>
-              <span>
-                Tschebyscheff-Kreis
-              </span>
+              <a
+                href="/geometry/fit-circle-chebyshev/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  Tschebyscheff-Kreis
+                </span>
+              </a>
             </li>
             <li>
-              <span>
-                Kreis L2
-              </span>
+              <a
+                href="/geometry/fit-circle-l-two/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  Kreis L2
+                </span>
+              </a>
             </li>
             <li>
-              <span>
-                Gaußebene
-              </span>
+              <a
+                href="/geometry/fit-plane-gauss/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  Gaußebene
+                </span>
+              </a>
             </li>
             <li>
-              <span>
-                RANSAC-Ebene
-              </span>
+              <a
+                href="/geometry/fit-plane-ransac/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  RANSAC-Ebene
+                </span>
+              </a>
             </li>
             <li>
-              <span>
-                Zylinder
-              </span>
+              <a
+                href="/geometry/fit-cylinder/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  Zylinder
+                </span>
+              </a>
             </li>
             <li>
-              <span>
-                Punkt
-              </span>
+              <a
+                href="/geometry/fit-point/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  Punkt
+                </span>
+              </a>
             </li>
             <li>
-              <span>
-                Linie L2
-              </span>
+              <a
+                href="/geometry/fit-line-l-two/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  Linie L2
+                </span>
+              </a>
             </li>
             <li>
-              <span>
-                Linie RANSAC
-              </span>
-            </li>
-            <li>
-              <span>
-                Sphäre
-              </span>
+              <a
+                href="/geometry/fit-line-ransac/data-input"
+                onClick={[Function]}
+              >
+                <span>
+                  Linie RANSAC
+                </span>
+              </a>
             </li>
           </ul>
+        </div>
+      </div>
+      <div
+        className="footer"
+      >
+        <button
+          className="back-to-input-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "hidden",
+            }
+          }
+        >
+          <div
+            className="arrow-left"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.3 20v2.9q0 1.1-0.7 2t-1.9 0.8h-15.7l6.5 6.6q0.9 0.8 0.9 2t-0.9 2l-1.7 1.7q-0.8 0.8-2 0.8-1.1 0-2-0.8l-14.5-14.6q-0.9-0.8-0.9-2 0-1.1 0.9-2l14.5-14.5q0.8-0.9 2-0.9 1.2 0 2 0.9l1.7 1.6q0.9 0.9 0.9 2.1t-0.9 2l-6.5 6.5h15.7q1.1 0 1.9 0.9t0.7 2z"
+                />
+              </g>
+            </svg>
+          </div>
+        </button>
+        <div
+          className="footer-center"
+        >
+          <button
+            className="download"
+            onClick={undefined}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            title="Download"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30.1 30q0-0.6-0.5-1t-1-0.4-1 0.4-0.4 1 0.4 1 1 0.4 1-0.4 0.5-1z m5.7 0q0-0.6-0.4-1t-1-0.4-1 0.4-0.5 1 0.5 1 1 0.4 1-0.4 0.4-1z m2.8-5v7.1q0 0.9-0.6 1.6t-1.5 0.6h-32.9q-0.8 0-1.5-0.6t-0.6-1.6v-7.1q0-0.9 0.6-1.5t1.5-0.6h10.4l3 3q1.3 1.2 3.1 1.2t3-1.2l3-3h10.4q0.9 0 1.5 0.6t0.6 1.5z m-7.2-12.7q0.4 0.9-0.3 1.6l-10 10q-0.4 0.4-1 0.4t-1-0.4l-10-10q-0.7-0.7-0.3-1.6 0.3-0.9 1.3-0.9h5.7v-10q0-0.6 0.4-1t1-0.4h5.7q0.6 0 1 0.4t0.5 1v10h5.7q0.9 0 1.3 0.9z"
+                />
+              </g>
+            </svg>
+          </button>
+          <button
+            className="info-btn"
+            onClick={undefined}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+          >
+            <div
+              className="info-sign"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                preserveAspectRatio="xMidYMid meet"
+                style={
+                  Object {
+                    "color": undefined,
+                    "verticalAlign": "middle",
+                  }
+                }
+                viewBox="0 0 40 40"
+                width="1em"
+              >
+                <g>
+                  <path
+                    d="m18.4 15v-3.4h3.2v3.4h-3.2z m1.6 18.4c7.3 0 13.4-6.1 13.4-13.4s-6.1-13.4-13.4-13.4-13.4 6.1-13.4 13.4 6.1 13.4 13.4 13.4z m0-30c9.2 0 16.6 7.4 16.6 16.6s-7.4 16.6-16.6 16.6-16.6-7.4-16.6-16.6 7.4-16.6 16.6-16.6z m-1.6 25v-10h3.2v10h-3.2z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <button
+            className="copy"
+            onBlur={[Function]}
+            onClick={[Function]}
+            onFocus={[Function]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            title="Copy to clipboard"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
+                />
+              </g>
+            </svg>
+          </button>
+        </div>
+        <div
+          className="submit-btn"
+          onClick={undefined}
+          style={
+            Object {
+              "visibility": "hidden",
+            }
+          }
+        >
+          <div
+            className="arrow-right"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              preserveAspectRatio="xMidYMid meet"
+              style={
+                Object {
+                  "color": undefined,
+                  "verticalAlign": "middle",
+                }
+              }
+              viewBox="0 0 40 40"
+              width="1em"
+            >
+              <g>
+                <path
+                  d="m36.4 21.4q0 1.2-0.9 2.1l-14.5 14.5q-0.9 0.8-2 0.8-1.2 0-2-0.8l-1.7-1.7q-0.9-0.8-0.9-2t0.9-2l6.5-6.6h-15.7q-1.1 0-1.9-0.8t-0.7-2v-2.9q0-1.2 0.7-2t1.9-0.9h15.7l-6.5-6.5q-0.9-0.8-0.9-2t0.9-2l1.7-1.7q0.8-0.9 2-0.9 1.2 0 2 0.9l14.5 14.5q0.9 0.8 0.9 2z"
+                />
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
     </div>
@@ -25057,13 +26496,15 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
       }
     }
   >
-    <button
+    <div
       className="submit-btn"
       onClick={[Function]}
+      style={
+        Object {
+          "visibility": "hidden",
+        }
+      }
     >
-      <span>
-        Absenden 
-      </span>
       <div
         className="arrow-right"
       >
@@ -25087,7 +26528,7 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
           </g>
         </svg>
       </div>
-    </button>
+    </div>
   </div>
   <button
     onClick={[Function]}
@@ -25382,6 +26823,31 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
                   <td
                     className="css-d52hbj"
                   >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
+                    -
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  />
+                </tr>
+                <tr>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    isDisplayed
+                  </td>
+                  <td
+                    className="css-1ygfcef"
+                  >
+                    <span />
+                  </td>
+                  <td
+                    className="css-d52hbj"
+                  >
                     yes
                   </td>
                   <td
@@ -25414,7 +26880,7 @@ exports[`Storyshots Start.ThreeDTrafoResultTable Table to display calculated tra
     }
   >
     <table
-      className="result-table"
+      className="three-d-trafo-result-table"
     >
       <thead>
         <tr
@@ -25441,7 +26907,6 @@ exports[`Storyshots Start.ThreeDTrafoResultTable Table to display calculated tra
           <th>
             Q3
           </th>
-          <th />
         </tr>
       </thead>
       <tbody>
@@ -25466,33 +26931,6 @@ exports[`Storyshots Start.ThreeDTrafoResultTable Table to display calculated tra
           </th>
           <th>
             0.0990
-          </th>
-          <th>
-            <button
-              className="copy"
-              onClick={[Function]}
-              title="Copy to clipboard"
-            >
-              <svg
-                fill="currentColor"
-                height="1em"
-                preserveAspectRatio="xMidYMid meet"
-                style={
-                  Object {
-                    "color": undefined,
-                    "verticalAlign": "middle",
-                  }
-                }
-                viewBox="0 0 40 40"
-                width="1em"
-              >
-                <g>
-                  <path
-                    d="m30 35h-25v-22.5h25v7.5h2.5v-12.5c0-1.4-1.1-2.5-2.5-2.5h-7.5c0-2.8-2.2-5-5-5s-5 2.2-5 5h-7.5c-1.4 0-2.5 1.1-2.5 2.5v27.5c0 1.4 1.1 2.5 2.5 2.5h25c1.4 0 2.5-1.1 2.5-2.5v-5h-2.5v5z m-20-27.5h2.5s2.5-1.1 2.5-2.5 1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5 1.3 2.5 2.5 2.5h2.5s2.5 1.1 2.5 2.5h-20c0-1.5 1.1-2.5 2.5-2.5z m-2.5 20h5v-2.5h-5v2.5z m17.5-5v-5l-10 7.5 10 7.5v-5h12.5v-5h-12.5z m-17.5 10h7.5v-2.5h-7.5v2.5z m12.5-17.5h-12.5v2.5h12.5v-2.5z m-7.5 5h-5v2.5h5v-2.5z"
-                  />
-                </g>
-              </svg>
-            </button>
           </th>
         </tr>
       </tbody>
@@ -25678,10 +27116,7 @@ exports[`Storyshots Start.ThreeDTrafoResultTable Table to display calculated tra
               </span>
               <span>
                 <span>
-                  <span>
-                    <br />
-                      
-                  </span>
+                   
                   <span
                     style={Object {}}
                   >
@@ -25753,10 +27188,7 @@ exports[`Storyshots Start.ThreeDTrafoResultTable Table to display calculated tra
                   </span>
                 </span>
                 <span>
-                  <span>
-                    <br />
-                      
-                  </span>
+                   
                   <span
                     style={Object {}}
                   >
@@ -25784,10 +27216,7 @@ exports[`Storyshots Start.ThreeDTrafoResultTable Table to display calculated tra
                   </span>
                 </span>
                 <span>
-                  <span>
-                    <br />
-                      
-                  </span>
+                   
                   <span
                     style={Object {}}
                   >
@@ -25813,37 +27242,7 @@ exports[`Storyshots Start.ThreeDTrafoResultTable Table to display calculated tra
                       </span>
                     </span>
                   </span>
-                </span>
-                <span>
-                  <span>
-                    <br />
-                      
-                  </span>
-                  <span
-                    style={Object {}}
-                  >
-                    copyText
-                  </span>
-                  <span>
-                    =
-                    <span
-                      style={Object {}}
-                    >
-                      <span
-                        style={
-                          Object {
-                            "color": "#22a",
-                            "wordBreak": "break-word",
-                          }
-                        }
-                      >
-                        "
-                        
-                        "
-                      </span>
-                    </span>
-                  </span>
-                  <br />
+                   
                 </span>
               </span>
               <span
@@ -25971,31 +27370,6 @@ exports[`Storyshots Start.ThreeDTrafoResultTable Table to display calculated tra
                     className="css-1ygfcef"
                   >
                     rotationDecimalPlaces
-                  </td>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    <span />
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    yes
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  >
-                    -
-                  </td>
-                  <td
-                    className="css-d52hbj"
-                  />
-                </tr>
-                <tr>
-                  <td
-                    className="css-1ygfcef"
-                  >
-                    copyText
                   </td>
                   <td
                     className="css-1ygfcef"

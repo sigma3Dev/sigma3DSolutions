@@ -9,7 +9,7 @@ import {
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import FitCircleChebyshevResult from '../components/FitCircleChebyshevResult/FitCircleChebyshevResult';
 
 const mapDispatchToProps = dispatch => ({
@@ -55,10 +55,10 @@ class FitCircleChebyshevResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Navbar currentMenu='geometry' />
         <FitCircleChebyshevResult
           chebyshevParams={this.props.chebyshevParams}
-          handleClick={this.goBack}
+          handleReturnClick={this.goBack}
         />
       </div>
     );

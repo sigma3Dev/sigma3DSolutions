@@ -2,7 +2,7 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
 import FitCircleL2ResultTable from '../FitCircleL2ResultTable/FitCircleL2ResultTable';
-import BackToInputBtn from '../BackToInputBtn/BackToInputBtn';
+import Footer from '../Footer/Footer';
 import FittingErrorBarGraph from '../FittingErrorBarGraph/FittingErrorBarGraph';
 import './FitCircleL2Result.css';
 
@@ -17,11 +17,19 @@ const FitCircleL2Result = ({ params, handleReturnClick }) => {
           defaultMessage='Fit CircleL2 Result'
         />
       </h1>
-      <FitCircleL2ResultTable params={params} copyText={copyText} />
+      <FitCircleL2ResultTable params={params} />
       <div className='bar-graph'>
         <FittingErrorBarGraph errors={params[8]} />
       </div>
-      <BackToInputBtn handleClick={handleReturnClick} />
+      <Footer
+        handleReturnClick={handleReturnClick}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed={false}
+        isSubmitBtnDisplayed={false}
+        isCopyBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        copyText={copyText}
+      />
     </div>
   );
 };

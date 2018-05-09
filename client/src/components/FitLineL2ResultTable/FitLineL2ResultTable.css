@@ -1,25 +1,44 @@
 .fit-line-l2-result-table {
-  padding-top: 10px;
-  width: 100%;
+  width: 25vw;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 
 .fit-line-l2-result-table * {
-  font-size: 1.05em;
+  font-size: 1.2vw;
+}
+
+.fit-line-l2-result-table td {
   text-align: center;
+  padding: 1.5vh 3vw;
+  min-width: 15vw;
+}
+
+.fit-line-l2-result-table tr:first-child * {
+  padding-top: 5vh;
+}
+
+.fit-line-l2-result-table tr:last-child * {
+  padding-bottom: 5vh;
 }
 
 .fit-line-l2-result-table th {
-  padding: 10px 0;
+  text-align: center;
+  padding: 1.5vh 1vw;
+  max-width: 2vw;
 }
 
-.fit-line-l2-result-table .caption {
-  background-color: #d9e9f0;
+.fit-line-l2-result-table th {
+  color: #afa993;
+  background-color: rgb(52, 54, 57);
 }
 
 .fit-line-l2-result-table .copy {
-  font-size: 0.8em;
+  font-size: 0.8vw;
   padding: 10px;
+  color: black;
+  margin: 0 auto;
+  margin: 0;
 }
 
 .fit-line-l2-result-table .copy:hover {

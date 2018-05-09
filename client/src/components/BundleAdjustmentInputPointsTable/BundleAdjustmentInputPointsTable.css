@@ -1,0 +1,48 @@
+.bundle-adjustment-input-points-table * {
+  font-size: 1.1vw;
+  font-family: Roboto;
+  text-align: center;
+}
+
+.bundle-adjustment-input-points-table {
+  height: 60vh;
+  width: 50%;
+  overflow: auto;
+}
+
+.bundle-adjustment-input-points-table .trash-icon {
+  color: darkred;
+  border: none;
+}
+
+.bundle-adjustment-input-points-table .trash-icon:hover {
+  cursor: pointer;
+  color: rgb(180, 0, 0);
+}
+
+.bundle-adjustment-input-points-table .trash-icon:focus {
+  outline: 0;
+}
+
+.bundle-adjustment-input-points-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bundle-adjustment-input-points-table th {
+  padding: 1vh;
+}
+
+.bundle-adjustment-input-points-table tr {
+  height: 40px;
+}
+
+.bundle-adjustment-input-points-table th:first-child {
+  width: 40px;
+  padding: 0;
+}
+
+.bundle-adjustment-input-points-table .grey {
+  color: #afa993;
+  background-color: rgb(52, 54, 57);
+}

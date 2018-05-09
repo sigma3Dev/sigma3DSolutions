@@ -1,0 +1,98 @@
+.Navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 10vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #343639;
+  overflow: hidden;
+}
+
+.Navbar a.link span {
+  height: 100%;
+  display: inline-block;
+  font-family: Raleway;
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.Navbar a.link-active span {
+  height: 100%;
+  display: inline-block;
+  font-family: Raleway;
+  color: white;
+  text-decoration: none;
+  opacity: 1;
+}
+
+.Navbar a.link:hover {
+  display: block;
+  font-family: Raleway;
+  color: white;
+  text-decoration: none;
+  border: none;
+}
+
+.Navbar a.link:hover span {
+  opacity: 1;
+}
+
+.Navbar a.link-active:hover {
+  display: block;
+  font-family: Roboto;
+  text-decoration: none;
+  border: none;
+}
+
+.Navbar .sidebar-link-container {
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  padding: 3vh 2vw;
+  margin: 1vh 1vw;
+}
+
+.Navbar .sidebar-link-container-right {
+  font-size: 1.1vw;
+  text-transform: uppercase;
+  padding: 3vh 2vw;
+  margin: 1vh 1.8vw 1vh auto;
+}
+
+.Navbar .sidebar-link-container-right:hover {
+  animation: size-transition linear 200ms forwards;
+  background-color: #505251;
+}
+
+.Navbar .sidebar-link-container:hover {
+  animation: size-transition linear 200ms forwards;
+  background-color: #505251;
+}
+
+.Navbar .logo {
+  background-image: url('./s3dlogo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 6vh;
+  width: 6vh;
+  margin: 0 4vw;
+}
+
+.Navbar .logo:hover {
+  animation: size-transition linear 200ms forwards;
+}
+
+@keyframes size-transition {
+  0% {
+    transform: scale(1);
+    transform-origin: center(100%);
+  }
+  100% {
+    transform: scale(1.4);
+    transform-origin: center(100%);
+  }
+}

@@ -1,8 +1,19 @@
 .cheby-result-presentation-drawing {
   stroke: black;
   stroke-width: 3;
-  padding: 20px;
-  height: 60%;
+  display: inline-block;
+  position: relative;
+  width: 30vw;
+  height: 30vw;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.cheby-result-presentation-drawing .cheby-drawing-svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .cheby-result-presentation-drawing .line-cheby-cf {

@@ -1,8 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import PropTypes from 'prop-types';
-import SubmitBtn from '../SubmitBtn/SubmitBtn';
-import InfoBtn from '../InfoBtn/InfoBtn';
+import Footer from '../Footer/Footer';
 import InputInfoPanel from '../InputInfoPanel/InputInfoPanel';
 import PointsInputDropzone from '../PointsInputDropzone/PointsInputDropzone';
 import PointsTable from '../PointsTable/PointsTable';
@@ -15,26 +14,43 @@ const FitPlaneGaussInput = ({
   handleDeleteClick,
   handleFileDrop,
   handleSubmitClick,
+  handleReturn,
   planePoints,
   clickAnywhere,
-}) => (
-  <div className='fit-plane-gauss-input' onClick={clickAnywhere}>
-    <h1>
-      <FormattedMessage id='FitPlaneGaussInput.label.caption' defaultMessage='Gauss Plane' />
-    </h1>
-    <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
-    <PointsTable systemPoints={planePoints} handleDeleteDataInput={handleDeleteClick} />
-    <SubmitBtn handleClick={handleSubmitClick} />
-    <InfoBtn className='info-btn' handleClick={handleInfoClick} />
-    <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
-  </div>
-);
+}) => {
+  const isPointsInput = !(planePoints.length === 0);
+  return (
+    <div className='fit-plane-gauss-input' onClick={clickAnywhere}>
+      <h1>
+        <FormattedMessage id='FitPlaneGaussInput.label.caption' defaultMessage='Gauss Plane' />
+      </h1>
+      <div className='fit-plane-gauss-dropzone-and-table'>
+        <PointsInputDropzone onDrop={handleFileDrop} className='dropzone' />
+        <div className='fit-plane-gauss-points-table'>
+          <PointsTable systemPoints={planePoints} handleDeleteDataInput={handleDeleteClick} />
+        </div>
+      </div>
+      <Footer
+        handleSubmitClick={handleSubmitClick}
+        handleInfoClick={handleInfoClick}
+        handleReturnClick={handleReturn}
+        isSubmitBtnDisplayed={isPointsInput}
+        isReturnBtnDisplayed
+        isInfoBtnDisplayed
+        isDownloadBtnDisplayed={false}
+        isCopyBtnDisplayed={false}
+      />
+      <InputInfoPanel isDisplayed={isInfoOpen} body={infoPanelText} />
+    </div>
+  );
+};
 
 FitPlaneGaussInput.propTypes = {
   handleInfoClick: PropTypes.func.isRequired,
   handleDeleteClick: PropTypes.func.isRequired,
   handleFileDrop: PropTypes.func.isRequired,
   handleSubmitClick: PropTypes.func.isRequired,
+  handleReturn: PropTypes.func.isRequired,
   clickAnywhere: PropTypes.func.isRequired,
   isInfoOpen: PropTypes.bool.isRequired,
   infoPanelText: PropTypes.object.isRequired,

@@ -9,7 +9,7 @@ import {
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import FitCircleL2Result from '../components/FitCircleL2Result/FitCircleL2Result';
 
 const mapDispatchToProps = dispatch => ({
@@ -55,7 +55,7 @@ class FitCircleL2ResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Navbar currentMenu='geometry' />
         <FitCircleL2Result params={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );

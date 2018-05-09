@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
+import Footer from '../Footer/Footer';
 import './ParamInversion.css';
 
 /**
@@ -9,7 +10,7 @@ import './ParamInversion.css';
  * @returns {*} ParamInversion - .jsx Element
  */
 const ParamInversion = ({
-  handleSubmit, handleChange, values, textAreaDisplay,
+  handleSubmit, handleChange, handleReturn, values, textAreaDisplay,
 }) => (
   <div className='param-inversion'>
     <h1>
@@ -97,14 +98,21 @@ const ParamInversion = ({
       </form>
       <textarea value={textAreaDisplay} readOnly />
     </div>
-    <button onClick={handleSubmit} className='param-submit-btn' autoFocus>
-      Submit
-    </button>
+    <Footer
+      handleSubmitClick={handleSubmit}
+      handleReturnClick={handleReturn}
+      isSubmitBtnDisplayed
+      isReturnBtnDisplayed
+      isInfoBtnDisplayed={false}
+      isCopyBtnDisplayed={false}
+      isDownloadBtnDisplayed={false}
+    />
   </div>
 );
 
 ParamInversion.propTypes = {
   handleSubmit: PropTypes.func,
+  handleReturn: PropTypes.func,
   handleChange: PropTypes.func,
   values: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])).isRequired,
   textAreaDisplay: PropTypes.string,

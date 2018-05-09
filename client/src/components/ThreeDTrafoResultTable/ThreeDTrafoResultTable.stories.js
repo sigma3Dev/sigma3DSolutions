@@ -25,6 +25,5 @@ stories.add('Table to display calculated transformation parameters for 3D transf
     trafoParams={trafoParams}
     translationDecimalPlaces={2}
     rotationDecimalPlaces={4}
-    copyText=''
   />
 ));

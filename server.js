@@ -310,6 +310,31 @@ app.post('/fit-sphere', (req, res) => {
   });
 });
 
+app.post('/bundle-adjustment', (req, res) => {
+  if (
+    !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords, 'bundlePoints') ||
+    req.body.coords.bundlePoints.length === 0 ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords.bundlePoints[0], 'stationId') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords.bundlePoints[0], 'geometryId') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords.bundlePoints[0], 'x') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords.bundlePoints[0], 'y') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords.bundlePoints[0], 'z') ||
+    !Object.prototype.hasOwnProperty.call(req.body.coords.bundlePoints[0], 'stdev')
+  ) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  }
+
+  sf.bundleAdjustment(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      res.status(500).send(response);
+    }
+  });
+});
+
 app.listen(app.get('port'), () => {
   console.log('Server is running...');
 });

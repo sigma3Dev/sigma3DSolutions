@@ -9,7 +9,7 @@ import {
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
 import LoadingScreen from '../components/LoadingScreen/LoadingScreen';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import FitCylinderResult from '../components/FitCylinderResult/FitCylinderResult';
 
 const mapDispatchToProps = dispatch => ({
@@ -55,7 +55,7 @@ class FitCylinderResultContainer extends Component {
     }
     return (
       <div>
-        <Sidebar />
+        <Navbar currentMenu='geometry' />
         <FitCylinderResult params={this.props.result} handleReturnClick={this.goBack} />
       </div>
     );

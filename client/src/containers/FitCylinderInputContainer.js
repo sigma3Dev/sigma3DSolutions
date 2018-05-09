@@ -6,7 +6,7 @@ import { pushFitCylinderCoords } from '../actions/pushCoords/pushCoordsActions';
 import { submitFitCylinderCoords } from '../actions/submitFitCylinderCoords/submitFitCylinderCoordsActions';
 import { clearCylinderInput } from '../actions/clearInput/clearInputActions';
 import { getCylinderPoints } from '../selectors/FitCylinderSelectors/getFitCylinderInputDataSelector/getFitCylinderInputDataSelector';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 import FitCylinderInput from '../components/FitCylinderInput/FitCylinderInput';
 
@@ -45,6 +45,7 @@ class FitCylinderInputContainer extends Component {
     this.submitFitCylinderCoords = this.submitFitCylinderCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -56,6 +57,14 @@ class FitCylinderInputContainer extends Component {
     cdi.startCoordinateDataImport(file, (coords) => {
       this.props.onPushCoords(coords);
     });
+  };
+
+  /**
+   * goes back to previous page
+   * @memberof FitCylinderInputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/geometry/');
   };
 
   /**
@@ -143,13 +152,14 @@ class FitCylinderInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Navbar currentMenu='geometry' />
         <FitCylinderInput
           isInfoOpen={this.state.isInfoOpen}
           infoPanelText={infoPanelText}
           handleInfoClick={this.displayInfoPanel}
           handleDeleteClick={this.clearCylinderInput}
           handleFileDrop={this.parseCoords}
+          handleReturn={this.backToPrevPage}
           handleSubmitClick={this.submitFitCylinderCoords}
           cylinderPoints={this.props.cylinderPoints}
           clickAnywhere={this.clickAnywhere}

@@ -11,7 +11,7 @@ import {
   getPoints,
 } from '../selectors/ApplyTrafoSelectors/getApplyTrafoInputDataSelector/getApplyTrafoInputDataSelector';
 import ApplyTrafoInput from '../components/ApplyTrafoInput/ApplyTrafoInput';
-import Sidebar from '../components/Sidebar/Sidebar';
+import Navbar from '../components/Navbar/Navbar';
 import InfoModal from '../components/InfoModal/InfoModal';
 
 const cdi = require('coordinatedataimporter');
@@ -50,6 +50,7 @@ class ApplyTransformationInputContainer extends Component {
     this.submitApplyTrafoCoords = this.submitApplyTrafoCoords.bind(this);
     this.displayInfoPanel = this.displayInfoPanel.bind(this);
     this.clickAnywhere = this.clickAnywhere.bind(this);
+    this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
@@ -69,6 +70,14 @@ class ApplyTransformationInputContainer extends Component {
   closeModal = () => {
     this.setState({ ...this.state, notification: null });
   };
+
+  /**
+   * goes back to previous page
+   * @memberof ApplyTransformationInputContainer
+   */
+  backToPrevPage = () => {
+    this.props.history.push('/transformations/');
+  }
 
   /**
    * deletes all points, updates input display
@@ -169,10 +178,11 @@ class ApplyTransformationInputContainer extends Component {
     return (
       <div>
         {this.state.notification}
-        <Sidebar />
+        <Navbar currentMenu='trafo' />
         <ApplyTrafoInput
           handleSubmit={this.submitApplyTrafoCoords}
           handleChange={this.parseTrafoParamInput}
+          handleReturn={this.backToPrevPage}
           handleDrop={this.parseCoords}
           handleDeleteDataInput={this.clearApplyTrafoInput}
           handleInfoClick={this.displayInfoPanel}

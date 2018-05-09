@@ -1,0 +1,102 @@
+.bundle-adjustment-input {
+  height: 100%;
+  margin: 15vh 2vw 0 2vw;
+  font-family: Roboto;
+}
+
+.bundle-adjustment-input * {
+  text-align: center;
+}
+
+.bundle-adjustment-input h1 {
+  font-size: 2vw;
+  color: rgb(128, 128, 128);
+  margin: 20px 0;
+  font-family: Raleway;
+}
+
+.bundle-adjustment-input .bundle-input-table-and-dropdown {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.bundle-adjustment-input .bundle-input-table-and-dropdown .bundle-dropzone {
+  width: 35%;
+}
+
+.bundle-adjustment-input .bundle-input-table-and-dropdown .bundle-input-table {
+  width: 40%;
+}
+
+.bundle-adjustment-input .bundle-input-table-and-dropdown .bundle-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.bundle-adjustment-input .bundle-input-table-and-dropdown .bundle-dropdown-btn {
+  padding: 1vh 3vw;
+  margin-top: 2vh;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 5px;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown-content {
+  display: none;
+  position: absolute;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown-content
+  .dropdown-link {
+  display: block;
+  font-size: 1.25em;
+  color: black;
+  padding: 15px;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown-with-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15%;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown-caption {
+  font-size: 2vw;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown:hover
+  .bundle-dropdown-btn {
+  background: #bbb;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown:hover
+  .bundle-dropdown-content {
+  display: block;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+.bundle-adjustment-input
+  .bundle-input-table-and-dropdown
+  .bundle-dropdown-content
+  .dropdown-link:hover {
+  text-decoration: none;
+  color: #555;
+  cursor: pointer;
+}
