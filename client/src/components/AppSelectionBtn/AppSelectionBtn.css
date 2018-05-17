@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  height: 18vw;
-  width: 18vw;
+  height: 17vw;
+  width: 17vw;
   padding: 1vh 1vw;
-  margin: 0.5vw;
+  margin: 0.9vw;
   border-radius: 10%;
   background: white;
 }
@@ -129,6 +129,11 @@
 
 .app-selection-btn .s3d-icon[data-category='transform'] {
   background-image: url('../../images/Transform.svg');
+  background-size: 100% 100%;
+}
+
+.app-selection-btn .s3d-icon[data-category='translatePointAlongAxis'] {
+  background-image: url('../../images/TranslatePointAlongAxis.svg');
   background-size: 100% 100%;
 }
 

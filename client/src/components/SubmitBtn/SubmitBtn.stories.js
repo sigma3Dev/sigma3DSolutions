@@ -10,4 +10,4 @@ const stories = storiesOf('Start.SubmitBtn', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));
 stories.addDecorator(withKnobs);
 
-stories.add('Button to submit data inputs', () => <SubmitBtn handleClick={() => {}} />);
+stories.add('Button to submit data inputs', () => <SubmitBtn handleClick={() => {}} isDisplayed />);

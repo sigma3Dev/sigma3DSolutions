@@ -25,5 +25,5 @@ stories.addDecorator(withKnobs);
 stories.addDecorator(StoryRouter.default());
 
 stories.add('Reusable Screen for different app containers', () => (
-  <SelectAppsScreen buttons={buttons} />
+  <SelectAppsScreen buttons={buttons} handleReturn={() => {}} />
 ));

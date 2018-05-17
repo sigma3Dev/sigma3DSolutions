@@ -201,3 +201,15 @@ describe('POST /bundle-adjustment', () => {
       .expect(400, done);
   });
 });
+
+describe('POST /translate-point-along-axis', () => {
+  it('returns a string and status code 400 upon wrong input', (done) => {
+    request(app)
+      .post('/translate-point-along-axis')
+      .send({
+        wrongData: null,
+      })
+      .expect('Content-Type', 'text/html; charset=utf-8')
+      .expect(400, done);
+  });
+});

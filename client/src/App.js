@@ -29,6 +29,7 @@ import StartScreenContainer from './containers/StartScreenContainer';
 import ThreeDTrafoInputContainer from './containers/ThreeDTrafoInputContainer';
 import ThreeDTrafoResultContainer from './containers/ThreeDTrafoResultContainer';
 import TransformationsScreenContainer from './containers/TransformationsScreenContainer';
+import TranslatePointAlongAxisContainer from './containers/TranslatePointAlongAxisContainer';
 import './App.css';
 
 /**
@@ -58,6 +59,10 @@ const App = () => (
       <Route
         path='/transformations/transform/result'
         component={ApplyTransformationResultContainer}
+      />
+      <Route
+        path='/transformations/translate-point-along-axis'
+        component={TranslatePointAlongAxisContainer}
       />
       <Route exact path='/geometry' component={GeometryScreenContainer} />
       <Route

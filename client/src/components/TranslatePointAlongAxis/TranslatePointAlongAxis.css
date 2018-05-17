@@ -1,0 +1,47 @@
+.translate-point-along-axis {
+  height: 60vh;
+  margin: 15vh 2vw 0 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: Roboto;
+}
+
+.translate-point-along-axis * {
+  text-align: center;
+}
+
+.translate-point-along-axis h1 {
+  color: rgb(128, 128, 128);
+  margin: 20px 0;
+  font-family: Raleway;
+  font-size: 2.5vw;
+}
+
+.translate-point-along-axis .input-display {
+  width: 65vw;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3vw;
+}
+
+.translate-point-along-axis input {
+  margin-left: 10px;
+}
+
+.translate-point-along-axis form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.translate-point-along-axis textarea {
+  width: 50%;
+  height: 24vh;
+  font-size: 5vh;
+}
+
+.translate-point-along-axis .param-submit-btn:focus {
+  outline: 0;
+}

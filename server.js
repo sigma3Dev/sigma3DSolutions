@@ -98,6 +98,7 @@ app.post('/fit-circle-chebyshev', (req, res) => {
   });
 });
 
+/** calculate apply transformation */
 app.post('/apply-trafo', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'values') ||
@@ -117,6 +118,7 @@ app.post('/apply-trafo', (req, res) => {
   });
 });
 
+/** calculate gauss plane */
 app.post('/fit-plane-gauss', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
@@ -135,6 +137,7 @@ app.post('/fit-plane-gauss', (req, res) => {
   });
 });
 
+/** calculate quaternion to cardan */
 app.post('/quat-to-cardan', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
@@ -156,6 +159,7 @@ app.post('/quat-to-cardan', (req, res) => {
   });
 });
 
+/** calculate cardan to quaternion */
 app.post('/cardan-to-quat', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
@@ -176,6 +180,7 @@ app.post('/cardan-to-quat', (req, res) => {
   });
 });
 
+/** calculate RANSAC plane */
 app.post('/fit-plane-ransac', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
@@ -195,6 +200,7 @@ app.post('/fit-plane-ransac', (req, res) => {
   });
 });
 
+/** calculate cylinder fit */
 app.post('/fit-cylinder', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
@@ -214,6 +220,7 @@ app.post('/fit-cylinder', (req, res) => {
   });
 });
 
+/** calculate point fit */
 app.post('/fit-point', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
@@ -233,6 +240,7 @@ app.post('/fit-point', (req, res) => {
   });
 });
 
+/** calculate L2 line fit */
 app.post('/fit-line-l-two', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
@@ -252,6 +260,7 @@ app.post('/fit-line-l-two', (req, res) => {
   });
 });
 
+/** calculate RANSAC line fit */
 app.post('/fit-line-ransac', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
@@ -272,6 +281,7 @@ app.post('/fit-line-ransac', (req, res) => {
   });
 });
 
+/** calculate L2 circle fit */
 app.post('/fit-circle-l-two', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
@@ -291,6 +301,7 @@ app.post('/fit-circle-l-two', (req, res) => {
   });
 });
 
+/** calculate sphere fit (currently dysfunctional) */
 app.post('/fit-sphere', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
@@ -310,6 +321,7 @@ app.post('/fit-sphere', (req, res) => {
   });
 });
 
+/** calculate bundle adjustment */
 app.post('/bundle-adjustment', (req, res) => {
   if (
     !Object.prototype.hasOwnProperty.call(req.body, 'coords') ||
@@ -327,6 +339,22 @@ app.post('/bundle-adjustment', (req, res) => {
   }
 
   sf.bundleAdjustment(req.body.coords, (response, isOk) => {
+    if (isOk) {
+      res.status(200).send(response);
+    } else {
+      res.status(500).send(response);
+    }
+  });
+});
+
+/** calculate translate point along axis */
+app.post('/translate-point-along-axis', (req, res) => {
+  if (!Object.prototype.hasOwnProperty.call(req.body, 'coords')) {
+    res.status(400).send('Invalid input coordinates');
+    return;
+  }
+
+  sf.translatePointAlongAxis(req.body.coords, (response, isOk) => {
     if (isOk) {
       res.status(200).send(response);
     } else {

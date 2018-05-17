@@ -49,6 +49,10 @@ class TransformationsScreenContainer extends Component {
         type: 'quatCardan',
         link: '/transformations/quat-cardan',
       },
+      {
+        type: 'translatePointAlongAxis',
+        link: '/transformations/translate-point-along-axis',
+      },
     ];
     return (
       <div>

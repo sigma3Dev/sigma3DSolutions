@@ -21,5 +21,6 @@ stories.add('Table to display the result of the calculated chebyshev circle fit 
     isCalculating={boolean('isCalculating', false)}
     chebyshevParams={chebyshevParams}
     handleClick={action('handleClick', () => {})}
+    handleReturnClick={() => {}}
   />
 ));

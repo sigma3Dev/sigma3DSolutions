@@ -74,6 +74,14 @@ const StartScreen = () => (
           <li>
             <Link to='/transformations/quat-cardan'>Quaternion ⇄ Cardan</Link>
           </li>
+          <li>
+            <Link to='/transformations/translate-point-along-axis'>
+              <FormattedMessage
+                id='TranslatePointAlongAxis.caption.translatePointAlongAxisHeader'
+                defaultMessage='Translate Point Along Axis'
+              />
+            </Link>
+          </li>
         </ul>
       </div>
       <div className='element'>
@@ -143,7 +151,13 @@ const StartScreen = () => (
         </ul>
       </div>
     </div>
-    <Footer isSubmitBtnDisplayed={false} isReturnBtnDisplayed={false} isInfoBtnDisplayed={false} />
+    <Footer
+      isSubmitBtnDisplayed={false}
+      isReturnBtnDisplayed={false}
+      isInfoBtnDisplayed={false}
+      isCopyBtnDisplayed={false}
+      isDownloadBtnDisplayed={false}
+    />
   </div>
 );
 

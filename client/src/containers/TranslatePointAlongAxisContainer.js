@@ -3,63 +3,63 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import { getError } from '../selectors/ErrorSelectors/getErrorSelector';
-import { getParamInversion } from '../selectors/ParamInversionSelectors/getParamInversionSelector';
+import { getTranslatePointAlongAxis } from '../selectors/TranslatePointAlongAxisSelectors/getTranslatePointAlongAxisSelector';
 import { removeError } from '../actions/errorHandling/errorHandlingActions';
-import { submitParamInversionCoords } from '../actions/paramInversionCoords/paramInversionCoordsActions';
+import { submitTranslatePointAlongAxisCoords } from '../actions/translatePointAlongAxisCoords/translatePointAlongAxisCoordsActions';
 import ErrorScreen from '../components/ErrorScreen/ErrorScreen';
 import InfoModal from '../components/InfoModal/InfoModal';
 import Navbar from '../components/Navbar/Navbar';
-import ParamInversion from '../components/ParamInversion/ParamInversion';
+import TranslatePointAlongAxis from '../components/TranslatePointAlongAxis/TranslatePointAlongAxis';
 
 const mapDispatchToProps = dispatch => ({
   onRemoveError: () => dispatch(removeError()),
-  onSubmitParamInversionCoords: coords => dispatch(submitParamInversionCoords(coords)),
+  onSubmitTranslatePointAlongAxisCoords: coords =>
+    dispatch(submitTranslatePointAlongAxisCoords(coords)),
 });
 
 const mapStateToProps = state => ({
-  paramInversion: getParamInversion(state),
+  translatePointAlongAxis: getTranslatePointAlongAxis(state),
   error: getError(state),
 });
 
 /**
  * Page where parameter inversion functionality is displayed
- * @class ParamInversionContainer
+ * @class TranslatePointAlongAxisContainer
  * @extends {Component}
  */
-class ParamInversionContainer extends Component {
+class TranslatePointAlongAxisContainer extends Component {
   /**
-   * Creates an instance of ParamInversion.
+   * Creates an instance of TranslatePointAlongAxis.
    * @param {Object} props
-   * @memberof ParamInversionContainer
+   * @memberof TranslatePointAlongAxisContainer
    */
   constructor(props) {
     super(props);
     this.state = {
-      points: {
-        tx: 0,
-        ty: 0,
-        tz: 0,
-        q0: 0,
-        q1: 0,
-        q2: 0,
-        q3: 0,
-        m: 1,
+      input: {
+        x: '0',
+        y: '0',
+        z: '0',
+        i: '0',
+        j: '0',
+        k: '0',
+        amount: '0',
       },
       notification: null,
       submitted: false,
     };
     this.parseInput = this.parseInput.bind(this);
-    this.submitParamInversionCoords = this.submitParamInversionCoords.bind(this);
+    this.submitTranslatePointAlongAxisCoords = this.submitTranslatePointAlongAxisCoords.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.backToPrevPage = this.backToPrevPage.bind(this);
   }
 
   /**
    * Handles coords submit
-   * @memberof ParamInversionContainer
+   * @memberof TranslatePointAlongAxisContainer
    */
-  submitParamInversionCoords = () => {
-    if (this.state.points.m === '0') {
+  submitTranslatePointAlongAxisCoords = () => {
+    if (this.state.input.amount === '0') {
       this.setState({
         notification: (
           <InfoModal
@@ -68,8 +68,8 @@ class ParamInversionContainer extends Component {
             }
             body={
               <FormattedMessage
-                id='InfoModal.label.mCantBeZero'
-                defaultMessage='M cannot be zero!'
+                id='InfoModal.label.amountCantBeZero'
+                defaultMessage='Amount cannot be zero!'
               />
             }
             handleClick={this.closeModal}
@@ -77,20 +77,20 @@ class ParamInversionContainer extends Component {
         ),
       });
     } else {
-      const coords = { ...this.state.points };
+      const coords = { ...this.state.input };
       for (const key in coords) {
         if (Object.prototype.hasOwnProperty.call(coords, key)) {
           coords[key] = Number(coords[key]);
         }
       }
-      this.props.onSubmitParamInversionCoords(coords);
+      this.props.onSubmitTranslatePointAlongAxisCoords(coords);
       this.setState({ submitted: true });
     }
   };
 
   /**
    * goes back to previous page
-   * @memberof ParamInversionContainer
+   * @memberof TranslatePointAlongAxisContainer
    */
   backToPrevPage = () => {
     this.props.history.push('/transformations/');
@@ -99,13 +99,13 @@ class ParamInversionContainer extends Component {
   /**
    * sets local state to current input value
    * @params {Object} e - event object
-   * @memberof ParamInversionContainer
+   * @memberof TranslatePointAlongAxisContainer
    */
   parseInput = (e) => {
     e.persist();
     this.setState(prevState => ({
-      points: {
-        ...prevState.points,
+      input: {
+        ...prevState.input,
         [e.target.name]: e.target.value.replace(',', '.'),
       },
     }));
@@ -113,7 +113,7 @@ class ParamInversionContainer extends Component {
 
   /**
    * Closes the Modal-window
-   * @memberof ParamInversionContainer
+   * @memberof TranslatePointAlongAxisContainer
    */
   closeModal = () => {
     this.setState({ ...this.state, notification: null });
@@ -121,7 +121,7 @@ class ParamInversionContainer extends Component {
 
   /**
    * Navigates back to input page of the current transformation
-   * @memberof ParamInversionContainer
+   * @memberof TranslatePointAlongAxisContainer
    */
   goBack = () => {
     this.props.onRemoveError();
@@ -131,14 +131,9 @@ class ParamInversionContainer extends Component {
     let textAreaDisplay;
     if (this.state.submitted) {
       textAreaDisplay = JSON.stringify({
-        Tx: ` ${this.props.paramInversion[0]}`,
-        Ty: ` ${this.props.paramInversion[1]}`,
-        Tz: ` ${this.props.paramInversion[2]}`,
-        Q0: ` ${this.props.paramInversion[3]}`,
-        Q1: ` ${this.props.paramInversion[4]}`,
-        Q2: ` ${this.props.paramInversion[5]}`,
-        Q3: ` ${this.props.paramInversion[6]}`,
-        M: ` ${this.props.paramInversion[7]}`,
+        X: ` ${this.props.translatePointAlongAxis[0]}`,
+        Y: ` ${this.props.translatePointAlongAxis[1]}`,
+        Z: ` ${this.props.translatePointAlongAxis[2]}`,
       })
         .split(',')
         .join(' \n')
@@ -155,11 +150,11 @@ class ParamInversionContainer extends Component {
       <div>
         {this.state.notification}
         <Navbar currentMenu='trafo' />
-        <ParamInversion
-          handleSubmit={this.submitParamInversionCoords}
+        <TranslatePointAlongAxis
+          handleSubmit={this.submitTranslatePointAlongAxisCoords}
           handleChange={this.parseInput}
           handleReturn={this.backToPrevPage}
-          values={this.state.points}
+          values={this.state.input}
           textAreaDisplay={textAreaDisplay}
         />
       </div>
@@ -167,12 +162,12 @@ class ParamInversionContainer extends Component {
   }
 }
 
-ParamInversionContainer.propTypes = {
-  onSubmitParamInversionCoords: PropTypes.func.isRequired,
+TranslatePointAlongAxisContainer.propTypes = {
+  onSubmitTranslatePointAlongAxisCoords: PropTypes.func.isRequired,
   onRemoveError: PropTypes.func.isRequired,
-  paramInversion: PropTypes.arrayOf(PropTypes.string).isRequired,
+  translatePointAlongAxis: PropTypes.arrayOf(PropTypes.string).isRequired,
   error: PropTypes.string,
   history: PropTypes.any,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ParamInversionContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(TranslatePointAlongAxisContainer);
