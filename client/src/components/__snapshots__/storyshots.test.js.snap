@@ -419,7 +419,7 @@ exports[`Storyshots Start.BackToInputBtn Button to navigate back to previous dat
       onClick={[Function]}
       style={
         Object {
-          "visibility": "hidden",
+          "visibility": "visible",
         }
       }
     >
@@ -653,6 +653,14 @@ exports[`Storyshots Start.BackToInputBtn Button to navigate back to previous dat
                         }
                       </span>
                     </span>
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    isDisplayed
                   </span>
                    
                 </span>
@@ -16405,7 +16413,7 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
       >
         <button
           className="back-to-input-btn"
-          onClick={undefined}
+          onClick={[Function]}
           style={
             Object {
               "visibility": "visible",
@@ -16751,7 +16759,10 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
               </span>
               <span>
                 <span>
-                   
+                  <span>
+                    <br />
+                      
+                  </span>
                   <span
                     style={Object {}}
                   >
@@ -16779,7 +16790,10 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
                   </span>
                 </span>
                 <span>
-                   
+                  <span>
+                    <br />
+                      
+                  </span>
                   <span
                     style={Object {}}
                   >
@@ -16851,7 +16865,10 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
                   </span>
                 </span>
                 <span>
-                   
+                  <span>
+                    <br />
+                      
+                  </span>
                   <span
                     style={Object {}}
                   >
@@ -16877,7 +16894,38 @@ exports[`Storyshots Start.FitCircleChebyshevResult Table to display the result o
                       </span>
                     </span>
                   </span>
-                   
+                </span>
+                <span>
+                  <span>
+                    <br />
+                      
+                  </span>
+                  <span
+                    style={Object {}}
+                  >
+                    handleReturnClick
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          handleReturnClick()
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
+                  <br />
                 </span>
               </span>
               <span
@@ -20521,7 +20569,7 @@ exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
       onClick={[Function]}
       style={
         Object {
-          "display": "none",
+          "display": "inline-block",
         }
       }
     >
@@ -20755,6 +20803,14 @@ exports[`Storyshots Start.InfoBtn Button to open data input information 1`] = `
                         }
                       </span>
                     </span>
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    isDisplayed
                   </span>
                    
                 </span>
@@ -25261,7 +25317,7 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
       >
         <button
           className="back-to-input-btn"
-          onClick={undefined}
+          onClick={[Function]}
           style={
             Object {
               "visibility": "visible",
@@ -25753,6 +25809,34 @@ exports[`Storyshots Start.SelectAppsScreen Reusable Screen for different app con
                       </span>
                     </span>
                   </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    handleReturn
+                  </span>
+                  <span>
+                    =
+                    <span
+                      style={Object {}}
+                    >
+                      <span>
+                        {
+                        <span
+                          style={
+                            Object {
+                              "color": "#170",
+                            }
+                          }
+                        >
+                          handleReturn()
+                        </span>
+                        }
+                      </span>
+                    </span>
+                  </span>
                    
                 </span>
               </span>
@@ -25985,6 +26069,16 @@ exports[`Storyshots Start.StartScreen Homepage of the App 1`] = `
                 onClick={[Function]}
               >
                 Quaternion ⇄ Cardan
+              </a>
+            </li>
+            <li>
+              <a
+                href="/transformations/translate-point-along-axis"
+                onClick={[Function]}
+              >
+                <span>
+                  Punkt entlang Achse verschieben
+                </span>
               </a>
             </li>
           </ul>
@@ -26501,7 +26595,7 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
       onClick={[Function]}
       style={
         Object {
-          "visibility": "hidden",
+          "visibility": "visible",
         }
       }
     >
@@ -26735,6 +26829,14 @@ exports[`Storyshots Start.SubmitBtn Button to submit data inputs 1`] = `
                         }
                       </span>
                     </span>
+                  </span>
+                </span>
+                <span>
+                   
+                  <span
+                    style={Object {}}
+                  >
+                    isDisplayed
                   </span>
                    
                 </span>

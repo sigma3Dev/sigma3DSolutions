@@ -17,6 +17,8 @@ const SelectAppsScreen = ({ buttons, handleReturn }) => (
       isSubmitBtnDisplayed={false}
       isReturnBtnDisplayed
       isInfoBtnDisplayed={false}
+      isCopyBtnDisplayed={false}
+      isDownloadBtnDisplayed={false}
     />
   </div>
 );

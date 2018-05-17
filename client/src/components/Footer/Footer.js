@@ -49,7 +49,7 @@ const Footer = ({
       </button>
       <InfoBtn handleClick={handleInfoClick} isDisplayed={isInfoBtnDisplayed} />
       <CopyToClipboard text={copyText}>
-        <OverlayTrigger placement='top' trigger='focus' overlay={tooltip} delayShow>
+        <OverlayTrigger placement='top' trigger='focus' overlay={tooltip}>
           <button
             className='copy'
             title='Copy to clipboard'

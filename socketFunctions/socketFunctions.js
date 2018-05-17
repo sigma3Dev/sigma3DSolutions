@@ -418,6 +418,28 @@ const bundleAdjustment = (coords, callback) => {
     });
 };
 
+const translatePointAlongAxis = (coords, callback) => {
+  globalIdCounter += 1;
+  const translatePointRequest = comm.translatePointAlongAxis(coords, globalIdCounter);
+
+  const socket = getWebSocket()
+    .then((socket) => {
+      socket.onerror = (error) => {
+        callback(error, false);
+      };
+
+      socket.onmessage = (e) => {
+        const response = e.data;
+        callback(response, true);
+      };
+
+      socket.send(translatePointRequest);
+    })
+    .catch((err) => {
+      callback(err, false);
+    });
+};
+
 module.exports = {
   threeDTrafoSendToSocket,
   paramInversionSendToSocket,
@@ -434,4 +456,5 @@ module.exports = {
   cardanToQuat,
   fitCircleL2,
   bundleAdjustment,
+  translatePointAlongAxis,
 };

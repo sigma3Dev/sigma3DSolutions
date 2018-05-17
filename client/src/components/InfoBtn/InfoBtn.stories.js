@@ -10,4 +10,6 @@ const stories = storiesOf('Start.InfoBtn', module);
 stories.addDecorator((story, context) => withInfo('common info')(story)(context));
 stories.addDecorator(withKnobs);
 
-stories.add('Button to open data input information', () => <InfoBtn handleClick={() => {}} />);
+stories.add('Button to open data input information', () => (
+  <InfoBtn handleClick={() => {}} isDisplayed />
+));

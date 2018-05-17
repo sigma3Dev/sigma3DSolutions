@@ -2,7 +2,7 @@
   "ApplyTrafoInput.caption.applyTrafoHeader": "Transformation anwenden",
   "ApplyTrafoResult.label.caption": "Transformationsergebnisse",
   "AppSelectionBtn.caption.3Dtransformation": "3D-TRANSFORMATION",
-  "AppSelectionBtn.caption.bundleAdjustment": "BÜNDELAUSGLEICHUNG",
+  "AppSelectionBtn.caption.bundleAdjustment": "BÜNDEL-AUSGLEICHUNG",
   "AppSelectionBtn.caption.fitCircleChebyshev": "TSCHEBYSCHEFF-KREIS",
   "AppSelectionBtn.caption.fitCircleL2": "KREIS L2",
   "AppSelectionBtn.caption.fitCylinder": "ZYLINDER",
@@ -15,6 +15,7 @@
   "AppSelectionBtn.caption.paramInversion": "PARAMETERINVERSION",
   "AppSelectionBtn.caption.quatCardan": "QUATERNION ⇄ CARDAN",
   "AppSelectionBtn.caption.transform": "TRANSFORMATION",
+  "AppSelectionBtn.caption.translatePointAlongAxis": "PUNKT VERSCHIEBEN",
   "AppSelectionBtn.description.3Dtransformation": "6 Parameter, gewichtet",
   "AppSelectionBtn.description.bundleAdjustment": "Mit Standardabweichung",
   "AppSelectionBtn.description.fitCircleChebyshev": "Mittelpunkt, Radius und Tschebyscheff-Distanz",
@@ -29,6 +30,7 @@
   "AppSelectionBtn.description.paramInversion": "7 Parameter",
   "AppSelectionBtn.description.quatCardan": "Quaternionen zu Cardan und umgekehrt",
   "AppSelectionBtn.description.transform": "Punkte mit Parametern transformieren",
+  "AppSelectionBtn.description.translatePointAlongAxis": "Punkt entlang von Achse verschieben",
   "BundleAdjustmentInput.dropdown.caption": "Basisstation:",
   "BundleAdjustmentInput.label.caption": "Bündelausgleichung",
   "BundleAdjustmentInputPointsTable.label.geometryId": "Geometrie ID",
@@ -64,6 +66,7 @@
   "FittingErrorBarGraph.caption.errors": "Abweichungen",
   "Footer.tooltip.caption": "Kopiert!",
   "InfoModal.caption.wrongInput": "Fehlerhaftes Input",
+  "InfoModal.label.amountCantBeZero": "Betrag darf nicht null sein!",
   "InfoModal.label.mCantBeZero": "M darf nicht null sein!",
   "InfoModal.label.noCirclePoints": "Bitte Kreispunkte importieren!",
   "InfoModal.label.noPoints": "Bitte Punkte importieren!",
@@ -116,5 +119,6 @@
   "ThreeDTrafoInput.label.targetSystemPointsCaption": "Zielsystempunkte:",
   "ThreeDTrafoResult.label.caption": "Transformationsparameter",
   "ThreeDTrafoResult.link.downloadFile": "Transformierte Startpunkte als .txt-Datei herunterladen",
-  "ThreeDTrafoResultContainer.prompt.filename": "Bitte geben Sie einen Dateinamen an: "
+  "ThreeDTrafoResultContainer.prompt.filename": "Bitte geben Sie einen Dateinamen an: ",
+  "TranslatePointAlongAxis.caption.translatePointAlongAxisHeader": "Punkt entlang Achse verschieben"
 }

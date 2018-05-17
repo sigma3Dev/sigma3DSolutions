@@ -15,6 +15,7 @@
   "AppSelectionBtn.caption.paramInversion": "PARAMETER INVERSION",
   "AppSelectionBtn.caption.quatCardan": "QUATERNION ⇄ CARDAN",
   "AppSelectionBtn.caption.transform": "TRANSFORMATION",
+  "AppSelectionBtn.caption.translatePointAlongAxis": "TRANSLATE POINT",
   "AppSelectionBtn.description.3Dtransformation": "6 Parameters, weighted",
   "AppSelectionBtn.description.bundleAdjustment": "With Standard Deviation",
   "AppSelectionBtn.description.fitCircleChebyshev": "Central Point, Radius and Chebyshev-Distance",
@@ -29,6 +30,7 @@
   "AppSelectionBtn.description.paramInversion": "7 Parameters",
   "AppSelectionBtn.description.quatCardan": "Transform Quaternion into Cardan and vice versa",
   "AppSelectionBtn.description.transform": "Transform points with parameters",
+  "AppSelectionBtn.description.translatePointAlongAxis": "Translate point along axis",
   "BundleAdjustmentInput.dropdown.caption": "Base Station:",
   "BundleAdjustmentInput.label.caption": "Bundle Adjustment",
   "BundleAdjustmentInputPointsTable.label.geometryId": "Geometry ID",
@@ -64,6 +66,7 @@
   "FittingErrorBarGraph.caption.errors": "Fitting Errors",
   "Footer.tooltip.caption": "Copied!",
   "InfoModal.caption.wrongInput": "Wrong Input",
+  "InfoModal.label.amountCantBeZero": "Amount cannot be zero!",
   "InfoModal.label.mCantBeZero": "M cannot be zero!",
   "InfoModal.label.noCirclePoints": "Please import circle points!",
   "InfoModal.label.noPoints": "Please import points!",
@@ -115,5 +118,6 @@
   "ThreeDTrafoInput.label.targetSystemPointsCaption": "Target System Points:",
   "ThreeDTrafoResult.label.caption": "Transformation Parameters",
   "ThreeDTrafoResult.link.downloadFile": "Download transformed start points as .txt file",
-  "ThreeDTrafoResultContainer.prompt.filename": "Please enter a file name: "
+  "ThreeDTrafoResultContainer.prompt.filename": "Please enter a file name: ",
+  "TranslatePointAlongAxis.caption.translatePointAlongAxisHeader": "Translate Point Along Axis"
 }
